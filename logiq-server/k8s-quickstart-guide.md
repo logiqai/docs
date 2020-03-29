@@ -8,25 +8,10 @@ description: This page describes the K8S deployment for the LOGIQ using HELM 3 c
 
 LOGIQ K8S components are made available as helm charts. Instructions below assume you are using HELM 3.
 
-### 1.1 Setting up HELM S3 Plugin
-
-LOGIQ charts are available as an S3 repository. S3 repositories can be accessed using the helm S3 plugin. Install the plugin to add the S3 helm repository.
+### 1.1 Add LOGIQ helm repository
 
 ```bash
-$ helm plugin install https://github.com/hypnoglow/helm-s3.git
-$ helm plugin list
-NAME	VERSION	DESCRIPTION
-s3  	0.9.2  	The plugin allows to use s3 protocol to upload, fetch charts and to work with repositori...
-```
-
-### 1.2 Add LOGIQ S3 helm repository
-
-{% hint style="info" %}
-LOGIQ S3 helm repository is hosted in us-east-1 region. Make sure your AWS config points to the us-east-1 region for adding the repository. Generally this is located in your home directory under`$HOME/.aws/config`
-{% endhint %}
-
-```bash
-$ helm repo add logiq-repo s3://logiq-helm/stable
+$ helm repo add logiq-repo https://logiqai.github.io/helm-charts
 ```
 
 {% hint style="info" %}
@@ -46,20 +31,20 @@ logiq-repo/flash-discovery	1.0.0        	1.0.0      	LOGIQ discovery server
 logiq-repo/logiq-flash    	1.0.0        	1.2.0      	LOGIQ ingest server
 ```
 
-### 1.3 Add additional helm repositories
+### 1.2 Add additional helm repositories
 
 ```bash
 $ helm repo add stable https://kubernetes-charts.storage.googleapis.com 
 $ helm repo add bitnami https://charts.bitnami.com/bitnami 
 ```
 
-### 1.4 Run update to fetch latest charts
+### 1.3 Run update to fetch latest charts
 
 ```bash
 $ helm repo update
 ```
 
-### 1.5 Create namespace where LOGIQ will be deployed
+### 1.4 Create namespace where LOGIQ will be deployed
 
 ```bash
 $ kubectl create namespace logiq
@@ -71,7 +56,7 @@ This will create a namespace _**logiq**_ where we will deploy the LOGIQ Log Insi
 If you choose a different name for the namespace, please remember to use the same namespace for the remainder of the steps
 {% endhint %}
 
-### 1.6 Get storage class for your K8S cluster
+### 1.5 Get storage class for your K8S cluster
 
 Get the storage class for your cluster. The command examples below from [step 2 onwards](k8s-quickstart-guide.md#2-install-dependencies) section use the _**standard**_ storage class
 
