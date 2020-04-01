@@ -6,6 +6,12 @@ description: >-
 
 # Overview
 
+## Download
+
+```text
+git clone https://github.com/logiqai/logiqbox
+```
+
 ## Help
 
 ```text
