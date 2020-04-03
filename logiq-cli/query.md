@@ -19,7 +19,7 @@ COMMANDS:
 
 OPTIONS:
    --end_time value, --et value    Relative end time. (default: "10h")
-   --filter value, -f value        -filter 'Hostname=127.0.0.1,10.231.253.255;Message=tito*'
+   --filter value, -f value        Filter expression e.g. 'Hostname=127.0.0.1,10.231.253.255;Message=tito*'
    --output value, -o value        Set output format to be column|json|raw (default: "column")
    --start_time value, --st value  Relative start time. (default: "10h")
    --tail, -t                      Tail the data without paginating (default: false)

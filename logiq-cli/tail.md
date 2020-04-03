@@ -14,10 +14,10 @@ USAGE:
    logiqbox tail [command options] [-apps application names and/or -namespaces K8S namespace names and/or -labels K8S labels - procs process id / pod name]
 
 OPTIONS:
-   --namespaces              -namespaces (default: false)
-   --labels                  -labels (default: false)
-   --apps                    -apps (default: false)
-   --process                 -procs (default: false)
+   --namespaces              Namespace from which we tail the data (default: false)
+   --labels                  K8S labels to match (default: false)
+   --apps                    Application filter (default: false)
+   --process                 Process/Pod filter (default: false)
    --output value, -o value  Set output format to be column|json|raw (default: "column")
    --help, -h                show help (default: false)
 ```
