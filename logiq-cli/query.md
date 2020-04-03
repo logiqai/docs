@@ -18,11 +18,13 @@ COMMANDS:
    help, h  Shows a list of commands or help for one command
 
 OPTIONS:
-   --st value      Relative start time. (default: "10h")
-   --et value      Relative end time. (default: "10h")
-   --filter value  --filter 'Hostname=127.0.0.1,10.231.253.255;Message=tito*'
-   --help, -h      show help (default: false)
-   --version, -v   print the version (default: false)
+   --end_time value, --et value    Relative end time. (default: "10h")
+   --filter value, -f value        -filter 'Hostname=127.0.0.1,10.231.253.255;Message=tito*'
+   --output value, -o value        Set output format to be column|json|raw (default: "column")
+   --start_time value, --st value  Relative start time. (default: "10h")
+   --tail, -t                      Tail the data without paginating (default: false)
+   --help, -h                      show help (default: false)
+   --version, -v                   print the version (default: false)
 ```
 
 ## Historical queries
@@ -32,7 +34,7 @@ Historical log data can be queries using logiqbox. Filters allow the user to spe
 For e.g. to query all postgrees logs within the last 1 hr, one would pass the application names and the start time for the query
 
 ```text
-./logiqbox q postgres --st 1h
+$logiqbox q postgres --st 1h
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|Error: Database is uninitialized and superuser password is not specified.
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|
@@ -44,4 +46,14 @@ For e.g. to query all postgrees logs within the last 1 hr, one would pass the ap
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|       See PostgreSQL documentation about "trust":
 Enter `n` or `next' to continue.
 ```
+
+## Output formatting
+
+The query output formatting can be controlled with the `--output` option. Three values are allowed - `raw`, `column` and `json`
+
+```text
+$logiqbox q postgres --st 1h --output json
+```
+
+The above command returns the data with each row of data formatted as JSON.
 

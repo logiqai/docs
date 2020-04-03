@@ -14,12 +14,23 @@ USAGE:
    logiqbox tail [command options] [-apps application names and/or -namespaces K8S namespace names and/or -labels K8S labels - procs process id / pod name]
 
 OPTIONS:
-   --namespaces  -namespaces (default: false)
-   --labels      -labels (default: false)
-   --apps        -apps (default: false)
-   --process     -procs (default: false)
-   --help, -h    show help (default: false)
+   --namespaces              -namespaces (default: false)
+   --labels                  -labels (default: false)
+   --apps                    -apps (default: false)
+   --process                 -procs (default: false)
+   --output value, -o value  Set output format to be column|json|raw (default: "column")
+   --help, -h                show help (default: false)
 ```
+
+## Output formatting
+
+The query output formatting can be controlled with the `--output` option. Three values are allowed - `raw`, `column` and `json`
+
+```text
+$logiqbox tail --output json
+```
+
+The above command returns the data with each row of data formatted as JSON.
 
 ## Tail logs for an application
 
