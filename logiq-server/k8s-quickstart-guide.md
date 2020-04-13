@@ -298,8 +298,11 @@ kubectl create secret tls ui-secret --namespace logiq \
 $ kubectl create clusterrolebinding --user system:serviceaccount:kube-system:default \
 kube-system-cluster-admin --clusterrole cluster-admin
 $ helm install traefik-ingress-logiq -n kube-system \
+--set maxIdleConnsPerHost=200 \
+--set imageTag=1.7.24 \
 --set kubernetes.ingressClass="traefik-logiq" \
 --set ssl.enabled=true,ssl.enforced=true stable/traefik
+
 ```
 
 ### 6.3 Install LOGIQ UI Ingress rules
