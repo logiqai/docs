@@ -302,7 +302,6 @@ $ helm install traefik-ingress-logiq -n kube-system \
 --set imageTag=1.7.24 \
 --set kubernetes.ingressClass="traefik-logiq" \
 --set ssl.enabled=true,ssl.enforced=true stable/traefik
-
 ```
 
 ### 6.3 Install LOGIQ UI Ingress rules
