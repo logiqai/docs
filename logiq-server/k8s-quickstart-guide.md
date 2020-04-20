@@ -76,9 +76,10 @@ If the bucket already exists, LOGIQ will use it. Check to make sure the access a
 ```bash
 $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set s3gateway.enabled=true \
---set defaultBucket.enabled=true,defaultBucket.name=<bucket_name> \
---set environment.AWS_ACCESS_KEY_ID=<access_key> \
---set environment.AWS_SECRET_ACCESS_KEY=<secret_key> logiq-repo/logiq
+--set s3gateway.defaultBucket.enabled=true \
+--set s3gatewaydefaultBucket.name=<bucket_name> \
+--set s3gateway.environment.AWS_ACCESS_KEY_ID=<access_key> \
+--set s3gateway.environment.AWS_SECRET_ACCESS_KEY=<secret_key> logiq-repo/logiq
 ```
 
 {% hint style="info" %}
