@@ -34,7 +34,7 @@ logiq-repo/logiq	1.0.0        	1.2.0      	A Helm chart for Kubernetes
 $ kubectl create namespace logiq
 ```
 
-This will create a namespace _**logiq**_ where we will deploy the LOGIQ Log Insights stack. 
+This will create a namespace **`logiq`** where we will deploy the LOGIQ Log Insights stack. 
 
 {% hint style="info" %}
 If you choose a different name for the namespace, please remember to use the same namespace for the remainder of the steps
@@ -49,7 +49,15 @@ $ helm install logiq --namespace logiq \
 
 This will install LOGIQ and expose the LOGIQ UI and ingress ports at the domain `logiq.my-domain.com.` Replace `logiq.my-domain.com` with you own domain where the service will be hosted.
 
-You should now be able to login to LOGIQ UI at your domain using `https://logiq.my-domain.com` that you set in the ingress after you have updated your DNS server to point to the Ingress controller service IP.
+{% hint style="success" %}
+You should now be able to login to LOGIQ UI at your domain using `https://logiq.my-domain.com` that you set in the ingress after you have updated your DNS server to point to the Ingress controller service IP
+
+The default login and password to use is flash-admin@foo.com and flash-password. You can change these in the UI once logged in.
+{% endhint %}
+
+{% hint style="info" %}
+The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](quickstart-guide.md#ports). 
+{% endhint %}
 
 ![](../.gitbook/assets/screen-shot-2020-03-24-at-3.42.55-pm.png)
 
