@@ -38,13 +38,13 @@
 * [Events](logiq-events/events.md)
 * [Event Rules](logiq-events/event-rules.md)
 
-## LOGIQ CLI
+## LOGIQCTL
 
-* [Overview](logiq-cli/logiq-box.md)
-* [List](logiq-cli/list.md)
-* [Query](logiq-cli/query.md)
-* [Search](logiq-cli/search.md)
-* [Tail](logiq-cli/tail.md)
+* [Overview](logiqctl/logiq-box.md)
+* [List](logiqctl/list.md)
+* [Query](logiqctl/query.md)
+* [Search](logiqctl/search.md)
+* [Tail](logiqctl/tail.md)
 
 ## EULA
 

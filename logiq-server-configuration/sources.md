@@ -41,10 +41,10 @@ rules:
     destination: t_debug
 ```
 
-## Client IP/Network details \[required\]
+## Client IP/Network details \[optional\]
 
 {% hint style="info" %}
-At least one of ipv4, ipv4\_list and ipv4\_range is required
+At least one of ipv4, ipv4\_list and ipv4\_range is required when selecting a Client IP/Network based source
 {% endhint %}
 
 ### ipv4 - Specify a single ip address
@@ -76,5 +76,32 @@ sources:
   -
     name: qa_lab
     ipv4_range: 10.0.1.5/24
+```
+
+## Cloud S3 storage buckets
+
+### Stackdriver logs from GCP cloud storage
+
+LOGIQ can directly ingest from Stackdriver's Google cloud storage sink. You do not need to incur additional pub sub costs for this. Create a `google_cloud_storage` source in LOGIQ config for this.
+
+```text
+-
+    name: stackdriver_gcp_storage_bucket
+    s3:
+      type: google_cloud_storage
+      credential: >
+        {
+          "type": "service_account",
+          "project_id": <google_project_id>,
+          "private_key_id": <private_key_id>,
+          "private_key": <private_key_string>,
+          "client_email": <client_email>,
+          "client_id": <client_id>,
+          "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+          "token_uri": "https://oauth2.googleapis.com/token",
+          "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+          "client_x509_cert_url": <client cert url>
+        }
+      bucket: <cloud storage bucket name>
 ```
 
