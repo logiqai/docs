@@ -40,7 +40,7 @@ This will create a namespace **`logiq`** where we will deploy the LOGIQ Log Insi
 If you choose a different name for the namespace, please remember to use the same namespace for the remainder of the steps
 {% endhint %}
 
-### 1.3. Install LOGIQ
+## 2. Install LOGIQ
 
 ```bash
 $ helm install logiq --namespace logiq \
@@ -61,17 +61,17 @@ The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described i
 
 ![](../.gitbook/assets/screen-shot-2020-03-24-at-3.42.55-pm.png)
 
-## 2 Customizing the deployment
+## 3 Customizing the deployment
 
-### 2.1 - Using an AWS S3 bucket
+### 3.1 - Using an AWS S3 bucket
 
 Depending on your requirements, you may want to host your storage in your own K8S cluster or create a bucket in a cloud provider like AWS.
 
-#### 2.1.1 Create an access/secret key pair for creating and managing your bucket <a id="3-1-1"></a>
+#### 3.1.1 Create an access/secret key pair for creating and managing your bucket <a id="3-1-1"></a>
 
 Go to AWS IAM console and create an access key and secret key that can be used to create your bucket and manage access to the bucket for writing and reading your log files
 
-#### 2.1.2 Deploy the LOGIQ helm in gateway mode
+#### 3.1.2 Deploy the LOGIQ helm in gateway mode
 
 Make sure to pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` from [step 2.1.1](k8s-quickstart-guide.md#3-1-1) above and give a bucket name. The S3 gateway acts as a caching gateway and helps reduce API cost.
 
@@ -84,11 +84,11 @@ If the bucket already exists, LOGIQ will use it. Check to make sure the access a
 ```bash
 $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set global.environment.s3_bucket=<bucket_name>
---set s3gateway.enabled=true \
---set s3gateway.defaultBucket.enabled=true \
---set s3gateway.defaultBucket.name=<bucket_name> \
---set s3gateway.environment.AWS_ACCESS_KEY_ID=<access_key> \
---set s3gateway.environment.AWS_SECRET_ACCESS_KEY=<secret_key> logiq-repo/logiq
+--set s3-gateway.s3gateway.enabled=true \
+--set s3-gateway.defaultBucket.enabled=true \
+--set s3-gateway.defaultBucket.name=<bucket_name> \
+--set s3-gateway.environment.AWS_ACCESS_KEY_ID=<access_key> \
+--set s3-gateway.environment.AWS_SECRET_ACCESS_KEY=<secret_key> logiq-repo/logiq
 ```
 
 {% hint style="info" %}
@@ -97,7 +97,7 @@ S3 providers may have restrictions on bucket name for e.g. AWS S3 bucket names a
 
 LOGIQ server provides Ingest, log tailing, data indexing, query and search capabilities. You can use the [logiqbox LOGIQ CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
 
-### 2.2 - Install LOGIQ server certificates and Client CA `[OPTIONAL]`
+### 3.2 - Install LOGIQ server certificates and Client CA `[OPTIONAL]`
 
 LOGIQ supports TLS for all ingest. We also enable non-TLS ports by default. It is however recommended that  non-TLS ports not be used unless running in a secure VPC or cluster. The certificates can be provided to the cluster using K8S secrets. Replace the template sections below with your Base64 encoded secret files.
 
@@ -127,7 +127,7 @@ The secret can now be passed into the LOGIQ deployment
 
 ```bash
 $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
---set logiq-flash.secrets_name=logiq-certs logiq-repo/logiq-flash
+--set logiq-flash.secrets_name=logiq-certs logiq-repo/logiq
 ```
 
 
