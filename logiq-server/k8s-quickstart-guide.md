@@ -130,7 +130,16 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set logiq-flash.secrets_name=logiq-certs logiq-repo/logiq
 ```
 
+## 4 Tear down
 
+If and when you want to decommission the installation use following commands
 
+```bash
+$ kubectl apply --namespace logiq -f logiq-certs.yaml
+$ helm delete logiq --namespace logiq
+$ helm repo remove logiq-repo
+$ kubectl delete namespace logiq
+```
 
+If you followed installation steps in section 3.1 - Using an AWS S3 bucket, you may want to delete the s3 bucket that was specified at deployment time.
 
