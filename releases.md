@@ -1,5 +1,23 @@
 # Releases
 
+## 1.2.0 - 2020-04-21
+
+### Added
+
+#### K8S
+
+* Scale-out and HA deployment for Kubernetes via HELM 3 chart \( [https://github.com/logiqai/helm-charts](https://github.com/logiqai/helm-charts) \)
+
+#### UI
+
+* New Log viewer in the masthead
+* Logs viewer integration with faceted search
+* Logs time machine to go back in time to log state of the infrastructure
+
+#### CLI
+
+* [logiqctl](logiqctl/logiq-box.md) is now GA with support for log tailing, historical queries and search
+
 ## 1.1.0 - 2020-02-27
 
 ### Fixed
