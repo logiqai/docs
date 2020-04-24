@@ -7,10 +7,26 @@ description: >-
 
 # Overview
 
-## Build from source
+## Installing logiqctl
+
+ Download Logiqctl binary based on your workstation OS and architecture from [here](https://github.com/logiqai/logiqctl/releases).
+
+## Configuring logiqctl
 
 ```text
-$ git clone https://github.com/logiqai/logiqctl.git
+$ ./logiqctl ls
+logiqctl is not configured! Loading interactive configuration.
+Enter the Logiq cluster URL: rc.logiq.ai
+Created following profile at /Users/john/.logiqctl/config.toml
+====================================
+Version = ""
+
+[[Profile]]
+  Name = "rc.logiq.ai"
+  ClusterURL = "rc.logiq.ai:8081"
+  Default = true
+
+====================================
 ```
 
 ## Help
@@ -29,7 +45,6 @@ AUTHOR:
    logiq.ai <cli@logiq.ai>
 
 COMMANDS:
-   configure, c  Configure Logiq-ctl
    list, ls      List of applications that you can tail
    tail, t       tail logs filtered by namespace, application, labels or process / pod name
    next, n       query n
