@@ -48,7 +48,7 @@
 
 ## EULA
 
-* [End User License Agreement](eula/aws.md)
+* [End User License Agreement](eula/eula.md)
 
 ## LOGIQ UI Configuration
 
