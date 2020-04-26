@@ -8,10 +8,10 @@ description: This page documents command-line usage for the Query command
 
 ```text
 NAME:
-   Logiq-ctl query - query "sudo cron" 2h
+   Logiqctl query - query "sudo cron" 2h
 
 USAGE:
-   Logiq-ctl query command [command options] [application names, relative time]
+   Logiqctl query command [command options] [application names, relative time]
 
 COMMANDS:
    next, n  query n
