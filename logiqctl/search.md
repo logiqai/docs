@@ -5,10 +5,10 @@
 ```bash
 #logiqctl s -h
 NAME:
-   Logiq-ctl search - search sudo
+   Logiqctl search - search sudo
 
 USAGE:
-   Logiq-ctl search command [command options] [search_term, relative time]
+   Logiqctl search command [command options] [search_term, relative time]
 
 COMMANDS:
    next, n  query n

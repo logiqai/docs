@@ -36,10 +36,15 @@ The above command returns the data with each row of data formatted as JSON.
 
 _**logiqctl**_ tailing allows a user to narrow down the logs to a smaller set of applications that the user is interested in and shows the logs from the requested application in the current live logs streaming into the server. 
 
+{% hint style="info" %}
 Tailing does not return historical data. For historical data, please see the [Query](query.md) section
+{% endhint %}
+
+```
+#./logiqctl tail --apps redis
+```
 
 ```text
-#./logiqctl tail --apps redis
 Crunching data for you...
 timestamp|severity_string|hostname|source_ip|proc_id|app_name|facility_string|message
 2019-12-12T23:57:31Z             |info  |docker-desktop|10.0.1.22|1405 |redis|system daemon|1:C 12 Dec 2019 23:57:31.618 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
