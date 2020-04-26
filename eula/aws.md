@@ -1,8 +1,4 @@
----
-description: Find the product EULA for AWS below
----
-
-# AWS
+# End User License Agreement
 
 IMPORTANT: USE OF THE LOGIQ SOFTWARE CONSTITUTES ACCEPTANCE OF THIS AGREEMENT. IF YOU DO NOT AGREE TO THIS AGREEMENT, DO NOT USE THE SOFTWARE.
 
@@ -14,15 +10,15 @@ The parties agree as follows:
 
 1.1. _“Intellectual Property Rights”_ means worldwide common law and statutory rights associated with \(i\) patents and patent applications; \(ii\) works of authorship, including copyrights, copyright applications, copyright registrations and “moral” rights; \(iii\) the protection of trade and industrial secrets and confidential information; \(iv\) other proprietary rights relating to intangible intellectual property \(specifically excluding trademarks, tradenames and service marks\); \(v\) analogous rights to those set forth above; and \(vi\) divisions, continuations, renewals, reissuances and extensions of the foregoing \(as applicable\) now existing or hereafter filed, issued or acquired.
 
-1.2. _“AWS”_ means Amazon Web Services. \(https://aws.amazon.com\)
+1.2. "Cloud Provider" means the provider of computing resources for enabling convenient, on-demand network access to a shared pool of configurable computing resources \(e.g., networks, servers, storage, applications, and services\) that can be rapidly provisioned and released with minimal management effort or service provider interaction. The definition "Cloud Provider" includes both public and private Cloud Provider.
 
-1.3. _“Software”_ means the LOGIQ.ai software, LOGIQ Log Analytics via AWS to Customer including all Updates related thereto.
+1.3. _“Software”_ means the LOGIQ.ai software, LOGIQ Log Analytics via Cloud Provider to Customer including all Updates related thereto.
 
 1.4. “_Update”_ means a release of the Software containing substantially only Error Corrections, minor new features, functionality and/or performance enhancements.
 
-1.5. _“Customer”_ is a user who subscribes to Logiq.ai Software using AWS.
+1.5. _“Customer”_ is a user who subscribes to or deploys Logiq.ai Software using any Cloud Provider.
 
-1.6. _“Customer data”_ is all data created by Customer using the Software and/or stored on AWS machines operating the Software.
+1.6. _“Customer data”_ is all data created by Customer using the Software and/or stored on Cloud Provider machines operating the Software.
 
 **2. OWNERSHIP AND PROPRIETARY NOTICES**
 
@@ -34,11 +30,11 @@ The parties agree as follows:
 
 **3. PAYMENTS AND ACCOUNTING**
 
-3.1. _Fees_. Customer shall pay Logiq.ai Inc. the fees set in accordance with the conditions published on the AWS Marketplace. Customer may use multiple instances of the Software paying for each instance separately.
+3.1. _Fees_. Customer shall pay Logiq.ai Inc. the fees set in accordance with the conditions published on the Cloud Provider Marketplace. Customer may use multiple instances of the Software paying for each instance separately.
 
 3.2. _Taxes_. The Customer shall pay VAT, howsoever designated, to the extent attributable to this Agreement or to any part, service or material furnished hereunder.
 
-3.3. _Refunds_. The customer may terminate the AWS instances at anytime to stop incurring charges. Annual subscription cancellations or downgrades are not supported.
+3.3. _Refunds_. The customer may terminate the Cloud Provider instances at anytime to stop incurring charges. Annual subscription cancellations or downgrades are not supported.
 
 **4. MAINTENANCE AND SUPPORT SERVICES**
 
@@ -48,11 +44,11 @@ The parties agree as follows:
 
 **5. LICENSE GRANTS AND RESTRICTIONS**
 
- 5.1. _Grants_. Logiq.ai Inc. grants to Customer a limited, non-exclusive, non-transferable license under Logiq.ai Inc. Intellectual Property Rights to the Software. This agreement enables Customer to use the LOGIQ log analytics solution in the AWS environment so as to provide service offerings directly and indirectly to Customer’s subscribers, customers and clients.
+ 5.1. _Grants_. Logiq.ai Inc. grants to Customer a limited, non-exclusive, non-transferable license under Logiq.ai Inc. Intellectual Property Rights to the Software. This agreement enables Customer to use the LOGIQ log analytics solution in the Cloud Provider environment so as to provide service offerings directly and indirectly to Customer’s subscribers, customers and clients.
 
-5.2. _Term and Termination_. The license is granted for the duration of AWS subscription to the Licensed Software.
+5.2. _Term and Termination_. The license is granted for the duration of Cloud Provider subscription to the Licensed Software.
 
-5.3. _Limitations on Use_. Customer may not attempt to modify, reverse engineer or disassemble, distribute,  sublicense or transfer the Software out of the licensed AWS environment.
+5.3. _Limitations on Use_. Customer may not attempt to modify, reverse engineer or disassemble, distribute,  sublicense or transfer the Software out of the licensed Cloud Provider environment.
 
 5.4 _Open Source Components_. The Software incorporates numerous open-source components made available by third parties under their own license terms. The respective licenses apply to these components. A list of the components and their respective license terms is available in Software documentation.
 
