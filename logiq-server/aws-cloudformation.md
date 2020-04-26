@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-LOGIQ can be deployed on AWS in a single AMI instance in a 1-Click fashion using our CloudFormation template and the LOGIQ AMI from the Amazon Marketplace. 
+LOGIQ can be deployed on AWS in a single AMI instance in a 1-Click fashion using our CloudFormation template and the LOGIQ AMI from the Amazon Marketplace. Please read and agree [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
 
 All the resources required to create and configure LOGIQ on AWS are taken care by the template. All you need to do is provide a few simple input parameters.
 

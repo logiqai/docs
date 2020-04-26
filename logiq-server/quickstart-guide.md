@@ -6,7 +6,8 @@
 
 #### Install Docker compose
 
-You can spin-up LOGIQ using docker compose. Install guide for docker compose can be found here - [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+You can spin-up LOGIQ using docker compose. Install guide for docker compose can be found here - [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)  
+Please read and agree [EULA](https://docs.logiq.ai/eula/eula) before proceeding. 
 
 ### Running LOGIQ
 

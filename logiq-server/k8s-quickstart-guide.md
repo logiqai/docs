@@ -8,7 +8,7 @@ description: >-
 
 ## 1 - Prerequisites
 
-LOGIQ K8S components are made available as helm charts. Instructions below assume you are using HELM 3. Please read and agree EULA before proceeding.
+LOGIQ K8S components are made available as helm charts. Instructions below assume you are using HELM 3. Please read and agree [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
 
 ### 1.1 Add LOGIQ helm repository
 
