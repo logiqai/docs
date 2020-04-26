@@ -13,17 +13,18 @@ description: >-
 
 ## Configuring logiqctl
 
+Before using logiqctl can be used , it is important to first configure the logiq cluster endpoint.
+
 ```text
-$ ./logiqctl ls
-logiqctl is not configured! Loading interactive configuration.
-Enter the Logiq cluster URL: rc.logiq.ai
-Created following profile at /Users/john/.logiqctl/config.toml
+$ ./logiqctl c
+Enter the Logiq cluster URL: logiq.my-domain.com
+Created following profile at /Users/johndoe/.logiqctl/config.toml
 ====================================
 Version = ""
 
 [[Profile]]
-  Name = "rc.logiq.ai"
-  ClusterURL = "rc.logiq.ai:8081"
+  Name = "logiq.my-domain.com"
+  ClusterURL = "logiq.my-domain.com:8081"
   Default = true
 
 ====================================
@@ -32,6 +33,7 @@ Version = ""
 ## Help
 
 ```text
+$ ./logiqctl h
 NAME:
    Logiqctl - LOGIQ command line toolkit
 
