@@ -1,5 +1,7 @@
 ---
-description: This page describes the K8S deployment for the LOGIQ using HELM 3 charts
+description: >-
+  This page describes the LOGIQ deployment on Kubernetes cluster using HELM 3
+  charts.
 ---
 
 # K8S Quickstart guide
@@ -59,7 +61,10 @@ The default login and password to use is flash-admin@foo.com and flash-password.
 The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](quickstart-guide.md#ports). 
 {% endhint %}
 
-![](../.gitbook/assets/screen-shot-2020-03-24-at-3.42.55-pm.png)
+![Logiq Insights Login UI ](../.gitbook/assets/screen-shot-2020-03-24-at-3.42.55-pm.png)
+
+LOGIQ server provides Ingest, log tailing, data indexing, query and search capabilities.   
+Besides the web based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
 
 ## 3 Customizing the deployment
 
@@ -94,8 +99,6 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 {% hint style="info" %}
 S3 providers may have restrictions on bucket name for e.g. AWS S3 bucket names are globally unique. 
 {% endhint %}
-
-LOGIQ server provides Ingest, log tailing, data indexing, query and search capabilities. You can use the [logiqbox LOGIQ CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
 
 ### 3.2 - Install LOGIQ server certificates and Client CA `[OPTIONAL]`
 

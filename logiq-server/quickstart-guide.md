@@ -60,7 +60,7 @@ LOGIQ exposes the below ports
 * **20514** - RELP/Rsyslog / TCP - Non TLS
 * **9998** - Server administration web cli
 * **9999** - REST API
-* **50054** - GRPC \( needed for logiqbox CLI \)
+* **50054** - GRPC \( needed for logiqctl CLI \)
 * **80** - http
 * **443** - https
 

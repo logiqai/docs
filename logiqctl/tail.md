@@ -8,7 +8,7 @@ description: This page documents command-line usage for the Tail command
 
 ```text
 NAME:
-   logiqbox tail - tail logs filtered by namespace, application, labels or process / pod name
+   logiqclt tail - tail logs filtered by namespace, application, labels or process / pod name
 
 USAGE:
    logiqbox tail [command options] [-apps application names and/or -namespaces K8S namespace names and/or -labels K8S labels - procs process id / pod name]
