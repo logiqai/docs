@@ -40,7 +40,7 @@ The parties agree as follows:
 
 4.1. _Updates_. Logiq.ai Inc. shall provide to Customer the Updates as they become available without additional charges.
 
-4.2. _Support_. Support is offered to Customer via Email and serves the purpose of resolving product defects. At Logiq.ai Inc. discretion, initial installation support for a Customer may be offered at extra charges. Please contact sales@logiq.ai for futher details.
+4.2. _Support_. Support is offered to Customer via Email and serves the purpose of resolving product defects. At Logiq.ai Inc. discretion, initial installation support for a Customer may be offered at extra charges. Please contact sales@logiq.ai for further details.
 
 **5. LICENSE GRANTS AND RESTRICTIONS**
 
