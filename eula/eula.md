@@ -12,7 +12,7 @@ The parties agree as follows:
 
 1.2. "_Cloud Provider_" means the provider of computing resources for enabling convenient, on-demand network access to a shared pool of configurable computing resources \(e.g., networks, servers, storage, applications, and services\) that can be rapidly provisioned and released with minimal management effort or service provider interaction. The definition "Cloud Provider" includes both public and private Cloud Provider.
 
-1.3. _“Software”_ means the LOGIQ.ai software, LOGIQ Log Analytics via Cloud Provider to Customer including all Updates related thereto.
+1.3. _“Software”_ means the LOGIQ.ai software, LOGIQ Log Insights, LOGIQ Insights via Cloud Provider to Customer including all Updates related thereto.
 
 1.4. “_Update”_ means a release of the Software containing substantially only Error Corrections, minor new features, functionality and/or performance enhancements.
 
