@@ -20,6 +20,10 @@ The Prometheus Query API expects `start_time` and `end_time` to be provided in q
 
 LOGIQ translates the duration values to appropriate start and end times before issuing the Query API call
 
+{% hint style="info" %}
+Using the duration syntax allows you to construct dynamic time range queries without specifying start or end time.
+{% endhint %}
+
 ```text
 example: instant query
   query=http_requests_total
