@@ -1,6 +1,6 @@
 # Releases
 
-## 1.2.0 - 2020-04-21
+## 1.2.0 - 2020-04-28
 
 ### Added
 
@@ -10,9 +10,10 @@
 
 #### UI
 
-* New Log viewer in the masthead
-* Logs viewer integration with faceted search
-* Logs time machine to go back in time to log state of the infrastructure
+* Monitoring of time series metrics
+* New Log viewer
+* Log viewer integration with faceted search
+* Log time machine to go back in time to log state
 
 #### CLI
 

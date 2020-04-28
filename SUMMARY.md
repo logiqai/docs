@@ -3,40 +3,21 @@
 * [Overview](README.md)
 * [Releases](releases.md)
 
-## Logiq server
+## EULA
 
-* [Quickstart guide](logiq-server/quickstart-guide.md)
-* [K8S Quickstart guide](logiq-server/k8s-quickstart-guide.md)
-* [AWS Quickstart guide](logiq-server/aws-cloudformation.md)
-* [Ingesting data](logiq-server/agentless.md)
+* [End User License Agreement](eula/eula.md)
 
-## Logiq server configuration
+## LOGIQ Monitoring
 
-* [Terminology](logiq-server-configuration/terminology.md)
-* [Minimal server configuration](logiq-server-configuration/minimal-server-configuration.md)
-* [Server options](logiq-server-configuration/server-options.md)
-* [Sources](logiq-server-configuration/sources.md)
-* [Destinations](logiq-server-configuration/destinations.md)
-* [Filters](logiq-server-configuration/filters.md)
-* [Groupings](logiq-server-configuration/groupings.md)
-* [Rules](logiq-server-configuration/rules.md)
-* [Credentials](logiq-server-configuration/credentials.md)
-* [Partitions](logiq-server-configuration/partitions.md)
+* [Quickstart guide](logiq-monitoring/quickstart-guide.md)
+* [Querying data](logiq-monitoring/querying-data.md)
 
-## LOGIQ STREAMING
+## Log Insights <a id="logiq-server-log-insights"></a>
 
-* [API Documentation](logiq-streaming/historical-data.md)
-
-## RUNNING ON AWS
-
-* [Getting started](running-on-aws/getting-started.md)
-* [AWS IAM Resources](running-on-aws/aws-iam-resources.md)
-* [1-Click deployment using CloudFormation](running-on-aws/ami-using-cloudformation.md)
-
-## LOGIQ ANOMALY DETECTION <a id="logiq-events"></a>
-
-* [Events](logiq-events/events.md)
-* [Event Rules](logiq-events/event-rules.md)
+* [Quickstart guide](logiq-server-log-insights/quickstart-guide.md)
+* [K8S Quickstart guide](logiq-server-log-insights/k8s-quickstart-guide.md)
+* [AWS Quickstart guide](logiq-server-log-insights/aws-cloudformation.md)
+* [Ingesting data](logiq-server-log-insights/agentless.md)
 
 ## LOGIQCTL
 
@@ -46,11 +27,35 @@
 * [Search](logiqctl/search.md)
 * [Tail](logiqctl/tail.md)
 
-## EULA
+## ANOMALY DETECTION <a id="logiq-events"></a>
 
-* [End User License Agreement](eula/eula.md)
+* [Events](logiq-events/events.md)
+* [Event Rules](logiq-events/event-rules.md)
+
+## LOGIQ STREAMING
+
+* [API Documentation](logiq-streaming/historical-data.md)
 
 ## LOGIQ UI Configuration
 
 * [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration.md)
+
+## Log Ingest configuration <a id="logiq-log-ingest-server-configuration"></a>
+
+* [Terminology](logiq-log-ingest-server-configuration/terminology.md)
+* [Minimal server configuration](logiq-log-ingest-server-configuration/minimal-server-configuration.md)
+* [Server options](logiq-log-ingest-server-configuration/server-options.md)
+* [Sources](logiq-log-ingest-server-configuration/sources.md)
+* [Destinations](logiq-log-ingest-server-configuration/destinations.md)
+* [Filters](logiq-log-ingest-server-configuration/filters.md)
+* [Groupings](logiq-log-ingest-server-configuration/groupings.md)
+* [Rules](logiq-log-ingest-server-configuration/rules.md)
+* [Credentials](logiq-log-ingest-server-configuration/credentials.md)
+* [Partitions](logiq-log-ingest-server-configuration/partitions.md)
+
+## RUNNING ON AWS
+
+* [Getting started](running-on-aws/getting-started.md)
+* [AWS IAM Resources](running-on-aws/aws-iam-resources.md)
+* [1-Click deployment using CloudFormation](running-on-aws/ami-using-cloudformation.md)
 

@@ -4,6 +4,10 @@ description: This page describes the IAM Resources required for LOGIQ platform t
 
 # AWS IAM Resources
 
+{% hint style="info" %}
+NOTE: LOGIQ can use Athena and Glue on AWS optionally to power the SQL queries. Instructions below for Athena/Glue are only needed if you choose to use those services.
+{% endhint %}
+
 ## LOGIQ User Role
 
 You need to provide AWS access key and secret in LOGIQ server configuration with the following permissions. 

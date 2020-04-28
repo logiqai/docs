@@ -1,0 +1,54 @@
+# Querying data
+
+LOGIQ's Prometheus integration allows querying data from the query editor. Just enter a PromQL query and see your data and create visualizations in an instant
+
+![](../.gitbook/assets/screen-shot-2020-04-27-at-6.13.01-pm.png)
+
+### Query language
+
+The query language is nothing but the PromQL expression and any additional parameters that would be sent to the Prometheus Query API. Query starts with a `query=` prefix and ends with optional url parameters that are sent to the query API
+
+Lets look at an example
+
+```text
+query=go_gc_duration_seconds&duration=15m&step=60
+```
+
+In the above query, we are looking for the `go_gc_duration_seconds` metric, sampled at 60 second intervals and data for the metric in the last 15 minutes
+
+The Prometheus Query API expects start\_time and end\_time to be provided in queries. LOGIQ has a simplified duration syntax that is compatible with the Prometheus Query API. LOGIQ translates the duration values to appropriate start and end times before issuing the Query API call
+
+```text
+example: instant query
+  query=http_requests_total
+
+example: range query
+  query=http_requests_total&start=2018-01-20T00:00:00.000Z&end=2018-01-25T00:00:00.000Z&step=60s
+
+example: until now range query
+  query=http_requests_total&start=2018-01-20T00:00:00.000Z&step=60s
+  query=http_requests_total&start=2018-01-20T00:00:00.000Z&end=now&step=60s
+  
+example: using duration
+  # end is assumed now, start is end-duration
+  query=http_requests_total&duration=1h5m10s20ms&step=60s 
+  # end is (start + duration)
+  query=http_requests_total&start=2018-01-20T00:00:00.000Z&duration=1h&step=60s 
+  # start is (end - duration), end is now
+  query=http_requests_total&duration=1h&step=60s
+  #start is (end - duration), end is now
+  query=http_requests_total&end=2018-01-20T00:00:00.000Z&duration=1h&step=60s 
+```
+
+### PromQL compatibility
+
+LOGIQ's query language is 100% compatible with PromQL, primarily because all query expressions are translated to appropriate Prometheus Query / Query range API calls. 
+
+Let's look at a more complicated expression below
+
+```text
+query=(100-(avg(irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100))&duration=1h&step=30s
+```
+
+
+
