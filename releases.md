@@ -2,6 +2,8 @@
 
 ## 1.2.0 - 2020-04-28
 
+Official GA of LOGIQ's complete Observability platform with support for metrics and log analytics
+
 ### Added
 
 #### K8S
@@ -36,6 +38,8 @@
 * New AMI's for AWS marketplace
 
 ## 1.0.0 - 2020-01-21
+
+Official GA of LOGIQ's Log Insights platform
 
 ### Added
 
