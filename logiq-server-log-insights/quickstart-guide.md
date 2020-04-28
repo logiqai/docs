@@ -15,7 +15,7 @@ First step is to get the appropriate docker compose YAML file from one of the UR
 
 Both of the Quickstart YAML's include a bundled S3 compatible object store from [minio](https://min.io)
 
-{% hint style="info" %}
+{% hint style="warning" %}
 _**NOTE:** the docker-compose quick-start YAML files are intended for demo and trial use only. If you want to run a production deployment, we recommend you use Kubernetes with HELM to deploy the LOGIQ stack. Please contact us at : s a l e s @ l o g i q . a i_
 {% endhint %}
 
