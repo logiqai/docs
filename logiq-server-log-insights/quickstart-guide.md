@@ -27,7 +27,7 @@ _**NOTE:** the docker-compose quick-start YAML files are intended for demo and t
 $ wget https://logiqcf.s3.amazonaws.com/1.2.0/docker-compose.quickstart.yml
 ```
 
-{% hint style="info" %}
+{% hint style="warning" %}
 NOTE: Please have 16GB of memory when running the full stack with UI
 {% endhint %}
 
