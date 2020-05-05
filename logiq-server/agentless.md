@@ -47,9 +47,29 @@ output {
 
 ## Rsyslogd
 
-Please see below on how to configure Rsyslog to send to LOGIQ server
+Please see below on how to configure Rsyslog to send to LOGIQ server. Rsyslog can send data to LOGIQ using either TCP transport or RELP transport. The RELP module for Rsyslog is called `omrelp` and for the TCP forward is called `omfwd`
 
-### Installation rsyslog RELP modules
+{% hint style="warning" %}
+LOGIQ strongly recommends sending data using the RELP transport to ensure packets are not lost or dropped. RELP relies on acknowledgements from the receiver to make sure packet is delivered. LOGIQ, for its part only sends the acknowledgements back once the data is written to persistent store.
+{% endhint %}
+
+### Using omfwd
+
+Update the syslog config in `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.conf`
+
+```text
+*.* action(type="omfwd"
+           queue.type="LinkedList"
+           action.resumeRetryCount="-1"
+           queue.size="10000"
+           queue.saveonshutdown="on"
+           target="logiq-server-syslog-host" Port="514" Protocol="tcp"
+           )
+```
+
+### Using omrelp 
+
+#### Installation rsyslog RELP modules
 
 rsyslog is installed by default in most modern OS's, rsyslog needs the omrelp module to send data to a RELP aware endpoint such as LOGIQ. To enable RELP install packages listed below
 
@@ -67,7 +87,7 @@ sudo apt install rsyslog-gnutls rsyslog-relp
 yum install rsyslog-gnutls rsyslog-relp
 ```
 
-### **Configuring rsyslog \(TLS\)**
+#### **Configuring rsyslog \(TLS\)**
 
 Update the syslog config in `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.conf`
 
@@ -104,7 +124,7 @@ action(type="omrelp"
 
 **NOTE**: Change _"target", "port", tls.caCert" , "tls.myCert", "tls.myPrivKey", "tls.PermitterPeer"_ above to suit your configuration. For non TLS config, set _"tls"_ parameter as _"off"_ and remove all tls.\* parameters from above config file. E.g. of target=ec2-34-213-110-235.us-west-2.compute.amazonaws.com
 
-### **Configuring rsyslog \(non-TLS\)**
+#### **Configuring rsyslog \(non-TLS\)**
 
 Update the syslog config in `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.conf`
 

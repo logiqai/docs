@@ -15,28 +15,28 @@ First step is to get the appropriate docker compose YAML file from one of the UR
 
 Both of the Quickstart YAML's include a bundled S3 compatible object store from [minio](https://min.io)
 
-{% hint style="info" %}
+{% hint style="warning" %}
 _**NOTE:** the docker-compose quick-start YAML files are intended for demo and trial use only. If you want to run a production deployment, we recommend you use Kubernetes with HELM to deploy the LOGIQ stack. Please contact us at : s a l e s @ l o g i q . a i_
 {% endhint %}
 
 #### LOGIQ full-stack - Ingest server with UI
 
-* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/1.1.0/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/1.1.0/docker-compose.quickstart.yml)
+* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/1.2.0/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/1.2.0/docker-compose.quickstart.yml)
 
 ```bash
-$ wget https://logiqcf.s3.amazonaws.com/1.1.0/docker-compose.quickstart.yml
+$ wget https://logiqcf.s3.amazonaws.com/1.2.0/docker-compose.quickstart.yml
 ```
 
-{% hint style="info" %}
+{% hint style="warning" %}
 NOTE: Please have 16GB of memory when running the full stack with UI
 {% endhint %}
 
 #### LOGIQ Ingest-only stack . - Ingest server only \( Does not include UI \)
 
-* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/1.1.0/docker-compose.quickstart-ingest.yml](https://logiqcf.s3.amazonaws.com/1.1.0/docker-compose.quickstart-ingest.yml)
+* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/1.2.0/docker-compose.quickstart-ingest.yml](https://logiqcf.s3.amazonaws.com/1.2.0/docker-compose.quickstart-ingest.yml)
 
 ```text
-$ wget https://logiqcf.s3.amazonaws.com/1.1.0/docker-compose.quickstart-ingest.yml
+$ wget https://logiqcf.s3.amazonaws.com/1.2.0/docker-compose.quickstart-ingest.yml
 ```
 
 You are now ready to bring up the LOGIQ stack. 
@@ -65,7 +65,7 @@ LOGIQ exposes the below ports
 * **80** - http
 * **443** - https
 
-The ports used to bind are configurable via the server configuration file. See [Server options](../logiq-server-configuration/server-options.md) for more details.
+The ports used to bind are configurable via the server configuration file. See [Server options](../logiq-log-ingest-server-configuration/server-options.md) for more details.
 
 ### Prometheus scraping
 

@@ -25,7 +25,7 @@ You should now have the following information created and ready for using and ru
 
 ### Self hosted
 
-If you are hosting LOGIQ instances in your AWS account, you can setup using [Cloud formation](../logiq-server-log-insights/aws-cloudformation.md) instructions in the AWS Quickstart guide.
+If you are hosting LOGIQ instances in your AWS account, you can setup using [Cloud formation](../logiq-server/aws-cloudformation.md) instructions in the AWS Quickstart guide.
 
 ### Managed service
 
