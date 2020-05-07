@@ -7,17 +7,17 @@
 
 * [End User License Agreement](eula/eula.md)
 
-## LOGIQ Monitoring
-
-* [Quickstart guide](logiq-monitoring/quickstart-guide.md)
-* [Querying data](logiq-monitoring/querying-data.md)
-
 ## Log Insights <a id="logiq-server"></a>
 
 * [Quickstart guide](logiq-server/quickstart-guide.md)
 * [K8S Quickstart guide](logiq-server/k8s-quickstart-guide.md)
 * [AWS Quickstart guide](logiq-server/aws-cloudformation.md)
 * [Ingesting data](logiq-server/agentless.md)
+
+## LOGIQ Monitoring
+
+* [Quickstart guide](logiq-monitoring/quickstart-guide.md)
+* [Querying data](logiq-monitoring/querying-data.md)
 
 ## LOGIQCTL
 
