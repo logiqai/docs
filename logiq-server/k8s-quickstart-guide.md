@@ -72,6 +72,10 @@ Besides the web based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.l
 
 Depending on your requirements, you may want to host your storage in your own K8S cluster or create a bucket in a cloud provider like AWS.
 
+{% hint style="danger" %}
+Please note that cloud providers may charge data transfer costs between regions. It is important that the LOGIQ cluster be deployed in the same region where the S3 bucket is hosted
+{% endhint %}
+
 #### 3.1.1 Create an access/secret key pair for creating and managing your bucket <a id="3-1-1"></a>
 
 Go to AWS IAM console and create an access key and secret key that can be used to create your bucket and manage access to the bucket for writing and reading your log files
