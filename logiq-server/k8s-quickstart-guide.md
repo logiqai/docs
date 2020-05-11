@@ -193,7 +193,7 @@ If you are planning on using a specific storage class for your volumes, you can 
 ```bash
 $ helm upgrade --namespace logiq \
 --set global.persistence.storageClass=<storage class name> \
-logiq-repo/logiq
+logiq logiq-repo/logiq
 ```
 
 ## 4 Tear down
