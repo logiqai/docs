@@ -16,7 +16,7 @@
 
 ## LOGIQ Monitoring
 
-* [Quickstart guide](logiq-monitoring/quickstart-guide.md)
+* [Configuring Prometheus](logiq-monitoring/quickstart-guide.md)
 * [Querying data](logiq-monitoring/querying-data.md)
 
 ## LOGIQCTL
@@ -36,9 +36,11 @@
 
 * [API Documentation](logiq-streaming/historical-data.md)
 
-## LOGIQ UI Configuration
+## LOGIQ Configuration <a id="logiq-ui-configuration"></a>
 
-* [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration.md)
+* [Email Configuration Setup](logiq-ui-configuration/email-configuration-setup.md)
+* [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration/README.md)
+  * [Email Configuration Setup](logiq-ui-configuration/single-sign-on-configuration/email-configuration-setup.md)
 
 ## Log Ingest configuration <a id="logiq-log-ingest-server-configuration"></a>
 

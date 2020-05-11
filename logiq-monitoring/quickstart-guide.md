@@ -1,6 +1,4 @@
-# Quickstart guide
-
-## Configuring Prometheus
+# Configuring Prometheus
 
 LOGIQ monitoring is powered by Prometheus. The steps below assume that your LOGIQ UI is up and running. To connect to you prometheus setup, head over the _Data Sources_ in settings
 
