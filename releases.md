@@ -1,5 +1,19 @@
 # Releases
 
+## 1.2.1 - 2020-05-11
+
+### Added
+
+#### K8S
+
+* Add support for ingress with http and optionally have https
+* ServiceMonitor for ingest server if prometheus is installed
+
+#### UI
+
+* Logs modal ordering to match how developers view logs from a file
+* Highlight log line from search
+
 ## 1.2.0 - 2020-04-28
 
 Official GA of LOGIQ's complete Observability platform with support for metrics and log analytics
