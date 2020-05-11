@@ -223,7 +223,7 @@ kubectl apply -f fluentd-logiq.yaml
 
 ### Non-TLS Mode
 
-Edit the**`fluentd/fluentd-logiq_non_tls.yaml`**and add your LOGIQ cluster IP/DNS. Also configure your Cluster Id \(e.g. RC, Prod, Dev-Test, QA\)
+Edit the**`fluentd/fluentd-logiq_non_tls.yaml`**and add your LOGIQ cluster IP/DNS. Also configure your `CLUSTER_ID` \(e.g. RC, Prod, Dev-Test, QA\)
 
 ```text
 ....
