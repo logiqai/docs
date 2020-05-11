@@ -162,6 +162,16 @@ action(type="omrelp"
 
 If you are running a K8S cluster, you can use fluentd to send data to the LOGIQ server. Please see below for instructions
 
+### Managing multiple K8S clusters in a single LOGIQ instance
+
+When deploying fluentd daemonset on K8S clusters, we recommend you use the fluentd daemon set container provided by LOGIQ. It is available at [https://hub.docker.com/repository/docker/logiqai/fluentd-remote-syslog](https://hub.docker.com/repository/docker/logiqai/fluentd-remote-syslog). It allows the administrator to pass a human readable `CLUSTER_ID` or cluster identifier with all the log data.
+
+{% hint style="success" %}
+Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters. 
+
+It is also easier for the administrator to use human readable names vs LOGIQ using uuid's etc that it detects from the incoming stream.
+{% endhint %}
+
 ### Running the fluentd daemonset
 
 * Clone the repository to get the **`kubectl`** YAML files to start your daemonset
@@ -191,12 +201,6 @@ drwxr-xr-x  7 user  staff   224 Oct 30 14:47 ..
 Edit the **`fluentd/secret.yaml`** to include your CA and Client pub/private keys in base64 encoded format
 
 Edit the **`fluentd/fluentd-logiq.yaml`** and add your LOGIQ cluster IP/DNS. Also configure your `CLUSTER_ID` \(e.g. RC, Prod, Dev-Test, QA\). 
-
-{% hint style="success" %}
-Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters. 
-
-It is also easier for the administrator to use human readable names vs LOGIQ using uuid's etc that it detects from the incoming stream.
-{% endhint %}
 
 ```text
 ....
