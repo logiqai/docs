@@ -65,7 +65,10 @@ Besides the web based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.l
 
 ```bash
 $ helm install logiq --namespace logiq \
---set global.domain=logiq.my-domain.com logiq-repo/logiq
+--set global.domain=logiq.my-domain.com \
+--set ingress.tlsEnabled=true \
+--set kubernetes-ingress.defaultTLSSecret.enabled=true \
+logiq-repo/logiq
 ```
 
 {% hint style="success" %}
@@ -77,6 +80,20 @@ The default login and password to use is `flash-admin@foo.com` and `flash-passwo
 {% hint style="info" %}
 The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](quickstart-guide.md#ports). 
 {% endhint %}
+
+#### 3.1.1 Passing an ingress secret
+
+If you want to pass your own ingress secret, you can do so when installing the HELM chart
+
+```bash
+$ helm install logiq --namespace logiq \
+--set global.domain=logiq.my-domain.com \
+--set ingress.tlsEnabled=true \
+--set kubernetes-ingress.defaultTLSSecret.secret=<secret_name> \
+logiq-repo/logiq
+```
+
+
 
 ### 3.2 - Using an AWS S3 bucket
 
