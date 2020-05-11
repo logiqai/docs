@@ -95,7 +95,7 @@ logiq-repo/logiq
 
 
 
-### 3.2 - Using an AWS S3 bucket
+### 3.2 Using an AWS S3 bucket
 
 Depending on your requirements, you may want to host your storage in your own K8S cluster or create a bucket in a cloud provider like AWS.
 
@@ -131,7 +131,7 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 S3 providers may have restrictions on bucket name for e.g. AWS S3 bucket names are globally unique. 
 {% endhint %}
 
-### 3.3 - Install LOGIQ server certificates and Client CA `[OPTIONAL]`
+### 3.3 Install LOGIQ server certificates and Client CA `[OPTIONAL]`
 
 LOGIQ supports TLS for all ingest. We also enable non-TLS ports by default. It is however recommended that  non-TLS ports not be used unless running in a secure VPC or cluster. The certificates can be provided to the cluster using K8S secrets. Replace the template sections below with your Base64 encoded secret files.
 
