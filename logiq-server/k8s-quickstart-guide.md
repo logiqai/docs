@@ -45,20 +45,13 @@ If you choose a different name for the namespace, please remember to use the sam
 ## 2. Install LOGIQ
 
 ```bash
-$ helm install logiq --namespace logiq \
---set global.domain=logiq.my-domain.com logiq-repo/logiq
+$ helm install logiq --namespace logiq logiq-repo/logiq
 ```
 
-This will install LOGIQ and expose the LOGIQ UI and ingress ports at the domain `logiq.my-domain.com.` Replace `logiq.my-domain.com` with you own domain where the service will be hosted.
-
-{% hint style="success" %}
-You should now be able to login to LOGIQ UI at your domain using `https://logiq.my-domain.com` that you set in the ingress after you have updated your DNS server to point to the Ingress controller service IP
-
-The default login and password to use is flash-admin@foo.com and flash-password. You can change these in the UI once logged in.
-{% endhint %}
+This will install LOGIQ and expose the LOGIQ services and UI on the ingress IP. Service ports are described in the [Port details section](https://docs.logiq.ai/logiq-server/quickstart-guide#ports). You should now be able to go to `http://ingress-ip/`
 
 {% hint style="info" %}
-The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](quickstart-guide.md#ports). 
+The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in.
 {% endhint %}
 
 ![Logiq Insights Login UI ](../.gitbook/assets/screen-shot-2020-03-24-at-3.42.55-pm.png)
@@ -68,7 +61,24 @@ Besides the web based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.l
 
 ## 3 Customizing the deployment
 
-### 3.1 - Using an AWS S3 bucket
+### 3.1 Enabling https for the UI
+
+```bash
+$ helm install logiq --namespace logiq \
+--set global.domain=logiq.my-domain.com logiq-repo/logiq
+```
+
+{% hint style="success" %}
+You should now be able to login to LOGIQ UI at your domain using `https://logiq.my-domain.com` that you set in the ingress after you have updated your DNS server to point to the Ingress controller service IP
+
+The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in.
+{% endhint %}
+
+{% hint style="info" %}
+The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](quickstart-guide.md#ports). 
+{% endhint %}
+
+### 3.2 - Using an AWS S3 bucket
 
 Depending on your requirements, you may want to host your storage in your own K8S cluster or create a bucket in a cloud provider like AWS.
 
@@ -104,7 +114,7 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 S3 providers may have restrictions on bucket name for e.g. AWS S3 bucket names are globally unique. 
 {% endhint %}
 
-### 3.2 - Install LOGIQ server certificates and Client CA `[OPTIONAL]`
+### 3.3 - Install LOGIQ server certificates and Client CA `[OPTIONAL]`
 
 LOGIQ supports TLS for all ingest. We also enable non-TLS ports by default. It is however recommended that  non-TLS ports not be used unless running in a secure VPC or cluster. The certificates can be provided to the cluster using K8S secrets. Replace the template sections below with your Base64 encoded secret files.
 
@@ -135,6 +145,38 @@ The secret can now be passed into the LOGIQ deployment
 ```bash
 $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set logiq-flash.secrets_name=logiq-certs logiq-repo/logiq
+```
+
+### 3.4 E-Mail configuration setup
+
+LOGIQ insights can be configured to send email notifications for alerting workflows. It uses SMTP mail and requires following information for configuration:
+
+* Mail Server
+* Mail Port
+* Username
+* Password
+* Default Sender
+
+Use the following HELM chart options to configure the mail server settings.
+
+```bash
+$ helm upgrade --namespace logiq \
+    --set global.environment.mail_server=<smtp server ip> \
+    --set global.environment.mail_port=<port> \
+    --set global.environment.mail_username=<username> \
+    --set global.environment.mail_password=<password> \
+    --set global.environment.mail_default_sender=<sender email id> \
+     logiq logiq-repo/logiq
+```
+
+### 3.5 Changing the storage class
+
+If you are planning on using a specific storage class for your volumes, you can customize it for the LOGIQ deployment. By default LOGIQ uses the `standard` storage class
+
+```bash
+$ helm upgrade --namespace logiq \
+--set global.persistence.storageClass=<storage class name> \
+logiq-repo/logiq
 ```
 
 ## 4 Tear down
