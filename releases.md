@@ -14,6 +14,10 @@
 * Logs modal ordering to match how developers view logs from a file
 * Highlight log line from search
 
+#### Misc
+
+* Bug fixes for performance, graceful failure handling/recovery
+
 ## 1.2.0 - 2020-04-28
 
 Official GA of LOGIQ's complete Observability platform with support for metrics and log analytics
