@@ -190,13 +190,15 @@ drwxr-xr-x  7 user  staff   224 Oct 30 14:47 ..
 
 Edit the **`fluentd/secret.yaml`** to include your CA and Client pub/private keys in base64 encoded format
 
-Edit the **`fluentd/fluentd-logiq.yaml`** and add your LOGIQ cluster IP/DNS
+Edit the **`fluentd/fluentd-logiq.yaml`** and add your LOGIQ cluster IP/DNS. Also configure your Cluster Id \(e.g. RC, Prod, Dev-Test, QA\)
 
 ```text
 ....
   - env:
         - name: SYSLOG_HOST
           value: "YOUR_LOGIQ_SERVER_IP"
+        - name: CLUSTER_ID
+          value: "YOUR_CLUSTER_ID"          
 ....
 ```
 
@@ -211,13 +213,15 @@ kubectl apply -f fluentd-logiq.yaml
 
 ### Non-TLS Mode
 
-Edit the**`fluentd/fluentd-logiq_non_tls.yaml`**and add your LOGIQ cluster IP/DNS
+Edit the**`fluentd/fluentd-logiq_non_tls.yaml`**and add your LOGIQ cluster IP/DNS. Also configure your Cluster Id \(e.g. RC, Prod, Dev-Test, QA\)
 
 ```text
 ....
   - env:
         - name: SYSLOG_HOST
           value: "YOUR_LOGIQ_SERVER_IP"
+        - name: CLUSTER_ID
+          value: "YOUR_CLUSTER_ID"          
 ....
 ```
 
