@@ -11,11 +11,12 @@ LOGIQ insights can be configured to send emails to notify alerts. It uses smtp m
 For K8S based LOGIQ insights setup, use following helm command to configure above parameters.
 
 ```text
-$ helm upgrade --set global.environment.mail_server=<smtp server ip> \
+$ helm upgrade --namespace logiq \
+    --set global.environment.mail_server=<smtp server ip> \
     --set global.environment.mail_port=<port> \
     --set global.environment.mail_username=<username> \
     --set global.environment.mail_password=<password> \
     --set global.environment.mail_default_sender=<sender email id> \
-    --namespace logiq lq ./logiq
+     logiq logiq-repo/logiq
 ```
 

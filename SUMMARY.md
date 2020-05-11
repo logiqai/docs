@@ -39,8 +39,7 @@
 ## LOGIQ Configuration <a id="logiq-ui-configuration"></a>
 
 * [Email Configuration Setup](logiq-ui-configuration/email-configuration-setup.md)
-* [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration/README.md)
-  * [Email Configuration Setup](logiq-ui-configuration/single-sign-on-configuration/email-configuration-setup.md)
+* [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration.md)
 
 ## Log Ingest configuration <a id="logiq-log-ingest-server-configuration"></a>
 
