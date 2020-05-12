@@ -254,7 +254,7 @@ LOGIQ supports both TLS and non TLS syslog ports using TCP.
 Following fields are required options to be passed to the logdriver
 
 * `tag` - User a human readable string for better readability otherwise the first 12 chars of the container id will be used
-* `syslog-format=rfc5424`
+* `syslog-format=rfc3164`
 * `syslog-address`
 
 ### Optional values
