@@ -21,7 +21,7 @@ _**NOTE:** the docker-compose quick-start YAML files are intended for demo and t
 
 #### LOGIQ full-stack - Ingest server with UI
 
-* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/1.2.0/docker-compose.quickstart.yml)
+* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart.yml)
 
 ```bash
 $ wget https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart.yml
@@ -33,7 +33,7 @@ NOTE: Please have 16GB of memory when running the full stack with UI
 
 #### LOGIQ Ingest-only stack . - Ingest server only \( Does not include UI \)
 
-* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart-ingest.yml](https://logiqcf.s3.amazonaws.com/1.2.0/docker-compose.quickstart-ingest.yml)
+* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart-ingest.yml](https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart-ingest.yml)
 
 ```text
 $ wget https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart-ingest.yml
