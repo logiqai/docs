@@ -67,7 +67,7 @@ Besides the web based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.l
 $ helm install logiq --namespace logiq \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
---set kubernetes-ingress.defaultTLSSecret.enabled=true \
+--set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
 logiq-repo/logiq
 ```
 
