@@ -119,6 +119,7 @@ If the bucket already exists, LOGIQ will use it. Check to make sure the access a
 
 ```bash
 $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
+--set s3-gateway.s3gateway.serviceEndpoint=https://s3.<region>.amazonaws.com \
 --set global.environment.s3_bucket=<bucket_name>
 --set s3-gateway.s3gateway.enabled=true \
 --set s3-gateway.defaultBucket.enabled=true \
