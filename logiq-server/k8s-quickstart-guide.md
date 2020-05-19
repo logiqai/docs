@@ -89,7 +89,8 @@ If you want to pass your own ingress secret, you can do so when installing the H
 $ helm install logiq --namespace logiq \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
---set kubernetes-ingress.defaultTLSSecret.secret=<secret_name> \
+--set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
+--set kubernetes-ingress.controller.defaultTLSSecret.secret=<secret_name> \
 logiq-repo/logiq
 ```
 
