@@ -45,10 +45,11 @@ If you choose a different name for the namespace, please remember to use the sam
 ## 2. Install LOGIQ
 
 ```bash
-$ helm install logiq --namespace logiq logiq-repo/logiq
+$ helm install logiq --namespace logiq \
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-This will install LOGIQ and expose the LOGIQ services and UI on the ingress IP. Service ports are described in the [Port details section](https://docs.logiq.ai/logiq-server/quickstart-guide#ports). You should now be able to go to `http://ingress-ip/`
+This will install LOGIQ and expose the LOGIQ services and UI on the ingress IP. Please refer Section 3.5 for details about storage class. Service ports are described in the [Port details section](https://docs.logiq.ai/logiq-server/quickstart-guide#ports). You should now be able to go to `http://ingress-ip/`
 
 {% hint style="info" %}
 The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in.
@@ -68,7 +69,7 @@ $ helm install logiq --namespace logiq \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
-logiq-repo/logiq
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
 {% hint style="success" %}
@@ -91,7 +92,7 @@ $ helm install logiq --namespace logiq \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.secret=<secret_name> \
-logiq-repo/logiq
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
 
@@ -120,13 +121,14 @@ If the bucket already exists, LOGIQ will use it. Check to make sure the access a
 
 ```bash
 $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
---set s3-gateway.s3gateway.serviceEndpoint=https://s3.<region>.amazonaws.com \
 --set global.environment.s3_bucket=<bucket_name>
+--set s3-gateway.s3gateway.serviceEndpoint=https://s3.<region>.amazonaws.com \
 --set s3-gateway.s3gateway.enabled=true \
 --set s3-gateway.defaultBucket.enabled=true \
 --set s3-gateway.defaultBucket.name=<bucket_name> \
 --set s3-gateway.environment.AWS_ACCESS_KEY_ID=<access_key> \
---set s3-gateway.environment.AWS_SECRET_ACCESS_KEY=<secret_key> logiq-repo/logiq
+--set s3-gateway.environment.AWS_SECRET_ACCESS_KEY=<secret_key> \
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
 {% hint style="info" %}
@@ -163,7 +165,8 @@ The secret can now be passed into the LOGIQ deployment
 
 ```bash
 $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
---set logiq-flash.secrets_name=logiq-certs logiq-repo/logiq
+--set logiq-flash.secrets_name=logiq-certs \
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
 ### 3.4 E-Mail configuration setup
@@ -191,6 +194,14 @@ $ helm upgrade --namespace logiq \
 ### 3.5 Changing the storage class
 
 If you are planning on using a specific storage class for your volumes, you can customize it for the LOGIQ deployment. By default LOGIQ uses the `standard` storage class
+
+| Cloud Provider | K8S StorageClassName | Default Provisioner |
+| :--- | :--- | :--- |
+| AWS | gp2 | EBS |
+| Azure | standard | azure-disc |
+| GCP | standard | pd-standard |
+| Digital Ocean | do-block-storage | Block Storage Volume |
+| Oracle | oci | Block Volume |
 
 ```bash
 $ helm upgrade --namespace logiq \
