@@ -15,7 +15,7 @@ All the resources required to create and configure LOGIQ on AWS are taken care b
 The CloudFormation template can be found below
 
 ```
-https://logiqcf.s3.amazonaws.com/1.1.0/logiq-stack.json
+https://logiqcf.s3.amazonaws.com/1.2.1/logiq-stack.json
 ```
 
 {% hint style="info" %}
