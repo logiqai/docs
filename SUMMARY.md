@@ -34,7 +34,7 @@
 
 ## LOGIQ STREAMING
 
-* [API Documentation](logiq-streaming/historical-data.md)
+* [Query API](logiq-streaming/historical-data.md)
 
 ## LOGIQ Configuration <a id="logiq-ui-configuration"></a>
 
