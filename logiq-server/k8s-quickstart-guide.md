@@ -209,6 +209,19 @@ $ helm upgrade --namespace logiq \
 logiq logiq-repo/logiq
 ```
 
+### 3.6 Using external AWS RDS Postgres database instance
+
+To use external AWS RDS Postgres database for your LOGIQ deployment, execute the following command.
+
+```bash
+$ helm install --namespace logiq \
+--set postgres.enabled=false \
+--set global.environment.postgres_host=<postgres-host-ip/dns> \
+--set global.environment.postgres_user=<username> \
+--set global.environment.postgres_password=<password> \
+logiq logiq-repo/logiq
+```
+
 ## 4 Tear down
 
 If and when you want to decommission the installation use following commands
