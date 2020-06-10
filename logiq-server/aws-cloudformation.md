@@ -24,6 +24,12 @@ Please note that using the Marketplace AMI is not free and you will be charged p
 
 ## LOGIQ UI credentials <a id="default-user-and-password"></a>
 
+{% hint style="warning" %}
+After the Cloud formation template is complete, it may take several minutes for the UI to be available on the AMI. 
+
+The deployment exposes the UI on an http port by default. You can install an ELB to front the UI via https. This is the recommended production setup.
+{% endhint %}
+
 Once the LOGIQ instance is created, you can login to the instance using the below credentials
 
 **user**: _logiq@foo.com_
