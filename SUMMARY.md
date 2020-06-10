@@ -19,7 +19,7 @@
 * [Configuring Prometheus](logiq-monitoring/quickstart-guide.md)
 * [Querying data](logiq-monitoring/querying-data.md)
 
-## LOGIQCTL - 1.0.0 <a id="logiqctl"></a>
+## LOGIQCTL - 1.0.0/1.0.1 <a id="logiqctl"></a>
 
 * [Overview](logiqctl/logiq-box.md)
 * [List](logiqctl/list.md)
