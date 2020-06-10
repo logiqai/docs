@@ -7,7 +7,7 @@ description: >-
 
 # Overview
 
-## Installing logiqctl
+## Installing logiqctl - 1.0.0
 
  Download Logiqctl binary based on your workstation OS and architecture from [here](https://github.com/logiqai/logiqctl/releases).
 
