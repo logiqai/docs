@@ -168,11 +168,6 @@ data:
 
 Save the secret file e.g. `logiq-certs.yaml`. Proceed to install the secret in the same namespace where you want to deploy LOGIQ
 
-```bash
-
-
-```
-
 The secret can now be passed into the LOGIQ deployment
 
 ```bash
