@@ -200,7 +200,11 @@ $ helm upgrade --namespace logiq \
 
 ### 3.5 Changing the storage class
 
-If you are planning on using a specific storage class for your volumes, you can customize it for the LOGIQ deployment. By default LOGIQ uses the `standard` storage class
+If you are planning on using a specific storage class for your volumes, you can customize it for the LOGIQ deployment. By default, LOGIQ uses the `standard` storage class
+
+{% hint style="info" %}
+It is quite possible that your environment may use a different storage class name for the provisioner. In that case please use the appropriate storage class name. E.g. if a user creates a storage class `ebs-volume` for the EBS provisioner for their cluster, you can use `ebs-volume` instead of `gp2` as suggested below
+{% endhint %}
 
 | Cloud Provider | K8S StorageClassName | Default Provisioner |
 | :--- | :--- | :--- |
