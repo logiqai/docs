@@ -37,7 +37,7 @@ Official GA of LOGIQ's complete Observability platform with support for metrics 
 
 #### CLI
 
-* [logiqctl](logiqctl/logiq-box.md) is now GA with support for log tailing, historical queries and search
+* [logiqctl]() is now GA with support for log tailing, historical queries and search
 
 ## 1.1.0 - 2020-02-27
 

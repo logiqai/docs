@@ -19,14 +19,6 @@
 * [Configuring Prometheus](logiq-monitoring/quickstart-guide.md)
 * [Querying data](logiq-monitoring/querying-data.md)
 
-## LOGIQCTL - 1.0.0/1.0.1 <a id="logiqctl"></a>
-
-* [Overview](logiqctl/logiq-box.md)
-* [List](logiqctl/list.md)
-* [Query](logiqctl/query.md)
-* [Search](logiqctl/search.md)
-* [Tail](logiqctl/tail.md)
-
 ## ANOMALY DETECTION <a id="logiq-events"></a>
 
 * [Events](logiq-events/events.md)
