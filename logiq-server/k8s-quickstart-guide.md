@@ -128,17 +128,15 @@ Make sure to pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` from [ste
 You do not need to create the bucket, we will automatically provision it for you. Just provide the bucket name and access credentials in the the step below. 
 
 If the bucket already exists, LOGIQ will use it. Check to make sure the access and secret key work with it.
+Additionally provide a valid amazon service endpoint for s3 else the config defaults to https://s3.us-east-1.amazonaws.com
 {% endhint %}
 
 ```bash
 $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set global.environment.s3_bucket=<bucket_name>
 --set s3-gateway.s3gateway.serviceEndpoint=https://s3.<region>.amazonaws.com \
---set s3-gateway.s3gateway.enabled=true \
---set s3-gateway.defaultBucket.enabled=true \
---set s3-gateway.defaultBucket.name=<bucket_name> \
---set s3-gateway.environment.AWS_ACCESS_KEY_ID=<access_key> \
---set s3-gateway.environment.AWS_SECRET_ACCESS_KEY=<secret_key> \
+--set global.environment.AWS_ACCESS_KEY_ID=<access_key> \
+--set global.environment.AWS_SECRET_ACCESS_KEY=<secret_key> \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
@@ -176,29 +174,7 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-### 3.4 E-Mail configuration setup
-
-LOGIQ insights can be configured to send email notifications for alerting workflows. It uses SMTP mail and requires following information for configuration:
-
-* Mail Server
-* Mail Port
-* Username
-* Password
-* Default Sender
-
-Use the following HELM chart options to configure the mail server settings.
-
-```bash
-$ helm upgrade --namespace logiq \
-    --set global.environment.mail_server=<smtp server ip> \
-    --set global.environment.mail_port=<port> \
-    --set global.environment.mail_username=<username> \
-    --set global.environment.mail_password=<password> \
-    --set global.environment.mail_default_sender=<sender email id> \
-     logiq logiq-repo/logiq
-```
-
-### 3.5 Changing the storage class
+### 3.4 Changing the storage class
 
 If you are planning on using a specific storage class for your volumes, you can customize it for the LOGIQ deployment. By default, LOGIQ uses the `standard` storage class
 
@@ -220,7 +196,7 @@ $ helm upgrade --namespace logiq \
 logiq logiq-repo/logiq
 ```
 
-### 3.6 Using external AWS RDS Postgres database instance
+### 3.5 Using external AWS RDS Postgres database instance
 
 To use external AWS RDS Postgres database for your LOGIQ deployment, execute the following command.
 
