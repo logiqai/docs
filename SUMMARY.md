@@ -24,6 +24,7 @@
 
 * [Events](logiq-events/events.md)
 * [Event Rules](logiq-events/event-rules.md)
+* [Alertable Events](logiq-events/alerts.md)
 
 ## LOGIQ STREAMING
 
