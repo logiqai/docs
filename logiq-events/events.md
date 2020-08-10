@@ -11,11 +11,11 @@ description: >-
 
 Events are shown in the user interface in the Events tab.
 
-![](../.gitbook/assets/image1.png)
+![](../.gitbook/assets/screen-shot-2020-08-09-at-7.56.01-pm.png)
 
 It is easy to narrow down and search for events that you care about using search and filtering
 
-![](../.gitbook/assets/screen-shot-2020-08-09-at-7.46.07-pm.png)
+![](../.gitbook/assets/screen-shot-2020-08-09-at-7.56.40-pm.png)
 
 ### Event rules
 
