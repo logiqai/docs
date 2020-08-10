@@ -20,6 +20,12 @@
 * [Configuring Prometheus](logiq-monitoring/quickstart-guide.md)
 * [Querying data](logiq-monitoring/querying-data.md)
 
+## Vewing Logs
+
+* [Terminology](vewing-logs/logs-terminology.md)
+* [Logs Page](vewing-logs/logs-page.md)
+* [Search Page](vewing-logs/search-page.md)
+
 ## ANOMALY DETECTION <a id="logiq-events"></a>
 
 * [Events](logiq-events/events.md)
@@ -53,10 +59,4 @@
 * [Getting started](running-on-aws/getting-started.md)
 * [AWS IAM Resources](running-on-aws/aws-iam-resources.md)
 * [1-Click deployment using CloudFormation](running-on-aws/ami-using-cloudformation.md)
-
-## Vewing Logs
-
-* [Terminology](vewing-logs/logs-terminology.md)
-* [Logs Page](vewing-logs/logs-page.md)
-* [Search Page](vewing-logs/search-page.md)
 
