@@ -55,7 +55,7 @@
 
 ## Vewing Logs
 
-* [Nomenclature](vewing-logs/nomenclature.md)
+* [Terminology](vewing-logs/logs-terminology.md)
 * [Logs Page](vewing-logs/logs-page.md)
 * [Search Page](vewing-logs/search-page.md)
 

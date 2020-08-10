@@ -2,7 +2,7 @@
 description: This page describes how Logiq Observability Platform Organizes the logs.
 ---
 
-# Nomenclature
+# Terminology
 
 Logs are organized by namespaces and applications and their processes.
 
