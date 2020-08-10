@@ -4,16 +4,33 @@ description: SSO configuration details.
 
 # Single Sign-On with SAML
 
-LOGIQ can be set up for user login using Single Sign On \(SSO\) with SAML by configuring LOGIQ as Service Provider\(SP\) and OKTA, Google or in general any SAML2.0 compliant identity provider \(IDP\). This is a two step process.
+LOGIQ can be set up for user login using Single Sign-On \(SSO\) with SAML by configuring LOGIQ as Service Provider\(SP\) and OKTA, Google, or in general any SAML2.0 compliant identity provider \(IDP\). This is a two-step process.
 
-**Step 1. IDP Configuration  
-Step 2. LOGIQ Configuration using IDP information**
+## Enabling SAML
+
+Login with your admin credentials. Click on `Settings` menu. Enable _"SAML configuration"_ checkbox.   
+Add SAML **Metadata URL, Entity ID, NameID Format.**
+
+Check below on specific steps for your Identity provider
+
+![LOGIQ \(Service Provider\) configuration](../.gitbook/assets/screen-shot6.png)
+
+If user-groups are configured on IDP side, create the identical user groups in LOGIQ. This can be done by clicking on "_Settings"_ menu and going to Groups tab. This example shows creating "NonAdmin" user group.
+
+![](../.gitbook/assets/screen-shot-8.png)
+
+  
+This concludes the LOGIQ side configuration.
+
+Logout as LOGIQ admin. In the login Screen, "SAML Login" Button should be available to login with the user's SSO credentials.  By clicking the button browser is redirected to the IDP screen where user can login using its  IDP credentials.
+
+![](../.gitbook/assets/screen-shot7.png)
 
 ## IDP configuration
 
-This document provides detailed information to configure OKTA and Google as Identity providers. For other identity providers, please refer to identity providers documentation. In your IDP application, provide the SAML Assertion Consumer Service \(ACS\) url for your LOGIQ environment and attribute mappings 
+This document provides detailed information to configure OKTA and Google as Identity providers. For other identity providers, please refer to identity providers' documentation. In your IDP application, provide the SAML Assertion Consumer Service \(ACS\) URL for your LOGIQ environment and attribute mappings 
 
-Following attributes are required. The LOGIQ mappings for each of the attributes are in brackets. Please use the correct attribute name otherwise LOGIQ will not be able to recognize the SAML assertion
+The following attributes are required. The LOGIQ mappings for each of the attributes are in brackets. Please use the correct attribute name otherwise LOGIQ will not be able to recognize the SAML assertion
 
 * First name \(FirstName\) and Last name \(LastName\)
 * Group name **** \(LogiqGroups\)
@@ -26,15 +43,15 @@ _https://**&lt;LOGIQ UI IP/Domain&gt;**/saml/callback?org\_slug=default_
 
 With this you should be able to access a SAML metadata URL or SAML metadata file.
 
-### OKTA Configuration
+### Okta Configuration
 
-This section describes OKTA configuration in details. User should assume OKTA admin role and start in the OKTA control panel by clicking the button to add a new application. Choose **Web** as the platform. The sign-on method is **SAML 2.0**.
+This section describes Okta configuration in detail. Users should assume the Okta admin role and start in the Okta control panel by clicking the button to add a new application. Choose `Web` as the platform. The sign-on method is **SAML 2.0**.
 
 ![Create a New App](../.gitbook/assets/screen-shot1.png)
 
 On the next screen OKTA has fields for a few URLs:
 
-* Single Sign On URL
+* Single Sign-On URL
 * Recipient URL
 * Destination URL 
 * Audience Restriction
@@ -54,7 +71,13 @@ Application username: **Email**
 | FirstName | Unspecified | user.firstName |
 | LastName | Unspecified | user.lastName |
 
-By default any user created with SAML/SSO will join the default user-group in LOGIQ. It’s possible to configure OKTA to pass groups the user should join by setting the **LogiqGroups** parameter with the intended group name. For example, if the SAML user is member of NonAdmin group in OKTA, at the user login, the user will be authenticated and added to "NonAdmin" group.  
+By default, any user that is created with SAML/SSO will join the default user-group in LOGIQ. It’s possible to configure OKTA to pass groups the user should join by setting the **`LogiqGroups`** parameter with the intended group name. For example, if the SAML user is a member of the NonAdmin group in Okta, at the user login, the user will be authenticated and added to "NonAdmin" group.
+
+{% hint style="danger" %}
+The `default` group in LOGIQ has access to all data sources. It is highly recommended to create a group assignment for your users and configure `LogiqGroups` as described above. This allows RBAC policies and limits access to what data a user can access
+{% endhint %}
+
+  
 **Configure Attribute statements:**
 
 | **Group Name** | **Name Format** | **Value** |
@@ -63,48 +86,30 @@ By default any user created with SAML/SSO will join the default user-group in LO
 
 ![Attribute Setup](../.gitbook/assets/screen-shot3.png)
 
-Continue to create the application as guided by OKTA instructions. Once the application is successfully created, take a note of the following information. This is **needed to configure LOGIQ.** 
+Continue to create the application as guided by OKTA instructions. Once the application is successfully created, take note of the following information. This is **needed to configure LOGIQ.** 
 
-1. SAML Metadata URL: "Identity Provider Metadata" URL depicted below in blue can be clicked to find out SAML metadata url. 
+1. SAML Metadata URL: "Identity Provider Metadata" URL depicted below in blue can be clicked to find out SAML metadata URL. 
 
 ![](../.gitbook/assets/screen-shot4.1.png)
 
-2. Entity ID: By navigating to "View Setup Instruction" shown in above snapshot, You can find Entity ID.
+2. Entity ID: By navigating to "View Setup Instruction" shown in the above snapshot, You can find Entity ID.
 
 ![](../.gitbook/assets/screen-shot4.2.png)
 
-3. NameIDFormat: NameID can be found in the saml metadata by searching NameIDFormat, shown as selected gray text in the picture below.
+3. NameIDFormat: NameID can be found in the SAML metadata by searching NameIDFormat, shown as selected gray text in the picture below.
 
 ![NameIDFormat in saml metadata](../.gitbook/assets/screen-shot4.3.png)
 
-Navigate back to the app and edit "**Audience Restriction**" and set it with IDP issuer described in \#2 above.
+Navigate back to the app and edit "**Audience Restriction**" and set it with the IDP issuer described in \#2 above.
 
 ![](../.gitbook/assets/screen-shot5.png)
 
-If already not there, create users and user groups  such as"NonAdmin" in this example. Users and user groups can be also be brought in with inbound federation with ADFS or other identity providers.  
-**Assign the users to the Application or group such as to “NonAdmin” in this example to the Application.** This concludes the IDP side configuration.
-
-### GSuite Configuration
-
-Login with your admin credentials. Click on "_Settings"_ menu. Enable _"SAML configuration"_ checkbox.   
-Add SAML **Metadata URL, Entity ID, NameID Format** from Step [IDP Configuration ](single-sign-on-configuration.md#idp-configuration)above.
-
-![LOGIQ \(Service Provider\) configuration](../.gitbook/assets/screen-shot6.png)
-
-If user-groups are configured on IDP side, create the identical user groups in LOGIQ. This can be done by clicking on "_Settings"_ menu and going to Groups tab. This example shows creating "NonAdmin" user group.
-
-![](../.gitbook/assets/screen-shot-8.png)
-
-  
-This concludes the LOGIQ side configuration.
-
-Logout as LOGIQ admin. In the login Screen, "SAML Login" Button should be available to login with the user's SSO credentials.  By clicking the button browser is redirected to the IDP screen where user can login using its  IDP credentials.
-
-![](../.gitbook/assets/screen-shot7.png)
+If already not there, create users and user groups such as`NonAdmin` in this example. Users and user groups can be also be brought in with inbound federation with ADFS or other identity providers.  
+Assign the users to the Application or group such as `NonAdmin` in this example to the Application. This concludes the IDP side configuration.
 
 
 
-#### Following video describes step by step procedure to configure LOGIQ with Google as SAML2.0 IDP
+### Google GSuite Configuration
 
 {% embed url="https://www.youtube.com/watch?v=pTVHkxcp4mg" caption="LOGIQ with Google as SAML2.0 IDP Configuration" %}
 
