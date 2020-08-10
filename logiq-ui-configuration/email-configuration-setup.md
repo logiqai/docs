@@ -9,11 +9,15 @@ LOGIQ insights can be configured to send emails to notify alerts. It uses smtp m
 5. Default Sender E-Mail: The send e-mails will show up as from this sender
 6. Depending on what port you are using and support at the mail service/relay, select either SSL/TLS to be enabled
 
-The following attributes can be setup by LOGIQ admin on UI.
-
 {% hint style="info" %}
 The E-mail configuration is a global configuration and is available only to the admin user
 {% endhint %}
+
+{% hint style="danger" %}
+The default sender e-mail in most cases will need to be a verified e-mail address from the Mail service/relay provider
+{% endhint %}
+
+The following attributes can be setup by LOGIQ admin on UI.
 
 ![Logiq Insights Email Setup ](../.gitbook/assets/Screen-Shot-2020-08-09-Mail-Server.png)
 
