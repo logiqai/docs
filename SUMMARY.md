@@ -13,6 +13,7 @@
 * [K8S Quickstart guide](logiq-server/k8s-quickstart-guide.md)
 * [AWS Quickstart guide](logiq-server/aws-cloudformation.md)
 * [Ingesting data](logiq-server/agentless.md)
+* [Data extraction](logiq-server/data-extraction.md)
 
 ## LOGIQ Monitoring
 
