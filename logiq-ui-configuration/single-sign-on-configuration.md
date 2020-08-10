@@ -11,7 +11,7 @@ LOGIQ can be set up for user login using Single Sign-On \(SSO\) with SAML by con
 Login with your admin credentials. Click on `Settings` menu. Enable _"SAML configuration"_ checkbox.   
 Add SAML **Metadata URL, Entity ID, NameID Format.**
 
-Check below on specific steps for your Identity provider
+Check below on specific [steps for your Identity provider](single-sign-on-configuration.md#idp-configuration)
 
 ![LOGIQ \(Service Provider\) configuration](../.gitbook/assets/screen-shot6.png)
 
