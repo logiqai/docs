@@ -224,7 +224,7 @@ Upload your LOGIQ deployment license
 View License information
  - logiqctl license get
 ```
-#### 3.7 Passing a shared secret for adding auth to all service endpoints
+### 3.7 Passing a shared secret for adding auth to all service endpoints
 
 Add automatic generation of a shared public/private key pair and mount automatically to all logiq services - flash, coffee and discovery 
 
