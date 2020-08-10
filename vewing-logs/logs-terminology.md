@@ -16,3 +16,11 @@ In the Kubernetes based deployments Application refers to deployment name and pr
 
 For the physical machine, the application refers to process names like Nginx or tomcat and process refers to process id.
 
+There are multiple ways you can access the logs. 
+
+* The Logs page hierarchically arranges logs by Namespace, application and process. It lets you see the most recent logs for the process 
+* The Search page allows you to search through logs.
+* The `logiqctl` command line tool allows you to view logs in realtime. 
+
+
+
