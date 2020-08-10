@@ -32,8 +32,6 @@ This section describes OKTA configuration in details. User should assume OKTA ad
 
 ![Create a New App](../.gitbook/assets/screen-shot1.png)
 
-
-
 On the next screen OKTA has fields for a few URLs:
 
 * Single Sign On URL
@@ -86,7 +84,7 @@ Navigate back to the app and edit "**Audience Restriction**" and set it with IDP
 If already not there, create users and user groups  such as"NonAdmin" in this example. Users and user groups can be also be brought in with inbound federation with ADFS or other identity providers.  
 **Assign the users to the Application or group such as to “NonAdmin” in this example to the Application.** This concludes the IDP side configuration.
 
-## LOGIQ UI configuration
+## LOGIQ configuration
 
 Login with your admin credentials. Click on "_Settings"_ menu. Enable _"SAML configuration"_ checkbox.   
 Add SAML **Metadata URL, Entity ID, NameID Format** from Step [IDP Configuration ](single-sign-on-configuration.md#idp-configuration)above.
@@ -108,7 +106,7 @@ Logout as LOGIQ admin. In the login Screen, "SAML Login" Button should be availa
 
 ### Following video describes step by step procedure to configure LOGIQ with Google as SAML2.0 IDP
 
-{% embed url="https://www.youtube.com/watch?v=pTVHkxcp4mg" %}
+{% embed url="https://www.youtube.com/watch?v=pTVHkxcp4mg" caption="LOGIQ with Google as SAML2.0 IDP Configuration" %}
 
 
 
