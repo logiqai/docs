@@ -15,16 +15,19 @@ To access event Rules UI, click on "**Events**" menu and pick "**Rules**" option
 
 ## Viewing Event Rules
 
-The Event Rules page lists all the available rules in the LOGIQ server. Each rule consists of following:
+The Event Rules page lists all the available rules in the LOGIQ server. Each rule consists of the following:
 
-* **Group Name**: Denotes logical grouping of event rules. Typically, but not necessarily, it is the application or service name.
+* **Group**: Denotes logical grouping of event rules. Typically, but not necessarily, it is the application or service name.
 * **Name**: Unique name to identify the event rule.
 * **Level**: It can be one of _**"Info", "Warning" or "High"**_.
-* **Description**: A human readable description of the event.
+*  **Application Match:** The condition on which the event will be triggered. Supports regex matches.
+* **Description**: A human-readable description of the event.
 * **Condition**: An expression applied to ingested data. Events are triggered when the boolean condition  evaluates to "True". Please see refer to [Writing condition expressions](event-rules.md#condition-expression-syntax).
-* **Active**: This fields indicates whether the event rule condition is enabled and has to be applied to the incoming data. Rules that are inactive are ignored.
+* **Active**: This field indicates whether the event rule condition is enabled and has to be applied to the incoming data. Rules that are inactive are ignored.
+* **Alert Configured:** If an alert is configured on the event, this field will have a link to that alert.
+* **Actions group:** This offers a quick way to delete, edit or configure an alert on the event
 
-Out of the box LOGIQ server comes with commonly needed system defined Event Rules. The built-in rules cannot be modified or deleted. However, they can made active / in-active if required.
+Out of the box, the LOGIQ server comes with commonly needed system defined Event Rules. The built-in rules cannot be modified or deleted. However, they can be made active / in-active if required.
 
 ![](../.gitbook/assets/screen-shot-2020-01-08-at-11.01.39-am.png)
 
