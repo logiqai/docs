@@ -32,7 +32,7 @@ Expand the caret available in each row to see the log in detail.
 
 ![](../.gitbook/assets/image.png)
 
-The dots available on each line will reveal additional options to export individual log lines as json and to define an **alertable event** for the selected log line. Refer to events documentation to see how to create events.
+The dots available on each line will reveal additional options to export individual log lines as json and to define an **alertable event** for the selected log line. See [Alertable event ](../logiq-events/alerts.md#creating-an-alertable-event)section.
 
 ![](../.gitbook/assets/search_additional-options.png)
 
