@@ -53,3 +53,9 @@
 * [AWS IAM Resources](running-on-aws/aws-iam-resources.md)
 * [1-Click deployment using CloudFormation](running-on-aws/ami-using-cloudformation.md)
 
+## Vewing Logs
+
+* [Nomenclature](vewing-logs/nomenclature.md)
+* [Logs Page](vewing-logs/logs-page.md)
+* [Search Page](vewing-logs/search-page.md)
+

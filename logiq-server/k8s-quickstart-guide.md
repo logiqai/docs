@@ -69,7 +69,6 @@ $ helm install logiq --namespace logiq \
 LOGIQ server provides Ingest, log tailing, data indexing, query and search capabilities.  
 Besides the web based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
 
-
 ## 3 Customizing the deployment
 
 ### 3.1 Enabling https for the UI
@@ -178,13 +177,13 @@ If you are planning on using a specific storage class for your volumes, you can 
 It is quite possible that your environment may use a different storage class name for the provisioner. In that case please use the appropriate storage class name. E.g. if a user creates a storage class `ebs-volume` for the EBS provisioner for their cluster, you can use `ebs-volume` instead of `gp2` as suggested below
 {% endhint %}
 
-| Cloud Provider | K8S StorageClassName | Default Provisioner  |
-| :---           | :---                 | :---                 |
-| AWS            | gp2                  | EBS                  |
-| Azure          | standard             | azure-disc           |
-| GCP            | standard             | pd-standard          |
-| Digital Ocean  | do-block-storage     | Block Storage Volume |
-| Oracle         | oci                  | Block Volume         |
+| Cloud Provider | K8S StorageClassName | Default Provisioner |
+| :--- | :--- | :--- |
+| AWS | gp2 | EBS |
+| Azure | standard | azure-disc |
+| GCP | standard | pd-standard |
+| Digital Ocean | do-block-storage | Block Storage Volume |
+| Oracle | oci | Block Volume |
 
 ```bash
 $ helm upgrade --namespace logiq \
@@ -207,7 +206,7 @@ logiq logiq-repo/logiq
 
 ### 3.6 Upload LOGIQ professional license
 
-The deployment described above offers 30 days trial license. Email to license@logiq.ai to obtain the professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer logiqctl details at https://logiqctl.logiq.ai/. You will need api-token from LOGIQ ui as shown below
+The deployment described above offers 30 days trial license. Email to license@logiq.ai to obtain the professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer logiqctl details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai/). You will need api-token from LOGIQ ui as shown below
 
 ![Logiq Insights Login Api-token ](../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
 
@@ -224,9 +223,10 @@ Upload your LOGIQ deployment license
 View License information
  - logiqctl license get
 ```
+
 ### 3.7 Passing a shared secret for adding auth to all service endpoints
 
-Add automatic generation of a shared public/private key pair and mount automatically to all logiq services - flash, coffee and discovery 
+Add automatic generation of a shared public/private key pair and mount automatically to all logiq services - flash, coffee and discovery
 
 ```bash
 $ helm install logiq --namespace logiq \
