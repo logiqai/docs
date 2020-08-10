@@ -60,15 +60,10 @@ The default login and password to use is `flash-admin@foo.com` and `flash-passwo
 LOGIQ server provides Ingest, log tailing, data indexing, query and search capabilities.  
 Besides the web based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
 
-The deployment described above offers 30 days trial license. Email to contactus@logiq.ai to obtain the longer term license. After obtaining the license, follow steps below to apply it to the deployment.
+The deployment described above offers 30 days trial license. Email to license@logiq.ai to obtain the longer term license. After obtaining the license, the license can be applied by using logiqctl,[ LOGIQ CLI](https://logiqctl.logiq.ai/docs/logiqctl_license_set).
 
 ```bash
-$ kubectl --namespace logiq create secret generic license --from-file=license.jws
-```
-
-```bash
-$ helm upgrade logiq --namespace logiq \
---set logiq-flash.license_secret_name=license logiq-repo/logiq
+$ logiqctl license set -l=<license-file-path>
 ```
 
 ## 3 Customizing the deployment
