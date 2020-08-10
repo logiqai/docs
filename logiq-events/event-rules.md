@@ -25,23 +25,29 @@ The Event Rules page lists all the available rules in the LOGIQ server. Each rul
 * **Condition**: An expression applied to ingested data. Events are triggered when the boolean condition  evaluates to "True". Please see refer to [Writing condition expressions](event-rules.md#condition-expression-syntax).
 * **Active**: This field indicates whether the event rule condition is enabled and has to be applied to the incoming data. Rules that are inactive are ignored.
 * **Alert Configured:** If an alert is configured on the event, this field will have a link to that alert.
-* **Actions group:** This offers a quick way to delete, edit or configure an alert on the event
+* **Actions icon group:** This offers a quick way to delete, edit or configure an alert on the event
 
 Out of the box, the LOGIQ server comes with commonly needed system defined Event Rules. The built-in rules cannot be modified or deleted. However, they can be made active / in-active if required.
 
-![](../.gitbook/assets/screen-shot-2020-01-08-at-11.01.39-am.png)
+![](../.gitbook/assets/image3.png)
 
 ## Creating a new Event Rule
 
 The Event rule creation screen is launched by clicking on _**"New rule"**_ button. Please refer to [Viewing Event Rules](event-rules.md#viewing-event-rules) section above for details about each of the parameters needed to create new event rule. If the rule does not belong to any of the existing groups, a new group is created. 
 
-![](../.gitbook/assets/screen-shot-2020-01-08-at-11.06.11-am.png)
+![](../.gitbook/assets/image4.png)
 
 ## Using Filters
 
 Event Rules can be searched and narrowed down by using filters such as Level and Group Name.
 
-![](../.gitbook/assets/screen-shot-2020-01-08-at-11.07.14-am.png)
+![](../.gitbook/assets/image7.png)
+
+## Creating alerts from event rules
+
+An Alert can be created from an Event rule by simply clicking the bell icon.
+
+![](../.gitbook/assets/image6.png)
 
 ## Writing condition expressions
 
