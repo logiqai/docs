@@ -17,7 +17,7 @@ $ helm repo add logiq-repo https://logiqai.github.io/helm-charts
 ```
 
 {% hint style="info" %}
-The HELM repository will be named `logiq-repo`. For installing charts from this repository please make sure to use the repository name as the prefix e.g. 
+The HELM repository will be named `logiq-repo`. For installing charts from this repository please make sure to use the repository name as the prefix e.g.
 
 `helm install <deployment_name> logiq-repo/<chart_name>`
 {% endhint %}
@@ -26,8 +26,8 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 
 ```bash
 $ helm search repo logiq-repo
-NAME            	CHART VERSION	APP VERSION	DESCRIPTION
-logiq-repo/logiq	1.0.3        	1.2.1      	A Helm chart for Kubernetes
+NAME                CHART VERSION    APP VERSION    DESCRIPTION
+logiq-repo/logiq    1.0.3            1.2.1          A Helm chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -36,7 +36,7 @@ logiq-repo/logiq	1.0.3        	1.2.1      	A Helm chart for Kubernetes
 $ kubectl create namespace logiq
 ```
 
-This will create a namespace **`logiq`** where we will deploy the LOGIQ Log Insights stack. 
+This will create a namespace **`logiq`** where we will deploy the LOGIQ Log Insights stack.
 
 {% hint style="info" %}
 If you choose a different name for the namespace, please remember to use the same namespace for the remainder of the steps
@@ -57,7 +57,7 @@ The default login and password to use is `flash-admin@foo.com` and `flash-passwo
 
 ![Logiq Insights Login UI ](../.gitbook/assets/screen-shot-2020-03-24-at-3.42.55-pm.png)
 
-LOGIQ server provides Ingest, log tailing, data indexing, query and search capabilities.   
+LOGIQ server provides Ingest, log tailing, data indexing, query and search capabilities.  
 Besides the web based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
 
 The deployment described above offers 30 days trial license. Email to contactus@logiq.ai to obtain the longer term license. After obtaining the license, follow steps below to apply it to the deployment.
@@ -90,7 +90,7 @@ The default login and password to use is `flash-admin@foo.com` and `flash-passwo
 {% endhint %}
 
 {% hint style="info" %}
-The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](quickstart-guide.md#ports). 
+The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](quickstart-guide.md#ports).
 {% endhint %}
 
 #### 3.1.1 Passing an ingress secret
@@ -105,8 +105,6 @@ $ helm install logiq --namespace logiq \
 --set kubernetes-ingress.controller.defaultTLSSecret.secret=<secret_name> \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
-
-
 
 ### 3.2 Using an AWS S3 bucket
 
@@ -125,10 +123,9 @@ Go to AWS IAM console and create an access key and secret key that can be used t
 Make sure to pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` from [step 3.1.1](k8s-quickstart-guide.md#3-1-1) above and give a bucket name. The S3 gateway acts as a caching gateway and helps reduce API cost.
 
 {% hint style="info" %}
-You do not need to create the bucket, we will automatically provision it for you. Just provide the bucket name and access credentials in the the step below. 
+You do not need to create the bucket, we will automatically provision it for you. Just provide the bucket name and access credentials in the the step below.
 
-If the bucket already exists, LOGIQ will use it. Check to make sure the access and secret key work with it.
-Additionally provide a valid amazon service endpoint for s3 else the config defaults to https://s3.us-east-1.amazonaws.com
+If the bucket already exists, LOGIQ will use it. Check to make sure the access and secret key work with it. Additionally provide a valid amazon service endpoint for s3 else the config defaults to [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com)
 {% endhint %}
 
 ```bash
@@ -141,12 +138,12 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 ```
 
 {% hint style="info" %}
-S3 providers may have restrictions on bucket name for e.g. AWS S3 bucket names are globally unique. 
+S3 providers may have restrictions on bucket name for e.g. AWS S3 bucket names are globally unique.
 {% endhint %}
 
 ### 3.3 Install LOGIQ server certificates and Client CA `[OPTIONAL]`
 
-LOGIQ supports TLS for all ingest. We also enable non-TLS ports by default. It is however recommended that  non-TLS ports not be used unless running in a secure VPC or cluster. The certificates can be provided to the cluster using K8S secrets. Replace the template sections below with your Base64 encoded secret files.
+LOGIQ supports TLS for all ingest. We also enable non-TLS ports by default. It is however recommended that non-TLS ports not be used unless running in a secure VPC or cluster. The certificates can be provided to the cluster using K8S secrets. Replace the template sections below with your Base64 encoded secret files.
 
 {% hint style="info" %}
 If you skip this step, LOGIQ server automatically generates a ca and a pair of client and server certificates for you to use. you can get them from the ingest server pods under the folder `/flash/certs`
