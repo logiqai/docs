@@ -19,6 +19,17 @@ The `SEMANTIC` is the identifier you give to the piece of text being matched. Fo
 
 Groks patterns offer a powerful, yet simple mechanism to compose patterns for complex log matching. LOGIQ's server is written in Go and uses the popular [Grokky](https://github.com/logrusorgru/grokky) library for it Grok implementation
 
+### Composing Grok expressions
+
+Here is a simple example of composing grok expressions. We are going to compose a regex for hostnames and a regex for matching user names to create the Grok for email address matching
+
+```text
+"HOSTNAME" : `\b[0-9A-Za-z][0-9A-Za-z-]{0,62}(?:\.[0-9A-Za-z][0-9A-Za-z-]{0,62})*(\.?|\b)`
+"EMAILLOCALPART" : `[a-zA-Z][a-zA-Z0-9_.+-=:]+`
+
+"EMAILADDRESS": `%{EMAILLOCALPART}@%{HOSTNAME}`
+```
+
 ## Grok matching rules
 
 Grok patterns can be applied in incoming logs data via matching rules. The matching rules allow for targeting expressions to specific applications, and namespaces. Let us look at an example below.
