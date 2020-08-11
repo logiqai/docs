@@ -27,7 +27,8 @@
 * [Terminology](vewing-logs/logs-terminology.md)
 * [Logs Page](vewing-logs/logs-page.md)
 * [Search Page](vewing-logs/search-page.md)
-* [Role Based Access Control](vewing-logs/role-based-access-control.md)
+* [Role-Based Access Control \(RBAC\)](vewing-logs/role-based-access-control.md)
+* [Configuring RBAC](vewing-logs/configuring-rbac.md)
 
 ## ANOMALY DETECTION <a id="logiq-events"></a>
 

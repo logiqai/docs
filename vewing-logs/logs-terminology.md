@@ -4,7 +4,13 @@ description: This page describes how Logiq Observability Platform Organizes the 
 
 # Terminology
 
-Logs are organized by namespaces and applications and their processes.
+Logs are organized by cluster\_id, namespaces, applications, and their processes.
+
+### CLUSTER\_ID
+
+CLUSTER\_ID is an optional label that can be applied to incoming data streams. E.g. it is a good practice to apply CLUSTER\_ID to a K8S cluster. All namespaces from the K8S cluster will get prefixed with CLUSTER\_ID so the user can distinguish between namespace name collisions across different clusters.
+
+For Kubernetes clusters, CLUSTER\_ID is an attribute added to the JSON payload by the sending agent for e.g. Fluentd or Fluent-bit. [See here for on how to manage multiple clusters](../logiq-server/agentless.md#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance).
 
 ### Namespace
 

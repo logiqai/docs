@@ -4,7 +4,7 @@ description: >-
   construct to manage user access to log data
 ---
 
-# Role Based Access Control
+# Role-Based Access Control \(RBAC\)
 
 ## Overview
 
