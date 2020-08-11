@@ -1,4 +1,4 @@
-# Querying data
+# Prometheus Data source
 
 LOGIQ's Prometheus integration allows querying data from the query editor. Just enter a PromQL query and see your data and create visualizations in an instant
 

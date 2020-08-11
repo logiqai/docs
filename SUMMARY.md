@@ -18,7 +18,8 @@
 ## LOGIQ Monitoring
 
 * [Configuring Prometheus](logiq-monitoring/quickstart-guide.md)
-* [Querying data](logiq-monitoring/querying-data.md)
+* [Prometheus Data source](logiq-monitoring/querying-data.md)
+* [JSON Data source](logiq-monitoring/json-data-source.md)
 
 ## Vewing Logs
 
