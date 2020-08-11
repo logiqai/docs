@@ -20,6 +20,7 @@
 * [Configuring Prometheus](logiq-monitoring/quickstart-guide.md)
 * [Prometheus Data source](logiq-monitoring/querying-data.md)
 * [JSON Data source](logiq-monitoring/json-data-source.md)
+* [Elasticsearch Data source](logiq-monitoring/elasticsearch-data-source.md)
 
 ## Vewing Logs
 
