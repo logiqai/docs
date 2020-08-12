@@ -226,9 +226,9 @@ $ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-## 4 Tear down
+## 4 Teardown
 
-If and when you want to decommission the installation use following commands
+If and when you want to decommission the installation using the following commands
 
 ```bash
 $ helm delete logiq --namespace logiq
