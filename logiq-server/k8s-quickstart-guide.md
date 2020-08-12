@@ -82,6 +82,13 @@ The default login and password to use is `flash-admin@foo.com` and `flash-passwo
 The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](quickstart-guide.md#ports).
 {% endhint %}
 
+| HELM Option | Description | Defaults |
+| :--- | :--- | :--- |
+| `global.domain` | DNS domain where the LOGIQ service will be running. This is required for HTTPS | No default |
+| `ingress.tlsEnabled` |  Enable the ingress controler to front HTTPS for services  | false |
+| `kubernetes-ingress.controller.defaultTLSSecret.enabled` | Specify if a default certificate is enabled for the ingress gateway | false |
+| `kubernetes-ingress.controller.defaultTLSSecret.secret` | Specify the name of a TLS Secret for the ingress gateway. If this is not specified, a secret is automatically generated of option `kubernetes-ingress.controller.defaultTLSSecret.enabled` above is enabled. |  |
+
 #### 3.1.1 Passing an ingress secret
 
 If you want to pass your own ingress secret, you can do so when installing the HELM chart
@@ -129,12 +136,12 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 
 | HELM Option | Description | Defaults |
 | :--- | :--- | :--- |
-| s3-gateway.s3gateway.enabled | This helm option switches LOGIQ's built-in s3 layer to a caching gateway. This is required if your S3 bucket is hosted in an external cloud provider like AWS, GCP, Azure etc. | false |
-| global.environment.s3\_bucket | Name of the S3 bucket in AWS | logiq |
-| global.environment.awsServiceEndpoint | S3 Service endpoint | https://s3.us-east-1.amazonaws.com |
-| global.environment.AWS\_ACCESS\_KEY\_ID | AWS Access key for accessing the bucket | No default |
-| global.environment.AWS\_SECRET\_ACCESS\_KEY | AWS Secret key for accessing the bucket | No default |
-| global.environment.s3\_region | AWS Region where bucket is hosted | us-east-1 |
+| `s3-gateway.s3gateway.enabled` | This helm option switches LOGIQ's built-in s3 layer to a caching gateway. This is required if your S3 bucket is hosted in an external cloud provider like AWS, GCP, Azure etc. | false |
+| `global.environment.s3_bucket` | Name of the S3 bucket in AWS | logiq |
+| `global.environment.awsServiceEndpoint` | S3 Service endpoint | https://s3.us-east-1.amazonaws.com |
+| `global.environment.AWS_ACCESS_KEY_ID` | AWS Access key for accessing the bucket | No default |
+| `global.environment.AWS_SECRET_ACCESS_KEY` | AWS Secret key for accessing the bucket | No default |
+| `global.environment.s3_region` | AWS Region where bucket is hosted | us-east-1 |
 
 {% hint style="info" %}
 S3 providers may have restrictions on bucket names for e.g. AWS S3 bucket names are globally unique.
@@ -172,7 +179,7 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 
 | HELM Option | Description | Defaults |
 | :--- | :--- | :--- |
-| logiq-flash.secrets\_name | TLS certificate key pair and CA cert for TLS transport | No default |
+| `logiq-flash.secrets_name` | TLS certificate key pair and CA cert for TLS transport | No default |
 
 ### 3.4 Changing the storage class
 
@@ -211,15 +218,15 @@ $ helm install logiq --namespace logiq \
 
 | HELM Option | Description | Default |
 | :--- | :--- | :--- |
-| global.chart.postgres | Deploy Postgres which is needed for LOGIQ metadata. Set this to false if an external Postgres cluster is being used | true |
-| global.environment.postgres\_host | Host IP/DNS for external Postgres | postgres |
-| global.environment.postgres\_user | Postgres admin user | postgres |
-| global.environment.postgres\_password | Postgres admin user password | postgres |
-| global.environment.postgres\_port | Host Port for external Postgres | 5432 |
+| `global.chart.postgres` | Deploy Postgres which is needed for LOGIQ metadata. Set this to false if an external Postgres cluster is being used | true |
+| `global.environment.postgres_host` | Host IP/DNS for external Postgres | postgres |
+| `global.environment.postgres_user` | Postgres admin user | postgres |
+| `global.environment.postgres_password` | Postgres admin user password | postgres |
+| `global.environment.postgres_port` | Host Port for external Postgres | 5432 |
 
 ### 3.6 Upload LOGIQ professional license
 
-The deployment described above offers 30 days trial license. Email `license@logiq.ai` to obtain a professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer logiqctl details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai/). You will need api-token from LOGIQ ui as shown below
+The deployment described above offers 30 days trial license. Email `license@logiq.ai` to obtain a professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer `logiqctl` details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai/). You will need API-token from LOGIQ UI as shown below
 
 ![Logiq Insights Login Api-token ](../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
 
@@ -249,9 +256,9 @@ $ helm install logiq --namespace logiq \
 
 | HELM Option | Description | Default |
 | :--- | :--- | :--- |
-| global.environment.admin\_name | LOGIQ Administrator name | flash-admin@foo.com |
-| global.environment.admin\_password | LOGIQ Administrator password  | flash-password |
-| global.environment.admin\_email | LOGIQ Administrator e-mail | flash-admin@foo.com |
+| `global.environment.admin_name` | LOGIQ Administrator name | flash-admin@foo.com |
+| `global.environment.admin_password` | LOGIQ Administrator password  | flash-password |
+| `global.environment.admin_email` | LOGIQ Administrator e-mail | flash-admin@foo.com |
 
 ### 3.8 Using external Redis instance
 
@@ -266,9 +273,9 @@ $ helm install logiq --namespace logiq \
 
 | HELM Option | Description | Default |
 | :--- | :--- | :--- |
-| global.chart.redis | Deploy Redis which is needed for log tailing. Set this to false if an external Redis cluster is being used | true |
-| global.environment.redis\_host | Host IP/DNS of the external Redis cluster | redis-master |
-| global.environment.redis\_port | Host Port where external Redis service is exposed | 6379 |
+| `global.chart.redis` | Deploy Redis which is needed for log tailing. Set this to false if an external Redis cluster is being used | true |
+| `global.environment.redis_host` | Host IP/DNS of the external Redis cluster | redis-master |
+| `global.environment.redis_port` | Host Port where external Redis service is exposed | 6379 |
 
 ### 3.9 Configuring cluster id
 
