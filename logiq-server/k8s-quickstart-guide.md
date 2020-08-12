@@ -138,7 +138,7 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 | :--- | :--- | :--- |
 | `s3-gateway.s3gateway.enabled` | This helm option switches LOGIQ's built-in s3 layer to a caching gateway. This is required if your S3 bucket is hosted in an external cloud provider like AWS, GCP, Azure etc. | false |
 | `global.environment.s3_bucket` | Name of the S3 bucket in AWS | logiq |
-| `global.environment.awsServiceEndpoint` | S3 Service endpoint | https://s3.us-east-1.amazonaws.com |
+| `global.environment.awsServiceEndpoint` | S3 Service endpoint : https://s3.**&lt;region&gt;**.amazonaws.com | https://s3.us-east-1.amazonaws.com |
 | `global.environment.AWS_ACCESS_KEY_ID` | AWS Access key for accessing the bucket | No default |
 | `global.environment.AWS_SECRET_ACCESS_KEY` | AWS Secret key for accessing the bucket | No default |
 | `global.environment.s3_region` | AWS Region where bucket is hosted | us-east-1 |
