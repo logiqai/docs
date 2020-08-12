@@ -198,7 +198,7 @@ logiq logiq-repo/logiq
 
 ### 3.6 Upload LOGIQ professional license
 
-The deployment described above offers 30 days trial license. Email to `license@logiq.ai` to obtain a professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer logiqctl details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai/). You will need api-token from LOGIQ ui as shown below
+The deployment described above offers 30 days trial license. Email `license@logiq.ai` to obtain a professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer logiqctl details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai/). You will need api-token from LOGIQ ui as shown below
 
 ![Logiq Insights Login Api-token ](../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
 
