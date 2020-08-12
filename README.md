@@ -12,9 +12,9 @@ LOGIQ's monitoring stack is powered by Prometheus. LOGIQ has it's own user inter
 
 ## Log Insights
 
-LOGIQ Log Insights is a comprehensive log aggregation stack. It allows users to ingest, organize, analyze and search through log data. The Log Insights stack is unique in its ability to use any S3 compatible store as its primary data store.
+LOGIQ Log Insights is a comprehensive log aggregation stack. It allows users to ingest, organize, analyze and, search through log data. The Log Insights stack is unique in its ability to use any S3 compatible store as its primary data store.
 
-It is best suited for ingesting log and time series data directly into your S3 compatible store. The ingested data is written in an open format for ready consumption by other software. Examples of common uses are ingesting log and time-series data from Rsyslogd, Syslog, Syslog-ng, Logstash, Fluentd, Docker and ECS logging drivers, Kafka, influxDB etc.
+It is best suited for ingesting log and time-series data directly into your S3 compatible store. The ingested data is written in an open format for ready consumption by other software. Examples of common uses are ingesting log and time-series data from Rsyslogd, Syslog, Syslog-ng, Logstash, Fluentd, Docker and ECS logging drivers, Kafka, influxDB etc.
 
 The LOGIQ log ingest server is natively written in the Go programming language and compiles into a single binary. This makes it light enough to be bundled with any application stack. The server also can be configured to run in clustered, HA mode that can tolerate 1 or 2 node failures making it ideal for creating larger clusters.
 
