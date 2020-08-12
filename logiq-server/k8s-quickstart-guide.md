@@ -287,6 +287,10 @@ $ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
+| HELM Option | Description | Default |
+| :--- | :--- | :--- |
+| global.environment.cluster\_id | Cluster Id being used for the K8S cluster running LOGIQ. See Section on [Managing multiple K8S](agentless.md#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance) clusters for more details. | LOGIQ |
+
 ## 4 Teardown
 
 If and when you want to decommission the installation using the following commands
