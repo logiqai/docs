@@ -1,10 +1,10 @@
 # Alertable Events
 
-Alerts can be configured during event creation. Creating an alertable event will add an event rule and alert on that event. For example while scrolling through context logs or search logs, we want to get alerted if a particular event occurs multiple times during a given execution cycle, we can directly create an **alertable** **event** from that particular log line.
+Alerts can be configured from log data from either the Search or the Logs pages. For example, while scrolling through context logs or search logs, if we want to get alerted on a line of log that is of interest, user can directly create an **alertable** **event** from the log line.
 
 ![](../.gitbook/assets/screenshot_2020-08-10-logs-2-.png)
 
-E.g., we want to receive an alert when a particular event \(_Reusing worker_ in above example\) occurs multiple times. On clicking the three dots at the starting of the log, we can open a modal window, fill in the details and alert is all set and ready.
+E.g., we want to receive an alert when a particular event \(i.e. occurance of the text`Reusing worker` in above example\) occurs multiple times say in any 5 minute duration. On clicking the ![](../.gitbook/assets/screen-shot-2020-08-11-at-5.34.40-pm.png) on the log line, user can open the Alertable event rule editor.
 
 ### Creating an alertable event
 
@@ -35,13 +35,17 @@ All the events created can be accessed at the events page and if the alert is co
 
 ![](../.gitbook/assets/screenshot_2020-08-10-event-rules-1-.png)
 
-Clicking on the the configured alert will open up the respective alert page where it can be editied to adjust the required values.
+Clicking on the configured alert will open up the respective alert page where it can be modified further for e.g. change the alert rearm duration, add additional alert destinations etc.
 
 ![](../.gitbook/assets/screenshot_2020-08-10-alerts-1-.png)
 
 ### Viewing Alerts
 
-All the configured alerts are viewable at alerts tab. Individual alert can be edited on this page. 
+All the configured alerts are viewable when navigating to the alerts tab. An Individual alerts' configuration can be edited on this page
+
+{% hint style="warning" %}
+LOGIQ includes alerts from it's Prometheus alert manager instance that is included with the LOGIQ install. NOTE that the editing of the Prometheus alert rules cannot be done via the UI and must use alert manager CRD's to change those alert rules.
+{% endhint %}
 
 ![](../.gitbook/assets/screenshot_2020-08-10-alerts-2-.png)
 
