@@ -262,7 +262,7 @@ $ helm install logiq --namespace logiq \
 
 ### 3.8 Using external Redis instance
 
-To use external redis for your LOGIQ deployment, execute the following command.
+To use external Redis for your LOGIQ deployment, execute the following command.
 
 ```bash
 $ helm install logiq --namespace logiq \
