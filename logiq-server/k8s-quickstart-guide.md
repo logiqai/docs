@@ -196,6 +196,14 @@ $ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
+| HELM Option | Description | Default |
+| :--- | :--- | :--- |
+| global.chart.postgres | Deploy Postgres which is needed for LOGIQ metadata. Set this to false if an external Postgres cluster is being used | true |
+| global.environment.postgres\_host | Host IP/DNS for Postgres | postgres |
+| global.environment.postgres\_user | Postgres admin user | postgres |
+| global.environment.postgres\_password | Postgres admin user password | postgres |
+| global.environment.postgres\_port | Host Port for Postgres | 5432 |
+
 ### 3.6 Upload LOGIQ professional license
 
 The deployment described above offers 30 days trial license. Email `license@logiq.ai` to obtain a professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer logiqctl details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai/). You will need api-token from LOGIQ ui as shown below
