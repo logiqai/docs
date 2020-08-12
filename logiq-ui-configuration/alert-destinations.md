@@ -20,7 +20,7 @@ When an alert triggers, LOGIQ Insights sends alert details to its designated ale
 ### Email
 
 {% hint style="info" %}
- It’s required to configure the e-mail server to receive e-mail notifications.
+ It’s required to [configure the e-mail](email-configuration-setup.md) server to receive e-mail notifications.
 {% endhint %}
 
 1. Click on + New Alert Destination”, pick Email.
