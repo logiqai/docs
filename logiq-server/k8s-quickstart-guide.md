@@ -243,6 +243,16 @@ $ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
+### 3.9 Configuring cluster id
+
+When deploying LOGIQ configure the cluster id to monitor the LOGIQ deployment. For details about the cluster id refer to section [Ingesting data, Fluentd K8s](agentless.md#fluentd-k-8-s).
+
+```bash
+$ helm install logiq --namespace logiq \
+--set global.environment.cluster_id=<cluster id> \
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq
+```
+
 | HELM Option | Description | Default |
 | :--- | :--- | :--- |
 | global.chart.redis | Deploy Redis which is needed for log tailing. Set this to false if an external redis cluster is being used | true |
