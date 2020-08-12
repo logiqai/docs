@@ -222,10 +222,15 @@ View License information
 $ helm install logiq --namespace logiq \
 --set global.environment.admin_name="LOGIQ Administrator" \
 --set global.environment.admin_password="admin_password" \
---set global.environment.admin_org="example_com_org" \
 --set global.environment.admin_email="admin@example.com" \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
+
+| HELM Option | Description | Default |
+| :--- | :--- | :--- |
+| global.environment.admin\_name | LOGIQ Administrator name | flash-admin@foo.com |
+| global.environment.admin\_password | LOGIQ Administrator password  | flash-password |
+| global.environment.admin\_email | LOGIQ Administrator e-mail | flash-admin@foo.com |
 
 ### 3.8 Using external Redis instance
 
