@@ -29,7 +29,11 @@ The default namespace settings can be overridden by passing `-n` flag. Basic ope
 
 The `logs` command is used to view historical logs. The `logs` command support an `interactive` mode which let user select application and process. 
 
+[![asciicast](https://asciinema.org/a/353013.svg)](https://asciinema.org/a/353013)
 
+### `logiqctl` tail
 
+The tail command can be used to view the logs from applications in realtime. The tail command runs and interactive prompt and let user choose the application and processes. 
 
+[![asciicast](https://asciinema.org/a/353019.svg)](https://asciinema.org/a/353019)
 
