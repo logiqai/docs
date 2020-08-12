@@ -32,6 +32,10 @@ logiq-repo/logiq    2.0.0            2.0.0          A Helm chart for Kubernetes
 
 ### 1.2 Create namespace where LOGIQ will be deployed
 
+{% hint style="danger" %}
+NOTE: Namespace name cannot be more than 15 characters in length
+{% endhint %}
+
 ```bash
 $ kubectl create namespace logiq
 ```
@@ -263,6 +267,10 @@ $ helm install logiq --namespace logiq \
 ### 3.8 Using external Redis instance
 
 To use external Redis for your LOGIQ deployment, execute the following command.
+
+{% hint style="danger" %}
+NOTE: At this time LOGIQ only supports connecting to a Redis cluster in a local VPC without authentication
+{% endhint %}
 
 ```bash
 $ helm install logiq --namespace logiq \
