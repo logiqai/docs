@@ -238,6 +238,12 @@ $ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
+| HELM Option | Description | Default |
+| :--- | :--- | :--- |
+| global.chart.redis | Deploy Redis which is needed for log tailing. Set this to false if an external redis cluster is being used | true |
+| global.environment.redis\_host | Host IP/DNS of the external redis cluster | redis-master |
+| global.environment.redis\_port | Host Port where redis service is exposed | 6379 |
+
 ## 4 Teardown
 
 If and when you want to decommission the installation using the following commands
