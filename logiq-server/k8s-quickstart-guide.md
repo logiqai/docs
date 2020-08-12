@@ -27,7 +27,7 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 ```bash
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    1.0.3            1.2.1          A Helm chart for Kubernetes
+logiq-repo/logiq    2.0.0            2.0.0          A Helm chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -52,17 +52,8 @@ $ helm install logiq --namespace logiq \
 This will install LOGIQ and expose the LOGIQ services and UI on the ingress IP. Please refer Section 3.5 for details about storage class. Service ports are described in the [Port details section](https://docs.logiq.ai/logiq-server/quickstart-guide#ports). You should now be able to go to `http://ingress-ip/`
 
 {% hint style="info" %}
-The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. Helm chart can override the default admin credential as well via the below parameters
+The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. Helm chart can override the default admin settings as well. See section[ 3.7](k8s-quickstart-guide.md#3-7-customize-admin-account) on customizing the admin settings
 {% endhint %}
-
-```bash
-$ helm install logiq --namespace logiq \
---set global.environment.admin_name=flash-admin@foo.com \
---set global.environment.admin_password=flash-password \
---set global.environment.admin_org=flash-org \
---set global.environment.admin_email=flash-admin@foo.com \
---set global.persistence.storageClass=<storage class name> logiq-repo/logiq
-```
 
 ![Logiq Insights Login UI ](../.gitbook/assets/screen-shot-2020-03-24-at-3.42.55-pm.png)
 
@@ -222,6 +213,17 @@ Upload your LOGIQ deployment license
 
 View License information
  - logiqctl license get
+```
+
+### 3.7 Customize Admin account
+
+```bash
+$ helm install logiq --namespace logiq \
+--set global.environment.admin_name="LOGIQ Administrator" \
+--set global.environment.admin_password="admin_password" \
+--set global.environment.admin_org="example_com_org" \
+--set global.environment.admin_email="admin@example.com" \
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
 ## 4 Tear down
