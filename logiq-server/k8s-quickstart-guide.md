@@ -188,12 +188,12 @@ logiq logiq-repo/logiq
 To use external AWS RDS Postgres database for your LOGIQ deployment, execute the following command.
 
 ```bash
-$ helm install --namespace logiq \
+$ helm install logiq --namespace logiq \
 --set global.chart.postgres=false \
 --set global.environment.postgres_host=<postgres-host-ip/dns> \
 --set global.environment.postgres_user=<username> \
 --set global.environment.postgres_password=<password> \
-logiq logiq-repo/logiq
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
 ### 3.6 Upload LOGIQ professional license
@@ -224,6 +224,17 @@ $ helm install logiq --namespace logiq \
 --set global.environment.admin_password="admin_password" \
 --set global.environment.admin_org="example_com_org" \
 --set global.environment.admin_email="admin@example.com" \
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq
+```
+
+### 3.8 Using external Redis instance
+
+To use external redis for your LOGIQ deployment, execute the following command.
+
+```bash
+$ helm install logiq --namespace logiq \
+--set global.chart.redis=false \
+--set global.environment.redis_host=<redis-host-ip/dns> \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
