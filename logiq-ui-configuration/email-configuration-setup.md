@@ -1,3 +1,7 @@
+---
+description: This page describers E-Mail server configuration
+---
+
 # E-Mail Configuration
 
 LOGIQ insights can be configured to send emails to notify alerts. It uses smtp mail and requires following information for configuration:
