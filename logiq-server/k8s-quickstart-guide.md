@@ -219,7 +219,7 @@ View License information
 
 ```bash
 $ helm install logiq --namespace logiq \
---set global.environment.admin_name="LOGIQ Administrator" \
+--set global.environment.admin_name="Administrator" \
 --set global.environment.admin_password="admin_password" \
 --set global.environment.admin_org="example_com_org" \
 --set global.environment.admin_email="admin@example.com" \
