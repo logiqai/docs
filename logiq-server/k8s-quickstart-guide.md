@@ -161,6 +161,10 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
+| HELM Option | Description | Defaults |
+| :--- | :--- | :--- |
+| logiq-flash.secrets\_name | TLS certificate key pair and CA cert for TLS transport | No default |
+
 ### 3.4 Changing the storage class
 
 If you are planning on using a specific storage class for your volumes, you can customize it for the LOGIQ deployment. By default, LOGIQ uses the `standard` storage class
