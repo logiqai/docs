@@ -103,11 +103,11 @@ Depending on your requirements, you may want to host your storage in your own K8
 Please note that cloud providers may charge data transfer costs between regions. It is important that the LOGIQ cluster be deployed in the same region where the S3 bucket is hosted
 {% endhint %}
 
-#### 3.1.1 Create an access/secret key pair for creating and managing your bucket <a id="3-1-1"></a>
+#### 3.2.1 Create an access/secret key pair for creating and managing your bucket <a id="3-1-1"></a>
 
 Go to AWS IAM console and create an access key and secret key that can be used to create your bucket and manage access to the bucket for writing and reading your log files
 
-#### 3.1.2 Deploy the LOGIQ helm in gateway mode
+#### 3.2.2 Deploy the LOGIQ helm in gateway mode
 
 Make sure to pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` from [step 3.1.1](k8s-quickstart-guide.md#3-1-1) above and give a bucket name. The S3 gateway acts as a caching gateway and helps reduce API cost.
 
