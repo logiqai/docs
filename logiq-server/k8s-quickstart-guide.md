@@ -127,6 +127,15 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
+| HELM Option | Description | Defaults |
+| :--- | :--- | :--- |
+| s3-gateway.s3gateway.enabled | This helm option switches LOGIQ's built-in s3 layer to a caching gateway. This is required if your S3 bucket is hosted in an external cloud provider like AWS, GCP, Azure etc. | false |
+| global.environment.s3\_bucket | Name of the S3 bucket in AWS | logiq |
+| global.environment.awsServiceEndpoint | S3 Service endpoint | https://s3.us-east-1.amazonaws.com |
+| global.environment.AWS\_ACCESS\_KEY\_ID | AWS Access key for accessing the bucket | No default |
+| global.environment.AWS\_SECRET\_ACCESS\_KEY | AWS Secret key for accessing the bucket | No default |
+| global.environment.s3\_region | AWS Region where bucket is hosted | us-east-1 |
+
 {% hint style="info" %}
 S3 providers may have restrictions on bucket names for e.g. AWS S3 bucket names are globally unique.
 {% endhint %}
@@ -203,10 +212,10 @@ $ helm install logiq --namespace logiq \
 | HELM Option | Description | Default |
 | :--- | :--- | :--- |
 | global.chart.postgres | Deploy Postgres which is needed for LOGIQ metadata. Set this to false if an external Postgres cluster is being used | true |
-| global.environment.postgres\_host | Host IP/DNS for Postgres | postgres |
+| global.environment.postgres\_host | Host IP/DNS for external Postgres | postgres |
 | global.environment.postgres\_user | Postgres admin user | postgres |
 | global.environment.postgres\_password | Postgres admin user password | postgres |
-| global.environment.postgres\_port | Host Port for Postgres | 5432 |
+| global.environment.postgres\_port | Host Port for external Postgres | 5432 |
 
 ### 3.6 Upload LOGIQ professional license
 
@@ -257,9 +266,9 @@ $ helm install logiq --namespace logiq \
 
 | HELM Option | Description | Default |
 | :--- | :--- | :--- |
-| global.chart.redis | Deploy Redis which is needed for log tailing. Set this to false if an external redis cluster is being used | true |
-| global.environment.redis\_host | Host IP/DNS of the external redis cluster | redis-master |
-| global.environment.redis\_port | Host Port where redis service is exposed | 6379 |
+| global.chart.redis | Deploy Redis which is needed for log tailing. Set this to false if an external Redis cluster is being used | true |
+| global.environment.redis\_host | Host IP/DNS of the external Redis cluster | redis-master |
+| global.environment.redis\_port | Host Port where external Redis service is exposed | 6379 |
 
 ### 3.9 Configuring cluster id
 
