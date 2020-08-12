@@ -251,21 +251,21 @@ $ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
+| HELM Option | Description | Default |
+| :--- | :--- | :--- |
+| global.chart.redis | Deploy Redis which is needed for log tailing. Set this to false if an external redis cluster is being used | true |
+| global.environment.redis\_host | Host IP/DNS of the external redis cluster | redis-master |
+| global.environment.redis\_port | Host Port where redis service is exposed | 6379 |
+
 ### 3.9 Configuring cluster id
 
-When deploying LOGIQ configure the cluster id to monitor the LOGIQ deployment. For details about the cluster id refer to section [Ingesting data, Fluentd K8s](agentless.md#fluentd-k-8-s).
+When deploying LOGIQ configure the cluster id to monitor the LOGIQ deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](agentless.md#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance)
 
 ```bash
 $ helm install logiq --namespace logiq \
 --set global.environment.cluster_id=<cluster id> \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
-
-| HELM Option | Description | Default |
-| :--- | :--- | :--- |
-| global.chart.redis | Deploy Redis which is needed for log tailing. Set this to false if an external redis cluster is being used | true |
-| global.environment.redis\_host | Host IP/DNS of the external redis cluster | redis-master |
-| global.environment.redis\_port | Host Port where redis service is exposed | 6379 |
 
 ## 4 Teardown
 
