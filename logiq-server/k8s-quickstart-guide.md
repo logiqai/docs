@@ -188,7 +188,7 @@ To use external AWS RDS Postgres database for your LOGIQ deployment, execute the
 
 ```bash
 $ helm install --namespace logiq \
---set postgres.enabled=false \
+--set global.chart.postgres=false \
 --set global.environment.postgres_host=<postgres-host-ip/dns> \
 --set global.environment.postgres_user=<username> \
 --set global.environment.postgres_password=<password> \
