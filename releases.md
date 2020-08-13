@@ -23,6 +23,7 @@
 #### Monitoring
 
 * Prometheus alert manager integration into LOGIQ alerts for unified alerting across logs and metrics
+* Built-in Logiq dashboard for LOGIQ cluster performance and health monitoring 
 
 #### LOGIQ Data platform
 
