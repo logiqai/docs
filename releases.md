@@ -1,5 +1,45 @@
 # Releases
 
+## 2.0.0 - 2020-08-12
+
+### Added
+
+#### Log aggregation
+
+* Support for AWS Fargate, Firelens, [Fluent forward Protocol ](https://github.com/fluent/fluentd/wiki/Forward-Protocol-Specification-v1) 
+* LOGIQ Fluent-bit daemon-set for K8S clusters
+* Data extraction via Grok patterns, compatible with Logstash Grok patterns using the [Grokky library](https://github.com/logrusorgru/grokky)
+
+#### Log analytics
+
+* Redesigned - Elastic/Kibana like search UI that scales to infinite data from S3 compatible object store
+* Real-time alertable events and alerts from log data
+
+#### Logiqctl
+
+* Logiqctl command-line toolkit
+* Works with SAML users via API Key
+
+#### Monitoring
+
+* Prometheus alert manager integration into LOGIQ alerts for unified alerting across logs and metrics
+
+#### LOGIQ Data platform
+
+* Connect numerous popular data sources into the LOGIQ platforms such as Postgres, MySql, Elasticsearch, Athena, MongoDB, Prometheus, and more. 
+* JSON Data source for easily converting arbitrary JSON data into tables, widgets, and alerts
+
+#### Role-based access control
+
+* Namespace RBAC for log data from K8S namespaces
+* SAML Integration for RBAC allowing SAML Attributes to map to RBAC groups
+
+#### Security and Compliance
+
+* Fully secured HELM deployment using Role, RoleBindings, ServiceAccounts and Pod Security policies for all service
+* Cryptographically verified JWT token for API communication
+* Built-in audit logging for the entire product and infrastructure
+
 ## 1.2.1 - 2020-05-11
 
 ### Added
