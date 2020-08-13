@@ -46,6 +46,16 @@ This will create a namespace **`logiq`** where we will deploy the LOGIQ Log Insi
 If you choose a different name for the namespace, please remember to use the same namespace for the remainder of the steps
 {% endhint %}
 
+### 1.3 Prepare your Values YAML file
+
+Sample YAML files for small, medium, large configs can be downloaded at the links below
+
+{% file src="../.gitbook/assets/values.small.yaml" caption="Values.small.yaml" %}
+
+{% file src="../.gitbook/assets/values.yaml" caption="Values.medium.yaml" %}
+
+{% file src="../.gitbook/assets/values.large.yaml" caption="Values.large.yaml" %}
+
 ## 2. Install LOGIQ
 
 ```bash
