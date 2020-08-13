@@ -67,7 +67,7 @@ Update the syslog config in `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.co
            )
 ```
 
-### Using omrelp 
+### Using omrelp
 
 #### Installation rsyslog RELP modules
 
@@ -167,7 +167,7 @@ If you are running a K8S cluster, you can use fluentd to send data to the LOGIQ 
 When deploying fluentd daemonset on K8S clusters, we recommend you use the fluentd daemon set container provided by LOGIQ. It is available at [https://hub.docker.com/repository/docker/logiqai/fluentd-remote-syslog](https://hub.docker.com/repository/docker/logiqai/fluentd-remote-syslog). It allows the administrator to pass a human readable `CLUSTER_ID` or cluster identifier with all the log data.
 
 {% hint style="success" %}
-Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters. 
+Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters.
 
 It is also easier for the administrator to use human readable names vs LOGIQ using uuid's etc that it detects from the incoming stream.
 {% endhint %}
@@ -200,7 +200,7 @@ drwxr-xr-x  7 user  staff   224 Oct 30 14:47 ..
 
 Edit the **`fluentd/secret.yaml`** to include your CA and Client pub/private keys in base64 encoded format
 
-Edit the **`fluentd/fluentd-logiq.yaml`** and add your LOGIQ cluster IP/DNS. Also configure your `CLUSTER_ID` \(e.g. RC, Prod, Dev-Test, QA\). 
+Edit the **`fluentd/fluentd-logiq.yaml`** and add your LOGIQ cluster IP/DNS. Also configure your `CLUSTER_ID` \(e.g. RC, Prod, Dev-Test, QA\).
 
 ```text
 ....
@@ -242,6 +242,7 @@ kubectl create namespace kube-logging
 kubectl apply -f fluentd_rbac.yaml
 kubectl apply -f fluentd-logiq_non_tls.yaml
 ```
+
 ## Fluent-bit K8S
 
 If you are running a K8S cluster, you can use fluent-bit to send data to the LOGIQ server. Please see below for instructions
@@ -251,7 +252,7 @@ If you are running a K8S cluster, you can use fluent-bit to send data to the LOG
 LOGIQ has provided its own fluent-bit daemon for deploying on K8S clusters. It is available at [https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/](https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/). It allows the administrator to pass a human readable `CLUSTER_ID` or cluster identifier with all the log data.
 
 {% hint style="success" %}
-Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters. 
+Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters.
 
 It is also easier for the administrator to use human readable names vs LOGIQ using uuid's etc that it detects from the incoming stream.
 {% endhint %}
@@ -280,9 +281,10 @@ drwxr-xr-x  9 user  staff   288 Aug  9 05:20 ..
 -rw-r--r--  1 user  staff   194 Aug  9 04:49 fluent-bit-role.yaml
 -rw-r--r--  1 user  staff    86 Aug  9 05:25 fluent-bit-service-account.yaml
 ```
+
 To get started run the following commands to create the namespace, service account and role setup:
 
-```sh
+```bash
 $ kubectl create namespace logging
 $ kubectl create -f fluent-bit-service-account.yaml
 $ kubectl create -f fluent-bit-role-binding.yaml
@@ -293,23 +295,29 @@ $ kubectl create -f fluent-bit-role.yaml
 
 The next step is to create a ConfigMap that will be used by the Fluent Bit DaemonSet:
 
-```
+```text
 $ kubectl create -f fluent-bit-config-logiq-forward.yml
 ```
 
 Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Cluster, configure the following in deamonset fluent-bit-daemonset-logiq-forward.yml
-          - name:  LOGIQ_HOST
-            value: "YOUR_LOGIQ_SERVER_IP"
-          - name:  LOGIQ_PORT
-            value: "24224"
-          - name: CLUSTER_ID
-            value: "YOUR_CLUSTER_ID"            
 
-```
+* name:  LOGIQ\_HOST
+
+  value: "YOUR\_LOGIQ\_SERVER\_IP"
+
+* name:  LOGIQ\_PORT
+
+  value: "24224"
+
+* name: CLUSTER\_ID
+
+  value: "YOUR\_CLUSTER\_ID"            
+
+```text
 $ kubectl create -f fluent-bit-daemonset-logiq-forward.yml
 ```
 
-## Docker Syslog log driver 
+## Docker Syslog log driver
 
 Using the docker syslog driver to send logs to LOGIQ is quite simple. Details about the docker syslog driver can be found here [https://docs.docker.com/config/containers/logging/syslog/](https://docs.docker.com/config/containers/logging/syslog/)
 
@@ -351,6 +359,4 @@ docker run --log-driver syslog \
 --log-opt syslog-tls-ca-cert=ca.pem --log-opt syslog-format=rfc3164 \
 --log-opt tag=mysql --name mysql3 -d mysql
 ```
-
-
 

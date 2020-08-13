@@ -56,6 +56,13 @@ Sample YAML files for small, medium, large configs can be downloaded at the link
 
 {% file src="../.gitbook/assets/values.large.yaml" caption="Values.large.yaml" %}
 
+These YAML files can be used for deployment with -f parameter as shown below in the description.  
+
+```bash
+$ helm install logiq --namespace logiq \
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq -f Values.small.yaml
+```
+
 ## 2. Install LOGIQ
 
 ```bash
