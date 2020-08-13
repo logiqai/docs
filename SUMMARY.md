@@ -32,7 +32,10 @@
   * [Obtaining API Key](vewing-logs/logiqctl/obtaining-api-key.md)
 * [Role-Based Access Control \(RBAC\)](vewing-logs/role-based-access-control.md)
 * [Configuring RBAC](vewing-logs/configuring-rbac.md)
-* [Audit Trail](vewing-logs/audit-trail.md)
+
+## COMPLIANCE
+
+* [Audit Trail](compliance/audit-trail.md)
 
 ## ANOMALY DETECTION <a id="logiq-events"></a>
 
