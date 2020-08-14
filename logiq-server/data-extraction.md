@@ -48,6 +48,91 @@ Omitting either the `applications` or the `namespaces` keyword or both, excludes
   namespaces: webservers-.*
 ```
 
+The above rule would result in LOGIQ parsing out data as shown below. All the extracted values from applying the above grok expression will automatically be made available as facets for filtering search data in the UI
+
+```text
+{
+  "AppName": "finite-test-engine",
+  "Facility": "3",
+  "FacilityString": "system daemon",
+  "Hostname": "watcher_test_8",
+  "Message": "127.0.0.1 - frank [10/Oct/2000:13:55:36 -0700] \"GET /index.html HTTP/1.0\" 200 2481 \"http://www.example.com/end.html\" \"Mozilla/4.08 [en] (Win98; I ;Nav)\" ",
+  "MsgID": "1g4Jt60f78HOYBk26BiJREdwBEG",
+  "Priority": "29",
+  "ProcID": "70958",
+  "Sender": "::1",
+  "Severity": "5",
+  "SeverityString": "notice",
+  "StructuredData": [
+    {
+      "key": "auth",
+      "values": [
+        "frank"
+      ]
+    },
+    {
+      "key": "bytes",
+      "values": [
+        "2481"
+      ]
+    },
+    {
+      "key": "clientip",
+      "values": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "key": "httpversion",
+      "values": [
+        "1.0"
+      ]
+    },
+    {
+      "key": "ip",
+      "values": [
+        "127.0.0.1"
+      ]
+    },
+    {
+      "key": "uri",
+      "values": [
+        "http://www.example.com/end.html"
+      ]
+    },
+    {
+      "key": "ident",
+      "values": [
+        "-"
+      ]
+    },
+    {
+      "key": "request",
+      "values": [
+        "/index.html"
+      ]
+    },
+    {
+      "key": "response",
+      "values": [
+        "200"
+      ]
+    },
+    {
+      "key": "verb",
+      "values": [
+        "GET"
+      ]
+    }
+  ],
+  "Timestamp": "2020-08-14T01:22:18Z",
+  "Namespace": "watcher_test_8",
+  "MsTimestamp": "1597368138"
+}
+```
+
+![](../.gitbook/assets/screen-shot-2020-08-13-at-7.15.19-pm.png)
+
 ## Specifying Grok matching rules
 
 The LOGIQ ingest server can watch a rules directory for rules files as described above. The server can handle new rules being added to the system dynamically without any downtime.
