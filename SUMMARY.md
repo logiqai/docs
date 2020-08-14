@@ -14,6 +14,7 @@
 * [AWS Quickstart guide](logiq-server/aws-cloudformation.md)
 * [Ingesting data](logiq-server/agentless.md)
 * [Data extraction](logiq-server/data-extraction.md)
+* [Timestamp handling](logiq-server/timestamp-handling.md)
 
 ## LOGIQ Monitoring
 
