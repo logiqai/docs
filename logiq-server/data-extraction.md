@@ -48,7 +48,7 @@ Omitting either the `applications` or the `namespaces` keyword or both, excludes
   namespaces: webservers-.*
 ```
 
-The above rule would result in LOGIQ parsing out data as shown below. All the extracted values from applying the above grok expression will automatically be made available as facets for filtering search data in the UI
+The above rule would result in LOGIQ parsing out data as shown below. All the extracted values will automatically be made available as facets for filtering search data
 
 ```text
 {
@@ -130,8 +130,6 @@ The above rule would result in LOGIQ parsing out data as shown below. All the ex
   "MsTimestamp": "1597368138"
 }
 ```
-
-![](../.gitbook/assets/screen-shot-2020-08-13-at-7.15.19-pm.png)
 
 ## Specifying Grok matching rules
 
