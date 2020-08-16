@@ -137,11 +137,10 @@ Go to AWS IAM console and create an access key and secret key that can be used t
 
 #### 3.2.2 Deploy the LOGIQ helm in gateway mode
 
-Make sure to pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and give a bucket name. The S3 gateway acts as a caching gateway and helps reduce API costs.
+Make sure to pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and give a bucket name. The S3 gateway acts as a caching gateway and helps reduce API costs.   
+Create a bucket in AWS s3 with a unique bucket name in the region where you plan to host the deployment.
 
 {% hint style="info" %}
-You do not need to create the bucket, we will automatically provision it for you. Just provide the bucket name and access credentials in the step below.
-
 If the bucket already exists, LOGIQ will use it. Check to make sure the access and secret key work with it. Additionally, provide a valid amazon service endpoint for s3 else the config defaults to [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com)
 {% endhint %}
 
