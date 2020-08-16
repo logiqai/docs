@@ -313,6 +313,11 @@ Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Clus
 
   value: "YOUR\_CLUSTER\_ID"            
 
+For Kubernetes version < 1.17, please change the apiVersion: "extensions/v1beta1" from "apps/v1" and remove selector attached to DaemonSet spec
+  selector:
+    matchLabels:
+      k8s-app: fluent-bit-logging
+
 ```text
 $ kubectl create -f fluent-bit-daemonset-logiq-forward.yml
 ```
