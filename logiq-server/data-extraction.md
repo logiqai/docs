@@ -38,7 +38,7 @@ Grok patterns can be applied in incoming logs data via matching rules. The match
 
 In the example below, the LOGIQ engine will apply the combined apache log format grok extraction rule to all application names that being with `httpd` or `Httpd` and running on namespaces that being with webservers-.
 
-Omitting either the `applications` or the `namespaces` keyword or both, excludes matching on that criteria. For e.g. omitting `applications` means the grok pattern is applied to data from all applications from the `webservers-.*` namespaces 
+Omitting either the `applications` or the `namespaces` keyword or both, excludes matching on that criteria. For e.g. omitting `applications` means the grok pattern is applied to data from all applications from the `webservers-.*` namespaces
 
 ```text
 - name: combined_apache_log
@@ -138,6 +138,4 @@ The LOGIQ ingest server can watch a rules directory for rules files as described
 {% hint style="info" %}
 In a Kubernetes environment, the rules can be added to a running server via ConfigMaps
 {% endhint %}
-
-
 
