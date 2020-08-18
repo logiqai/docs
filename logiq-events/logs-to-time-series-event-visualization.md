@@ -22,11 +22,14 @@ This pops up “Create alertable event rule” modal window. It enables user to
 * **Create corresponding Visualization**
 * **Create Alert trigger \(optional\)**
 
-Events are generated when a log-line satisfies event rule criteria. Event rule consists of a list of  key, operator and value combinations that could be connected by AND, OR.  Combination can consist of a few standard parameters such as Message, Application, Severity String, Facility String, sender and some facet parameters which are specific to that log-line.
+Events are generated when a log-line satisfies event rule criteria. Event rule consists of a list of  key, operator and value combinations that could be connected by AND conditions. Each combination consists of a standard parameters such as Message, Application, Severity String, Facility String, Sender or some facet parameters which are specific to that log-line.
 
 ![Create alertable event rule modal window](../.gitbook/assets/screen-shot-2020-08-17-at-2.50.34-pm.png)
 
-In this example event is generated when a message matches “GET /V1/license” and other additional parameter criterions are met. And each triggered event is recorded by LOGIQ insight in the time series database. It helps generate a visualization graph of the events frequency with respect to time. It can be found in the queries page as license\_check query and license\_check-vis visualization.  
+By pressing "Create event" Button, LOGIQ generates an event rule, a query & visualization graph for the time series DB and alert trigger if "create and activate alert on event rule" checkbox is checked.  
+In this example, event is generated when message matches regular expression “GET /V1/license” and other additional parameter criterions are met. Each triggered event is recorded by LOGIQ insights in the time series database. It helps generate a visualization graph of the events frequency with respect to time. 
+
+In this example, the query and time series visualizations can be found in the queries page as license\_check query and license\_check-vis visualization.  
 ****
 
 ![](../.gitbook/assets/screen-shot-2020-08-17-at-10.33.07-pm.png)
