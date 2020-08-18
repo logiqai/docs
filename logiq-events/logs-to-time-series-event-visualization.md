@@ -33,7 +33,7 @@ In this example event is generated when a message matches “GET /V1/license” 
 
 Since the dashboard “EventTimeSeriesCharts” is selected in the above example the visualization will be embedded in that dashboard. Click on dashboard and pick ”EventTimeSeriesCharts”
 
-![Time series visualization from the  ](../.gitbook/assets/screen-shot-2020-08-17-at-2.58.55-pm.png)
+![Time series visualization](../.gitbook/assets/screen-shot-2020-08-17-at-2.58.55-pm.png)
 
 If required by selecting the checkbox “create and activate alert on event rule” and specifying preconfigured destination for notifications the alert trigger is conveniently created.
 
