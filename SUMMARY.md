@@ -34,15 +34,16 @@
 * [Role-Based Access Control \(RBAC\)](vewing-logs/role-based-access-control.md)
 * [Configuring RBAC](vewing-logs/configuring-rbac.md)
 
-## COMPLIANCE
-
-* [Audit Trail](compliance/audit-trail.md)
-
 ## ANOMALY DETECTION <a id="logiq-events"></a>
 
 * [Events](logiq-events/events.md)
 * [Event Rules](logiq-events/event-rules.md)
 * [Alertable Events](logiq-events/alerts.md)
+* [Logs to time series event visualization](logiq-events/logs-to-time-series-event-visualization.md)
+
+## COMPLIANCE
+
+* [Audit Trail](compliance/audit-trail.md)
 
 ## LOGIQ STREAMING
 

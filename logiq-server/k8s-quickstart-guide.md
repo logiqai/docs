@@ -56,7 +56,7 @@ Sample YAML files for small, medium, large configs can be downloaded at the link
 
 {% file src="../.gitbook/assets/values.large.yaml" caption="Values.large.yaml" %}
 
-These YAML files can be used for deployment with -f parameter as shown below in the description.  
+These YAML files can be used for deployment with -f parameter as shown below in the description.
 
 ```bash
 $ helm install logiq --namespace logiq \
@@ -106,7 +106,7 @@ The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described i
 | HELM Option | Description | Defaults |
 | :--- | :--- | :--- |
 | `global.domain` | DNS domain where the LOGIQ service will be running. This is required for HTTPS | No default |
-| `ingress.tlsEnabled` |  Enable the ingress controler to front HTTPS for services  | false |
+| `ingress.tlsEnabled` | Enable the ingress controler to front HTTPS for services | false |
 | `kubernetes-ingress.controller.defaultTLSSecret.enabled` | Specify if a default certificate is enabled for the ingress gateway | false |
 | `kubernetes-ingress.controller.defaultTLSSecret.secret` | Specify the name of a TLS Secret for the ingress gateway. If this is not specified, a secret is automatically generated of option `kubernetes-ingress.controller.defaultTLSSecret.enabled` above is enabled. |  |
 
@@ -137,7 +137,7 @@ Go to AWS IAM console and create an access key and secret key that can be used t
 
 #### 3.2.2 Deploy the LOGIQ helm in gateway mode
 
-Make sure to pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and give a bucket name. The S3 gateway acts as a caching gateway and helps reduce API costs.   
+Make sure to pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and give a bucket name. The S3 gateway acts as a caching gateway and helps reduce API costs.  
 Create a bucket in AWS s3 with a unique bucket name in the region where you plan to host the deployment.
 
 {% hint style="info" %}
@@ -158,7 +158,7 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 | :--- | :--- | :--- |
 | `s3-gateway.s3gateway.enabled` | This helm option switches LOGIQ's built-in s3 layer to a caching gateway. This is required if your S3 bucket is hosted in an external cloud provider like AWS, GCP, Azure etc. | false |
 | `global.environment.s3_bucket` | Name of the S3 bucket in AWS | logiq |
-| `global.environment.awsServiceEndpoint` | S3 Service endpoint : https://s3.**&lt;region&gt;**.amazonaws.com | https://s3.us-east-1.amazonaws.com |
+| `global.environment.awsServiceEndpoint` | S3 Service endpoint : [https://s3.\*\*&lt;region&gt;\*\*.amazonaws.com](https://s3.**<region>**.amazonaws.com) | [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com) |
 | `global.environment.AWS_ACCESS_KEY_ID` | AWS Access key for accessing the bucket | No default |
 | `global.environment.AWS_SECRET_ACCESS_KEY` | AWS Secret key for accessing the bucket | No default |
 | `global.environment.s3_region` | AWS Region where bucket is hosted | us-east-1 |
@@ -244,8 +244,7 @@ $ helm install logiq --namespace logiq \
 | `global.environment.postgres_password` | Postgres admin user password | postgres |
 | `global.environment.postgres_port` | Host Port for external Postgres | 5432 |
 
-
-While configuring RDS, create a new parameter group that sets autoVaccum to true or the value "1", associate this parameter group to your RDS instance. Autovacuum is a daemon that automates the execution of VACUUM and ANALYZE (to gather statistics) commands. Autovacuum checks for bloated tables in the database and reclaims the space for reuse.
+While configuring RDS, create a new parameter group that sets autoVaccum to true or the value "1", associate this parameter group to your RDS instance. Autovacuum is a daemon that automates the execution of VACUUM and ANALYZE \(to gather statistics\) commands. Autovacuum checks for bloated tables in the database and reclaims the space for reuse.
 
 ### 3.6 Upload LOGIQ professional license
 
@@ -280,7 +279,7 @@ $ helm install logiq --namespace logiq \
 | HELM Option | Description | Default |
 | :--- | :--- | :--- |
 | `global.environment.admin_name` | LOGIQ Administrator name | flash-admin@foo.com |
-| `global.environment.admin_password` | LOGIQ Administrator password  | flash-password |
+| `global.environment.admin_password` | LOGIQ Administrator password | flash-password |
 | `global.environment.admin_email` | LOGIQ Administrator e-mail | flash-admin@foo.com |
 
 ### 3.8 Using external Redis instance
