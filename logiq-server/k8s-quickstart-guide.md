@@ -60,7 +60,7 @@ These YAML files can be used for deployment with -f parameter as shown below in 
 
 ```bash
 $ helm install logiq --namespace logiq \
---set global.persistence.storageClass=<storage class name> logiq-repo/logiq -f Values.small.yaml
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq -f values.small.yaml
 ```
 
 ## 2. Install LOGIQ
