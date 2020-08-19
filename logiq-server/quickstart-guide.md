@@ -21,10 +21,10 @@ _**NOTE:** the docker-compose quick-start YAML files are intended for demo and t
 
 #### LOGIQ full-stack - Ingest server with UI
 
-* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart.yml)
+* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml)
 
 ```bash
-$ wget https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart.yml
+$ https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml
 ```
 
 {% hint style="warning" %}
@@ -43,7 +43,7 @@ While the services are coming up, you can check for the service logs
 $docker-compose logs -f docker-compose.quickstart.yaml
 ```
 
-## Firewall ports and urls
+## Firewall ports and URLs
 
 ### Ports
 
@@ -70,15 +70,21 @@ Prometheus can scrape metrics from the LOGIQ server as a scrape target.
 https://<logiq-server-ip>:9998/metrics
 ```
 
+The LOGIQ compose file brings up a Prometheus server as well along with a monitoring dashboard for LOGIQ.
+
 ## Test using LOGIQ UI
 
-Once the LOGIQ server is up and running, the LOGIQ UI can be accessed as described above on port 80 on the server docker-compose. You will be presented with a login screen as shown below. Use _flash-admin@foo.com_ / _flash-password_ to login
+Once the LOGIQ server is up and running, the LOGIQ UI can be accessed as described above on port 80 on the server docker-compose. You will be presented with a login screen as shown below.
+
+{% hint style="info" %}
+Use _flash-admin@foo.com_ / _flash-password_ to login
+{% endhint %}
 
 ![](../.gitbook/assets/screen-shot-2020-01-19-at-2.14.21-pm.png)
 
 ## Test using LOGIQ server web CLI
 
-Once the LOGIQ server is up and running, you can connect to the Server web cli on port 9998. The default credentials are _logiq\_access_ and _logiq\_secret_
+Once the LOGIQ server is up and running, you can connect to the Server web cli on port 9998. The default credentials are _logiq_ and _logiq_
 
 ![](../.gitbook/assets/screen-shot-2019-12-12-at-4.13.33-pm.png)
 

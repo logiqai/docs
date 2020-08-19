@@ -247,7 +247,7 @@ $ helm install logiq --namespace logiq \
 | `global.environment.postgres_port` | Host Port for external Postgres | 5432 |
 
 {% hint style="warning" %}
-While configuring RDS, create a new parameter group that sets autoVaccum to true or the value "1", associate this parameter group to your RDS instance. 
+While configuring RDS, create a new parameter group that sets autoVaccum to true or the value "1", associate this parameter group to your RDS instance.
 
 Auto vacuum automates the execution of `VACUUM` and `ANALYZE` \(to gather statistics\) commands. Auto vacuum checks for bloated tables in the database and reclaims the space for reuse.
 {% endhint %}
