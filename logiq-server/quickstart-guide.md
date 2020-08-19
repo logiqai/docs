@@ -28,7 +28,7 @@ $ https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml
 ```
 
 {% hint style="warning" %}
-NOTE: Please have 16GB of memory when running the full stack with UI
+NOTE: LOGIQ services use approximately 2GB of memory. Please have sufficient memory in your system when running the docker-compose bring up
 {% endhint %}
 
 You are now ready to bring up the LOGIQ stack. 
