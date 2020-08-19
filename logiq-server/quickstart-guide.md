@@ -6,14 +6,14 @@
 
 #### Install Docker compose
 
-You can spin-up LOGIQ using docker compose. Install guide for docker compose can be found here - [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)  
-Please read and agree [EULA](https://docs.logiq.ai/eula/eula) before proceeding. 
+You can spin-up LOGIQ using `docker-compose`. Install guide for `docker-compose` can be found here - [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)  
+Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before proceeding. 
 
 ### Running LOGIQ
 
-First step is to get the appropriate docker compose YAML file from one of the URL's below. We provide two separate YAML files; one for the full stack with the UI, other for the ingest server.
+The first step is to get the appropriate `docker-compose` YAML file from the URL below.
 
-Both of the Quickstart YAML's include a bundled S3 compatible object store from [minio](https://min.io)
+The Quickstart YAML include a bundled S3 compatible object store from [minio](https://min.io)
 
 {% hint style="warning" %}
 _**NOTE:** the docker-compose quick-start YAML files are intended for demo and trial use only. If you want to run a production deployment, we recommend you use Kubernetes with HELM to deploy the LOGIQ stack. Please contact us at : s a l e s @ l o g i q . a i_
@@ -31,22 +31,16 @@ $ wget https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart.yml
 NOTE: Please have 16GB of memory when running the full stack with UI
 {% endhint %}
 
-#### LOGIQ Ingest-only stack . - Ingest server only \( Does not include UI \)
-
-* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart-ingest.yml](https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart-ingest.yml)
-
-```text
-$ wget https://logiqcf.s3.amazonaws.com/1.2.1/docker-compose.quickstart-ingest.yml
-```
-
 You are now ready to bring up the LOGIQ stack. 
 
-#### Running LOGIQ using the quick-start YAML files
+```text
+$docker-compose -f docker-compose.quickstart.yaml up -d
+```
 
-Use the YAML file downloaded from the URL above to run LOGIQ. Use the UI YAML if you are interested in the full stack.
+While the services are coming up, you can check for the service logs 
 
-```bash
-$ docker-compose -f <docker-compose.quickstart.yml | docker-compose.quickstart-ingest.yml> up -d
+```text
+$docker-compose logs -f docker-compose.quickstart.yaml
 ```
 
 ## Firewall ports and urls
