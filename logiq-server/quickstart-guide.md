@@ -20,13 +20,13 @@ _**NOTE:** the docker-compose quick-start YAML files are intended for demo and t
 
 ## Running LOGIQ
 
+{% hint style="info" %}
+NOTE: LOGIQ services use approximately 2GB of memory. Please have sufficient memory in your system before proceeding
+{% endhint %}
+
 The first step is to get the appropriate `docker-compose` YAML file from the URL below.
 
 ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml)
-
-{% hint style="info" %}
-NOTE: LOGIQ services use approximately 2GB of memory. Please have sufficient memory in your system when running the docker-compose bring up
-{% endhint %}
 
 You are now ready to bring up the LOGIQ stack.
 
