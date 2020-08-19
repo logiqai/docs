@@ -6,29 +6,25 @@ description: >-
 
 # Quickstart guide
 
+{% hint style="warning" %}
+Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before proceeding. 
+{% endhint %}
+
 ## Install Docker compose
 
 You can spin-up LOGIQ using `docker-compose`. Install guide for `docker-compose` can be found here - [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+
+{% hint style="info" %}
+_**NOTE:** the docker-compose quick-start YAML files are intended for demo and trial use only. If you want to run a production deployment, we recommend you use Kubernetes with HELM to deploy the LOGIQ stack. Please contact us at : s a l e s @ l o g i q . a i_
+{% endhint %}
 
 ## Running LOGIQ
 
 The first step is to get the appropriate `docker-compose` YAML file from the URL below.
 
-The Quickstart YAML include a bundled S3 compatible object store from [minio](https://min.io)
-
-{% hint style="warning" %}
-Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before proceeding. 
-{% endhint %}
-
-{% hint style="warning" %}
-_**NOTE:** the docker-compose quick-start YAML files are intended for demo and trial use only. If you want to run a production deployment, we recommend you use Kubernetes with HELM to deploy the LOGIQ stack. Please contact us at : s a l e s @ l o g i q . a i_
-{% endhint %}
-
-#### LOGIQ full-stack - Ingest server with UI
-
 ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml)
 
-{% hint style="warning" %}
+{% hint style="info" %}
 NOTE: LOGIQ services use approximately 2GB of memory. Please have sufficient memory in your system when running the docker-compose bring up
 {% endhint %}
 
