@@ -82,12 +82,6 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 ![](../.gitbook/assets/screen-shot-2020-01-19-at-2.14.21-pm.png)
 
-## Test using LOGIQ server web CLI
-
-Once the LOGIQ server is up and running, you can connect to the Server web cli on port 9998. The default credentials are _logiq_ and _logiq_
-
-![](../.gitbook/assets/screen-shot-2019-12-12-at-4.13.33-pm.png)
-
 ## Ingesting data
 
 Please refer to section on [data ingestion](agentless.md) for more details.
