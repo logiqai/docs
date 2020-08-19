@@ -7,7 +7,7 @@ description: >-
 # Quickstart guide
 
 {% hint style="warning" %}
-Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before proceeding. 
+Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
 {% endhint %}
 
 ## Install Docker compose
