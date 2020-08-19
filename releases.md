@@ -14,6 +14,8 @@
 
 * Redesigned - Elastic/Kibana like search UI that scales to infinite data from S3 compatible object store
 * Real-time alertable events and alerts from log data
+* Real-time extraction of log data facets using Grok expressions
+* 1-Click conversion of log data events to time series visualization  
 
 #### Logiqctl
 
