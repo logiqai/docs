@@ -26,11 +26,7 @@ _**NOTE:** the docker-compose quick-start YAML files are intended for demo and t
 
 #### LOGIQ full-stack - Ingest server with UI
 
-* ⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml)
-
-```bash
-$ https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml
-```
+⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml)
 
 {% hint style="warning" %}
 NOTE: LOGIQ services use approximately 2GB of memory. Please have sufficient memory in your system when running the docker-compose bring up
@@ -40,12 +36,6 @@ You are now ready to bring up the LOGIQ stack.
 
 ```text
 $docker-compose -f docker-compose.quickstart.yaml up -d
-```
-
-While the services are coming up, you can check for the service logs
-
-```text
-$docker-compose logs -f docker-compose.quickstart.yaml
 ```
 
 ## Firewall ports and URLs
