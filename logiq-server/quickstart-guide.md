@@ -34,25 +34,6 @@ You are now ready to bring up the LOGIQ stack.
 $docker-compose -f docker-compose.quickstart.yaml up -d
 ```
 
-## Firewall ports and URLs
-
-### Ports
-
-LOGIQ exposes the below ports
-
-* **7514** - Syslog / TCP - TLS
-* **514** - Syslog / TCP - Non TLS
-* **2514** - RELP/Rsyslog / TCP - TLS
-* **20514** - RELP/Rsyslog / TCP - Non TLS
-* **9998** - Server administration web cli
-* **9999** - REST API
-* **8081** - GRPC \( needed for logiqctl CLI \)
-* **80** - http
-* **443** - https
-* **24224/24225** - FluentForward protocol port / TLS
-
-The ports used to bind are configurable via the server configuration file. See [Server options](../logiq-log-ingest-server-configuration/server-options.md) for more details.
-
 ## Test using LOGIQ UI
 
 Once the LOGIQ server is up and running, the LOGIQ UI can be accessed as described above on port 80 on the server docker-compose. You will be presented with a login screen as shown below.
@@ -72,4 +53,23 @@ The LOGIQ quickstart file includes Prometheus and Alertmanager services and a bu
 ## Ingesting data
 
 Please refer to section on [data ingestion](agentless.md) for more details.
+
+## Firewall ports and URLs
+
+### Ports
+
+LOGIQ exposes the below ports
+
+* **7514** - Syslog / TCP - TLS
+* **514** - Syslog / TCP - Non TLS
+* **2514** - RELP/Rsyslog / TCP - TLS
+* **20514** - RELP/Rsyslog / TCP - Non TLS
+* **9998** - Server administration web cli
+* **9999** - REST API
+* **8081** - GRPC \( needed for logiqctl CLI \)
+* **80** - http
+* **443** - https
+* **24224/24225** - FluentForward protocol port / TLS
+
+The ports used to bind are configurable via the server configuration file. See [Server options](../logiq-log-ingest-server-configuration/server-options.md) for more details.
 
