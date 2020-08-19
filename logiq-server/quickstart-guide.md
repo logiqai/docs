@@ -31,7 +31,7 @@ The first step is to get the appropriate `docker-compose` YAML file from the URL
 You are now ready to bring up the LOGIQ stack.
 
 ```text
-$docker-compose -f docker-compose.quickstart.yaml up -d
+$docker-compose -f docker-compose.quickstart.yml up -d
 ```
 
 ## Test using LOGIQ UI
