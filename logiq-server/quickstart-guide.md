@@ -53,8 +53,6 @@ LOGIQ exposes the below ports
 
 The ports used to bind are configurable via the server configuration file. See [Server options](../logiq-log-ingest-server-configuration/server-options.md) for more details.
 
-The LOGIQ compose file brings up a Prometheus server as well along with a monitoring dashboard for LOGIQ.
-
 ## Test using LOGIQ UI
 
 Once the LOGIQ server is up and running, the LOGIQ UI can be accessed as described above on port 80 on the server docker-compose. You will be presented with a login screen as shown below.
@@ -67,15 +65,9 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 ### Prometheus monitoring and alerting
 
-LOGIQ server comes with embedded Prometheus container. Prometheus scrapes metrics from the LOGIQ server and can be configured to scrape targets from any monitoring endpoint. Additionally the LOGIQ stack has alertmanager and provides query and alerting mechanism as detailed in [https://docs.logiq.ai/logiq-events/alerts](https://docs.logiq.ai/logiq-events/alerts)
+The LOGIQ quickstart file includes Prometheus and Alertmanager services and a built-in monitoring dashboard for LOGIQ.
 
-```text
-https://<logiq-server-ip>:9998/metrics
-```
-
-### Event and Anamoly detection
-
-LOGIQ supports automatic detection of relevant events in your log stream. Find details at [https://docs.logiq.ai/logiq-events/event-rules](https://docs.logiq.ai/logiq-events/event-rules)
+![](../.gitbook/assets/screen-shot-2020-08-18-at-10.33.55-pm.png)
 
 ## Ingesting data
 
