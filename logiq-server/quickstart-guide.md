@@ -34,7 +34,7 @@ You are now ready to bring up the LOGIQ stack.
 $docker-compose -f docker-compose.quickstart.yml up -d
 ```
 {% hint style="info" %}
-_**NOTE:** If you have been running previous versions of LOGIQ docker-compose, you should stop and remove the existing containers by running docker-compose -f docker-compose.quickstart.yml down and removing any older docker volume via docker-compose -f docker-compose.quickstart.yml rm && docker-compose -f docker-compose.quickstart.yml rm -v
+**NOTE:** If you have been running previous versions of LOGIQ docker-compose, you should stop and remove the existing containers by running docker-compose -f docker-compose.quickstart.yml down and remove any older docker volume via docker-compose -f docker-compose.quickstart.yml rm && docker-compose -f docker-compose.quickstart.yml rm -v
 {% endhint %}
 
 ## Test using LOGIQ UI
