@@ -26,7 +26,7 @@ NOTE: LOGIQ services use approximately 2GB of memory. Please have sufficient mem
 
 The first step is to get the appropriate `docker-compose` YAML file from the URL below.
 
-⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/2.0.1/docker-compose.quickstart.yml)
+⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/2.0.4/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/2.0.4/docker-compose.quickstart.yml)
 
 You are now ready to bring up the LOGIQ stack.
 
