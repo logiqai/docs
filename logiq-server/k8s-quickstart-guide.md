@@ -13,7 +13,7 @@ LOGIQ K8S components are made available as helm charts. Instructions below assum
 ### 1.1 Add LOGIQ helm repository
 
 ```bash
-$ helm repo add logiq-repo https://logiqai.github.io/helm-charts
+helm repo add logiq-repo https://logiqai.github.io/helm-charts
 ```
 
 {% hint style="info" %}
@@ -37,7 +37,7 @@ NOTE: Namespace name cannot be more than 15 characters in length
 {% endhint %}
 
 ```bash
-$ kubectl create namespace logiq
+kubectl create namespace logiq
 ```
 
 This will create a namespace **`logiq`** where we will deploy the LOGIQ Log Insights stack.
@@ -59,14 +59,14 @@ Sample YAML files for small, medium, large configs can be downloaded at the link
 These YAML files can be used for deployment with -f parameter as shown below in the description.
 
 ```bash
-$ helm install logiq --namespace logiq \
+helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq -f values.small.yaml
 ```
 
 ## 2. Install LOGIQ
 
 ```bash
-$ helm install logiq --namespace logiq \
+helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
@@ -86,7 +86,7 @@ Besides the web based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.l
 ### 3.1 Enabling https for the UI
 
 ```bash
-$ helm install logiq --namespace logiq \
+helm install logiq --namespace logiq \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
@@ -106,7 +106,7 @@ The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described i
 | HELM Option | Description | Defaults |
 | :--- | :--- | :--- |
 | `global.domain` | DNS domain where the LOGIQ service will be running. This is required for HTTPS | No default |
-| `ingress.tlsEnabled` | Enable the ingress controler to front HTTPS for services | false |
+| `ingress.tlsEnabled` | Enable the ingress controller to front HTTPS for services | false |
 | `kubernetes-ingress.controller.defaultTLSSecret.enabled` | Specify if a default certificate is enabled for the ingress gateway | false |
 | `kubernetes-ingress.controller.defaultTLSSecret.secret` | Specify the name of a TLS Secret for the ingress gateway. If this is not specified, a secret is automatically generated of option `kubernetes-ingress.controller.defaultTLSSecret.enabled` above is enabled. |  |
 
@@ -115,7 +115,7 @@ The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described i
 If you want to pass your own ingress secret, you can do so when installing the HELM chart
 
 ```bash
-$ helm install logiq --namespace logiq \
+helm install logiq --namespace logiq \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
@@ -147,7 +147,7 @@ If the bucket already exists, LOGIQ will use it. Check to make sure the access a
 {% endhint %}
 
 ```bash
-$ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
+helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set s3-gateway.s3gateway.enabled=true \
 --set global.environment.s3_bucket=<bucket_name> \
 --set global.environment.awsServiceEndpoint=https://s3.<region>.amazonaws.com \
@@ -163,7 +163,7 @@ $ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 | `global.environment.awsServiceEndpoint` | S3 Service endpoint : [https://s3.\*\*&lt;region&gt;\*\*.amazonaws.com](https://s3.**<region>**.amazonaws.com) | [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com) |
 | `global.environment.AWS_ACCESS_KEY_ID` | AWS Access key for accessing the bucket | No default |
 | `global.environment.AWS_SECRET_ACCESS_KEY` | AWS Secret key for accessing the bucket | No default |
-| `global.environment.s3_region` | AWS Region where bucket is hosted | us-east-1 |
+| `global.environment.s3_region` | AWS Region where the bucket is hosted | us-east-1 |
 
 {% hint style="info" %}
 S3 providers may have restrictions on bucket names for e.g. AWS S3 bucket names are globally unique.
@@ -194,7 +194,7 @@ Save the secret file e.g. `logiq-certs.yaml`. Proceed to install the secret in t
 The secret can now be passed into the LOGIQ deployment
 
 ```bash
-$ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
+helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set logiq-flash.secrets_name=logiq-certs \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
@@ -220,7 +220,7 @@ It is quite possible that your environment may use a different storage class nam
 | Oracle | oci | Block Volume |
 
 ```bash
-$ helm upgrade --namespace logiq \
+helm upgrade --namespace logiq \
 --set global.persistence.storageClass=<storage class name> \
 logiq logiq-repo/logiq
 ```
@@ -230,7 +230,7 @@ logiq logiq-repo/logiq
 To use external AWS RDS Postgres database for your LOGIQ deployment, execute the following command.
 
 ```bash
-$ helm install logiq --namespace logiq \
+helm install logiq --namespace logiq \
 --set global.chart.postgres=false \
 --set global.environment.postgres_host=<postgres-host-ip/dns> \
 --set global.environment.postgres_user=<username> \
@@ -275,7 +275,7 @@ View License information
 ### 3.7 Customize Admin account
 
 ```bash
-$ helm install logiq --namespace logiq \
+helm install logiq --namespace logiq \
 --set global.environment.admin_name="LOGIQ Administrator" \
 --set global.environment.admin_password="admin_password" \
 --set global.environment.admin_email="admin@example.com" \
@@ -297,7 +297,7 @@ NOTE: At this time LOGIQ only supports connecting to a Redis cluster in a local 
 {% endhint %}
 
 ```bash
-$ helm install logiq --namespace logiq \
+helm install logiq --namespace logiq \
 --set global.chart.redis=false \
 --set global.environment.redis_host=<redis-host-ip/dns> \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
@@ -314,7 +314,7 @@ $ helm install logiq --namespace logiq \
 When deploying LOGIQ configure the cluster id to monitor the LOGIQ deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](agentless.md#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance)
 
 ```bash
-$ helm install logiq --namespace logiq \
+helm install logiq --namespace logiq \
 --set global.environment.cluster_id=<cluster id> \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
@@ -328,9 +328,9 @@ $ helm install logiq --namespace logiq \
 If and when you want to decommission the installation using the following commands
 
 ```bash
-$ helm delete logiq --namespace logiq
-$ helm repo remove logiq-repo
-$ kubectl delete namespace logiq
+helm delete logiq --namespace logiq
+helm repo remove logiq-repo
+kubectl delete namespace logiq
 ```
 
 If you followed installation steps in section 3.1 - Using an AWS S3 bucket, you may want to delete the s3 bucket that was specified at deployment time.
