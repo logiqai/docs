@@ -13,13 +13,13 @@ Incoming log data streams can have timestamps defined in the following ways
 1. Sending agent sends a timestamp
 2. Log data has its own timestamp
 3. Ingest layer for e.g. LOGIQ adds its own timestamp
-4. Log data has non-standard timestamp format
+4. Log data has a non-standard timestamp format
 
-LOGIQ handles the timestamps in the below order
+LOGIQ handles the timestamps in the following order
 
-1. User sending agent timestamp
+1. Use the _sending agent_ timestamp
 2. Extract any timestamp in log data automatically that is non-ambiguous
-3. If a user-defined timestamp is provided, use the extraction rule to get the timestamp 
+3. If a user-defined timestamp extraction rule is provided, use the extraction rule to get the timestamp 
 
 ## User-defined timestamp rules
 
