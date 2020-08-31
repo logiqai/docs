@@ -9,7 +9,7 @@ description: >-
 
 ## Logstash
 
-### Configuring Logstash
+### Syslog output plugin
 
 ```text
 input {
@@ -45,6 +45,42 @@ output {
 
 **NOTE**: Change _"host" , "appname", "ssl\_cert", "ssl\_key", "ssl\_cacert"_ above to suit your configuration
 
+### HTTP output plugin
+
+```text
+output {
+   http {
+        url => "https://logiq-dns-or-ip/v1/json_batch"
+        headers => { "Authorization" => "Bearer <Auth token>" }
+        http_method => "post"
+        format => "json_batch"
+        content_type => "json_batch"
+        pool_max => 300
+        pool_max_per_route => 100
+        socket_timeout => 60
+       }
+}
+```
+
+You can additionally control the data organization by specifying additional fields 
+
+```text
+filter {
+  mutate {
+    add_field => { "cluster_id" => "demo-http-test" }
+    add_field => { "namespace" => "namespace_name" }
+    add_field => { "app_name" => "application_name" }
+    add_field => { "proc_id" => "process_or_pod_identifier" }
+  }
+}
+```
+
+You can generate the Bearer token using [`logiqctl`](https://logiqctl.logiq.ai)\`\`
+
+```text
+$logiqctl get httpingestkey
+```
+
 ## Rsyslogd
 
 Please see below on how to configure Rsyslog to send to LOGIQ server. Rsyslog can send data to LOGIQ using either TCP transport or RELP transport. The RELP module for Rsyslog is called `omrelp` and for the TCP forward is called `omfwd`
@@ -74,7 +110,7 @@ Update the syslog config in `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.co
 rsyslog is installed by default in most modern OS's, rsyslog needs the omrelp module to send data to a RELP aware endpoint such as LOGIQ. To enable RELP install packages listed below
 
 * rsyslog-relp, enables RELP protocol for rsyslog
-* rsyslog-gnutls, enables rsyslog to communicate over secure socket
+* rsyslog-gnutls, enables rsyslog to communicate over a secure socket
 
 ```text
 sudo apt update
