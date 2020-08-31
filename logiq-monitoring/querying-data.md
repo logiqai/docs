@@ -6,9 +6,9 @@ LOGIQ's Prometheus integration allows querying data from the query editor. Just 
 
 ### Query language
 
-The query language is nothing but the PromQL expression and any additional parameters that would be sent to the Prometheus Query API. Query starts with a `query=` prefix and ends with optional url parameters that are sent to the query API
+The query language is nothing but the PromQL expression and any additional parameters that would be sent to the Prometheus Query API. The query starts with a `query=` prefix and ends with optional URL parameters that are sent to the query API
 
-Lets look at an example
+Let's look at an example
 
 ```text
 query=go_gc_duration_seconds&duration=15m&step=60
