@@ -48,7 +48,7 @@ If you choose a different name for the namespace, please remember to use the sam
 
 ### 1.3 Prepare your Values YAML file
 
-Sample YAML files for small, medium, large configs can be downloaded at the links below
+Sample YAML files for small, medium, large cluster configs can be downloaded at the links below
 
 {% file src="../.gitbook/assets/values.small \(1\).yaml" %}
 
@@ -62,6 +62,7 @@ These YAML files can be used for deployment with -f parameter as shown below in 
 helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq -f values.small.yaml
 ```
+Please refer [Section 3.10 ] for sizing your LOGIQ cluster as specified  in these yaml files.
 
 ## 2. Install LOGIQ
 
@@ -322,6 +323,16 @@ helm install logiq --namespace logiq \
 | HELM Option | Description | Default |
 | :--- | :--- | :--- |
 | global.environment.cluster\_id | Cluster Id being used for the K8S cluster running LOGIQ. See Section on [Managing multiple K8S](agentless.md#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance) clusters for more details. | LOGIQ |
+
+### 3.10 Sizing your LOGIQ cluster
+
+When deploying LOGIQ, size your infrastructure to provide appropriate vcpu and memory requirements. We recommened the following size for small. medium and large cluster specification from [Section 1.3 ] values yaml files.
+
+| LOGIQ Cluster | vCPU| Memory | NodeCount |
+| :--- | :--- | :--- | :--- |
+| small | 12| 32 gb | 3 |
+| medium  | 20| 56 gb | 5 |
+| large  | 32| 88 gb | 8 |
 
 ## 4 Teardown
 
