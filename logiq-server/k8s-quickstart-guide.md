@@ -27,7 +27,7 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 ```bash
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.0.7            2.0.4          LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.0.8            2.0.5          LOGIQ Observability HELM chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -312,7 +312,7 @@ helm install logiq --namespace logiq \
 
 ### 3.9 Configuring cluster id
 
-When deploying LOGIQ configure the cluster id to monitor the LOGIQ deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](agentless.md#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance)
+When deploying LOGIQ, configure the cluster id to monitor your own LOGIQ deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](agentless.md#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance)
 
 ```bash
 helm install logiq --namespace logiq \
@@ -326,7 +326,7 @@ helm install logiq --namespace logiq \
 
 ### 3.10 Sizing your LOGIQ cluster
 
-When deploying LOGIQ, size your infrastructure to provide appropriate vcpu and memory requirements. We recommened the following size for small. medium and large cluster specification from [Section 1.3 ](k8s-quickstart-guide.md#1-3-prepare-your-values-YAML-file) values yaml files.
+When deploying LOGIQ, size your infrastructure to provide appropriate vcpu and memory requirements. We recommened the following minimum size for small. medium and large cluster specification from [Section 1.3 ](k8s-quickstart-guide.md#1-3-prepare-your-values-YAML-file) values yaml files.
 
 | LOGIQ Cluster | vCPU| Memory | NodeCount |
 | :--- | :--- | :--- | :--- |
