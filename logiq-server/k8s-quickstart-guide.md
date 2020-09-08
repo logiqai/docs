@@ -62,7 +62,8 @@ These YAML files can be used for deployment with -f parameter as shown below in 
 helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq -f values.small.yaml
 ```
-Please refer [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-cluster) for sizing your LOGIQ cluster as specified  in these yaml files.
+
+Please refer [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-cluster) for sizing your LOGIQ cluster as specified in these yaml files.
 
 ## 2. Install LOGIQ
 
@@ -328,11 +329,41 @@ helm install logiq --namespace logiq \
 
 When deploying LOGIQ, size your infrastructure to provide appropriate vcpu and memory requirements. We recommened the following minimum size for small. medium and large cluster specification from [Section 1.3 ](k8s-quickstart-guide.md#1-3-prepare-your-values-YAML-file) values yaml files.
 
-| LOGIQ Cluster | vCPU| Memory | NodeCount |
+| LOGIQ Cluster | vCPU | Memory | NodeCount |
 | :--- | :--- | :--- | :--- |
-| small | 12| 32 gb | 3 |
-| medium  | 20| 56 gb | 5 |
-| large  | 32| 88 gb | 8 |
+| small | 12 | 32 gb | 3 |
+| medium | 20 | 56 gb | 5 |
+| large | 32 | 88 gb | 8 |
+
+### 3.11 NodePort/ClusterIP/LoadBalancer
+
+The service type configurations are exposed in values.yaml as below 
+
+```bash
+flash-coffee:
+  service:
+    type: ClusterIP
+logiq-flash:
+  service:
+    type: NodePort
+kubernetes-ingress:
+  controller:
+    service:
+      type: LoadBalancer
+
+```
+
+For e.g. if you are running on bare-metal and want an external LB to front LOGIQ, configure all services as `NodePort`
+
+```bash
+helm install logiq -n logiq -f values.yaml \
+--set flash-coffee.service.type=NodePort \
+--set logiq-flash.service.type=NodePort \
+--set kubernetes-ingress.controller.service.type=NodePort \
+logiq-repo/logiq
+```
+
+
 
 ## 4 Teardown
 
