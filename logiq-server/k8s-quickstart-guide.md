@@ -153,6 +153,7 @@ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set s3-gateway.s3gateway.enabled=true \
 --set global.environment.s3_bucket=<bucket_name> \
 --set global.environment.awsServiceEndpoint=https://s3.<region>.amazonaws.com \
+--set global.environment.s3_region=<region> \
 --set global.environment.AWS_ACCESS_KEY_ID=<access_key> \
 --set global.environment.AWS_SECRET_ACCESS_KEY=<secret_key> \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
