@@ -1,5 +1,23 @@
 # Releases
 
+## 2.1 - 2010-09-28
+
+### Added
+
+#### Log aggregation
+
+* Parquet with Snappy compression for data at REST
+
+#### Log analytics
+
+* Log view supports full JSON view for ingested log data like Search view
+* Performance improvements for faster search, logs, and tailing
+
+#### Monitoring
+
+* Event deduplication that can reduce event data by up to 1000x at peak data rates
+* Deduplication of monitoring events at Namespace granularity
+
 ## 2.0 - 2020-08-12
 
 ### Added
