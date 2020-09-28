@@ -23,3 +23,7 @@ Events are captured based on _**event rules**_. Many event rules are built into 
 
 See section on [Event Rules ](event-rules.md)for further information.
 
+### Event De-duplication
+
+Events generated within a namespace are deduplicated by the LOGIQ platform. This reduces the amount of data stored at rest over time. At peak data rates, it is possible to get a 1000x reduction in the amount of events generated.
+
