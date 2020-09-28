@@ -18,6 +18,11 @@
 * Event deduplication that can reduce event data by up to 1000x at peak data rates
 * Deduplication of monitoring events at Namespace granularity
 
+#### Deployment and Infrastructure
+
+* Separation of LOGIQ server into microservices for data ingestion, ML/UI and S3/Metadata management
+* Support for taints in HELM chart for more control over large-scale deployments e.g. schedule ingest pods on dedicated nodes etc.
+
 ## 2.0 - 2020-08-12
 
 ### Added
