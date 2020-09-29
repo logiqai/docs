@@ -296,7 +296,7 @@ helm install logiq --namespace logiq \
 To use external Redis for your LOGIQ deployment, execute the following command.
 
 {% hint style="danger" %}
-NOTE: At this time LOGIQ only supports connecting to a Redis cluster in a local VPC without authentication
+NOTE: At this time LOGIQ only supports connecting to a Redis cluster in a local VPC without authentication. If you are using an AWS Elasticache instance, do not turn on encryption-in-transit or cluster mode.
 {% endhint %}
 
 ```bash
