@@ -63,7 +63,7 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq -f values.small.yaml
 ```
 
-Please refer [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-cluster) for sizing your LOGIQ cluster as specified in these yaml files.
+Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-cluster) for sizing your LOGIQ cluster as specified in these YAML files.
 
 ## 2. Install LOGIQ
 
@@ -72,16 +72,16 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-This will install LOGIQ and expose the LOGIQ services and UI on the ingress IP. Please refer [Section 3.4 ](k8s-quickstart-guide.md#3-4-changing-the-storage-class)for details about storage class. Service ports are described in the [Port details section](https://docs.logiq.ai/logiq-server/quickstart-guide#ports). You should now be able to go to `http://ingress-ip/`
+This will install LOGIQ and expose the LOGIQ services and UI on the ingress IP. Please refer to  [Section 3.4 ](k8s-quickstart-guide.md#3-4-changing-the-storage-class)for details about storage class. Service ports are described in the [Port details section](https://docs.logiq.ai/logiq-server/quickstart-guide#ports). You should now be able to go to `http://ingress-ip/`
 
 {% hint style="info" %}
-The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. Helm chart can override the default admin settings as well. See section[ 3.7](k8s-quickstart-guide.md#3-7-customize-admin-account) on customizing the admin settings
+The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. HELM chart can override the default admin settings as well. See section[ 3.7](k8s-quickstart-guide.md#3-7-customize-admin-account) on customizing the admin settings
 {% endhint %}
 
 ![Logiq Insights Login UI ](../.gitbook/assets/screen-shot-2020-03-24-at-3.42.55-pm.png)
 
-LOGIQ server provides Ingest, log tailing, data indexing, query and search capabilities.  
-Besides the web based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
+LOGIQ server provides Ingest, log tailing, data indexing, query, and search capabilities.  
+Besides the web-based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
 
 ## 3 Customizing the deployment
 
@@ -257,7 +257,7 @@ Auto vacuum automates the execution of `VACUUM` and `ANALYZE` \(to gather statis
 
 ### 3.6 Upload LOGIQ professional license
 
-The deployment described above offers 30 days trial license. Email `license@logiq.ai` to obtain a professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer `logiqctl` details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai/). You will need API-token from LOGIQ UI as shown below
+The deployment described above offers 30 days trial license. Send an e-mail to `license@logiq.ai` to obtain a professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer to `logiqctl` details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai/). You will need API-token from LOGIQ UI as shown below
 
 ![Logiq Insights Login Api-token ](../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
 
