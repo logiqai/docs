@@ -376,5 +376,5 @@ helm repo remove logiq-repo
 kubectl delete namespace logiq
 ```
 
-If you followed installation steps in section 3.1 - Using an AWS S3 bucket, you may want to delete the s3 bucket that was specified at deployment time.
+If you followed the installation steps in section 3.1 - Using an AWS S3 bucket, you may want to delete the s3 bucket that was specified at deployment time.
 
