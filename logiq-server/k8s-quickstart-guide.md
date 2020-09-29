@@ -269,7 +269,7 @@ Sets a logiq ui api token
 - logiqctl config set-token api_token
 
 Upload your LOGIQ deployment license
-- logiqctl license set -l=license.jws
+- logiqctl license set -f=license.jws
 
 View License information
  - logiqctl license get
