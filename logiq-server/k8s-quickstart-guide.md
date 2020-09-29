@@ -50,11 +50,11 @@ If you choose a different name for the namespace, please remember to use the sam
 
 Sample YAML files for small, medium, large cluster configs can be downloaded at the links below
 
-{% file src="../.gitbook/assets/values.small \(2\).yaml" %}
+{% file src="../.gitbook/assets/values.small \(4\).yaml" %}
 
-{% file src="../.gitbook/assets/values.medium \(1\).yaml" %}
+{% file src="../.gitbook/assets/values.medium \(2\).yaml" %}
 
-{% file src="../.gitbook/assets/values.large \(2\).yaml" %}
+{% file src="../.gitbook/assets/values.large \(3\).yaml" %}
 
 These YAML files can be used for deployment with -f parameter as shown below in the description.
 
