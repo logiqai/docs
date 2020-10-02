@@ -54,7 +54,7 @@ Sample YAML files for small, medium, large cluster configs can be downloaded at 
 
 {% file src="../.gitbook/assets/values.medium \(5\).yaml" %}
 
-{% file src="../.gitbook/assets/values.large \(5\).yaml" %}
+{% file src="../.gitbook/assets/values.large \(6\).yaml" %}
 
 These YAML files can be used for deployment with -f parameter as shown below in the description.
 
