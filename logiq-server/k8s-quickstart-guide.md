@@ -69,6 +69,7 @@ Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-c
 
 ```bash
 helm install logiq --namespace logiq \
+--set global.chart.s3-gateway=true \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
