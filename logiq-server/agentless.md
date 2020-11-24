@@ -305,7 +305,7 @@ git clone https://bitbucket.org/logiqcloud/client-integrations.git
 
 ```text
 $ cd client-integrations/
-$ cd fluentd/
+$ cd fluentd-bit/
 $ ls -la
 total 64
 drwxr-xr-x  8 user  staff   256 Aug  9 05:47 .
