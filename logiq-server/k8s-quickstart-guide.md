@@ -395,12 +395,12 @@ globals:
     ingest: ingest
     infra: common
     other: common
-    db: common
-    cache: common
-    ingest_sync: common
+    db: db
+    cache: cache
+    ingest_sync: sync
 ```
 
-In the example above, there are two node selectors in use - `ingest` and `common`. 
+In the example above, there are different node pools being used  - `ingest` , `common` , `db`, `cache` and `sync`
 
 {% hint style="info" %}
 Node selectors are enabled by setting `enabled` to `true` for `globals.nodeSelectors`
