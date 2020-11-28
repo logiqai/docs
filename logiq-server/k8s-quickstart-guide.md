@@ -12,6 +12,8 @@ LOGIQ K8S components are made available as helm charts. The instructions below a
 
 ### 1.1 Add LOGIQ helm repository
 
+#### 1.1.0 Adding LOGIQ's helm repository to your HELM repositories
+
 ```bash
 helm repo add logiq-repo https://logiqai.github.io/helm-charts
 ```
@@ -25,6 +27,17 @@ The HELM repository will be named `logiq-repo`. For installing charts from this 
 You can now run `helm search repo logiq-repo` to see the available helm charts
 
 ```bash
+$ helm search repo logiq-repo
+NAME                CHART VERSION    APP VERSION    DESCRIPTION
+logiq-repo/logiq    2.2.7            2.1.9          LOGIQ Observability HELM chart for Kubernetes
+```
+
+#### 1.1.1 Update your HELM chart
+
+If you already added LOGIQ's HELM repository in the past, you can get updated software releases using `helm repo update`
+
+```bash
+$ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
 logiq-repo/logiq    2.2.7            2.1.9          LOGIQ Observability HELM chart for Kubernetes
