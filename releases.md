@@ -1,6 +1,31 @@
 # Releases
 
-## 2.1 - 2010-09-28
+## 2.1.9 - 2020-11-28
+
+### Added
+
+#### Log aggregation
+
+* Support for full data/metadata recovery on service restarts
+
+#### Log analytics
+
+* Support for application and process/pod context in log and search views
+
+#### Deployment and Infrastructure
+
+* Support for node selectors. Both taints and node selectors are supported
+* Support for using spot instances on EKS/AWS
+* Support for using S3 compatible buckets directly without a caching gateway to optimize for region optimized deployments
+
+#### UI
+
+* Multi cluster support
+* License management UI
+* Ingest configuration settings exposed in the UI
+* Logs page and search now have application and process/pod level contexts
+
+## 2.1 - 2020-09-28
 
 ### Added
 
