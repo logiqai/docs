@@ -27,7 +27,7 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 ```bash
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.2.6            2.1.4          LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.2.7            2.1.9          LOGIQ Observability HELM chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -69,7 +69,6 @@ Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-c
 
 ```bash
 helm install logiq --namespace logiq \
---set global.chart.s3-gateway=true \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
@@ -365,7 +364,35 @@ helm install logiq -n logiq -f values.yaml \
 logiq-repo/logiq
 ```
 
+### 3.12 Using Node Selectors
 
+The LOGIQ stack deployment can be optimized using node labels and node selectors to place various components of the stack optimally
+
+```bash
+logiq.ai/node=ingest
+```
+
+The node label `logiq.ai/node` above can be used to control the placement of ingest pods for log data into ingest optimized nodes. This allows for managing cost and instance sizing effectively.
+
+The various nodeSelectors are defined in the globals section of the values.yaml file
+
+```bash
+globals:
+  nodeSelectors:
+    enabled: true
+    ingest: ingest
+    infra: common
+    other: common
+    db: common
+    cache: common
+    ingest_sync: common
+```
+
+In the example above, there are two node selectors in use - `ingest` and `common`. 
+
+{% hint style="info" %}
+Node selectors are enabled by setting `enabled` to `true` for `globals.nodeSelectors`
+{% endhint %}
 
 ## 4 Teardown
 
