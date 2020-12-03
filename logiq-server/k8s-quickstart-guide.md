@@ -29,7 +29,7 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 ```bash
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.2.7            2.1.9          LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.2.8            2.1.10          LOGIQ Observability HELM chart for Kubernetes
 ```
 
 #### 1.1.1 Update your HELM chart
@@ -40,7 +40,7 @@ If you already added LOGIQ's HELM repository in the past, you can get updated so
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.2.7            2.1.9          LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.2.8            2.1.10          LOGIQ Observability HELM chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -63,11 +63,11 @@ If you choose a different name for the namespace, please remember to use the sam
 
 Sample YAML files for small, medium, large cluster configs can be downloaded at the links below
 
-{% file src="../.gitbook/assets/values.small \(11\).yaml" %}
+{% file src="../.gitbook/assets/values.small \(12\).yaml" %}
 
-{% file src="../.gitbook/assets/values.medium \(9\).yaml" %}
+{% file src="../.gitbook/assets/values.medium \(10\).yaml" %}
 
-{% file src="../.gitbook/assets/values.large \(10\).yaml" %}
+{% file src="../.gitbook/assets/values.large \(11\).yaml" %}
 
 These YAML files can be used for deployment with -f parameter as shown below in the description.
 
