@@ -1,5 +1,17 @@
 # Releases
 
+## 2.1.11 - 2020-12-13
+
+### Log aggregation
+
+* Support for **and** expressions in search 
+* Event rules designer support for **&&** and **\|\|** for individual parameters
+* Performance and memory improvements
+
+### Data convergence
+
+* Support for Apache DRUID connector
+
 ## 2.1.9 - 2020-11-28
 
 ### Added
