@@ -78,6 +78,13 @@ helm install logiq --namespace logiq \
 
 Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-cluster) for sizing your LOGIQ cluster as specified in these YAML files.
 
+### 1.4 Latest image tags
+
+| Image | Tag |
+| :--- | :--- |
+| logiq-flash | 2.1.11.1 |
+| coffee | 2.1.5 |
+
 ## 2. Install LOGIQ
 
 ```bash
