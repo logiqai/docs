@@ -413,6 +413,18 @@ In the example above, there are different node pools being used  - `ingest` , `c
 Node selectors are enabled by setting `enabled` to `true` for `globals.nodeSelectors`
 {% endhint %}
 
+### 3.13 Installing Grafana
+
+The LOGIQ stack includes Grafana as part of the deployment as an optional component. To enable Grafana in your cluster, follow the steps below
+
+```bash
+helm upgrade --install logiq --namespace logiq \
+--set global.chart.grafana=true \ 
+--set global.persistence.storageClass=<storage class name> logiq-repo/logiq
+```
+
+The Grafana instance is exposed at port 3000 on the ingress controller.
+
 ## 4 Teardown
 
 If and when you want to decommission the installation using the following commands
