@@ -29,7 +29,7 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 ```bash
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.2.10           2.1.11         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.2.11           2.1.11         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 #### 1.1.1 Update your HELM chart
@@ -40,7 +40,7 @@ If you already added LOGIQ's HELM repository in the past, you can get updated so
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.2.10           2.1.11         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.2.11           2.1.11         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -82,8 +82,8 @@ Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-c
 
 | Image | Tag |
 | :--- | :--- |
-| logiq-flash | 2.1.11.6 |
-| coffee | 2.1.6 |
+| logiq-flash | 2.1.11.10 |
+| coffee | 2.1.7 |
 
 ## 2. Install LOGIQ
 
@@ -423,7 +423,7 @@ helm upgrade --install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-The Grafana instance is exposed at port 3000 on the ingress controller.
+The Grafana instance is exposed at port 3000 on the ingress controller. The deployed Grafana instance uses the same credentials as the LOGIQ UI
 
 ## 4 Teardown
 
