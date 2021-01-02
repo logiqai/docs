@@ -74,6 +74,7 @@ LOGIQ exposes the below ports
 * **80** - http
 * **443** - https
 * **24224/24225** - FluentForward protocol port / TLS
+* **3000** - Grafana instance \(optional\)
 
 The ports used to bind are configurable via the server configuration file. See [Server options](../logiq-log-ingest-server-configuration/server-options.md) for more details.
 
