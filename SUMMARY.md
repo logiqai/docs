@@ -74,8 +74,3 @@
 * [AWS IAM Resources](running-on-aws/aws-iam-resources.md)
 * [1-Click deployment using CloudFormation](running-on-aws/ami-using-cloudformation.md)
 
-## Fluentd & Fluent-bit configuration
-
-* [Fluentd configuration](fluentd-and-fluent-bit-configuration/fluentd-configuration.md)
-* [Fluent-bit configuration](fluentd-and-fluent-bit-configuration/fluent-bit-configuration.md)
-
