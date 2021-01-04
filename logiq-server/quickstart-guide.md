@@ -26,9 +26,23 @@ NOTE: LOGIQ services use approximately 2GB of memory. Please have sufficient mem
 
 The first step is to get the appropriate `docker-compose` YAML file from the URL below.
 
-⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/2.1.1/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/2.1.1/docker-compose.quickstart.yml)
+### Download LOGIQ compose file
+
+The latest version of LOGIQ quickstart docker compose image is **2.2.11**
+
+{% hint style="info" %}
+⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/2.2.11/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/2.2.11/docker-compose.quickstart.yml)
+{% endhint %}
 
 You are now ready to bring up the LOGIQ stack.
+
+### Download container images
+
+```text
+$docker-compose -f docker-compose.quickstart.yml pull
+```
+
+### Bring up the stack
 
 ```text
 $docker-compose -f docker-compose.quickstart.yml up -d
@@ -48,15 +62,15 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 ![](../.gitbook/assets/screen-shot-2020-01-19-at-2.14.21-pm.png)
 
-### Prometheus monitoring and alerting
-
-The LOGIQ quickstart file includes Prometheus and Alertmanager services and a built-in monitoring dashboard for LOGIQ.
-
-![](../.gitbook/assets/screen-shot-2020-08-18-at-10.33.55-pm.png)
+![](../.gitbook/assets/screen-shot-2021-01-03-at-5.06.08-pm.png)
 
 ## Ingesting data
 
-Please refer to section on [data ingestion](agentless.md) for more details.
+Please refer to [section](agentless.md) on [data ingestion](agentless.md) for more details.
+
+### Prometheus monitoring and alerting
+
+The LOGIQ quickstart file includes Prometheus and Alertmanager services.
 
 ## Firewall ports and URLs
 
@@ -74,7 +88,7 @@ LOGIQ exposes the below ports
 * **80** - http
 * **443** - https
 * **24224/24225** - FluentForward protocol port / TLS
-* **3000** - Grafana instance \(optional\)
+* **3000** - Grafana instance \(optional\), not available with quickstart
 
 The ports used to bind are configurable via the server configuration file. See [Server options](../logiq-log-ingest-server-configuration/server-options.md) for more details.
 

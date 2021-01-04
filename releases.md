@@ -11,6 +11,12 @@
 ### Data convergence
 
 * Support for Apache DRUID connector
+* Optionally deploy Grafana with the LOGIQ stack
+
+### UI
+
+* Logs compare view to select 2 logs to be viewed side by side
+* Easy toggle for activating/deactivating periodic queries
 
 ## 2.1.9 - 2020-11-28
 
