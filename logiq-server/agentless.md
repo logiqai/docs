@@ -398,3 +398,109 @@ docker run --log-driver syslog \
 --log-opt tag=mysql --name mysql3 -d mysql
 ```
 
+## Fluentd configuration
+
+Fluentd `out-forward`  Buffered Output plugin forwards events to other fluentd nodes. Logiq has the capability to act as one of the fluentd nodes.
+
+The below code block defines the minimal changes to be added to fluentd configuration to start sending log events to flash. It is important to have the transformations while sending the data to Logiq. 
+
+```text
+<source>
+  @type tail
+  path /var/log/*.log
+  pos_file /var/log/tty.txt.pos
+  <parse>
+    @type none
+  </parse>
+</source>
+
+
+<filter>
+  @type record_transformer
+  enable_ruby
+  <record>
+    hostname "#{Socket.gethostname}"
+    namespace "#{Socket.gethostname}"
+    cluster_id "hadoop-master"
+    log ${record["message"]}
+  </record>
+</filter>
+
+
+
+<match>
+  @type forward
+  send_timeout 10s
+  recover_wait 10s
+  hard_timeout 20s
+
+
+<format>
+  @type msgpack
+  time_type unixtime
+  utc
+ </format>
+  <buffer time,tag,message>
+    @type memory
+    timekey 2s
+    timekey_wait 1s
+    flush_mode interval
+    flush_interval 1s
+    retry_max_interval 2s
+    retry_timeout 10s
+  </buffer>
+
+   
+  <server>
+    name logiq
+    host development.logiq.ai
+    port 24224
+    weight 100
+  </server>
+
+   <secondary>
+    @type secondary_file
+    directory /var/log/forward-failed
+  </secondary>
+</match>
+```
+
+## Fluent-bit configuration
+
+_Forward_ is the protocol used by [Fluentd](http://www.fluentd.org) to route messages between peers. The **forward** output plugin allows to provide interoperability between compatible systems, Logiq being one.
+
+The below code block defines the minimal changes to be added to the fluent-bit configuration to start sending log events to flash.
+
+```text
+[INPUT]
+    Name              tail
+    Path              /var/log/*
+    Path_Key          On
+    Tag               logiq
+    Buffer_Max_Size   1024k
+    Read_from_Head    On
+
+[FILTER]
+    Name          record_modifier
+    Match         logiq
+    Record cluster_id flash
+
+[FILTER]
+    Name          record_modifier
+    Match         logiq
+    Record namespace mesos
+
+[FILTER]
+    Name          record_modifier
+    Match         logiq
+    Record app_name fluentbit
+
+
+[OUTPUT]
+    Name                         forward
+    Match                        logiq
+    host                         localhost
+    port                         24224
+
+```
+
