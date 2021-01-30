@@ -321,7 +321,7 @@ drwxr-xr-x  9 user  staff   288 Aug  9 05:20 ..
 To get started run the following commands to create the namespace, service account and role setup:
 
 ```bash
-$ kubectl create namespace logging
+$ kubectl create namespace logiq-logging
 $ kubectl create -f fluent-bit-service-account.yaml
 $ kubectl create -f fluent-bit-role-binding.yaml
 $ kubectl create -f fluent-bit-role.yaml
