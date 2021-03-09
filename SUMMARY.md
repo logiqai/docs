@@ -28,6 +28,7 @@
 * [Terminology](vewing-logs/logs-terminology.md)
 * [Logs Page](vewing-logs/logs-page.md)
 * [Search Page](vewing-logs/search-page.md)
+* [Reports](vewing-logs/reports.md)
 * [logiqctl](vewing-logs/logiqctl/README.md)
   * [Configuring logiqctl](vewing-logs/logiqctl/configuring-logiqctl.md)
   * [Obtaining API Key](vewing-logs/logiqctl/obtaining-api-key.md)
