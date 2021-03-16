@@ -46,5 +46,5 @@ Also see section on [AMI using CloudFormation](../running-on-aws/ami-using-cloud
 
 ## Ingesting data
 
-Please refer to section on [data ingestion](agentless.md) for more details.
+Please refer to section on [data ingestion](agentless/) for more details.
 

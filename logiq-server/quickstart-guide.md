@@ -66,7 +66,7 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 ## Ingesting data
 
-Please refer to [section](agentless.md) on [data ingestion](agentless.md) for more details.
+Please refer to [section](agentless/) on [data ingestion](agentless/) for more details.
 
 ### Prometheus monitoring and alerting
 

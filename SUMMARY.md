@@ -12,7 +12,8 @@
 * [Quickstart guide](logiq-server/quickstart-guide.md)
 * [K8S Quickstart guide](logiq-server/k8s-quickstart-guide.md)
 * [AWS Quickstart guide](logiq-server/aws-cloudformation.md)
-* [Ingesting data](logiq-server/agentless.md)
+* [Ingesting data](logiq-server/agentless/README.md)
+  * [AWS Cloudwatch Exporter](logiq-server/agentless/aws-cloudwatch-exporter.md)
 * [Data extraction](logiq-server/data-extraction.md)
 * [Timestamp handling](logiq-server/timestamp-handling.md)
 

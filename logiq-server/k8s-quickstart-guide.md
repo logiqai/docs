@@ -334,7 +334,7 @@ helm install logiq --namespace logiq \
 
 ### 3.9 Configuring cluster id
 
-When deploying LOGIQ, configure the cluster id to monitor your own LOGIQ deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](agentless.md#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance)
+When deploying LOGIQ, configure the cluster id to monitor your own LOGIQ deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance)
 
 ```bash
 helm install logiq --namespace logiq \
@@ -344,7 +344,7 @@ helm install logiq --namespace logiq \
 
 | HELM Option | Description | Default |
 | :--- | :--- | :--- |
-| global.environment.cluster\_id | Cluster Id being used for the K8S cluster running LOGIQ. See Section on [Managing multiple K8S](agentless.md#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance) clusters for more details. | LOGIQ |
+| global.environment.cluster\_id | Cluster Id being used for the K8S cluster running LOGIQ. See Section on [Managing multiple K8S](agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance) clusters for more details. | LOGIQ |
 
 ### 3.10 Sizing your LOGIQ cluster
 
