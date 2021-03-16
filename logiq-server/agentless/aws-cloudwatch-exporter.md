@@ -2,7 +2,7 @@
 description: This guide explains how to export your AWS CloudWatch logs.
 ---
 
-# AWS Cloudwatch Exporter
+# AWS CloudWatch Exporter
 
 ## Logiq CloudWatch exporter Lambda function
 
