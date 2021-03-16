@@ -22,7 +22,7 @@ https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/cf.yaml
 The same code is available in [client-integrations](https://bitbucket.org/logiqcloud/client-integrations/src/master/) git repository
 {% endhint %}
 
-This CloudFormation stack creates a lambda function and its necessary permissions. The following attributes needs to be configured.
+This CloudFormation stack creates a lambda function and its necessary permissions. The following attributes need to be configured.
 
 | Parameter | Description |
 | :--- | :--- |
@@ -34,7 +34,7 @@ This CloudFormation stack creates a lambda function and its necessary permission
 
 ## Configuring CloudWatch trigger
 
-Once the CloudFormation stack is created navigate to the AWS lambda function\(logiq-cloudwatch-exporter\) and add a trigger. 
+Once the CloudFormation stack is created navigate to the AWS Lambda function\(logiq-cloudwatch-exporter\) and add a trigger. 
 
 ![](../../.gitbook/assets/image%20%284%29.png)
 
