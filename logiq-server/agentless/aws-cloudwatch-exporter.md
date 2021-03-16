@@ -19,7 +19,7 @@ https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/cf.yaml
 ```
 
 {% hint style="info" %}
-The same code is available in [client-integrations](https://bitbucket.org/logiqcloud/client-integrations/src/master/) git repository
+The same code is available in [client-integrations](https://bitbucket.org/logiqcloud/client-integrations/src/master/cloudwatch-exporter/) git repository
 {% endhint %}
 
 This CloudFormation stack creates a lambda function and its necessary permissions. The following attributes need to be configured.

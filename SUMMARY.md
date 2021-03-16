@@ -14,6 +14,7 @@
 * [AWS Quickstart guide](logiq-server/aws-cloudformation.md)
 * [Ingesting data](logiq-server/agentless/README.md)
   * [AWS Cloudwatch Exporter](logiq-server/agentless/aws-cloudwatch-exporter.md)
+  * [Generating Secure Ingest Token](logiq-server/agentless/generating-secure-ingest-token.md)
 * [Data extraction](logiq-server/data-extraction.md)
 * [Timestamp handling](logiq-server/timestamp-handling.md)
 
