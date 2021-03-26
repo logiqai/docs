@@ -2,7 +2,7 @@
 description: This page describes how to access report results via API
 ---
 
-# Accessing API results via API
+# Accessing Reports results via API
 
 Once the report is created, its results can be accessed via APIs.  
 

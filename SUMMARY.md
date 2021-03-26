@@ -31,7 +31,7 @@
 * [Logs Page](vewing-logs/logs-page.md)
 * [Search Page](vewing-logs/search-page.md)
 * [Reports](vewing-logs/reports/README.md)
-  * [Accessing API results via API](vewing-logs/reports/accessing-api-results-via-api.md)
+  * [Accessing Reports results via API](vewing-logs/reports/accessing-api-results-via-api.md)
 * [logiqctl](vewing-logs/logiqctl/README.md)
   * [Configuring logiqctl](vewing-logs/logiqctl/configuring-logiqctl.md)
   * [Obtaining API Key](vewing-logs/logiqctl/obtaining-api-key.md)
