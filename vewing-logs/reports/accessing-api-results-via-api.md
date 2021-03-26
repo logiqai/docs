@@ -151,7 +151,7 @@ post_query()
 ```
 
 {% hint style="info" %}
-Refer [here](../logiqctl/obtaining-api-key.md) to get the API key 
+[Refer here to get the API key ](../logiqctl/obtaining-api-key.md)
 {% endhint %}
 
 
