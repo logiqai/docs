@@ -6,6 +6,8 @@ LOGIQ Insights is a complete observability platform for monitoring, log aggregat
 
 The LOGIQ platform comprises of a User interface, a [command line toolkit](https://logiqctl.logiq.ai), a monitoring stack for time series metrics and a log analytics stack for log data.
 
+![](.gitbook/assets/screen-shot-2021-04-05-at-3.36.04-pm.png)
+
 ## Monitoring
 
 LOGIQ's monitoring stack is powered by Prometheus. LOGIQ has it's own user interface and does not use Grafana. LOGIQ's monitoring stack also allows data from additional data sources like Elasticsearch, Postgres, MySQL, MariaDB, MongoDB, Athena etc. to be queried, analyzed and visualized.
