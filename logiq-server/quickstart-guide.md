@@ -28,10 +28,10 @@ The first step is to get the appropriate `docker-compose` YAML file from the URL
 
 ### Download LOGIQ compose file
 
-The latest version of LOGIQ quickstart docker compose image is **2.2.11**
+The latest version of LOGIQ quickstart docker compose image is **2.2.12**
 
 {% hint style="info" %}
-⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/2.2.11/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/2.2.12/docker-compose.quickstart.yml)
+⬇ Download the YAML here - [https://logiqcf.s3.amazonaws.com/2.2.12/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/2.2.12/docker-compose.quickstart.yml)
 {% endhint %}
 
 You are now ready to bring up the LOGIQ stack.
