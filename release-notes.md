@@ -1,5 +1,12 @@
 # Release Notes
 
+## 2.1.11.26 - 2021-04-15
+
+### Changed
+
+* Namespace level Log distribution graph in Search and Logs page
+* Performance Improvements
+
 ## 2.1.11.25 - 2021-04-08
 
 ### Fixed
