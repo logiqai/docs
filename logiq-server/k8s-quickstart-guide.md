@@ -82,8 +82,8 @@ Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-c
 
 | Image | Tag |
 | :--- | :--- |
-| logiq-flash | 2.1.11.10 |
-| coffee | 2.1.7 |
+| logiq-flash | 2.1.11.27 |
+| coffee | 2.1.17.4 |
 | HELM | 2.2.11 |
 
 ## 2. Install LOGIQ
