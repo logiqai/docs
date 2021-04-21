@@ -241,6 +241,7 @@ It is quite possible that your environment may use a different storage class nam
 | GCP | standard | pd-standard |
 | Digital Ocean | do-block-storage | Block Storage Volume |
 | Oracle | oci | Block Volume |
+|Microk8s|microk8s-hostpath|
 
 ```bash
 helm upgrade --namespace logiq \
