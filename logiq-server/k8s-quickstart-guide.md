@@ -93,7 +93,7 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-This will install LOGIQ and expose the LOGIQ services and UI on the ingress IP. If you plan to use an AWS S3 bucket, please refer to section [3.2](k8s-quickstart-guide.md#3-2-using-an-aws-s3-bucket) before running this step. Please refer to  [Section 3.4 ](k8s-quickstart-guide.md#3-4-changing-the-storage-class)for details about storage class. Service ports are described in the [Port details section](https://docs.logiq.ai/logiq-server/quickstart-guide#ports). You should now be able to go to `http://ingress-ip/`
+This will install LOGIQ and expose the LOGIQ services and UI on the ingress IP. If you plan to use an AWS S3 bucket, please refer to section [3.2](k8s-quickstart-guide.md#3-2-using-an-aws-s3-bucket) before running this step. Please refer to [Section 3.4 ](k8s-quickstart-guide.md#3-4-changing-the-storage-class)for details about storage class. Service ports are described in the [Port details section](https://docs.logiq.ai/logiq-server/quickstart-guide#ports). You should now be able to go to `http://ingress-ip/`
 
 {% hint style="info" %}
 The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. HELM chart can override the default admin settings as well. See section[ 3.7](k8s-quickstart-guide.md#3-7-customize-admin-account) on customizing the admin settings
@@ -241,7 +241,7 @@ It is quite possible that your environment may use a different storage class nam
 | GCP | standard | pd-standard |
 | Digital Ocean | do-block-storage | Block Storage Volume |
 | Oracle | oci | Block Volume |
-|Microk8s|microk8s-hostpath|
+| Microk8s | microk8s-hostpath |  |
 
 ```bash
 helm upgrade --namespace logiq \
@@ -359,7 +359,7 @@ When deploying LOGIQ, size your infrastructure to provide appropriate vcpu and m
 
 ### 3.11 NodePort/ClusterIP/LoadBalancer
 
-The service type configurations are exposed in values.yaml as below 
+The service type configurations are exposed in values.yaml as below
 
 ```bash
 flash-coffee:
@@ -372,7 +372,6 @@ kubernetes-ingress:
   controller:
     service:
       type: LoadBalancer
-
 ```
 
 For e.g. if you are running on bare-metal and want an external LB to front LOGIQ, configure all services as `NodePort`
@@ -409,7 +408,7 @@ globals:
     ingest_sync: sync
 ```
 
-In the example above, there are different node pools being used  - `ingest` , `common` , `db`, `cache` and `sync`
+In the example above, there are different node pools being used - `ingest` , `common` , `db`, `cache` and `sync`
 
 {% hint style="info" %}
 Node selectors are enabled by setting `enabled` to `true` for `globals.nodeSelectors`

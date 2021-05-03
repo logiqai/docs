@@ -10,6 +10,7 @@
 ## Log Insights <a id="logiq-server"></a>
 
 * [Quickstart guide](logiq-server/quickstart-guide.md)
+* [LOGIQ PaaS Community Edition](logiq-server/logiq-paas-community-edition.md)
 * [K8S Quickstart guide](logiq-server/k8s-quickstart-guide.md)
 * [AWS Quickstart guide](logiq-server/aws-cloudformation.md)
 * [Ingesting data](logiq-server/agentless/README.md)
