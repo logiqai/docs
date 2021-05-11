@@ -13,6 +13,7 @@
 * [LOGIQ PaaS Community Edition](logiq-server/logiq-paas-community-edition.md)
 * [K8S Quickstart guide](logiq-server/k8s-quickstart-guide.md)
 * [AWS Quickstart guide](logiq-server/aws-cloudformation.md)
+* [Deploying LOGIQ PaaS on MicroK8s](logiq-server/deploying-logiq-paas-on-microk8s.md)
 * [Ingesting data](logiq-server/agentless/README.md)
   * [AWS CloudWatch Exporter](logiq-server/agentless/aws-cloudwatch-exporter.md)
   * [Generating Secure Ingest Token](logiq-server/agentless/generating-secure-ingest-token.md)
