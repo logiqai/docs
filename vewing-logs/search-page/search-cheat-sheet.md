@@ -2,7 +2,7 @@
 description: The following document describes how LOGIQ's log search functionality works.
 ---
 
-# Search
+# LOGIQ Search Cheat Sheet
 
 ## Simple search
 

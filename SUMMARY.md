@@ -32,7 +32,7 @@
 * [Terminology](vewing-logs/logs-terminology.md)
 * [Logs Page](vewing-logs/logs-page.md)
 * [Search Page](vewing-logs/search-page/README.md)
-  * [Search](vewing-logs/search-page/search.md)
+  * [LOGIQ Search Cheat Sheet](vewing-logs/search-page/search-cheat-sheet.md)
 * [Reports](vewing-logs/reports/README.md)
   * [Accessing Reports results via API](vewing-logs/reports/accessing-api-results-via-api.md)
 * [logiqctl](vewing-logs/logiqctl/README.md)
