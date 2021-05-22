@@ -31,7 +31,8 @@
 
 * [Terminology](vewing-logs/logs-terminology.md)
 * [Logs Page](vewing-logs/logs-page.md)
-* [Search Page](vewing-logs/search-page.md)
+* [Search Page](vewing-logs/search-page/README.md)
+  * [Search](vewing-logs/search-page/search.md)
 * [Reports](vewing-logs/reports/README.md)
   * [Accessing Reports results via API](vewing-logs/reports/accessing-api-results-via-api.md)
 * [logiqctl](vewing-logs/logiqctl/README.md)
