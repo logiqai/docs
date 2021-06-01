@@ -106,7 +106,11 @@ This also implies that only valid stems can return search results. LOGIQ ignores
 
 #### Custom Indices
 
-Refer to the [Metrics and Custom Indices](../metrics-and-custom-indices.md) section to see how to create custom indices. Custom indices can speed up the search for sparse matches. One can generate custom indices using log2Metrics. Each log2Metrics definition creates additional indices based on the matches. A log2Metric defined for ingress with a status\_code as a label can generate additional indices. For Example, a log2Metric called ingress\_code**e10001e can generate additional ones based on matches like ingress\_code**e10001e\_status\_code\_401, ingress\_code\_\_e10001e\_status\_code\_500 etc...
+LOGIQ custom indices help deliver exponentially faster search experiences while working with sparse data. You can create Log2Metrics for your logs to generate custom indices. Each Log2Metrics definition creates additional indices based on search matches. For example, a Log2Metric defined to monitor ingress with a status code as a label called `ingress_code__e1001e` can generate supplementary indices such as `ingress_code__e1001e_status_code_401`, `ingress_code__e1001e_status_code_500`, and so on.
+
+{% hint style="info" %}
+**Note:** For more information on creating Log2Metrics for your logs, refer to [Metrics and Custom Indices](../metrics-and-custom-indices.md#creating-a-log-2-metric).  
+{% endhint %}
 
 #### Stop words
 
