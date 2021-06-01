@@ -8,7 +8,7 @@ description: The following document describes how LOGIQ's log search functionali
 
 To carry out a simple search, type any word or series of words into the **Search** bar and click **Search** or hit Enter on your keyboard. 
 
-![Search Bar](../../.gitbook/assets/image%20%286%29.png)
+![Search Bar](../../.gitbook/assets/image%20%286%29%20%281%29.png)
 
 By default, LOGIQ scans for your search term\(s\) using the `and` operator. If your search query contains more than one word, the search engine looks for occurrences that contain both words. For example, searching for the term `Read Error` returns records that contain both `read` and `error` _****_and not necessarily in the same sequence. Searches are also not case sensitive. For example, searching for `ReadError` returns records that contain both `read` and `error`. 
 
@@ -24,9 +24,7 @@ LOGIQ's advanced search feature supports the use of complex expressions in the s
 **Note:** LOGIQ only supports RE2 syntax while using regular expressions to construct  advanced search queries. For more information on the RE2 syntax, visit the [RE2 Wiki](https://github.com/google/re2/wiki/Syntax). 
 {% endhint %}
 
-The following image depicts how you can conduct an advanced search using on LOGIQ.
-
-![Advanced Search Dialog](../../.gitbook/assets/image%20%287%29.png)
+The following image depicts how you can conduct an advanced search within LOGIQ.
 
 ### Comparators
 
@@ -105,6 +103,10 @@ The following list contains comparison operators that you can use to build your 
 LOGIQ uses the Porter stemmer algorithm while creating the index. The [Porter algorithm](https://en.wikipedia.org/wiki/Stemming) stems strings such as "argue", "argued", "argues", "arguing", and "argus" to the stem "argu". Searching for "argue" or "argued" or "argu" in LOGIQ yields the same results due to the employed stemmer algorithm. 
 
 This also implies that only valid stems can return search results. LOGIQ ignores stems with lengths less than 3 characters. Searching for `message =~ '\\d{3}'` yields no results since stemming `\\d{3}` does not generate any stems. 
+
+#### Custom Indices
+
+Refer to the [Metrics and Custom Indices](../metrics-and-custom-indices.md) section to see how to create custom indices. Custom indices can speed up the search for sparse matches. One can generate custom indices using log2Metrics. Each log2Metrics definition creates additional indices based on the matches. A log2Metric defined for ingress with a status\_code as a label can generate additional indices. For Example, a log2Metric called ingress\_code**e10001e can generate additional ones based on matches like ingress\_code**e10001e\_status\_code\_401, ingress\_code\_\_e10001e\_status\_code\_500 etc...
 
 #### Stop words
 

@@ -33,6 +33,7 @@
 * [Logs Page](vewing-logs/logs-page.md)
 * [Search Page](vewing-logs/search-page/README.md)
   * [LOGIQ Search Cheat Sheet](vewing-logs/search-page/search-cheat-sheet.md)
+* [Metrics and Custom Indices](vewing-logs/metrics-and-custom-indices.md)
 * [Reports](vewing-logs/reports/README.md)
   * [Accessing Reports results via API](vewing-logs/reports/accessing-api-results-via-api.md)
 * [logiqctl](vewing-logs/logiqctl/README.md)

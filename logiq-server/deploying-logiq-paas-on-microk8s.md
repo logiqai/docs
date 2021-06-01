@@ -4,9 +4,7 @@
 
 The following guide takes you through deploying LOGIQ PaaS on MicroK8s.
 
-
-
-### Installing MicroK8s
+## Installing MicroK8s
 
 The first step in this deployment is to install MicroK8s on your machine. To install MicroK8s, do the following.
 
@@ -54,7 +52,7 @@ The first step in this deployment is to install MicroK8s on your machine. To ins
 
 MicroK8s is now installed on your machine.
 
-### Enabling add-ons
+## Enabling add-ons
 
 Now that we have MicroK8s up and running, let’s set up your cluster and enable the add-ons necessary such as Helm, CoreDNS, ingress, storage, and private registry. MicroK8s readily provides these addons and can be enabled and disabled at any time. Most of these add-ons are pre-configured to work without any additional setup.
 
@@ -83,8 +81,9 @@ To enable add-ons on your MicroK8s cluster, run the following commands in succes
    ```text
    microk8s enable ingress
    ```
+
    To enable https on your cluster, create a secret with your keys and pass the secret with ingress.
-   
+
    ```text
    microk8s enable ingress:default-ssl-certificate=namespace/secret_name
    ```
@@ -101,7 +100,7 @@ To enable add-ons on your MicroK8s cluster, run the following commands in succes
    microk8s.kubectl config view > $HOME/.kube/config
    ```
 
-### Provisioning an IP address
+## Provisioning an IP address
 
 In this step, we'll provision an endpoint or an IP address where we access LOGIQ PaaS after deploying it on MicroK8s. For this, we'll leverage [MetalLB](https://metallb.universe.tf) which is a load-balancer implementation that uses standard routing protocols for bare metal Kubernetes clusters.
 
@@ -131,7 +130,7 @@ To provision an IP address, do the following:
 **Note:** MetalLB will not work on macOS due to network filtering that macOS applies. MetalLB might not work if you're provisioning an EC2 instance on AWS due to your private/public IP configuration.
 {% endhint %}
 
-### Installing LOGIQ PaaS
+## Installing LOGIQ PaaS
 
 Now that your MicroK8s environment is configured and ready, we can proceed with installing LOGIQ PaaS on it. To install LOGIQ PaaS using Helm, do the following:
 
@@ -165,7 +164,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
 
 LOGIQ PaaS is now installed in your MicroK8s environment.
 
-### Accessing LOGIQ PaaS
+## Accessing LOGIQ PaaS
 
 Now that LOGIQ PaaS is installed on your MicroK8s cluster, you can visit the LOGIQ PaaS UI by accessing the MetalLB endpoint we defined in the pre-install steps. To access the LOGIQ PaaS UI, do the following:
 
@@ -189,7 +188,7 @@ Now that LOGIQ PaaS is installed on your MicroK8s cluster, you can visit the LOG
    80:30537/TCP,20514:30222/TCP,24224:30909/TCP,24225:31991/TCP,2514:30800/TCP,3000:32680/TCP,514:32450/    TCP,7514:30267/TCP,8081:30984/TCP,9998:31425/TCP     18m
    ```
 
-3. Using a web browser of your choice, access the IP address shown by the load balancer service above. For example, `http://192.168.1.27:80`. 
+3. Using a web browser of your choice, access the IP address shown by the load balancer service above. For example, `http://192.168.1.27:80`.
 
 Your LOGIQ PaaS UI is now available in your web browser. You can log into LOGIQ PaaS using the following default credentials.
 
