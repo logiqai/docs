@@ -83,6 +83,11 @@ To enable add-ons on your MicroK8s cluster, run the following commands in succes
    ```text
    microk8s enable ingress
    ```
+   To enable https on your cluster, create a secret with your keys and pass the secret with ingress.
+   
+   ```text
+   microk8s enable ingress:default-ssl-certificate=namespace/secret_name
+   ```
 
 5. Enable private registry.
 
