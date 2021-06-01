@@ -38,7 +38,7 @@ The configuration depicted in the image above creates a Log2Metric named `ingres
 
 ![Visualization created by log2metrics](../.gitbook/assets/image%20%289%29.png)
 
-## Custom Index
+## Custom Indices
 
 Log2Metrics definitions also create custom indices that can be used to speed up search. Based on the definition, there can be multiple custom indices. The definition used in the example above creates two custom indices: `ingress_status_codes__e1034e`and `e1034e`. You can use both of these indices to search for logs that match the definition. Based on what you enter in the **Labels** field of the Log2Metric configuration, additional indices may be created. For example, based on the definition used in the example above, if there are logs that match the status code `401` , an additional index is created named `ingress_status_codes__e1034e_status_code_401`that can be used for searching for occurrences of logs that contain the status code `401`. 
 
