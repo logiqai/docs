@@ -1,5 +1,23 @@
 # Release Notes
 
+## 2.1.11.32 - 2021-06-11
+
+### Changed
+
+* LD-35 multi-variate regEx in log2Metrics
+
+## 2.1.11.31 - 2021-06-07
+
+### Changed
+
+* AYLA-4 Comparator operator results in lesser search results
+
+## 2.1.11.30 - 2021-06-02
+
+### Changed
+
+* LD-30 Custom Search Indices
+
 ## 2.1.11.26 - 2021-04-15
 
 ### Changed
