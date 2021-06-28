@@ -32,6 +32,7 @@
 * [Terminology](vewing-logs/logs-terminology.md)
 * [Logs Page](vewing-logs/logs-page.md)
 * [Search Page](vewing-logs/search-page/README.md)
+  * [Share Search Results](vewing-logs/search-page/share-search-results.md)
   * [LOGIQ Search Cheat Sheet](vewing-logs/search-page/search-cheat-sheet.md)
 * [Metrics and Custom Indices](vewing-logs/metrics-and-custom-indices.md)
 * [Reports](vewing-logs/reports/README.md)

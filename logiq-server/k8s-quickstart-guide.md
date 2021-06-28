@@ -65,12 +65,8 @@ Sample YAML files for small, medium, large cluster configs can be downloaded at 
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../.gitbook/assets/values.small \(18\).yaml" caption="values.small.yaml" %}
-{% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../.gitbook/assets/values.medium \(16\).yaml" caption="values.medium.yaml" %}
-{% endtab %}
 
 {% tab title="values.large.yaml" %}
 {% file src="../.gitbook/assets/values.large \(17\).yaml" caption="values.large.yaml" %}
