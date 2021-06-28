@@ -469,7 +469,7 @@ The below code block defines the minimal changes to be added to fluentd configur
 
 _Forward_ is the protocol used by [Fluentd](http://www.fluentd.org) to route messages between peers. The **forward** output plugin allows to provide interoperability between compatible systems, Logiq being one.
 
-The below code block defines the minimal changes to be added to the fluent-bit configuration to start sending log events to flash.
+The below code block defines the minimal changes to be added to the fluent-bit configuration using the http plugin to start sending log events to flash.
 
 ```text
 [INPUT]
@@ -497,10 +497,16 @@ The below code block defines the minimal changes to be added to the fluent-bit c
 
 
 [OUTPUT]
-    Name                         forward
-    Match                        logiq
-    host                         localhost
-    port                         24224
+    Name          http
+    Match         *
+    Host          localhost
+    Port          80
+    URI           /v1/json_batch
+    Format        json
+    tls           off
+    tls.verify    off
+    net.keepalive off
+    compress      gzip
 
 ```
 
