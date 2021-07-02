@@ -62,7 +62,7 @@ output {
 }
 ```
 
-You can additionally control the data organization by specifying additional fields 
+You can additionally control the data organization by specifying additional fields
 
 ```text
 filter {
@@ -400,9 +400,9 @@ docker run --log-driver syslog \
 
 ## Fluentd configuration
 
-Fluentd `out-forward`  Buffered Output plugin forwards events to other fluentd nodes. Logiq has the capability to act as one of the fluentd nodes.
+Fluentd `out-forward` Buffered Output plugin forwards events to other fluentd nodes. Logiq has the capability to act as one of the fluentd nodes.
 
-The below code block defines the minimal changes to be added to fluentd configuration to start sending log events to flash. It is important to have the transformations while sending the data to Logiq. 
+The below code block defines the minimal changes to be added to fluentd configuration to start sending log events to flash. It is important to have the transformations while sending the data to Logiq.
 
 ```text
 <source>
@@ -450,7 +450,7 @@ The below code block defines the minimal changes to be added to fluentd configur
     retry_timeout 10s
   </buffer>
 
-   
+
   <server>
     name logiq
     host development.logiq.ai
@@ -507,6 +507,5 @@ The below code block defines the minimal changes to be added to the fluent-bit c
     tls.verify    off
     net.keepalive off
     compress      gzip
-
 ```
 
