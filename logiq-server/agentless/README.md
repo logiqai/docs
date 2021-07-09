@@ -507,5 +507,6 @@ The below code block defines the minimal changes to be added to the fluent-bit c
     tls.verify    off
     net.keepalive off
     compress      gzip
+    Header Authorization Bearer <ingest token>
 ```
 
