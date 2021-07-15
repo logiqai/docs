@@ -335,7 +335,8 @@ The next step is to create a ConfigMap that will be used by the Fluent Bit Daemo
 $ kubectl create -f fluent-bit-config-logiq-forward.yml
 ```
 
-Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Cluster, configure the following in deamonset fluent-bit-daemonset-logiq-forward.yml
+Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Cluster, configure the following in deamonset fluent-bit-daemonset-logiq-forward.yml.
+
 
 * name: LOGIQ\_HOST
 
@@ -343,11 +344,16 @@ Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Clus
 
 * name: LOGIQ\_PORT
 
-  value: "24224"
+  value: "80"
 
 * name: CLUSTER\_ID
 
   value: "YOUR\_CLUSTER\_ID"
+  
+* name: LOGIQ\_TOKEN
+
+  value: "YOUR\_INGEST\_TOKEN"
+
 
 For Kubernetes version &lt; 1.17, please change the apiVersion: "extensions/v1beta1" from "apps/v1" and remove selector attached to DaemonSet spec selector: matchLabels: k8s-app: fluent-bit-logging
 
