@@ -75,7 +75,7 @@ filter {
 }
 ```
 
-You can generate the Bearer token using [`logiqctl`](https://logiqctl.logiq.ai)
+You can generate the Bearer token using [`logiqctl`](https://logiqctl.logiq.ai/get/logiqctl_get_httpingestkey/)
 
 ```text
 $logiqctl get httpingestkey
