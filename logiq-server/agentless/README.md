@@ -312,7 +312,7 @@ drwxr-xr-x  8 user  staff   256 Aug  9 05:47 .
 drwxr-xr-x  9 user  staff   288 Aug  9 05:20 ..
 -rw-r--r--  1 user  staff  2446 Aug  9 05:47 README.md
 -rw-r--r--  1 user  staff  8688 Aug  9 05:32 fluent-bit-config-logiq-forward.yml
--rw-r--r--  1 user  staff  1670 Aug  9 05:29 fluent-bit-daemonset-logiq-forward.yml
+-rw-r--r--  1 user  staff  1670 Aug  9 05:29 fluent-bit-daemonset-logiq-output.yml
 -rw-r--r--  1 user  staff   269 Aug  9 05:26 fluent-bit-role-binding.yaml
 -rw-r--r--  1 user  staff   194 Aug  9 04:49 fluent-bit-role.yaml
 -rw-r--r--  1 user  staff    86 Aug  9 05:25 fluent-bit-service-account.yaml
@@ -335,7 +335,7 @@ The next step is to create a ConfigMap that will be used by the Fluent Bit Daemo
 $ kubectl create -f fluent-bit-config-logiq-forward.yml
 ```
 
-Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Cluster, configure the following in deamonset fluent-bit-daemonset-logiq-forward.yml.
+Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Cluster, configure the following in deamonset fluent-bit-daemonset-logiq-output.yml.
 If you do not have your ingest token, You can generate them using [`logiqctl`](https://docs.logiq.ai/logiq-server/agentless/generating-secure-ingest-token)
 
 
@@ -359,7 +359,7 @@ If you do not have your ingest token, You can generate them using [`logiqctl`](h
 For Kubernetes version &lt; 1.17, please change the apiVersion: "extensions/v1beta1" from "apps/v1" and remove selector attached to DaemonSet spec selector: matchLabels: k8s-app: fluent-bit-logging
 
 ```text
-$ kubectl create -f fluent-bit-daemonset-logiq-forward.yml
+$ kubectl create -f fluent-bit-daemonset-logiq-output.yml
 ```
 
 ## Docker Syslog log driver
