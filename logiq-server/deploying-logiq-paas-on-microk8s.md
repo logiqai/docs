@@ -102,7 +102,7 @@ To enable add-ons on your MicroK8s cluster, run the following commands in succes
 
 ## Provisioning an IP address
 
-In this step, we'll provision an endpoint or an IP address where we access LOGIQ PaaS after deploying it on MicroK8s. For this, we'll leverage [MetalLB](https://metallb.universe.tf) which is a load-balancer implementation that uses standard routing protocols for bare metal Kubernetes clusters.
+In this step, we'll provision an endpoint or an IP address where we access LOGIQ PaaS after deploying it on MicroK8s. You can skip this step if its your local implementation. For this, we'll leverage [MetalLB](https://metallb.universe.tf) which is a load-balancer implementation that uses standard routing protocols for bare metal Kubernetes clusters.
 
 {% hint style="info" %}
 **Note:** Since MetalLB is available as an add-on for MicroK8s, you can also run these steps while enabling add-ons for your MicroK8s cluster.
