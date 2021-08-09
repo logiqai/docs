@@ -155,7 +155,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
 4. Install LOGIQ PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
    ```text
-   helm install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/logiq -f     values.yaml  --debug --timeout 10m
+   helm install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/logiq -f     values.microk8s.yaml  --debug --timeout 10m
    ```
 
 {% hint style="info" %}
