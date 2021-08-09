@@ -162,6 +162,8 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
 **Note:** You can use the [starter `values.yaml`](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LmzGprckLqwd5v6bs6m%2F-MQ3BQwto2mGZmAgEveP%2F-MQ3BXv1S-DqlVCWRpOw%2Fvalues.large.yaml?alt=media&token=7d4772bf-39e0-4030-8620-1de1a64aed99) file we've created to configure your LOGIQ PaaS deployment. You can modify the values listed in the `values.yaml` file to suit your needs.
 {% endhint %}
 
+{% file src="../.gitbook/assets/values.microk8s.yaml" caption="Starter values.microk8s.yaml file" %}
+
 LOGIQ PaaS is now installed in your MicroK8s environment.
 
 ## Accessing LOGIQ PaaS

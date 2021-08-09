@@ -15,7 +15,7 @@ To share a search result, do the following:
 3. Toggle the **Share** button to generate a shareable URL.
 4. Copy and store the generated URL for future use.
 
-![The Share search results button](../../.gitbook/assets/image%20%286%29.png)
+![The Share search results button](../../.gitbook/assets/image%20%286%29%20%282%29.png)
 
 ![Naming your search and generating a shareable URL](../../.gitbook/assets/untitled-diagram-1-.png)
 
