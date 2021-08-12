@@ -6,7 +6,7 @@ LOGIQ Insights is a complete observability platform for monitoring, log aggregat
 
 The LOGIQ platform comprises of a User interface, a [command line toolkit](https://logiqctl.logiq.ai), a monitoring stack for time series metrics and a log analytics stack for log data.
 
-![](.gitbook/assets/screen-shot-2021-04-05-at-3.36.04-pm.png)
+![](.gitbook/assets/screen-shot-2021-08-12-at-9.42.57-am.png)
 
 ## Monitoring
 
