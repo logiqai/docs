@@ -61,15 +61,19 @@ If you choose a different name for the namespace, please remember to use the sam
 
 ### 1.3 Prepare your Values YAML file
 
-Sample YAML files for small, medium, large cluster configs can be downloaded at the links below
+Sample YAML files for small, medium, large cluster configurations can be downloaded at the following links. 
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
+{% file src="../.gitbook/assets/values \(2\).yaml" caption="values.small.yaml" %}
+{% endtab %}
 
 {% tab title="values.medium.yaml" %}
+{% file src="../.gitbook/assets/values.medium \(17\).yaml" caption="values.medium.yaml" %}
+{% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../.gitbook/assets/values.large \(17\).yaml" caption="values.large.yaml" %}
+{% file src="../.gitbook/assets/values.large \(18\).yaml" caption="values.large.yaml" %}
 {% endtab %}
 {% endtabs %}
 
