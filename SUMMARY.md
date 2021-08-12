@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Overview](README.md)
-* [Releases](releases.md)
+* [Releases](release-notes.md)
 
 ## EULA
 
@@ -82,8 +82,4 @@
 * [Getting started](running-on-aws/getting-started.md)
 * [AWS IAM Resources](running-on-aws/aws-iam-resources.md)
 * [1-Click deployment using CloudFormation](running-on-aws/ami-using-cloudformation.md)
-
----
-
-* [Release Notes](release-notes.md)
 
