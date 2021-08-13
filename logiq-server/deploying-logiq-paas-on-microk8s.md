@@ -168,6 +168,10 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
    ```
    s3gateway: false
    ```
+   In the global -> persistence section, change storageClass as below.
+   ```
+   storageClass: microk8s-hostpath
+   ```
 
 5. Install LOGIQ PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
