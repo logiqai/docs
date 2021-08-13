@@ -151,18 +151,29 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
    ```text
    microk8s kubectl create namespace logiq
    ```
-
-4. Install LOGIQ PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
-
-   ```text
-   helm install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/logiq -f     values.microk8s.yaml  --debug --timeout 10m
+4. Prepare your values.microk8s.yaml file. You can use the [starter `values.microk8s.yaml`](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your LOGIQ PaaS deployment
+   > Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://github.com/logiqai/logiq-installation/blob/main/values/values.yaml) instead. run the following command.
+   > ```
+   > microk8s enable metallb
+   > Enabling MetalLB
+   > Enter each IP address range delimited by comma (e.g.  '10.64.140.43-10.64.140.49,192.168.0.105-192.168.0.111'): 192.168.1.27-192.168.1.27
+   > ``` 
+   In the values file, add the below fields global-> environment section with your own values.
+   ```
+   s3_bucket: <your-s3-bucket>
+   AWS_ACCESS_KEY_ID: <your-aws-access-key-id>
+   AWS_SECRET_ACCESS_KEY: <your-aws-secret-access-key-id>
+   ```
+   In the global -> chart section, change S3gateway to false.
+   ```
+   s3gateway: false
    ```
 
-{% hint style="info" %}
-**Note:** You can use the [starter `values.yaml`](https://firebasestorage.googleapis.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LmzGprckLqwd5v6bs6m%2F-MQ3BQwto2mGZmAgEveP%2F-MQ3BXv1S-DqlVCWRpOw%2Fvalues.large.yaml?alt=media&token=7d4772bf-39e0-4030-8620-1de1a64aed99) file we've created to configure your LOGIQ PaaS deployment. You can modify the values listed in the `values.yaml` file to suit your needs.
-{% endhint %}
+5. Install LOGIQ PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
-{% file src="../.gitbook/assets/values.microk8s \(1\).yaml" caption="Starter values.microk8s.yaml file" %}
+   ```text
+   helm install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/logiq -f  values.microk8s.yaml  --debug --timeout 10m
+   ```
 
 LOGIQ PaaS is now installed in your MicroK8s environment.
 
