@@ -18,6 +18,7 @@
   * [AWS CloudWatch Exporter](logiq-server/agentless/aws-cloudwatch-exporter.md)
   * [Generating Secure Ingest Token](logiq-server/agentless/generating-secure-ingest-token.md)
 * [Data extraction](logiq-server/data-extraction.md)
+* [Log Data Rewrite](logiq-server/data-rewrite.md)
 * [Timestamp handling](logiq-server/timestamp-handling.md)
 
 ## LOGIQ Monitoring

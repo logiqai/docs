@@ -151,27 +151,36 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
    ```text
    microk8s kubectl create namespace logiq
    ```
+
 4. Prepare your values.microk8s.yaml file. You can use the [starter `values.microk8s.yaml`](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your LOGIQ PaaS deployment
+
    > Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://github.com/logiqai/logiq-installation/blob/main/values/values.yaml) instead. run the following command.
-   > ```
+   >
+   > ```text
    > microk8s enable metallb
    > Enabling MetalLB
    > Enter each IP address range delimited by comma (e.g.  '10.64.140.43-10.64.140.49,192.168.0.105-192.168.0.111'): 192.168.1.27-192.168.1.27
-   > ``` 
-   In the values file, add the below fields global-> environment section with your own values.
-   ```
-   s3_bucket: <your-s3-bucket>
-   AWS_ACCESS_KEY_ID: <your-aws-access-key-id>
-   AWS_SECRET_ACCESS_KEY: <your-aws-secret-access-key-id>
-   ```
-   In the global -> chart section, change S3gateway to false.
-   ```
-   s3gateway: false
-   ```
-   In the global -> persistence section, change storageClass as below.
-   ```
-   storageClass: microk8s-hostpath
-   ```
+   > ```
+   >
+   > In the values file, add the below fields global-&gt; environment section with your own values.
+   >
+   > ```text
+   > s3_bucket: <your-s3-bucket>
+   > AWS_ACCESS_KEY_ID: <your-aws-access-key-id>
+   > AWS_SECRET_ACCESS_KEY: <your-aws-secret-access-key-id>
+   > ```
+   >
+   > In the global -&gt; chart section, change S3gateway to false.
+   >
+   > ```text
+   > s3gateway: false
+   > ```
+   >
+   > In the global -&gt; persistence section, change storageClass as below.
+   >
+   > ```text
+   > storageClass: microk8s-hostpath
+   > ```
 
 5. Install LOGIQ PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
