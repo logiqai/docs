@@ -354,6 +354,33 @@ For Kubernetes version &lt; 1.17, please change the apiVersion: "extensions/v1be
 $ kubectl create -f fluent-bit-daemonset-logiq-output.yml
 ```
 
+#### Enabling TLS
+
+You can enable TLS for Fluent Bit if you'd like to secure the data transferred through Fluent Bit to LOGIQ. To do so, edit the \`fluent-bit-config-logiq-forward.yaml\` file as shown below. 
+
+```text
+output-logiq.conf: |
+    [OUTPUT]
+        Name          http
+        Match         *
+        Host          ${LOGIQ_HOST}
+        Port          ${LOGIQ_PORT}
+        URI           /v1/json_batch
+        Format        json
+        tls           on
+        tls.verify    off
+        net.keepalive off
+        compress      gzip
+        Header Authorization Bearer ${LOGIQ_TOKEN}
+```
+
+Be sure to also configure the following:
+
+* name: LOGIQ\_HOST value: "YOUR\_LOGIQ\_SERVER\_IP"
+* name: LOGIQ\_PORT value: "443"
+* name: CLUSTER\_ID value: "YOUR\_CLUSTER\_ID"
+* name: LOGIQ\_TOKEN value: "YOUR\_INGEST\_TOKEN"
+
 ## Docker Syslog log driver
 
 Using the docker syslog driver to send logs to LOGIQ is quite simple. Details about the docker syslog driver can be found here [https://docs.docker.com/config/containers/logging/syslog/](https://docs.docker.com/config/containers/logging/syslog/)
