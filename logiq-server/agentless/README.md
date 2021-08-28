@@ -493,7 +493,7 @@ The below code block defines the minimal changes to be added to fluentd configur
 
 ## Fluent-bit configuration
 
-_Forward_ is the protocol used by [Fluentd](http://www.fluentd.org) to route messages between peers. The **forward** output plugin allows to provide interoperability between compatible systems, Logiq being one.
+_HTTP_  output plugin allows to flush your records into a HTTP endpoint. The **HTTP** output plugin allows to provide interoperability between compatible systems, Logiq being one.
 
 The below code block defines the minimal changes to be added to the fluent-bit configuration using the http plugin to start sending log events to flash.
 
