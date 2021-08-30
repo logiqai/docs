@@ -140,21 +140,13 @@ action(type="omrelp"
         tls.PermittedPeer=["SHA1:BF:46:AB:9F:A3:77:46:AF:6B:D2:EC:A4:30:72:F1:CC:0E:17:C9:42"]
         action.reportSuspensionContinuation="on"
         action.resumeRetryCount="-1"
-        action.resumeInterval="10"
-        queue.type="fixedArray"
+        action.resumeInterval="1"
+        action.resumeIntervalMax="1"
+        queue.type="LinkedList"
         queue.size="250000"
-        queue.dequeueBatchSize="1024"
-        queue.workerThreads="4"
-        queue.workerThreadMinimumMessages="50000"
-        queue.spoolDirectory="/var/log/rsyslog"
-        queue.fileName="XXX_sock"
-        queue.maxFileSize="16m"
-        queue.maxDiskSpace="2G"
-        queue.highWaterMark="200000"
-        queue.lowWaterMark="100000"
-        queue.checkpointInterval="30000"
-        queue.saveOnShutdown="on"
-        queue.timeoutEnqueue="1"
+        queue.dequeueBatchSize="4096"
+        queue.workerThreads="10"
+        queue.workerThreadMinimumMessages="25000"
 )
 ```
 
@@ -356,7 +348,7 @@ $ kubectl create -f fluent-bit-daemonset-logiq-output.yml
 
 #### Enabling TLS
 
-You can enable TLS for Fluent Bit if you'd like to secure the data transferred through Fluent Bit to LOGIQ. To do so, edit the \`fluent-bit-config-logiq-forward.yaml\` file as shown below. 
+You can enable TLS for Fluent Bit if you'd like to secure the data transferred through Fluent Bit to LOGIQ. To do so, edit the \`fluent-bit-config-logiq-forward.yaml\` file as shown below.
 
 ```text
 output-logiq.conf: |
@@ -493,7 +485,7 @@ The below code block defines the minimal changes to be added to fluentd configur
 
 ## Fluent-bit configuration
 
-_HTTP_  output plugin allows to flush your records into a HTTP endpoint. The **HTTP** output plugin allows to provide interoperability between compatible systems, Logiq being one.
+_HTTP_ output plugin allows to flush your records into a HTTP endpoint. The **HTTP** output plugin allows to provide interoperability between compatible systems, Logiq being one.
 
 The below code block defines the minimal changes to be added to the fluent-bit configuration using the http plugin to start sending log events to flash.
 
