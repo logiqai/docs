@@ -7,13 +7,17 @@
 
 * [End User License Agreement](eula/eula.md)
 
+## Deploying LOGIQ
+
+* [LOGIQ SaaS](deploying-logiq/logiq-saas.md)
+* [LOGIQ PaaS Quickstart](deploying-logiq/quickstart-guide.md)
+* [LOGIQ PaaS Community Edition](deploying-logiq/logiq-paas-community-edition.md)
+* [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/k8s-quickstart-guide.md)
+* [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/deploying-logiq-paas-on-microk8s.md)
+* [Deploying LOGIQ PaaS on AWS](deploying-logiq/aws-cloudformation.md)
+
 ## Log Insights <a id="logiq-server"></a>
 
-* [Quickstart guide](logiq-server/quickstart-guide.md)
-* [LOGIQ PaaS Community Edition](logiq-server/logiq-paas-community-edition.md)
-* [K8S Quickstart guide](logiq-server/k8s-quickstart-guide.md)
-* [AWS Quickstart guide](logiq-server/aws-cloudformation.md)
-* [Deploying LOGIQ PaaS on MicroK8s](logiq-server/deploying-logiq-paas-on-microk8s.md)
 * [Ingesting data](logiq-server/agentless/README.md)
   * [AWS CloudWatch Exporter](logiq-server/agentless/aws-cloudwatch-exporter.md)
   * [Generating Secure Ingest Token](logiq-server/agentless/generating-secure-ingest-token.md)
@@ -30,6 +34,7 @@
 
 ## Vewing Logs
 
+* [The LOGIQ UI](vewing-logs/the-logiq-ui.md)
 * [Terminology](vewing-logs/logs-terminology.md)
 * [Logs Page](vewing-logs/logs-page.md)
 * [Search Page](vewing-logs/search-page/README.md)
