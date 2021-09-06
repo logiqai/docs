@@ -2,3 +2,7 @@ root: ./
 
 redirects:
     logiq-server/quickstart-guide: deploying-logiq/quickstart-guide.md
+    logiq-server/logiq-paas-community-edition: deploying-logiq/logiq-paas-community-edition.md
+    logiq-server/k8s-quickstart-guide: deploying-logiq/k8s-quickstart-guide.md
+    logiq-server/deploying-logiq-paas-on-microk8s: deploying-logiq/deploying-logiq-paas-on-microk8s.md
+    logiq-server/aws-cloudformation: deploying-logiq/aws-cloudformation.md
