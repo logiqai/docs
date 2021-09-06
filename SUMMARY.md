@@ -7,14 +7,14 @@
 
 * [End User License Agreement](eula/eula.md)
 
-## Deploying LOGIQ
+## Deploying LOGIQ <a id="logiq-server-1"></a>
 
-* [LOGIQ SaaS](deploying-logiq/logiq-saas.md)
-* [LOGIQ PaaS Quickstart](deploying-logiq/quickstart-guide.md)
-* [LOGIQ PaaS Community Edition](deploying-logiq/logiq-paas-community-edition.md)
-* [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/k8s-quickstart-guide.md)
-* [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/deploying-logiq-paas-on-microk8s.md)
-* [Deploying LOGIQ PaaS on AWS](deploying-logiq/aws-cloudformation.md)
+* [LOGIQ SaaS](logiq-server-1/logiq-saas.md)
+* [LOGIQ PaaS Quickstart](logiq-server-1/quickstart-guide.md)
+* [LOGIQ PaaS Community Edition](logiq-server-1/logiq-paas-community-edition.md)
+* [Deploying LOGIQ PaaS on Kubernetes](logiq-server-1/k8s-quickstart-guide.md)
+* [Deploying LOGIQ PaaS on MicroK8s](logiq-server-1/deploying-logiq-paas-on-microk8s.md)
+* [Deploying LOGIQ PaaS on AWS](logiq-server-1/aws-cloudformation.md)
 
 ## Log Insights <a id="logiq-server"></a>
 
