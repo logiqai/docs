@@ -1,0 +1,4 @@
+root: ./
+
+redirects:
+    logiq-server/quickstart-guide: deploying-logiq/quickstart-guide.md
