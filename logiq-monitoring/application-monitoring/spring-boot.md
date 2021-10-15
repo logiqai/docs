@@ -54,7 +54,7 @@ Restart the server, invoke your APIs a few times and navigate to `http://localho
 
 ![](<../../.gitbook/assets/image (14).png>)
 
-Once these metrics are available, you can use LOGIQ to visualize them and set up alerts for important events. The following image depicts an example of Spring Bootmonitoring dashboard built by visualizing metrics ingested into LOGIQ via Prometheus. 
+Once these metrics are available, you can use LOGIQ to visualize them and set up alerts for important events. The following image depicts an example of Spring Boot monitoring dashboard built by visualizing metrics ingested into LOGIQ via Prometheus. 
 
 ![Logiq Spring Boot Monitoring Dashboard](<../../.gitbook/assets/image (17).png>)
 
