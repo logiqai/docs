@@ -56,5 +56,5 @@ Restart the server, invoke your APIs a few times and navigate to `http://localho
 
 Once the metrics are available Logiq can visualize and alert users on important events
 
-![Logiq Spring Boot Monitoring Dashboard ](<../../.gitbook/assets/image (15).png>)
+![Logiq Spring Boot Monitoring Dashboard](<../../.gitbook/assets/image (17).png>)
 
