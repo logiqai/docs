@@ -1,5 +1,5 @@
 ---
-description: Monitoring spring boot applications using Prometheus
+description: Monitoring spring boot applications using Logiq
 ---
 
 # Spring Boot
@@ -12,7 +12,7 @@ description: Monitoring spring boot applications using Prometheus
 
 ### Enabling Actuator and Micrometer dependencies
 
-In Prometheus' pom.xml file, add the Spring Boot Actuator and Micrometer binaries for Prometheus, as shown below. 
+In Spring Boot's pom.xml file, add the Spring Boot Actuator and Micrometer dependencies to enable Prometheus monitoring, as shown below. 
 
 ```
 // Enable Actuator dependency
@@ -53,3 +53,8 @@ Micrometer comes with a [timed annotation](https://micrometer.io/docs/concepts#\
 Restart the server, invoke your APIs a few times and navigate to `http://localhost:<port>/actuator/prometheus`. You will now see the API stats being displayed along with other metrics. 
 
 ![](<../../.gitbook/assets/image (14).png>)
+
+Once the metrics are available Logiq can visualize and alert users on important events
+
+![Logiq Spring Boot Monitoring Dashboard ](<../../.gitbook/assets/image (15).png>)
+
