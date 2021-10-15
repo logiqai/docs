@@ -29,24 +29,24 @@
 
 ### Fixed
 
-* DEFECT\#613 Query backend not honoring the startTime sent from UI
+* DEFECT#613 Query backend not honoring the startTime sent from UI
 
 ### Changed
 
-* PERF\#614 Uploader Optimizations
+* PERF#614 Uploader Optimizations
 
 ## 2.1.11.24 - 2021-04-02
 
 ### Changed
 
-* PERF\#603 Query Improvements
+* PERF#603 Query Improvements
   * Bloom filter for faster search
   * Query interval skip improvements
-* PERF\#602 Metadata Improvements
+* PERF#602 Metadata Improvements
   * Metadata uploader improvements
-* UI\#599 UI enhancements
+* UI#599 UI enhancements
   * Search and logs page optimizations
-* FEATURE\#580 AWS improvements
+* FEATURE#580 AWS improvements
   * AWS ECS logging improvements
   * Customized AWS fargate 1.4 fluent driver image
   * AWS Cloudwatch exporter
@@ -58,7 +58,7 @@
 ### Log aggregation
 
 * Support for **and** expressions in search 
-* Event rules designer support for **&&** and **\|\|** for individual parameters
+* Event rules designer support for **&&** and **||** for individual parameters
 * Performance and memory improvements
 
 ### Data convergence
@@ -189,7 +189,7 @@ Official GA of LOGIQ's complete Observability platform with support for metrics 
 
 #### K8S
 
-* Scale-out and HA deployment for Kubernetes via HELM 3 chart \( [https://github.com/logiqai/helm-charts](https://github.com/logiqai/helm-charts) \)
+* Scale-out and HA deployment for Kubernetes via HELM 3 chart ( [https://github.com/logiqai/helm-charts](https://github.com/logiqai/helm-charts) )
 
 #### UI
 
@@ -200,7 +200,7 @@ Official GA of LOGIQ's complete Observability platform with support for metrics 
 
 #### CLI
 
-* [logiqctl]() is now GA with support for log tailing, historical queries and search
+* [logiqctl](broken-reference) is now GA with support for log tailing, historical queries and search
 
 ## 1.1.0 - 2020-02-27
 
@@ -228,6 +228,4 @@ Official GA of LOGIQ's Log Insights platform
 * AWS CloudFormation 1-click deployment
 * Rsyslog, Syslog protocol support for data ingest via Rsyslogd, syslogd, syslog-ng, logstash, fluentd, fluentbit, docker logging syslog driver.
 * Built-in UI with SQL Queries, Faceted search, Alerts, Dashboards
-
-
 

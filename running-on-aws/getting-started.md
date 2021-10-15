@@ -33,5 +33,3 @@ If LOGIQ is running as a managed cluster for you, please provide us with the abo
 
 
 
-
-

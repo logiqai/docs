@@ -25,7 +25,7 @@ LOGIQ handles the timestamps in the following order
 
 Users can specify timestamp extraction rules for log data using the LOGIQ data manipulation capabilities. Timestamps are handled by timestamp rules that are defined as follows
 
-```text
+```
 - name: custom_timestamp
   namespaces: http.*
   applications: .*
@@ -35,9 +35,8 @@ Users can specify timestamp extraction rules for log data using the LOGIQ data m
 
 Using the example rule above, a logline such as the one below will result in the proper timestamp being parsed and extracted from the log line.  
 
-```text
+```
 "2009/06/29 13:30:10.956+05:30 something interesting happened"
 ```
 
  
-

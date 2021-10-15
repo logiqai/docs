@@ -4,7 +4,7 @@ description: >-
   construct to manage user access to log data
 ---
 
-# Role-Based Access Control \(RBAC\)
+# Role-Based Access Control (RBAC)
 
 ## Overview
 
@@ -14,13 +14,12 @@ Access to log data for users is managed by namespace controls. To learn more abo
 
 When a user has restricted access to select namespaces, the UI will show only the namespaces the user can access for Logs, Search, and Events. In the example below, the user has restricted access to only 2 namespaces; `customer-tooling` and `rc-logiq:rc`
 
-![](../.gitbook/assets/screen-shot-2020-08-11-at-8.54.05-am.png)
+![](<../.gitbook/assets/Screen Shot 2020-08-11 at 8.54.05 AM.png>)
 
 ## Logiqctl Controls
 
 LOGIQ's cli provides a similar restriction when a user tries to access resources under Role-based access controls. In the example below, the same user can be seen to only access the same namespaces;`customer-tooling` and `rc-logiq:rc`
 
-![](../.gitbook/assets/screen-shot-2020-08-11-at-9.09.19-am.png)
+![](<../.gitbook/assets/Screen Shot 2020-08-11 at 9.09.19 AM.png>)
 
  
-

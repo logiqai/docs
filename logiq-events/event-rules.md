@@ -11,7 +11,7 @@ description: >-
 
 To access event Rules UI, click on "**Events**" menu and pick "**Rules**" option as shown in the screenshot below.
 
-![](../.gitbook/assets/screen-shot-2020-01-08-at-11.07.58-am.png)
+![](<../.gitbook/assets/Screen Shot 2020-01-08 at 11.07.58 AM.png>)
 
 ## Viewing Event Rules
 
@@ -20,7 +20,7 @@ The Event Rules page lists all the available rules in the LOGIQ server. Each rul
 * **Group**: Denotes logical grouping of event rules. Typically, but not necessarily, it is the application or service name.
 * **Name**: Unique name to identify the event rule.
 * **Level**: It can be one of _**"Info", "Warning" or "High"**_.
-*  **Application Match:** The condition on which the event will be triggered. Supports regex matches.
+*  **Application Match:** The condition on which the event will be triggered. Supports regex matches.
 * **Description**: A human-readable description of the event.
 * **Condition**: An expression applied to ingested data. Events are triggered when the boolean condition  evaluates to "True". Please see refer to [Writing condition expressions](event-rules.md#condition-expression-syntax).
 * **Active**: This field indicates whether the event rule condition is enabled and has to be applied to the incoming data. Rules that are inactive are ignored.
@@ -59,10 +59,10 @@ The attribute values are of type string unless otherwise specified
 
 * severity, Severity
 * facility, Facility
-* app\_name, appname, Appname, AppName
+* app_name, appname, Appname, AppName
 * timestamp, Timestamp
 * message, Message
-* host\_name, hostname, Hostname, HostName
+* host_name, hostname, Hostname, HostName
 * groupings
 * tag
 
@@ -71,22 +71,21 @@ The attribute values are of type string unless otherwise specified
 * Modifiers: `+` `-` `/` `*` `&` `|` `^` `**` `%` `>>` `<<`
 * Comparators: `>` `>=` `<` `<=` `==` `!=` `=~` `!~`
 * Logical ops: `||` `&&`
-* Numeric constants, as 64-bit floating point \(`12345.678`\)
-* String constants \(single quotes: `'foobar'`\)
-* Date constants \(single quotes, using any permutation of RFC3339, ISO8601, ruby date, or unix date; date parsing is automatically tried with any string constant\)
+* Numeric constants, as 64-bit floating point (`12345.678`)
+* String constants (single quotes: `'foobar'`)
+* Date constants (single quotes, using any permutation of RFC3339, ISO8601, ruby date, or unix date; date parsing is automatically tried with any string constant)
 * Boolean constants: `true` `false`
 * Parenthesis to control order of evaluation `(` `)`
-* Arrays \(anything separated by `,` within parenthesis: `(1, 2, 'foo')`\)
+* Arrays (anything separated by `,` within parenthesis: `(1, 2, 'foo')`)
 * Prefixes: `!` `-` `~`
 * Regex comparators `=~` `!~`
 
 ## Examples
 
-```text
+```
 -
   name: BreakInAttempt
   description: POSSIBLE BREAK-IN ATTEMPT!
   condition: message =~ 'POSSIBLE BREAK-IN ATTEMPT'
   level: high
 ```
-

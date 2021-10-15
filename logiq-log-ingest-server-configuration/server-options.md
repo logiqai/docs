@@ -4,51 +4,51 @@
 
 The options section in the LOGIQ configuration file is for changing default server parameters. Below are the commonly used options for typical deployments. Options can be either specified as quoted strings / non-quoted e.g. "2514" or 2514
 
-### ca \[optional\]
+### ca \[optional]
 
 CA Certificate file path
 
-### cert \[optional\]
+### cert \[optional]
 
 Server Certificate file path
 
-### host \[optional\]
+### host \[optional]
 
 Host IP's which server binds to - default is 0.0.0.0
 
-### key \[optional\]
+### key \[optional]
 
 Server certificate key
 
-### relp\_port \[optional\]
+### relp_port \[optional]
 
 The RELP port where server listens for RELP connection. Default port is _**20514**_
 
-### **relp\_port\_tls** \[optional\]
+### **relp_port_tls **\[optional]
 
 The RELP port where server listens for RELP connection. Default port is _**2514**_
 
-### syslog\_port \[optional\]
+### syslog_port \[optional]
 
 The syslog port where server listens for syslog connection. Default port is _**514**_
 
-### **syslog\_port\_tls** \[optional\]
+### **syslog_port_tls **\[optional]
 
 The syslog port where server listens for syslog connection. Default port is _**7514**_
 
-### cli\_port \[optional\]
+### cli_port \[optional]
 
 The port where the LOGIQ CLI is accessed. Default port is _**9998**_
 
-### cli\_user \[optional\]
+### cli_user \[optional]
 
 Login for LOGIQ CLI console
 
-### cli\_password \[optional\]
+### cli_password \[optional]
 
 Password for LOGIQ CLI console
 
-### glue\_iam\_service\_role \[optional\]
+### glue_iam_service_role \[optional]
 
 ARN of the glue service role. See [here](../running-on-aws/aws-iam-resources.md#iam-service-role-for-glue) for more details. This only applies if you are trying to run LOGIQ in AWS.
 
@@ -70,4 +70,3 @@ options:
     cli_password : "logiq_secret"
     glue_iam_service_role: "arn:aws:iam::199500300922:role/LogIQ-Glue_role"
 ```
-

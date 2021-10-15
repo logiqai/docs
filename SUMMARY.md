@@ -16,7 +16,7 @@
 * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/deploying-logiq-paas-on-microk8s.md)
 * [Deploying LOGIQ PaaS on AWS](deploying-logiq/aws-cloudformation.md)
 
-## Log Insights <a id="logiq-server"></a>
+## Log Insights <a href="logiq-server" id="logiq-server"></a>
 
 * [Ingesting data](logiq-server/agentless/README.md)
   * [AWS CloudWatch Exporter](logiq-server/agentless/aws-cloudwatch-exporter.md)
@@ -31,6 +31,8 @@
 * [Prometheus Data source](logiq-monitoring/querying-data.md)
 * [JSON Data source](logiq-monitoring/json-data-source.md)
 * [Elasticsearch Data source](logiq-monitoring/elasticsearch-data-source.md)
+* [Application Monitoring](logiq-monitoring/application-monitoring/README.md)
+  * [Spring Boot](logiq-monitoring/application-monitoring/spring-boot.md)
 
 ## Vewing Logs
 
@@ -46,10 +48,10 @@
 * [logiqctl](vewing-logs/logiqctl/README.md)
   * [Configuring logiqctl](vewing-logs/logiqctl/configuring-logiqctl.md)
   * [Obtaining API Key](vewing-logs/logiqctl/obtaining-api-key.md)
-* [Role-Based Access Control \(RBAC\)](vewing-logs/role-based-access-control.md)
+* [Role-Based Access Control (RBAC)](vewing-logs/role-based-access-control.md)
 * [Configuring RBAC](vewing-logs/configuring-rbac.md)
 
-## ANOMALY DETECTION <a id="logiq-events"></a>
+## ANOMALY DETECTION <a href="logiq-events" id="logiq-events"></a>
 
 * [Events](logiq-events/events.md)
 * [Event Rules](logiq-events/event-rules.md)
@@ -64,13 +66,13 @@
 
 * [Query API](logiq-streaming/historical-data.md)
 
-## LOGIQ Configuration <a id="logiq-ui-configuration"></a>
+## LOGIQ Configuration <a href="logiq-ui-configuration" id="logiq-ui-configuration"></a>
 
 * [E-Mail Configuration](logiq-ui-configuration/email-configuration-setup.md)
 * [Alert Destinations](logiq-ui-configuration/alert-destinations.md)
 * [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration.md)
 
-## Log Ingest configuration <a id="logiq-log-ingest-server-configuration"></a>
+## Log Ingest configuration <a href="logiq-log-ingest-server-configuration" id="logiq-log-ingest-server-configuration"></a>
 
 * [Terminology](logiq-log-ingest-server-configuration/terminology.md)
 * [Minimal server configuration](logiq-log-ingest-server-configuration/minimal-server-configuration.md)
@@ -88,4 +90,3 @@
 * [Getting started](running-on-aws/getting-started.md)
 * [AWS IAM Resources](running-on-aws/aws-iam-resources.md)
 * [1-Click deployment using CloudFormation](running-on-aws/ami-using-cloudformation.md)
-

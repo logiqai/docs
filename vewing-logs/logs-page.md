@@ -17,4 +17,3 @@ The logs modal presents an infinite view of application logs. The modal is loade
 ![Individual Actions](../.gitbook/assets/line_options.png)
 
 The dots available on each line will reveal additional options to copy individual log lines as json to clipboard and to define an **alertable event** for the selected log line. Refer to events documentation to see how to create events. See [Alertable event ](../logiq-events/alerts.md#creating-an-alertable-event)section.
-

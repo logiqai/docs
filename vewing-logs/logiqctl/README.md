@@ -15,4 +15,3 @@ You can
 * Manage Dashboards
 * Create event rules
 * Manage license
-

@@ -12,7 +12,7 @@ Getting data is a two step process
 
 POST /v1/query will respond with a QueryId. Use that to access data
 
-```text
+```
 $ curl --location --request POST 'http://cluster-1.logiq.ai/v1/query' \
 --header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
@@ -33,7 +33,7 @@ $ curl --location --request POST 'http://cluster-1.logiq.ai/v1/query' \
 }'
 ```
 
-```text
+```
 {
     "queryId": "4c977d08-4acf-52b5-a99d-d8c0eb41fe4b-lgq"
 }
@@ -41,7 +41,7 @@ $ curl --location --request POST 'http://cluster-1.logiq.ai/v1/query' \
 
 Use GET /v1/data/{queryId}/next and GET /v1/data/{queryId}/previous to retrieve data. 
 
-```text
+```
 $ curl 'https://cluster-1.logiq.ai/v1/data/4c977d08-4acf-52b5-a99d-d8c0eb41fe4b-lgq/next'
 [...data]
 $ curl 'https://cluster-1.logiq.ai/v1/data/4c977d08-4acf-52b5-a99d-d8c0eb41fe4b-lgq/previous'
@@ -59,17 +59,17 @@ $ curl 'https://cluster-1.logiq.ai/v1/data/4c977d08-4acf-52b5-a99d-d8c0eb41fe4b-
 
 **Parameters**
 
-| Name | Located in | Description | Required | Schema |
-| :--- | :--- | :--- | :--- | :--- |
-| body | body |  | Yes | [queryQueryProperties](historical-data.md#queryqueryproperties) |
+| Name | Located in | Description | Required | Schema                                                          |
+| ---- | ---------- | ----------- | -------- | --------------------------------------------------------------- |
+| body | body       |             | Yes      | [queryQueryProperties](historical-data.md#queryqueryproperties) |
 
 **Responses**
 
-| **Code** | Description | Schema |
-| :--- | :--- | :--- |
-| 200 | A successful response. | [queryGetQueryResponse](historical-data.md#querygetqueryresponse) |
+| **Code** | Description            | Schema                                                            |
+| -------- | ---------------------- | ----------------------------------------------------------------- |
+| 200      | A successful response. | [queryGetQueryResponse](historical-data.md#querygetqueryresponse) |
 
-\*\*\*\*
+****
 
 #### /v1/data/{queryId}/next
 
@@ -77,18 +77,18 @@ $ curl 'https://cluster-1.logiq.ai/v1/data/4c977d08-4acf-52b5-a99d-d8c0eb41fe4b-
 
 **Parameters**
 
-| Name | Located in | Description | Required | Schema |
-| :--- | :--- | :--- | :--- | :--- |
-| queryId | path |  | Yes | string |
+| Name    | Located in | Description | Required | Schema |
+| ------- | ---------- | ----------- | -------- | ------ |
+| queryId | path       |             | Yes      | string |
 
 **Responses**
 
-| Code | Description | Schema |
-| :--- | :--- | :--- |
-| 200 | A successful response. | [queryGetDataResponse](historical-data.md#querygetdataresponse) |
-| 400 | Invalid Request. |  |
-| 403 | Token Expired. |  |
-| 404 | Returned when the resource does not exist. |  |
+| Code | Description                                | Schema                                                          |
+| ---- | ------------------------------------------ | --------------------------------------------------------------- |
+| 200  | A successful response.                     | [queryGetDataResponse](historical-data.md#querygetdataresponse) |
+| 400  | Invalid Request.                           |                                                                 |
+| 403  | Token Expired.                             |                                                                 |
+| 404  | Returned when the resource does not exist. |                                                                 |
 
 #### /v1/data/{queryId}/previous
 
@@ -96,25 +96,25 @@ $ curl 'https://cluster-1.logiq.ai/v1/data/4c977d08-4acf-52b5-a99d-d8c0eb41fe4b-
 
 **Parameters**
 
-| Name | Located in | Description | Required | Schema |
-| :--- | :--- | :--- | :--- | :--- |
-| queryId | path |  | Yes | string |
-| \_internal | query |  | No | boolean \(boolean\) |
+| Name       | Located in | Description | Required | Schema            |
+| ---------- | ---------- | ----------- | -------- | ----------------- |
+| queryId    | path       |             | Yes      | string            |
+| \_internal | query      |             | No       | boolean (boolean) |
 
 **Responses**
 
-| Code | Description | Schema |
-| :--- | :--- | :--- |
-| 200 | A successful response. | [queryGetDataResponse](historical-data.md#querygetdataresponse) |
-| 400 | Invalid Request. |  |
-| 403 | Token Expired. |  |
-| 404 | Returned when the resource does not exist. |  |
+| Code | Description                                | Schema                                                          |
+| ---- | ------------------------------------------ | --------------------------------------------------------------- |
+| 200  | A successful response.                     | [queryGetDataResponse](historical-data.md#querygetdataresponse) |
+| 400  | Invalid Request.                           |                                                                 |
+| 403  | Token Expired.                             |                                                                 |
+| 404  | Returned when the resource does not exist. |                                                                 |
 
 **protobufAny**
 
 `A`
 
-```text
+```
 if (any.UnpackTo(&foo)) {
   ...
 }
@@ -122,7 +122,7 @@ if (any.UnpackTo(&foo)) {
 
 Example 2: Pack and unpack a message in Java.
 
-```text
+```
 Foo foo = ...;
 Any any = Any.pack(foo);
 ...
@@ -133,7 +133,7 @@ if (any.is(Foo.class)) {
 
 Example 3: Pack and unpack a message in Python.
 
-```text
+```
 foo = Foo(...)
 any = Any()
 any.Pack(foo)
@@ -145,7 +145,7 @@ if any.Is(Foo.DESCRIPTOR):
 
 Example 4: Pack and unpack a message in Go
 
-```text
+```
  foo := &pb.Foo{...}
  any, err := ptypes.MarshalAny(foo)
  ...
@@ -161,7 +161,7 @@ The pack methods provided by protobuf library will by default use 'type.googleap
 
 The JSON representation of an `Any` value uses the regular representation of the deserialized, embedded message, with an additional field `@type` which contains the type URL. Example:
 
-```text
+```
 package google.profile;
 message Person {
   string first_name = 1;
@@ -175,9 +175,9 @@ message Person {
 }
 ```
 
-If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example \(for message \[google.protobuf.Duration\]\[\]\):
+If the embedded message type is well-known and has a custom JSON representation, that representation will be embedded adding a field `value` which holds the custom JSON in addition to the `@type` field. Example (for message \[google.protobuf.Duration]\[]):
 
-```text
+```
 {
   "@type": "type.googleapis.com/google.protobuf.Duration",
   "value": "1.212s"
@@ -186,86 +186,85 @@ If the embedded message type is well-known and has a custom JSON representation,
 
 **queryFilterValues**
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| values | \[ string \] |  | No |
+| Name   | Type        | Description | Required |
+| ------ | ----------- | ----------- | -------- |
+| values | \[ string ] |             | No       |
 
 #### **queryGetDataResponse**
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| data | \[ [querySysLogMessage](historical-data.md#querysyslogmessage) \] |  | No |
-| Status | string |  | No |
-| remaining | integer |  | No |
+| Name      | Type                                                             | Description | Required |
+| --------- | ---------------------------------------------------------------- | ----------- | -------- |
+| data      | \[ [querySysLogMessage](historical-data.md#querysyslogmessage) ] |             | No       |
+| Status    | string                                                           |             | No       |
+| remaining | integer                                                          |             | No       |
 
 #### **queryGetQueryResponse**
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| queryId | string |  | No |
-| info | \[ [queryQueryInfo](historical-data.md#queryqueryinfo) \] |  | No |
-| errors | \[ [queryQueryErrors](historical-data.md#queryqueryerrors) \] |  | No |
-| meta | object |  | No |
+| Name    | Type                                                         | Description | Required |
+| ------- | ------------------------------------------------------------ | ----------- | -------- |
+| queryId | string                                                       |             | No       |
+| info    | \[ [queryQueryInfo](historical-data.md#queryqueryinfo) ]     |             | No       |
+| errors  | \[ [queryQueryErrors](historical-data.md#queryqueryerrors) ] |             | No       |
+| meta    | object                                                       |             | No       |
 
 **queryOrderBy**
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| queryOrderBy | string |  |  |
+| Name         | Type   | Description | Required |
+| ------------ | ------ | ----------- | -------- |
+| queryOrderBy | string |             |          |
 
 #### **queryQueryErrors**
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| Key | string |  | No |
-| message | string |  | No |
+| Name    | Type   | Description | Required |
+| ------- | ------ | ----------- | -------- |
+| Key     | string |             | No       |
+| message | string |             | No       |
 
 #### **queryQueryInfo**
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| Key | string |  | No |
-| message | string |  | No |
+| Name    | Type   | Description | Required |
+| ------- | ------ | ----------- | -------- |
+| Key     | string |             | No       |
+| message | string |             | No       |
 
 #### **queryQueryProperties**
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| applicationNames | \[ string \] |  | No |
-| filters | object |  | No |
-| namespace | string |  | No |
-| pageSize | long |  | No |
-| startTime | string |  | No |
-| endTime | string |  | No |
-| keyWord | string |  | No |
+| Name             | Type        | Description | Required |
+| ---------------- | ----------- | ----------- | -------- |
+| applicationNames | \[ string ] |             | No       |
+| filters          | object      |             | No       |
+| namespace        | string      |             | No       |
+| pageSize         | long        |             | No       |
+| startTime        | string      |             | No       |
+| endTime          | string      |             | No       |
+| keyWord          | string      |             | No       |
 
 #### **querySysLogMessage**
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| ID | string |  | No |
-| AppName | string |  | No |
-| Facility | string |  | No |
-| FacilityString | string |  | No |
-| Hostname | string |  | No |
-| Message | string |  | No |
-| MsgID | string |  | No |
-| PartitionID | string |  | No |
-| Priority | string |  | No |
-| ProcID | string |  | No |
-| Sender | string |  | No |
-| Severity | string |  | No |
-| SeverityString | string |  | No |
-| StructuredData | string |  | No |
-| Tag | string |  | No |
-| Timestamp | string |  | No |
-| Namespace | string |  | No |
+| Name           | Type   | Description | Required |
+| -------------- | ------ | ----------- | -------- |
+| ID             | string |             | No       |
+| AppName        | string |             | No       |
+| Facility       | string |             | No       |
+| FacilityString | string |             | No       |
+| Hostname       | string |             | No       |
+| Message        | string |             | No       |
+| MsgID          | string |             | No       |
+| PartitionID    | string |             | No       |
+| Priority       | string |             | No       |
+| ProcID         | string |             | No       |
+| Sender         | string |             | No       |
+| Severity       | string |             | No       |
+| SeverityString | string |             | No       |
+| StructuredData | string |             | No       |
+| Tag            | string |             | No       |
+| Timestamp      | string |             | No       |
+| Namespace      | string |             | No       |
 
 **runtimeError**
 
-| Name | Type | Description | Required |
-| :--- | :--- | :--- | :--- |
-| error | string |  | No |
-| code | integer |  | No |
-| message | string |  | No |
-
+| Name    | Type    | Description | Required |
+| ------- | ------- | ----------- | -------- |
+| error   | string  |             | No       |
+| code    | integer |             | No       |
+| message | string  |             | No       |

@@ -6,7 +6,7 @@ LOGIQ Insights is a complete observability platform for monitoring, log aggregat
 
 The LOGIQ platform comprises of a User interface, a [command line toolkit](https://logiqctl.logiq.ai), a monitoring stack for time series metrics and a log analytics stack for log data.
 
-![](.gitbook/assets/screen-shot-2021-08-12-at-9.42.57-am.png)
+![](<.gitbook/assets/Screen Shot 2021-08-12 at 9.42.57 AM.png>)
 
 ## Monitoring
 
@@ -25,4 +25,3 @@ The LOGIQ log ingest server is natively written in the Go programming language a
 LOGIQ is a member of the CNCF
 
 ![](.gitbook/assets/cncf-color.png)
-

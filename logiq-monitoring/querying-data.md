@@ -2,7 +2,7 @@
 
 LOGIQ's Prometheus integration allows querying data from the query editor. Just enter a PromQL query and see your data and create visualizations in an instant
 
-![](../.gitbook/assets/screen-shot-2020-04-27-at-6.13.01-pm.png)
+![](<../.gitbook/assets/Screen Shot 2020-04-27 at 6.13.01 PM.png>)
 
 ### Query language
 
@@ -10,7 +10,7 @@ The query language is nothing but the PromQL expression and any additional param
 
 Let's look at an example
 
-```text
+```
 query=go_gc_duration_seconds&duration=15m&step=60
 ```
 
@@ -24,7 +24,7 @@ LOGIQ translates the duration values to appropriate start and end times before i
 Using the duration syntax allows you to construct dynamic time range queries without specifying start or end time.
 {% endhint %}
 
-```text
+```
 example: instant query
   query=http_requests_total
 
@@ -52,7 +52,7 @@ LOGIQ's query language is 100% compatible with PromQL, primarily because all que
 
 Let's look at a more complicated expression below
 
-```text
+```
 query=(100-(avg(irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100))&duration=1h&step=30s
 ```
 
@@ -62,4 +62,3 @@ In the above example we are using several prometheus constructs
 * Function such as `irate`, `avg`
 * Using the vector syntax `[5m]` 
 * Mathematical operator like `* /` `-`
-

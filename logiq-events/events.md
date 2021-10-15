@@ -11,11 +11,11 @@ description: >-
 
 Events are shown in the user interface in the Events tab.
 
-![](../.gitbook/assets/screen-shot-2020-08-09-at-7.56.01-pm.png)
+![](<../.gitbook/assets/Screen Shot 2020-08-09 at 7.56.01 PM.png>)
 
 It is easy to narrow down and search for events that you care about using search and filtering
 
-![](../.gitbook/assets/screen-shot-2020-08-09-at-7.56.40-pm.png)
+![](<../.gitbook/assets/Screen Shot 2020-08-09 at 7.56.40 PM.png>)
 
 ### Event rules
 
@@ -26,4 +26,3 @@ See section on [Event Rules ](event-rules.md)for further information.
 ### Event De-duplication
 
 Events generated within a namespace are deduplicated by the LOGIQ platform. This reduces the amount of data stored at rest over time. At peak data rates, it is possible to get a 1000x reduction in the amount of events generated.
-

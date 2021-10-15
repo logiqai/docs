@@ -16,15 +16,15 @@ Reporting feature comes in handy when required to periodically search and aggreg
 
 * From the favourites
 
-![](../../.gitbook/assets/flash-high-level-reports-1-.png)
+![](../../.gitbook/assets/flash-high-level-reports\(1\).png)
 
 * From the queries page
 
-![](../../.gitbook/assets/flash-high-level-reports-2-.png)
+![](../../.gitbook/assets/flash-high-level-reports\(2\).png)
 
 Onclick of any of the above options opens the. "Create Reports" modal.
 
-![](../../.gitbook/assets/flash-high-level-reports-7-.png)
+![](../../.gitbook/assets/flash-high-level-reports\(7\).png)
 
 ### Group By
 
@@ -63,17 +63,15 @@ Following aggregation operators are available.
 
 Saved reports can be accessed from the Queries Page. If the query is running, this page will show the progress. 
 
-![](../../.gitbook/assets/flash-high-level-reports-4-.png)
+![](../../.gitbook/assets/flash-high-level-reports\(4\).png)
 
 Click on any report to view the results. Click on the toggle to enable periodic refresh.
 
-![](../../.gitbook/assets/flash-high-level-reports-5-.png)
+![](../../.gitbook/assets/flash-high-level-reports\(5\).png)
 
 ### Visualizations
 
 The results can be used to create visualizations. Click "New Visualization" to start visualizing the results. 
 
-![An example scatter plot](../../.gitbook/assets/newplot-3-.png)
-
-
+![An example scatter plot](../../.gitbook/assets/newplot\(3\).png)
 

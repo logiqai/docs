@@ -23,7 +23,7 @@ Groks patterns offer a powerful, yet simple mechanism to compose patterns for co
 
 Here is a simple example of composing grok expressions. We are going to compose a regex for hostnames and a regex for matching user names to create the Grok for email address matching
 
-```text
+```
 "HOSTNAME" : `\b[0-9A-Za-z][0-9A-Za-z-]{0,62}(?:\.[0-9A-Za-z][0-9A-Za-z-]{0,62})*(\.?|\b)`
 "EMAILLOCALPART" : `[a-zA-Z][a-zA-Z0-9_.+-=:]+`
 
@@ -40,7 +40,7 @@ In the example below, the LOGIQ engine will apply the combined apache log format
 
 Omitting either the `applications` or the `namespaces` keyword or both, excludes matching on that criteria. For e.g. omitting `applications` means the grok pattern is applied to data from all applications from the `webservers-.*` namespaces
 
-```text
+```
 - name: combined_apache_log
   type: extract
   format: "%{COMMONAPACHELOG} %{QS:referrer} %{QS:agent}
@@ -50,7 +50,7 @@ Omitting either the `applications` or the `namespaces` keyword or both, excludes
 
 The above rule would result in LOGIQ parsing out data as shown below. All the extracted values will automatically be made available as facets for filtering search data
 
-```text
+```
 {
   "AppName": "finite-test-engine",
   "Facility": "3",
@@ -138,4 +138,3 @@ The LOGIQ ingest server can watch a rules directory for rules files as described
 {% hint style="info" %}
 In a Kubernetes environment, the rules can be added to a running server via ConfigMaps
 {% endhint %}
-

@@ -12,7 +12,7 @@ The simplest way to try `logiqctl` is to download a pre-built binary from the [r
 
 `logiqctl` requires a running Logiq cluster and an api key. See how to get the API key [here](obtaining-api-key.md). After obtaining the API key, run the below commands to configure the logiqctl.
 
-```text
+```
 # Set cluster end point
 > logiqctl config set-cluster your-logiq-cluster.com
 
@@ -23,7 +23,7 @@ The simplest way to try `logiqctl` is to download a pre-built binary from the [r
 > logiqctl config set-context ngnix
 ```
 
-The default namespace settings can be overridden by passing `-n` flag. Basic operations are covered below, for more detailed documentation refer to the [user guide](https://logiqctl.logiq.ai/) for `logiqctl`. 
+The default namespace settings can be overridden by passing `-n` flag. Basic operations are covered below, for more detailed documentation refer to the [user guide](https://logiqctl.logiq.ai) for `logiqctl`. 
 
 ### `logiqctl` logs
 
@@ -36,4 +36,3 @@ The `logs` command is used to view historical logs. The command supports an `int
 The tail command can be used to view the logs from applications in realtime. The tail command runs an interactive prompt and lets the user choose the application and processes. 
 
 [![asciicast](https://asciinema.org/a/353019.svg)](https://asciinema.org/a/353019)
-

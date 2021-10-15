@@ -2,7 +2,7 @@
 
 Sources provide matching rules for sender ip addresses. Sources can specify a single IP, a range of IP addresses or a list of IP addresses. A source definition can specify one or more of single IP, range of IP addresses or a list of IP addresses. In this case the source condition evaluates true if any of these source definitions are a match.
 
-```text
+```
 sources:
   -
     name: localhost
@@ -22,26 +22,26 @@ sources:
 
 Sources are defined with the _**"sources"**_ keyword in the config file. All source definitions must have a "_**name"**_. Sources are referred in rules using their name. The _config file validator_ will flag an error for names that are not found and or source definitions that have a missing name.
 
-## name \[required\]
+## name \[required]
 
 This key is used to specify a unique name for source matching rules.
 
-```text
+```
 -
     name: qa_lab
     ipv4_list: 192.168.1.1, 192.168.1.10
 ```
 
-The source matching conditions are referenced in message [rules](/flash-configuration/rules.md) using their names
+The source matching conditions are referenced in message [rules](https://app.gitbook.com/flash-configuration/rules.md) using their names
 
-```text
+```
 rules:
   -
     source: localhost
     destination: t_debug
 ```
 
-## Client IP/Network details \[optional\]
+## Client IP/Network details \[optional]
 
 {% hint style="info" %}
 At least one of ipv4, ipv4\_list and ipv4\_range is required when selecting a Client IP/Network based source
@@ -49,7 +49,7 @@ At least one of ipv4, ipv4\_list and ipv4\_range is required when selecting a Cl
 
 ### ipv4 - Specify a single ip address
 
-```text
+```
 sources:
   - 
      name: qa_lab_dns
@@ -58,9 +58,9 @@ sources:
 
 ### ipv4\_list - Specify a list of ip addresses
 
-An IP address list is specified by individual ip addresses separated by commas. Note that in the _**"ipv4\_list"**_ keyword, only individual ip addresses are allowed and not CIDR ranges.
+An IP address list is specified by individual ip addresses separated by commas. Note that in the _**"ipv4\_list" **_keyword, only individual ip addresses are allowed and not CIDR ranges.
 
-```text
+```
 sources:
   -    
     name: qa_lab
@@ -71,7 +71,7 @@ sources:
 
 The IP address range is specified using the CIDR notation. E.g. 10.0.1.5/24 represents a range of ip's starting from 10.0.1.0 - 10.0.1.255 or a total of 256 addresses.
 
-```text
+```
 sources:
   -
     name: qa_lab
@@ -84,7 +84,7 @@ sources:
 
 LOGIQ can directly ingest from Stackdriver's Google cloud storage sink. You do not need to incur additional pub sub costs for this. Create a `google_cloud_storage` source in LOGIQ config for this.
 
-```text
+```
 -
     name: stackdriver_gcp_storage_bucket
     s3:
@@ -104,4 +104,3 @@ LOGIQ can directly ingest from Stackdriver's Google cloud storage sink. You do n
         }
       bucket: <cloud storage bucket name>
 ```
-

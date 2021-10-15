@@ -38,13 +38,13 @@ You are now ready to bring up the LOGIQ stack.
 
 ### Download container images
 
-```text
+```
 $docker-compose -f docker-compose.quickstart.yml pull
 ```
 
 ### Bring up the stack
 
-```text
+```
 $docker-compose -f docker-compose.quickstart.yml up -d
 ```
 
@@ -60,9 +60,9 @@ Once the LOGIQ server is up and running, the LOGIQ UI can be accessed as describ
 Use _flash-admin@foo.com_ / _flash-password_ to login
 {% endhint %}
 
-![](../.gitbook/assets/screen-shot-2020-01-19-at-2.14.21-pm.png)
+![](<../.gitbook/assets/Screen Shot 2020-01-19 at 2.14.21 PM.png>)
 
-![](../.gitbook/assets/screen-shot-2021-01-03-at-5.06.08-pm.png)
+![](<../.gitbook/assets/Screen Shot 2021-01-03 at 5.06.08 PM.png>)
 
 ## Ingesting data
 
@@ -84,11 +84,10 @@ LOGIQ exposes the below ports
 * **20514** - RELP/Rsyslog / TCP - Non TLS
 * **9998** - Server administration web cli
 * **9999** - REST API
-* **8081** - GRPC \( needed for logiqctl CLI \)
+* **8081** - GRPC ( needed for logiqctl CLI )
 * **80** - http
 * **443** - https
 * **24224/24225** - FluentForward protocol port / TLS
-* **3000** - Grafana instance \(optional\), not available with quickstart
+* **3000** - Grafana instance (optional), not available with quickstart
 
 The ports used to bind are configurable via the server configuration file. See [Server options](../logiq-log-ingest-server-configuration/server-options.md) for more details.
-

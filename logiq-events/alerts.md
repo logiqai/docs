@@ -2,13 +2,13 @@
 
 Alerts can be configured from log data from either the Search or the Logs pages. For example, while scrolling through context logs or search logs, if we want to get alerted on a line of log that is of interest, user can directly create an **alertable** **event** from the log line.
 
-![](../.gitbook/assets/screenshot_2020-08-10-logs-2-.png)
+![](<../.gitbook/assets/Screenshot\_2020-08-10 Logs(2).png>)
 
-E.g., we want to receive an alert when a particular event \(i.e. occurance of the text`Reusing worker` in above example\) occurs multiple times say in any 5 minute duration. On clicking the ![](../.gitbook/assets/screen-shot-2020-08-11-at-5.34.40-pm.png) on the log line, user can open the Alertable event rule editor.
+E.g., we want to receive an alert when a particular event (i.e. occurance of the text`Reusing worker` in above example) occurs multiple times say in any 5 minute duration. On clicking the ![](<../.gitbook/assets/Screen Shot 2020-08-11 at 5.34.40 PM.png>) on the log line, user can open the Alertable event rule editor.
 
 ### Creating an alertable event
 
-![](../.gitbook/assets/screenshot_2020-08-10-logs-1-.png)
+![](<../.gitbook/assets/Screenshot\_2020-08-10 Logs(1).png>)
 
 #### Fields
 
@@ -26,18 +26,18 @@ E.g., we want to receive an alert when a particular event \(i.e. occurance of th
 * **Destination**: This is a user-specified selection where the alerts will be delivered. Only [user-defined alert destinations](../logiq-ui-configuration/alert-destinations.md) will be available for selection.
 * **Operation**: One of the comparators: `>` `>=` `<` `<=` `==` `!=` `=~` `!~`
 * **Occurrences**: number of times the event must occur, must be a valid number.
-* **Period**: time over which the event occurred, e.g, `5m`, `10m`, `1h`, `1d`, `1w`. Period should be greater than `5m` \(`300s`\) and should be greater than or equal to Refresh schedule.
-* **Rearm**: how frequently you will receive notifications when your query meets the Alert criteria and does not change, must be a valid number \(seconds\) minimum `300` seconds.
+* **Period**: time over which the event occurred, e.g, `5m`, `10m`, `1h`, `1d`, `1w`. Period should be greater than `5m` (`300s`) and should be greater than or equal to Refresh schedule.
+* **Rearm**: how frequently you will receive notifications when your query meets the Alert criteria and does not change, must be a valid number (seconds) minimum `300` seconds.
 * **Refresh Schedule**: how frequently the query needed to be refreshed in seconds, must be a valid number.
 * **Until**: select when to stop the alerts. If not selected, the alert will never expire.
 
 All the events created can be accessed at the events page and if the alert is configured on that event, it will be present as a column in the alert row.
 
-![](../.gitbook/assets/screenshot_2020-08-10-event-rules-1-.png)
+![](<../.gitbook/assets/Screenshot\_2020-08-10 Event Rules(1).png>)
 
 Clicking on the configured alert will open up the respective alert page where it can be modified further for e.g. change the alert rearm duration, add additional alert destinations etc.
 
-![](../.gitbook/assets/screenshot_2020-08-10-alerts-1-.png)
+![](<../.gitbook/assets/Screenshot\_2020-08-10 Alerts(1).png>)
 
 ### Viewing Alerts
 
@@ -47,5 +47,4 @@ All the configured alerts are viewable when navigating to the alerts tab. An Ind
 LOGIQ includes alerts from it's Prometheus alert manager instance that is included with the LOGIQ install. NOTE that the editing of the Prometheus alert rules cannot be done via the UI and must use alert manager CRD's to change those alert rules.
 {% endhint %}
 
-![](../.gitbook/assets/screenshot_2020-08-10-alerts-2-.png)
-
+![](<../.gitbook/assets/Screenshot\_2020-08-10 Alerts(2).png>)

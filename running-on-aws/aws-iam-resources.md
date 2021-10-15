@@ -45,7 +45,7 @@ You need to provide AWS access key and secret in LOGIQ server configuration with
 
 
 
-You also need to provide AWS access key and secret in LOGIQ server configuration with **AmazonAthenaFullAccess** \(arn:aws:iam::aws:policy/AmazonAthenaFullAccess\) policy.
+You also need to provide AWS access key and secret in LOGIQ server configuration with **AmazonAthenaFullAccess** (arn:aws:iam::aws:policy/AmazonAthenaFullAccess) policy.
 
 ## IAM Service Role For Glue
 
@@ -57,7 +57,7 @@ Please refer to the following guide for creating a service role for glue
 
 Please refer to the following guide for creating a service role for glue
 
-{% embed url="https://docs.aws.amazon.com/en\_pv/glue/latest/dg/create-an-iam-role" %}
+{% embed url="https://docs.aws.amazon.com/en_pv/glue/latest/dg/create-an-iam-role" %}
 
 Use the below Inline policy for Glue Service Role. You need to update the policy with your actual S3 Bucket name. Alternately you can use the [Cloud formation template below](aws-iam-resources.md#aws-cloud-formation-template-for-glue-service-role) to create the Glue Service Role
 
@@ -178,4 +178,3 @@ Resources:
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -22,7 +22,7 @@ https://aws.amazon.com/marketplace/pp/B083ZMYQNV
 Please note that using the Marketplace AMI is not free and you will be charged per the marketplace published rates for LOGIQ
 {% endhint %}
 
-## LOGIQ UI credentials <a id="default-user-and-password"></a>
+## LOGIQ UI credentials <a href="default-user-and-password" id="default-user-and-password"></a>
 
 {% hint style="warning" %}
 After the Cloud formation template is complete, it may take several minutes for the UI to be available on the AMI. 
@@ -34,7 +34,7 @@ Once the LOGIQ instance is created, you can login to the instance using the belo
 
 **user**: _logiq@foo.com_
 
-**password**: _&lt;name of your CloudFormation stack&gt;-&lt;name of your S3 bucket&gt;_
+**password**: _\<name of your CloudFormation stack>-\<name of your S3 bucket>_
 
 e.g. if CloudFormation stack is called Foo and bucket is called Bar the password is Foo-Bar
 
@@ -47,4 +47,3 @@ Also see section on [AMI using CloudFormation](../running-on-aws/ami-using-cloud
 ## Ingesting data
 
 Please refer to section on [data ingestion](../logiq-server/agentless/) for more details.
-

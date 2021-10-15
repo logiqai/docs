@@ -11,7 +11,7 @@ description: >-
 
 ### Syslog output plugin
 
-```text
+```
 input {
 
 file {
@@ -43,11 +43,11 @@ output {
 }
 ```
 
-**NOTE**: Change _"host" , "appname", "ssl\_cert", "ssl\_key", "ssl\_cacert"_ above to suit your configuration
+**NOTE**: Change _"host" , "appname", "ssl_cert", "ssl_key", "ssl_cacert"_ above to suit your configuration
 
 ### HTTP output plugin
 
-```text
+```
 output {
    http {
         url => "https://logiq-dns-or-ip/v1/json_batch"
@@ -64,7 +64,7 @@ output {
 
 You can additionally control the data organization by specifying additional fields
 
-```text
+```
 filter {
   mutate {
     add_field => { "cluster_id" => "demo-http-test" }
@@ -77,7 +77,7 @@ filter {
 
 You can generate the Bearer token using [`logiqctl`](https://logiqctl.logiq.ai/get/logiqctl_get_httpingestkey/)
 
-```text
+```
 $logiqctl get httpingestkey
 ```
 
@@ -93,7 +93,7 @@ LOGIQ strongly recommends sending data using the RELP transport to ensure packet
 
 Update the syslog config in `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.conf`
 
-```text
+```
 *.* action(type="omfwd"
            queue.type="LinkedList"
            action.resumeRetryCount="-1"
@@ -112,22 +112,22 @@ rsyslog is installed by default in most modern OS's, rsyslog needs the omrelp mo
 * rsyslog-relp, enables RELP protocol for rsyslog
 * rsyslog-gnutls, enables rsyslog to communicate over a secure socket
 
-```text
+```
 sudo apt update
 sudo apt install rsyslog-gnutls rsyslog-relp
 ```
 
 * For Redhat/CentOS/Fedora, use yum to install
 
-```text
+```
 yum install rsyslog-gnutls rsyslog-relp
 ```
 
-#### **Configuring rsyslog \(TLS\)**
+#### **Configuring rsyslog (TLS)**
 
 Update the syslog config in `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.conf`
 
-```text
+```
 module(load="omrelp")
 action(type="omrelp" 
         target="logiq-server-relp-host" 
@@ -152,7 +152,7 @@ action(type="omrelp"
 
 **NOTE**: Change _"target", "port", tls.caCert" , "tls.myCert", "tls.myPrivKey", "tls.PermitterPeer"_ above to suit your configuration. For non TLS config, set _"tls"_ parameter as _"off"_ and remove all tls.\* parameters from above config file. E.g. of target=ec2-34-213-110-235.us-west-2.compute.amazonaws.com
 
-#### **Configuring rsyslog \(non-TLS\)**
+#### **Configuring rsyslog (non-TLS)**
 
 Update the syslog config in `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.conf`
 
@@ -160,7 +160,7 @@ Update the syslog config in `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.co
 Rsyslog non-TLS uses port 20514 vs TLS which uses port 2514
 {% endhint %}
 
-```text
+```
 module(load="omrelp")
 action(type="omrelp" 
         target="logiq-server-relp-host" 
@@ -190,7 +190,7 @@ If you are running a K8S cluster, you can use fluentd to send data to the LOGIQ 
 When deploying fluentd daemonset on K8S clusters, we recommend you use the fluentd daemon set container provided by LOGIQ. It is available at [https://hub.docker.com/repository/docker/logiqai/fluentd-remote-syslog](https://hub.docker.com/repository/docker/logiqai/fluentd-remote-syslog). It allows the administrator to pass a human readable `CLUSTER_ID` or cluster identifier with all the log data.
 
 {% hint style="success" %}
-Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters.
+Providing a CLUSTER_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters.
 
 It is also easier for the administrator to use human readable names vs LOGIQ using uuid's etc that it detects from the incoming stream.
 {% endhint %}
@@ -199,13 +199,13 @@ It is also easier for the administrator to use human readable names vs LOGIQ usi
 
 * Clone the repository to get the **`kubectl`** YAML files to start your daemonset
 
-```text
+```
 git clone https://bitbucket.org/logiqcloud/client-integrations.git
 ```
 
 * The files needed are under folder **`fluentd`**
 
-```text
+```
 $ cd client-integrations/
 $ cd fluentd/
 $ ls -la
@@ -223,9 +223,9 @@ drwxr-xr-x  7 user  staff   224 Oct 30 14:47 ..
 
 Edit the **`fluentd/secret.yaml`** to include your CA and Client pub/private keys in base64 encoded format
 
-Edit the **`fluentd/fluentd-logiq.yaml`** and add your LOGIQ cluster IP/DNS. Also configure your `CLUSTER_ID` \(e.g. RC, Prod, Dev-Test, QA\).
+Edit the **`fluentd/fluentd-logiq.yaml`** and add your LOGIQ cluster IP/DNS. Also configure your `CLUSTER_ID` (e.g. RC, Prod, Dev-Test, QA).
 
-```text
+```
 ....
   - env:
         - name: SYSLOG_HOST
@@ -237,7 +237,7 @@ Edit the **`fluentd/fluentd-logiq.yaml`** and add your LOGIQ cluster IP/DNS. Als
 
 Run the **`kubectl`** commands to create the **`kube-logging`** namespace. You can choose a different namespace as well. In case a different namespace is used please edit the YAML files to set the correct namespace before applying them
 
-```text
+```
 kubectl create namespace kube-logging
 kubectl apply -f fluentd_rbac.yaml
 kubectl apply -f secret.yaml
@@ -246,9 +246,9 @@ kubectl apply -f fluentd-logiq.yaml
 
 ### Non-TLS Mode
 
-Edit the**`fluentd/fluentd-logiq_non_tls.yaml`**and add your LOGIQ cluster IP/DNS. Also configure your `CLUSTER_ID` \(e.g. RC, Prod, Dev-Test, QA\)
+Edit the**`fluentd/fluentd-logiq_non_tls.yaml`**and add your LOGIQ cluster IP/DNS. Also configure your `CLUSTER_ID` (e.g. RC, Prod, Dev-Test, QA)
 
-```text
+```
 ....
   - env:
         - name: SYSLOG_HOST
@@ -260,7 +260,7 @@ Edit the**`fluentd/fluentd-logiq_non_tls.yaml`**and add your LOGIQ cluster IP/DN
 
 Run the **`kubectl`** commands to create the **`kube-logging`** namespace. You can choose a different namespace as well. In case a different namespace is used please edit the YAML files to set the correct namespace before applying them
 
-```text
+```
 kubectl create namespace kube-logging
 kubectl apply -f fluentd_rbac.yaml
 kubectl apply -f fluentd-logiq_non_tls.yaml
@@ -275,7 +275,7 @@ If you are running a K8S cluster, you can use fluent-bit to send data to the LOG
 LOGIQ has provided its own fluent-bit daemon for deploying on K8S clusters. It is available at [https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/](https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/). It allows the administrator to pass a human readable `CLUSTER_ID` or cluster identifier with all the log data.
 
 {% hint style="success" %}
-Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters.
+Providing a CLUSTER_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters.
 
 It is also easier for the administrator to use human readable names vs LOGIQ using uuid's etc that it detects from the incoming stream.
 {% endhint %}
@@ -284,13 +284,13 @@ It is also easier for the administrator to use human readable names vs LOGIQ usi
 
 * Clone the repository to get the **`kubectl`** YAML files to start your daemonset
 
-```text
+```
 git clone https://bitbucket.org/logiqcloud/client-integrations.git
 ```
 
 * The files needed are under folder **`fluent-bit`**
 
-```text
+```
 $ cd client-integrations/
 $ cd fluentd-bit/
 $ ls -la
@@ -318,31 +318,28 @@ $ kubectl create -f fluent-bit-role.yaml
 
 The next step is to create a ConfigMap that will be used by the Fluent Bit DaemonSet:
 
-```text
+```
 $ kubectl create -f fluent-bit-config-logiq-forward.yml
 ```
 
 Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Cluster, configure the following in deamonset fluent-bit-daemonset-logiq-output.yml. If you do not have your ingest token, You can generate them using [`logiqctl`](https://docs.logiq.ai/logiq-server/agentless/generating-secure-ingest-token)
 
-* name: LOGIQ\_HOST
+*   name: LOGIQ_HOST
 
-  value: "YOUR\_LOGIQ\_SERVER\_IP"
+    value: "YOUR_LOGIQ_SERVER_IP"
+*   name: LOGIQ_PORT
 
-* name: LOGIQ\_PORT
+    value: "80"
+*   name: CLUSTER_ID
 
-  value: "80"
+    value: "YOUR_CLUSTER_ID"
+*   name: LOGIQ_TOKEN
 
-* name: CLUSTER\_ID
+    value: "YOUR_INGEST_TOKEN"
 
-  value: "YOUR\_CLUSTER\_ID"
+For Kubernetes version < 1.17, please change the apiVersion: "extensions/v1beta1" from "apps/v1" and remove selector attached to DaemonSet spec selector: matchLabels: k8s-app: fluent-bit-logging
 
-* name: LOGIQ\_TOKEN
-
-  value: "YOUR\_INGEST\_TOKEN"
-
-For Kubernetes version &lt; 1.17, please change the apiVersion: "extensions/v1beta1" from "apps/v1" and remove selector attached to DaemonSet spec selector: matchLabels: k8s-app: fluent-bit-logging
-
-```text
+```
 $ kubectl create -f fluent-bit-daemonset-logiq-output.yml
 ```
 
@@ -350,7 +347,7 @@ $ kubectl create -f fluent-bit-daemonset-logiq-output.yml
 
 You can enable TLS for Fluent Bit if you'd like to secure the data transferred through Fluent Bit to LOGIQ. To do so, edit the \`fluent-bit-config-logiq-forward.yaml\` file as shown below.
 
-```text
+```
 output-logiq.conf: |
     [OUTPUT]
         Name          http
@@ -368,16 +365,16 @@ output-logiq.conf: |
 
 Be sure to also configure the following:
 
-* name: LOGIQ\_HOST value: "YOUR\_LOGIQ\_SERVER\_IP"
-* name: LOGIQ\_PORT value: "443"
-* name: CLUSTER\_ID value: "YOUR\_CLUSTER\_ID"
-* name: LOGIQ\_TOKEN value: "YOUR\_INGEST\_TOKEN"
+* name: LOGIQ_HOST value: "YOUR_LOGIQ_SERVER_IP"
+* name: LOGIQ_PORT value: "443"
+* name: CLUSTER_ID value: "YOUR_CLUSTER_ID"
+* name: LOGIQ_TOKEN value: "YOUR_INGEST_TOKEN"
 
 ## Fluent Bit for Windows
 
 You can use Fluent Bit to ship Windows logs to LOGIQ by leveraging the following Fluent Bit configuration.
 
-```text
+```
 [SERVICE]
     Flush           5
     Daemon          yes
@@ -424,23 +421,21 @@ To forward Windows logs to LOGIQ using Fluent Bit, do the following.
 2. Edit the fields in the `[OUTPUT]` section of the configuration file to match your LOGIQ instance. 
 3. Clone the LOGIQ installation GitHub repository locally and navigate to the `windows` folder.
 4. Copy and paste the `fluent-install.ps1` script into the folder where you saved the Fluent Bit configuration file. 
-5. Since Windows does not allow you to execute scripts due to default PowerShell script execution policies, you should update the set execution policy by running: 
+5.  Since Windows does not allow you to execute scripts due to default PowerShell script execution policies, you should update the set execution policy by running: 
 
-   ```text
-   Set-ExecutionPolicy unrestricted
-   ```
+    ```
+    Set-ExecutionPolicy unrestricted
+    ```
+6. Navigate to **Windows** > **PowerShell** and run it in Administrator mode. 
+7.  Execute the `fluent-install.ps1` script, as shown in the following example:
 
-6. Navigate to **Windows** &gt; **PowerShell** and run it in Administrator mode. 
-7. Execute the `fluent-install.ps1` script, as shown in the following example:
-
-   ```text
-   PS D:\test> .\fluentbit-install.ps1
-   [SC] CreateService SUCCESS
-   The fluent-bit service is starting.
-   The fluent-bit service was started successfully.
-   ```
-
-8. Navigate to **Windows** &gt; **Run**.  
+    ```
+    PS D:\test> .\fluentbit-install.ps1
+    [SC] CreateService SUCCESS
+    The fluent-bit service is starting.
+    The fluent-bit service was started successfully.
+    ```
+8. Navigate to **Windows** > **Run**.  
 9. Type `services.msc` and hit Enter. 
 
 You'll now see a Fluent Bit service running on your Windows machine. 
@@ -470,7 +465,7 @@ Following fields are required options to be passed to the logdriver
 
 Sending data from docker to LOGIQ using TCP and non TLS port can be done as below. In the example below, we are going to run a mysql container and have all logs go to LOGIQ server hosted at _logiqserver-devtest.example.com_
 
-```text
+```
 docker run --log-driver syslog \
 --log-opt syslog-address=tcp://logiqserver-devtest.example.com:514 \
 --log-opt syslog-format=rfc3164 --log-opt tag=mysql --name mysql3 -d mysql
@@ -480,7 +475,7 @@ docker run --log-driver syslog \
 
 When using to connect to LOGIQ TLS port in a secured setup, pass the client certificates to connect to the server
 
-```text
+```
 docker run --log-driver syslog \
 --log-opt syslog-address=tcp://logiqserver-devtest.example.com:514 \
 --log-opt syslog-tls-cert=client.pem --log-opt syslog-tls-key=key.pem \
@@ -494,7 +489,7 @@ Fluentd `out-forward` Buffered Output plugin forwards events to other fluentd no
 
 The below code block defines the minimal changes to be added to fluentd configuration to start sending log events to flash. It is important to have the transformations while sending the data to Logiq.
 
-```text
+```
 <source>
   @type tail
   path /var/log/*.log
@@ -561,7 +556,7 @@ _HTTP_ output plugin allows to flush your records into a HTTP endpoint. The **HT
 
 The below code block defines the minimal changes to be added to the fluent-bit configuration using the http plugin to start sending log events to flash.
 
-```text
+```
 [INPUT]
     Name              tail
     Path              /var/log/*
@@ -599,4 +594,3 @@ The below code block defines the minimal changes to be added to the fluent-bit c
     compress      gzip
     Header Authorization Bearer ${LOGIQ_TOKEN}
 ```
-

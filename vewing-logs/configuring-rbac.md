@@ -14,17 +14,17 @@ In addition, LOGIQ's log collection model works by mapping incoming log data int
 
 Namespace restrictions are managed by the namespace data source. Only the admin users have privileges to access and modify data sources.
 
-![](../.gitbook/assets/screen-shot-2020-08-11-at-9.25.28-am.png)
+![](<../.gitbook/assets/Screen Shot 2020-08-11 at 9.25.28 AM.png>)
 
 In the data source configuration, provide the data source settings by listing out the namespaces that are part of the data source definition. Provide a name for the data sources and then Save your configuration. In the example below, we are creating a NonAdmin-Namespace data source that has access restriction to two namespaces `customer-tooling` and `rc-logiq:rc`
 
-![](../.gitbook/assets/screen-shot-2020-08-11-at-9.27.02-am.png)
+![](<../.gitbook/assets/Screen Shot 2020-08-11 at 9.27.02 AM.png>)
 
 ## Assigning Namespace data source to users
 
 The final step is to attach the namespace data source to a group. This restricts all users in the group to the namespaces defined in the data source.
 
-![](../.gitbook/assets/screen-shot-2020-08-11-at-9.31.01-am.png)
+![](<../.gitbook/assets/Screen Shot 2020-08-11 at 9.31.01 AM.png>)
 
 ## Managing access to namespaces from multiple clusters and hosts
 
@@ -32,7 +32,6 @@ Namespaces in LOGIQ map to virtual hosts or namespaces in Kubernetes clusters. R
 
 Let us look at how this works in practice. In the example above, the access restrictions are applied to two namespaces `customer-tooling` and `rc-logiq:rc`
 
-The `customer-tooling` namespace is a virtual machine with hostname `customer-tooling`. The `rc-logiq:rc` is a Kubernetes cluster with `CLUSTER_ID` set to `rc-logiq` and namespace `rc` within the cluster.
+The `customer-tooling` namespace is a virtual machine with hostname `customer-tooling`. The `rc-logiq:rc` is a Kubernetes cluster with `CLUSTER_ID` set to` rc-logiq` and namespace `rc` within the cluster.
 
 Yes it is that simple!
-

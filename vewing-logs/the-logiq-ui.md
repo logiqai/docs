@@ -4,7 +4,7 @@ The LOGIQ UI is your window to your IT data, logs, and metrics - ingested from a
 
 You can access the LOGIQ UI by logging into your LOGIQ instance URL using your account credentials. 
 
-![The LOGIQ UI](https://lh4.googleusercontent.com/_5o9G6CP8d6QWAZuDx5wT8NH1U4EvyBwiIjSRqhdXVBDg6c7G9l1FfDVF1pL-YzClPaG0OoX_sJQaUIrBqU9oe4XkDmgMzZRQS06qDdMjc7cQs1WHcypJKbEdNZXanASXKBvoOpY=s0)
+![The LOGIQ UI](https://lh4.googleusercontent.com/\_5o9G6CP8d6QWAZuDx5wT8NH1U4EvyBwiIjSRqhdXVBDg6c7G9l1FfDVF1pL-YzClPaG0OoX_sJQaUIrBqU9oe4XkDmgMzZRQS06qDdMjc7cQs1WHcypJKbEdNZXanASXKBvoOpY=s0)
 
 The navigation bar at the top of the UI allows you to access your:
 
@@ -29,7 +29,7 @@ A dashboard is a collection of visualisations and queries that you've created ag
 
 The **Dashboards** page on the LOGIQ UI lists all of the dashboards you've created within LOGIQ. Dashboards that you've favourited are marked with a yellow star icon and are also listed under the **Dashboards** dropdown menu for quick access in the navigation bar. The following images depict dashboards that you can create using LOGIQ. 
 
-![A typical monitoring dashboard on LOGIQ](https://lh5.googleusercontent.com/Rsl-mfgj6O2JtClx0kUWX4Ndlt_OYcXKUUZuJDmxQhvieGFcEOQM-AAZNSslEHzxX3TXkk09Wh2NLaq9Z7K9FfmEF87nkf-dF7MKqNLjMkIz8BRNeHFI-_W6vvmG_pVcFQD6cMbQ=s0)
+![A typical monitoring dashboard on LOGIQ](https://lh5.googleusercontent.com/Rsl-mfgj6O2JtClx0kUWX4Ndlt_OYcXKUUZuJDmxQhvieGFcEOQM-AAZNSslEHzxX3TXkk09Wh2NLaq9Z7K9FfmEF87nkf-dF7MKqNLjMkIz8BRNeHFI-\_W6vvmG_pVcFQD6cMbQ=s0)
 
 ![Another example of a LOGIQ dashboard](https://lh4.googleusercontent.com/5124zYGoqbDCFvzrK10O6-edgp93bbyB8q_vvxQZA0kKG07FPfb29J4EyA7Hud7o23HqWZdDXfbWb8vkCfblJ_CTZGdn7OBDAiJVZv3n2NYYIoysIidAYSN-0F6HpQp-dKze65YM=s0)
 
@@ -45,7 +45,7 @@ LOGIQ enables you to set alerts against events, data, or metrics of interest der
 
 The following image depicts a typical **Alerts** page on the LOGIQ UI. 
 
-![The Alerts page](https://lh4.googleusercontent.com/YHULH5nsxPJ6YmWAgNzKYEBfYsrrCZSFOKpcncCCMgKaA_SiTXbs2jyI0SUo-pJTp4sVv6HX8w07C26wGyhu980_F005YZYxbN0JKVqSCYgn5-NROsoARp4V192AZJEbKK2jhgcw=s0)
+![The Alerts page](https://lh4.googleusercontent.com/YHULH5nsxPJ6YmWAgNzKYEBfYsrrCZSFOKpcncCCMgKaA_SiTXbs2jyI0SUo-pJTp4sVv6HX8w07C26wGyhu980\_F005YZYxbN0JKVqSCYgn5-NROsoARp4V192AZJEbKK2jhgcw=s0)
 
 ## Logs
 
@@ -55,7 +55,7 @@ You can also click into a specific application or ProcID to view logs in more de
 
 The following image depicts a typical Logs page on the LOGIQ UI. 
 
-![The Logs page](https://lh5.googleusercontent.com/TiZLVD4UXjLQTD4L63xlRqajVygvs76jX9kt76NKX6mgNTQN6Pz_S5J_nua1ZHpc3BBntInqo03aaqRK53ptnlEWToRCPwob2l7AWwFjjL6wpveETJRjbA3tZK-kvP3xv11_3XWZ=s0)
+![The Logs page](https://lh5.googleusercontent.com/TiZLVD4UXjLQTD4L63xlRqajVygvs76jX9kt76NKX6mgNTQN6Pz_S5J_nua1ZHpc3BBntInqo03aaqRK53ptnlEWToRCPwob2l7AWwFjjL6wpveETJRjbA3tZK-kvP3xv11\_3XWZ=s0)
 
 ## Events
 
@@ -75,14 +75,12 @@ The **Create** dropdown menu enables you to create new reports, queries, dashboa
 
 ![The Create dropdown menu](https://lh3.googleusercontent.com/XCrL8egArsjawVJSVowgHAX81A4OxilzVjEAmsswF7MCrzqWF-yvalwQwAvXKooG5pcWo-3QOgMfADCkObqbWwkR18mMUzaK1kXLlbUcwzMAxw2lckmEEwThydk-SN1Jp6pN57jR=s0)
 
-A function-specific modal appears based on what you select from this dropdown menu.   
+A function-specific modal appears based on what you select from this dropdown menu. \
 
 
 ##  
 
-  
+\
 
 
-  
-
-
+\

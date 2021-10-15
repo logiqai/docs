@@ -35,4 +35,3 @@ A Rule determine how incoming data is mapped to a bucket. LOGIQ server can manag
 ## Source
 
 A source is one or more clients sending data to the LOGIQ server.
-

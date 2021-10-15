@@ -7,7 +7,7 @@ description: This page describers E-Mail server configuration
 LOGIQ insights can be configured to send emails to notify alerts. It uses smtp mail and requires following information for configuration:
 
 1. Mail Server DNS/IP
-2. Mail service/relay port for SMTP e.g. 25 or 465/587 \(TLS/SSL\)
+2. Mail service/relay port for SMTP e.g. 25 or 465/587 (TLS/SSL)
 3. Username for the mail service/relay
 4. Password for the user above in 3
 5. Default Sender E-Mail: The send e-mails will show up as from this sender
@@ -24,4 +24,3 @@ The default sender e-mail in most cases will need to be a verified e-mail addres
 The following attributes can be setup by LOGIQ admin on UI.
 
 ![Logiq Insights Email Setup ](../.gitbook/assets/Screen-Shot-2020-08-09-Mail-Server.png)
-

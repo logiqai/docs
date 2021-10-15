@@ -6,30 +6,16 @@ description: This page describes how to access report results via API
 
 Once the report is created, its results can be accessed via APIs.  
 
-{% api-method method="get" host="/api/queries/:queryid" path="" %}
-{% api-method-summary %}
-Get Query By Id
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="/api/queries/:queryid" path="" method="get" summary="Get Query By Id" %}
+{% swagger-description %}
 Use this API to access the latest report result id
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="queryid" type="number" required=true %}
+{% swagger-parameter in="path" name="queryid" type="number" %}
 Id of the query
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {
     '...' : '...",
@@ -37,37 +23,21 @@ Id of the query
     '...' : '...",
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 Once the results id is extracted invoke the results API to get the results 
 
-{% api-method method="get" host="/api/query\_results/:result\_id" path="" %}
-{% api-method-summary %}
-Get Results by result\_id
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="/api/query_results/:result_id" path="" method="get" summary="Get Results by result_id" %}
+{% swagger-description %}
 Access the latest report results
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="result\_id" type="number" required=true %}
+{% swagger-parameter in="path" name="result_id" type="number" %}
 Latest report result Id
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {
    "query_result": {
@@ -116,10 +86,8 @@ Latest report result Id
    }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ## Python Example
 
@@ -153,8 +121,6 @@ post_query()
 {% hint style="info" %}
 [Refer here to get the API key ](../logiqctl/obtaining-api-key.md)
 {% endhint %}
-
-
 
 
 

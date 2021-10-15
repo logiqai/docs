@@ -24,25 +24,25 @@ Before you start deploying LOGIQ PaaS, let's run through a few quick steps to se
 
 Add LOGIQ's Helm repository to your Helm repositories by running the following command.
 
-```text
+```
 helm repo add logiq-repo https://logiqai.github.io/helm-charts
 ```
 
 The Helm repository you just added is named `logiq-repo`. Whenever you install charts from this repository, ensure that you use the repository name as the prefix in your install command, as shown below.
 
-```text
+```
 helm install <deployment_name> logiq-repo/<chart_name>
 ```
 
 You can now search for the Helm charts available in the repository by running the following command.
 
-```text
+```
 helm search repo logiq-repo
 ```
 
 Running this command displays a list of the available Helm charts along with their details, as shown below. 
 
-```text
+```
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
@@ -51,22 +51,22 @@ logiq-repo/logiq    2.2.11           2.1.11         LOGIQ Observability HELM cha
 
 If you've already added LOGIQ's Helm repository in the past, you can update the repository by running the following command.
 
-```text
+```
 helm repo update
 ```
 
 ### Create a namespace to deploy LOGIQ
 
-Create a namespace ****where we'll deploy LOGIQ PaaS by running the following command.
+Create a namespace** **where we'll deploy LOGIQ PaaS by running the following command.
 
-```text
+```
 kubectl create namespace logiq
 ```
 
 Running the command shown above creates a namespace named `logiq`. You can also name your namespace differently by replacing `logiq` with the name of your choice in the command above. In case you do, remember to use the same namespace for the rest of the instructions listed in this guide.
 
 {% hint style="danger" %}
-**Important:** Ensure that the name of the namespace is not more than 15 characters in length.
+**Important: **Ensure that the name of the namespace is not more than 15 characters in length.
 {% endhint %}
 
 ### Prepare your Values file
@@ -77,21 +77,25 @@ To give you a head start with configuring your LOGIQ deployment, we've provided 
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../.gitbook/assets/values.small \(13\).yaml" caption="values.small.yaml" %}
+{% file src="../.gitbook/assets/values.small (13).yaml" %}
+values.small.yaml
+{% endfile %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../.gitbook/assets/values.medium \(15\).yaml" caption="values.medium.yaml" %}
+{% file src="../.gitbook/assets/values.medium (15).yaml" %}
+values.medium.yaml
+{% endfile %}
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../.gitbook/assets/values.large \(16\).yaml" %}
+{% file src="../.gitbook/assets/values.large (16).yaml" %}
 {% endtab %}
 {% endtabs %}
 
 You can pass the `values.yaml` file with the `helm install` command using the `-f` flag, as shown in the following example. 
 
-```text
+```
 helm install logiq --namespace logiq --set global.persistence.storageClass=<storage_class_name> logiq-repo/logiq -f values.small.yaml
 ```
 
@@ -103,17 +107,17 @@ As a final step, you should read our [End User's License Agreement](https://docs
 
 The following table lists the latest version tags for all LOGIQ components. 
 
-| Image | Version |
-| :--- | :--- |
-| `logiq-flash` | 2.1.11.27 |
-| `coffee` | 2.1.17.4 |
-| `logiq` Helm chart | 2.2.11 |
+| Image              | Version   |
+| ------------------ | --------- |
+| `logiq-flash`      | 2.1.11.27 |
+| `coffee`           | 2.1.17.4  |
+| `logiq` Helm chart | 2.2.11    |
 
 ## Install LOGIQ PaaS
 
 Now that your environment is ready, you can proceed with installing LOGIQ PaaS in it. To install LOGIQ PaaS, run the following command.
 
-```text
+```
 helm install logiq --namespace logiq --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
@@ -136,7 +140,7 @@ You can customise your LOGIQ PaaS deployment either before or after you deploy i
 
 * Enabling HTTPS for the LOGIQ UI
 * Using an AWS S3 bucket
-* Install LOGIQ server and client CA certificates\(optional\)
+* Install LOGIQ server and client CA certificates(optional)
 * Updating the storage class
 * Using an external AWS RDS Postgres database instance
 * Uploading a LOGIQ professional license
@@ -152,7 +156,7 @@ You can customise your LOGIQ PaaS deployment either before or after you deploy i
 
 You can enable HTTPS and assign a custom domain in the ingress for your LOGIQ UI while installing LOGIQ in your environment by running the following command.
 
-```text
+```
 helm install logiq --namespace logiq \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
@@ -162,12 +166,12 @@ helm install logiq --namespace logiq \
 
 The following table describes all of the Helm options passed in the command above. 
 
-| Helm option | Description | Default |
-| :--- | :--- | :--- |
-| `global.domain` | The DNS domain where the LOGIQ service will be running. This option is required to enable HTTPS. | No default |
-| `ingress.tlsEnabled` | Enables the ingress controller to front HTTPS for services | false |
-| `kubernetes-ingress.controller.defaultTLSSecret.enabled` | Specifies if a default certificate is enabled for the ingress gateway | false |
-| `kubernetes-ingress.controller.defaultTLSSecret.secret` | Specifies the name of a TLS secret for the ingress gateway. If this is not specified, a secret is automatically generated of option `kubernetes-ingress.controller.defaultTLSSecret.enabled`  |  |
+| Helm option                                              | Description                                                                                                                                                                                   | Default    |
+| -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `global.domain`                                          | The DNS domain where the LOGIQ service will be running. This option is required to enable HTTPS.                                                                                              | No default |
+| `ingress.tlsEnabled`                                     | Enables the ingress controller to front HTTPS for services                                                                                                                                    | false      |
+| `kubernetes-ingress.controller.defaultTLSSecret.enabled` | Specifies if a default certificate is enabled for the ingress gateway                                                                                                                         | false      |
+| `kubernetes-ingress.controller.defaultTLSSecret.secret`  | Specifies the name of a TLS secret for the ingress gateway. If this is not specified, a secret is automatically generated of option `kubernetes-ingress.controller.defaultTLSSecret.enabled`  |            |
 
 After you run the command, you should then update your DNS server to point to the ingress controller service's IP. Once you've done this, you can access your LOGIQ UI at the domain `https://logiq.my-domain.com` that you set in the ingress controller service.
 
@@ -175,7 +179,7 @@ After you run the command, you should then update your DNS server to point to th
 
 You can pass your own ingress secret while installing the Helm chart by running the following command. 
 
-```text
+```
 helm install logiq --namespace logiq \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
@@ -202,7 +206,7 @@ Go to your AWS IAM console and create an access key and secret key using which y
 
 The S3 gateway acts as a caching gateway and helps reduce API costs. Deploy the LOGIQ Helm chart in gateway mode by running the following command. Ensure you pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and name your S3 bucket uniquely. 
 
-```text
+```
 helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set global.environment.s3_bucket=<bucket_name> \
 --set global.environment.awsServiceEndpoint=https://s3.<region>.amazonaws.com \
@@ -212,26 +216,26 @@ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-The command above automatically provisions an S3 bucket for you in the region you specify using the access credentials you pass with the command. If you do not wish to create a new bucket, make sure the access credentials you pass work with the S3 bucket you specify in the command. Additionally, make sure you provide a valid Amazon service endpoint for your S3 bucket or else the configuration defaults to using the [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com/) endpoint. 
+The command above automatically provisions an S3 bucket for you in the region you specify using the access credentials you pass with the command. If you do not wish to create a new bucket, make sure the access credentials you pass work with the S3 bucket you specify in the command. Additionally, make sure you provide a valid Amazon service endpoint for your S3 bucket or else the configuration defaults to using the [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com) endpoint. 
 
 The following table describes all of the Helm options passed in the command above. 
 
-| elm option | Description | Default |
-| :--- | :--- | :--- |
-| `global.cloudProvider` | This helm option specifies the supported `cloudProvider` that is hosting the S3 compatible bucket. Currently, only `aws` is supported. | `aws` |
-| `global.environment.s3_bucket` | The name of the S3 bucket in AWS | `logiq` |
-| `global.environment.awsServiceEndpoint` | The S3 Service endpoint: [https://s3.\*\*&lt;region&gt;\*\*.amazonaws.com](https://s3.**<region>**.amazonaws.com) | \`\`[`https://s3.us-east-1.amazonaws.co`](https://s3.us-east-1.amazonaws.com)`m` |
-| `global.environment.AWS_ACCESS_KEY_ID` | The AWS Access key for accessing the bucket | No default |
-| `global.environment.AWS_SECRET_ACCESS_KEY` | The AWS Secret key for accessing the bucket | No default |
-| `global.environment.s3_region` | The AWS Region where the bucket is hosted | `us-east-1` |
+| elm option                                 | Description                                                                                                                            | Default                                                                        |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `global.cloudProvider`                     | This helm option specifies the supported `cloudProvider` that is hosting the S3 compatible bucket. Currently, only `aws` is supported. | `aws`                                                                          |
+| `global.environment.s3_bucket`             | The name of the S3 bucket in AWS                                                                                                       | `logiq`                                                                        |
+| `global.environment.awsServiceEndpoint`    | The S3 Service endpoint: [https://s3.\*\*\<region>\*\*.amazonaws.com](https://s3.\*\*\<region>\*\*.amazonaws.com)                      | ``[`https://s3.us-east-1.amazonaws.co`](https://s3.us-east-1.amazonaws.com)`m` |
+| `global.environment.AWS_ACCESS_KEY_ID`     | The AWS Access key for accessing the bucket                                                                                            | No default                                                                     |
+| `global.environment.AWS_SECRET_ACCESS_KEY` | The AWS Secret key for accessing the bucket                                                                                            | No default                                                                     |
+| `global.environment.s3_region`             | The AWS Region where the bucket is hosted                                                                                              | `us-east-1`                                                                    |
 
-### Install LOGIQ server and client CA certificates \(optional\)
+### Install LOGIQ server and client CA certificates (optional)
 
 LOGIQ supports TLS for all of your log ingest sources. LOGIQ also enables non-TLS ports by default. However, we recommend that you don't use non-TLS ports unless you're running LOGIQ in a secure VPC or cluster. 
 
 You can provide server and client CA certificates to the cluster using a Kubernetes secrets file. Before using the following secrets file template, replace the template sections below with your Base64 encoded secret files.
 
-```text
+```
 apiVersion: v1
 kind: Secret
 metadata:
@@ -245,20 +249,20 @@ data:
 
 Once you've filled out this template, be sure to save the secrets file and name it appropriately, such as `logiq-certs.yaml`. You can now install the LOGIQ Helm chart, along with the certificates using the following command.
 
-```text
+```
 helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set logiq-flash.secrets_name=logiq-certs \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
 {% hint style="info" %}
-**Note:**  If you skip this step, the LOGIQ server automatically generates a CA and a pair of client and server certificates for you to use. You can retrieve them from the ingest server pods under the folder`/flash/certs.` 
+**Note:**  If you skip this step, the LOGIQ server automatically generates a CA and a pair of client and server certificates for you to use. You can retrieve them from the ingest server pods under the folder`/flash/certs. `
 {% endhint %}
 
 The following table describes the Helm options passed in the install command. 
 
-| HELM Option | Description | Default |
-| :--- | :--- | :--- |
+| HELM Option                | Description                                            | Default    |
+| -------------------------- | ------------------------------------------------------ | ---------- |
 | `logiq-flash.secrets_name` | TLS certificate key pair and CA cert for TLS transport | No default |
 
 ### Updating the storage class
@@ -267,22 +271,22 @@ If you plan on using a specific storage class for your volumes, you can configur
 
 The following table details the Kubernetes `StorageClass` names and their default provisioner for each cloud provider. 
 
-| Cloud Provider | K8S StorageClassName | Default Provisioner |
-| :--- | :--- | :--- |
-| AWS | `gp2` | EBS |
-| Azure | `standard` | `azure-disc` |
-| GCP | `standard` | `pd-standard` |
-| Digital Ocean | `do-block-storage` | Block Storage Volume |
-| Oracle | `oci` | Block Volume |
-| Microk8s | `microk8s-hostpath` |  |
+| Cloud Provider | K8S StorageClassName | Default Provisioner  |
+| -------------- | -------------------- | -------------------- |
+| AWS            | `gp2`                | EBS                  |
+| Azure          | `standard`           | `azure-disc`         |
+| GCP            | `standard`           | `pd-standard`        |
+| Digital Ocean  | `do-block-storage`   | Block Storage Volume |
+| Oracle         | `oci`                | Block Volume         |
+| Microk8s       | `microk8s-hostpath`  |                      |
 
 {% hint style="info" %}
-**Note:** It's possible that your environment uses a different `StorageClass` name for the provisioner. In such cases, ensure that you use the appropriate name for the storage class. For example, if you create a storage class named `ebs-volume` for the EBS provisioner for your cluster, you can use `ebs-volume` instead of `gp2,`as suggested by the table above.
+**Note:** It's possible that your environment uses a different `StorageClass `name for the provisioner. In such cases, ensure that you use the appropriate name for the storage class. For example, if you create a storage class named `ebs-volume` for the EBS provisioner for your cluster, you can use `ebs-volume` instead of `gp2,`as suggested by the table above.
 {% endhint %}
 
 You can update the storage class name for your LOGIQ deployment by running the following command. 
 
-```text
+```
 helm upgrade --namespace logiq \
 --set global.persistence.storageClass=<storage class name> \
 logiq logiq-repo/logiq
@@ -292,7 +296,7 @@ logiq logiq-repo/logiq
 
 To use an external AWS RDS Postgres database for your LOGIQ deployment, run the following command.
 
-```text
+```
 helm install logiq --namespace logiq \
 --set global.chart.postgres=false \
 --set global.environment.postgres_host=<postgres-host-ip/dns> \
@@ -303,13 +307,13 @@ helm install logiq --namespace logiq \
 
 The following table describes the Helm options that are passed with the command above.
 
-| HELM Option | Description | Default |
-| :--- | :--- | :--- |
-| `global.chart.postgres` | Deploys Postgres which is needed for LOGIQ metadata. Set this to `false` if an external Postgres cluster is being used | `true` |
-| `global.environment.postgres_host` | The host IP/DNS for external Postgres | `postgres` |
-| `global.environment.postgres_user` | The Postgres admin user | `postgres` |
-| `global.environment.postgres_password` | The Postgres admin user password | `postgres` |
-| `global.environment.postgres_port` | The host port for external Postgres | 5432 |
+| HELM Option                            | Description                                                                                                            | Default    |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `global.chart.postgres`                | Deploys Postgres which is needed for LOGIQ metadata. Set this to `false` if an external Postgres cluster is being used | `true`     |
+| `global.environment.postgres_host`     | The host IP/DNS for external Postgres                                                                                  | `postgres` |
+| `global.environment.postgres_user`     | The Postgres admin user                                                                                                | `postgres` |
+| `global.environment.postgres_password` | The Postgres admin user password                                                                                       | `postgres` |
+| `global.environment.postgres_port`     | The host port for external Postgres                                                                                    | 5432       |
 
 {% hint style="danger" %}
 **Important:** While configuring RDS, create a new parameter group that sets `autoVacuum` to `true` or the value `1`. Associate this parameter group to your RDS instance.
@@ -327,7 +331,7 @@ To use `logiqctl`, generate an API token from the LOGIQ UI, as shown in the foll
 
 Once you've [configured `logiqctl`](https://docs.logiq.ai/vewing-logs/logiqctl/configuring-logiqctl) with your API token and LOGIQ cluster endpoint, run the following commands to update your license. 
 
-```text
+```
 # Set cluster end point
 > logiqctl config set-cluster your-logiq-cluster.com
 
@@ -342,7 +346,7 @@ Once you've [configured `logiqctl`](https://docs.logiq.ai/vewing-logs/logiqctl/c
 
 LOGIQ enables you to set your own admin credentials to log into your LOGIQ cluster instead of using the default credentials. You can set your admin credentials while deploying LOGIQ by running the following command. 
 
-```text
+```
 helm install logiq --namespace logiq \
 --set global.environment.admin_name="LOGIQ Administrator" \
 --set global.environment.admin_password="admin_password" \
@@ -352,17 +356,17 @@ helm install logiq --namespace logiq \
 
 The following table describes the Helm options passed with the command above. 
 
-| HELM Option | Description | Default |
-| :--- | :--- | :--- |
-| `global.environment.admin_name` | The LOGIQ Administrator's name | `flash-admin@foo.com` |
-| `global.environment.admin_password` | The LOGIQ Administrator password | `flash-password` |
-| `global.environment.admin_email` | The LOGIQ Administrator's e-mail | `flash-admin@foo.com` |
+| HELM Option                         | Description                      | Default               |
+| ----------------------------------- | -------------------------------- | --------------------- |
+| `global.environment.admin_name`     | The LOGIQ Administrator's name   | `flash-admin@foo.com` |
+| `global.environment.admin_password` | The LOGIQ Administrator password | `flash-password`      |
+| `global.environment.admin_email`    | The LOGIQ Administrator's e-mail | `flash-admin@foo.com` |
 
 ### Using an external Redis instance
 
 You can specify an external Redis instance to be used with your LOGIQ deployment by specifying the Redis host in the install command, as shown below. 
 
-```text
+```
 helm install logiq --namespace logiq \
 --set global.chart.redis=false \
 --set global.environment.redis_host=<redis-host-ip/dns> \
@@ -375,17 +379,17 @@ helm install logiq --namespace logiq \
 
 The following table describes the Helm options that can be passed with the command above. 
 
-| HELM Option | Description | Default |
-| :--- | :--- | :--- |
-| `global.chart.redis` | Deploys Redis that is needed for log tailing. Set this to `false` if you're using an external Redis cluster. | `true` |
-| `global.environment.redis_host` | The host IP/DNS of the external Redis cluster | `redis-master` |
-| `global.environment.redis_port` | The host port where the external Redis service is exposed | 6379 |
+| HELM Option                     | Description                                                                                                  | Default        |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------- |
+| `global.chart.redis`            | Deploys Redis that is needed for log tailing. Set this to `false` if you're using an external Redis cluster. | `true`         |
+| `global.environment.redis_host` | The host IP/DNS of the external Redis cluster                                                                | `redis-master` |
+| `global.environment.redis_port` | The host port where the external Redis service is exposed                                                    | 6379           |
 
 ### Configuring the `cluster_id`
 
 You can configure a cluster ID for your LOGIQ instance at the time of deployment by passing the `cluster_id` of your choice while running the following install command. This helps you identify your LOGIQ cluster in case you'd like to monitor it. 
 
-```text
+```
 helm install logiq --namespace logiq \
 --set global.environment.cluster_id=<cluster id> \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
@@ -393,8 +397,8 @@ helm install logiq --namespace logiq \
 
 The following table describes the Helm options passed with the command above. 
 
-| HELM Option | Description | Default |
-| :--- | :--- | :--- |
+| HELM Option                     | Description                                                                                                                                                                                                       | Default |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | `global.environment.cluster_id` | The cluster ID being used for the K8s cluster running LOGIQ. For more information, read [Managing multiple K8S](../logiq-server/agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance) clusters. | `LOGIQ` |
 
 ### Sizing your LOGIQ cluster
@@ -402,10 +406,10 @@ The following table describes the Helm options passed with the command above.
 When deploying LOGIQ, it's advisable to size your infrastructure appropriately to provide adequate vCPU and memory for the LOGIQ instance to utilise. The following table describes the minimum recommended sizes for small, medium, and large cluster specifications. 
 
 | LOGIQ cluster size | vCPU | Memory | NodeCount |
-| :--- | :--- | :--- | :--- |
-| small | 12 | 32 GB | 3 |
-| medium | 20 | 56 GB | 5 |
-| large | 32 | 88 GB | 8 |
+| ------------------ | ---- | ------ | --------- |
+| small              | 12   | 32 GB  | 3         |
+| medium             | 20   | 56 GB  | 5         |
+| large              | 32   | 88 GB  | 8         |
 
 ### Configuring `NodePort`, `ClusterIP`, and `LoadBalancer`
 
@@ -469,4 +473,3 @@ helm upgrade --install logiq --namespace logiq \
 ```
 
 The Grafana instance is exposed at port `3000` on the ingress controller. The deployed Grafana instance uses the same login credentials as the LOGIQ UI.
-

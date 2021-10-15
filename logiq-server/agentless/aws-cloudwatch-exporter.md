@@ -8,7 +8,7 @@ description: This guide explains how to export your AWS CloudWatch logs.
 
 Cloudwatch logs can be exported to Logiq using an AWS Lambada function; the process is as below. AWS Lambda function can act as a trigger for a CloudWatch log stream. 
 
-![](../../.gitbook/assets/flash-high-level-cloudwatch-1-.png)
+![](../../.gitbook/assets/flash-high-level-cloudwatch\(1\).png)
 
 ### Creating Lambda function
 
@@ -24,23 +24,22 @@ The same code is available in our [client-integrations](https://bitbucket.org/lo
 
 This CloudFormation stack creates a lambda function and its necessary permissions. The following attributes need to be configured.
 
-| Parameter | Description |
-| :--- | :--- |
-| APPNAME | Application name, A readable name for Logiq to partition logs. |
-| CLUSTERID | Cluster ID, A readable name for Logiq to partition logs. |
-| NAMESPACE | Namespace, A readable name for Logiq to partition logs. |
-| LOGIQHOST | IP address or hostname of Logiq server. |
-| INGESTTOKEN | JWT token to securely ingest logs  |
+| Parameter   | Description                                                    |
+| ----------- | -------------------------------------------------------------- |
+| APPNAME     | Application name, A readable name for Logiq to partition logs. |
+| CLUSTERID   | Cluster ID, A readable name for Logiq to partition logs.       |
+| NAMESPACE   | Namespace, A readable name for Logiq to partition logs.        |
+| LOGIQHOST   | IP address or hostname of Logiq server.                        |
+| INGESTTOKEN | JWT token to securely ingest logs                              |
 
 ## Configuring CloudWatch trigger
 
-Once the CloudFormation stack is created, navigate to the AWS Lambda function\(logiq-cloudwatch-exporter\) and add a trigger. 
+Once the CloudFormation stack is created, navigate to the AWS Lambda function(logiq-cloudwatch-exporter) and add a trigger. 
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![](<../../.gitbook/assets/image (3).png>)
 
 On the Add trigger page, select CloudWatch and select Log Group. 
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](<../../.gitbook/assets/image (4).png>)
 
 Once this configuration is complete, any new logs coming to the configured CloudWatch Log group will be streamed to the Logiq cluster.
-

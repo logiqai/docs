@@ -8,9 +8,9 @@ description: The following document describes how LOGIQ's log search functionali
 
 To carry out a simple search, type any word or series of words into the **Search** bar and click **Search** or hit Enter on your keyboard. 
 
-![Search Bar](../../.gitbook/assets/image%20%286%29%20%281%29%20%281%29.png)
+![Search Bar](<../../.gitbook/assets/image (6) (1) (1).png>)
 
-By default, LOGIQ scans for your search term\(s\) using the `and` operator. If your search query contains more than one word, the search engine looks for occurrences that contain both words. For example, searching for the term `Read Error` returns records that contain both `read` and `error` _****_and not necessarily in the same sequence. Searches are also not case sensitive. For example, searching for `ReadError` returns records that contain both `read` and `error`. 
+By default, LOGIQ scans for your search term(s) using the `and` operator. If your search query contains more than one word, the search engine looks for occurrences that contain both words. For example, searching for the term `Read Error` returns records that contain both `read` and `error`_** **_and not necessarily in the same sequence. Searches are also not case sensitive. For example, searching for `ReadError` returns records that contain both `read` and `error`. 
 
 ### Exact match
 
@@ -21,82 +21,26 @@ To search for exact matches of your search string, wrap your search string in do
 LOGIQ's advanced search feature supports the use of complex expressions in the search query. With this feature, you can include `and` or `or` expressions, regular expressions, and mathematical symbols such as `<` and `>`. 
 
 {% hint style="info" %}
-**Note:** LOGIQ only supports RE2 syntax while using regular expressions to construct  advanced search queries. For more information on the RE2 syntax, visit the [RE2 Wiki](https://github.com/google/re2/wiki/Syntax). 
+**Note: **LOGIQ only supports RE2 syntax while using regular expressions to construct  advanced search queries. For more information on the RE2 syntax, visit the [RE2 Wiki](https://github.com/google/re2/wiki/Syntax). 
 {% endhint %}
 
 The following image depicts how you can conduct an advanced search within LOGIQ.
+
+![Advanced Search Dialog](broken-reference)
 
 ### Comparators
 
 The following list contains comparison operators that you can use to build your advanced search query on LOGIQ.
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Operator</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Function</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>==</code>
-      </td>
-      <td style="text-align:left">Equal to operator</td>
-      <td style="text-align:left">Returns records if they are exact matches of the search string</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>&gt;</code>
-      </td>
-      <td style="text-align:left">Greater than operator</td>
-      <td style="text-align:left">Compares string literals lexicographically.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>&gt;=</code>
-      </td>
-      <td style="text-align:left">Greater than or equal to operator</td>
-      <td style="text-align:left">Compares string literals lexicographically.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>&lt;</code>
-      </td>
-      <td style="text-align:left">Less than operator</td>
-      <td style="text-align:left">Compares string literals lexicographically.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>&lt;=</code>
-      </td>
-      <td style="text-align:left">Less than or equal to operator</td>
-      <td style="text-align:left">Compares string literals lexicographically.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>=~</code>
-      </td>
-      <td style="text-align:left">Regex match operator</td>
-      <td style="text-align:left">
-        <ul>
-          <li>Returns records that match the given search string.</li>
-          <li>This operator only works with string literals.</li>
-          <li>This operator does not match numerical values.</li>
-          <li>You can use regular expressions with this operator.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>!=</code>
-      </td>
-      <td style="text-align:left">Not equal to operator</td>
-      <td style="text-align:left">
-        <ul>
-          <li>Returns records that do not match the given search string.</li>
-          <li>This operator only works with string literals.</li>
-          <li>This operator does not match numerical values.</li>
-          <li>You can use regular expressions with this operator.</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Operator | Description                       | Function                                                                                                                                                                                                                                                    |
+| -------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `==`     | Equal to operator                 | Returns records if they are exact matches of the search string                                                                                                                                                                                              |
+| `>`      | Greater than operator             | Compares string literals lexicographically.                                                                                                                                                                                                                 |
+| `>=`     | Greater than or equal to operator | Compares string literals lexicographically.                                                                                                                                                                                                                 |
+| `<`      | Less than operator                | Compares string literals lexicographically.                                                                                                                                                                                                                 |
+| `<=`     | Less than or equal to operator    | Compares string literals lexicographically.                                                                                                                                                                                                                 |
+| `=~`     | Regex match operator              | <ul><li>Returns records that match the given search string.</li><li>This operator only works with string literals. </li><li>This operator does not match numerical values. </li><li>You can use regular expressions with this operator. </li></ul>          |
+| `!=`     | Not equal to operator             | <ul><li>Returns records that do not match the given search string. </li><li>This operator only works with string literals. </li><li>This operator does not match numerical values. </li><li>You can use regular expressions with this operator.  </li></ul> |
 
 ### Things to consider
 
@@ -109,7 +53,7 @@ This also implies that only valid stems can return search results. LOGIQ ignores
 LOGIQ custom indices help deliver exponentially faster search experiences while working with sparse data. You can create Log2Metrics for your logs to generate custom indices. Each Log2Metrics definition creates additional indices based on search matches. For example, a Log2Metric defined to monitor ingress with a status code as a label called `ingress_code__e1001e` can generate supplementary indices such as `ingress_code__e1001e_status_code_401`, `ingress_code__e1001e_status_code_500`, and so on.
 
 {% hint style="info" %}
-**Note:** For more information on creating Log2Metrics for your logs, refer to [Metrics and Custom Indices](../metrics-and-custom-indices.md#creating-a-log-2-metric).  
+**Note: **For more information on creating Log2Metrics for your logs, refer to [Metrics and Custom Indices](../metrics-and-custom-indices.md#creating-a-log-2-metric).  
 {% endhint %}
 
 #### Stop words
@@ -202,6 +146,4 @@ LOGIQ never indexes the following words.
 * yet
 * you
 * your
-
-
 

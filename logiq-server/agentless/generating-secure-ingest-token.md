@@ -15,5 +15,3 @@ dyJhbGciOiJSUzI1diusInm5mCy6IkpXVCJ9.eyJhY2Nlc3diOltduCJhdWQiOmJsb2dmS1jbGllbyzI
 
 ```
 
-
-
