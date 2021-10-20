@@ -16,7 +16,7 @@ query=go_gc_duration_seconds&duration=15m&step=60
 
 In the above query, we are looking for the `go_gc_duration_seconds` metric, sampled at 60 second intervals and duration for which data is needed which is the last 15 minutes.
 
-The Prometheus Query API expects `start_time` and `end_time` to be provided in queries. LOGIQ has a simplified `duration` syntax that is compatible with the Prometheus Query API. 
+The Prometheus Query API expects `start_time` and `end_time` to be provided in queries. LOGIQ has a simplified `duration` syntax that is compatible with the Prometheus Query API.&#x20;
 
 LOGIQ translates the duration values to appropriate start and end times before issuing the Query API call
 
@@ -48,7 +48,7 @@ example: using duration
 
 ### PromQL compatibility
 
-LOGIQ's query language is 100% compatible with PromQL, primarily because all query expressions are translated to appropriate Prometheus Query / Query range API calls. 
+LOGIQ's query language is 100% compatible with PromQL, primarily because all query expressions are translated to appropriate Prometheus Query / Query range API calls.&#x20;
 
 Let's look at a more complicated expression below
 
@@ -60,5 +60,5 @@ In the above example we are using several prometheus constructs
 
 * Label based filtering e.g. `mode="idle"`
 * Function such as `irate`, `avg`
-* Using the vector syntax `[5m]` 
+* Using the vector syntax `[5m]`&#x20;
 * Mathematical operator like `* /` `-`

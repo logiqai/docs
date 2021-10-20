@@ -4,13 +4,13 @@ description: This page describes how Logiq Observability Platform Organizes the 
 
 # Terminology
 
-Logs are organized by cluster_id, namespaces, applications, and their processes.
+Logs are organized by cluster\_id, namespaces, applications, and their processes.
 
-### CLUSTER_ID
+### CLUSTER\_ID
 
-CLUSTER_ID is an optional label that can be applied to incoming data streams. E.g. it is a good practice to apply CLUSTER_ID to a K8S cluster. All namespaces from the K8S cluster will get prefixed with CLUSTER_ID so the user can distinguish between namespace name collisions across different clusters.
+CLUSTER\_ID is an optional label that can be applied to incoming data streams. E.g. it is a good practice to apply CLUSTER\_ID to a K8S cluster. All namespaces from the K8S cluster will get prefixed with CLUSTER\_ID so the user can distinguish between namespace name collisions across different clusters.
 
-For Kubernetes clusters, CLUSTER_ID is an attribute added to the JSON payload by the sending agent for e.g. Fluentd or Fluent-bit. [See here for on how to manage multiple clusters](../logiq-server/agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance).
+For Kubernetes clusters, CLUSTER\_ID is an attribute added to the JSON payload by the sending agent for e.g. Fluentd or Fluent-bit. [See here for on how to manage multiple clusters](../integrations/agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance).
 
 ### Namespace
 
@@ -18,13 +18,13 @@ The namespace is the top of the hierarchy. For a Kubernetes based deployment nam
 
 ### Application & Process
 
-In the Kubernetes based deployments Application refers to deployment name and process refers to its pod names. For example for Nginx application (deployment/service) may have multiple pods which are its processes. 
+In the Kubernetes based deployments Application refers to deployment name and process refers to its pod names. For example for Nginx application (deployment/service) may have multiple pods which are its processes.&#x20;
 
 For the physical machine, the application refers to process names like Nginx or tomcat and process refers to process id.
 
-There are multiple ways you can access the logs. 
+There are multiple ways you can access the logs.&#x20;
 
-* The Logs page hierarchically arranges logs by Namespace, application and process. It lets you see the most recent logs for the process 
+* The Logs page hierarchically arranges logs by Namespace, application and process. It lets you see the most recent logs for the process&#x20;
 * The Search page allows you to search through logs.
-* The `logiqctl` command line tool allows you to view logs in realtime. 
+* The `logiqctl` command line tool allows you to view logs in realtime.&#x20;
 

@@ -2,7 +2,7 @@
 
 ## LOGIQ Insights
 
-LOGIQ Insights is a complete observability platform for monitoring, log aggregation, and analytics with infinite storage scale. 
+LOGIQ Insights is a complete observability platform for monitoring, log aggregation, and analytics with infinite storage scale.&#x20;
 
 The LOGIQ platform comprises of a User interface, a [command line toolkit](https://logiqctl.logiq.ai), a monitoring stack for time series metrics and a log analytics stack for log data.
 

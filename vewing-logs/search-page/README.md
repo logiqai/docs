@@ -14,13 +14,13 @@ On the search Page, you can:
 * Get field-level details about the entries that match your search
 * Create a **Metric**
 * Create a **Report**
-* Export data 
+* Export data&#x20;
 
 ![](<../../.gitbook/assets/flash-high-level-search-empty (1).png>)
 
 The search happens at the namespace level, select the namespace and applications, enter the search term to get started. By default, Search shows data for the last 15 minutes. If no data displays, try increasing the time range. Using the time filter, you can specify a common or recently-used time range, a relative time from now, or an absolute time range.
 
-With the help of the advanced search modal, complex search expressions can be created.  
+With the help of the advanced search modal, complex search expressions can be created. &#x20;
 
 ![](<../../.gitbook/assets/flash-high-level-advanced search.png>)
 
@@ -34,11 +34,11 @@ Use facets to narrow your search results. Logiq's intelligent parsing engine ext
 
 ### View Log Detail
 
-Expand the caret available in each row to see the log in detail. 
+Expand the caret available in each row to see the log in detail.&#x20;
 
 ![](../../.gitbook/assets/flash-high-level-search-expand.png)
 
-The dots available on each line will reveal additional options to export individual log lines as json, to define a **metric **and** create a report**. 
+The dots available on each line will reveal additional options to export individual log lines as json, to define a **metric **and** create a report**.&#x20;
 
 ![](../../.gitbook/assets/flash-high-level-options\(1\).png)
 

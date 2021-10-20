@@ -21,7 +21,7 @@ destinations:
           value: Web
 ```
 
-One or more credentials can be defined using the _**"credentials"**_ keyword. 
+One or more credentials can be defined using the _**"credentials"**_ keyword.&#x20;
 
 ```
 credentials:
@@ -41,11 +41,11 @@ The_** "s3"**_ keyword is used to specify credentials for any S3/S3 compatible o
 
 Every credential requires a unique name. It is referenced by this name in the configuration file when specified in a destination. The _**"name"**_ keyword is used to specify the name for the credential.
 
-## secret_key \[required]
+## secret\_key \[required]
 
-The _**"secret_key"**_ keyword provides a secret or password that is part of the Access key used by the LOGIQ server to sign the request when it uses the S3 SDK to connect to an S3 compatible service.
+The _**"secret\_key"**_ keyword provides a secret or password that is part of the Access key used by the LOGIQ server to sign the request when it uses the S3 SDK to connect to an S3 compatible service.
 
-## access_key \[required]
+## access\_key \[required]
 
-The _**"access_key"**_ keyword provides an access or user identifier that is part of the Access key used by the LOGIQ server to sign the request when it used the S3 SDK to connect to an S3 compatible service.
+The _**"access\_key"**_ keyword provides an access or user identifier that is part of the Access key used by the LOGIQ server to sign the request when it used the S3 SDK to connect to an S3 compatible service.
 

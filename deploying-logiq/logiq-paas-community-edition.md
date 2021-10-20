@@ -4,7 +4,7 @@ If you've been looking for an inexpensive way to run your own observability stac
 
 With the LOGIQ PaaS Community Edition, you can:
 
-* Self-host your observability stack on a cloud provider of your choice - public or private 
+* Self-host your observability stack on a cloud provider of your choice - public or private&#x20;
 * Ingest up to **50GB** of log data **per day** with **unlimited data retention**
 * Store your log data on any S3-compatible cloud provider via the built-in Minio S3 service
 * Ingest logs from Syslog, RSyslog, Logstash, Fluent, AWS Firelens, JSON, and **plenty more**
@@ -12,7 +12,7 @@ With the LOGIQ PaaS Community Edition, you can:
 
 You'll also get access to all of the LOGIQ Enterprise Edition's features along with Community Support, **free forever**.
 
-Go through the instructions in this guide to deploy LOGIQ PaaS Community Edition. 
+Go through the instructions in this guide to deploy LOGIQ PaaS Community Edition.&#x20;
 
 ## Before you begin
 
@@ -40,7 +40,7 @@ You can now search for the Helm charts available in the repository by running th
 helm search repo logiq-repo
 ```
 
-Running this command displays a list of the available Helm charts along with their details, as shown below. 
+Running this command displays a list of the available Helm charts along with their details, as shown below.&#x20;
 
 ```
 $ helm repo update
@@ -73,7 +73,7 @@ Running the command shown above creates a namespace named `logiq`. You can also 
 
 Just as any other package deployed via Helm charts, you can configure your LOGIG PaaS deployment using a Values file. The Values file acts as the Helm chart's API, giving it access to values to populate the Helm chart's templates.
 
-To give you a head start with configuring your LOGIQ deployment, we've provided sample `values.yaml` files for small, medium, and large clusters. You can use these files as a base for configuring your LOGIQ deployment. You can download these files from the following links. 
+To give you a head start with configuring your LOGIQ deployment, we've provided sample `values.yaml` files for small, medium, and large clusters. You can use these files as a base for configuring your LOGIQ deployment. You can download these files from the following links.&#x20;
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
@@ -93,7 +93,7 @@ values.medium.yaml
 {% endtab %}
 {% endtabs %}
 
-You can pass the `values.yaml` file with the `helm install` command using the `-f` flag, as shown in the following example. 
+You can pass the `values.yaml` file with the `helm install` command using the `-f` flag, as shown in the following example.&#x20;
 
 ```
 helm install logiq --namespace logiq --set global.persistence.storageClass=<storage_class_name> logiq-repo/logiq -f values.small.yaml
@@ -101,11 +101,11 @@ helm install logiq --namespace logiq --set global.persistence.storageClass=<stor
 
 ### Read and accept the EULA
 
-As a final step, you should read our [End User's License Agreement](https://docs.logiq.ai/eula/eula) and accept its terms before you proceed with deploying LOGIQ PaaS. 
+As a final step, you should read our [End User's License Agreement](https://docs.logiq.ai/eula/eula) and accept its terms before you proceed with deploying LOGIQ PaaS.&#x20;
 
 ### Latest LOGIQ component versions
 
-The following table lists the latest version tags for all LOGIQ components. 
+The following table lists the latest version tags for all LOGIQ components.&#x20;
 
 | Image              | Version   |
 | ------------------ | --------- |
@@ -121,22 +121,22 @@ Now that your environment is ready, you can proceed with installing LOGIQ PaaS i
 helm install logiq --namespace logiq --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-Running the above command installs LOGIQ PaaS and exposes its services and UI on the ingress' IP address. Accessing the ingress' IP address in a web browser of your choice takes you to the LOGIQ PaaS login screen, as shown in the following image. 
+Running the above command installs LOGIQ PaaS and exposes its services and UI on the ingress' IP address. Accessing the ingress' IP address in a web browser of your choice takes you to the LOGIQ PaaS login screen, as shown in the following image.&#x20;
 
-If you haven't changed any of the admin settings in the `values.yaml` file you used during deployment, you can log into the LOGIQ PaaS UI using the following default credentials. 
+If you haven't changed any of the admin settings in the `values.yaml` file you used during deployment, you can log into the LOGIQ PaaS UI using the following default credentials.&#x20;
 
 * **Username**: `flash-admin@foo.com`
 * **Password**: `flash-password`
 
 {% hint style="info" %}
-**Note:** You can change the default login credentials after you've logged into the UI. 
+**Note:** You can change the default login credentials after you've logged into the UI.&#x20;
 {% endhint %}
 
-Your LOGIQ PaaS instance is now deployed and ready for use. Your LOGIQ instance enables you to ingest and tail logs, index and query log data, and search capabilities. Along with the LOGIQ UI, you can also access these features via LOGIQ's CLI, [logiqctl](https://docs.logiq.ai/logiq-cli). 
+Your LOGIQ PaaS instance is now deployed and ready for use. Your LOGIQ instance enables you to ingest and tail logs, index and query log data, and search capabilities. Along with the LOGIQ UI, you can also access these features via LOGIQ's CLI, [logiqctl](https://docs.logiq.ai/logiq-cli).&#x20;
 
 ## Customising your LOGIQ deployment
 
-You can customise your LOGIQ PaaS deployment either before or after you deploy it in your environment. The types of supported customisations are listed below. 
+You can customise your LOGIQ PaaS deployment either before or after you deploy it in your environment. The types of supported customisations are listed below.&#x20;
 
 * Enabling HTTPS for the LOGIQ UI
 * Using an AWS S3 bucket
@@ -164,7 +164,7 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-The following table describes all of the Helm options passed in the command above. 
+The following table describes all of the Helm options passed in the command above.&#x20;
 
 | Helm option                                              | Description                                                                                                                                                                                   | Default    |
 | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
@@ -177,7 +177,7 @@ After you run the command, you should then update your DNS server to point to th
 
 #### Passing an ingress secret
 
-You can pass your own ingress secret while installing the Helm chart by running the following command. 
+You can pass your own ingress secret while installing the Helm chart by running the following command.&#x20;
 
 ```
 helm install logiq --namespace logiq \
@@ -192,19 +192,19 @@ If you want to pass your own ingress secret, you can do so when installing the H
 
 ### Using an AWS S3 bucket
 
-Depending on your requirements, you may want to host your storage in either your own Kubernetes cluster or create a new storage bucket in a cloud provider like AWS. 
+Depending on your requirements, you may want to host your storage in either your own Kubernetes cluster or create a new storage bucket in a cloud provider like AWS.&#x20;
 
-If you choose to use an S3 bucket, be sure to deploy your LOGIQ PaaS cluster in the same region that hosts your S3 bucket. Failing to do so can lead to you incurring additional data transfer costs for transferring data between regions. 
+If you choose to use an S3 bucket, be sure to deploy your LOGIQ PaaS cluster in the same region that hosts your S3 bucket. Failing to do so can lead to you incurring additional data transfer costs for transferring data between regions.&#x20;
 
-To use your own S3 bucket, do the following. 
+To use your own S3 bucket, do the following.&#x20;
 
 #### Create an access/secret key pair for creating and managing your bucket
 
-Go to your AWS IAM console and create an access key and secret key using which you can create your S3 bucket. Also provide access to the bucket for writing and reading your log files. 
+Go to your AWS IAM console and create an access key and secret key using which you can create your S3 bucket. Also provide access to the bucket for writing and reading your log files.&#x20;
 
 #### Deploy LOGIQ in gateway mode
 
-The S3 gateway acts as a caching gateway and helps reduce API costs. Deploy the LOGIQ Helm chart in gateway mode by running the following command. Ensure you pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and name your S3 bucket uniquely. 
+The S3 gateway acts as a caching gateway and helps reduce API costs. Deploy the LOGIQ Helm chart in gateway mode by running the following command. Ensure you pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and name your S3 bucket uniquely.&#x20;
 
 ```
 helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
@@ -216,9 +216,9 @@ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-The command above automatically provisions an S3 bucket for you in the region you specify using the access credentials you pass with the command. If you do not wish to create a new bucket, make sure the access credentials you pass work with the S3 bucket you specify in the command. Additionally, make sure you provide a valid Amazon service endpoint for your S3 bucket or else the configuration defaults to using the [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com) endpoint. 
+The command above automatically provisions an S3 bucket for you in the region you specify using the access credentials you pass with the command. If you do not wish to create a new bucket, make sure the access credentials you pass work with the S3 bucket you specify in the command. Additionally, make sure you provide a valid Amazon service endpoint for your S3 bucket or else the configuration defaults to using the [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com) endpoint.&#x20;
 
-The following table describes all of the Helm options passed in the command above. 
+The following table describes all of the Helm options passed in the command above.&#x20;
 
 | elm option                                 | Description                                                                                                                            | Default                                                                        |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -231,7 +231,7 @@ The following table describes all of the Helm options passed in the command abov
 
 ### Install LOGIQ server and client CA certificates (optional)
 
-LOGIQ supports TLS for all of your log ingest sources. LOGIQ also enables non-TLS ports by default. However, we recommend that you don't use non-TLS ports unless you're running LOGIQ in a secure VPC or cluster. 
+LOGIQ supports TLS for all of your log ingest sources. LOGIQ also enables non-TLS ports by default. However, we recommend that you don't use non-TLS ports unless you're running LOGIQ in a secure VPC or cluster.&#x20;
 
 You can provide server and client CA certificates to the cluster using a Kubernetes secrets file. Before using the following secrets file template, replace the template sections below with your Base64 encoded secret files.
 
@@ -259,7 +259,7 @@ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 **Note:**  If you skip this step, the LOGIQ server automatically generates a CA and a pair of client and server certificates for you to use. You can retrieve them from the ingest server pods under the folder`/flash/certs. `
 {% endhint %}
 
-The following table describes the Helm options passed in the install command. 
+The following table describes the Helm options passed in the install command.&#x20;
 
 | HELM Option                | Description                                            | Default    |
 | -------------------------- | ------------------------------------------------------ | ---------- |
@@ -267,9 +267,9 @@ The following table describes the Helm options passed in the install command.
 
 ### Updating the storage class
 
-If you plan on using a specific storage class for your volumes, you can configure your LOGIQ deployment to use that storage class. LOGIQ uses the standard storage class by default. 
+If you plan on using a specific storage class for your volumes, you can configure your LOGIQ deployment to use that storage class. LOGIQ uses the standard storage class by default.&#x20;
 
-The following table details the Kubernetes `StorageClass` names and their default provisioner for each cloud provider. 
+The following table details the Kubernetes `StorageClass` names and their default provisioner for each cloud provider.&#x20;
 
 | Cloud Provider | K8S StorageClassName | Default Provisioner  |
 | -------------- | -------------------- | -------------------- |
@@ -284,7 +284,7 @@ The following table details the Kubernetes `StorageClass` names and their defaul
 **Note:** It's possible that your environment uses a different `StorageClass `name for the provisioner. In such cases, ensure that you use the appropriate name for the storage class. For example, if you create a storage class named `ebs-volume` for the EBS provisioner for your cluster, you can use `ebs-volume` instead of `gp2,`as suggested by the table above.
 {% endhint %}
 
-You can update the storage class name for your LOGIQ deployment by running the following command. 
+You can update the storage class name for your LOGIQ deployment by running the following command.&#x20;
 
 ```
 helm upgrade --namespace logiq \
@@ -323,13 +323,13 @@ The following table describes the Helm options that are passed with the command 
 
 ### Uploading a LOGIQ PaaS Enterprise Edition license
 
-The LOGIQ PaaS Community Edition gives you access to Enterprise Edition features but with lesser daily log ingest rates and ingest worker processes. If you feel the need to up your daily ingest rates and make the most out of LOGIQ by extending its use to the rest of your team with SSO and RBAC, you can upgrade to the LOGIQ PaaS Enterprise Edition. 
+The LOGIQ PaaS Community Edition gives you access to Enterprise Edition features but with lesser daily log ingest rates and ingest worker processes. If you feel the need to up your daily ingest rates and make the most out of LOGIQ by extending its use to the rest of your team with SSO and RBAC, you can upgrade to the LOGIQ PaaS Enterprise Edition.&#x20;
 
-You can get yourself an Enterprise Edition license by contacting us via [license@logiq.ai](mailto:%20license@logiq.ai). Once you receive your new license, you can apply it to your LOGIQ deployment using LOGIQ's CLI, [`logiqctl`](../vewing-logs/logiqctl/). 
+You can get yourself an Enterprise Edition license by contacting us via [license@logiq.ai](mailto:%20license@logiq.ai). Once you receive your new license, you can apply it to your LOGIQ deployment using LOGIQ's CLI, [`logiqctl`](../vewing-logs/logiqctl/).&#x20;
 
-To use `logiqctl`, generate an API token from the LOGIQ UI, as shown in the following image. 
+To use `logiqctl`, generate an API token from the LOGIQ UI, as shown in the following image.&#x20;
 
-Once you've [configured `logiqctl`](https://docs.logiq.ai/vewing-logs/logiqctl/configuring-logiqctl) with your API token and LOGIQ cluster endpoint, run the following commands to update your license. 
+Once you've [configured `logiqctl`](https://docs.logiq.ai/vewing-logs/logiqctl/configuring-logiqctl) with your API token and LOGIQ cluster endpoint, run the following commands to update your license.&#x20;
 
 ```
 # Set cluster end point
@@ -344,7 +344,7 @@ Once you've [configured `logiqctl`](https://docs.logiq.ai/vewing-logs/logiqctl/c
 
 ### Customising the admin account
 
-LOGIQ enables you to set your own admin credentials to log into your LOGIQ cluster instead of using the default credentials. You can set your admin credentials while deploying LOGIQ by running the following command. 
+LOGIQ enables you to set your own admin credentials to log into your LOGIQ cluster instead of using the default credentials. You can set your admin credentials while deploying LOGIQ by running the following command.&#x20;
 
 ```
 helm install logiq --namespace logiq \
@@ -354,7 +354,7 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-The following table describes the Helm options passed with the command above. 
+The following table describes the Helm options passed with the command above.&#x20;
 
 | HELM Option                         | Description                      | Default               |
 | ----------------------------------- | -------------------------------- | --------------------- |
@@ -364,7 +364,7 @@ The following table describes the Helm options passed with the command above.
 
 ### Using an external Redis instance
 
-You can specify an external Redis instance to be used with your LOGIQ deployment by specifying the Redis host in the install command, as shown below. 
+You can specify an external Redis instance to be used with your LOGIQ deployment by specifying the Redis host in the install command, as shown below.&#x20;
 
 ```
 helm install logiq --namespace logiq \
@@ -374,10 +374,10 @@ helm install logiq --namespace logiq \
 ```
 
 {% hint style="danger" %}
-**Important:** Currently, LOGIQ only supports connections to a Redis cluster in a  local VPC without authentication. If you're using an AWS Elasticache instance, do not turn on encryption-in-transit or cluster mode. 
+**Important:** Currently, LOGIQ only supports connections to a Redis cluster in a  local VPC without authentication. If you're using an AWS Elasticache instance, do not turn on encryption-in-transit or cluster mode.&#x20;
 {% endhint %}
 
-The following table describes the Helm options that can be passed with the command above. 
+The following table describes the Helm options that can be passed with the command above.&#x20;
 
 | HELM Option                     | Description                                                                                                  | Default        |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------- |
@@ -387,7 +387,7 @@ The following table describes the Helm options that can be passed with the comma
 
 ### Configuring the `cluster_id`
 
-You can configure a cluster ID for your LOGIQ instance at the time of deployment by passing the `cluster_id` of your choice while running the following install command. This helps you identify your LOGIQ cluster in case you'd like to monitor it. 
+You can configure a cluster ID for your LOGIQ instance at the time of deployment by passing the `cluster_id` of your choice while running the following install command. This helps you identify your LOGIQ cluster in case you'd like to monitor it.&#x20;
 
 ```
 helm install logiq --namespace logiq \
@@ -395,15 +395,15 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-The following table describes the Helm options passed with the command above. 
+The following table describes the Helm options passed with the command above.&#x20;
 
 | HELM Option                     | Description                                                                                                                                                                                                       | Default |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `global.environment.cluster_id` | The cluster ID being used for the K8s cluster running LOGIQ. For more information, read [Managing multiple K8S](../logiq-server/agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance) clusters. | `LOGIQ` |
+| `global.environment.cluster_id` | The cluster ID being used for the K8s cluster running LOGIQ. For more information, read [Managing multiple K8S](../integrations/agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance) clusters. | `LOGIQ` |
 
 ### Sizing your LOGIQ cluster
 
-When deploying LOGIQ, it's advisable to size your infrastructure appropriately to provide adequate vCPU and memory for the LOGIQ instance to utilise. The following table describes the minimum recommended sizes for small, medium, and large cluster specifications. 
+When deploying LOGIQ, it's advisable to size your infrastructure appropriately to provide adequate vCPU and memory for the LOGIQ instance to utilise. The following table describes the minimum recommended sizes for small, medium, and large cluster specifications.&#x20;
 
 | LOGIQ cluster size | vCPU | Memory | NodeCount |
 | ------------------ | ---- | ------ | --------- |
@@ -413,7 +413,7 @@ When deploying LOGIQ, it's advisable to size your infrastructure appropriately t
 
 ### Configuring `NodePort`, `ClusterIP`, and `LoadBalancer`
 
-The service type configurations for your LOGIQ deployment are exposed in the `values.yaml` , as shown in the following example. 
+The service type configurations for your LOGIQ deployment are exposed in the `values.yaml` , as shown in the following example.&#x20;
 
 ```bash
 flash-coffee:
@@ -440,7 +440,7 @@ logiq-repo/logiq
 
 ### Using Node Selectors
 
-You can optimise the deployment of the LOGIQ stack using node labels and node selectors that help place various components of the stack optimally. 
+You can optimise the deployment of the LOGIQ stack using node labels and node selectors that help place various components of the stack optimally.&#x20;
 
 You can use the node label `logiq.ai/node` to control the placement of ingest pods for log data into ingest-optimised nodes, thereby allowing you to manage costs and instance sizing effectively.
 
@@ -459,12 +459,12 @@ globals:
 ```
 
 {% hint style="info" %}
-**Note:** Node selectors are enabled by setting `enabled` to `true` for `globals.nodeSelectors` in your `values.yaml` file. 
+**Note:** Node selectors are enabled by setting `enabled` to `true` for `globals.nodeSelectors` in your `values.yaml` file.&#x20;
 {% endhint %}
 
 ### Installing Grafana
 
-The LOGIQ stack bundles Grafana as part of the deployment as an optional component. You can enable Grafana in your LOGIQ cluster by running the following command. 
+The LOGIQ stack bundles Grafana as part of the deployment as an optional component. You can enable Grafana in your LOGIQ cluster by running the following command.&#x20;
 
 ```bash
 helm upgrade --install logiq --namespace logiq \

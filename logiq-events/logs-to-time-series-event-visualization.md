@@ -27,9 +27,9 @@ Events are generated when a log-line satisfies event rule criteria. Event rule c
 ![Create alertable event rule modal window](<../.gitbook/assets/Screen Shot 2020-08-17 at 2.50.34 PM.png>)
 
 By pressing the "Create event" Button, LOGIQ generates an event rule, a query & visualization graph for the time series DB and an alert trigger if the "create and activate alert on event rule" checkbox is checked.\
-In this example, the event is generated when the message matches the regular expression “GET /V1/license” and other additional parameter criteria are met. Each triggered event is recorded by LOGIQ insights in the time series database. It helps to generate a visualization graph of the frequency of the events with respect to time. 
+In this example, the event is generated when the message matches the regular expression “GET /V1/license” and other additional parameter criteria are met. Each triggered event is recorded by LOGIQ insights in the time series database. It helps to generate a visualization graph of the frequency of the events with respect to time.&#x20;
 
-In this example, the query and time series visualizations can be found in the queries page as license_check query and license_check-vis visualization.\
+In this example, the query and time series visualizations can be found in the queries page as license\_check query and license\_check-vis visualization.\
 ****
 
 ![](<../.gitbook/assets/Screen Shot 2020-08-17 at 10.33.07 PM.png>)

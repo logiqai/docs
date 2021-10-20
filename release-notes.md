@@ -57,7 +57,7 @@
 
 ### Log aggregation
 
-* Support for **and** expressions in search 
+* Support for **and** expressions in search&#x20;
 * Event rules designer support for **&&** and **||** for individual parameters
 * Performance and memory improvements
 
@@ -126,7 +126,7 @@
 
 #### Log aggregation
 
-* Support for AWS Fargate, Firelens, [Fluent forward Protocol ](https://github.com/fluent/fluentd/wiki/Forward-Protocol-Specification-v1) 
+* Support for AWS Fargate, Firelens, [Fluent forward Protocol ](https://github.com/fluent/fluentd/wiki/Forward-Protocol-Specification-v1)&#x20;
 * LOGIQ Fluent-bit daemon-set for K8S clusters
 * Data extraction via Grok patterns, compatible with Logstash Grok patterns using the [Grokky library](https://github.com/logrusorgru/grokky)
 
@@ -135,7 +135,7 @@
 * Redesigned - Elastic/Kibana like search UI that scales to infinite data from S3 compatible object store
 * Real-time alertable events and alerts from log data
 * Real-time extraction of log data facets using Grok expressions
-* 1-Click conversion of log data events to time series visualization  
+* 1-Click conversion of log data events to time series visualization &#x20;
 
 #### Logiqctl
 
@@ -145,11 +145,11 @@
 #### Monitoring
 
 * Prometheus alert manager integration into LOGIQ alerts for unified alerting across logs and metrics
-* Built-in Logiq dashboard for LOGIQ cluster performance and health monitoring 
+* Built-in Logiq dashboard for LOGIQ cluster performance and health monitoring&#x20;
 
 #### LOGIQ Data platform
 
-* Connect numerous popular data sources into the LOGIQ platforms such as Postgres, MySql, Elasticsearch, Athena, MongoDB, Prometheus, and more. 
+* Connect numerous popular data sources into the LOGIQ platforms such as Postgres, MySql, Elasticsearch, Athena, MongoDB, Prometheus, and more.&#x20;
 * JSON Data source for easily converting arbitrary JSON data into tables, widgets, and alerts
 
 #### Role-based access control

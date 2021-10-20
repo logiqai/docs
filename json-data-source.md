@@ -8,15 +8,15 @@ description: >-
 
 ## Create the JSON Data source
 
-The first step in to create the data source and provide `basic auth `credentials. Note that basic auth credentials are optional and you can provide a bearer token if that is your means of authenticating against the API 
+The first step in to create the data source and provide `basic auth `credentials. Note that basic auth credentials are optional and you can provide a bearer token if that is your means of authenticating against the API&#x20;
 
-![Creating a JSON data source](<../.gitbook/assets/Screen Shot 2020-08-10 at 6.08.15 PM.png>)
+![Creating a JSON data source](<.gitbook/assets/Screen Shot 2020-08-10 at 6.08.15 PM.png>)
 
 ## Writing queries
 
 In the query editor, select the JSON data source created above and enter the query parameters. The query parameters use the YAML syntax. For E.g.
 
-![](<../.gitbook/assets/Screen Shot 2020-08-10 at 6.07.39 PM.png>)
+![](<.gitbook/assets/Screen Shot 2020-08-10 at 6.07.39 PM.png>)
 
 ## Providing HTTP Options
 
@@ -36,7 +36,7 @@ The URL parameter is the only required parameter
 
 ## Filtering response data: path and fields
 
-The response data can be filtered by specifying the `path` and `fields` parameters. The `path` filter allows accessing attributes within the response for e.g. if a key `foo` in the response contains rows of objects you want to access, specifying `path` `foo` will convert each of the objects into rows. 
+The response data can be filtered by specifying the `path` and `fields` parameters. The `path` filter allows accessing attributes within the response for e.g. if a key `foo` in the response contains rows of objects you want to access, specifying `path` `foo` will convert each of the objects into rows.&#x20;
 
 In the example below, we are then selecting `fields` _volumeInfo.authors, volumeInfo.title, volumeInfo.publisher and accessInfo.webReaderLink_
 
@@ -48,5 +48,5 @@ fields: ["volumeInfo.authors","volumeInfo.title","volumeInfo.publisher","accessI
 
 The resulting data from the above query is a nicely formatted table that can be searched in LOGIQ or made available as a widget in a dashboard
 
-![](<../.gitbook/assets/Screen Shot 2020-08-10 at 6.25.44 PM.png>)
+![](<.gitbook/assets/Screen Shot 2020-08-10 at 6.25.44 PM.png>)
 

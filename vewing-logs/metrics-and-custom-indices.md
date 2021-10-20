@@ -8,15 +8,15 @@ LOGIQ Log2Metrics is a powerful feature that helps you convert your log data int
 
 ### Creating a Log2Metric
 
-You can create new metrics from a log line in either the **Logs** page or the **Search** page of your LOGIQ UI. To create a new metric, click the three dots on a log line that you want to create a metric for. Doing so opens the options menu, as shown in the following image. From the options menu, click **create metric**. 
+You can create new metrics from a log line in either the **Logs** page or the **Search** page of your LOGIQ UI. To create a new metric, click the three dots on a log line that you want to create a metric for. Doing so opens the options menu, as shown in the following image. From the options menu, click **create metric**.&#x20;
 
 ![The Options Menu](<../.gitbook/assets/image (6).png>)
 
-You will now see the Log2Metric modal on the LOGIQ UI. To configure your new metric, fill out the fields in the Log2Metric modal appropriately. 
+You will now see the Log2Metric modal on the LOGIQ UI. To configure your new metric, fill out the fields in the Log2Metric modal appropriately.&#x20;
 
 ![The Log2Metric Modal](<../.gitbook/assets/image (8).png>)
 
-The following table describes each of the fields in the Log2Metric modal. 
+The following table describes each of the fields in the Log2Metric modal.&#x20;
 
 | Fields                  | Description                                                                                             |
 | ----------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -34,11 +34,11 @@ You can also click **Add more parameters** to add more parameters to filter your
 
 ![](<../.gitbook/assets/image (11).png>)
 
-The configuration depicted in the image above creates a Log2Metric named `ingress_status_codes__e1034e`. LOGIQ adds the suffix `__e1034` internally as a unique identifier for the Log2Metric. Once the Log2Metric is created, it adds its visualization to your dashboard. The following image depicts the visualization of the newly-created `ingress_status_codes__e1034e` Log2Metric. 
+The configuration depicted in the image above creates a Log2Metric named `ingress_status_codes__e1034e`. LOGIQ adds the suffix `__e1034` internally as a unique identifier for the Log2Metric. Once the Log2Metric is created, it adds its visualization to your dashboard. The following image depicts the visualization of the newly-created `ingress_status_codes__e1034e` Log2Metric.&#x20;
 
 ![Visualization created by log2metrics](<../.gitbook/assets/image (9).png>)
 
 ## Custom Indices
 
-Log2Metrics definitions also create custom indices that can be used to speed up search. Based on the definition, there can be multiple custom indices. The definition used in the example above creates two custom indices: `ingress_status_codes__e1034e`and `e1034e`. You can use both of these indices to search for logs that match the definition. Based on what you enter in the **Labels** field of the Log2Metric configuration, additional indices may be created. For example, based on the definition used in the example above, if there are logs that match the status code `401` , an additional index is created named `ingress_status_codes__e1034e_status_code_401`that can be used for searching for occurrences of logs that contain the status code `401`. 
+Log2Metrics definitions also create custom indices that can be used to speed up search. Based on the definition, there can be multiple custom indices. The definition used in the example above creates two custom indices: `ingress_status_codes__e1034e`and `e1034e`. You can use both of these indices to search for logs that match the definition. Based on what you enter in the **Labels** field of the Log2Metric configuration, additional indices may be created. For example, based on the definition used in the example above, if there are logs that match the status code `401` , an additional index is created named `ingress_status_codes__e1034e_status_code_401`that can be used for searching for occurrences of logs that contain the status code `401`.&#x20;
 

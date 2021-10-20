@@ -1,8 +1,8 @@
 # Partitions
 
-A partition specifies a partitioning scheme for the incoming data for a given destination. A user can specify a partition scheme using any of the attributes in the incoming data. Partitioning of data is important to ensure good query performance. 
+A partition specifies a partitioning scheme for the incoming data for a given destination. A user can specify a partition scheme using any of the attributes in the incoming data. Partitioning of data is important to ensure good query performance.&#x20;
 
-Partitioning schemes are defined in the configuration file using the _**"partitions"**_ keyword. 
+Partitioning schemes are defined in the configuration file using the _**"partitions"**_ keyword.&#x20;
 
 ```
 partitions:

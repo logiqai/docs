@@ -10,7 +10,7 @@ NOTE: LOGIQ can use Athena and Glue on AWS optionally to power the SQL queries. 
 
 ## LOGIQ User Role
 
-You need to provide AWS access key and secret in LOGIQ server configuration with the following permissions. 
+You need to provide AWS access key and secret in LOGIQ server configuration with the following permissions.&#x20;
 
 ```javascript
 {

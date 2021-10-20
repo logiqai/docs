@@ -55,14 +55,14 @@ The attribute values are of type string unless otherwise specified
 * severity, Severity
 * facility, Facility
 * priority, Priority
-* app_name, appname, Appname, AppName
+* app\_name, appname, Appname, AppName
 * timestamp, Timestamp
 * message, Message
-* host_name, hostname, Hostname, HostName
+* host\_name, hostname, Hostname, HostName
 * boolean: tag.Exists, Tag.Exists
 * string: tag.Value, Tag.Value (RFC3164 only)
 * boolean: protocol.RFC5424, Protocol.RFC5424, Protocol.RFC3164, protocol.RFC3164
-* MsgId, Msgid, msg_id (RFC5424 only )
+* MsgId, Msgid, msg\_id (RFC5424 only )
 
 ### Condition expression syntax
 

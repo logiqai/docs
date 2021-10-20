@@ -47,7 +47,7 @@ The LOGIQ platform provides the below built-in groupings that are common. Additi
 
 Built-in groupings can be extended by adding extra values. This is done by creating a grouping definition in the configuration file with the same name. The user defined values are merged with the built-in values.
 
-Custom groupings are defined using the _**"groupings"**_ keyword and related attributes. 
+Custom groupings are defined using the _**"groupings"**_ keyword and related attributes.&#x20;
 
 ```
 groupings:
@@ -63,7 +63,7 @@ The attribute details for defining custom groupings are defined below.
 
 ## name \[required]
 
-Every grouping definition needs to have a name. The name defines a key for the grouping. 
+Every grouping definition needs to have a name. The name defines a key for the grouping.&#x20;
 
 ## values \[required]
 

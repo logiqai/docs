@@ -61,7 +61,7 @@ Following aggregation operators are available.
 
 ### View Results
 
-Saved reports can be accessed from the Queries Page. If the query is running, this page will show the progress. 
+Saved reports can be accessed from the Queries Page. If the query is running, this page will show the progress.&#x20;
 
 ![](../../.gitbook/assets/flash-high-level-reports\(4\).png)
 
@@ -71,7 +71,7 @@ Click on any report to view the results. Click on the toggle to enable periodic 
 
 ### Visualizations
 
-The results can be used to create visualizations. Click "New Visualization" to start visualizing the results. 
+The results can be used to create visualizations. Click "New Visualization" to start visualizing the results.&#x20;
 
 ![An example scatter plot](../../.gitbook/assets/newplot\(3\).png)
 

@@ -66,7 +66,7 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 ## Ingesting data
 
-Please refer to [section](../logiq-server/agentless/) on [data ingestion](../logiq-server/agentless/) for more details.
+For setting up data ingestion from your endpoints and applications into LOGIQ, please refer to the [Integrations section](../integrations/overview.md).
 
 ### Prometheus monitoring and alerting
 

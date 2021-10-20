@@ -30,7 +30,7 @@ The LOGIQ AMI is instantiated with an SSH key pair installed so a user can later
 
 Optionally, the prefix for creating access control resources like a LOGIQ User and Role can be provided. For optional resources, we use defaults if none is provided. _It is strongly advised that a unique prefix string be used if you plan on running multiple instances so as to keep the users and roles separate._
 
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LmzGprckLqwd5v6bs6m%2F-Ly4bERo8hA6sD8wcsA0%2F-Ly4dSsi70LCGJEeB_wG%2FScreen%20Shot%202020-01-08%20at%206.51.13%20AM.png?alt=media\&token=14dfeb26-7038-459e-9215-3fa60f1152da)
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LmzGprckLqwd5v6bs6m%2F-Ly4bERo8hA6sD8wcsA0%2F-Ly4dSsi70LCGJEeB\_wG%2FScreen%20Shot%202020-01-08%20at%206.51.13%20AM.png?alt=media\&token=14dfeb26-7038-459e-9215-3fa60f1152da)
 
 ### EC2 Instance configuration <a href="ec2-instance-configuration" id="ec2-instance-configuration"></a>
 

@@ -33,7 +33,7 @@ Out of the box, the LOGIQ server comes with commonly needed system defined Event
 
 ## Creating a new Event Rule
 
-The Event rule creation screen is launched by clicking on _**"New rule"**_ button. Please refer to [Viewing Event Rules](event-rules.md#viewing-event-rules) section above for details about each of the parameters needed to create new event rule. If the rule does not belong to any of the existing groups, a new group is created. 
+The Event rule creation screen is launched by clicking on _**"New rule"**_ button. Please refer to [Viewing Event Rules](event-rules.md#viewing-event-rules) section above for details about each of the parameters needed to create new event rule. If the rule does not belong to any of the existing groups, a new group is created.&#x20;
 
 ![](../.gitbook/assets/image4.png)
 
@@ -59,10 +59,10 @@ The attribute values are of type string unless otherwise specified
 
 * severity, Severity
 * facility, Facility
-* app_name, appname, Appname, AppName
+* app\_name, appname, Appname, AppName
 * timestamp, Timestamp
 * message, Message
-* host_name, hostname, Hostname, HostName
+* host\_name, hostname, Hostname, HostName
 * groupings
 * tag
 

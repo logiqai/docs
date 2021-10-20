@@ -4,7 +4,7 @@ description: This page describes how to access report results via API
 
 # Accessing Reports results via API
 
-Once the report is created, its results can be accessed via APIs.  
+Once the report is created, its results can be accessed via APIs. &#x20;
 
 {% swagger baseUrl="/api/queries/:queryid" path="" method="get" summary="Get Query By Id" %}
 {% swagger-description %}
@@ -26,7 +26,7 @@ Id of the query
 {% endswagger-response %}
 {% endswagger %}
 
-Once the results id is extracted invoke the results API to get the results 
+Once the results id is extracted invoke the results API to get the results&#x20;
 
 {% swagger baseUrl="/api/query_results/:result_id" path="" method="get" summary="Get Results by result_id" %}
 {% swagger-description %}

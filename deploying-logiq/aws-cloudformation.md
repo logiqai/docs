@@ -25,7 +25,7 @@ Please note that using the Marketplace AMI is not free and you will be charged p
 ## LOGIQ UI credentials <a href="default-user-and-password" id="default-user-and-password"></a>
 
 {% hint style="warning" %}
-After the Cloud formation template is complete, it may take several minutes for the UI to be available on the AMI. 
+After the Cloud formation template is complete, it may take several minutes for the UI to be available on the AMI.&#x20;
 
 The deployment exposes the UI on an http port by default. You can install an ELB to front the UI via https. This is the recommended production setup.
 {% endhint %}
@@ -46,4 +46,4 @@ Also see section on [AMI using CloudFormation](../running-on-aws/ami-using-cloud
 
 ## Ingesting data
 
-Please refer to section on [data ingestion](../logiq-server/agentless/) for more details.
+For setting up data ingestion from your endpoints and applications into LOGIQ, please refer to the [Integrations section](../integrations/overview.md).

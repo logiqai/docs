@@ -8,9 +8,9 @@ description: This document lists out the AWS resources needed to get started wit
 
 LOGIQ stores all your ingested logs in an S3 bucket. You will need to create a bucket in a region which has Athena access. Please refer to the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/rande.html#athena) for Athena regions.
 
-## Generate Programmatic access keys for LOGIQ 
+## Generate Programmatic access keys for LOGIQ&#x20;
 
-* Go to your AWS IAM console and add a user for programmatic access. 
+* Go to your AWS IAM console and add a user for programmatic access.&#x20;
 * Download and save the Secret and Access key for the user. This will be later used to access your S3 bucket where log data will be ingested.
 
 Proceed to [AWS IAM Resources](aws-iam-resources.md) to configure permissions for the user.

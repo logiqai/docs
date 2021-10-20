@@ -13,23 +13,23 @@ When an alert triggers, LOGIQ Insights sends alert details to its designated ale
 
 ## Configuring Destinations
 
- To configure alert destinations navigate to **settings** and open **“Alert Destinations”** tab
+&#x20;To configure alert destinations navigate to **settings** and open **“Alert Destinations”** tab
 
 ![Alert Destinations](<../.gitbook/assets/Screen Shot 2020-08-11 at 1.20.39 PM.png>)
 
 ### Email
 
 {% hint style="info" %}
- It’s required to [configure the e-mail](email-configuration-setup.md) server to receive e-mail notifications.
+&#x20;It’s required to [configure the e-mail](email-configuration-setup.md) server to receive e-mail notifications.
 {% endhint %}
 
 1. Click on + New Alert Destination”, pick Email.
 2. Specify, recipient’s name & email address.
-3. Subject is configurable. It’s recommended to use format: **Alert {alert_name} changed status to {state}. **alert_name and state are template parameters and will be replaced by the urls  to give more information about the alert that will have occurred.
+3. Subject is configurable. It’s recommended to use format: **Alert {alert\_name} changed status to {state}. **alert\_name and state are template parameters and will be replaced by the urls  to give more information about the alert that will have occurred.
 
 ![James Smith's Email configuration](<../.gitbook/assets/Screen Shot 2020-08-11 at 1.24.28 PM.png>)
 
- Email destination is created by clicking the save button.
+&#x20;Email destination is created by clicking the save button.
 
 ![Email Alert Destination](<../.gitbook/assets/Screen Shot 2020-08-11 at 1.33.34 PM.png>)
 

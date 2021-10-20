@@ -61,7 +61,7 @@ If you choose a different name for the namespace, please remember to use the sam
 
 ### 1.3 Prepare your Values YAML file
 
-Sample YAML files for small, medium, large cluster configurations can be downloaded at the following links. 
+Sample YAML files for small, medium, large cluster configurations can be downloaded at the following links.&#x20;
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
@@ -349,7 +349,7 @@ helm install logiq --namespace logiq \
 
 ### 3.9 Configuring cluster id
 
-When deploying LOGIQ, configure the cluster id to monitor your own LOGIQ deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](../logiq-server/agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance)
+When deploying LOGIQ, configure the cluster id to monitor your own LOGIQ deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](../integrations/agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance)
 
 ```bash
 helm install logiq --namespace logiq \
@@ -357,9 +357,9 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-| HELM Option                   | Description                                                                                                                                                                                                        | Default |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| global.environment.cluster_id | Cluster Id being used for the K8S cluster running LOGIQ. See Section on [Managing multiple K8S](../logiq-server/agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance) clusters for more details. | LOGIQ   |
+| HELM Option                    | Description                                                                                                                                                                                                        | Default |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| global.environment.cluster\_id | Cluster Id being used for the K8S cluster running LOGIQ. See Section on [Managing multiple K8S](../integrations/agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance) clusters for more details. | LOGIQ   |
 
 ### 3.10 Sizing your LOGIQ cluster
 

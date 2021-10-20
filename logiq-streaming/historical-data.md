@@ -39,7 +39,7 @@ $ curl --location --request POST 'http://cluster-1.logiq.ai/v1/query' \
 }
 ```
 
-Use GET /v1/data/{queryId}/next and GET /v1/data/{queryId}/previous to retrieve data. 
+Use GET /v1/data/{queryId}/next and GET /v1/data/{queryId}/previous to retrieve data.&#x20;
 
 ```
 $ curl 'https://cluster-1.logiq.ai/v1/data/4c977d08-4acf-52b5-a99d-d8c0eb41fe4b-lgq/next'
@@ -49,7 +49,7 @@ $ curl 'https://cluster-1.logiq.ai/v1/data/4c977d08-4acf-52b5-a99d-d8c0eb41fe4b-
 
 ```
 
-## Query API Documentation 
+## Query API Documentation&#x20;
 
 ### Version: 1.0
 

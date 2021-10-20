@@ -31,7 +31,7 @@ The rewrite rule for replacing names and phone numbers in the above sample log d
 XXX-Name ${p1}phone number${p2} XXX-XXX-XXXX
 ```
 
-The rewrite rule replaces `$name` and `$phone` among these groups while retaining `$p1` and `$p2`, providing the log data with redacted PII as the output, as shown below. 
+The rewrite rule replaces `$name` and `$phone` among these groups while retaining `$p1` and `$p2`, providing the log data with redacted PII as the output, as shown below.&#x20;
 
 ```
 2021-08-28 01:34:55.001Z XXX-Name phone number : xxx-xxx-xxxx
@@ -46,7 +46,7 @@ It is crucial to be mindful of the context of the regular expression you create 
 ```
 
 {% hint style="info" %}
-**Note**: For more information on RE2 search and replace syntax and best practices, do read the [RE2 documentation](https://qinwenfeng.com/re2r_doc/#2\_replace_a_substring). 
+**Note**: For more information on RE2 search and replace syntax and best practices, do read the [RE2 documentation](https://qinwenfeng.com/re2r\_doc/#2\_replace\_a\_substring).&#x20;
 {% endhint %}
 
 ### Creating a PII masking rule via the UI
@@ -55,19 +55,19 @@ You can create a custom rewrite rule to match and mask PII in your log data from
 
 ![](../.gitbook/assets/rw1\_2021-08-25\_20-44-05.jpg)
 
-To configure your rewrite rule, do the following. 
+To configure your rewrite rule, do the following.&#x20;
 
 1. Select **Re-Write** from the **Rule Type** dropdown menu.
-2. Provide a **Name** for your rule. 
-3. Select a **Level** and **Group**. 
-4. Provide a **Description** of the rule. 
-5. Specify the **Namespace** to apply the rule. 
-6. Optionally, provide an **ApplicationMatch **to match the application where you'd like to use the rule. 
-7. Provide your **Match** and **Rewrite** expressions.  
-8. Optionally, add match parameters. 
-9. Click **Create Rule**. 
+2. Provide a **Name** for your rule.&#x20;
+3. Select a **Level** and **Group**.&#x20;
+4. Provide a **Description** of the rule.&#x20;
+5. Specify the **Namespace** to apply the rule.&#x20;
+6. Optionally, provide an **ApplicationMatch **to match the application where you'd like to use the rule.&#x20;
+7. Provide your **Match** and **Rewrite** expressions. &#x20;
+8. Optionally, add match parameters.&#x20;
+9. Click **Create Rule**.&#x20;
 
-Your new rewrite rule is now created. You new rule will apply to all incoming log data for the specified namespace, look for patterns within the log data that match the match expression, and rewrite log data as per the rewrite expression. 
+Your new rewrite rule is now created. You new rule will apply to all incoming log data for the specified namespace, look for patterns within the log data that match the match expression, and rewrite log data as per the rewrite expression.&#x20;
 
 
 

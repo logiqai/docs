@@ -22,7 +22,7 @@ A Filter performs a boolean expression evaluation based on the incoming data fie
 
 ## Grouping
 
-A Grouping is a key value pair that tags data ingested by the LOGIQ server. It is defined on a destination. 
+A Grouping is a key value pair that tags data ingested by the LOGIQ server. It is defined on a destination.&#x20;
 
 ## Partition
 

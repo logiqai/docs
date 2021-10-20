@@ -28,17 +28,17 @@ Logout as LOGIQ admin. In the login Screen, "SAML Login" Button should be availa
 
 ## IDP configuration
 
-This document provides detailed information to configure OKTA and Google as Identity providers. For other identity providers, please refer to identity providers' documentation. In your IDP application, provide the SAML Assertion Consumer Service (ACS) URL for your LOGIQ environment and attribute mappings 
+This document provides detailed information to configure OKTA and Google as Identity providers. For other identity providers, please refer to identity providers' documentation. In your IDP application, provide the SAML Assertion Consumer Service (ACS) URL for your LOGIQ environment and attribute mappings&#x20;
 
 The following attributes are required. The LOGIQ mappings for each of the attributes are in brackets. Please use the correct attribute name otherwise LOGIQ will not be able to recognize the SAML assertion
 
 * First name (FirstName) and Last name (LastName)
 * Group name** ** (LogiqGroups)
 
-Use following SAML Assertion Consumer Service (ACS) url 
+Use following SAML Assertion Consumer Service (ACS) url&#x20;
 
 {% hint style="info" %}
-_https://**\<LOGIQ UI IP/Domain>**/saml/callback?org_slug=default_
+_https://**\<LOGIQ UI IP/Domain>**/saml/callback?org\_slug=default_
 {% endhint %}
 
 With this you should be able to access a SAML metadata URL or SAML metadata file.
@@ -53,11 +53,11 @@ On the next screen OKTA has fields for a few URLs:
 
 * Single Sign-On URL
 * Recipient URL
-* Destination URL 
+* Destination URL&#x20;
 * Audience Restriction
 
 Use your LOGIQ endpoint url in following format:\
-https://\<LOGIQ domain name>/saml/callback?org_slug=default\
+https://\<LOGIQ domain name>/saml/callback?org\_slug=default\
 \
 Set Name ID format: **EmailAddress**\
 Application username: **Email**
@@ -88,7 +88,7 @@ The `default` group in LOGIQ has access to all data sources. It is highly recomm
 
 Continue to create the application as guided by OKTA instructions. Once the application is successfully created, take note of the following information. This is** needed to configure LOGIQ. **
 
-1. SAML Metadata URL: "Identity Provider Metadata" URL depicted below in blue can be clicked to find out SAML metadata URL. 
+1. SAML Metadata URL: "Identity Provider Metadata" URL depicted below in blue can be clicked to find out SAML metadata URL.&#x20;
 
 ![](<../.gitbook/assets/Screen Shot4.1.png>)
 

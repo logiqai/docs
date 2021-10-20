@@ -22,4 +22,4 @@ LOGIQ's cli provides a similar restriction when a user tries to access resources
 
 ![](<../.gitbook/assets/Screen Shot 2020-08-11 at 9.09.19 AM.png>)
 
- 
+&#x20;

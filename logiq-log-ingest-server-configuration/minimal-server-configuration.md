@@ -38,6 +38,6 @@ rules:
     destination: default_log_store          
 ```
 
-The above configuration defines a simple rule that all incoming data needs to go to the destination _default_log_store_.
+The above configuration defines a simple rule that all incoming data needs to go to the destination _default\_log\_store_.
 
 See the section on [_LOGIQ server configuration_](terminology.md) on additional configuration options.

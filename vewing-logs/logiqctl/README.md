@@ -6,10 +6,10 @@ description: The LOGIQ command line toolkit
 
 The LOGIQ command line toolkit, logiqctl, allows you to run commands against LOGIQ Observability stack.
 
-You can 
+You can&#x20;
 
 * Real-time streaming of logs
-* Query historical application logs 
+* Query historical application logs&#x20;
 * Search your log data.
 * View Events
 * Manage Dashboards

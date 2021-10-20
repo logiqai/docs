@@ -20,35 +20,35 @@ Host IP's which server binds to - default is 0.0.0.0
 
 Server certificate key
 
-### relp_port \[optional]
+### relp\_port \[optional]
 
 The RELP port where server listens for RELP connection. Default port is _**20514**_
 
-### **relp_port_tls **\[optional]
+### **relp\_port\_tls **\[optional]
 
 The RELP port where server listens for RELP connection. Default port is _**2514**_
 
-### syslog_port \[optional]
+### syslog\_port \[optional]
 
 The syslog port where server listens for syslog connection. Default port is _**514**_
 
-### **syslog_port_tls **\[optional]
+### **syslog\_port\_tls **\[optional]
 
 The syslog port where server listens for syslog connection. Default port is _**7514**_
 
-### cli_port \[optional]
+### cli\_port \[optional]
 
 The port where the LOGIQ CLI is accessed. Default port is _**9998**_
 
-### cli_user \[optional]
+### cli\_user \[optional]
 
 Login for LOGIQ CLI console
 
-### cli_password \[optional]
+### cli\_password \[optional]
 
 Password for LOGIQ CLI console
 
-### glue_iam_service_role \[optional]
+### glue\_iam\_service\_role \[optional]
 
 ARN of the glue service role. See [here](../running-on-aws/aws-iam-resources.md#iam-service-role-for-glue) for more details. This only applies if you are trying to run LOGIQ in AWS.
 

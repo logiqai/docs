@@ -16,23 +16,37 @@
 * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/deploying-logiq-paas-on-microk8s.md)
 * [Deploying LOGIQ PaaS on AWS](deploying-logiq/aws-cloudformation.md)
 
+## INTEGRATIONS
+
+* [Overview](integrations/overview.md)
+* [Generating a secure ingest token](integrations/generating-a-secure-ingest-token.md)
+* [Logstash](integrations/logstash.md)
+* [Fluent Bit](integrations/fluent-bit.md)
+* [Fluentd](integrations/fluentd.md)
+* [Rsyslogd](integrations/rsyslogd.md)
+* [AWS CloudWatch](integrations/aws-cloudwatch-exporter.md)
+* [Palo Alto Firewall](integrations/palo-alto-firewall.md)
+* [Azure Event Hubs](integrations/azure-event-hubs.md)
+* [Configuring Prometheus](integrations/prometheus.md)
+* [Docker Syslog log driver](integrations/docker-syslog-log-driver.md)
+* [Ingesting data](integrations/agentless/README.md)
+  * [Generating Secure Ingest Token](integrations/agentless/generating-secure-ingest-token.md)
+
 ## Log Insights <a href="logiq-server" id="logiq-server"></a>
 
-* [Ingesting data](logiq-server/agentless/README.md)
-  * [AWS CloudWatch Exporter](logiq-server/agentless/aws-cloudwatch-exporter.md)
-  * [Generating Secure Ingest Token](logiq-server/agentless/generating-secure-ingest-token.md)
 * [Data extraction](logiq-server/data-extraction.md)
 * [Log Data Rewrite](logiq-server/data-rewrite.md)
 * [Timestamp handling](logiq-server/timestamp-handling.md)
 
 ## LOGIQ Monitoring
 
-* [Configuring Prometheus](logiq-monitoring/quickstart-guide.md)
-* [Prometheus Data source](logiq-monitoring/querying-data.md)
-* [JSON Data source](logiq-monitoring/json-data-source.md)
-* [Elasticsearch Data source](logiq-monitoring/elasticsearch-data-source.md)
-* [Application Monitoring](logiq-monitoring/application-monitoring/README.md)
-  * [Spring Boot](logiq-monitoring/application-monitoring/spring-boot.md)
+***
+
+* [Prometheus Data source](querying-data/README.md)
+  * [Application Monitoring](querying-data/application-monitoring/README.md)
+    * [Spring Boot](querying-data/application-monitoring/spring-boot.md)
+* [Elasticsearch Data source](elasticsearch-data-source.md)
+* [JSON Data source](json-data-source.md)
 
 ## Vewing Logs
 

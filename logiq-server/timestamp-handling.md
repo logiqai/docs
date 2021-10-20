@@ -19,7 +19,7 @@ LOGIQ handles the timestamps in the following order
 
 1. Use the _sending agent_ timestamp
 2. Extract any timestamp in log data automatically that is non-ambiguous
-3. If a user-defined timestamp extraction rule is provided, use the extraction rule to get the timestamp 
+3. If a user-defined timestamp extraction rule is provided, use the extraction rule to get the timestamp&#x20;
 
 ## User-defined timestamp rules
 
@@ -33,10 +33,10 @@ Users can specify timestamp extraction rules for log data using the LOGIQ data m
   format: "(?P<year>[0-9]{1,4})/(?P<month>[0-9]{1,2})/(?P<day>[0-9]{1,2}) (?P<hour>[0-9]{1,2}):(?P<minute>[0-9]{1,2}):(?P<seconds>[0-9]{1,2}).((?P<milliseconds>[0-9]{1,3})|(?P<microseconds>[0-9]{1,6}))(?P<offset>[+-])((?P<timezone_hour>[0-9]{1,2}):(?P<timezone_minute>[0-9]{1,2}))"
 ```
 
-Using the example rule above, a logline such as the one below will result in the proper timestamp being parsed and extracted from the log line.  
+Using the example rule above, a logline such as the one below will result in the proper timestamp being parsed and extracted from the log line. &#x20;
 
 ```
 "2009/06/29 13:30:10.956+05:30 something interesting happened"
 ```
 
- 
+&#x20;
