@@ -7,3 +7,4 @@ redirects:
     logiq-server/deploying-logiq-paas-on-microk8s: deploying-logiq/deploying-logiq-paas-on-microk8s.md
     logiq-server/aws-cloudformation: deploying-logiq/aws-cloudformation.md
     logiq-server/agentless: /integrations/overview.md
+    logiq-monitoring/quickstart-guide: /integrations/prometheus.md
