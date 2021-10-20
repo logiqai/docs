@@ -29,8 +29,6 @@
 * [Azure Event Hubs](integrations/azure-event-hubs.md)
 * [Configuring Prometheus](integrations/prometheus.md)
 * [Docker Syslog log driver](integrations/docker-syslog-log-driver.md)
-* [Ingesting data](integrations/agentless/README.md)
-  * [Generating Secure Ingest Token](integrations/agentless/generating-secure-ingest-token.md)
 
 ## Log Insights <a href="logiq-server" id="logiq-server"></a>
 
@@ -39,8 +37,6 @@
 * [Timestamp handling](logiq-server/timestamp-handling.md)
 
 ## LOGIQ Monitoring
-
-***
 
 * [Prometheus Data source](querying-data/README.md)
   * [Application Monitoring](querying-data/application-monitoring/README.md)

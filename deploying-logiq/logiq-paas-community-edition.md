@@ -397,9 +397,9 @@ helm install logiq --namespace logiq \
 
 The following table describes the Helm options passed with the command above.&#x20;
 
-| HELM Option                     | Description                                                                                                                                                                                                       | Default |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `global.environment.cluster_id` | The cluster ID being used for the K8s cluster running LOGIQ. For more information, read [Managing multiple K8S](../integrations/agentless/#managing-multiple-k-8-s-clusters-in-a-single-logiq-instance) clusters. | `LOGIQ` |
+| HELM Option                     | Description                                                                                                                                 | Default |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `global.environment.cluster_id` | The cluster ID being used for the K8s cluster running LOGIQ. For more information, read [Managing multiple K8S](broken-reference) clusters. | `LOGIQ` |
 
 ### Sizing your LOGIQ cluster
 
