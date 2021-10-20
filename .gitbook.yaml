@@ -8,7 +8,7 @@ redirects:
     logiq-server/aws-cloudformation: deploying-logiq/aws-cloudformation.md
     logiq-server/agentless: /integrations/overview.md
     logiq-monitoring/quickstart-guide: /integrations/prometheus.md
-    "logiq-server/agentless#logstash": /integrations/logstash.md
+    "logiq-server/agentless#logstash": integrations/logstash.md
     logiq-server/agentless#syslog-output-plugin: /integrations/logstash#syslog-output-plugin
     logiq-server/agentless#http-output-plugin: /integrations/logstash#http-output-plugin
     logiq-server/agentless#rsyslogd: /integrations/rsyslogd
