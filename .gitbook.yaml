@@ -8,3 +8,15 @@ redirects:
     logiq-server/aws-cloudformation: deploying-logiq/aws-cloudformation.md
     logiq-server/agentless: /integrations/overview.md
     logiq-monitoring/quickstart-guide: /integrations/prometheus.md
+    logiq-server/agentless#logstash: /integrations/logstash.md
+    logiq-server/agentless#syslog-output-plugin: /integrations/logstash#syslog-output-plugin
+    logiq-server/agentless#http-output-plugin: /integrations/logstash#http-output-plugin
+    logiq-server/agentless#rsyslogd: /integrations/rsyslogd
+    logiq-server/agentless#fluentd-k8s: /integrations/fluentd#fluentd-k8s
+    logiq-server/agentless#fluentd-configuration: /integrations/fluentd#fluentd-configuration
+    logiq-server/agentless#fluent-bit-for-windows: /integrations/fluent-bit#fluent-bit-for-windows
+    logiq-server/agentless#fluent-bit-k8s: /integrations/fluent-bit#fluent-bit-k8s
+    logiq-server/agentless#fluent-bit-configuration: /integrations/fluent-bit#fluent-bit-configuration
+    logiq-server/agentless#docker-syslog-log-driver: /integrations/docker-syslog-log-driver.md
+    logiq-server/agentless/generating-secure-ingest-token: /integrations/generating-a-secure-ingest-token.md
+    logiq-server/agentless/aws-cloudwatch-exporter: /integrations/aws-cloudwatch-exporter.md
