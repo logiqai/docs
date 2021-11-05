@@ -5,7 +5,7 @@ LOGIQ comes with a number of integration options that lets you connect with and 
 LOGIQ currently integrates with the following.&#x20;
 
 * [Logstash](logstash.md)
-* [Fluent Bit](fluent-bit.md)
+* [Fluent Bit](fluent-bit/)
 * [Fluentd](fluentd.md)
 * [Rsyslogd](rsyslogd.md)
 * [AWS CloudWatch](aws-cloudwatch-exporter.md)
@@ -18,6 +18,6 @@ LOGIQ currently integrates with the following.&#x20;
 
 You can also ingest logs from endpoint devices running:
 
-* [Windows](fluent-bit.md#fluent-bit-for-windows)
+* [Windows](fluent-bit/#fluent-bit-for-windows)
 * [macOS](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/macos)
 * [Linux](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/linux)
