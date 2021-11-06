@@ -65,19 +65,19 @@ Sample YAML files for small, medium, large cluster configurations can be downloa
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../.gitbook/assets/values (2).yaml" %}
+{% file src="../.gitbook/assets/values.small (20).yaml" %}
 values.small.yaml
 {% endfile %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../.gitbook/assets/values.medium (17).yaml" %}
+{% file src="../.gitbook/assets/values.medium (19).yaml" %}
 values.medium.yaml
 {% endfile %}
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../.gitbook/assets/values.large (18).yaml" %}
+{% file src="../.gitbook/assets/values.large (19).yaml" %}
 values.large.yaml
 {% endfile %}
 {% endtab %}
@@ -94,11 +94,11 @@ Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-c
 
 ### 1.4 Latest image tags
 
-| Image       | Tag       |
-| ----------- | --------- |
-| logiq-flash | 2.1.11.32 |
-| coffee      | 2.1.17.6  |
-| HELM        | 2.2.11    |
+| Image       | Tag    |
+| ----------- | ------ |
+| logiq-flash | 2.1.24 |
+| coffee      | 2.1.37 |
+| HELM        | 2.3.3  |
 
 ## 2. Install LOGIQ
 

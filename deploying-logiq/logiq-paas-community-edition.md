@@ -77,19 +77,19 @@ To give you a head start with configuring your LOGIQ deployment, we've provided 
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../.gitbook/assets/values.small (13).yaml" %}
+{% file src="../.gitbook/assets/values.small (19).yaml" %}
 values.small.yaml
 {% endfile %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../.gitbook/assets/values.medium (15).yaml" %}
+{% file src="../.gitbook/assets/values.medium (18).yaml" %}
 values.medium.yaml
 {% endfile %}
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../.gitbook/assets/values.large (16).yaml" %}
+{% file src="../.gitbook/assets/values.large (20).yaml" %}
 {% endtab %}
 {% endtabs %}
 
@@ -107,11 +107,11 @@ As a final step, you should read our [End User's License Agreement](https://docs
 
 The following table lists the latest version tags for all LOGIQ components.&#x20;
 
-| Image              | Version   |
-| ------------------ | --------- |
-| `logiq-flash`      | 2.1.11.27 |
-| `coffee`           | 2.1.17.4  |
-| `logiq` Helm chart | 2.2.11    |
+| Image              | Version |
+| ------------------ | ------- |
+| `logiq-flash`      | 2.1.24  |
+| `coffee`           | 2.1.37  |
+| `logiq` Helm chart | 2.3.2   |
 
 ## Install LOGIQ PaaS
 
