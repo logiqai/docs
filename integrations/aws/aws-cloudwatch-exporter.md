@@ -8,7 +8,7 @@ description: This guide explains how to export your AWS CloudWatch logs.
 
 You can export AWS CloudWatch logs to LOGIQ using an AWS Lambada function; the process is as below. AWS Lambda function can act as a trigger for a CloudWatch log stream.&#x20;
 
-![](../.gitbook/assets/flash-high-level-cloudwatch\(1\).png)
+![](../../.gitbook/assets/flash-high-level-cloudwatch\(1\).png)
 
 ### Creating Lambda function
 
@@ -36,10 +36,10 @@ This CloudFormation stack creates a lambda function and its necessary permission
 
 Once the CloudFormation stack is created, navigate to the AWS Lambda function(logiq-cloudwatch-exporter) and add a trigger.&#x20;
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3).png>)
 
 On the Add trigger page, select CloudWatch and select Log Group.&#x20;
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4).png>)
 
 Once this configuration is complete, any new logs coming to the configured CloudWatch Log group will be streamed to the Logiq cluster.

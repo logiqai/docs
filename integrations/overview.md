@@ -8,7 +8,7 @@ LOGIQ currently integrates with the following.&#x20;
 * [Fluent Bit](fluent-bit/)
 * [Fluentd](fluentd.md)
 * [Rsyslogd](rsyslogd.md)
-* [AWS CloudWatch](aws-cloudwatch-exporter.md)
+* [AWS CloudWatch](aws/aws-cloudwatch-exporter.md)
 * [Palo Alto Firewall](palo-alto-firewall.md)
 * [Azure Event Hubs](azure-event-hubs.md)
 * [Prometheus](prometheus.md)
