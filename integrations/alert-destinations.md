@@ -1,8 +1,10 @@
 ---
-description: This page describes configuring LOGIQ Insights alert destinations.
+description: >-
+  Users can choose a variety of incident management integrations to bring
+  reliability into your production operations.
 ---
 
-# Alert Destinations
+# Incident management
 
 When an alert triggers, LOGIQ Insights sends alert details to its designated alert destinations. LOGIQ Insights supports following types of alert destinations.
 
@@ -22,7 +24,7 @@ When an alert triggers, LOGIQ Insights sends alert details to its designated ale
 ### Email
 
 {% hint style="info" %}
-&#x20;It’s required to [configure the e-mail](email-configuration-setup.md) server to receive e-mail notifications.
+&#x20;It’s required to [configure the e-mail](../logiq-ui-configuration/email-configuration-setup.md) server to receive e-mail notifications.
 {% endhint %}
 
 1. Click on + New Alert Destination”, pick Email.

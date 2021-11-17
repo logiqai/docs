@@ -23,7 +23,7 @@ E.g., we want to receive an alert when a particular event (i.e. occurance of the
 * **Severity String**: Auto populated from the logline.
 * **Facility String**: Auto populated from the logline.
 * **Data Sources**: Prometheus instance that is used for monitoring the event counters. This is non-editable
-* **Destination**: This is a user-specified selection where the alerts will be delivered. Only [user-defined alert destinations](../logiq-ui-configuration/alert-destinations.md) will be available for selection.
+* **Destination**: This is a user-specified selection where the alerts will be delivered. Only [user-defined alert destinations](../integrations/alert-destinations.md) will be available for selection.
 * **Operation**: One of the comparators: `>` `>=` `<` `<=` `==` `!=` `=~` `!~`
 * **Occurrences**: number of times the event must occur, must be a valid number.
 * **Period**: time over which the event occurred, e.g, `5m`, `10m`, `1h`, `1d`, `1w`. Period should be greater than `5m` (`300s`) and should be greater than or equal to Refresh schedule.

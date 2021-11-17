@@ -19,7 +19,7 @@
 ## INTEGRATIONS
 
 * [Overview](integrations/overview.md)
-* [Incident Management](integrations/incident-management.md)
+* [Incident management](integrations/alert-destinations.md)
 * [Generating a secure ingest token](integrations/generating-a-secure-ingest-token.md)
 * [Logstash](integrations/logstash.md)
 * [Fluent Bit](integrations/fluent-bit/README.md)
@@ -84,7 +84,6 @@
 ## LOGIQ Configuration <a href="logiq-ui-configuration" id="logiq-ui-configuration"></a>
 
 * [E-Mail Configuration](logiq-ui-configuration/email-configuration-setup.md)
-* [Alert Destinations](logiq-ui-configuration/alert-destinations.md)
 * [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration.md)
 
 ## Log Ingest configuration <a href="logiq-log-ingest-server-configuration" id="logiq-log-ingest-server-configuration"></a>
