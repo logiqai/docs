@@ -19,7 +19,7 @@
 ## INTEGRATIONS
 
 * [Overview](integrations/overview.md)
-* [Incident management](integrations/alert-destinations.md)
+* [Incident management](logiq-ui-configuration/alert-destinations.md)
 * [Generating a secure ingest token](integrations/generating-a-secure-ingest-token.md)
 * [Logstash](integrations/logstash.md)
 * [Fluent Bit](integrations/fluent-bit/README.md)

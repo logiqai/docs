@@ -24,7 +24,7 @@ When an alert triggers, LOGIQ Insights sends alert details to its designated ale
 ### Email
 
 {% hint style="info" %}
-&#x20;It’s required to [configure the e-mail](../logiq-ui-configuration/email-configuration-setup.md) server to receive e-mail notifications.
+&#x20;It’s required to [configure the e-mail](email-configuration-setup.md) server to receive e-mail notifications.
 {% endhint %}
 
 1. Click on + New Alert Destination”, pick Email.
@@ -61,12 +61,6 @@ After obtaining the Integration Key:
 
 ![PagerDuty Configuration](<../.gitbook/assets/Screen Shot 2020-08-11 at 5.02.05 PM.png>)
 
-### Associating alert destinations to alert
-
-Once the Alert destinations are created, one or more alert destinations can be configured in alert create or edit ui. Each configured destination is notified whenever that alert triggers.
-
-![](<../.gitbook/assets/Screen Shot 2020-08-11 at 5.11.15 PM.png>)
-
 ### OpsGenie
 
 In the OpsGenie UI, navigate to your **Teams** page and select the team for which you want to create the alert integration. In the example below we will use the logflow team.
@@ -99,4 +93,10 @@ You are now ready to add the OpsGenie integration in LOGIQ under alert destinati
 
 You can now see the alerts being raised in the OpsGenie UI under the alerts tab.
 
-![](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.22.53 PM.png>) ![](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.23.18 PM.png>)
+![OpsGenie alerts table](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.22.53 PM.png>) ![OpsGenie LOGIQ generated alert detail](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.23.18 PM.png>)
+
+## Associating alert destinations to alert
+
+Once the Alert destinations are created, one or more alert destinations can be configured in alert create or edit ui. Each configured destination is notified whenever that alert triggers.
+
+![](<../.gitbook/assets/Screen Shot 2020-08-11 at 5.11.15 PM.png>)
