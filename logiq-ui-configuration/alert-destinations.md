@@ -9,13 +9,15 @@ When an alert triggers, LOGIQ Insights sends alert details to its designated ale
 * **E-mail**
 * **Slack**
 * **PagerDuty **
+* **OpsGenie**
+* **ServiceNow**
 * **Generic Webhook**
 
 ## Configuring Destinations
 
 &#x20;To configure alert destinations navigate to **settings** and open **“Alert Destinations”** tab
 
-![Alert Destinations](<../.gitbook/assets/Screen Shot 2020-08-11 at 1.20.39 PM.png>)
+![](<../.gitbook/assets/Screen Shot 2021-11-16 at 5.36.31 PM.png>)
 
 ### Email
 
@@ -62,3 +64,37 @@ After obtaining the Integration Key:
 Once the Alert destinations are created, one or more alert destinations can be configured in alert create or edit ui. Each configured destination is notified whenever that alert triggers.
 
 ![](<../.gitbook/assets/Screen Shot 2020-08-11 at 5.11.15 PM.png>)
+
+### OpsGenie
+
+In the OpsGenie UI, navigate to your **Teams** page and select the team for which you want to create the alert integration. In the example below we will use the logflow team.
+
+{% hint style="info" %}
+NOTE: More than one OpsGenie alert destinations can be defined in LOGIQ
+{% endhint %}
+
+![Select the team](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.17.24 PM.png>)
+
+In the teams page, select **Add integration** and create a new **REST API HTTPS over JSON** Integration type
+
+![Add an integration to the team](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.17.38 PM.png>)
+
+![REST API HTTPS OVER JSON](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.17.53 PM.png>)
+
+![](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.18.49 PM.png>)
+
+Copy the API integration key from the integration created above.
+
+{% hint style="info" %}
+The API Key must be created with **Read** and **Create and Update **permissions and must be **Enabled**
+{% endhint %}
+
+You are now ready to add the OpsGenie integration in LOGIQ under alert destinations. Provide a name for the integration and the **OpsGenie api key**. You are now ready to receive incident notifications from LOGIQ.
+
+![OpsGenie Alert destination](<../.gitbook/assets/Screen Shot 2021-11-16 at 5.43.31 PM.png>)
+
+#### OpsGenie alerts view for LOGIQ alerts
+
+You can now see the alerts being raised in the OpsGenie UI under the alerts tab.
+
+![](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.22.53 PM.png>) ![](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.23.18 PM.png>)

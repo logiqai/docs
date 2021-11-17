@@ -19,6 +19,7 @@
 ## INTEGRATIONS
 
 * [Overview](integrations/overview.md)
+* [Incident Management](integrations/incident-management.md)
 * [Generating a secure ingest token](integrations/generating-a-secure-ingest-token.md)
 * [Logstash](integrations/logstash.md)
 * [Fluent Bit](integrations/fluent-bit/README.md)
