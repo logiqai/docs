@@ -1,6 +1,10 @@
 # Overview
 
-LOGIQ comes with a number of integration options that lets you connect with and securely ingest data from popular log forwarding agents, cloud services, operating systems, container applications, and on-premise infrastructure. You can secure data ingestion from your endpoints into LOGIQ by [generating a secure ingest token](generating-a-secure-ingest-token.md). &#x20;
+LOGIQ comes with a number of integration options for ingest and incident management.
+
+### Ingest
+
+lets you connect with and securely ingest data from popular log forwarding agents, cloud services, operating systems, container applications, and on-premise infrastructure. You can secure data ingestion from your endpoints into LOGIQ by [generating a secure ingest token](generating-a-secure-ingest-token.md). &#x20;
 
 LOGIQ currently integrates with the following.&#x20;
 
@@ -21,3 +25,13 @@ You can also ingest logs from endpoint devices running:
 * [Windows](fluent-bit/#fluent-bit-for-windows)
 * [macOS](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/macos)
 * [Linux](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/linux)
+
+### Incident management
+
+Users can choose a variety of i[ncident management integrations](../logiq-ui-configuration/alert-destinations.md) to bring reliability into your production operations.
+
+* Email
+* Slack
+* OpsGenie
+* PagerDuty
+* ServiceNow
