@@ -8,6 +8,8 @@ The LOGIQ platform comprises of a User interface, a [command line toolkit](https
 
 ![](<.gitbook/assets/Screen Shot 2021-10-29 at 5.23.32 AM.png>)
 
+![](<.gitbook/assets/Screen Shot 2021-11-29 at 6.00.37 AM.png>)
+
 ![](<.gitbook/assets/Screen Shot 2021-10-28 at 6.59.53 AM.png>)
 
 ## Monitoring
