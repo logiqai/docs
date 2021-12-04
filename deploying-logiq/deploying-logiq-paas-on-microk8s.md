@@ -21,7 +21,7 @@ The first step in this deployment is to install MicroK8s on your machine. To ins
 3.  Install MicroK8s using Snap by running the following command.
 
     ```
-    sudo snap install microk8s --classic
+    sudo snap install microk8s --classic --channel=1.21/stable
     ```
 4.  Join the group created by MicroK8s that enables uninterrupted usage of commands that require admin access by running the following command.
 
@@ -137,7 +137,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
     ```
     microk8s kubectl create namespace logiq
     ```
-4.  Prepare your values.microk8s.yaml file. You can use the [starter `values.microk8s.yaml`](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your LOGIQ PaaS deployment
+4.  Prepare your values.microk8s.yaml file. You can use the **** [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your LOGIQ PaaS deployment
 
     > Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://github.com/logiqai/logiq-installation/blob/main/values/values.yaml) instead. run the following command.
     >
