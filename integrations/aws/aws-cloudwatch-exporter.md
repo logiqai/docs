@@ -6,7 +6,7 @@ description: This guide explains how to export your AWS CloudWatch logs to LOGIQ
 
 ## LOGIQ CloudWatch exporter Lambda function
 
-You can export AWS CloudWatch logs to LOGIQ using an AWS Lambada function. The AWS Lambda function can act as a trigger for a CloudWatch log stream.&#x20;
+You can export AWS CloudWatch logs to LOGIQ using an AWS Lambada function. The AWS Lambda function acts as a trigger for a CloudWatch log stream.&#x20;
 
 This guide explains the process for setting up an AWS Lambda function and configuring an AWS CloudWatch trigger to forward CloudWatch logs to LOGIQ.
 
@@ -14,14 +14,36 @@ This guide explains the process for setting up an AWS Lambda function and config
 
 ### Creating a Lambda function
 
-LOGIQ provides a CloudFormation template to create the LOGIQ CloudWatch exporter Lambda function.&#x20;
+LOGIQ provides CloudFormation templates to create the LOGIQ CloudWatch exporter Lambda function.&#x20;
+
+Depending on the type of logs you'd like to export, use the appropriate CloudFormation template from the following list.&#x20;
+
+#### Exporting Lambda Function logs
+
+Use the following CloudFormation template to export AWS Lambda function logs to LOGIQ.
 
 ```
-https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/cf.yaml
+https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-lambda-logs-exporter.yaml
+```
+
+#### Exporting CloudTrail Logs
+
+Use the following CloudFormation template to export CloudTrail logs to LOGIQ.
+
+```
+https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-cloudtrail-exporter.yaml
+```
+
+#### Exporting AWS VPC Flowlogs
+
+Use the following CloudFormation template to export Flowlogs logs to LOGIQ.
+
+```
+https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-flowlogs-exporter.yaml
 ```
 
 {% hint style="info" %}
-You can also download the CloudFormation template from our [client-integrations](https://bitbucket.org/logiqcloud/client-integrations/src/master/cloudwatch-exporter/) git repository.
+You can also download CloudFormation templates from our [client-integrations](https://bitbucket.org/logiqcloud/client-integrations/src/master/cloudwatch-exporter/) git repository.
 {% endhint %}
 
 This CloudFormation stack creates a Lambda function and its necessary permissions. You must configure the following attributes.
