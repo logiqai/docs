@@ -42,19 +42,27 @@ Use the following CloudFormation template to export Flowlogs logs to LOGIQ.
 https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-flowlogs-exporter.yaml
 ```
 
+#### Exporting Cloudwatch logs from other services
+
+Use the following CloudFormation template to export cloudwatch logs.&#x20;
+
+```
+https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-exporter.yaml
+```
+
 {% hint style="info" %}
 You can also download CloudFormation templates from our [client-integrations](https://bitbucket.org/logiqcloud/client-integrations/src/master/cloudwatch-exporter/) git repository.
 {% endhint %}
 
 This CloudFormation stack creates a Lambda function and its necessary permissions. You must configure the following attributes.
 
-| Parameter     | Description                                                     |
-| ------------- | --------------------------------------------------------------- |
-| `APPNAME`     | Application name - a readable name for LOGIQ to partition logs. |
-| `CLUSTERID`   | Cluster ID - a readable name for LOGIQ to partition logs.       |
-| `NAMESPACE`   | Namespace - a readable name for LOGIQ to partition logs.        |
-| `LOGIQHOST`   | IP address or hostname of the LOGIQ server.                     |
-| `INGESTTOKEN` | JWT token to securely ingest logs                               |
+| Parameter     | Description                                                         |
+| ------------- | ------------------------------------------------------------------- |
+| `APPNAME`     | Application name - a readable name for LOGIQ to partition logs.     |
+| `CLUSTERID`   | Cluster ID - a readable name for LOGIQ to partition logs.           |
+| `NAMESPACE`   | Namespace - a readable name for LOGIQ to partition logs.            |
+| `LOGIQHOST`   | IP address or hostname of the LOGIQ server. (Without http or https) |
+| `INGESTTOKEN` | JWT token to securely ingest logs                                   |
 
 ## Configuring the CloudWatch trigger
 
