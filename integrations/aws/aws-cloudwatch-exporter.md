@@ -50,10 +50,6 @@ Use the following CloudFormation template to export cloudwatch logs.&#x20;
 https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-exporter.yaml
 ```
 
-{% hint style="info" %}
-You can also download CloudFormation templates from our [client-integrations](https://bitbucket.org/logiqcloud/client-integrations/src/master/cloudwatch-exporter/) git repository.
-{% endhint %}
-
 This CloudFormation stack creates a Lambda function and its necessary permissions. You must configure the following attributes.
 
 | Parameter     | Description                                                         |
