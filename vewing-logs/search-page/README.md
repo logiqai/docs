@@ -38,7 +38,7 @@ Expand the caret available in each row to see the log in detail.&#x20;
 
 ![](../../.gitbook/assets/flash-high-level-search-expand.png)
 
-The dots available on each line will reveal additional options to export individual log lines as json, to define a **metric **and** create a report**.&#x20;
+The dots available on each line will reveal additional options to export individual log lines as json, to define a **metric** and **create a report**.&#x20;
 
 ![](../../.gitbook/assets/flash-high-level-options\(1\).png)
 

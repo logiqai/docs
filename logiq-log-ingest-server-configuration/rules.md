@@ -2,7 +2,7 @@
 
 Every LOGIQ configuration file must have at least one rule. A rule specifies how the incoming data streams are separated and organized into buckets and objects.
 
-Rules are defined with the _**"rules"**_ keyword in the config file. All rule definitions must have a "_**destination" **_keyword referring to a destination by name. Optionally, a rule may specify a _"**source" **_keyword referring to a source by name and a _**"filter" **_keyword referring to a filter by name. The _config file validator_ will flag an error for destination, source, filter names that are not found but referenced in a rule definition
+Rules are defined with the _**"rules"**_ keyword in the config file. All rule definitions must have a "_**destination"**_ keyword referring to a destination by name. Optionally, a rule may specify a _"**source"**_ keyword referring to a source by name and a _**"filter"**_ keyword referring to a filter by name. The _config file validator_ will flag an error for destination, source, filter names that are not found but referenced in a rule definition
 
 ```
 rules:

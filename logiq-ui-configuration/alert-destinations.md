@@ -10,7 +10,7 @@ When an alert triggers, LOGIQ Insights sends alert details to its designated ale
 
 * **E-mail**
 * **Slack**
-* **PagerDuty **
+* **PagerDuty**&#x20;
 * **OpsGenie**
 * **ServiceNow**
 * **Generic Webhook**
@@ -21,7 +21,7 @@ When an alert triggers, LOGIQ Insights sends alert details to its designated ale
 
 ![](<../.gitbook/assets/Screen Shot 2021-11-16 at 5.36.31 PM.png>)
 
-### Email <a href="email" id="email"></a>
+### Email <a href="#email" id="email"></a>
 
 {% hint style="info" %}
 &#x20;It’s required to [configure the e-mail](email-configuration-setup.md) server to receive e-mail notifications.
@@ -29,7 +29,7 @@ When an alert triggers, LOGIQ Insights sends alert details to its designated ale
 
 1. Click on + New Alert Destination”, pick Email.
 2. Specify, recipient’s name & email address.
-3. Subject is configurable. It’s recommended to use format: **Alert {alert\_name} changed status to {state}. **alert\_name and state are template parameters and will be replaced by the urls  to give more information about the alert that will have occurred.
+3. Subject is configurable. It’s recommended to use format: **Alert {alert\_name} changed status to {state}.** alert\_name and state are template parameters and will be replaced by the urls  to give more information about the alert that will have occurred.
 
 ![James Smith's Email configuration](<../.gitbook/assets/Screen Shot 2020-08-11 at 1.24.28 PM.png>)
 
@@ -37,7 +37,7 @@ When an alert triggers, LOGIQ Insights sends alert details to its designated ale
 
 ![Email Alert Destination](<../.gitbook/assets/Screen Shot 2020-08-11 at 1.33.34 PM.png>)
 
-### Slack <a href="slack" id="slack"></a>
+### Slack <a href="#slack" id="slack"></a>
 
 In your [slack](https://my.slack.com/services/new/incoming-webhook/) console, pick or create a channel such as #alerts-events in this example and create an incoming webhook by clicking on "Add Incoming Webhooks Integration"
 
@@ -47,7 +47,7 @@ In your LOGIQ Insight's UI, Open “Alert Destinations” tab in the settings sc
 
 ![Slack Destination Configuration](<../.gitbook/assets/Screen Shot 2020-08-11 at 1.39.49 PM.png>)
 
-### Pager Duty <a href="pagerduty" id="pagerduty"></a>
+### Pager Duty <a href="#pagerduty" id="pagerduty"></a>
 
 Obtain the PagerDuty Integration Key from your PagerDuty service. Use Events API v2 Integration Type.
 
@@ -61,7 +61,7 @@ After obtaining the Integration Key:
 
 ![PagerDuty Configuration](<../.gitbook/assets/Screen Shot 2020-08-11 at 5.02.05 PM.png>)
 
-### OpsGenie <a href="opsgenie" id="opsgenie"></a>
+### OpsGenie <a href="#opsgenie" id="opsgenie"></a>
 
 In the OpsGenie UI, navigate to your **Teams** page and select the team for which you want to create the alert integration. In the example below we will use the logflow team.
 
@@ -82,7 +82,7 @@ In the teams page, select **Add integration** and create a new **REST API HTTPS 
 Copy the API integration key from the integration created above.
 
 {% hint style="info" %}
-The API Key must be created with **Read** and **Create and Update **permissions and must be **Enabled**
+The API Key must be created with **Read** and **Create and Update** permissions and must be **Enabled**
 {% endhint %}
 
 You are now ready to add the OpsGenie integration in LOGIQ under alert destinations. Provide a name for the integration and the **OpsGenie api key**. You are now ready to receive incident notifications from LOGIQ.

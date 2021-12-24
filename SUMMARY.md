@@ -15,6 +15,7 @@
 * [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/k8s-quickstart-guide.md)
 * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/deploying-logiq-paas-on-microk8s.md)
 * [Deploying LOGIQ PaaS on AWS](deploying-logiq/aws-cloudformation.md)
+* [Deploying LOGIQ PaaS in Azure Kubernetes Service](deploying-logiq/deploying-logiq-paas-in-azure-kubernetes-service.md)
 
 ## INTEGRATIONS
 
@@ -35,7 +36,7 @@
 * [Configuring Prometheus](integrations/prometheus.md)
 * [Docker Syslog log driver](integrations/docker-syslog-log-driver.md)
 
-## Log Insights <a href="logiq-server" id="logiq-server"></a>
+## Log Insights <a href="#logiq-server" id="logiq-server"></a>
 
 * [Data extraction](logiq-server/data-extraction.md)
 * [Log Data Rewrite](logiq-server/data-rewrite.md)
@@ -66,7 +67,7 @@
 * [Role-Based Access Control (RBAC)](vewing-logs/role-based-access-control.md)
 * [Configuring RBAC](vewing-logs/configuring-rbac.md)
 
-## ANOMALY DETECTION <a href="logiq-events" id="logiq-events"></a>
+## ANOMALY DETECTION <a href="#logiq-events" id="logiq-events"></a>
 
 * [Events](logiq-events/events.md)
 * [Event Rules](logiq-events/event-rules.md)
@@ -81,12 +82,12 @@
 
 * [Query API](logiq-streaming/historical-data.md)
 
-## LOGIQ Configuration <a href="logiq-ui-configuration" id="logiq-ui-configuration"></a>
+## LOGIQ Configuration <a href="#logiq-ui-configuration" id="logiq-ui-configuration"></a>
 
 * [E-Mail Configuration](logiq-ui-configuration/email-configuration-setup.md)
 * [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration.md)
 
-## Log Ingest configuration <a href="logiq-log-ingest-server-configuration" id="logiq-log-ingest-server-configuration"></a>
+## Log Ingest configuration <a href="#logiq-log-ingest-server-configuration" id="logiq-log-ingest-server-configuration"></a>
 
 * [Terminology](logiq-log-ingest-server-configuration/terminology.md)
 * [Minimal server configuration](logiq-log-ingest-server-configuration/minimal-server-configuration.md)

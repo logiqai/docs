@@ -14,7 +14,7 @@ To create an HTTP server profile and set up log forwarding, do the following.&#x
 6. Enter the port as `514/2514`.&#x20;
 7. From the **Format** dropdown, choose **IETF**.&#x20;
 8. Select the **Protocol** as either **HTTP** or **HTTPS**. The default port is `80` for **HTTP** and `443` for **HTTPS**. You can modify the port number to match the port on which your HTTP server listens.&#x20;
-9. Select the **HTTP Method **supported by the third-party service. You can choose from `PUT`, `POST` (default), `GET`, and `DELETE`.&#x20;
+9. Select the **HTTP Method** supported by the third-party service. You can choose from `PUT`, `POST` (default), `GET`, and `DELETE`.&#x20;
 10. Select **Test Server Connection** to verify network connectivity between the firewall and the HTTP(S) server.&#x20;
 
 You will now see a new entry under the **Device** section.&#x20;
