@@ -35,7 +35,7 @@ The attributes for defining a single credential are defined below.
 
 ## s3 \[required]
 
-The _**"s3"**_ keyword is used to specify credentials for any S3/S3 compatible object store.
+The_** "s3"**_ keyword is used to specify credentials for any S3/S3 compatible object store.
 
 ## name \[required]
 

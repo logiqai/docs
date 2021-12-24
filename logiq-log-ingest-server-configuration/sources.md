@@ -58,7 +58,7 @@ sources:
 
 ### ipv4\_list - Specify a list of ip addresses
 
-An IP address list is specified by individual ip addresses separated by commas. Note that in the _**"ipv4\_list"**_ keyword, only individual ip addresses are allowed and not CIDR ranges.
+An IP address list is specified by individual ip addresses separated by commas. Note that in the _**"ipv4\_list" **_keyword, only individual ip addresses are allowed and not CIDR ranges.
 
 ```
 sources:

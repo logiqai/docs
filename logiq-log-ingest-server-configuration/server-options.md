@@ -24,7 +24,7 @@ Server certificate key
 
 The RELP port where server listens for RELP connection. Default port is _**20514**_
 
-### **relp\_port\_tls** \[optional]
+### **relp\_port\_tls **\[optional]
 
 The RELP port where server listens for RELP connection. Default port is _**2514**_
 
@@ -32,7 +32,7 @@ The RELP port where server listens for RELP connection. Default port is _**2514*
 
 The syslog port where server listens for syslog connection. Default port is _**514**_
 
-### **syslog\_port\_tls** \[optional]
+### **syslog\_port\_tls **\[optional]
 
 The syslog port where server listens for syslog connection. Default port is _**7514**_
 

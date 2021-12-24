@@ -48,7 +48,7 @@ rules:
 
 An optional partition reference can be provided which tells the LOGIQ server on how to organize the data at the destination.
 
-In the example below, there are two destinations defined: _**t\_webservers** and **t\_debug**_**.** A partition reference ** **_**p\_by\_day**_** ** is specified for the destination ** **_**t\_webservers** \_but not for_  **t**\_**debug.** The p\_by\_day is a named reference to a partition definition. See section on [Partitions](partitions.md) on how to specify a partitioning scheme for destination data.
+In the example below, there are two destinations defined: _**t\_webservers** and **t\_debug**_**. **A partition reference** **_**p\_by\_day**_** **is specified for the destination** **_**t\_webservers **\_but not for  _**t**\_**debug. **The p\_by\_day is a named reference to a partition definition. See section on [Partitions](partitions.md) on how to specify a partitioning scheme for destination data.
 
 ```yaml
 destinations:
@@ -83,7 +83,7 @@ An S3 destination is used for AWS S3 and AWS S3 compatible object stores.&#x20;
 
 _NOTE: For AWS S3 compatible object store, the AWS SDK should work on the object store and support bucket listing, creation and multi-part uploads._
 
-Below are two examples. The first destination _**t\_webservers**_ is a definition of a bucket in AWS S3. The second destination ** **_**t\_minio\_webservers**_ is a definition of a bucket hosted in an S3 compatible object store. An S3 compatible object stores supports an optional endpoint key in the s3 definition that points to the http endpoint where the object store is hosted.
+Below are two examples. The first destination _**t\_webservers**_ is a definition of a bucket in AWS S3. The second destination** **_**t\_minio\_webservers**_ is a definition of a bucket hosted in an S3 compatible object store. An S3 compatible object stores supports an optional endpoint key in the s3 definition that points to the http endpoint where the object store is hosted.
 
 ```
 -

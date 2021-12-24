@@ -62,7 +62,7 @@ To configure your rewrite rule, do the following.&#x20;
 3. Select a **Level** and **Group**.&#x20;
 4. Provide a **Description** of the rule.&#x20;
 5. Specify the **Namespace** to apply the rule.&#x20;
-6. Optionally, provide an **ApplicationMatch** to match the application where you'd like to use the rule.&#x20;
+6. Optionally, provide an **ApplicationMatch **to match the application where you'd like to use the rule.&#x20;
 7. Provide your **Match** and **Rewrite** expressions. &#x20;
 8. Optionally, add match parameters.&#x20;
 9. Click **Create Rule**.&#x20;
