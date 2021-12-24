@@ -29,7 +29,7 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 ```bash
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.2.11           2.1.11         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.3.4            2.1.13         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 #### 1.1.1 Update your HELM chart
@@ -40,7 +40,7 @@ If you already added LOGIQ's HELM repository in the past, you can get updated so
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.2.11           2.1.11         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.3.4            2.1.13         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -77,7 +77,7 @@ values.medium.yaml
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../.gitbook/assets/values.large (19).yaml" %}
+{% file src="../.gitbook/assets/values.large (19) (1).yaml" %}
 values.large.yaml
 {% endfile %}
 {% endtab %}
@@ -90,15 +90,7 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq -f values.small.yaml
 ```
 
-Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-cluster) for sizing your LOGIQ cluster as specified in these YAML files.
-
-### 1.4 Latest image tags
-
-| Image       | Tag    |
-| ----------- | ------ |
-| logiq-flash | 2.1.24 |
-| coffee      | 2.1.37 |
-| HELM        | 2.3.3  |
+Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-cluster) for sizing your LOGIQ cluster as specified in these YAML file Latest image tags.
 
 ## 2. Install LOGIQ
 
@@ -168,7 +160,7 @@ Depending on your requirements, you may want to host your storage in your own K8
 Please note that cloud providers may charge data transfer costs between regions. It is important that the LOGIQ cluster be deployed in the same region where the S3 bucket is hosted
 {% endhint %}
 
-#### 3.2.1 Create an access/secret key pair for creating and managing your bucket <a href="3-1-1" id="3-1-1"></a>
+#### 3.2.1 Create an access/secret key pair for creating and managing your bucket <a href="#3-1-1" id="3-1-1"></a>
 
 Go to AWS IAM console and create an access key and secret key that can be used to create your bucket and manage access to the bucket for writing and reading your log files
 

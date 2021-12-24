@@ -1,11 +1,11 @@
 logiq-flash:
-  replicaCount: 8
-  replicaCountMl: 2
-  replicaCountSync: 2
+  replicaCount: 1
+  replicaCountMl: 1
+  replicaCountSync: 1
   service:
     type: NodePort
   image:
-    tag: logiq-2.1.31
+    tag: 2.1.24-rc41
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -105,28 +105,15 @@ redis:
     name: redis
 
 postgres:
-  enabled: true
+  enabled: false
   fullnameOverride: postgres
   postgresqlPostgresPassword: postgres
   postgresqlUsername: postgres
   postgresqlDatabase: postgres
   postgresqlPassword: postgres
   postgresqlExtendedConf:
-    sharedBuffers: "4096MB"
-    effectiveCacheSize: "12288MB"
-    maintenanceWorkMem: "1024MB"
-    checkpointCompletionTarget: "0.7"
-    walBuffers: "16MB"
-    defaultStatisticsTarget: "100"
-    randomPageCost: "1.1"
-    effectiveIoConcurrency: "200"
-    workMem: "327kB"
-    minWalSize: "1024MB"
-    maxWalSize: "4096MB"
-    maxWorkerProcesses: "10"
-    maxParallelWorkersPerGather: "4"
-    maxParallelWorkers: "10"
-    maxParallelMaintenanceWorkers: "4"
+    maxConnections: "400"
+    sharedBuffers: "1024MB"
   metrics:
     enabled: true
     serviceMonitor:
@@ -134,11 +121,11 @@ postgres:
     additionalLabels:
       release: prometheus
   persistence:
-    size: 256Gi
+    size: 20Gi
   resources:
     requests:
-      memory: "16Gi"
-      cpu: "7000m"
+      memory: "4Gi"
+      cpu: "1000m"
   securityContext:
     enabled: true
     fsGroup: 1001
@@ -153,7 +140,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.37-rc63
+      tag: brew.2.1.37-rc60
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -162,9 +149,9 @@ flash-coffee:
       limits:
         cpu: "1000m"
   coffee_worker:
-    replicaCount: 4
+    replicaCount: 1
     image:
-      tag: brew.2.1.37-rc63
+      tag: brew.2.1.37-rc60
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -212,7 +199,7 @@ ingress:
 
 kubernetes-ingress:
   controller:
-    replicaCount: 4
+    replicaCount: 1
     ingressClass: logiq-ingress
     service:
       type: LoadBalancer
@@ -243,9 +230,6 @@ prometheus-operator:
   node-exporter:
     replicaCount: 1
 
-grafana:
-  fullnameOverride: grafana
-
 logiqctl:
   image:
     repository: logiqai/logiqctl
@@ -255,12 +239,12 @@ logiqctl:
 global:
   domain: null
   kubeDistributor:
-      enabled: false
+         enabled: false
   cloudProvider: aws
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
   nodeSelectors:
-    enabled: false
+    enabled: false 
     ingest: flash
     infra: infra
     other: coffee

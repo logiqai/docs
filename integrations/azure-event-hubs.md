@@ -35,8 +35,8 @@ An Event Hubs namespace provides a unique scoping container within which you can
 8. Provide a **Name** for the event hub.&#x20;
 9. Set **Partition Count** and **Message Retention** to **1**.&#x20;
 10. Set **Capture** to **On**.&#x20;
-11. Set **Time window (minutes) **to **5**.&#x20;
-12. Set **Size window (MB) **to **300**.&#x20;
+11. Set **Time window (minutes)** to **5**.&#x20;
+12. Set **Size window (MB)** to **300**.&#x20;
 13. Under **Capture Provider**, select **Azure Storage Account**.&#x20;
 14. Click **Select Container** and select the storage account you created in the previous step.
 15. Click **Create**. &#x20;

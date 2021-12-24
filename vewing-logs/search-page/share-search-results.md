@@ -10,7 +10,7 @@ Once you share a search result, LOGIQ stores the search keywords, query, namespa
 
 To share a search result, do the following:
 
-1. Once you've created a search worth saving and sharing, click the **Share search results **icon in the toolbar. &#x20;
+1. Once you've created a search worth saving and sharing, click the **Share search results** icon in the toolbar. &#x20;
 2. **Name** your search.
 3. Toggle the **Share** button to generate a shareable URL.
 4. Copy and store the generated URL for future use.
@@ -19,7 +19,7 @@ To share a search result, do the following:
 
 ![Naming your search and generating a shareable URL](<../../.gitbook/assets/Untitled Diagram(1).png>)
 
-You can now share this URL in any way you please. Those who access this URL will be able to view** **and sort through the search results you shared.
+You can now share this URL in any way you please. Those who access this URL will be able to view **** and sort through the search results you shared.
 
 {% hint style="info" %}
 **Note:** URLs generated for sharing search results will expire after 30 days.&#x20;

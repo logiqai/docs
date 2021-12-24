@@ -57,7 +57,7 @@ helm repo update
 
 ### Create a namespace to deploy LOGIQ
 
-Create a namespace** **where we'll deploy LOGIQ PaaS by running the following command.
+Create a namespace **** where we'll deploy LOGIQ PaaS by running the following command.
 
 ```
 kubectl create namespace logiq
@@ -66,7 +66,7 @@ kubectl create namespace logiq
 Running the command shown above creates a namespace named `logiq`. You can also name your namespace differently by replacing `logiq` with the name of your choice in the command above. In case you do, remember to use the same namespace for the rest of the instructions listed in this guide.
 
 {% hint style="danger" %}
-**Important: **Ensure that the name of the namespace is not more than 15 characters in length.
+**Important:** Ensure that the name of the namespace is not more than 15 characters in length.
 {% endhint %}
 
 ### Prepare your Values file
@@ -77,7 +77,7 @@ To give you a head start with configuring your LOGIQ deployment, we've provided 
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../.gitbook/assets/values.small (19).yaml" %}
+{% file src="../.gitbook/assets/values.small (19) (1).yaml" %}
 values.small.yaml
 {% endfile %}
 {% endtab %}
@@ -256,7 +256,7 @@ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 ```
 
 {% hint style="info" %}
-**Note:**  If you skip this step, the LOGIQ server automatically generates a CA and a pair of client and server certificates for you to use. You can retrieve them from the ingest server pods under the folder`/flash/certs. `
+**Note:**  If you skip this step, the LOGIQ server automatically generates a CA and a pair of client and server certificates for you to use. You can retrieve them from the ingest server pods under the folder`/flash/certs.`&#x20;
 {% endhint %}
 
 The following table describes the Helm options passed in the install command.&#x20;
@@ -281,7 +281,7 @@ The following table details the Kubernetes `StorageClass` names and their defaul
 | Microk8s       | `microk8s-hostpath`  |                      |
 
 {% hint style="info" %}
-**Note:** It's possible that your environment uses a different `StorageClass `name for the provisioner. In such cases, ensure that you use the appropriate name for the storage class. For example, if you create a storage class named `ebs-volume` for the EBS provisioner for your cluster, you can use `ebs-volume` instead of `gp2,`as suggested by the table above.
+**Note:** It's possible that your environment uses a different `StorageClass` name for the provisioner. In such cases, ensure that you use the appropriate name for the storage class. For example, if you create a storage class named `ebs-volume` for the EBS provisioner for your cluster, you can use `ebs-volume` instead of `gp2,`as suggested by the table above.
 {% endhint %}
 
 You can update the storage class name for your LOGIQ deployment by running the following command.&#x20;
