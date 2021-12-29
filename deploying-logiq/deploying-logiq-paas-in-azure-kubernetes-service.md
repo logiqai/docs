@@ -68,7 +68,7 @@ Next, navigate to the Kubernetes service screen and select your cluster. Click o
 
 ## Creating the MinIO blob storage gateway for S3 compatibility&#x20;
 
-Follow the instructions on <mark style="color:blue;"></mark> [MinIO’s site](https://az.minio.io/index.html#deploy-minio-6) to create a MinIO Blob Storage Gateway. Once you login, create a bucket inside MinIO, and copy the access keys.&#x20;
+Follow the instructions on <mark style="color:blue;"></mark> [<mark style="color:blue;">MinIO’s site</mark>](https://az.minio.io/index.html#deploy-minio-6) to create a MinIO Blob Storage Gateway. Once you login, create a bucket inside MinIO, and copy the access keys.&#x20;
 
 While deploying LOGIQ PaaS in the next step, you'll need to configure the following parameters in the values.yaml file to use the MinIO blob storage gateway you just created.&#x20;
 
@@ -81,4 +81,4 @@ AWS_SECRET_ACCESS_KEY: <Access key from MinIO>
 
 ## Deploying LOGIQ PaaS
 
-You can now deploy LOGIQ PaaS on your AKS cluster by following the instructions listed in the  LOGIQ <mark style="color:blue;"></mark> [Kubernetes quick start guide](k8s-quickstart-guide.md). <mark style="color:blue;"></mark>&#x20;
+You can now deploy LOGIQ PaaS on your AKS cluster by following the instructions listed in the  LOGIQ <mark style="color:blue;"></mark> [<mark style="color:blue;">Kubernetes quick start guide</mark>](k8s-quickstart-guide.md). <mark style="color:blue;"></mark>&#x20;
