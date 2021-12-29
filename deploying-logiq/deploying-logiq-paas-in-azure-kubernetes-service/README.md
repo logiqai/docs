@@ -2,21 +2,21 @@
 
 The following guide takes you through deploying LOGIQ PaaS in an Azure Kubernetes Service cluster. The deployment involves the following steps:
 
-* [<mark style="color:blue;">Creating an Azure Kubernetes Service cluster</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#creating-an-azure-kubernetes-cluster)<mark style="color:blue;"></mark>
-* [<mark style="color:blue;">Configuring the node pool</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#configuring-the-node-pool)<mark style="color:blue;"></mark>
-* <mark style="color:blue;"></mark>[<mark style="color:blue;">Connecting to the cluster</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#connecting-with-your-aks-cluster)<mark style="color:blue;"></mark>
-* <mark style="color:blue;"></mark>[<mark style="color:blue;">Creating the MinIO blob storage gateway</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#creating-the-minio-blob-storage-gateway-for-s3-compatibility)<mark style="color:blue;"></mark>
+* [<mark style="color:blue;">Creating an Azure Kubernetes Service cluster</mark>](./#creating-an-azure-kubernetes-cluster)<mark style="color:blue;"></mark>
+* [<mark style="color:blue;">Configuring the node pool</mark>](./#configuring-the-node-pool)<mark style="color:blue;"></mark>
+* <mark style="color:blue;"></mark>[<mark style="color:blue;">Connecting to the cluster</mark>](./#connecting-with-your-aks-cluster)<mark style="color:blue;"></mark>
+* <mark style="color:blue;"></mark>[<mark style="color:blue;">Creating the MinIO blob storage gateway</mark>](./#creating-the-minio-blob-storage-gateway-for-s3-compatibility)<mark style="color:blue;"></mark>
 * Deploying LOGIQ PaaS
 
 {% hint style="warning" %}
-If you have an AKS cluster that is appropriately sized for deploying LOGIQ and handling your data ingestion rate, you can skip the AKS cluster creation step. However, you must label the nodes as specified in the [<mark style="color:blue;">Node pool configuration</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#node-pool-configuration) table failing which the pods in the cluster will not land in any of the nodes.&#x20;
+If you have an AKS cluster that is appropriately sized for deploying LOGIQ and handling your data ingestion rate, you can skip the AKS cluster creation step. However, you must label the nodes as specified in the [<mark style="color:blue;">Node pool configuration</mark>](./#node-pool-configuration) table failing which the pods in the cluster will not land in any of the nodes.&#x20;
 {% endhint %}
 
 ## Creating an Azure Kubernetes Cluster
 
 From the Azure portal **Home** page, search for Kubernetes, and then click **Kubernetes services** from the search results.
 
-![](../.gitbook/assets/1)
+![](../../.gitbook/assets/1)
 
 Click on **Create** > **Create Kubernetes cluster**
 
@@ -48,11 +48,11 @@ Create four node pools as described in the following table. The below configurat
 
 The following screenshots depict the labeling of the node pools.
 
-![](../.gitbook/assets/3) ![](../.gitbook/assets/4)
+![](../../.gitbook/assets/3) ![](../../.gitbook/assets/4)
 
-Your node pool should look like the below and they should all be placed in one availability zone and ensure they are labelled as listed under [Node-pool configuration](deploying-logiq-paas-in-azure-kubernetes-service.md#node-pool-configuration).
+Your node pool should look like the below and they should all be placed in one availability zone and ensure they are labelled as listed under [Node-pool configuration](./#node-pool-configuration).
 
-![](../.gitbook/assets/node-pool.png)
+![](../../.gitbook/assets/node-pool.png)
 
 Review your configuration and click **Create**.
 
@@ -81,4 +81,4 @@ AWS_SECRET_ACCESS_KEY: <Access key from MinIO>
 
 ## Deploying LOGIQ PaaS
 
-You can now deploy LOGIQ PaaS on your AKS cluster by following the instructions listed in the  LOGIQ <mark style="color:blue;"></mark> [<mark style="color:blue;">Kubernetes quick start guide</mark>](k8s-quickstart-guide.md). <mark style="color:blue;"></mark>&#x20;
+You can now deploy LOGIQ PaaS on your AKS cluster by following the instructions listed in the  LOGIQ <mark style="color:blue;"></mark> [<mark style="color:blue;">Kubernetes quick start guide</mark>](../k8s-quickstart-guide.md). <mark style="color:blue;"></mark>&#x20;
