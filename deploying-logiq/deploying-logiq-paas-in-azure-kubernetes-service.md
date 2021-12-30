@@ -1,27 +1,36 @@
-# Deploying LOGIQ in Azure Kubernetes Service with Azure Ultra Disk
+# Deploying LOGIQ PaaS in Azure Kubernetes Service
 
-In this guide, we'll look at how you can deploy LOGIQ in AKS with storage backed by Azure ultra disks. This type of deployment involves the following steps.
+The following guide takes you through deploying LOGIQ PaaS in an Azure Kubernetes Service cluster. The deployment involves the following steps:
 
-* Creating an AKS cluster and associated node pools
-* Creating an Azure blob storage account on MinIO
-* Creating an Azure ultra disk storage class
-* Deploying LOGIQ on the cluster
+* [<mark style="color:blue;">Creating an Azure Kubernetes Service cluster</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#creating-an-azure-kubernetes-cluster)<mark style="color:blue;"></mark>
+* [<mark style="color:blue;">Configuring the node pool</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#configuring-the-node-pool)<mark style="color:blue;"></mark>
+* <mark style="color:blue;"></mark>[<mark style="color:blue;">Connecting to the cluster</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#connecting-with-your-aks-cluster)<mark style="color:blue;"></mark>
+* <mark style="color:blue;"></mark>[<mark style="color:blue;">Creating the MinIO blob storage gateway</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#creating-the-minio-blob-storage-gateway-for-s3-compatibility)<mark style="color:blue;"></mark>
+* [Deploying LOGIQ PaaS](deploying-logiq-paas-in-azure-kubernetes-service.md#deploying-logiq-paas)
 
-**Step1:** Install [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/).
+{% hint style="warning" %}
+If you have an AKS cluster that is appropriately sized for deploying LOGIQ and handling your data ingestion rate, you can skip the AKS cluster creation step. However, you must label the nodes as specified in the [<mark style="color:blue;">Node pool configuration</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#node-pool-configuration) table failing which the pods in the cluster will not land in any of the nodes.&#x20;
+{% endhint %}
 
-**Step2:** Connect to your Azure account using Azure CLI by running the following command.
+## Creating an Azure Kubernetes Cluster
+
+Install [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/).
+
+Connect to your Azure account using Azure CLI by running the following command.
 
 ```
 az login --tenant “tenant-id”
 ```
 
-**Step3:** Create a resource group by running the following command.
+Create a resource group by running the following command.
 
 ```
 az group create --name <Resource group name> --location <location>
 ```
 
-**Step4:** Create four node pools as described and labelled in the following table. The table describes the node pool configuration for ingesting 100 GB of data per day.
+## Configuring the node pool
+
+Create four node pools as described and labelled in the following table. The table describes the node pool configuration for ingesting 100 GB of data per day.
 
 {% hint style="warning" %}
 **Important:** Ensure that the node pools are all created in the **same availability zone**.
@@ -37,7 +46,7 @@ az group create --name <Resource group name> --location <location>
 Execute the following commands to create the AKS cluster along with the node pools described above.
 
 ```
-az aks create -g <your resource group> --name <cluster name> -l <location> --node-vm-size Standard_f8s_v2 --zones 1 --nodepool-name ingest --nodepool-labels logiq.ai/node=ingest --node-count 1 --enable-ultra-ssd
+az aks create --kubernetes-version 1.19.11 -g <your resource group> --name <cluster name> -l <location> --node-vm-size Standard_f8s_v2 --zones 1 --nodepool-name ingest --nodepool-labels logiq.ai/node=ingest --node-count 1 --enable-ultra-ssd
 
 az aks nodepool add --cluster-name <cluster name> --name common --resource-group <You resource group> --zones 1 --labels logiq.ai/node=common --node-vm-size standard_f8s_v2 --node-count 1 --enable-ultra-ssd
 
@@ -58,9 +67,11 @@ az aks nodepool add --cluster-name logiqai --name hauler --resource-group azure-
 az aks nodepool add --cluster-name logiqai --name db --resource-group azure-test --zones 1 --labels logiq.ai/node=db --node-vm-size standard_f4s_v2 --node-count 1 --enable-ultra-ssd
 ```
 
-Your AKS cluster and associated node pools should now be provisioned. You can verify this by visiting the Azure portal and viewing the AKS service and node pools, as depicted below.&#x20;
 
-![](https://lh4.googleusercontent.com/son2vtRRR2B9h3yfEtftxq94fcik3Hvf-GSvt\_LPr9AAvqYlVCes57TNxD15Z2zwHxItR5vh\_mpmMYJ\_OWGXrfO2lJx664mYTks20FHN9FS0avQkLmRMVcUeDAuzOdgDxJbNDwpJ)
+
+![](<../.gitbook/assets/image (18).png>)
+
+## Connecting with your AKS cluster
 
 Connect to the AKS cluster by first visiting the Azure portal, navigating to the AKS cluster you created, and selecting it. Next, click on the **Connect** icon and follow the instructions displayed on the right panel. Execute the following command and you should see the nodes in your cluster.
 
@@ -68,11 +79,13 @@ Connect to the AKS cluster by first visiting the Azure portal, navigating to the
 kubectl get node
 ```
 
-**Step 5:** Follow the instructions on [MinIO’s site](https://az.minio.io/index.html#deploy-minio-6) to create an Azure blog storage account. Once you login, click the “+” button on the right hand corner of the screen to create a bucket named `logiq`. Note down this bucket name since we'd be using it in later steps.&#x20;
+## Creating the MinIO blob storage gateway for S3 compatibility
+
+Follow the instructions on [MinIO’s site](https://az.minio.io/index.html#deploy-minio-6) to create an Azure blog storage account. Once you login, click the “**+**” button on the right hand corner of the screen to create a bucket named `logiq`. Note down this bucket name since we'd be using it in later steps.&#x20;
 
 ![](https://lh5.googleusercontent.com/TOZYU86wNeRjxOZ9QmDu9jZHSleUQoZTqtRYFgQldthGDhmdNTOzMwyRlj6OUXB9KYPDeNNNe-007GbbedzFrc7-FlZK5X5zfGYQXhOdVAB5lDaMiMPo9VMt7XpeUzt16UXWrNrM)
 
-**Step 6:** Create an [Azure ultra disk](https://azure.microsoft.com/en-us/services/storage/blobs/) storage class using the YAML configuration provided below.&#x20;
+Create an [Azure ultra disk](https://azure.microsoft.com/en-us/services/storage/blobs/) storage class using the YAML configuration provided below.&#x20;
 
 ```
 kind: StorageClass
@@ -89,13 +102,15 @@ diskIopsReadWrite: "3000" # minimum value: 2 IOPS/GiB
 diskMbpsReadWrite: "125" # minimum value: 0.032/GiB
 ```
 
-**Step 7:** Verify that the storage class has been created by running the following command.&#x20;
+Verify that the storage class has been created by running the following command.&#x20;
 
 ```
 kubectl get sc ultra-disk-sc
 ```
 
-**Step 8:** Download the `values.yaml` file from [this location](https://logiq-scripts.s3.ap-south-1.amazonaws.com/values.yaml) and replace the following variables in the file.&#x20;
+## Deploying LOGIQ PaaS
+
+Download the `values.yaml` file from [this location](https://logiq-scripts.s3.ap-south-1.amazonaws.com/values.yaml) and replace the following variables in the file.
 
 ```
 awsServiceEndpoint: https://<your-blobstorage-accountname>.az.minio.io
@@ -105,12 +120,11 @@ AWS_SECRET_ACCESS_KEY: access key from the mino.
 storageClass: ultra-disk-sc
 ```
 
-**Step 9:** Finally, follow the instructions on LOGIQ’s [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide) to spin up the LOGIQ stack on this AKS cluster.&#x20;
+Next, follow the instructions on LOGIQ’s [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide) to spin up the LOGIQ stack on this AKS cluster.  **** &#x20;
 
-This completes the deployment of LOGIQ on an AKS cluster with Azure blog storage.&#x20;
-
-**Step 10 **_**(optional)**_**:** Execute the following command to disable monitoring AKS with container insights on your cluster.&#x20;
+Once you've successfully deployed LOGIQ, you can (optionally) disable monitoring AKS with container insights on your cluster by running the following command.&#x20;
 
 ```
 az aks disable-addons -a monitoring -n <aks cluster name> -g <resource group>
 ```
+
