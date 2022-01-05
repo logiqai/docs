@@ -1,8 +1,6 @@
 # Docker Swarm logging
 
-Shipping Docker Swarm logs to LOGIQ
-
-To forward logs from Docker Swarm to LOGIQ, do the following.
+This guide describes how you can set up log forwarding from your Docker Swarm environments to LOGIQ. To forward logs from Docker Swarm to LOGIQ, do the following.
 
 **Step1:** Download the following configuration files:
 
