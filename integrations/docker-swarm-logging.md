@@ -2,19 +2,46 @@
 
 This guide describes how you can set up log forwarding from your Docker Swarm environments to LOGIQ. To forward logs from Docker Swarm to LOGIQ, do the following.
 
-**Step1:** Download the following configuration files:
+### Deploy fluent-bit container
 
-* [parsers.conf](https://logiq-scripts.s3.ap-south-1.amazonaws.com/parsers.conf)
-* [fluent-bit.conf](https://logiq-scripts.s3.ap-south-1.amazonaws.com/fluent-bit-linux-http.conf)
+Create the following files:
 
-Next, in `fluent-bit.conf`, edit the `OUTPUT` section to add your `Logiq-endpoint` details and `Token`.
+#### parsers.conf
 
+```apacheconf
+[PARSER]
+    Name   json
+    Format json
 ```
-For HTTPS
+
+#### fluent-bit.conf
+
+Update the LOGIQ `host` and `Authorization Header` in the file. The token can be obtained from LOGIQ UI as described [here](generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui).
+
+```apacheconf
+[SERVICE]
+    Flush        1
+    Parsers_File /fluent-bit/etc/parsers.conf
+    Log_Level    error
+
+# collect docker logs using fluend logging driver
+[INPUT]
+    Name forward
+    Listen 0.0.0.0
+    port 24224
+
+# try parsing log as json and lift its keys to the first-level
+[FILTER]
+    Name parser
+    Match *
+    Parser json
+    Key_Name log
+    Reserve_Data On
+
 [OUTPUT]
     name     http
     match    *
-    host     <Logiq-endpoint>
+    host     <LOGIQ-endpoint>
     port     443
     URI      /v1/json_batch
     Format   json
@@ -23,32 +50,18 @@ For HTTPS
     net.keepalive  off
     compress      gzip
     Header Authorization Bearer <Token>
-
-For HTTP:
-[OUTPUT]
-    name     http
-    match    *
-    host     <Logiq-endpoint>
-    port     80
-    URI      /v1/json_batch
-    Format   json
-    tls      off
-    tls.verify  off
-    net.keepalive  off
-    compress      gzip
-    Header Authorization Bearer <TOKEN>
-
 ```
 
-**Step 2:** Ensure that the Fluent Bit Docker Compose uses the `parsers.conf` and `fluent-bit.conf` while we prepared in the previous step.&#x20;
+#### docker-compose.fluent.yaml
 
-```
+Ensure that the Fluent Bit Docker Compose uses the `parsers.conf` and `fluent-bit.conf` which we prepared in the previous step.&#x20;
+
+```yaml
 version: "3.7"
 
 services:
   fluent-bit:
     image: fluent/fluent-bit:latest
-    container_name: fluent-bit
     volumes:
       - ./fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
       - ./parsers.conf:/fluent-bit/etc/parsers.conf
@@ -57,17 +70,40 @@ services:
       - "24224:24224/udp"
 ```
 
-**Step 3:** Run the following command to get Fluent Bit running in your Docker Swarm cluster.
+Run the following command to get fluent-bit running in your Docker Swarm cluster.
 
 ```
 docker stack deploy --compose-file docker-compose.fluent.yaml fluent-bit
 ```
 
-**Step 4:** Add the logging configuration to your Docker Compose YAML file using the **fluentd** and **YAML** anchors.&#x20;
+Ensure that the fluent-bit container is running in the cluster.
+
+### Update services to add logging driver
+
+Add the global logging configuration to your docker-compose files as shown below
+
+```yaml
+x-logging: &default-logging
+  driver: fluentd
+```
+
+Update the services in docker-compose files to add logging configuration and environment variables. The `Namespace`and `AppName` set in the service definition defines how the logs from the service are indexed in LOGIQ.
+
+```yaml
+        environment:
+            Namespace: production
+            AppName: nginx
+        logging:
+            driver: fluentd
+            options:
+                env: "Namespace,AppName"
+```
+
+#### Examples
 
 If your default Docker Compose file looks like this:
 
-```
+```yaml
 version: "3.4"
 
 Services:
@@ -88,12 +124,10 @@ Services:
 
 After you’ve added the logging configuration, your Docker Compose file should look like this.
 
-```
+```yaml
 version: "3.4"
 
 x-logging: &default-logging
-  options:
-        env: SERVICE_NAME
   driver: fluentd
 
 services:
@@ -109,10 +143,9 @@ services:
                     echo "{\"message\": \"log line $$counter\", \"something\": \"else\"}"
                     counter=$$(($$counter + 1))
                 done'
-        Environment:
-            SERVICE_NAME: log_creator
+        environment:
             Namespace: logiq-namespace
-            AppName: Application-name
+            AppName: log-generator
         logging:
             driver: fluentd
             options:
@@ -122,7 +155,7 @@ services:
 Run the following command to run the container.&#x20;
 
 ```
-docker stack deploy --compose-file docker-compose.yaml logger
+docker stack deploy --compose-file logger-test.yaml logger-test
 ```
 
 Your Docker Swarm logs will now be ingested into LOGIQ.
