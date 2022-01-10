@@ -46,7 +46,7 @@ Running this command displays a list of the available Helm charts along with the
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.2.11           2.1.11         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.4.1            2.1.17         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 If you've already added LOGIQ's Helm repository in the past, you can update the repository by running the following command.
@@ -77,19 +77,15 @@ To give you a head start with configuring your LOGIQ deployment, we've provided 
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../.gitbook/assets/values.small (19) (1).yaml" %}
-values.small.yaml
-{% endfile %}
+{% file src="../.gitbook/assets/values.small (24).yaml" %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../.gitbook/assets/values.medium (18).yaml" %}
-values.medium.yaml
-{% endfile %}
+
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../.gitbook/assets/values.large (20).yaml" %}
+
 {% endtab %}
 {% endtabs %}
 
@@ -109,9 +105,9 @@ The following table lists the latest version tags for all LOGIQ components.&#x20
 
 | Image              | Version |
 | ------------------ | ------- |
-| `logiq-flash`      | 2.1.24  |
+| `logiq-flash`      | 2.1.34  |
 | `coffee`           | 2.1.37  |
-| `logiq` Helm chart | 2.3.2   |
+| `logiq` Helm chart | 2.4.1   |
 
 ## Install LOGIQ PaaS
 
@@ -273,7 +269,7 @@ The following table details the Kubernetes `StorageClass` names and their defaul
 
 | Cloud Provider | K8S StorageClassName | Default Provisioner  |
 | -------------- | -------------------- | -------------------- |
-| AWS            | `gp2`                | EBS                  |
+| AWS            | `gp3`                | EBS                  |
 | Azure          | UltraSSD\_LRS        | Azure Ultra disk     |
 | GCP            | `standard`           | `pd-standard`        |
 | Digital Ocean  | `do-block-storage`   | Block Storage Volume |

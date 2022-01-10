@@ -30,7 +30,7 @@ This guide will take you through deploying a 2-node EKS cluster on AWS and insta
 | --------- | ----------------------------- | ----- |
 | Node pool | Instance size                 | Nodes |
 | ingest    | c5.xlarge (4 Core 8 GB RAM)   | 1     |
-| common    | c5.2xlarge (8 Core 32 GB RAM) | 1     |
+| common    | c5.2xlarge (8 Core 32 GB RAM) | 2     |
 
 **Step 5**: Click **Next**, review and agree to the AWS terms and conditions, and then click **Create stack**.
 
@@ -40,13 +40,12 @@ This guide will take you through deploying a 2-node EKS cluster on AWS and insta
 aws eks --region <AWS REGION> update-kubeconfig --name <EKS-cluster-name>
 ```
 
-**Step 7**: Once the stack is up and running, we need to create GP3 volumes. To create GP3 volumes, run the following commands.&#x20;
+**Step 7**: Once the EKS cluster is up and running, execute the following commands to check the health of the cluster.
 
 ```
 kubectl get node
 
-kubectl get ns
-
+kubectl get namespace
 NAME STATUS AGE
 default Active 4h57m
 kube-node-lease Active 4h57m
@@ -54,7 +53,7 @@ kube-public Active 4h57m
 kube-system Active 4h57m
 ```
 
-**Step 8**: To enable AWS to create GP3 volumes for our stack, run the following command.&#x20;
+**Step 8**: The [Amazon Elastic Block Store](https://aws.amazon.com/ebs/) Container Storage Interface (CSI) Driver provides a [CSI](https://github.com/container-storage-interface/spec/blob/master/spec.md) interface used by Container Orchestrators to manage the lifecycle of Amazon EBS volumes. To enable GP3 volumes for this stack, run the following commands.
 
 ```
 helm repo add aws-ebs-csi-driver https://kubernetes-sigs.github.io/aws-ebs-csi-driver
@@ -84,5 +83,6 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 * `AWS_ACCESS_KEY_ID`: AWS access key
 * `AWS_SECRET_ACCESS_KEY`: AWS secret key
 * `storageClass`: gp3
+* createStorageClass: true
 
 This completes the deployment of LOGIQ on an EKS cluster on AWS using a CloudFormation template.&#x20;

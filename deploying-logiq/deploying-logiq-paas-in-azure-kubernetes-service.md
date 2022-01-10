@@ -118,6 +118,7 @@ s3_bucket with the minio bucketname created at step 5.
 AWS_ACCESS_KEY_ID: minio service name
 AWS_SECRET_ACCESS_KEY: access key from the mino.
 storageClass: ultra-disk-sc
+creatStorageClass: true
 ```
 
 Next, follow the instructions on LOGIQ’s [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide) to spin up the LOGIQ stack on this AKS cluster.  **** &#x20;

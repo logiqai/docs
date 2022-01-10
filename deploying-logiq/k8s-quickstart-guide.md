@@ -29,7 +29,7 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 ```bash
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.3.4            2.1.13         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.4.1            2.1.17         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 #### 1.1.1 Update your HELM chart
@@ -40,7 +40,7 @@ If you already added LOGIQ's HELM repository in the past, you can get updated so
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.3.4            2.1.13         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.4.1            2.1.17         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -65,13 +65,13 @@ Sample YAML files for small, medium, large cluster configurations can be downloa
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../.gitbook/assets/values.small (20).yaml" %}
+{% file src="../.gitbook/assets/values.small (20) (1).yaml" %}
 values.small.yaml
 {% endfile %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../.gitbook/assets/values.medium (19).yaml" %}
+{% file src="../.gitbook/assets/values.medium (19) (1).yaml" %}
 values.medium.yaml
 {% endfile %}
 {% endtab %}
@@ -242,7 +242,7 @@ It is quite possible that your environment may use a different storage class nam
 
 | Cloud Provider | K8S StorageClassName | Default Provisioner  |
 | -------------- | -------------------- | -------------------- |
-| AWS            | gp2                  | EBS                  |
+| AWS            | gp3                  | EBS                  |
 | Azure          | UltraSSD\_LRS        | Azure Ultra disk     |
 | GCP            | standard             | pd-standard          |
 | Digital Ocean  | do-block-storage     | Block Storage Volume |

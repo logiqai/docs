@@ -5,7 +5,7 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: logiq-2.1.31
+    tag: logiq-2.1.34
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -140,7 +140,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.37-rc63
+      tag: brew.2.1.37-rc69
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -151,7 +151,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 3
     image:
-      tag: brew.2.1.37-rc63
+      tag: brew.2.1.37-rc69
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -214,21 +214,28 @@ kubernetes-ingress:
     create: true
     name: ingress-nginx
 
-prometheus-operator:
+prometheus:
   fullnameOverride: prometheus
   persistence:
     enabled: true
     size: 20Gi
   alertmanager:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   prometheus:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   operator:
     replicaCount: 1
   kube-state-metrics:
     replicaCount: 1
   node-exporter:
     replicaCount: 1
+
 
 grafana:
   fullnameOverride: grafana
@@ -244,6 +251,7 @@ global:
   kubeDistributor:
       enabled: false
   cloudProvider: aws
+  createStorageClass: false
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
   nodeSelectors:
@@ -300,4 +308,4 @@ global:
     postgres: true
     redis: true
     s3gateway: true
-    grafana: false
+    grafana: true
