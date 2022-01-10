@@ -274,7 +274,7 @@ The following table details the Kubernetes `StorageClass` names and their defaul
 | Cloud Provider | K8S StorageClassName | Default Provisioner  |
 | -------------- | -------------------- | -------------------- |
 | AWS            | `gp2`                | EBS                  |
-| Azure          | default              | `azure-disc`         |
+| Azure          | UltraSSD\_LRS        | Azure Ultra disk     |
 | GCP            | `standard`           | `pd-standard`        |
 | Digital Ocean  | `do-block-storage`   | Block Storage Volume |
 | Oracle         | `oci-bv`             | Block Volume         |

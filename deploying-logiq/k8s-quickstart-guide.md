@@ -243,7 +243,7 @@ It is quite possible that your environment may use a different storage class nam
 | Cloud Provider | K8S StorageClassName | Default Provisioner  |
 | -------------- | -------------------- | -------------------- |
 | AWS            | gp2                  | EBS                  |
-| Azure          | standard             | azure-disc           |
+| Azure          | UltraSSD\_LRS        | Azure Ultra disk     |
 | GCP            | standard             | pd-standard          |
 | Digital Ocean  | do-block-storage     | Block Storage Volume |
 | Oracle         | oci                  | Block Volume         |

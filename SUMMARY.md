@@ -15,6 +15,7 @@
 * [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/k8s-quickstart-guide.md)
 * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/deploying-logiq-paas-on-microk8s.md)
 * [Deploying LOGIQ PaaS on AWS](deploying-logiq/aws-cloudformation.md)
+* [Deploying LOGIQ EKS on AWS using CloudFormation](deploying-logiq/deploying-logiq-eks-on-aws-using-cloudformation.md)
 * [Deploying LOGIQ PaaS in Azure Kubernetes Service](deploying-logiq/deploying-logiq-paas-in-azure-kubernetes-service.md)
 
 ## INTEGRATIONS
