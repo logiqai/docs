@@ -33,10 +33,10 @@
   * [AWS S3](integrations/aws/aws-s3.md)
   * [AWS CloudWatch](integrations/aws/aws-cloudwatch-exporter.md)
 * [Palo Alto Firewall](integrations/palo-alto-firewall.md)
+* [Azure Databricks](integrations/azure-databricks.md)
 * [Azure Event Hubs](integrations/azure-event-hubs.md)
 * [Configuring Prometheus](integrations/prometheus.md)
 * [Docker Syslog log driver](integrations/docker-syslog-log-driver.md)
-* [Azure Databricks](integrations/azure-databricks.md)
 * [Docker Swarm logging](integrations/docker-swarm-logging.md)
 * [GCP Cloud Logging](integrations/gcp-cloud-logging.md)
 
