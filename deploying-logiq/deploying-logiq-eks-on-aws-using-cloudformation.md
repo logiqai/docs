@@ -14,7 +14,7 @@ This guide will take you through deploying a 2-node EKS cluster on AWS and insta
 * **Template is ready**
 * In the **Amazon S3 URL** field, paste the link to the CloudFormation template: [https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml)
 
-![](<../.gitbook/assets/0 (3)>)
+![](<../.gitbook/assets/0 (3) (1)>)
 
 **Step 3**: In order for the EKS cluster to be deployed, we need a VPC and 2 subnets. Select them from the **Network Configuration** and **Subnet Configuration** dropdown lists.
 
@@ -26,11 +26,11 @@ This guide will take you through deploying a 2-node EKS cluster on AWS and insta
 
 **Step 4**: The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
 
-|           |                               |       |
+| Node pool | Instance size (recommended)   | Nodes |
 | --------- | ----------------------------- | ----- |
-| Node pool | Instance size                 | Nodes |
 | ingest    | c5.xlarge (4 Core 8 GB RAM)   | 1     |
 | common    | c5.2xlarge (8 Core 32 GB RAM) | 2     |
+| db        | c5.xlarge (4 Core 8 GB RAM)   | 1     |
 
 **Step 5**: Click **Next**, review and agree to the AWS terms and conditions, and then click **Create stack**.
 
