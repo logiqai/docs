@@ -170,9 +170,11 @@ Make sure to pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and give 
 Create a bucket in AWS s3 with a unique bucket name in the region where you plan to host the deployment.
 
 {% hint style="info" %}
-You will need to create the S3 bucket. Once the bucket is created and access/secret is available to access the bucket, just provide the bucket name and access credentials in the step below.
+You will need to create the S3 bucket manually along with access and secret keys to access the bucket. Check to make sure the access and secret key work with the newly created bucket.
 
-If the bucket already exists, LOGIQ will use it. Check to make sure the access and secret key work with it. Additionally, provide a valid amazon service endpoint for s3 else the config defaults to [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com)
+Once the bucket is created and access/secret is verified, provide the bucket name and access credentials in the step below.
+
+&#x20;Additionally, provide a valid amazon service endpoint for s3 else the config wll default to [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com)
 {% endhint %}
 
 ```bash
