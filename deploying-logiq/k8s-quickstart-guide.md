@@ -170,7 +170,7 @@ Make sure to pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and give 
 Create a bucket in AWS s3 with a unique bucket name in the region where you plan to host the deployment.
 
 {% hint style="info" %}
-You do not need to create the bucket, we will automatically provision it for you. Just provide the bucket name and access credentials in the step below.
+You will need to create the S3 bucket. Once the bucket is created and access/secret is available to access the bucket, just provide the bucket name and access credentials in the step below.
 
 If the bucket already exists, LOGIQ will use it. Check to make sure the access and secret key work with it. Additionally, provide a valid amazon service endpoint for s3 else the config defaults to [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com)
 {% endhint %}
@@ -189,7 +189,7 @@ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | `global.cloudProvider`                     | This helm option specifies the supported cloudProvider that is hosting the S3 compatible bucket. Right now only `aws` is supported. | aws                                                                      |
 | `global.environment.s3_bucket`             | Name of the S3 bucket in AWS                                                                                                        | logiq                                                                    |
-| `global.environment.awsServiceEndpoint`    | S3 Service endpoint : [https://s3.\*\*\<region>\*\*.amazonaws.com](https://s3.\*\*\<region>\*\*.amazonaws.com)                      | [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com) |
+| `global.environment.awsServiceEndpoint`    | S3 Service endpoint : https://s3.\*\*\<region>\*\*.amazonaws.com                                                                    | [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com) |
 | `global.environment.AWS_ACCESS_KEY_ID`     | AWS Access key for accessing the bucket                                                                                             | No default                                                               |
 | `global.environment.AWS_SECRET_ACCESS_KEY` | AWS Secret key for accessing the bucket                                                                                             | No default                                                               |
 | `global.environment.s3_region`             | AWS Region where the bucket is hosted                                                                                               | us-east-1                                                                |
