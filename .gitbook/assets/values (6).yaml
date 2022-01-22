@@ -258,7 +258,7 @@ global:
     ingest: ingest
     infra: common
     other: common
-    db: common
+    db: db 
     cache: common
     ingest_sync: common
   taints:

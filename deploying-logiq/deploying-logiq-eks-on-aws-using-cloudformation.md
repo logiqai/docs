@@ -1,6 +1,12 @@
 # Deploying LOGIQ EKS on AWS using CloudFormation
 
-This guide will take you through deploying a 2-node EKS cluster on AWS and installing LOGIQ on it using a CloudFormation template. Before you begin, ensure you have the following prerequisites.&#x20;
+This guide will take you through deploying a 3-node EKS cluster on AWS and installing LOGIQ on it using a CloudFormation template. These templates create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with encryption and bucket policies.&#x20;
+
+{% hint style="info" %}
+**Note:** This deployment method using Helm is only supported on Kubernetes versions **1.18**, **1.19**, and **1.20**.
+{% endhint %}
+
+Before you begin, ensure you have the following prerequisites.&#x20;
 
 * Access to an Amazon Web Services account
 * Access to create an Elastic Kubernetes Service on AWS
@@ -11,18 +17,25 @@ This guide will take you through deploying a 2-node EKS cluster on AWS and insta
 
 **Step 2**: On the Create stack screen, select the following options as shown in the following screenshot.
 
-* **Template is ready**
-* In the **Amazon S3 URL** field, paste the link to the CloudFormation template: [https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml)
+* Under **Prerequisite - Prepare template**, select **Template is ready**.
+* Under **Specify template** > **Template source**, select **Amazon S3 URL**.
+* Depending on the need for a separate database pool for your EKS cluster, select and paste the appropriate template URL in the **Amazon S3 URL** field.&#x20;
+  * EKS cluster with a separate database pool: [https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml)&#x20;
+  * EKS cluster without a separate database pool: [https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS1.yml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS1.yml)
 
 ![](<../.gitbook/assets/0 (3) (1)>)
 
-**Step 3**: In order for the EKS cluster to be deployed, we need a VPC and 2 subnets. Select them from the **Network Configuration** and **Subnet Configuration** dropdown lists.
+**Step 3**: To deploy the EKS cluster, we need a VPC and 2 subnets. Select them from the **Network Configuration** and **Subnet Configuration** dropdown lists.
 
 {% hint style="warning" %}
 **Important:** Ensure that you choose 2 different subnets from the same VPC.&#x20;
 {% endhint %}
 
-![](../.gitbook/assets/1)
+![](<../.gitbook/assets/image (14).png>)
+
+Additionally, provide an **S3 bucket name**. A private bucket with bucket policies will be created.
+
+![](<../.gitbook/assets/image (15).png>)
 
 **Step 4**: The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
 
@@ -76,13 +89,25 @@ ebs-csi-node-fwwn2 3/3 Running 0 3h53m
 ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 ```
 
-**Step 10**: Finally, following the instructions on LOGIQ's [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide), download the values file from this [location](https://logiq-scripts.s3.ap-south-1.amazonaws.com/values.yaml), and **** replace the following variables in the **values.yaml** file to spin up the LOGIQ stack on the cluster.
+**Step 10**: Finally, following the instructions on LOGIQ's [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide), download the values file below as per your Cluster (with/without DB pool), and **** replace the following variables in the **values.yaml** file to spin up the LOGIQ stack on the cluster.
+
+{% tabs %}
+{% tab title="Database pool enabled" %}
+{% file src="../.gitbook/assets/values (6).yaml" %}
+DB pool enabled
+{% endfile %}
+{% endtab %}
+
+{% tab title="Database pool disabled" %}
+{% file src="../.gitbook/assets/values (4).yaml" %}
+DB pool disabled
+{% endfile %}
+{% endtab %}
+{% endtabs %}
 
 * `awsServiceEndpoint`: https://\<aws-region>.amazonaws.com
-* `S3_bucket`: S3 bucket name created.
-* `AWS_ACCESS_KEY_ID`: AWS access key
-* `AWS_SECRET_ACCESS_KEY`: AWS secret key
+* `S3_bucket`: S3 bucket name created
 * `storageClass`: gp3
-* createStorageClass: true
+* `createStorageClass`: true
 
 This completes the deployment of LOGIQ on an EKS cluster on AWS using a CloudFormation template.&#x20;
