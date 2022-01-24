@@ -46,7 +46,7 @@ Running this command displays a list of the available Helm charts along with the
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.4.1            2.1.17         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.4.2            2.1.18         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 If you've already added LOGIQ's Helm repository in the past, you can update the repository by running the following command.
@@ -107,7 +107,7 @@ The following table lists the latest version tags for all LOGIQ components.&#x20
 | ------------------ | ------- |
 | `logiq-flash`      | 2.1.34  |
 | `coffee`           | 2.1.37  |
-| `logiq` Helm chart | 2.4.1   |
+| `logiq` Helm chart | 2.4.2   |
 
 ## Install LOGIQ PaaS
 

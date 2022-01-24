@@ -93,15 +93,11 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 {% tabs %}
 {% tab title="Database pool enabled" %}
-{% file src="../.gitbook/assets/values (6).yaml" %}
-DB pool enabled
-{% endfile %}
+{% file src="../.gitbook/assets/values (5).yaml" %}
 {% endtab %}
 
 {% tab title="Database pool disabled" %}
-{% file src="../.gitbook/assets/values (4).yaml" %}
-DB pool disabled
-{% endfile %}
+{% file src="../.gitbook/assets/values (6).yaml" %}
 {% endtab %}
 {% endtabs %}
 
