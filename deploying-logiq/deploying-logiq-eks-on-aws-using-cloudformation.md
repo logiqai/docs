@@ -25,8 +25,8 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 * Under **Prerequisite - Prepare template**, select **Template is ready**.
 * Under **Specify template** > **Template source**, select **Amazon S3 URL**.
-* If you choose to host the Postgres database in RDS use [this](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS1.yml) template.
-* For hosting Postgres database within EKS cluster use [this](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml) template, this will create an additional node pool to host DB server
+* If you choose to host the Postgres database in RDS use **** [**this**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS1.yml) **** template.
+* For hosting Postgres database within EKS cluster use **** [**this**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml) **** template, this will create an additional node pool to host DB server
 
 ![](<../.gitbook/assets/0 (3) (1)>)
 
