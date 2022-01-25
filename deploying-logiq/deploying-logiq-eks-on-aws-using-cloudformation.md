@@ -1,17 +1,23 @@
 # Deploying LOGIQ EKS on AWS using CloudFormation
 
-This guide will take you through deploying a 3-node EKS cluster on AWS and installing LOGIQ on it using a CloudFormation template. These templates create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with encryption and bucket policies.&#x20;
+This guide will take you through deploying an EKS cluster on AWS and installing LOGIQ on it using a CloudFormation and Helm template. These templates create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with default encryption and bucket policies.&#x20;
 
 {% hint style="info" %}
-**Note:** This deployment method using Helm is only supported on Kubernetes versions **1.18**, **1.19**, and **1.20**.
+**Note:** This deployment method using Helm is only supported on Kubernetes versions **1.18**, **1.19**, and **1.20**. Steps described in the document only work if the cluster is created using the given cloud formation template
 {% endhint %}
+
+The cloud formation scripts provision the following resources
+
+* S3 Bucket
+* EKS Cluster
+* EKS Node Pools&#x20;
+* IAM Role - This role will have access to the S3 bucket and also attaches permissions for managing Container Storage Interface for gp3 volumes. &#x20;
 
 Before you begin, ensure you have the following prerequisites.&#x20;
 
-* Access to an Amazon Web Services account
-* Access to create an Elastic Kubernetes Service on AWS
+* Access to create an Elastic Kubernetes Service, S3 Bucket, and IAM Roles
 * AWS SDK installed and configured on your machine&#x20;
-* Helm3 installed&#x20;
+* [Helm 3 ](https://helm.sh/docs/intro/install/)
 
 **Step 1**: To begin, navigate to CloudFormation on your AWS Console, and then click **Create stack**.&#x20;
 
@@ -19,9 +25,8 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 * Under **Prerequisite - Prepare template**, select **Template is ready**.
 * Under **Specify template** > **Template source**, select **Amazon S3 URL**.
-* Depending on the need for a separate database pool for your EKS cluster, select and paste the appropriate template URL in the **Amazon S3 URL** field.&#x20;
-  * EKS cluster with a separate database pool: [https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml)&#x20;
-  * EKS cluster without a separate database pool: [https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS1.yml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS1.yml)
+* If you choose to host the Postgres database in RDS use [this](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS1.yml) template.
+* For hosting Postgres database within EKS cluster use [this](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml) template, this will create an additional node pool to host DB server
 
 ![](<../.gitbook/assets/0 (3) (1)>)
 
@@ -33,21 +38,21 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 ![](<../.gitbook/assets/image (14).png>)
 
-Additionally, provide an **S3 bucket name**. A private bucket with bucket policies will be created.
+Provide an **S3 bucket name**. A private bucket with bucket policies will be created.
 
 ![](<../.gitbook/assets/image (15).png>)
 
 **Step 4**: The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
 
-| Node pool | Instance size (recommended)   | Nodes |
-| --------- | ----------------------------- | ----- |
-| ingest    | c5.xlarge (4 Core 8 GB RAM)   | 1     |
-| common    | c5.2xlarge (8 Core 32 GB RAM) | 2     |
-| db        | c5.xlarge (4 Core 8 GB RAM)   | 1     |
+| Node pool | Instance size (recommended)   | Nodes      |
+| --------- | ----------------------------- | ---------- |
+| ingest    | c5.xlarge (4 Core 8 GB RAM)   | 2          |
+| common    | c5.2xlarge (8 Core 32 GB RAM) | 2          |
+| db        | c5.xlarge (4 Core 8 GB RAM)   | 2 (For HA) |
 
-**Step 5**: Click **Next**, review and agree to the AWS terms and conditions, and then click **Create stack**.
+**Step 5**: Click **Next**, and follow the instructions on the screen to create the stack.
 
-**Step 6**: To connect to the AWS EKS cluster created above, execute the following command. To do this, you need to install [AWS SDK](https://docs.aws.amazon.com/rekognition/latest/dg/setup-awscli-sdk.html) and configure it using your AWS keys.
+**Step 6**: Once the stack is fully provisioned, connect to the AWS EKS cluster using AWS CLI as mentioned below. To do this, you need to install and configure [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 ```
 aws eks --region <AWS REGION> update-kubeconfig --name <EKS-cluster-name>
@@ -66,7 +71,7 @@ kube-public Active 4h57m
 kube-system Active 4h57m
 ```
 
-**Step 8**: The [Amazon Elastic Block Store](https://aws.amazon.com/ebs/) Container Storage Interface (CSI) Driver provides a [CSI](https://github.com/container-storage-interface/spec/blob/master/spec.md) interface used by Container Orchestrators to manage the lifecycle of Amazon EBS volumes. To enable GP3 volumes for this stack, run the following commands.
+**Step 8**: The Amazon Elastic Block Store Container Storage Interface (CSI) Driver provides a [CSI](https://github.com/container-storage-interface/spec/blob/master/spec.md) interface used by Container Orchestrator to manage the lifecycle of Amazon EBS volumes. To enable GP3 volumes for this stack, run the following commands.
 
 ```
 helm repo add aws-ebs-csi-driver https://kubernetes-sigs.github.io/aws-ebs-csi-driver
@@ -89,7 +94,7 @@ ebs-csi-node-fwwn2 3/3 Running 0 3h53m
 ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 ```
 
-**Step 10**: Finally, following the instructions on LOGIQ's [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide), download the values file below as per your Cluster (with/without DB pool), and **** replace the following variables in the **values.yaml** file to spin up the LOGIQ stack on the cluster.
+**Step 10**: Finally, following the instructions on LOGIQ's [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide), download the values file below as per the configuration, and **** replace the following variables in the **values.yaml** file to spin up the LOGIQ stack on the cluster.
 
 {% tabs %}
 {% tab title="Database pool enabled" %}
@@ -102,7 +107,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 {% endtabs %}
 
 * `awsServiceEndpoint`: https://\<aws-region>.amazonaws.com
-* `S3_bucket`: S3 bucket name created
+* `s3_bucket`: S3 bucket name
 * `storageClass`: gp3
 * `createStorageClass`: true
 
