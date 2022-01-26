@@ -1,6 +1,6 @@
 # Deploying LOGIQ EKS on AWS using CloudFormation
 
-## 1. Overview
+1\. Overview
 
 This guide will take you through deploying LOGIQ.AI on an EKS cluster on AWS using CloudFormation and HELM. The installation will create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with default encryption and bucket policies.&#x20;
 
@@ -63,11 +63,11 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 **Step 6**: The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
 
-| Node group | Instance size (min recommended) | Nodes      |
+| Node group | Instance size (min recommended) | Nodes (HA) |
 | ---------- | ------------------------------- | ---------- |
 | ingest     | c5.xlarge (4 Core 8 GB RAM)     | 2          |
 | common     | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
-| db         | c5.xlarge (4 Core 8 GB RAM)     | 2 (For HA) |
+| db         | c5.xlarge (4 Core 8 GB RAM)     | 2          |
 
 **Step 7**: Click **Next**, and follow the instructions on the screen to create the stack.
 
