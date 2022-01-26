@@ -35,10 +35,9 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 ### 5.1 Create EKS Cluster
 
-**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used.&#x20;
+**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL :  **https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS1.yml**
 
-1. If you choose to host the Postgres database in RDS copy the following template URL to be used in step 3: **https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS1.yml**
-2. For hosting the Postgres database within the EKS cluster, copy the following template URL to be used in step 3: **https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKS2.yaml**
+
 
 {% hint style="info" %}
 **NOTE:** Using option 2 in Step 1 will create an additional node pool.
