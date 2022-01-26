@@ -23,9 +23,13 @@ The cloud formation template provision the following resources
 
 Before you begin, ensure you have the following prerequisites.&#x20;
 
-* You have permissions on your AWS account to create an Elastic Kubernetes Service, S3 Bucket, and IAM Roles.
-* The AWS SDK is installed and configured on your machine&#x20;
-* [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
+1. You have permissions on your AWS account to create an Elastic Kubernetes Service, S3 Bucket, and IAM Roles.
+2. The AWS SDK is installed and configured on your machine&#x20;
+3. [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
+4. If you choose to use RDS for section 5.1 step 1, then follow the below guidelines for your RDS
+   * Note down your RDS instance DNS, username, and password handy.
+   * Use Postgres V13 RDS type with 100GB storage, io1 with 3000 IOPS.
+   * We recommend creating a _db.m5.xlarge_ for deployments ingesting < 500GB/day and _db.m5.2xlarge_ for deployments ingesting > 500GB/day
 
 ## 5. Deployment steps
 
@@ -170,9 +174,9 @@ helm upgrade --install logiq -n logiq \
 
 ```
 helm upgrade --install logiq -n logiq \
---set global.environment.postgres_host=<RDS-host-ip/dns> \
---set global.environment.postgres_user=<username> \
---set global.environment.postgres_password=<password> \
+--set global.environment.postgres_host=<AWS RDS-host-ip/dns> \
+--set global.environment.postgres_user=<AWS RDS-username> \
+--set global.environment.postgres_password=<AWS RDS-password> \
 -f values-no-rds.yaml logiq-repo/logiq
 ```
 
