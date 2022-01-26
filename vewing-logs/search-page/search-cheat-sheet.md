@@ -26,7 +26,7 @@ LOGIQ's advanced search feature supports the use of complex expressions in the s
 
 The following image depicts how you can conduct an advanced search within LOGIQ.
 
-![Advanced Search Dialog](broken-reference)
+![Advanced Search Dialog](../../.gitbook/assets/advanced-search-2022-01-25\_17-40-46.png)
 
 ### Comparators
 
