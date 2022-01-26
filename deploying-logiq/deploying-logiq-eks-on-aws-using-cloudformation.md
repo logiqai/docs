@@ -166,15 +166,14 @@ helm upgrade --install logiq -n logiq \
 -f values.yaml logiq-repo/logiq
 ```
 
-**Step 6 (Optional):** If you choose to deploy using RDS, provide the following options to use the RDS cluster
+**Step 6 (Optional):** If you choose to deploy using RDS, provide the following options to use the RDS cluster and use the values-no-rds.yaml file from step 1 above
 
 ```
 helm upgrade --install logiq -n logiq \
---set global.chart.postgres=false \
---set global.environment.postgres_host=<postgres-host-ip/dns> \
+--set global.environment.postgres_host=<RDS-host-ip/dns> \
 --set global.environment.postgres_user=<username> \
 --set global.environment.postgres_password=<password> \
--f values.yaml logiq-repo/logiq
+-f values-no-rds.yaml logiq-repo/logiq
 ```
 
 &#x20;
