@@ -57,11 +57,11 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 ![](<../.gitbook/assets/image (14).png>)
 
-Provide an **S3 bucket name**. A private bucket with bucket policies will be created.
+**Step 5:** Provide an **S3 bucket name**. A private bucket with bucket policies will be created.
 
 ![](<../.gitbook/assets/image (15).png>)
 
-**Step 5**: The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
+**Step 6**: The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
 
 | Node group | Instance size (min recommended) | Nodes      |
 | ---------- | ------------------------------- | ---------- |
@@ -69,7 +69,7 @@ Provide an **S3 bucket name**. A private bucket with bucket policies will be cre
 | common     | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
 | db         | c5.xlarge (4 Core 8 GB RAM)     | 2 (For HA) |
 
-**Step 6**: Click **Next**, and follow the instructions on the screen to create the stack.
+**Step 7**: Click **Next**, and follow the instructions on the screen to create the stack.
 
 ### 5.2 Verify EKS setup
 
