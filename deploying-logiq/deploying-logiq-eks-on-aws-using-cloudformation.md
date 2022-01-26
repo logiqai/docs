@@ -63,9 +63,9 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 | Node group | Instance size (min recommended) | Nodes (HA) |
 | ---------- | ------------------------------- | ---------- |
-| ingest     | c5.xlarge (4 Core 8 GB RAM)     | 2          |
-| common     | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
-| db         | c5.xlarge (4 Core 8 GB RAM)     | 2          |
+| **ingest** | c5.xlarge (4 Core 8 GB RAM)     | 2          |
+| **common** | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
+| **db**     | c5.xlarge (4 Core 8 GB RAM)     | 2          |
 
 **Step 7**: Click **Next**, and follow the instructions on the screen to create the stack.
 
@@ -79,7 +79,7 @@ aws eks --region <AWS REGION> update-kubeconfig --name <EKS-cluster-name>
 
 **Step 2**: Once the EKS cluster is up and running, execute the following commands to check the health of the cluster.
 
-```
+```bash
 kubectl get namespace
 NAME STATUS AGE
 default Active 4h57m
@@ -131,25 +131,29 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 **Step 2**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the LOGIQ stack on your EKS cluster.
 
-* `awsServiceEndpoint`: https://s3.\<aws-region>.amazonaws.com
-* `s3_bucket`: S3 bucket name
-* `s3_region`: \<s3 region>
+1. `awsServiceEndpoint`: https://s3.\<aws-region>.amazonaws.com
+2. `s3_bucket`: S3 bucket name
+3. `s3_region`: \<s3 region>
 
 **Step 3:** Create the logiq namespace in your EKS cluster
 
-```
+```bash
 kubectl create namespace logiq
 ```
 
 **Step 4:** Deploy LOGIQ.AI stack using helm and updated values file, see below for additional options to customize the deployment for enabling https and to use external Postgres database
 
-```
+```bash
 helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq
 ```
 
 **Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
 
-```
+{% hint style="info" %}
+NOTE: Your DNS will need to be programmed separately to map the domain to the service endpoint for logiq. Please see Step 7 below on how to obtain the service endpoint.
+{% endhint %}
+
+```bash
 helm upgrade --install logiq -n logiq \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
@@ -159,7 +163,7 @@ helm upgrade --install logiq -n logiq \
 
 **Step 6 (Optional):** If you choose to deploy using AWS RDS, provide the following options below to customize
 
-```
+```bash
 helm upgrade --install logiq -n logiq \
 --set global.environment.postgres_host=<AWS RDS-host-ip/dns> \
 --set global.environment.postgres_user=<AWS RDS-username> \
@@ -170,7 +174,7 @@ helm upgrade --install logiq -n logiq \
 
 &#x20;**Step 7:** After the installation is complete execute the below command to get the service endpoint
 
-```
+```bash
 kubectl -n logiq get svc | grep LoadBalancer
 NAME                        TYPE           CLUSTER-IP       EXTERNAL-IP
 logiq-kubernetes-ingress     LoadBalancer <cluster_ip>    <Service end-point>
