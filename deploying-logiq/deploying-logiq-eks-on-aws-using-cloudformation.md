@@ -163,5 +163,5 @@ helm upgrade --install logiq -n logiq \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
-logiq-repo/logiq
+-f values.yaml logiq-repo/logiq
 ```
