@@ -127,6 +127,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 * `awsServiceEndpoint`: https://\<aws-region>.amazonaws.com
 * `s3_bucket`: S3 bucket name
+* s3\_region: \<s3 region>
 
 **Step 3:** Create the logiq namespace in your EKS cluster
 
