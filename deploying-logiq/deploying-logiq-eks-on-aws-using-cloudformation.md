@@ -133,7 +133,7 @@ Use the values file below if you picked RDS in section 5.1 step 1
 Use the values file below if you picked local Postgres in section 5.1 step 1
 {% endhint %}
 
-{% file src="../.gitbook/assets/values (6).yaml" %}
+{% file src="../.gitbook/assets/values-no-rds.yaml" %}
 {% endtab %}
 {% endtabs %}
 
@@ -156,7 +156,7 @@ kubectl create namespace logiq
 helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq
 ```
 
-**Step 5:** To enable https, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
+**Step 5 (Optional):** To enable https, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
 
 ```
 helm upgrade --install logiq -n logiq \
@@ -165,3 +165,16 @@ helm upgrade --install logiq -n logiq \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
 -f values.yaml logiq-repo/logiq
 ```
+
+**Step 6 (Optional):** If you choose to deploy using RDS, provide the following options to use the RDS cluster
+
+```
+helm upgrade --install logiq -n logiq \
+--set global.chart.postgres=false \
+--set global.environment.postgres_host=<postgres-host-ip/dns> \
+--set global.environment.postgres_user=<username> \
+--set global.environment.postgres_password=<password> \
+-f values.yaml logiq-repo/logiq
+```
+
+&#x20;
