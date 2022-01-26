@@ -69,7 +69,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 **Step 7**: Click **Next**, and follow the instructions on the screen to create the stack.
 
-### 5.2 Verify EKS setup
+### 5.2 Verify EKS setup and tag subnets
 
 **Step 1**: Once the stack is fully provisioned, connect to the AWS EKS cluster using AWS CLI as mentioned below. To do this, you need to install and configure [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
@@ -86,6 +86,12 @@ default Active 4h57m
 kube-node-lease Active 4h57m
 kube-public Active 4h57m
 kube-system Active 4h57m
+```
+
+**Step 3:** [**Tag both subnets**](https://docs.aws.amazon.com/eks/latest/userguide/network\_reqs.html#vpc-subnet-tagging) used in EKS cloud formation as mentioned below. Replace the cluster name, region, and subnet-id.
+
+```
+ as aws ec2 create-tags --region <region> --resources <subnet-id> --tags Key="kubernetes.io/cluster/<cluster_name>",Value="shared"
 ```
 
 ### 5.3 Enable GP3 storage class for EKS
