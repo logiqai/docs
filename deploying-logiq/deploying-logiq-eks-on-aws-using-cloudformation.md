@@ -91,7 +91,7 @@ kube-system Active 4h57m
 **Step 3:** [**Tag both subnets**](https://docs.aws.amazon.com/eks/latest/userguide/network\_reqs.html#vpc-subnet-tagging) used in EKS cloud formation as mentioned below. Replace the cluster name, region, and subnet-id.
 
 ```
- as aws ec2 create-tags --region <region> --resources <subnet-id> --tags Key="kubernetes.io/cluster/<cluster_name>",Value="shared"
+aws ec2 create-tags --region <region> --resources <subnet-id> --tags Key="kubernetes.io/cluster/<cluster_name>",Value="shared"
 ```
 
 ### 5.3 Enable GP3 storage class for EKS
