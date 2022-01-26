@@ -24,7 +24,7 @@ The cloud formation template provisions the following resources
 Before you begin, ensure you have the following prerequisites.&#x20;
 
 1. You have permissions on your AWS account to create an Elastic Kubernetes Service, S3 Bucket, and IAM Roles.
-2. The AWS SDK is installed and configured on your machine&#x20;
+2. The AWS CLI is installed and configured on your machine&#x20;
 3. [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
 4. If you choose to use AWS RDS, then follow the below guidelines for your RDS
    * Note down your RDS instance DNS, username, and password handy.
@@ -131,7 +131,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 **Step 2**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the LOGIQ stack on your EKS cluster.
 
-* `awsServiceEndpoint`: https://\<aws-region>.amazonaws.com
+* `awsServiceEndpoint`: https://s3.\<aws-region>.amazonaws.com
 * `s3_bucket`: S3 bucket name
 * `s3_region`: \<s3 region>
 
