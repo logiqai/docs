@@ -156,7 +156,7 @@ kubectl create namespace logiq
 helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq
 ```
 
-**Step 5 (Optional):** To enable https, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
+**Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
 
 ```
 helm upgrade --install logiq -n logiq \
