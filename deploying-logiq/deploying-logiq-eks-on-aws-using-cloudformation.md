@@ -12,12 +12,12 @@ This guide will take you through deploying LOGIQ.AI on an EKS cluster on AWS usi
 
 ## 3. AWS Resources
 
-The cloud formation template provision the following resources
+The cloud formation template provisions the following resources
 
 1. S3 Bucket
 2. EKS Cluster
 3. EKS Node Pools&#x20;
-4. IAM Role - This role will have permissions to access the S3 bucket and managing Container Storage Interface for gp3 volumes.
+4. IAM Role - This role will have permissions to access the S3 bucket and manage Container Storage Interface for gp3 volumes.
 
 ## 4. Pre-requisites
 
@@ -26,10 +26,11 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 1. You have permissions on your AWS account to create an Elastic Kubernetes Service, S3 Bucket, and IAM Roles.
 2. The AWS SDK is installed and configured on your machine&#x20;
 3. [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
-4. If you choose to use RDS for section 5.1 step 1, then follow the below guidelines for your RDS
+4. If you choose to use AWS RDS, then follow the below guidelines for your RDS
    * Note down your RDS instance DNS, username, and password handy.
    * Use Postgres V13 RDS type with 100GB storage, io1 with 3000 IOPS.
    * We recommend creating a _db.m5.xlarge_ for deployments ingesting < 500GB/day and _db.m5.2xlarge_ for deployments ingesting > 500GB/day
+   * Ensure EKS cluster can connect to AWS RDS Instance
 
 ## 5. Deployment steps
 
@@ -114,32 +115,18 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 ### 5.4 Deploy LOGIQ.AI using HELM
 
-**Step 1**: Download the values file below as per the configuration picked in [Secton 5.1, Step 1](deploying-logiq-eks-on-aws-using-cloudformation.md#create-the-eks-cluster) above.,&#x20;
+**Step 1**: Download the values file below and customize it per the instructions below.&#x20;
 
 {% tabs %}
-{% tab title="Using AWS RDS" %}
-{% hint style="info" %}
-Use the values file below if you picked RDS in section 5.1 step 1
-{% endhint %}
-
-{% file src="../.gitbook/assets/values (5).yaml" %}
-{% endtab %}
-
-{% tab title="Not using AWS RDS" %}
-{% hint style="info" %}
-Use the values file below if you picked local Postgres in section 5.1 step 1
-{% endhint %}
-
-{% file src="../.gitbook/assets/values-no-rds.yaml" %}
+{% tab title="Values File For Helm" %}
+{% file src="../.gitbook/assets/values (8).yaml" %}
 {% endtab %}
 {% endtabs %}
 
-**Step 2**: Replace the following variables in the **values.yaml** from step 1 above and procees to to install the LOGIQ stack on your EKS cluster.
+**Step 2**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the LOGIQ stack on your EKS cluster.
 
 * `awsServiceEndpoint`: https://\<aws-region>.amazonaws.com
 * `s3_bucket`: S3 bucket name
-* `storageClass`: gp3
-* `createStorageClass`: true
 
 **Step 3:** Create the logiq namespace in your EKS cluster
 
@@ -147,7 +134,7 @@ Use the values file below if you picked local Postgres in section 5.1 step 1
 kubectl create namespace logiq
 ```
 
-**Step 4:** Deploy LOGIQ.AI stack using helm and values file from step 1 above
+**Step 4:** Deploy LOGIQ.AI stack using helm and updated values file, see below for additional options to customize the deployment for enabling https and to use external Postgres database
 
 ```
 helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq
@@ -163,13 +150,14 @@ helm upgrade --install logiq -n logiq \
 -f values.yaml logiq-repo/logiq
 ```
 
-**Step 6 (Optional):** If you choose to deploy using RDS, provide the following options to use the RDS cluster and use the values-no-rds.yaml file from step 1 above
+**Step 6 (Optional):** If you choose to deploy using AWS RDS, provide the following options below to customize
 
 ```
 helm upgrade --install logiq -n logiq \
 --set global.environment.postgres_host=<AWS RDS-host-ip/dns> \
 --set global.environment.postgres_user=<AWS RDS-username> \
 --set global.environment.postgres_password=<AWS RDS-password> \
+--set global.chart.postgres=false \
 -f values-no-rds.yaml logiq-repo/logiq
 ```
 
