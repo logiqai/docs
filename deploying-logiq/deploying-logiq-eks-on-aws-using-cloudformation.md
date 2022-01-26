@@ -161,4 +161,11 @@ helm upgrade --install logiq -n logiq \
 -f values.yaml logiq-repo/logiq
 ```
 
+&#x20;**Step 7:** After the installation is complete execute the below command to get the service endpoint
+
+```
+kubectl -n logiq get svc | grep LoadBalancer
+logiq-kubernetes-ingress LoadBalancer 10.100.129.151 aabab1e1351leo8g1ieq304678-1012350503.us-west-1.elb.amazonaws.com
+```
+
 &#x20;
