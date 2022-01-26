@@ -259,7 +259,7 @@ global:
     infra: common
     other: common
     db: db
-    cache: db
+    cache: common
     ingest_sync: common
   taints:
     enabled: false
