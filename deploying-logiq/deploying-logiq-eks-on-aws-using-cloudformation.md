@@ -153,5 +153,15 @@ kubectl create namespace logiq
 **Step 4:** Deploy LOGIQ.AI stack using helm and values file from step 1 above
 
 ```
-helm upgrade --install -n logiq -f values.yaml
+helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq
+```
+
+**Step 5:** To enable https, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
+
+```
+helm upgrade --install logiq -n logiq \
+--set global.domain=logiq.my-domain.com \
+--set ingress.tlsEnabled=true \
+--set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
+logiq-repo/logiq
 ```
