@@ -23,9 +23,9 @@ The cloud formation template provision the following resources
 
 Before you begin, ensure you have the following prerequisites.&#x20;
 
-* Access to create an Elastic Kubernetes Service, S3 Bucket, and IAM Roles
-* AWS SDK installed and configured on your machine&#x20;
-* [Helm 3 ](https://helm.sh/docs/intro/install/)
+* You have permissions on your AWS account to create an Elastic Kubernetes Service, S3 Bucket, and IAM Roles.
+* The AWS SDK is installed and configured on your machine&#x20;
+* [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
 
 ## 5. Deployment steps
 
