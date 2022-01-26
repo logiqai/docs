@@ -117,7 +117,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 ### 5.4 Deploy LOGIQ.AI using HELM
 
-**Step 1**: Follow the instructions on LOGIQ's [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide), and download the values file below as per the configuration picked in [Secton 5.1, Step 1](deploying-logiq-eks-on-aws-using-cloudformation.md#create-the-eks-cluster) above.,&#x20;
+**Step 1**: Download the values file below as per the configuration picked in [Secton 5.1, Step 1](deploying-logiq-eks-on-aws-using-cloudformation.md#create-the-eks-cluster) above.,&#x20;
 
 {% tabs %}
 {% tab title="Using AWS RDS" %}
@@ -137,11 +137,21 @@ Use the values file below if you picked local Postgres in section 5.1 step 1
 {% endtab %}
 {% endtabs %}
 
-**Step 2**: Replace the following variables in the **values.yaml** from step 1 above to install the LOGIQ stack on your EKS cluster.
+**Step 2**: Replace the following variables in the **values.yaml** from step 1 above and procees to to install the LOGIQ stack on your EKS cluster.
 
 * `awsServiceEndpoint`: https://\<aws-region>.amazonaws.com
 * `s3_bucket`: S3 bucket name
 * `storageClass`: gp3
 * `createStorageClass`: true
 
-This completes the deployment of LOGIQ on an EKS cluster on AWS using a CloudFormation template.&#x20;
+**Step 3:** Create the logiq namespace in your EKS cluster
+
+```
+kubectl create namespace logiq
+```
+
+**Step 4:** Deploy LOGIQ.AI stack using helm and values file from step 1 above
+
+```
+helm upgrade --install -n logiq -f values.yaml
+```
