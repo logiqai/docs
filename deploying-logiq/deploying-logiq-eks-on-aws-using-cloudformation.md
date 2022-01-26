@@ -73,13 +73,13 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 ### 5.2 Verify EKS setup
 
-**Step 6**: Once the stack is fully provisioned, connect to the AWS EKS cluster using AWS CLI as mentioned below. To do this, you need to install and configure [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+**Step 1**: Once the stack is fully provisioned, connect to the AWS EKS cluster using AWS CLI as mentioned below. To do this, you need to install and configure [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 ```
 aws eks --region <AWS REGION> update-kubeconfig --name <EKS-cluster-name>
 ```
 
-**Step 7**: Once the EKS cluster is up and running, execute the following commands to check the health of the cluster.
+**Step 2**: Once the EKS cluster is up and running, execute the following commands to check the health of the cluster.
 
 ```
 kubectl get namespace
