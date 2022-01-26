@@ -172,7 +172,8 @@ helm upgrade --install logiq -n logiq \
 
 ```
 kubectl -n logiq get svc | grep LoadBalancer
-logiq-kubernetes-ingress LoadBalancer 10.100.129.151 aabab1e1351leo8g1ieq304678-1012350503.us-west-1.elb.amazonaws.com
+NAME                        TYPE           CLUSTER-IP       EXTERNAL-IP
+logiq-kubernetes-ingress     LoadBalancer <cluster_ip>    <Service end-point>
 ```
 
 &#x20;
