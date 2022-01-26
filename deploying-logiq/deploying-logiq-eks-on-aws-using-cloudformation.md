@@ -1,6 +1,6 @@
 # Deploying LOGIQ EKS on AWS using CloudFormation
 
-1\. Overview
+## 1. Overview
 
 This guide will take you through deploying LOGIQ.AI on an EKS cluster on AWS using CloudFormation and HELM. The installation will create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with default encryption and bucket policies.&#x20;
 
@@ -158,7 +158,7 @@ helm upgrade --install logiq -n logiq \
 --set global.environment.postgres_user=<AWS RDS-username> \
 --set global.environment.postgres_password=<AWS RDS-password> \
 --set global.chart.postgres=false \
--f values-no-rds.yaml logiq-repo/logiq
+-f values.yaml logiq-repo/logiq
 ```
 
 &#x20;
