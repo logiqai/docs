@@ -67,4 +67,4 @@ Also, make sure to edit the parsers.conf path to the folder where you installed 
 
 ## Installing fluent-bit
 
-Follow the steps in the section Installing[ fluent-bit for windows](https://docs.logiq.ai/integrations/fluent-bit#fluent-bit-for-windows) to setup your fluent-bit agent and service. Use the modified config file above to match your environment during the setup process.
+Follow the steps in the section Installing[ <mark style="color:blue;">fluent-bit for windows</mark>](https://docs.logiq.ai/integrations/fluent-bit#fluent-bit-for-windows) to setup your fluent-bit agent and service. Use the modified config file above to match your environment during the setup process.
