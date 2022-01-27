@@ -34,16 +34,9 @@ Also, make sure to edit the parsers.conf path to the folder where you installed 
     Name          record_modifier
     Match         IISW3SVC
     Record cluster_id windows
-
-[FILTER]
-    Name          record_modifier
-    Match         IISW3SVC
     Record namespace iis
-
-[FILTER]
-    Name          record_modifier
-    Match         IISW3SVC
     Record app_name IISW3SVC
+    Record hostname IISHost
 
 [OUTPUT]
     Name          http
