@@ -49,6 +49,14 @@ The below code block defines the minimal changes to be added to the fluent-bit c
 
 You can use Fluent Bit to ship Windows logs to LOGIQ by leveraging the following Fluent Bit configuration.
 
+The instruction to install fluent-bit for windows is available at the following git repository - [https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/windows](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/windows)
+
+The folder in the git repository includes a PowerShell script to setup the windows fluent-bit agent. The PowerShell script downloads the fluent-bit agent and install the agent as a service. Continue below to see how to setup an example fluent conf and start service on windows.
+
+{% hint style="info" %}
+NOTE: You will need to finalize the fluent configuration and then restart the service. Below is an example fluent configuration
+{% endhint %}
+
 ```
 [SERVICE]
     Flush           5
