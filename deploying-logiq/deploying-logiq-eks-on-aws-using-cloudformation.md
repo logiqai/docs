@@ -12,7 +12,7 @@ This guide will take you through deploying LOGIQ.AI on an EKS cluster on AWS usi
 
 ## 3. AWS Resources
 
-The Cloudformation template provisions the following resources
+The Cloud formation template provisions the following resources
 
 1. S3 Bucket
 2. EKS Cluster
@@ -20,7 +20,7 @@ The Cloudformation template provisions the following resources
 
 ### 3.1 IAM Role
 
-Create a role for EKS and EKS Node Pools with the below policies&#x20;
+Create a role for EKS and EKS Node Pools with the below policies. Alternatively, this can be created using Cloud formation template [https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiqiamrole.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiqiamrole.yaml)&#x20;
 
 * AmazonEKSWorkerNodePolicy&#x20;
 * AmazonEC2ContainerRegistryReadOnly&#x20;
@@ -241,7 +241,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
    * Note down your RDS instance DNS, username, and password handy.
    * Use Postgres V13 RDS type with 100GB storage, io1 with 3000 IOPS.
    * We recommend creating a _db.m5.xlarge_ for deployments ingesting < 500GB/day and _db.m5.2xlarge_ for deployments ingesting > 500GB/day
-   * Ensure EKS cluster can connect to AWS RDS Instance
+   * Ensure EKS cluster can connect to AWS RDS Instance. Once the EKS cluster is created, add the security group of EKS cluster in the Postgres security group inbound rules for port 5432
 
 ## 5. Deployment steps
 
