@@ -12,7 +12,7 @@ This guide will take you through deploying LOGIQ.AI on an EKS cluster on AWS usi
 
 ## 3. AWS Resources
 
-The cloud formation template provisions the following resources
+The Cloudformation template provisions the following resources
 
 1. S3 Bucket
 2. EKS Cluster
@@ -20,18 +20,18 @@ The cloud formation template provisions the following resources
 
 ### 3.1 IAM Role
 
-Create the a role for EKS and EKS Node Pools with the below policies&#x20;
+Create a role for EKS and EKS Node Pools with the below policies&#x20;
 
-* arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy&#x20;
-* arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly&#x20;
-* arn:aws:iam::aws:policy/AmazonEKS\_CNI\_Policy&#x20;
-* arn:aws:iam::aws:policy/AmazonEKSClusterPolicy&#x20;
-* arn:aws:iam::aws:policy/AmazonEKSServicePolicy
+* AmazonEKSWorkerNodePolicy&#x20;
+* AmazonEC2ContainerRegistryReadOnly&#x20;
+* AmazonEKS\_CNI\_Policy&#x20;
+* AmazonEKSClusterPolicy&#x20;
+* AmazonEKSServicePolicy
 
-Create the below managed policies and attach it to the above role, this will enable us to create **GP3** volumes in the cluster.
+Create the managed policies below and attach them to the above role, this will enable one to create **GP3** volumes in the cluster.
 
 ```
-GP3GP3{
+{
  "Version": "2012-10-17",
     "Statement": [
         {
@@ -178,7 +178,7 @@ GP3GP3{
 }
 ```
 
-In order for the IAM role to access the S3 bucket, create the below policy and attach it to the above IAM role&#x20;
+In order for the IAM role to access the S3 bucket, create the policy below and attach it to the above IAM role&#x20;
 
 {% hint style="info" %}
 **Note:** Replace \<Your-bucket-name> with the name of the unique bucket name.
@@ -237,7 +237,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 2. Above mentioned roles are created
 3. The AWS CLI is installed and configured on your machine&#x20;
 4. [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
-5. If you choose to use AWS RDS, then follow the below guidelines for your RDS
+5. If you choose to use AWS RDS, then follow the guidelines below for your RDS
    * Note down your RDS instance DNS, username, and password handy.
    * Use Postgres V13 RDS type with 100GB storage, io1 with 3000 IOPS.
    * We recommend creating a _db.m5.xlarge_ for deployments ingesting < 500GB/day and _db.m5.2xlarge_ for deployments ingesting > 500GB/day
@@ -251,7 +251,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 **Step 2**: On your AWS Console, navigate to CloudFormation and select **Create stack**.&#x20;
 
-**Step 3**: Provide the options as shown in the screen capture below
+**Step 3**: Provide the options as shown below
 
 * Under **Prerequisite - Prepare template**, select **Template is ready**.
 * Under **Specify template** > **Template source**, select **Amazon S3 URL -** Here you will specify the template URL from Step 1 above.
