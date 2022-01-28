@@ -172,6 +172,6 @@ output {
 
 You can obtain an ingest token from the LOGIQ UI as described [here](generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
 
-![GCP Cloud Run Logs](<../.gitbook/assets/image (19).png>)
+![GCP Cloud Run Logs](<../.gitbook/assets/image (19) (1).png>)
 
 Your GCP Cloud Logging logs will now be forwarded to your LOGIQ instance.&#x20;

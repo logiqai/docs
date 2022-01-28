@@ -17,16 +17,227 @@ The cloud formation template provisions the following resources
 1. S3 Bucket
 2. EKS Cluster
 3. EKS Node Pools&#x20;
-4. IAM Role - This role will have permissions to access the S3 bucket and manage Container Storage Interface for gp3 volumes.
+
+### 3.1 IAM Role
+
+Create the a role for EKS and EKS Node Pools with the below policies&#x20;
+
+* arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy&#x20;
+* arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly&#x20;
+* arn:aws:iam::aws:policy/AmazonEKS\_CNI\_Policy&#x20;
+* arn:aws:iam::aws:policy/AmazonEKSClusterPolicy&#x20;
+* arn:aws:iam::aws:policy/AmazonEKSServicePolicy
+
+Create the below managed policies and attach it to the above role, this will enable us to create **GP3** volumes in the cluster.
+
+```
+GP3GP3{
+ "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateSnapshot",
+                "ec2:AttachVolume",
+                "ec2:DetachVolume",
+                "ec2:ModifyVolume",
+                "ec2:DescribeAvailabilityZones",
+                "ec2:DescribeInstances",
+                "ec2:DescribeSnapshots",
+                "ec2:DescribeTags",
+                "ec2:DescribeVolumes",
+                "ec2:DescribeVolumesModifications"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateTags"
+            ],
+            "Resource": [
+                "arn:aws:ec2:*:*:volume/*",
+                "arn:aws:ec2:*:*:snapshot/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "ec2:CreateAction": [
+                        "CreateVolume",
+                        "CreateSnapshot"
+                    ]
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DeleteTags"
+            ],
+            "Resource": [
+                "arn:aws:ec2:*:*:volume/*",
+                "arn:aws:ec2:*:*:snapshot/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateVolume"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "aws:RequestTag/ebs.csi.aws.com/cluster": "true"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateVolume"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "aws:RequestTag/CSIVolumeName": "*"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:CreateVolume"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "aws:RequestTag/kubernetes.io/cluster/*": "owned"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DeleteVolume"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "ec2:ResourceTag/ebs.csi.aws.com/cluster": "true"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DeleteVolume"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "ec2:ResourceTag/CSIVolumeName": "*"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DeleteVolume"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "ec2:ResourceTag/kubernetes.io/cluster/*": "owned"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DeleteSnapshot"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "ec2:ResourceTag/CSIVolumeSnapshotName": "*"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DeleteSnapshot"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringLike": {
+                    "ec2:ResourceTag/ebs.csi.aws.com/cluster": "true"
+                }
+            }
+        }
+    ]
+}
+```
+
+In order for the IAM role to access the S3 bucket, create the below policy and attach it to the above IAM role&#x20;
+
+{% hint style="info" %}
+**Note:** Replace \<Your-bucket-name> with the name of the unique bucket name.
+{% endhint %}
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ConsoleAccess",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetAccountPublicAccessBlock",
+                "s3:GetBucketAcl",
+                "s3:GetBucketLocation",
+                "s3:GetBucketPolicyStatus",
+                "s3:GetBucketPublicAccessBlock"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "ListObjectsInBucket",
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": [
+                "arn:aws:s3:::<Your-bucket-name>"
+            ]
+        },
+        {
+            "Sid": "AllObjectActions",
+            "Effect": "Allow",
+            "Action": "s3:*Object",
+            "Resource": [
+                "arn:aws:s3:::<Your-bucket-name>/*"
+            ]
+        }
+    ]
+}
+```
+
+Edit the Trust Relationship in the IAM role and add the following entities
+
+{% hint style="info" %}
+Without adding the trust relationship, roles cannot be attached to the EKS cluster and node-groups
+{% endhint %}
+
+* ec2.amazonaws.com
+* eks.amazonaws.com
 
 ## 4. Pre-requisites
 
 Before you begin, ensure you have the following prerequisites.&#x20;
 
-1. You have permissions on your AWS account to create an Elastic Kubernetes Service, S3 Bucket, and IAM Roles.
-2. The AWS CLI is installed and configured on your machine&#x20;
-3. [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
-4. If you choose to use AWS RDS, then follow the below guidelines for your RDS
+1. You have permission on your AWS account to create an Elastic Kubernetes Service, S3 Bucket.
+2. Above mentioned roles are created
+3. The AWS CLI is installed and configured on your machine&#x20;
+4. [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
+5. If you choose to use AWS RDS, then follow the below guidelines for your RDS
    * Note down your RDS instance DNS, username, and password handy.
    * Use Postgres V13 RDS type with 100GB storage, io1 with 3000 IOPS.
    * We recommend creating a _db.m5.xlarge_ for deployments ingesting < 500GB/day and _db.m5.2xlarge_ for deployments ingesting > 500GB/day
@@ -36,7 +247,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 ### 5.1 Create EKS Cluster
 
-**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL: **** [ **** ](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiq-eks.yaml)****[**https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiq-eks.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiq-eks.yaml)****
+**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL: **** [ **** ](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiq-eks.yaml)****[**https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster.yaml) ****&#x20;
 
 **Step 2**: On your AWS Console, navigate to CloudFormation and select **Create stack**.&#x20;
 
@@ -47,19 +258,15 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 ![](<../.gitbook/assets/0 (3) (1)>)
 
-**Step 4**: To deploy the EKS cluster, we need a VPC and 2 subnets. Select them from the **Network Configuration** and **Subnet Configuration** dropdown lists.
+**Step 4**: To deploy the EKS cluster, we need to enter the **ARN** of the **IAM Role for EKS** that was created in **section 3.1.** We need a VPC with 2 subnets. Select them from the Network Configuration and Subnet configuration dropdown lists.
 
 {% hint style="info" %}
 **Important:** You **MUST** choose 2 different subnets from the same VPC.&#x20;
 {% endhint %}
 
-![](<../.gitbook/assets/image (14).png>)
+![](https://lh3.googleusercontent.com/EqMNa2KCWo7OWbPuKcKitEmdftOoEBX9-7roQd1LbMIymmdU5FZS1McW87RvrPnReWqnlB9g8hIDVKov6svSTkiBVJNRaa--xdEL1UxL4ukGs42Ks3alRQW3ou3CyHhGKxQFYjBQ)
 
-**Step 5:** Provide an **S3 bucket name**. A private bucket with bucket policies will be created.
-
-![](<../.gitbook/assets/image (15).png>)
-
-**Step 6**: The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
+The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
 
 | Node group | Instance size (min recommended) | Nodes (HA) |
 | ---------- | ------------------------------- | ---------- |
@@ -67,7 +274,17 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 | **common** | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
 | **db**     | c5.xlarge (4 Core 8 GB RAM)     | 2          |
 
-**Step 7**: Click **Next**, and follow the instructions on the screen to create the stack.
+****
+
+![](https://lh3.googleusercontent.com/VfIfmOgZkMHYNb06obLoPM-M67pz07uMXrwzmM4S1xd4N0irZX49AE\_JMACp7KDjvSUPpFPqnVrPSvcNC54l88WwTVBXfBPBzWtHenDqJqmt5p6fTxZcmYp4a9tvCOvTkOHX9m6q)
+
+**Step 5:** Provide the **S3 bucket name** from **section 3,** the Cloudformation will create the S3 bucket, S3 bucket name needs to be globally unique.
+
+![](<../.gitbook/assets/image (21).png>)
+
+**Step 6**: Click **Next**, and follow the instructions on the screen to create the stack.
+
+
 
 ### 5.2 Verify EKS setup and tag subnets
 
