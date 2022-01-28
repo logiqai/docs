@@ -17,7 +17,6 @@ Also, make sure to edit the _parsers.conf_ path to the folder where you installe
 
 ```
 [SERVICE]
-    Flush 1
     Parsers_file  C:\test\td-agent-bit-1.8.6-win64\conf\parsers.conf
     Log_Level error
 
@@ -26,17 +25,17 @@ Also, make sure to edit the _parsers.conf_ path to the folder where you installe
     Parser            iis
     Path              C:\\inetpub\logs\\LogFiles\\W3SVC1\\u_ex*.log
     Path_Key          On
-    Tag               IISW3SVC
+    Tag               logiq
     Buffer_Max_Size   1024k
     Read_from_Head    On
 
 [FILTER]
     Name          record_modifier
-    Match         IISW3SVC
-    Record cluster_id windows
-    Record namespace iis
-    Record app_name IISW3SVC
-    Record hostname IISHost
+    Match         logiq
+    Record cluster_id iiscluster
+    Record namespace iisnamespace
+    Record app_name  iisappname
+    Record hostname  iishostname
 
 [OUTPUT]
     Name          http
@@ -57,12 +56,61 @@ Also, make sure to edit the _parsers.conf_ path to the folder where you installe
 ```
 [PARSER]
     # http://rubular.com/r/tjUt3Awgg4
-    Name iis_w3svc1
+    Name iis
     Format regex
     Regex ^(?<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:[\d\.]+) (?<message>.*)$|^(?<raw_message>.*)$
     Time_Key    timestamp
     Time_Keep   On
     Time_Format %Y-%m-%d %H:%M:%S
+```
+
+## Multiple Source Fluent-bit Configuration
+
+Fluent-bit service can gather data sources from multiple locations such as log files from a different directory.  There can be multiple \[INPUT] and \[FILTER] section blocks within a td-fluent.conf file and each \[INPUT] and \[FILTER] block is linked via _\[INPUT] Tag_ and _\[FILTER] Matching_ pairs.     Below shows an example partial configuration file.
+
+```
+
+
+...
+
+[INPUT]
+    Name              tail
+    Parser            iis
+    Path              C:\\inetpub\logs\\LogFiles\\W3SVC1\\u_ex1311.log
+    Path_Key          On
+    Tag               logiq1
+    Buffer_Max_Size   1024k
+    Read_from_Head    On
+
+[INPUT]
+    Name              tail
+    Parser            iis
+    Path              C:\\inetpub\logs\\LogFiles\\W3SVC1\\u_ex1312.log
+    Path_Key          On
+    Tag               logiq2
+    Buffer_Max_Size   1024k
+    Read_from_Head    On
+
+[FILTER]
+    Name          record_modifier
+    Match         logiq1
+    Record cluster_id iiscluster1
+    Record namespace iisnamespace1
+    Record app_name  iisappname1
+    Record hostname  iishostname1
+
+[FILTER]
+    Name          record_modifier
+    Match         logiq2
+    Record cluster_id iiscluster2
+    Record namespace iisnamespace2
+    Record app_name  iisappname2
+    Record hostname  iishostname2
+
+....
+
+
+
 ```
 
 ## Install and Enable Windows Fluent-bit Service
