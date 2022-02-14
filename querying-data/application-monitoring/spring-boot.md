@@ -42,13 +42,13 @@ Restart the server and navigate to `http://localhost:<port>/actuator/` to verifi
 
 Navigate to `http://localhost:<port>/actuator/prometheus` and verify if your Prometheus metrics are being displayed.
 
-![](<../../.gitbook/assets/image (12) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1).png>)
 
 ### Enable API Timings
 
 Micrometer comes with a [timed annotation](https://micrometer.io/docs/concepts#\_the\_timed\_annotation). Annotate Spring Controller methods with the`@Timed`annotation, as shown below.&#x20;
 
-![](<../../.gitbook/assets/image (13) (1).png>)
+![](<../../.gitbook/assets/image (13) (1) (1).png>)
 
 Restart the server, invoke your APIs a few times and navigate to `http://localhost:<port>/actuator/prometheus`. You will now see the API stats being displayed along with other metrics.&#x20;
 
