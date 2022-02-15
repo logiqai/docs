@@ -28,9 +28,10 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 1. You have permission on your AWS account to create an Elastic Kubernetes Service, S3 Bucket.
 2. Pre baked Custom AMI to spin up for EKS managed node groups ( AWS recommended: [https://github.com/awslabs/amazon-eks-ami](https://github.com/awslabs/amazon-eks-ami))&#x20;
-3. The AWS CLI is installed and configured on your machine&#x20;
-4. [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
-5. If you choose to use AWS RDS, then follow the guidelines below for your RDS
+3. KMS Key and appropriate key policy to allow Auto scaling group to access the KMS key ([https://aws.amazon.com/premiumsupport/knowledge-center/kms-launch-ec2-instance/](https://aws.amazon.com/premiumsupport/knowledge-center/kms-launch-ec2-instance/))&#x20;
+4. The AWS CLI is installed and configured on your machine&#x20;
+5. [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
+6. If you choose to use AWS RDS, then follow the guidelines below for your RDS
    * Note down your RDS instance DNS, username, and password handy.
    * Use Postgres V13 RDS type with 100GB storage, io1 with 3000 IOPS.
    * We recommend creating a _db.m5.xlarge_ for deployments ingesting < 500GB/day and _db.m5.2xlarge_ for deployments ingesting > 500GB/day
@@ -72,9 +73,13 @@ The EKS cluster will need the following node groups. Ensure that you select the 
 
 **Step 5:** Provide the **S3 bucket name** from **section 3,** the Cloudformation will create the S3 bucket, S3 bucket name needs to be globally unique.
 
+![](<../.gitbook/assets/image (21) (1).png>)
+
+**Step 6:** Provide the KMS key ARN
+
 ![](<../.gitbook/assets/image (21).png>)
 
-**Step 6**: Click **Next**, and follow the instructions on the screen to create the stack.
+**Step 7**: Click **Next**, and follow the instructions on the screen to create the stack.
 
 ### 5.2 Verify EKS setup and tag subnets
 
@@ -132,7 +137,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 {% tabs %}
 {% tab title="Values File For Helm" %}
-{% file src="../.gitbook/assets/values (8).yaml" %}
+{% file src="../.gitbook/assets/values (9).yaml" %}
 {% endtab %}
 {% endtabs %}
 
