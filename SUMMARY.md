@@ -79,6 +79,7 @@
 * [Event Rules](logiq-events/event-rules.md)
 * [Alertable Events](logiq-events/alerts.md)
 * [Logs to time series event visualization](logiq-events/logs-to-time-series-event-visualization.md)
+* [Example IIS Log Event Extraction Using Event Rules](logiq-events/example-iis-log-event-extraction-using-event-rules.md)
 
 ## COMPLIANCE
 
