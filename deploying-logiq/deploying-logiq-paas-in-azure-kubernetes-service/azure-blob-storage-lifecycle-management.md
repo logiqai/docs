@@ -10,20 +10,20 @@ With the lifecycle management policy, you can:
 * Define rules to be run once per day at the storage account level.
 * Apply rules to containers or to a subset of blobs, using name prefixes or blob index tags as filters.
 
-In your Storage Account, under Data Management, click on Lifecycle management, click on "Add a rule"
+To enable life cycle policies in your Storage Account, click on Lifecycle management under the Data Management section. Click on "Add a rule"
 
 ![](../../.gitbook/assets/lifecycle..png)
 
-Key in any rule name and make the below selections
+Enter any rule name and select the below options
 
-* &#x20;Under Rule-scope, choose Limit blob's with filters"
+* Under Rule-scope, choose "Limit blobs with filters"
 * Under Blob subtype, choose "Base blobs"
 
 ![](../../.gitbook/assets/rule.png)
 
 The below section allows you to choose the time you want to store the data for and actions you want to perform on the stored data, we have chosen to delete the data after 30 days.
 
-* Choose Delete the blob option
+* Choose "Delete the blob" option
 
 ![](../../.gitbook/assets/blobrule.png)
 

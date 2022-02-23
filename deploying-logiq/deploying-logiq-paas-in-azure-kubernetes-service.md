@@ -2,14 +2,14 @@
 
 The following guide takes you through deploying LOGIQ PaaS in an Azure Kubernetes Service cluster. The deployment involves the following steps:
 
-* [<mark style="color:blue;">Creating an Azure Kubernetes Service cluster</mark>](./#creating-an-azure-kubernetes-cluster)<mark style="color:blue;"></mark>
-* [<mark style="color:blue;">Configuring the node pool</mark>](./#configuring-the-node-pool)<mark style="color:blue;"></mark>
-* <mark style="color:blue;"></mark>[<mark style="color:blue;">Connecting to the cluster</mark>](./#connecting-with-your-aks-cluster)<mark style="color:blue;"></mark>
-* <mark style="color:blue;"></mark>[<mark style="color:blue;">Creating the MinIO blob storage gateway</mark>](./#creating-the-minio-blob-storage-gateway-for-s3-compatibility)<mark style="color:blue;"></mark>
-* [Deploying LOGIQ PaaS](./#deploying-logiq-paas)
+* [<mark style="color:blue;">Creating an Azure Kubernetes Service cluster</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#creating-an-azure-kubernetes-cluster)<mark style="color:blue;"></mark>
+* [<mark style="color:blue;">Configuring the node pool</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#configuring-the-node-pool)<mark style="color:blue;"></mark>
+* <mark style="color:blue;"></mark>[<mark style="color:blue;">Connecting to the cluster</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#connecting-with-your-aks-cluster)<mark style="color:blue;"></mark>
+* <mark style="color:blue;"></mark>[<mark style="color:blue;">Creating the MinIO blob storage gateway</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#creating-the-minio-blob-storage-gateway-for-s3-compatibility)<mark style="color:blue;"></mark>
+* [Deploying LOGIQ PaaS](deploying-logiq-paas-in-azure-kubernetes-service.md#deploying-logiq-paas)
 
 {% hint style="warning" %}
-If you have an AKS cluster that is appropriately sized for deploying LOGIQ and handling your data ingestion rate, you can skip the AKS cluster creation step. However, you must label the nodes as specified in the [<mark style="color:blue;">Node pool configuration</mark>](./#node-pool-configuration) table failing which the pods in the cluster will not land in any of the nodes.&#x20;
+If you have an AKS cluster that is appropriately sized for deploying LOGIQ and handling your data ingestion rate, you can skip the AKS cluster creation step. However, you must label the nodes as specified in the [<mark style="color:blue;">Node pool configuration</mark>](deploying-logiq-paas-in-azure-kubernetes-service.md#node-pool-configuration) table failing which the pods in the cluster will not land in any of the nodes.&#x20;
 {% endhint %}
 
 ## Creating an Azure Kubernetes Cluster
@@ -69,7 +69,7 @@ az aks nodepool add --cluster-name logiqai --name db --resource-group azure-test
 
 
 
-![](<../../.gitbook/assets/image (18) (1).png>)
+![](<../.gitbook/assets/image (18) (1).png>)
 
 ## Connecting with your AKS cluster
 
