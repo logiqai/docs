@@ -12,23 +12,23 @@ Reporting feature comes in handy when required to periodically search and aggreg
 
 * From the logline, click on "create batch report"
 
-![](../../.gitbook/assets/flash-high-level-reports.png)
+![](<../../.gitbook/assets/image (16).png>)
 
-* From the favourites
+* From the favourite searches
 
-![](../../.gitbook/assets/flash-high-level-reports\(1\).png)
+![](../../.gitbook/assets/search-favs.png)
 
-* From the queries page
+* From the create dropdown
 
-![](../../.gitbook/assets/flash-high-level-reports\(2\).png)
+![](../../.gitbook/assets/create.png)
 
 Onclick of any of the above options opens the. "Create Reports" modal.
 
-![](../../.gitbook/assets/flash-high-level-reports\(7\).png)
+![](../../.gitbook/assets/report.png)
 
 ### Group By
 
-Reporting feature lets you group the results by any fields available in the structured data or use any arbitrary regex named capture groups. To use fields from structured data, select the "Group Type" as "Field." To use regex named capture groups, select "Pattern." Logiq uses regular expression syntax accepted by RE2. Please refer to the [RE2 wiki](https://github.com/google/re2/wiki/Syntax) for detailed syntax.
+Reporting feature lets you group the results by any fields available in the structured data or use any arbitrary regex named capture groups. To use fields from structured data, select the "Group Type" as "**Field**" To use regex named capture groups, select "**Pattern**". Logiq uses regular expression syntax accepted by RE2. Please refer to the [RE2 wiki](https://github.com/google/re2/wiki/Syntax) for detailed syntax. Select "**Match**" to download all the matched results.&#x20;
 
 {% tabs %}
 {% tab title="Example 1" %}
@@ -63,11 +63,11 @@ Following aggregation operators are available.
 
 Saved reports can be accessed from the Queries Page. If the query is running, this page will show the progress.&#x20;
 
-![](../../.gitbook/assets/flash-high-level-reports\(4\).png)
+![](../../.gitbook/assets/view-reports.png)
 
 Click on any report to view the results. Click on the toggle to enable periodic refresh.
 
-![](../../.gitbook/assets/flash-high-level-reports\(5\).png)
+![Reports View](../../.gitbook/assets/report-detail.png)
 
 ### Visualizations
 
