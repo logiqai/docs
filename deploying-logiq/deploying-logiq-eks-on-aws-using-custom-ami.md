@@ -60,7 +60,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 **Important:** You **MUST** choose 2 different subnets from the same VPC.&#x20;
 {% endhint %}
 
-![](<../.gitbook/assets/image (12).png>)
+![](<../.gitbook/assets/image (12) (1).png>)
 
 The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
 

@@ -12,7 +12,7 @@ Reporting feature comes in handy when required to periodically search and aggreg
 
 * From the logline, click on "create batch report"
 
-![](<../../.gitbook/assets/image (16).png>)
+![](<../../.gitbook/assets/image (16) (1).png>)
 
 * From the favourite searches
 

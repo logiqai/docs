@@ -150,5 +150,20 @@ We need to route the traffic as per the below below ingress rules along with the
 
 Click on manual View/edit Add edit rules, click on + section and configure the rules as shown below to the various target groups.
 
+{% hint style="info" %}
+Note: The rules should be in the same order as shown below
+{% endhint %}
+
 ![](https://lh4.googleusercontent.com/X7Ih0K85bHasXm8uvJRA223ZUBQgIKrDTCoR-dstI48FT0qtJWtjL\_2LcC1CKbcqkTC15LTwsyPNYTBUVb8yyIU8RKHtdIhFRsreTzlROrXCLzPZt6kcE1-ZDAkPSXi9UpqCdN8o)
 
+If you have deployed the Logiq on private subnet, you may need to map global accelerator (under Integrated services) to access the public endpoints and DNS on top of it.&#x20;
+
+![](<../.gitbook/assets/image (20).png>)
+
+If you want to route traffic on http(port:80), ensure your listener rules are configured on port 80
+
+![](<../.gitbook/assets/image (16).png>)
+
+If you want to route traffic on https(port:443), ensure your listener rules are configured on port 443. As a prerequisite, your global accelerator should have all the certificates configured for this to work.
+
+![](<../.gitbook/assets/image (12).png>)
