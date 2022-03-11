@@ -361,9 +361,9 @@ When deploying LOGIQ, size your infrastructure to provide appropriate vcpu and m
 
 | LOGIQ Cluster | vCPU | Memory | NodeCount |
 | ------------- | ---- | ------ | --------- |
-| small         | 12   | 32 gb  | 3         |
-| medium        | 20   | 56 gb  | 5         |
-| large         | 32   | 88 gb  | 8         |
+| small         | 24   | 32 gb  | 3         |
+| medium        | 40   | 64 gb  | 5         |
+| large         | 64   | 128 gb | 8         |
 
 ### 3.11 NodePort/ClusterIP/LoadBalancer
 
