@@ -8,6 +8,8 @@ description: >-
 
 ## 1 - Prerequisites
 
+A Kubernetes cluster with version **1.18**, **1.19**, or **1.20**.&#x20;
+
 LOGIQ K8S components are made available as helm charts. The instructions below assume you are using HELM 3. Please read and agree to the [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
 
 ### 1.1 Add LOGIQ helm repository
@@ -357,7 +359,7 @@ helm install logiq --namespace logiq \
 
 ### 3.10 Sizing your LOGIQ cluster
 
-When deploying LOGIQ, size your infrastructure to provide appropriate vcpu and memory requirements. We recommened the following minimum size for small. medium and large cluster specification from [Section 1.3 ](k8s-quickstart-guide.md#1-3-prepare-your-values-YAML-file) values yaml files.
+When deploying LOGIQ, size your infrastructure to provide appropriate vcpu and memory requirements. We recommend the following minimum size for small. medium and large cluster specification from [Section 1.3 ](k8s-quickstart-guide.md#1-3-prepare-your-values-YAML-file) values yaml files.
 
 | LOGIQ Cluster | vCPU | Memory | NodeCount |
 | ------------- | ---- | ------ | --------- |
