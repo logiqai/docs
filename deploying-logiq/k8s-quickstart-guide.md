@@ -8,9 +8,12 @@ description: >-
 
 ## 1 - Prerequisites
 
-A Kubernetes cluster with version **1.18**, **1.19**, or **1.20**.&#x20;
+* Kubernetes 1.18, 1.19 or 1.20
+* Helm 3.2.0+
+* PV provisioner support in the underlying infrastructure
+* ReadWriteMany volumes for deployment scaling
 
-LOGIQ K8S components are made available as helm charts. The instructions below assume you are using HELM 3. Please read and agree to the [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
+LOGIQ K8S components are made available as helm charts. Please read and agree to the [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
 
 ### 1.1 Add LOGIQ helm repository
 
