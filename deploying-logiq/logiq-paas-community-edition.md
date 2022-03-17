@@ -1,22 +1,8 @@
-# LOGIQ PaaS Community Edition
-
-If you've been looking for an inexpensive way to run your own observability stack while maintaining complete control over your data and its security, look no further. The LOGIQ PaaS Community Edition is officially live!
-
-With the LOGIQ PaaS Community Edition, you can:
-
-* Self-host your observability stack on a cloud provider of your choice - public or private&#x20;
-* Ingest up to **50GB** of log data **per day** with **unlimited data retention**
-* Store your log data on any S3-compatible cloud provider via the built-in Minio S3 service
-* Ingest logs from Syslog, RSyslog, Logstash, Fluent, AWS Firelens, JSON, and **plenty more**
-* Run up to **4 ingest worker** processes
-
-You'll also get access to all of the LOGIQ Enterprise Edition's features along with Community Support, **free forever**.
-
-Go through the instructions in this guide to deploy LOGIQ PaaS Community Edition.&#x20;
+# LOGIQ PaaS deployment
 
 ## Before you begin
 
-To get you up and running with the LOGIQ PaaS Community Edition quickly, we've made LOGIQ PaaS' Kubernetes components available as Helm Charts. To deploy LOGIQ PaaS, you'll need access to a Kubernetes cluster and Helm 3.
+To get you up and running with the LOGIQ PaaS, we've made LOGIQ PaaS' Kubernetes components available as Helm Charts. To deploy LOGIQ PaaS, you'll need access to a Kubernetes cluster and Helm 3.
 
 Before you start deploying LOGIQ PaaS, let's run through a few quick steps to set up your environment correctly.
 
@@ -220,7 +206,7 @@ The following table describes all of the Helm options passed in the command abov
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | `global.cloudProvider`                     | This helm option specifies the supported `cloudProvider` that is hosting the S3 compatible bucket. Currently, only `aws` is supported. | `aws`                                                                          |
 | `global.environment.s3_bucket`             | The name of the S3 bucket in AWS                                                                                                       | `logiq`                                                                        |
-| `global.environment.awsServiceEndpoint`    | The S3 Service endpoint: [https://s3.\*\*\<region>\*\*.amazonaws.com](https://s3.\*\*\<region>\*\*.amazonaws.com)                      | ``[`https://s3.us-east-1.amazonaws.co`](https://s3.us-east-1.amazonaws.com)`m` |
+| `global.environment.awsServiceEndpoint`    | The S3 Service endpoint: https://s3.\*\*\<region>\*\*.amazonaws.com                                                                    | ``[`https://s3.us-east-1.amazonaws.co`](https://s3.us-east-1.amazonaws.com)`m` |
 | `global.environment.AWS_ACCESS_KEY_ID`     | The AWS Access key for accessing the bucket                                                                                            | No default                                                                     |
 | `global.environment.AWS_SECRET_ACCESS_KEY` | The AWS Secret key for accessing the bucket                                                                                            | No default                                                                     |
 | `global.environment.s3_region`             | The AWS Region where the bucket is hosted                                                                                              | `us-east-1`                                                                    |
