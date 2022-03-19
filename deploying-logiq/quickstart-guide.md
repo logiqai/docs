@@ -10,6 +10,17 @@ description: >-
 Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
 {% endhint %}
 
+## Quickstart features
+
+1. Log aggregation, search, reporting, and live tailing
+2. APM
+3. Data sources - 21 data source connectors
+4. Alerting
+5. Incident response - PagerDury, ServiceNow, Slack, Email
+6. logiqctl CLI connectivity
+7. Dashboards and visualizations
+8. Filtering rules and rule packs
+
 ## Install Docker compose
 
 You can spin-up LOGIQ using `docker-compose`. Install guide for `docker-compose` can be found here - [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
