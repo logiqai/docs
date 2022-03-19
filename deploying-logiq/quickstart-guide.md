@@ -13,13 +13,15 @@ Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before pr
 ## Quickstart features
 
 1. Log aggregation, search, reporting, and live tailing
-2. APM
+2. APM using built-in Prometheus, using external Prometheus
 3. Data sources - 21 data source connectors
 4. Alerting
 5. Incident response - PagerDury, ServiceNow, Slack, Email
 6. logiqctl CLI connectivity
 7. Dashboards and visualizations
 8. Filtering rules and rule packs
+9. User and group management
+10. Log flow RBAC
 
 ## Install Docker compose
 
