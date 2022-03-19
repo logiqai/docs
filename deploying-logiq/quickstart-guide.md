@@ -55,7 +55,7 @@ $docker-compose -f docker-compose.quickstart.yml up -d
 If you are done with your evaluation and want to cleanup your environment, please run the following command to stop and delete the LOGIQ stack and free up the used system resources.
 
 ```
-$docker-compose -f docker-compose.quickstart.ynl down
+$docker-compose -f docker-compose.quickstart.yml down
 ```
 
 ## Test using LOGIQ UI
