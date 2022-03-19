@@ -22,6 +22,7 @@ Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before pr
 8. Filtering rules and rule packs
 9. User and group management
 10. Log flow RBAC
+11. UI Audit trail
 
 ## Install Docker compose
 
