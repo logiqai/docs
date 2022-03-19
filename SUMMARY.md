@@ -10,7 +10,7 @@
 ## Deploying LOGIQ
 
 * [LOGIQ SaaS](deploying-logiq/logiq-saas.md)
-* [LOGIQ PaaS Quickstart](deploying-logiq/quickstart-guide.md)
+* [LOGIQ Quickstart](deploying-logiq/quickstart-guide.md)
 * [LOGIQ PaaS deployment](deploying-logiq/logiq-paas-deployment.md)
 * [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/k8s-quickstart-guide.md)
 * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/deploying-logiq-paas-on-microk8s.md)
