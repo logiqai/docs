@@ -56,6 +56,7 @@ If you are done with your evaluation and want to cleanup your environment, pleas
 
 ```
 $docker-compose -f docker-compose.quickstart.yml down
+$docker volume prune
 ```
 
 ## Test using LOGIQ UI
@@ -68,15 +69,27 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 ![](<../.gitbook/assets/Screen Shot 2022-03-19 at 8.11.14 AM.png>)
 
-![](<../.gitbook/assets/Screen Shot 2022-03-19 at 8.11.38 AM.png>)
+![](<../.gitbook/assets/Screen Shot 2022-03-19 at 9.27.01 AM.png>)
 
 ## Ingesting data
 
-For setting up data ingestion from your endpoints and applications into LOGIQ, please refer to the [Integrations section](../integrations/overview.md).
+For setting up data ingestion from your endpoints and applications into LOGIQ.AI, please refer to the [Integrations section](../integrations/overview.md).
+
+**The quickstart compose file includes a test data tool** that will generate test log data and also has a couple of dashboards that show LOGIQ's APM capabilities.
+
+The test log data can be view under logs&#x20;
+
+![](<../.gitbook/assets/Screen Shot 2022-03-19 at 9.32.49 AM.png>)
+
+Running search across logs can be initiated under Logs > Search
+
+![](<../.gitbook/assets/Screen Shot 2022-03-19 at 9.34.11 AM.png>)
 
 ### Prometheus monitoring and alerting
 
-The LOGIQ quickstart file includes Prometheus and Alertmanager services.
+The LOGIQ quickstart file includes Prometheus and Alertmanager services. 2 APM Dashboards to monitor the quickstart environments are included.
+
+
 
 ## Firewall ports and URLs
 
