@@ -50,6 +50,12 @@ $docker-compose -f docker-compose.quickstart.yml up -d
 **NOTE:** If you have been running previous versions of LOGIQ docker-compose, you should stop and remove the existing containers by running docker-compose -f docker-compose.quickstart.yml down and remove any older docker volume via docker-compose -f docker-compose.quickstart.yml rm && docker-compose -f docker-compose.quickstart.yml rm -v
 {% endhint %}
 
+### Delete the stack
+
+```
+$docker-compose -f docker-compose.quickstart.ynl down
+```
+
 ## Test using LOGIQ UI
 
 Once the LOGIQ server is up and running, the LOGIQ UI can be accessed as described above on <mark style="color:green;">**port 80**</mark> on the server docker-compose. You will be presented with a login screen as shown below.
