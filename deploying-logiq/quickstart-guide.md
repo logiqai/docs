@@ -88,6 +88,8 @@ Running search across logs can be initiated under Logs > Search
 
 The LOGIQ quickstart file includes Prometheus and Alertmanager services. 2 APM Dashboards to monitor the quickstart environments are included.
 
+![](<../.gitbook/assets/Screen Shot 2022-03-19 at 11.40.31 AM.png>)
+
 ## Firewall ports and URLs
 
 ### Ports
