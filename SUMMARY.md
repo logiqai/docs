@@ -30,7 +30,7 @@
 * [Fluent Bit](integrations/fluent-bit/README.md)
   * [Forwarding Amazon-Linux logs to LOGIQ using Fluent Bit](integrations/fluent-bit/forwarding-amazon-linux-logs-to-logiq-using-fluent-bit.md)
   * [Fluent Bit installation on Ubuntu](integrations/fluent-bit/fluent-bit-installation-on-ubuntu.md)
-  * [ECS logs to Logiq using AWS Firelens (Fluent-bit)](integrations/fluent-bit/ecs-logs-to-logiq-using-aws-firelens-fluent-bit.md)
+  * [Forwarding AWS ECS logs to LOGIQ using AWS FireLens and Fluent Bit](integrations/fluent-bit/forwarding-aws-ecs-logs-to-logiq-using-aws-firelens-and-fluent-bit.md)
 * [Fluentd](integrations/fluentd.md)
 * [Rsyslogd](integrations/rsyslogd.md)
 * [AWS](integrations/aws/README.md)
