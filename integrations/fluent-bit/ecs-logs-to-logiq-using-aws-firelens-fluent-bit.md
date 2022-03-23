@@ -8,15 +8,15 @@ Possibly the most significant advantage with AWS FireLens is that you can connec
 
 The **“awsfirelens**” log driver allows you to specify Fluentd or Fluent Bit output plugin configurations. Your application container logs are routed to a sidecar or independent Firelens container inside your cluster, which further routes your container logs to their destination as defined in your task **“logConfiguration**“. Additionally, you can use the options field of the \`FireLensConfiguration\` object in the task definition to serve any advanced use case.
 
-Go to task definition that you need logs to be sent to Logiq from, click on "Edit container", navigate to "STORAGE AND LOGGING" section
+Go to the task definition that you need logs to be sent to Logiq from, click on "Edit container", navigate to the "STORAGE AND LOGGING" section
 
 ![](<../../.gitbook/assets/image (22).png>)
 
-by deault, the container will be sending logs to CloudWatch, Uncheck the "Auto configure to CloudWatch Logs", choose Log driver as "awsfirelens" and the below variables in the "Log options" section.
+by default, the container will be sending logs to CloudWatch, Uncheck the "Auto configure to CloudWatch Logs", choose Log driver as "awsfirelens" and the below variables in the "Log options" section.
 
 ![](<../../.gitbook/assets/image (23).png>)
 
-Below are the mandatory fields that needs to be passed, in order to forward logs to Logiq
+Below are the mandatory fields that need to be passed, in order to forward logs to Logiq
 
 ```
     Name     http
@@ -65,9 +65,7 @@ Once you are done with the setup, you should see a logrouter container along wit
 
 ![](<../../.gitbook/assets/image (15).png>)
 
-You should see logs pull on Logiq&#x20;
-
-"Namespace" will be mapped to ECS Cluster name and "Application" will be the task-definition name
+You should see logs on Logiq UI, "Namespace" will be mapped to ECS Cluster name and "Application" will be the task-definition name.&#x20;
 
 ![](<../../.gitbook/assets/image (18).png>)
 
