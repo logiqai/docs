@@ -69,15 +69,15 @@ The EKS cluster will need the following node groups. Ensure that you select the 
 | **ingest** | c5.xlarge (4 Core 8 GB RAM)     | 2          |
 | **common** | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
 
-![](<../.gitbook/assets/image (19).png>)
+![](<../.gitbook/assets/image (19) (1).png>)
 
 **Step 5:** Provide the **S3 bucket name** from **section 3,** the Cloudformation will create the S3 bucket, S3 bucket name needs to be globally unique.
 
-![](<../.gitbook/assets/image (21) (1).png>)
+![](<../.gitbook/assets/image (21) (1) (1).png>)
 
 **Step 6:** Provide the KMS key ARN
 
-![](<../.gitbook/assets/image (21).png>)
+![](<../.gitbook/assets/image (21) (1).png>)
 
 **Step 7**: Click **Next**, and follow the instructions on the screen to create the stack.
 
