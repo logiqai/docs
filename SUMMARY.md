@@ -11,8 +11,8 @@
 
 * [LOGIQ SaaS](deploying-logiq/logiq-saas.md)
 * [LOGIQ Quickstart](deploying-logiq/quickstart-guide.md)
-* [LOGIQ PaaS deployment](deploying-logiq/logiq-paas-deployment.md)
-* [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/k8s-quickstart-guide.md)
+* [LOGIQ PaaS deployment](deploying-logiq/logiq-paas-deployment/README.md)
+  * [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/logiq-paas-deployment/k8s-quickstart-guide.md)
 * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/deploying-logiq-paas-on-microk8s.md)
 * [Deploying LOGIQ PaaS on AWS](deploying-logiq/aws-cloudformation.md)
 * [Deploying LOGIQ EKS on AWS using CloudFormation](deploying-logiq/deploying-logiq-eks-on-aws-using-cloudformation.md)
@@ -31,6 +31,7 @@
   * [Forwarding Amazon-Linux logs to LOGIQ using Fluent Bit](integrations/fluent-bit/forwarding-amazon-linux-logs-to-logiq-using-fluent-bit.md)
   * [Fluent Bit installation on Ubuntu](integrations/fluent-bit/fluent-bit-installation-on-ubuntu.md)
   * [Forwarding AWS ECS logs to LOGIQ using AWS FireLens and Fluent Bit](integrations/fluent-bit/forwarding-aws-ecs-logs-to-logiq-using-aws-firelens-and-fluent-bit.md)
+  * [Enabling IoT(MQTT) Input  (PAAS)](integrations/fluent-bit/enabling-iot-mqtt-input-paas.md)
 * [Fluentd](integrations/fluentd.md)
 * [Rsyslogd](integrations/rsyslogd.md)
 * [AWS](integrations/aws/README.md)
@@ -44,6 +45,7 @@
 * [Docker Swarm logging](integrations/docker-swarm-logging.md)
 * [GCP Cloud Logging](integrations/gcp-cloud-logging.md)
 * [IIS Logs on Windows](integrations/iis-logs-on-windows.md)
+* [MQTT](integrations/mqtt.md)
 
 ## Log Insights <a href="#logiq-server" id="logiq-server"></a>
 

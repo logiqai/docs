@@ -70,19 +70,19 @@ Sample YAML files for small, medium, large cluster configurations can be downloa
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../.gitbook/assets/values.small (20) (1).yaml" %}
+{% file src="../../.gitbook/assets/values.small (20) (1).yaml" %}
 values.small.yaml
 {% endfile %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../.gitbook/assets/values.medium (19) (1).yaml" %}
+{% file src="../../.gitbook/assets/values.medium (19) (1).yaml" %}
 values.medium.yaml
 {% endfile %}
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../.gitbook/assets/values.large (19) (1).yaml" %}
+{% file src="../../.gitbook/assets/values.large (19) (1).yaml" %}
 values.large.yaml
 {% endfile %}
 {% endtab %}
@@ -110,7 +110,7 @@ This will install LOGIQ and expose the LOGIQ services and UI on the ingress IP. 
 The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. HELM chart can override the default admin settings as well. See section[ 3.7](k8s-quickstart-guide.md#3-7-customize-admin-account) on customizing the admin settings
 {% endhint %}
 
-![Logiq Insights Login UI ](<../.gitbook/assets/Screen Shot 2020-03-24 at 3.42.55 PM.png>)
+![Logiq Insights Login UI ](<../../.gitbook/assets/Screen Shot 2020-03-24 at 3.42.55 PM.png>)
 
 LOGIQ server provides Ingest, log tailing, data indexing, query, and search capabilities.\
 Besides the web-based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
@@ -134,7 +134,7 @@ The default login and password to use is `flash-admin@foo.com` and `flash-passwo
 {% endhint %}
 
 {% hint style="info" %}
-The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](quickstart-guide.md#ports).
+The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](../quickstart-guide.md#ports).
 {% endhint %}
 
 | HELM Option                                              | Description                                                                                                                                                                                                  | Defaults   |
@@ -293,7 +293,7 @@ Auto vacuum automates the execution of `VACUUM` and `ANALYZE` (to gather statist
 
 The deployment described above offers 30 days trial license. Send an e-mail to `license@logiq.ai` to obtain a professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer to `logiqctl` details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai). You will need API-token from LOGIQ UI as shown below
 
-![Logiq Insights Login Api-token ](../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
+![Logiq Insights Login Api-token ](../../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
 
 ```bash
 Setup your LOGIQ Cluster endpoint
