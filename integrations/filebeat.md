@@ -4,13 +4,68 @@ Filebeat is a lightweight shipper for **forwarding and centralizing log data**. 
 
 LOGIQ supports data ingestion from Filebeat. The following section describes the steps for configuring log forwarding from Filebeat to LOGIQ by modifying the Filebeat configuration file.&#x20;
 
-### Configuring Filebeat to forward logs to LOGIQ
+## Configuring Filebeat to forward logs to LOGIQ
 
-To configure Filebeat, you need to configure the Filebeat configuration file. The location of your Filebeat configuration file can vary depending on your platform. Locate and access the configuration file and modify it as described below.&#x20;
+To configure Filebeat, you need to configure the Filebeat configuration file. The location of your Filebeat configuration file can vary depending on your platform. Locate and access the configuration file and modify it as described below.
 
-Under the `input` section, include the `processors` section in addition to your existing Filebeat configuration along with `namespace`, `application`, and `cluster_id`. Doing so ensures that the logs you forward to LOGIQ can be identified and partitioned easily.&#x20;
+### Ingest Ports
 
-The following is an example Filebeat configuration file for forwarding logs to LOGIQ without SSL.&#x20;
+LOGIQ.AI hosts the lumberjack protocol at ports **25224 (non-TLS)** and **25225 (TLS)**
+
+The ports are configurable and can be changed if needed.
+
+### Understanding Filebeats configuration
+
+Filebeats configuraion consists of 2 key sections _**input**_ and _**output.**_
+
+The input section describes what files to process. The output section describes how/where to send the collected data. In addition, the input section contains _**processors**_ that allow data modification before it is sent to the output. We will look at each of these below.
+
+### INPUT
+
+The input section will typically contain the list of file paths that Filebeat should monitor.
+
+```
+inputs:
+  - enabled: true
+    paths:
+    - /var/log/*.log
+    type: filestream
+```
+
+### OUTPUT
+
+The output section describes how to send data to LOGIQ. The LOGIQ layer supports the lumberjack protocols v1 and v2 for ingesting data and is compatible with _logstash_. Use output type _logstash_
+
+```
+output:
+  logstash:
+    hosts:["Logiq-endpoint>:25224"]
+```
+
+### PROCESSORS
+
+Under the `input` section, include the `processors` section in addition to your existing Filebeat configuration along with **`namespace`**, **`application`**, and **`cluster_id`**. Doing so ensures that the logs you forward to LOGIQ can be identified and partitioned easily
+
+We strongly recommend partitioning your data for better organization as well as query performance. Each Cluster, Namespace and Application tuple becomes a partition in LOGIQ and can be used to organize data that is logically related
+
+```
+  inputs:
+  - enabled: true
+    paths:
+    - <path to your log>
+    type: filestream
+    processors:
+      - add_fields:
+          target: logiq
+          fields:
+            namespace: myproject
+            application: test
+            cluster_id: foo
+```
+
+### Example&#x20;
+
+The following is a complete _Filebeat_ configuration for forwarding logs to LOGIQ without SSL.&#x20;
 
 ```
 output.logstash:
@@ -52,9 +107,9 @@ setup:
         number_of_shards: 1
 ```
 
-#### Enabling log forwarding from Filebeat to LOGIQ using SSL
+### Using SSL/TLS
 
-To configure Filebeat to use SSL while forwarding logs, specify the key/SSL certificate information under the `ssl` field. You must also specify `25225` as the port for your LOGIQ endpoint in the `output` section.&#x20;
+To configure Filebeat to use SSL while forwarding logs, specify the key/SSL certificate information under the `ssl` field. You must also specify **`25225`** as the port for your LOGIQ endpoint in the `output` section.&#x20;
 
 The following is an example of a Filebeat configuration file with `processors` and `ssl` configured to forward logs to LOGIQ using SSL.&#x20;
 
