@@ -9,6 +9,7 @@ lets you connect with and securely ingest data from popular log forwarding agent
 LOGIQ currently integrates with the following.&#x20;
 
 * [Logstash](logstash.md)
+* [Filebeat](filebeat.md)
 * [Fluent Bit](fluent-bit/)
 * [Fluentd](fluentd.md)
 * [Rsyslogd](rsyslogd.md)
