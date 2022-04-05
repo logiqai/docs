@@ -27,6 +27,7 @@
 * [Incident management](logiq-ui-configuration/alert-destinations.md)
 * [Generating a secure ingest token](integrations/generating-a-secure-ingest-token.md)
 * [Logstash](integrations/logstash.md)
+* [Filebeat](integrations/filebeat.md)
 * [Fluent Bit](integrations/fluent-bit/README.md)
   * [Forwarding Amazon-Linux logs to LOGIQ using Fluent Bit](integrations/fluent-bit/forwarding-amazon-linux-logs-to-logiq-using-fluent-bit.md)
   * [Fluent Bit installation on Ubuntu](integrations/fluent-bit/fluent-bit-installation-on-ubuntu.md)
