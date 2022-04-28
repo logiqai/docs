@@ -121,7 +121,7 @@ The script executes and installs Node Exporter
 
 You should now see your Amazon-Linux logs being ingested into the `Linux:Linux1` namespace on your LOGIQ UI.
 
-![linux](https://user-images.githubusercontent.com/67860971/133257871-58663332-995c-4849-9638-8fe96826296a.png)
+<img src="https://user-images.githubusercontent.com/67860971/133257871-58663332-995c-4849-9638-8fe96826296a.png" alt="linux" data-size="original">
 
 ## Forwarding Amazon-Linux logs to LOGIQ using Fluent Bit
 

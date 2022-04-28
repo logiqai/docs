@@ -14,7 +14,7 @@ The first step in to create the data source and provide the Elasticsearch cluste
 
 ## Writing queries
 
-In the query editor view, select the _Elasticsearch data source_ created above. On the left column, click on the refresh ![](<.gitbook/assets/Screen Shot 2020-08-10 at 10.07.50 PM.png>) icon to refresh the schemas (indexes). The schemas are expandible and show the schema details.
+In the query editor view, select the _Elasticsearch data source_ created above. On the left column, click on the refresh <img src=".gitbook/assets/Screen Shot 2020-08-10 at 10.07.50 PM.png" alt="" data-size="original"> icon to refresh the schemas (indexes). The schemas are expandible and show the schema details.
 
 ![Refresh and lookup Elasticsearch indexes](<.gitbook/assets/Screen Shot 2020-08-10 at 10.06.48 PM.png>)
 

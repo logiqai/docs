@@ -4,7 +4,7 @@ Alerts can be configured from log data from either the Search or the Logs pages.
 
 ![](<../.gitbook/assets/Screenshot\_2020-08-10 Logs(2).png>)
 
-E.g., we want to receive an alert when a particular event (i.e. occurance of the text`Reusing worker` in above example) occurs multiple times say in any 5 minute duration. On clicking the ![](<../.gitbook/assets/Screen Shot 2020-08-11 at 5.34.40 PM.png>) on the log line, user can open the Alertable event rule editor.
+E.g., we want to receive an alert when a particular event (i.e. occurance of the text`Reusing worker` in above example) occurs multiple times say in any 5 minute duration. On clicking the <img src="../.gitbook/assets/Screen Shot 2020-08-11 at 5.34.40 PM.png" alt="" data-size="original"> on the log line, user can open the Alertable event rule editor.
 
 ### Creating an alertable event
 
