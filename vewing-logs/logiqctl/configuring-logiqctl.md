@@ -23,7 +23,7 @@ The simplest way to try `logiqctl` is to download a pre-built binary from the [r
 > logiqctl config set-context ngnix
 ```
 
-The default namespace settings can be overridden by passing `-n` flag. Basic operations are covered below, for more detailed documentation refer to the [user guide](https://logiqctl.logiq.ai) for `logiqctl`.&#x20;
+The default namespace settings can be overridden by passing `-n` flag. Basic operations are covered below, for more detailed documentation refer to the [user guide](https://logiqctl.logiq.ai/) for `logiqctl`.&#x20;
 
 ### `logiqctl` logs
 

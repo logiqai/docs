@@ -32,7 +32,7 @@ Running this command displays a list of the available Helm charts along with the
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.4.2            2.1.18         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.4.`3            2.1.19         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 If you've already added LOGIQ's Helm repository in the past, you can update the repository by running the following command.
@@ -63,7 +63,7 @@ To give you a head start with configuring your LOGIQ deployment, we've provided 
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../../.gitbook/assets/values.small (24).yaml" %}
+{% file src="../../.gitbook/assets/values.small (24) (1).yaml" %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
@@ -198,7 +198,7 @@ helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-The command above automatically provisions an S3 bucket for you in the region you specify using the access credentials you pass with the command. If you do not wish to create a new bucket, make sure the access credentials you pass work with the S3 bucket you specify in the command. Additionally, make sure you provide a valid Amazon service endpoint for your S3 bucket or else the configuration defaults to using the [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com) endpoint.&#x20;
+The command above automatically provisions an S3 bucket for you in the region you specify using the access credentials you pass with the command. If you do not wish to create a new bucket, make sure the access credentials you pass work with the S3 bucket you specify in the command. Additionally, make sure you provide a valid Amazon service endpoint for your S3 bucket or else the configuration defaults to using the [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com/) endpoint.&#x20;
 
 The following table describes all of the Helm options passed in the command above.&#x20;
 

@@ -34,7 +34,7 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 ```bash
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.4.2            2.1.18         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.4.13            2.1.29         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 #### 1.1.1 Update your HELM chart
@@ -45,7 +45,7 @@ If you already added LOGIQ's HELM repository in the past, you can get updated so
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.4.2            2.1.18         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    2.4.13            2.1.29         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -70,21 +70,15 @@ Sample YAML files for small, medium, large cluster configurations can be downloa
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../../.gitbook/assets/values.small (20) (1).yaml" %}
-values.small.yaml
-{% endfile %}
+{% file src="../../.gitbook/assets/values.small (24).yaml" %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../../.gitbook/assets/values.medium (19) (1).yaml" %}
-values.medium.yaml
-{% endfile %}
+{% file src="../../.gitbook/assets/values.medium (23).yaml" %}
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../../.gitbook/assets/values.large (19) (1).yaml" %}
-values.large.yaml
-{% endfile %}
+{% file src="../../.gitbook/assets/values.large (19).yaml" %}
 {% endtab %}
 {% endtabs %}
 
@@ -291,7 +285,7 @@ Auto vacuum automates the execution of `VACUUM` and `ANALYZE` (to gather statist
 
 ### 3.6 Upload LOGIQ professional license
 
-The deployment described above offers 30 days trial license. Send an e-mail to `license@logiq.ai` to obtain a professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer to `logiqctl` details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai). You will need API-token from LOGIQ UI as shown below
+The deployment described above offers 30 days trial license. Send an e-mail to `license@logiq.ai` to obtain a professional license. After obtaining the license, use the logiqctl tool to apply the license to the deployment. Please refer to `logiqctl` details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai/). You will need API-token from LOGIQ UI as shown below
 
 ![Logiq Insights Login Api-token ](../../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
 

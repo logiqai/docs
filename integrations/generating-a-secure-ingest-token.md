@@ -1,6 +1,6 @@
 # Generating a secure ingest token
 
-LOGIQ uses an ingest token to secure the ingestion of log data from your data sources into your LOGIQ deployment. You can generate a secure ingest token using the LOGIQ UI and the command-line tool, [logiqctl](https://logiqctl.logiq.ai).&#x20;
+LOGIQ uses an ingest token to secure the ingestion of log data from your data sources into your LOGIQ deployment. You can generate a secure ingest token using the LOGIQ UI and the command-line tool, [logiqctl](https://logiqctl.logiq.ai/).&#x20;
 
 ### Obtaining an ingest token using UI
 
