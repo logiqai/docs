@@ -1,7 +1,3 @@
----
-description: This guide explains how to export your AWS CloudWatch logs to LOGIQ.
----
-
 # AWS CloudWatch
 
 ## LOGIQ CloudWatch exporter Lambda function

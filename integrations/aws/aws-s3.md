@@ -1,7 +1,3 @@
----
-description: This guide explains how to export your AWS S3 logs to LOGIQ.
----
-
 # AWS S3
 
 ## LOGIQ S3 exporter Lambda function

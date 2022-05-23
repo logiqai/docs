@@ -1,7 +1,5 @@
 # Logstash
 
-## Logstash
-
 ### Syslog output plugin
 
 ```

@@ -1,10 +1,3 @@
----
-description: >-
-  The IIS events in Microsoft Windows systems are deposited in file and ASCII
-  text format.  The document describes how to install and configure fluent-bit
-  to collect these events
----
-
 # IIS Logs on Windows
 
 ## Create IIS Config for fluent-bit
@@ -12,8 +5,6 @@ description: >-
 You can download an example configuration for IIS below.  Please make sure to edit the config so the correct host and token are provided.  Also if your IIS service is generating logs to a different path, please make sure to edit the path where the logs are located as well.
 
 Also, make sure to edit the _parsers.conf_ path to the folder where you installed your fluent-bit agent.
-
-{% file src="../.gitbook/assets/fluent-bit-IIS.conf" %}
 
 ```
 [SERVICE]

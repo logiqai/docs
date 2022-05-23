@@ -1,9 +1,3 @@
----
-description: >-
-  This article describes the process to export logs from GCP Cloud Logging to
-  LOGIQ.
----
-
 # GCP Cloud Logging
 
 To set up log forwarding from GCP Cloud Logging to LOGIQ, you must:
