@@ -1,10 +1,29 @@
 # Open Telemetry
 
+### Overview
+
 OpenTelemetry is a collection of tools, APIs, and SDKs. Use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) to help analyze software’s performance and behavior.
 
+### OpenTelemetry Metrics
 
+Prometheus Remote Write Exporter can be used to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/)
 
-Prometheus Remote Write Exporter can be leveraged to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/) and these metrics can be visualized on Logiq&#x20;
+LOGIQ.AI implements a preometheus remote write backend so metric data from open telementry collectors can be sent to LOGIQ with a simple configuration as described below.
+
+Enable the _prometheusremorewrite_ exporter in your open telemetry configuration yaml
+
+```
+exporters:
+  prometheusremotewrite:
+```
+
+Specify the LOGIQ.AI cluster endpoint to send the remote write data. LOGIQ.AI implements automatic retention tiering to object storage for all your opentelemetry metrics data giving you infinite retention and scale with zero storage overheads as your metrics needs grow.
+
+```
+endpoint: "https://<logiq-endpoint>/api/v1/receive"
+```
+
+Here's a full configuration example below
 
 ```
 
@@ -37,3 +56,4 @@ service:
          processors: [batch]
          exporters: [prometheusremotewrite]
 ```
+
