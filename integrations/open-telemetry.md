@@ -23,10 +23,9 @@ Specify the LOGIQ.AI cluster endpoint to send the remote write data. LOGIQ.AI im
 endpoint: "https://<logiq-endpoint>/api/v1/receive"
 ```
 
-Here's a full configuration example below
+Here's a full configuration example below with TLS enabled.
 
 ```
-
 exporters:
   prometheusremotewrite:
     endpoint: "https://<logiq-endpoint>/api/v1/receive"
@@ -35,8 +34,10 @@ exporters:
       buffer_size: 100 # Optional count of elements to be read from the WAL before truncating; default of 300
       truncate_frequency: 45s # Optional frequency for how often the WAL should be truncated. It is a time.ParseDuration; default of 1m
     tls: 
-      insecure: "false"
-      insecure_skip_verify: "true"
+      ca_file: <file-name>
+      cert_file: <file-name>
+      key_file: <file-name>
+
     external_labels: #labels to identify the metric
          label1: value1
 

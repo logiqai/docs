@@ -64,7 +64,7 @@
     * [Spring Boot](querying-data/application-monitoring/spring-boot.md)
 * [Elasticsearch Data source](elasticsearch-data-source.md)
 * [JSON Data source](json-data-source.md)
-* [Logiq remote-write](logiq-monitoring/logiq-remote-write.md)
+* [Prometheus Remote Write](logiq-monitoring/prometheus-remote-write.md)
 
 ## Vewing Logs
 

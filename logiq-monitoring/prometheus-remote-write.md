@@ -1,4 +1,4 @@
-# Logiq remote-write
+# Prometheus Remote Write
 
 LOGIQ can collect Prometheus metrics from externally hosted Prometheus. LOGIQ uses the `remote_write` capabilities to help you do so.
 
@@ -10,8 +10,12 @@ To send metrics from Prometheus to Logiq endpoint, use the configuration below.
 remote_write:
   - url: https://<Logiq-endpoint>/api/v1/receive
     tls_config:
-        insecure_skip_verify: true
+        ca_file: <file-name>
+        cert_file: <file-name>
+        key_file: <file-name>
 ```
+
+
 
 ****
 
@@ -20,7 +24,6 @@ remote_write:
 Prometheus Remote Write Exporter can be leveraged to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/), and these metrics can be visualized on LOGIQ.
 
 ```
-
 exporters:
   prometheusremotewrite:
     endpoint: "https://<logiq-endpoint>/api/v1/receive"
@@ -29,8 +32,10 @@ exporters:
       buffer_size: 100 # Optional count of elements to be read from the WAL before truncating; default of 300
       truncate_frequency: 45s # Optional frequency for how often the WAL should be truncated. It is a time.ParseDuration; default of 1m
     tls: 
-      insecure: "false"
-      insecure_skip_verify: "true"
+      ca_file: <file-name>
+      cert_file: <file-name>
+      key_file: <file-name>
+
     external_labels: #labels to identify the metric
          label1: value1
 
@@ -50,6 +55,8 @@ service:
          processors: [batch]
          exporters: [prometheusremotewrite]
 ```
+
+
 
 ### **VictoriaMetrics configuration**
 
