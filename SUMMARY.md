@@ -45,11 +45,12 @@
   * [Fluent Bit installation on Ubuntu](integrations/fluent-bit/fluent-bit-installation-on-ubuntu.md)
   * [Enabling IoT(MQTT) Input  (PAAS)](integrations/fluent-bit/enabling-iot-mqtt-input-paas.md)
 * [Fluentd](integrations/fluentd.md)
+* [FortiNet Firewalls](integrations/fortinet-firewalls.md)
 * [Logstash](integrations/logstash.md)
 * [MQTT](integrations/mqtt.md)
 * [Open Telemetry](integrations/open-telemetry.md)
-* [Rsyslogd](integrations/rsyslogd.md)
 * [Palo Alto Firewall](integrations/palo-alto-firewall.md)
+* [Rsyslogd](integrations/rsyslogd.md)
 
 ## Log Insights <a href="#logiq-server" id="logiq-server"></a>
 
