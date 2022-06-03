@@ -2,11 +2,16 @@
 
 ## Fluent Bit configuration
 
-_HTTP_ output plugin allows to flush your records into a HTTP endpoint. The **HTTP** output plugin allows to provide interoperability between compatible systems, Logiq being one.
+_HTTP_ output plugin allows flushing your records into an HTTP endpoint. The **HTTP** output plugin allows to provide interoperability between compatible systems, Logiq being one.
 
-The below code block defines the minimal changes to be added to the fluent-bit configuration using the http plugin to start sending log events to flash.
+The below code block defines the minimal changes to be added to the fluent-bit configuration using the HTTP plugin to start sending log events to flash.
 
 ```
+[SERVICE]
+    Flush        1
+    Parsers_File /etc/td-agent-bit/parsers.conf
+    Log_Level    error
+    
 [INPUT]
     Name              tail
     Path              /var/log/*
@@ -14,6 +19,7 @@ The below code block defines the minimal changes to be added to the fluent-bit c
     Tag               logiq
     Buffer_Max_Size   1024k
     Read_from_Head    On
+    Mem_Buf_Limit     1MB
 
 [FILTER]
     Name          record_modifier
@@ -51,15 +57,15 @@ You can use Fluent Bit to ship Windows logs to LOGIQ by leveraging the following
 
 The instruction to install fluent-bit for windows is available at the following git repository - [<mark style="color:blue;">https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/windows</mark>](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/windows)<mark style="color:blue;"></mark>
 
-The folder in the git repository includes a PowerShell script to setup the windows fluent-bit agent. The PowerShell script downloads the fluent-bit agent and install the agent as a service. Continue below to see how to setup an example fluent conf and start service on windows.
+The folder in the git repository includes a PowerShell script to set up the windows fluent-bit agent. The PowerShell script downloads the fluent-bit agent and installs the agent as a service. Continue below to see how to set up an example fluent conf and start service on windows.
 
 {% hint style="info" %}
-NOTE: You will need to finalize the fluent configuration and then restart the service. Below is an example fluent configuration
+NOTE: You will need to finalize the fluent configuration and then restart the service. Below is an example of fluent configuration
 {% endhint %}
 
 ```
 [SERVICE]
-    Flush           5
+    Flush           1
     Daemon          yes
     Log_Level       info
 
@@ -129,12 +135,10 @@ If you are running a K8S cluster, you can use fluent-bit to send data to the LOG
 
 ### Managing multiple K8S clusters in a single LOGIQ instance
 
-LOGIQ has provided its own fluent-bit daemon for deploying on K8S clusters. It is available at [https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/](https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/). It allows the administrator to pass a human readable `CLUSTER_ID` or cluster identifier with all the log data.
+LOGIQ has provided its own fluent-bit daemon for deploying on K8S clusters. It is available at [https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/](https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/). It allows the administrator to pass a human-readable `CLUSTER_ID` or cluster identifier with all the log data.
 
 {% hint style="success" %}
 Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters.
-
-It is also easier for the administrator to use human readable names vs LOGIQ using uuid's etc that it detects from the incoming stream.
 {% endhint %}
 
 ### Running the fluent-bit daemonset
@@ -145,7 +149,7 @@ It is also easier for the administrator to use human readable names vs LOGIQ usi
 git clone https://bitbucket.org/logiqcloud/client-integrations.git
 ```
 
-* The files needed are under folder **`fluent-bit`**
+* The files needed are under the folder **`fluent-bit`**
 
 ```
 $ cd client-integrations/
@@ -179,24 +183,6 @@ The next step is to create a ConfigMap that will be used by the Fluent Bit Daemo
 $ kubectl create -f fluent-bit-config-logiq-forward.yml
 ```
 
-Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Cluster, configure the following in deamonset `fluent-bit-daemonset-logiq-output.yml`. If you do not have your ingest token, You can generate them using [`logiqctl`](https://docs.logiq.ai/logiq-server/agentless/generating-secure-ingest-token)
-
-*   name: LOGIQ\_HOST
-
-    value: "YOUR\_LOGIQ\_SERVER\_IP"
-*   name: CLUSTER\_ID
-
-    value: "YOUR\_CLUSTER\_ID"
-*   name: LOGIQ\_TOKEN
-
-    value: "YOUR\_INGEST\_TOKEN"
-
-For Kubernetes version < 1.17, please change the apiVersion: "extensions/v1beta1" from "apps/v1" and remove selector attached to DaemonSet spec selector: matchLabels: k8s-app: fluent-bit-logging
-
-```
-kubectl create -f fluent-bit-daemonset-logiq-output.yml
-```
-
 #### Enabling TLS
 
 You can enable TLS for Fluent Bit if you'd like to secure the data transferred through Fluent Bit to LOGIQ. To do so, edit the \`fluent-bit-config-logiq-forward.yaml\` file as shown below.
@@ -223,6 +209,30 @@ Be sure to also configure the following:
 * name: LOGIQ\_PORT value: "443"
 * name: CLUSTER\_ID value: "YOUR\_CLUSTER\_ID"
 * name: LOGIQ\_TOKEN value: "YOUR\_INGEST\_TOKEN"
+
+
+
+**Without TLS**
+
+Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Cluster, configure the following in deamonset `fluent-bit-daemonset-logiq-output.yml`. If you do not have your ingest token, You can generate them using [`logiqctl`](https://docs.logiq.ai/logiq-server/agentless/generating-secure-ingest-token)
+
+*   name: LOGIQ\_HOST
+
+    value: "YOUR\_LOGIQ\_SERVER\_IP"
+*   name: CLUSTER\_ID
+
+    value: "YOUR\_CLUSTER\_ID"
+*   name: LOGIQ\_TOKEN
+
+    value: "YOUR\_INGEST\_TOKEN"
+
+For Kubernetes version < 1.17, please change the apiVersion: "extensions/v1beta1" from "apps/v1" and remove selector attached to DaemonSet spec selector: matchLabels: k8s-app: fluent-bit-logging
+
+```
+kubectl create -f fluent-bit-daemonset-logiq-output.yml
+```
+
+####
 
 
 
