@@ -50,6 +50,7 @@
 * [MQTT](integrations/mqtt.md)
 * [Open Telemetry](integrations/open-telemetry.md)
 * [Palo Alto Firewall](integrations/palo-alto-firewall.md)
+* [Prometheus on Windows](integrations/prometheus-on-windows.md)
 * [Rsyslogd](integrations/rsyslogd.md)
 * [Kafka](integrations/kafka.md)
 
