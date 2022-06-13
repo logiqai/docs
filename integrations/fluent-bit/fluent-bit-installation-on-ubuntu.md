@@ -7,6 +7,10 @@ In order to forward Ubuntu logs to LOGIQ by leveraging Fluent Bit, do the follow
 
 ```
 chmod +x td-agent-bit.sh
+
+For AWS EC2 ubuntu instances
+
+chmod +x td-agent-bit-aws.sh
 ```
 
 1. Set the cluster details
@@ -32,6 +36,25 @@ sudo bash td-agent-bit.sh "http"
 
 HTTPS endpoint:
 sudo bash td-agent-bit.sh "https"
+
+
+For AWS EC2 Ubuntu instances:
+
+HTTP endpoint:
+sudo -E ./td-agent-bit-aws.sh "http"
+
+HTTPS endpoint:
+sudo -E ./td-agent-bit-aws.sh "https"
+
+or
+
+HTTP endpoint:
+sudo bash td-agent-bit-aws.sh "http"
+
+HTTPS endpoint:
+sudo bash td-agent-bit-aws.sh "https"
+
+
 ```
 
 The script execution carries out the following:
