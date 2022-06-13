@@ -51,6 +51,7 @@
 * [Open Telemetry](integrations/open-telemetry.md)
 * [Palo Alto Firewall](integrations/palo-alto-firewall.md)
 * [Rsyslogd](integrations/rsyslogd.md)
+* [Kafka](integrations/kafka.md)
 
 ## Log Insights <a href="#logiq-server" id="logiq-server"></a>
 
