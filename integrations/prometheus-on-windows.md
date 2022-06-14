@@ -1,32 +1,35 @@
 # Prometheus on Windows
 
-Prometheus is a free software application used for event monitoring and alerting. It records real-time metrics in a time series database built using a HTTP pull model, with flexible queries and real-time alerting.
+Prometheus is a free software application used for event monitoring and alerting. It records real-time metrics in a time series database built using an HTTP pull model, with flexible queries and real-time alerting.
 
-For monitoring Windows with Prometheus, Windows exporter needs to be installed which is the equivalent of [Node exporter](https://github.com/prometheus/node\_exporter)  for Windows. This exporter will start an HTTP endpoint, exposing metrics which will enable Prometheus to scrape them.
+For monitoring Windows with Prometheus, a Windows exporter needs to be installed which is the equivalent of [Node exporter](https://github.com/prometheus/node\_exporter) for Windows. This exporter will start an HTTP endpoint, exposing metrics that will enable Prometheus to scrape them.
 
-You can run latest MSI installer from the below link, each release provides a .msi installer. The installer will setup the windows\_exporter as a Windows service, as well as create an exception in the Windows Firewall.
+#### Windows exporter (node) installation:
+
+You can run the latest MSI installer from the below link, each release provides a .msi installer. The installer will set up the windows\_exporter as a Windows service, as well as create an exception in the Windows Firewall. Node-exporter will be run on port 9182 by default after the installation.
 
 ```
 https://github.com/prometheus-community/windows_exporter/releases
 ```
 
-
+#### Prometheus installation:
 
 Please follow the below steps to install Prometheus on Windows:
 
 * Download the prometheus.ps1 file
 
 ```
-wget https://logiq-scripts.s3.ap-south-1.amazonaws.com/windows-prome.ps1 
+Invoke-WebRequest 'https://logiq-scripts.s3.ap-south-1.amazonaws.com/windows-prome.ps1' -OutFile windows-prome.ps1
+
 ```
 
-* Powershell by default uses TLS 1.0 to connect to website, but website security requires TLS 1.2, hence run the below.
+* Powershell by default uses TLS 1.0 to connect to the website, but website security requires TLS 1.2, hence run the below.
 
 ```
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 ```
 
-* By default, Windows does not allow you to execute any scripts due to execution policy set, to enable it, run the below
+* By default, Windows does not allow you to execute any scripts due to the execution policy set, to enable it, run the below
 
 ```
   Get-ExecutionPolicy
@@ -42,10 +45,29 @@ wget https://logiq-scripts.s3.ap-south-1.amazonaws.com/windows-prome.ps1
    ./windows-prome.ps1
 ```
 
-* You should see prometheus running, run the below to check
+* You should see Prometheus running, run the below to check
 
 ```
 netstat|select-string 9090
 ```
 
-If you want to add/ modify to enable prometheus to scrape custom endpoint, make the changes on Prometheus.yml file in downloaded prometheus directory and restart the prometheus service
+If you want to add/ modify to enable Prometheus to scrape custom endpoint (ex: windows-exporter), make the changes on prometheus.yml file in the Prometheus directory downloaded by the script above and restart the Prometheus service
+
+{% hint style="info" %}
+To enable remote-write on Prometheus, include the remote-write endpoint as shown below in the Prometheus.yml configuration and restart the Prometheus service.
+{% endhint %}
+
+```
+remote_write:
+  - url: https://<Logiq-endpoint>/api/v1/receive
+    tls_config:
+      ca_file: <CA-file>
+      cert_file: <cert-file>
+      key_file: <key-file>
+scrape_configs:
+  - job_name: prometheus-test6
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['localhost:9090']
+
+```
