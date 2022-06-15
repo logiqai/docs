@@ -210,10 +210,6 @@ Be sure to also configure the following:
 * name: CLUSTER\_ID value: "YOUR\_CLUSTER\_ID"
 * name: LOGIQ\_TOKEN value: "YOUR\_INGEST\_TOKEN"
 
-
-
-**Without TLS**
-
 Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Cluster, configure the following in deamonset `fluent-bit-daemonset-logiq-output.yml`. If you do not have your ingest token, You can generate them using [`logiqctl`](https://docs.logiq.ai/logiq-server/agentless/generating-secure-ingest-token)
 
 *   name: LOGIQ\_HOST

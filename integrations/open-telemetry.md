@@ -25,6 +25,10 @@ endpoint: "https://<logiq-endpoint>/api/v1/receive"
 
 Here's a full configuration example below with TLS enabled.
 
+{% hint style="info" %}
+if you are using OpenTelemetry on AWS, remove the "wal:" section below
+{% endhint %}
+
 ```
 exporters:
   prometheusremotewrite:
