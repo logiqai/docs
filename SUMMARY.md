@@ -3,7 +3,7 @@
 ## Introduction
 
 * [Overview](README.md)
-* [Releases](introduction/release-notes.md)
+* [Releases](release-notes.md)
 
 ## EULA
 
