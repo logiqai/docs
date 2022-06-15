@@ -18,6 +18,7 @@ Because LOGIQ.AI supports the full collection of Log Data, it also includes a bu
 
 ### Communities
 
-LOGIQ is a member of the CNCF
+LOGIQ.AI is a SOC2 Type2 Compliance platform and member of the CNCF
 
-![](.gitbook/assets/cncf-color.png)
+| ![](.gitbook/assets/SOC2.png) | ![](.gitbook/assets/cncf-featured.png) |
+| ----------------------------- | -------------------------------------- |
