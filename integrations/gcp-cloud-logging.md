@@ -164,7 +164,7 @@ output {
 
 ```
 
-You can obtain an ingest token from the LOGIQ UI as described [here](generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
+You can obtain an ingest token from the LOGIQ UI as described [here](overview/generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
 
 ![GCP Cloud Run Logs](<../.gitbook/assets/image (19) (1) (1) (1).png>)
 

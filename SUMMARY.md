@@ -25,9 +25,8 @@
 
 ## INTEGRATIONS
 
-* [Overview](integrations/overview.md)
-* [Incident management](logiq-ui-configuration/alert-destinations.md)
-* [Generating a secure ingest token](integrations/generating-a-secure-ingest-token.md)
+* [Overview](integrations/overview/README.md)
+  * [Generating a secure ingest token](integrations/overview/generating-a-secure-ingest-token.md)
 * [AWS](integrations/aws/README.md)
   * [AWS S3](integrations/aws/aws-s3.md)
   * [AWS CloudWatch](integrations/aws/aws-cloudwatch-exporter.md)
@@ -36,11 +35,8 @@
     * [ECS prometheus metrics to Logiq](integrations/aws/aws-ecs/ecs-prometheus-metrics-to-logiq.md)
 * [Azure Databricks](integrations/azure-databricks.md)
 * [Azure Event Hubs](integrations/azure-event-hubs.md)
-* [Configuring Prometheus](integrations/prometheus.md)
 * [Docker Syslog log driver](integrations/docker-syslog-log-driver.md)
 * [Docker Swarm logging](integrations/docker-swarm-logging.md)
-* [GCP Cloud Logging](integrations/gcp-cloud-logging.md)
-* [IIS Logs on Windows](integrations/iis-logs-on-windows.md)
 * [Filebeat](integrations/filebeat.md)
 * [Fluent Bit](integrations/fluent-bit/README.md)
   * [Forwarding Amazon-Linux logs to LOGIQ using Fluent Bit](integrations/fluent-bit/forwarding-amazon-linux-logs-to-logiq-using-fluent-bit.md)
@@ -48,13 +44,17 @@
   * [Enabling IoT(MQTT) Input  (PAAS)](integrations/fluent-bit/enabling-iot-mqtt-input-paas.md)
 * [Fluentd](integrations/fluentd.md)
 * [FortiNet Firewalls](integrations/fortinet-firewalls.md)
+* [GCP Cloud Logging](integrations/gcp-cloud-logging.md)
+* [IIS Logs on Windows](integrations/iis-logs-on-windows.md)
+* [Incident management](logiq-ui-configuration/alert-destinations.md)
+* [Kafka](integrations/kafka.md)
 * [Logstash](integrations/logstash.md)
 * [MQTT](integrations/mqtt.md)
 * [Open Telemetry](integrations/open-telemetry.md)
 * [Palo Alto Firewall](integrations/palo-alto-firewall.md)
+* [Prometheus](integrations/prometheus.md)
 * [Prometheus on Windows](integrations/prometheus-on-windows.md)
 * [Rsyslogd](integrations/rsyslogd.md)
-* [Kafka](integrations/kafka.md)
 
 ## DATA MANAGEMENT
 
