@@ -48,10 +48,6 @@ Login for LOGIQ CLI console
 
 Password for LOGIQ CLI console
 
-### glue\_iam\_service\_role \[optional]
-
-ARN of the glue service role. See [here](../running-on-aws/aws-iam-resources.md#iam-service-role-for-glue) for more details. This only applies if you are trying to run LOGIQ in AWS.
-
 ## Example
 
 options:

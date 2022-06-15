@@ -52,6 +52,6 @@ filter {
 
 LOGIQ can pull data using Kafka Input Plugins. This method requires the Kafka endpoint to be reachable from LOGIQ network.&#x20;
 
-Kafka endpoint, Topic name, namespace, and application name are needed to configure the Kafka input plugin. Namespace and Application define how the data is partitioned in LOGIQ, see [here for more information](../vewing-logs/logs-terminology.md).&#x20;
+Kafka endpoint, Topic name, namespace, and application name are needed to configure the Kafka input plugin. Namespace and Application define how the data is partitioned in LOGIQ, see [here for more information](../log-management/logs-terminology.md).&#x20;
 
 ![](../.gitbook/assets/kafka\_pull.png)

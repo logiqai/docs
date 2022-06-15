@@ -2,7 +2,7 @@
 
 LOGIQ's Prometheus integration allows querying data from the query editor. Just enter a PromQL query and see your data and create visualizations in an instant
 
-![](<../.gitbook/assets/Screen Shot 2020-04-27 at 6.13.01 PM.png>)
+![](<../../.gitbook/assets/Screen Shot 2020-04-27 at 6.13.01 PM.png>)
 
 ### Query language
 

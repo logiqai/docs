@@ -54,39 +54,39 @@
 * [Rsyslogd](integrations/rsyslogd.md)
 * [Kafka](integrations/kafka.md)
 
-## Log Insights <a href="#logiq-server" id="logiq-server"></a>
+## DATA MANAGEMENT
 
-* [Data extraction](logiq-server/data-extraction.md)
-* [Log Data Rewrite](logiq-server/data-rewrite.md)
-* [Timestamp handling](logiq-server/timestamp-handling.md)
+* [Data extraction](data-management/data-extraction.md)
+* [Log Data Rewrite](data-management/data-rewrite.md)
+* [Timestamp handling](data-management/timestamp-handling.md)
 
-## LOGIQ Monitoring
+## Monitoring
 
-* [Prometheus Data source](querying-data/README.md)
-  * [Application Monitoring](querying-data/application-monitoring/README.md)
-    * [Spring Boot](querying-data/application-monitoring/spring-boot.md)
-* [Elasticsearch Data source](elasticsearch-data-source.md)
-* [JSON Data source](json-data-source.md)
-* [Prometheus Remote Write](logiq-monitoring/prometheus-remote-write.md)
+* [Prometheus Data source](monitoring/querying-data/README.md)
+  * [Application Monitoring](monitoring/querying-data/application-monitoring/README.md)
+    * [Spring Boot](monitoring/querying-data/application-monitoring/spring-boot.md)
+* [Elasticsearch Data source](monitoring/elasticsearch-data-source.md)
+* [JSON Data source](monitoring/json-data-source.md)
+* [Prometheus Remote Write](monitoring/prometheus-remote-write.md)
 
-## Vewing Logs
+## LOG MANAGEMENT
 
-* [The LOGIQ UI](vewing-logs/the-logiq-ui.md)
-* [Terminology](vewing-logs/logs-terminology.md)
-* [Logs Page](vewing-logs/logs-page.md)
-* [Search Page](vewing-logs/search-page/README.md)
-  * [Share Search Results](vewing-logs/search-page/share-search-results.md)
-  * [LOGIQ Search Cheat Sheet](vewing-logs/search-page/search-cheat-sheet.md)
-* [Metrics and Custom Indices](vewing-logs/metrics-and-custom-indices.md)
-* [Reports](vewing-logs/reports/README.md)
-  * [Accessing Reports results via API](vewing-logs/reports/accessing-api-results-via-api.md)
-* [logiqctl](vewing-logs/logiqctl/README.md)
-  * [Configuring logiqctl](vewing-logs/logiqctl/configuring-logiqctl.md)
-  * [Obtaining API Key](vewing-logs/logiqctl/obtaining-api-key.md)
-* [Role-Based Access Control (RBAC)](vewing-logs/role-based-access-control.md)
-* [Configuring RBAC](vewing-logs/configuring-rbac.md)
+* [The LOGIQ UI](log-management/the-logiq-ui.md)
+* [Terminology](log-management/logs-terminology.md)
+* [Logs Page](log-management/logs-page.md)
+* [Search Page](log-management/search-page/README.md)
+  * [Share Search Results](log-management/search-page/share-search-results.md)
+  * [LOGIQ Search Cheat Sheet](log-management/search-page/search-cheat-sheet.md)
+* [Metrics and Custom Indices](log-management/metrics-and-custom-indices.md)
+* [Reports](log-management/reports/README.md)
+  * [Accessing Reports results via API](log-management/reports/accessing-api-results-via-api.md)
+* [logiqctl](log-management/logiqctl/README.md)
+  * [Configuring logiqctl](log-management/logiqctl/configuring-logiqctl.md)
+  * [Obtaining API Key](log-management/logiqctl/obtaining-api-key.md)
+* [Role-Based Access Control (RBAC)](log-management/role-based-access-control.md)
+* [Configuring RBAC](log-management/configuring-rbac.md)
 
-## ANOMALY DETECTION <a href="#logiq-events" id="logiq-events"></a>
+## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
 * [Events](logiq-events/events.md)
 * [Event Rules](logiq-events/event-rules.md)
@@ -94,20 +94,17 @@
 * [Logs to time series event visualization](logiq-events/logs-to-time-series-event-visualization.md)
 * [Example IIS Log Event Extraction Using Event Rules](logiq-events/example-iis-log-event-extraction-using-event-rules.md)
 
-## COMPLIANCE
+## API
 
-* [Audit Trail](compliance/audit-trail.md)
+* [Query API](api/historical-data.md)
 
-## LOGIQ STREAMING
-
-* [Query API](logiq-streaming/historical-data.md)
-
-## LOGIQ Configuration <a href="#logiq-ui-configuration" id="logiq-ui-configuration"></a>
+## Administration <a href="#logiq-ui-configuration" id="logiq-ui-configuration"></a>
 
 * [E-Mail Configuration](logiq-ui-configuration/email-configuration-setup.md)
 * [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration.md)
+* [Audit Trail](logiq-ui-configuration/audit-trail.md)
 
-## Log Ingest configuration <a href="#logiq-log-ingest-server-configuration" id="logiq-log-ingest-server-configuration"></a>
+## Glossary <a href="#logiq-log-ingest-server-configuration" id="logiq-log-ingest-server-configuration"></a>
 
 * [Terminology](logiq-log-ingest-server-configuration/terminology.md)
 * [Minimal server configuration](logiq-log-ingest-server-configuration/minimal-server-configuration.md)
@@ -119,9 +116,3 @@
 * [Rules](logiq-log-ingest-server-configuration/rules.md)
 * [Credentials](logiq-log-ingest-server-configuration/credentials.md)
 * [Partitions](logiq-log-ingest-server-configuration/partitions.md)
-
-## RUNNING ON AWS
-
-* [Getting started](running-on-aws/getting-started.md)
-* [AWS IAM Resources](running-on-aws/aws-iam-resources.md)
-* [1-Click deployment using CloudFormation](running-on-aws/ami-using-cloudformation.md)

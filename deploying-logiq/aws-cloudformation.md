@@ -22,7 +22,7 @@ https://aws.amazon.com/marketplace/pp/B083ZMYQNV
 Please note that using the Marketplace AMI is not free and you will be charged per the marketplace published rates for LOGIQ
 {% endhint %}
 
-## LOGIQ UI credentials <a href="default-user-and-password" id="default-user-and-password"></a>
+## LOGIQ UI credentials <a href="#default-user-and-password" id="default-user-and-password"></a>
 
 {% hint style="warning" %}
 After the Cloud formation template is complete, it may take several minutes for the UI to be available on the AMI.&#x20;
@@ -42,7 +42,7 @@ e.g. if CloudFormation stack is called Foo and bucket is called Bar the password
 
 {% embed url="https://www.youtube.com/watch?v=IDmJOF9y5Ac" %}
 
-Also see section on [AMI using CloudFormation](../running-on-aws/ami-using-cloudformation.md) for more details.
+Also see section on [AMI using CloudFormation](broken-reference) for more details.
 
 ## Ingesting data
 

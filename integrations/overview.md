@@ -19,10 +19,10 @@ LOGIQ currently integrates with over 150+ data sources via support for popular o
 * [Prometheus](prometheus.md)
 * [Docker Syslog log driver](docker-syslog-log-driver.md)
 * [Docker swarm logging](docker-swarm-logging.md)
-* [Elasticsearch](../elasticsearch-data-source.md)
+* [Elasticsearch](../monitoring/elasticsearch-data-source.md)
 * [GCP Cloud logging](gcp-cloud-logging.md)
 * [IIS Logging](iis-logs-on-windows.md)
-* [JSON endpoints](../json-data-source.md)
+* [JSON endpoints](../monitoring/json-data-source.md)
 * [MQTT](mqtt.md)
 
 You can also ingest logs from endpoint devices running:
