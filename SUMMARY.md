@@ -15,13 +15,13 @@
 * [SaaS](deploying-logiq/logiq-saas.md)
 * [PaaS deployment](deploying-logiq/logiq-paas-deployment/README.md)
   * [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/logiq-paas-deployment/k8s-quickstart-guide.md)
-  * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-on-microk8s.md)
-  * [Deploying LOGIQ PaaS on AWS](deploying-logiq/logiq-paas-deployment/aws-cloudformation.md)
-  * [Deploying LOGIQ EKS on AWS using CloudFormation](deploying-logiq/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-cloudformation.md)
-  * [Deploying LOGIQ EKS on AWS using custom AMI](deploying-logiq/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-custom-ami.md)
-  * [Deploying Logiq EKS with AWS ALB](deploying-logiq/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
-  * [Deploying LOGIQ PaaS in Azure Kubernetes Service](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
-    * [Azure Blob Storage Lifecycle Management](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
+  * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/deploying-logiq-paas-on-microk8s.md)
+  * [Deploying LOGIQ PaaS on AWS](deploying-logiq/aws-cloudformation.md)
+  * [Deploying LOGIQ EKS on AWS using CloudFormation](deploying-logiq/deploying-logiq-eks-on-aws-using-cloudformation.md)
+  * [Deploying LOGIQ EKS on AWS using custom AMI](deploying-logiq/deploying-logiq-eks-on-aws-using-custom-ami.md)
+  * [Deploying Logiq EKS with AWS ALB](deploying-logiq/deploying-logiq-eks-with-aws-alb.md)
+  * [Deploying LOGIQ PaaS in Azure Kubernetes Service](deploying-logiq/deploying-logiq-paas-in-azure-kubernetes-service.md)
+    * [Azure Blob Storage Lifecycle Management](deploying-logiq/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
 
 ## INTEGRATIONS
 
