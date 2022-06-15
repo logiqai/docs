@@ -1,7 +1,9 @@
 # Table of contents
 
+## Introduction
+
 * [Overview](README.md)
-* [Releases](release-notes.md)
+* [Releases](introduction/release-notes.md)
 
 ## EULA
 

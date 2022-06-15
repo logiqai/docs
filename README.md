@@ -2,7 +2,9 @@
 
 ## LOGIQ.AI Full-stack Observability Data Fabric
 
-LOGIQ.AI is a full-stack observability platform for monitoring, log aggregation, distributed tracing and analytics with infinite storage scale.
+LOGIQ.AI is a full-stack observability data fabric that allows users to manage their entire observability data life-cycle: Collect, Store, Analyze, Transform, and Connect.
+
+The LOGIQ.AI data fabric unifies observability data into a single platform by bringing data life-cycle management for (M)etrics (E)vents (L)ogs (T)races or frequently referred to as MELT data.
 
 The LOGIQ platform comprises of a User interface, a [command line toolkit](https://logiqctl.logiq.ai), a monitoring stack for time series metrics and a log analytics stack for log data.
 
