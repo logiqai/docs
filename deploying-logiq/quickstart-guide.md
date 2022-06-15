@@ -4,7 +4,7 @@ description: >-
   stack using docker-compose for trial and demo use
 ---
 
-# LOGIQ Quickstart
+# Quickstart with Docker-Compose
 
 {% hint style="warning" %}
 Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
@@ -86,7 +86,7 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 ## Ingesting data
 
-For setting up data ingestion from your endpoints and applications into LOGIQ.AI, please refer to the [Integrations section](../integrations/overview/).
+For setting up data ingestion from your endpoints and applications into LOGIQ.AI, please refer to the [Integrations section](../integrations/overview.md).
 
 **The quickstart compose file includes a test data tool** that will generate test log data and also has a couple of dashboards that show LOGIQ's APM capabilities.
 

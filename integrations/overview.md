@@ -8,26 +8,26 @@ lets you connect with and securely ingest data from popular log forwarding agent
 
 LOGIQ currently integrates with over 150+ data sources via support for popular open source agents and open protocols. See below for links on how to enable specific integrations.&#x20;
 
-* [Logstash](../logstash.md)
-* [Filebeat](../filebeat.md)
-* [Fluent Bit](../fluent-bit/)
-* [Fluentd](../fluentd.md)
-* [Rsyslogd](../rsyslogd.md)
-* [AWS CloudWatch](../aws/aws-cloudwatch-exporter.md)
-* [Palo Alto Firewall](../palo-alto-firewall.md)
-* [Azure Event Hubs](../azure-event-hubs.md)
-* [Prometheus](../prometheus.md)
-* [Docker Syslog log driver](../docker-syslog-log-driver.md)
-* [Docker swarm logging](../docker-swarm-logging.md)
-* [Elasticsearch](../../monitoring/elasticsearch-data-source.md)
-* [GCP Cloud logging](../gcp-cloud-logging.md)
-* [IIS Logging](../iis-logs-on-windows.md)
-* [JSON endpoints](../../monitoring/json-data-source.md)
-* [MQTT](../mqtt.md)
+* [Logstash](logstash.md)
+* [Filebeat](filebeat.md)
+* [Fluent Bit](fluent-bit/)
+* [Fluentd](fluentd.md)
+* [Rsyslogd](rsyslogd.md)
+* [AWS CloudWatch](aws/aws-cloudwatch-exporter.md)
+* [Palo Alto Firewall](palo-alto-firewall.md)
+* [Azure Event Hubs](azure-event-hubs.md)
+* [Prometheus](prometheus.md)
+* [Docker Syslog log driver](docker-syslog-log-driver.md)
+* [Docker swarm logging](docker-swarm-logging.md)
+* [Elasticsearch](../monitoring/elasticsearch-data-source.md)
+* [GCP Cloud logging](gcp-cloud-logging.md)
+* [IIS Logging](iis-logs-on-windows.md)
+* [JSON endpoints](../monitoring/json-data-source.md)
+* [MQTT](mqtt.md)
 
 You can also ingest logs from endpoint devices running:
 
-* [Windows](../fluent-bit/#fluent-bit-for-windows)
+* [Windows](fluent-bit/#fluent-bit-for-windows)
 * [macOS](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/macos)
 * [Linux](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/linux)
 
@@ -41,7 +41,7 @@ LOGIQ's support for logs based HIDS enables data ingest directly from log based 
 
 ### Incident management
 
-Users can choose a variety of i[ncident management integrations](../../logiq-ui-configuration/alert-destinations.md) to bring reliability into your production operations.
+Users can choose a variety of i[ncident management integrations](../logiq-ui-configuration/alert-destinations.md) to bring reliability into your production operations.
 
 * Email
 * Slack

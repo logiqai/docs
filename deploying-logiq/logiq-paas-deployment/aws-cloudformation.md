@@ -46,4 +46,4 @@ Also see section on [AMI using CloudFormation](broken-reference) for more detail
 
 ## Ingesting data
 
-For setting up data ingestion from your endpoints and applications into LOGIQ, please refer to the [Integrations section](../integrations/overview/).
+For setting up data ingestion from your endpoints and applications into LOGIQ, please refer to the [Integrations section](../../integrations/overview.md).

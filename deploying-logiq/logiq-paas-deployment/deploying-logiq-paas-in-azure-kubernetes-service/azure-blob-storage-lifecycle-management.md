@@ -16,14 +16,14 @@ A lifecycle management policy contains one or more rules that define a set of ac
 
 **Step 1:**  On your Storage account in the Azure portal, navigate to the **Data Management section** and **** click on **Lifecycle management** > **Add a rule**.
 
-![](../../.gitbook/assets/lifecycle..png)
+![](../../../.gitbook/assets/lifecycle..png)
 
 **Step 2:** Provide a **Rule name** and then select the following options.&#x20;
 
 * Under **Rule scope**, select **Limit blobs with filters**
 * Under **Blob subtype**, select **Base blobs**
 
-![](../../.gitbook/assets/rule.png)
+![](../../../.gitbook/assets/rule.png)
 
 **Step 3:** On the **Base blobs** tab, you can setup data retention and choose what you'd like to do with the data post the retention period. In this example, we've chosen to retain data for 30 days and delete the data post the 30-day retention period.&#x20;
 
@@ -33,12 +33,12 @@ To set up a similar rule, do the following.&#x20;
 * Under the **Then** condition, select **Delete the blob** from the dropdown menu.&#x20;
 * Optionally, set up additional qualifiers and conditions if you'd like more granular control over data lifecycle management by clicking **Add conditions** and configuring the conditions accordingly.&#x20;
 
-![](../../.gitbook/assets/blobrule.png)
+![](../../../.gitbook/assets/blobrule.png)
 
 **Step 4:** Since we selected **Limit blobs with filters** on the **Details** page, select **Filter set** to add an optional filter. On this tab, you can add prefixes to help identify which blobs to delete when the data lifecycle condition is met. If you do not set a prefix, all the objects in the container will be deleted. The prefix follows the format: `<container_name>/<blob_name>`
 
 In this example, we set a prefix that deletes objects that store logs from the `qradar` namespace in the `default_log_store` blob inside the `testlogiqblog` container.&#x20;
 
-![](../../.gitbook/assets/filter.png)
+![](../../../.gitbook/assets/filter.png)
 
 This completes the configuration of a single data lifecycle management rule on your Azure Storage account. You can add and configure as many rules as you deem appropriate based on your data lifecycle needs.&#x20;

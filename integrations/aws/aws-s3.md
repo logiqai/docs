@@ -20,13 +20,13 @@ You can also download the CloudFormation template from our [client-integrations]
 
 This CloudFormation stack creates a Lambda function and its necessary permissions. You must configure the following attributes.
 
-| Parameter     | Description                                                                                                                                     |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `APPNAME`     | Application name - a readable name for LOGIQ to partition logs.                                                                                 |
-| `CLUSTERID`   | Cluster ID - a readable name for LOGIQ to partition logs.                                                                                       |
-| `NAMESPACE`   | Namespace - a readable name for LOGIQ to partition logs.                                                                                        |
-| `LOGIQHOST`   | IP address or hostname of the LOGIQ server.                                                                                                     |
-| `INGESTTOKEN` | JWT token to securely ingest logs. Refer [here](../overview/generating-a-secure-ingest-token.md#generating-using-ui) to generate ingest token.  |
+| Parameter     | Description                                                                                                                            |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `APPNAME`     | Application name - a readable name for LOGIQ to partition logs.                                                                        |
+| `CLUSTERID`   | Cluster ID - a readable name for LOGIQ to partition logs.                                                                              |
+| `NAMESPACE`   | Namespace - a readable name for LOGIQ to partition logs.                                                                               |
+| `LOGIQHOST`   | IP address or hostname of the LOGIQ server.                                                                                            |
+| `INGESTTOKEN` | JWT token to securely ingest logs. Refer [here](../generating-a-secure-ingest-token.md#generating-using-ui) to generate ingest token.  |
 
 ## Configuring S3 trigger
 
