@@ -14,11 +14,13 @@ Because LOGIQ.AI supports the full collection of Log Data, it also includes a bu
 
 ### Capabilities
 
-![](.gitbook/assets/LOGIQ-ALL.png)
+LOGIQ.AI brings a unified view for your enterprise with its full-stack approach to observability data life cycle management. An integrated approach means it is easier to root cause issues as all the capabilities work together in an integrated manner.
+
+![](.gitbook/assets/LOGIQAI-ALL.png)
 
 ### Communities
 
-LOGIQ.AI is a SOC2 Type2 Compliance platform and member of the CNCF
+LOGIQ.AI is a SOC2 Type2 Compliance platform and a member of the CNCF
 
 | ![](.gitbook/assets/SOC2.png) | ![](.gitbook/assets/cncf-featured.png) |
 | ----------------------------- | -------------------------------------- |
