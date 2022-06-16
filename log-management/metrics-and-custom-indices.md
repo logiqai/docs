@@ -8,9 +8,9 @@ LOGIQ Log2Metrics is a powerful feature that helps you convert your log data int
 
 ### Creating a Log2Metric
 
-You can create new metrics from a log line in either the **Logs** page or the **Search** page of your LOGIQ UI. To create a new metric, click the three dots on a log line that you want to create a metric for. Doing so opens the options menu, as shown in the following image. From the options menu, click **create metric**.&#x20;
+You can create new metrics from a log line in either the **Logs** page or the **Search** page of your LOGIQ UI. To create a new metric, click the three dots on a log line that you want to create a metric for. Doing so opens the options menu, as shown in the following image. From the options menu, click **create log2metric**.&#x20;
 
-![The Options Menu](<../.gitbook/assets/image (6).png>)
+![Log2Metric option](../.gitbook/assets/log\_menu\_drop\_down.png)
 
 You will now see the Log2Metric modal on the LOGIQ UI. To configure your new metric, fill out the fields in the Log2Metric modal appropriately.&#x20;
 
