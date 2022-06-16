@@ -14,7 +14,7 @@ You can create new metrics from a log line in either the **Logs** page or the **
 
 You will now see the Log2Metric modal on the LOGIQ UI. To configure your new metric, fill out the fields in the Log2Metric modal appropriately.&#x20;
 
-![The Log2Metric Modal](<../.gitbook/assets/image (8).png>)
+![](../.gitbook/assets/log2metric\_dialog.png)
 
 The following table describes each of the fields in the Log2Metric modal.&#x20;
 
@@ -30,15 +30,23 @@ The following table describes each of the fields in the Log2Metric modal.&#x20;
 | Label for Visualization | Used to visualize data. Visualizations are grouped by the label configured in this field.               |
 | Add tags to query       | Tags that can be used to filter queries in the UI                                                       |
 
-You can also click **Add more parameters** to add more parameters to filter your logs by, as shown in the following image.
+You can add more parameters to filter your logs by clicking on **+Add more parameters**, as shown in the following image.
 
-![](<../.gitbook/assets/image (11).png>)
+![Add more prameters](../.gitbook/assets/add\_more\_params.png)
 
 The configuration depicted in the image above creates a Log2Metric named `ingress_status_codes__e1034e`. LOGIQ adds the suffix `__e1034` internally as a unique identifier for the Log2Metric. Once the Log2Metric is created, it adds its visualization to your dashboard. The following image depicts the visualization of the newly-created `ingress_status_codes__e1034e` Log2Metric.&#x20;
 
-![Visualization created by log2metrics](<../.gitbook/assets/image (9).png>)
+![Visualization created by log2metrics](../.gitbook/assets/log2metric\_vis.png)
 
-## Custom Indices
+### Analyze log2metric
 
-Log2Metrics definitions also create custom indices that can be used to speed up search. Based on the definition, there can be multiple custom indices. The definition used in the example above creates two custom indices: `ingress_status_codes__e1034e`and `e1034e`. You can use both of these indices to search for logs that match the definition. Based on what you enter in the **Labels** field of the Log2Metric configuration, additional indices may be created. For example, based on the definition used in the example above, if there are logs that match the status code `401` , an additional index is created named `ingress_status_codes__e1034e_status_code_401`that can be used for searching for occurrences of logs that contain the status code `401`.&#x20;
+Log2metrics helps to analyze the log for the specified time series. Click Analyse button will open the popup with values that can be choose to verify the logs.&#x20;
+
+On click of Analyse button shows a popup with the option to select the value/s as shown below. Choose the values that you want to analyze within the logs and click Apply button, on click will navigate to the search view and loads the corresponding logs to verify.
+
+![Analyze Log2Metrics](../.gitbook/assets/analyze\_log2metrics.png)
+
+### Custom Indices
+
+Log2Metrics definitions also create custom indices that can be used to speed up the search. Based on the definition, there can be multiple custom indices. The definition used in the example above creates two custom indices: `ingress_status_codes__e1034e`and `e1034e`. You can use both of these indices to search for logs that match the definition. Based on what you enter in the **Labels** field of the Log2Metric configuration, additional indices may be created. For example, based on the definition used in the example above, if there are logs that match the status code `401` , an additional index is created named `ingress_status_codes__e1034e_status_code_401`that can be used for searching for occurrences of logs that contain the status code `401`.&#x20;
 
