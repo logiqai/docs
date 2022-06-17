@@ -21,7 +21,7 @@ LOGIQ currently integrates with over 150+ data sources via support for popular o
 * [Docker swarm logging](docker-swarm-logging.md)
 * [Elasticsearch](../monitoring/elasticsearch-data-source.md)
 * [GCP Cloud logging](gcp-cloud-logging.md)
-* [IIS Logging](iis-logs-on-windows.md)
+* [IIS Logging](iis-logs-on-windows/)
 * [JSON endpoints](../monitoring/json-data-source.md)
 * [MQTT](mqtt.md)
 

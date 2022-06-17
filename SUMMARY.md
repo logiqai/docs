@@ -45,7 +45,8 @@
 * [Fluentd](integrations/fluentd.md)
 * [FortiNet Firewalls](integrations/fortinet-firewalls.md)
 * [GCP Cloud Logging](integrations/gcp-cloud-logging.md)
-* [IIS Logs on Windows](integrations/iis-logs-on-windows.md)
+* [IIS Logs on Windows](integrations/iis-logs-on-windows/README.md)
+  * [Example IIS Log Event Extraction Using Event Rules](integrations/iis-logs-on-windows/example-iis-log-event-extraction-using-event-rules.md)
 * [Incident management](logiq-ui-configuration/alert-destinations.md)
 * [Kafka](integrations/kafka.md)
 * [Logstash](integrations/logstash.md)
@@ -93,8 +94,7 @@
 * [Events](logiq-events/events.md)
 * [Event Rules](logiq-events/event-rules.md)
 * [Alertable Events](logiq-events/alerts.md)
-* [Logs to time series event visualization](logiq-events/logs-to-time-series-event-visualization.md)
-* [Example IIS Log Event Extraction Using Event Rules](logiq-events/example-iis-log-event-extraction-using-event-rules.md)
+* [Log2Metrics](logiq-events/logs-to-time-series-event-visualization.md)
 
 ## API
 

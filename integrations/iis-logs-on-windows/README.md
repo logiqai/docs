@@ -110,12 +110,12 @@ Follow the steps in Installing[ <mark style="color:blue;">fluent-bit for windows
 
 Fluent-bit service will automatically started upon the end of the script installation.   However, one can use Windows service mangement tool to control its state.  Below show how to start the Windows service tool GUI.
 
-![](../.gitbook/assets/services.msc-2022-01-27\_11-59-36.png)
+![](../../.gitbook/assets/services.msc-2022-01-27\_11-59-36.png)
 
 After the Windows Service tool got enabled, one can scroll the service list to Fluent-bit service and right-click the mouse to change the Fluent-bit Start/Stop/Restart state; see below.
 
-![](../.gitbook/assets/win-fluentbit-svc-start-2022-01-27\_11-52-09.png)
+![](../../.gitbook/assets/win-fluentbit-svc-start-2022-01-27\_11-52-09.png)
 
 ## Example Ingested IIS Logs
 
-![](../.gitbook/assets/example-ingestion-2022-01-27\_12-41-46.png)
+![](../../.gitbook/assets/example-ingestion-2022-01-27\_12-41-46.png)
