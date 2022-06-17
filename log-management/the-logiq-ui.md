@@ -4,40 +4,39 @@ The LOGIQ UI is your window to your IT data, logs, and metrics - ingested from a
 
 You can access the LOGIQ UI by logging into your LOGIQ instance URL using your account credentials.&#x20;
 
-![The LOGIQ UI](https://lh4.googleusercontent.com/\_5o9G6CP8d6QWAZuDx5wT8NH1U4EvyBwiIjSRqhdXVBDg6c7G9l1FfDVF1pL-YzClPaG0OoX\_sJQaUIrBqU9oe4XkDmgMzZRQS06qDdMjc7cQs1WHcypJKbEdNZXanASXKBvoOpY=s0)
+![](<../.gitbook/assets/image (28).png>)
 
-The navigation bar at the top of the UI allows you to access your:
+The navigation bar at the right side of the UI allows you to access your:
 
 * Dashboards
 * Queries
 * Alerts
-* Logs
+* Explore
 * Events&#x20;
-* Create
-
-On the right side of the navigation bar, you'll find links that help you access:
-
-* Clusters
-* Support
+* Rules
 * Settings
 
-The following sections in this article describe the various elements on the LOGIQ UI and their purposes.&#x20;
+The following sections in this article describe the various elements of the LOGIQ UI and their purposes.&#x20;
 
 ## Dashboards
 
-A dashboard is a collection of visualisations and queries that you've created against your log data. You could create dashboards to house visualisations and queries for specific as well as multiple data sources. Everything contained within a dashboard is updated in real-time.&#x20;
+A dashboard is a collection of visualizations and queries that you've created against your log data. You could create dashboards to house visualizations and queries for specific as well as multiple data sources. Everything contained within a dashboard is updated in real-time.&#x20;
 
-The **Dashboards** page on the LOGIQ UI lists all of the dashboards you've created within LOGIQ. Dashboards that you've favourited are marked with a yellow star icon and are also listed under the **Dashboards** dropdown menu for quick access in the navigation bar. The following images depict dashboards that you can create using LOGIQ.&#x20;
+The **Dashboards** page on the LOGIQ UI lists all of the dashboards you've created within LOGIQ. Dashboards that you've favorited are marked with a yellow star icon and are also listed under the **Dashboards** dropdown menu for quick access in the navigation bar. The following images depict dashboards that you can create using LOGIQ.&#x20;
 
-![A typical monitoring dashboard on LOGIQ](https://lh5.googleusercontent.com/Rsl-mfgj6O2JtClx0kUWX4Ndlt\_OYcXKUUZuJDmxQhvieGFcEOQM-AAZNSslEHzxX3TXkk09Wh2NLaq9Z7K9FfmEF87nkf-dF7MKqNLjMkIz8BRNeHFI-\_W6vvmG\_pVcFQD6cMbQ=s0)
+![Dashboards Page shows list of dashboards.](<../.gitbook/assets/image (25).png>)
 
-![Another example of a LOGIQ dashboard](https://lh4.googleusercontent.com/5124zYGoqbDCFvzrK10O6-edgp93bbyB8q\_vvxQZA0kKG07FPfb29J4EyA7Hud7o23HqWZdDXfbWb8vkCfblJ\_CTZGdn7OBDAiJVZv3n2NYYIoysIidAYSN-0F6HpQp-dKze65YM=s0)
+
+
+![A typical monitoring dashboard on LOGIQ](<../.gitbook/assets/image (16).png>)
+
+![Another example of a LOGIQ dashboard](<../.gitbook/assets/image (14).png>)
 
 ## **Queries**
 
-LOGIQ enables you to write custom queries to analyze log data, display metrics and events, view and customize events and alerts, and create custom dashboards. The **Queries** page lists all of the queries you've created on LOGIQ. You can mark some of them as favourites or archive the ones not in use. Your favourite queries also appear in the drop-down menu of the **Queries** tab for quick access.
+LOGIQ enables you to write custom queries to analyze log data, display metrics and events, view and customize events and alerts, and create custom dashboards. The **Queries** page lists all of the queries you've created on LOGIQ. You can mark some of them as favorites or archive the ones, not in use. Your favorite queries also appear in the drop-down menu of the **Queries** tab for quick access.
 
-![The Queries page](https://lh5.googleusercontent.com/yLR6PxrTdXiIRP7ONQI7v06S4egdEjeMPZigeXgmxKtSYKn9c-RWseXjYijCj6MCrR7ymuRvVZL1ohe\_dLWjU8ch9ZKbRMyIhX1Q4ATZZIYsTlyiwEBfCae2dYErm3OtQ80mSRsU=s0)
+![](<../.gitbook/assets/image (21).png>)
 
 ## **Alerts**
 
@@ -45,42 +44,26 @@ LOGIQ enables you to set alerts against events, data, or metrics of interest der
 
 The following image depicts a typical **Alerts** page on the LOGIQ UI.&#x20;
 
-![The Alerts page](https://lh4.googleusercontent.com/YHULH5nsxPJ6YmWAgNzKYEBfYsrrCZSFOKpcncCCMgKaA\_SiTXbs2jyI0SUo-pJTp4sVv6HX8w07C26wGyhu980\_F005YZYxbN0JKVqSCYgn5-NROsoARp4V192AZJEbKK2jhgcw=s0)
+![](<../.gitbook/assets/image (17).png>)
 
-## Logs
+## Explore
 
-The Logs page lists all of the logs generated across your IT environment that's being ingested into LOGIQ. The Logs page lists and categorizes logs based on Namespace, Application, ProcID, Tags, and when they were last updated. By default, logs are listed by the time they were ingested with the most recent applications appearing on the top. You can filter logs by namespaces, applications, ProcIDs, and tags. You can also filter them by custom time ranges.&#x20;
+The Explore page lists all of the log streams generated across your IT environment that are being ingested into LOGIQ. The Explore page lists and categorizes logs based on Namespace, Application, ProcID, and when they were last updated. By default, logs are listed by the time they were ingested with the most recent applications appearing on the top. You can filter log streams by namespaces, applications, and ProcIDs. You can also filter them by custom time ranges.&#x20;
 
-You can also click into a specific application or ProcID to view logs in more detail and to search through or identify patterns within your log data. You can also download logs as JSON or CSV files.&#x20;
+You can also click into a specific application or ProcID to view logs in more detail and to search through or identify patterns within your log data.&#x20;
 
-The following image depicts a typical Logs page on the LOGIQ UI.&#x20;
+The following image depicts a typical Explore page on the LOGIQ UI.&#x20;
 
-![The Logs page](https://lh5.googleusercontent.com/TiZLVD4UXjLQTD4L63xlRqajVygvs76jX9kt76NKX6mgNTQN6Pz\_S5J\_nua1ZHpc3BBntInqo03aaqRK53ptnlEWToRCPwob2l7AWwFjjL6wpveETJRjbA3tZK-kvP3xv11\_3XWZ=s0)
+![The Explore Page](<../.gitbook/assets/image (26).png>)
+
+
 
 ## Events
 
-The **Events** page lists all the events that have occurred across your IT environment. Events are listed by their **Name**, **AppName**, **Namespace**, **ProcID**, **Level**, time they were created, **Message**, and **Group**.&#x20;
-
-In the **Events** page, you can sort, search, and filter events by application match, name, or group, severity levels, namespaces, and custom time ranges.&#x20;
-
-
-
-![The Events page](https://lh6.googleusercontent.com/FI3A0ZVYbuG0KC8s5cuBUHz7I56-c10dOwfyl4Yl8dpsA0-OzFbakXNshs4P97l7KC9pPfSVPf-IwxV2Y8TIwFh19UEc4Q6cExWP59WX0ZTIdi3rAQG-cDNU8SwuNCViADZYDt8q=s0)
+The **Events** page lists all the important events that have occurred in the Logiq Platform. Events are listed by their Name, Message, and the time they were created.  The Event page tracks important service notifications like service restarts, license expiry, etc...
 
 ## Create
 
 The **Create** dropdown menu enables you to create new reports, queries, dashboards, and alerts, as shown in the following image.&#x20;
 
-
-
-![The Create dropdown menu](https://lh3.googleusercontent.com/XCrL8egArsjawVJSVowgHAX81A4OxilzVjEAmsswF7MCrzqWF-yvalwQwAvXKooG5pcWo-3QOgMfADCkObqbWwkR18mMUzaK1kXLlbUcwzMAxw2lckmEEwThydk-SN1Jp6pN57jR=s0)
-
 A function-specific modal appears based on what you select from this dropdown menu. \
-
-
-## &#x20;
-
-\
-
-
-\

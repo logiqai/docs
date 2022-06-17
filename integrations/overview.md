@@ -22,7 +22,7 @@ LOGIQ currently integrates with over 150+ data sources via support for popular o
 * [Elasticsearch](../monitoring/elasticsearch-data-source.md)
 * [GCP Cloud logging](gcp-cloud-logging.md)
 * [IIS Logging](iis-logs-on-windows.md)
-* [JSON endpoints](../monitoring/json-data-source.md)
+* [JSON endpoints](../monitoring/json-data-source/)
 * [MQTT](mqtt.md)
 
 You can also ingest logs from endpoint devices running:

@@ -14,13 +14,13 @@ To set up log forwarding on AWS ECS, do the following.
 * Click on **Edit container**
 * Navigate to the **STORAGE AND LOGGING** section.
 
-![](<../../../.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (22) (1).png>)
 
 * By default, the container will be sending logs to AWS CloudWatch. Uncheck **Auto configure to CloudWatch Logs**
 * Next, choose the Log driver as **awsfirelens**&#x20;
 * Add the following variables in the **Log options** section.
 
-![](<../../../.gitbook/assets/image (23).png>)
+![](<../../../.gitbook/assets/image (23) (1).png>)
 
 * The following are the mandatory fields that need to be passed in order to forward logs to LOGIQ.
 
@@ -69,7 +69,7 @@ To set up log forwarding on AWS ECS, do the following.
 
 * Once you are done with the setup, you should see a logrouter container along with your container (for example, the **`wordpress`** container below).
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 Your ECS container logs will now be forwarded to your LOGIQ instance and will be visible on the **Logs** page on the LOGIQ UI. The **Namespace** will be mapped to your ECS cluster name and **Application** is mapped to the task definition name.&#x20;
 
