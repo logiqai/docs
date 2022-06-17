@@ -126,4 +126,4 @@ LOGIQ service exposes the below ports
 * **24224/24225** - FluentForward protocol port / TLS
 * **3000** - Grafana instance (optional), not available with quickstart
 
-The ports used to bind are configurable via the server configuration file. See [Server options](../logiq-log-ingest-server-configuration/server-options.md) for more details.
+The ports used to bind are configurable via the server configuration file. See [Server options](broken-reference) for more details.

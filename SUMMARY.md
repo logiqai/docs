@@ -33,8 +33,9 @@
   * [AWS ECS](integrations/aws/aws-ecs/README.md)
     * [Forwarding AWS ECS logs to LOGIQ using AWS FireLens](integrations/aws/aws-ecs/forwarding-aws-ecs-logs-to-logiq-using-aws-firelens.md)
     * [ECS prometheus metrics to Logiq](integrations/aws/aws-ecs/ecs-prometheus-metrics-to-logiq.md)
-* [Azure Databricks](integrations/azure-databricks.md)
-* [Azure Event Hubs](integrations/azure-event-hubs.md)
+* [Azure](integrations/azure/README.md)
+  * [Azure Databricks](integrations/azure/azure-databricks.md)
+  * [Azure Event Hubs](integrations/azure/azure-event-hubs.md)
 * [Docker Syslog log driver](integrations/docker-syslog-log-driver.md)
 * [Docker Swarm logging](integrations/docker-swarm-logging.md)
 * [Filebeat](integrations/filebeat.md)
@@ -91,9 +92,9 @@
 
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
+* [Alerts](logiq-events/alerts.md)
 * [Events](logiq-events/events.md)
 * [Event Rules](logiq-events/event-rules.md)
-* [Alertable Events](logiq-events/alerts.md)
 * [Log2Metrics](logiq-events/logs-to-time-series-event-visualization.md)
 
 ## API
@@ -105,16 +106,3 @@
 * [E-Mail Configuration](logiq-ui-configuration/email-configuration-setup.md)
 * [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration.md)
 * [Audit Trail](logiq-ui-configuration/audit-trail.md)
-
-## Glossary <a href="#logiq-log-ingest-server-configuration" id="logiq-log-ingest-server-configuration"></a>
-
-* [Terminology](logiq-log-ingest-server-configuration/terminology.md)
-* [Minimal server configuration](logiq-log-ingest-server-configuration/minimal-server-configuration.md)
-* [Server options](logiq-log-ingest-server-configuration/server-options.md)
-* [Sources](logiq-log-ingest-server-configuration/sources.md)
-* [Destinations](logiq-log-ingest-server-configuration/destinations.md)
-* [Filters](logiq-log-ingest-server-configuration/filters.md)
-* [Groupings](logiq-log-ingest-server-configuration/groupings.md)
-* [Rules](logiq-log-ingest-server-configuration/rules.md)
-* [Credentials](logiq-log-ingest-server-configuration/credentials.md)
-* [Partitions](logiq-log-ingest-server-configuration/partitions.md)
