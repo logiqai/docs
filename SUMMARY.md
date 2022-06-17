@@ -52,8 +52,9 @@
 * [MQTT](integrations/mqtt.md)
 * [Open Telemetry](integrations/open-telemetry.md)
 * [Palo Alto Firewall](integrations/palo-alto-firewall.md)
-* [Prometheus](integrations/prometheus.md)
-* [Prometheus on Windows](integrations/prometheus-on-windows.md)
+* [Prometheus](integrations/prometheus/README.md)
+  * [Prometheus on Windows](integrations/prometheus/prometheus-on-windows.md)
+  * [Spring Boot](integrations/prometheus/spring-boot.md)
 * [Rsyslogd](integrations/rsyslogd.md)
 
 ## DATA MANAGEMENT
@@ -64,9 +65,8 @@
 
 ## Monitoring
 
-* [Prometheus Data source](monitoring/querying-data/README.md)
-  * [Application Monitoring](monitoring/querying-data/application-monitoring/README.md)
-    * [Spring Boot](monitoring/querying-data/application-monitoring/spring-boot.md)
+* [Prometheus Data Source](monitoring/prometheus/README.md)
+  * [Writing PromQL Compatible queries](monitoring/prometheus/querying-data.md)
 * [Elasticsearch Data source](monitoring/elasticsearch-data-source.md)
 * [JSON Data source](monitoring/json-data-source.md)
 * [Prometheus Remote Write](monitoring/prometheus-remote-write.md)
