@@ -10,13 +10,13 @@ description: >-
 
 The first step in to create the data source and provide `basic auth` credentials. Note that basic auth credentials are optional and you can provide a bearer token if that is your means of authenticating against the API&#x20;
 
-![Creating a JSON data source](<../../.gitbook/assets/Screen Shot 2020-08-10 at 6.08.15 PM.png>)
+![Creating a JSON data source](<../.gitbook/assets/Screen Shot 2020-08-10 at 6.08.15 PM.png>)
 
 ## Writing queries
 
 In the query editor, select the JSON data source created above and enter the query parameters. The query parameters use the YAML syntax. For E.g.
 
-![](<../../.gitbook/assets/Screen Shot 2020-08-10 at 6.07.39 PM.png>)
+![](<../.gitbook/assets/Screen Shot 2020-08-10 at 6.07.39 PM.png>)
 
 ## Providing HTTP Options
 
@@ -48,5 +48,5 @@ fields: ["volumeInfo.authors","volumeInfo.title","volumeInfo.publisher","accessI
 
 The resulting data from the above query is a nicely formatted table that can be searched in LOGIQ or made available as a widget in a dashboard
 
-![](<../../.gitbook/assets/Screen Shot 2020-08-10 at 6.25.44 PM.png>)
+![](<../.gitbook/assets/Screen Shot 2020-08-10 at 6.25.44 PM.png>)
 
