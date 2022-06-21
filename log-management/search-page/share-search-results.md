@@ -4,8 +4,6 @@ LOGIQ's built-in search engine makes the search queries you build and run in LOG
 
 Once you share a search result, LOGIQ stores the search keywords, query, namespace, applications, time range, and the search results themselves for 30 days.
 
-![](<../../.gitbook/assets/Untitled Diagram.png>)
-
 ## Share a Search
 
 To share a search result, do the following:
@@ -15,9 +13,9 @@ To share a search result, do the following:
 3. Toggle the **Share** button to generate a shareable URL.
 4. Copy and store the generated URL for future use.
 
-![The Share search results button](<../../.gitbook/assets/image (6) (2) (1).png>)
+![](<../../.gitbook/assets/image (26).png>)
 
-![Naming your search and generating a shareable URL](<../../.gitbook/assets/Untitled Diagram(1).png>)
+![](<../../.gitbook/assets/image (16).png>)
 
 You can now share this URL in any way you please. Those who access this URL will be able to view **** and sort through the search results you shared.
 
@@ -29,7 +27,7 @@ You can now share this URL in any way you please. Those who access this URL will
 
 LOGIQ saves shared searches for quick access in the search bar under **Favorites**. You can access **Favorites** by clicking the **Show Favorites** button in the search bar.&#x20;
 
-![](<../../.gitbook/assets/Share Search(3).png>)
+![](<../../.gitbook/assets/image (15).png>)
 
 
 

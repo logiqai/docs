@@ -28,7 +28,7 @@ The **Dashboards** page on the LOGIQ UI lists all of the dashboards you've creat
 
 
 
-![A typical monitoring dashboard on LOGIQ](<../.gitbook/assets/image (16).png>)
+![A typical monitoring dashboard on LOGIQ](<../.gitbook/assets/image (16) (1).png>)
 
 ![Another example of a LOGIQ dashboard](<../.gitbook/assets/image (14).png>)
 
@@ -54,7 +54,7 @@ You can also click into a specific application or ProcID to view logs in more de
 
 The following image depicts a typical Explore page on the LOGIQ UI.&#x20;
 
-![The Explore Page](<../.gitbook/assets/image (26).png>)
+![The Explore Page](<../.gitbook/assets/image (26) (1).png>)
 
 
 
