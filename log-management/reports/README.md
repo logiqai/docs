@@ -12,19 +12,19 @@ Reporting feature comes in handy when required to periodically search and aggreg
 
 * From the logline, click on "create batch report"
 
-![](<../../.gitbook/assets/image (16) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (25).png>)
 
 * From the favourite searches
 
-![](../../.gitbook/assets/search-favs.png)
+![](<../../.gitbook/assets/report (2).png>)
 
 * From the create dropdown
 
-![](../../.gitbook/assets/create.png)
+![](<../../.gitbook/assets/create (1).png>)
 
 Onclick of any of the above options opens the. "Create Reports" modal.
 
-![](../../.gitbook/assets/report.png)
+![](../../.gitbook/assets/report\_1.png)
 
 ### Group By
 
@@ -63,7 +63,7 @@ Following aggregation operators are available.
 
 Saved reports can be accessed from the Queries Page. If the query is running, this page will show the progress.&#x20;
 
-![](../../.gitbook/assets/view-reports.png)
+![](<../../.gitbook/assets/image (29).png>)
 
 Click on any report to view the results. Click on the toggle to enable periodic refresh.
 

@@ -24,7 +24,7 @@ A dashboard is a collection of visualizations and queries that you've created ag
 
 The **Dashboards** page on the LOGIQ UI lists all of the dashboards you've created within LOGIQ. Dashboards that you've favorited are marked with a yellow star icon and are also listed under the **Dashboards** dropdown menu for quick access in the navigation bar. The following images depict dashboards that you can create using LOGIQ.&#x20;
 
-![Dashboards Page shows list of dashboards.](<../.gitbook/assets/image (25).png>)
+![Dashboards Page shows list of dashboards.](<../.gitbook/assets/image (25) (1).png>)
 
 
 
