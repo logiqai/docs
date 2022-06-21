@@ -4,7 +4,7 @@ The LOGIQ UI is your window to your IT data, logs, and metrics - ingested from a
 
 You can access the LOGIQ UI by logging into your LOGIQ instance URL using your account credentials.&#x20;
 
-![](<../.gitbook/assets/image (28).png>)
+![](<../.gitbook/assets/image (28) (1).png>)
 
 The navigation bar at the right side of the UI allows you to access your:
 
