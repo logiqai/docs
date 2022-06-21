@@ -61,8 +61,9 @@
 
 ## DATA MANAGEMENT
 
-* [Data extraction](data-management/data-extraction.md)
-* [Log Data Rewrite](data-management/data-rewrite.md)
+* [Rule Types](data-management/rule-types/README.md)
+  * [Extract Rules](data-management/rule-types/extract-rules.md)
+  * [Rewrite Rules](data-management/rule-types/rewrite-rules.md)
 * [Timestamp handling](data-management/timestamp-handling.md)
 
 ## Monitoring
@@ -92,7 +93,7 @@
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
 * [Alerts On Logs](logiq-events/alerts.md)
-* [Rule Packs](logiq-events/rule-packs.md)
+* [Rule Packs](logiq-events/events.md)
 
 ## API
 

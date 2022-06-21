@@ -1,4 +1,4 @@
-# Log Data Rewrite
+# Rewrite Rules
 
 Your incoming log data might include Personally Identifiable Information (PII) that can identify an individual, either on its own or in combination with other relevant data. You may need to redact or replace PII or other sensitive data to stay compliant with data security regulations or support your business use case. LOGIQ supports the creation and use of custom regular expressions that match patterns in your incoming data stream and mask or replace these matched patterns.
 
@@ -53,7 +53,7 @@ It is crucial to be mindful of the context of the regular expression you create 
 
 You can create a custom rewrite rule to match and mask PII in your log data from the Rules section on your LOGIQ UI. To access create a new rule, click **Events** > **Rules** > **+ New Rule**.
 
-![](../.gitbook/assets/rw1\_2021-08-25\_20-44-05.jpg)
+![](../../.gitbook/assets/rw1\_2021-08-25\_20-44-05.jpg)
 
 To configure your rewrite rule, do the following.&#x20;
 
