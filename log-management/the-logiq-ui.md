@@ -30,7 +30,7 @@ The **Dashboards** page on the LOGIQ UI lists all of the dashboards you've creat
 
 ![A typical monitoring dashboard on LOGIQ](<../.gitbook/assets/image (16) (1).png>)
 
-![Another example of a LOGIQ dashboard](<../.gitbook/assets/image (14).png>)
+![Another example of a LOGIQ dashboard](<../.gitbook/assets/image (14) (1).png>)
 
 ## **Queries**
 

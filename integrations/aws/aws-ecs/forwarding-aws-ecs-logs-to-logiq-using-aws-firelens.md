@@ -73,7 +73,7 @@ To set up log forwarding on AWS ECS, do the following.
 
 Your ECS container logs will now be forwarded to your LOGIQ instance and will be visible on the **Logs** page on the LOGIQ UI. The **Namespace** will be mapped to your ECS cluster name and **Application** is mapped to the task definition name.&#x20;
 
-![](<../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1).png>)
 
 ### Creating a custom Fluent Bit image to include custom parsers
 

@@ -92,8 +92,7 @@
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
 * [Alerts On Logs](logiq-events/alerts.md)
-* [Events](logiq-events/events.md)
-* [Event Rules](logiq-events/event-rules.md)
+* [Rule Packs](logiq-events/rule-packs.md)
 
 ## API
 
