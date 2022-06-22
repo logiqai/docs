@@ -38,7 +38,7 @@ management.endpoints.web.exposure.include=health,info,prometheus
 
 Restart the server and navigate to `http://localhost:<port>/actuator/` to verifiy if the Actuator endpoints are enabled.&#x20;
 
-![Actuator Endpoints](<../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)
+![Actuator Endpoints](<../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
 
 Navigate to `http://localhost:<port>/actuator/prometheus` and verify if your Prometheus metrics are being displayed.
 
@@ -52,7 +52,7 @@ Micrometer comes with a [timed annotation](https://micrometer.io/docs/concepts#\
 
 Restart the server, invoke your APIs a few times and navigate to `http://localhost:<port>/actuator/prometheus`. You will now see the API stats being displayed along with other metrics.&#x20;
 
-![](<../../.gitbook/assets/image (14) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (14) (1) (1) (1) (1).png>)
 
 Once these metrics are available, you can use LOGIQ to visualize them and set up alerts for important events. The following image depicts an example of Spring Boot monitoring dashboard built by visualizing metrics ingested into LOGIQ via Prometheus.&#x20;
 

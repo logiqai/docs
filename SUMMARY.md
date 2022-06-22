@@ -72,7 +72,7 @@
   * [Writing PromQL Compatible queries](monitoring/prometheus/querying-data.md)
 * [Elasticsearch Data source](monitoring/elasticsearch-data-source.md)
 * [JSON Data source](monitoring/json-data-source.md)
-  * [LOGIQ Search Cheat Sheet](log-management/search-page/search-cheat-sheet.md)
+  * [LOGIQ Search Cheat Sheet](vewing-logs/search-page/search-cheat-sheet.md)
 * [Prometheus Remote Write](monitoring/prometheus-remote-write.md)
 
 ## LOG MANAGEMENT
@@ -92,6 +92,7 @@
 
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
+* [Use Log Pattern-Signature](logiq-events/use-log-pattern-signature.md)
 * [Alerts On Logs](logiq-events/alerts.md)
 * [Rule Packs](logiq-events/events.md)
 
