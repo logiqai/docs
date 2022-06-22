@@ -6,7 +6,7 @@ description: Log Pattern-Signature explained and its usage.
 
 ## Log Pattern-Signature Explained
 
-Machine log is known hard to use due to its non-structured or semi-structured nature.  The non-conforming format plus its volume growth velocity make it challenging to extract values using conventional means such as search and monitoring.  LOGIQ.ai normalizes all incoming logs into Pattern-Signature (PS).  PS grouping or clustering all the ingested logs based on their underlying logging structure, in the structure-data term, Schema.&#x20;
+Machine log is known difficult to analyze due to its non-structured or semi-structured nature.  The non-conforming format plus its volume growth velocity make it challenging to extract values using conventional means such as search and monitoring.  LOGIQ.ai normalizes all incoming logs into Pattern-Signature (PS).  PS grouping or clustering all the ingested logs based on their underlying logging structure, in the structure-data term, Schema.&#x20;
 
 Current popular logging unifies the logs into key-value paired JSON form for simplifying the process.  Nevertheless, such practice limits logging potential which is analogous to limiting the data to only one schema   Moreover, the majority of the logs are still not in JSON form and the process is not guaranteed.
 
