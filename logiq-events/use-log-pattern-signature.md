@@ -1,5 +1,5 @@
 ---
-description: Log Pattern-Signature explained and its use.
+description: Log Pattern-Signature explained and its usage.
 ---
 
 # Use Log Pattern-Signature
