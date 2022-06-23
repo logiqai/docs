@@ -1,8 +1,8 @@
 ---
-description: Log Pattern-Signature explained and its usage.
+description: Log Pattern-Signature explained, usage, and configure.
 ---
 
-# Log Pattern-Signature
+# Pattern-Signature Usage and Configure
 
 ## Log Pattern-Signature Explained
 
