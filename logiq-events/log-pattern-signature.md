@@ -2,13 +2,13 @@
 description: Log Pattern-Signature explained and its usage.
 ---
 
-# Use Log Pattern-Signature
+# Log Pattern-Signature
 
 ## Log Pattern-Signature Explained
 
 Machine log is known difficult to analyze due to its non-structured or semi-structured nature.  The non-conforming format plus its volume growth velocity make it challenging to extract values using conventional means such as search and monitoring.  LOGIQ.ai normalizes all incoming logs into Pattern-Signature (PS).  PS grouping or clustering all the ingested logs based on their underlying logging structure, in the structure-data term, Schema.&#x20;
 
-Current popular logging unifies the logs into key-value paired JSON form for simplifying the process.  Nevertheless, such practice limits logging potential which is analogous to limiting the data to only one schema   Moreover, the majority of the logs are still not in JSON form and the process is not guaranteed.
+The current logging method tries to unify the logs into a machine-like format such as homogeneous field assignments or key-value pair JSON format for simplifying the post analytics.  The practice, however, limits logging capability which is analogous to limiting all the observability log data to only one schema.  Moreover, a homogeneous machine log form is not intuitive and notoriously difficult to interpret.  The use of the advanced Pattern-Signature AI/ML method will make it fruitful.&#x20;
 
 LOGIQ.ai Pattern-Signature autonomously derives the underlying schema for every log stream, see the example below,
 
@@ -97,10 +97,45 @@ Click on the search icon to further drill down to one PS type.&#x20;
 
 LOGIQ.ai provides a robust platform for comparing logs from two different periods or different log partition spaces such as different namespaces or applications.  See the figure below where the PS comparison is made for the different time intervals of 12 hours.&#x20;
 
-Investigation Group #1, IG1.
+Investigation Group #1, IG1.  Notice that there are two tab groups; IG#1 and IG#2.  The tab group access method is shown below.&#x20;
 
-![](../.gitbook/assets/t7-2022-06-21\_14-26-57.jpg)
+![](../.gitbook/assets/ig1-ig2-2022-06-21\_14-26-57.jpg)
 
 Investigation Group #2, IG2.
 
 ![](../.gitbook/assets/t8-t5-2022-06-18\_04-02-55.jpg)
+
+## Configuring Pattern-Signature
+
+Pattern-Signature feature is activated and controlled via the configuration steps below,
+
+* 1\) Go to the menu item “Ingest Configuration” to display the PS configuration fillers.
+* 2\) Four rows are used to manage PS features: “PS\_Configure”, “PS\_STREAM\_ENABLE”, “PS\_STEAM\_MAX\_SIZE”, “PS\_TOTAL\_STREAM\_MAX\_SIZE”.
+
+![](../.gitbook/assets/ps-cfg-1-2022-06-21\_20-36-10.jpg)
+
+### PS\_STREAM\_MAX\_SIZE
+
+Maximum number of Pattern-Signatures (PS) that each namespace-application log stream can create. The ingestion turns off the Pattern-Signature engine and assigns default null PS id \*6 to that log stream. The default max count is set to 8,000.
+
+### PS\_TOTAL\_STREAM\_MAX\_SIZE
+
+A maximum number of total Pattern-Signatures (PS) the cluster can create. Once the total maximum count is reached, subsequent log event PS will be set to default PS id \*6. The default max count is set to 20,000.
+
+### PS\_STREAM\_ENABLE
+
+**\[ ( \<ns> \<app>,)\*]**
+
+\<ns> is the namespace string, a valid namespace specifier.
+
+\<app> is the application name string, a valid application specifier.
+
+### PS\_CONFIG
+
+Reserved for internal uise.
+
+### PS Id Default Code
+
+* \*3 : Disable PS generation at the top level.
+* \*4 : PS feature is turned off from log stream configuration or FlashOps level.
+* \*6 : Exceed PS count at either total PS count or per log stream PS count max.
