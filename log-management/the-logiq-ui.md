@@ -4,7 +4,7 @@ The LOGIQ UI is your window to your IT data, logs, and metrics - ingested from a
 
 You can access the LOGIQ UI by logging into your LOGIQ instance URL using your account credentials.&#x20;
 
-![](<../.gitbook/assets/image (28) (1).png>)
+![](<../.gitbook/assets/image (28) (1) (1).png>)
 
 The navigation bar at the right side of the UI allows you to access your:
 
@@ -24,11 +24,11 @@ A dashboard is a collection of visualizations and queries that you've created ag
 
 The **Dashboards** page on the LOGIQ UI lists all of the dashboards you've created within LOGIQ. Dashboards that you've favorited are marked with a yellow star icon and are also listed under the **Dashboards** dropdown menu for quick access in the navigation bar. The following images depict dashboards that you can create using LOGIQ.&#x20;
 
-![Dashboards Page shows list of dashboards.](<../.gitbook/assets/image (25) (1).png>)
+![Dashboards Page shows list of dashboards.](<../.gitbook/assets/image (25) (1) (1).png>)
 
 
 
-![A typical monitoring dashboard on LOGIQ](<../.gitbook/assets/image (16) (1).png>)
+![A typical monitoring dashboard on LOGIQ](<../.gitbook/assets/image (16) (1) (1).png>)
 
 ![Another example of a LOGIQ dashboard](<../.gitbook/assets/image (14) (1).png>)
 
@@ -44,7 +44,7 @@ LOGIQ enables you to set alerts against events, data, or metrics of interest der
 
 The following image depicts a typical **Alerts** page on the LOGIQ UI.&#x20;
 
-![](<../.gitbook/assets/image (17).png>)
+![](<../.gitbook/assets/image (17) (1).png>)
 
 ## Explore
 

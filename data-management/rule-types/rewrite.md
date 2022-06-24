@@ -1,6 +1,20 @@
-# Rewrite Rules
+# Rewrite
 
 Your incoming log data might include Personally Identifiable Information (PII) that can identify an individual, either on its own or in combination with other relevant data. You may need to redact or replace PII or other sensitive data to stay compliant with data security regulations or support your business use case. LOGIQ supports the creation and use of custom regular expressions that match patterns in your incoming data stream and mask or replace these matched patterns.
+
+Select a log line user want to create a Rewrite rule, click on the ellipsis available on the logline  and click on the "create rule"
+
+![](<../../.gitbook/assets/image (25).png>)
+
+In the modal that opens, select REWRIE and enter the details.&#x20;
+
+![](<../../.gitbook/assets/image (29).png>)
+
+Like every other rule, Enter Name, Group, Parameters to filter (optional), and Pattern.
+
+![](<../../.gitbook/assets/image (27).png>)
+
+LOGIQ uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.&#x20;
 
 ### Example: Removing names and phone numbers from log data
 
@@ -51,29 +65,28 @@ It is crucial to be mindful of the context of the regular expression you create 
 
 ### Creating a PII masking rule via the UI
 
-You can create a custom rewrite rule to match and mask PII in your log data from the Rules section on your LOGIQ UI. To access create a new rule, click **Events** > **Rules** > **+ New Rule**.
+You can create a custom rewrite rule to match and mask PII in your log data from the Rules section on your LOGIQ UI. To access create a new rule, click **Rules** > **Rule Packs** > **+ New Rule**
 
-![](../../.gitbook/assets/rw1\_2021-08-25\_20-44-05.jpg)
+![](<../../.gitbook/assets/image (35).png>)
+
+
 
 To configure your rewrite rule, do the following.&#x20;
 
-1. Select **Re-Write** from the **Rule Type** dropdown menu.
+1. Select **REWRITE** Option
 2. Provide a **Name** for your rule.&#x20;
-3. Select a **Level** and **Group**.&#x20;
+3. Select a **Group**.&#x20;
 4. Provide a **Description** of the rule.&#x20;
 5. Specify the **Namespace** to apply the rule.&#x20;
 6. Optionally, provide an **ApplicationMatch** to match the application where you'd like to use the rule.&#x20;
 7. Provide your **Match** and **Rewrite** expressions. &#x20;
-8. Optionally, add match parameters.&#x20;
+8. Optionally, Add more Parameters to filter data
 9. Click **Create Rule**.&#x20;
 
-Your new rewrite rule is now created. You new rule will apply to all incoming log data for the specified namespace, look for patterns within the log data that match the match expression, and rewrite log data as per the rewrite expression.&#x20;
+![](<../../.gitbook/assets/image (15).png>)
 
+Your new rewrite rule is now created. Your new rule will apply to all incoming log data for the specified namespace, look for patterns within the log data that match the match expression, and rewrite log data as per the rewrite expression.&#x20;
 
+LOGIQ offers many inbuilt rules for obfuscating sensitive information like credit card numbers, SSN, phone numbers, etc...
 
-
-
-
-
-
-
+![](<../../.gitbook/assets/image (22).png>)

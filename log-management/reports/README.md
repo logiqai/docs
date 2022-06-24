@@ -12,7 +12,7 @@ Reporting feature comes in handy when required to periodically search and aggreg
 
 * From the logline, click on "create batch report"
 
-![](<../../.gitbook/assets/image (25).png>)
+![](<../../.gitbook/assets/image (25) (1).png>)
 
 * From the favourite searches
 
@@ -63,7 +63,7 @@ Following aggregation operators are available.
 
 Saved reports can be accessed from the Queries Page. If the query is running, this page will show the progress.&#x20;
 
-![](<../../.gitbook/assets/image (29) (1).png>)
+![](<../../.gitbook/assets/image (29) (1) (1).png>)
 
 Click on any report to view the results. Click on the toggle to enable periodic refresh.
 

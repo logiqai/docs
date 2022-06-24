@@ -38,7 +38,7 @@ management.endpoints.web.exposure.include=health,info,prometheus
 
 Restart the server and navigate to `http://localhost:<port>/actuator/` to verifiy if the Actuator endpoints are enabled.&#x20;
 
-![Actuator Endpoints](<../../.gitbook/assets/image (16) (1) (1) (1) (1).png>)
+![Actuator Endpoints](<../../.gitbook/assets/image (16) (1) (1) (1) (1) (1).png>)
 
 Navigate to `http://localhost:<port>/actuator/prometheus` and verify if your Prometheus metrics are being displayed.
 
@@ -56,5 +56,5 @@ Restart the server, invoke your APIs a few times and navigate to `http://localho
 
 Once these metrics are available, you can use LOGIQ to visualize them and set up alerts for important events. The following image depicts an example of Spring Boot monitoring dashboard built by visualizing metrics ingested into LOGIQ via Prometheus.&#x20;
 
-![Logiq Spring Boot Monitoring Dashboard](<../../.gitbook/assets/image (17) (1) (1) (1) (1) (1).png>)
+![Logiq Spring Boot Monitoring Dashboard](<../../.gitbook/assets/image (17) (1) (1) (1) (1) (1) (1).png>)
 

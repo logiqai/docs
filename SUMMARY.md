@@ -43,11 +43,10 @@
   * [Forwarding Amazon-Linux logs to LOGIQ using Fluent Bit](integrations/fluent-bit/forwarding-amazon-linux-logs-to-logiq-using-fluent-bit.md)
   * [Fluent Bit installation on Ubuntu](integrations/fluent-bit/fluent-bit-installation-on-ubuntu.md)
   * [Enabling IoT(MQTT) Input  (PAAS)](integrations/fluent-bit/enabling-iot-mqtt-input-paas.md)
+  * [IIS Logs on Windows](integrations/fluent-bit/iis-logs-on-windows.md)
 * [Fluentd](integrations/fluentd.md)
 * [FortiNet Firewalls](integrations/fortinet-firewalls.md)
 * [GCP Cloud Logging](integrations/gcp-cloud-logging.md)
-* [IIS Logs on Windows](integrations/iis-logs-on-windows.md)
-  * [Example IIS Log Event Extraction Using Event Rules](logiq-events/example-iis-log-event-extraction-using-event-rules.md)
 * [Incident management](logiq-ui-configuration/alert-destinations.md)
 * [Kafka](integrations/kafka.md)
 * [Logstash](integrations/logstash.md)
@@ -62,8 +61,10 @@
 ## DATA MANAGEMENT
 
 * [Rule Types](data-management/rule-types/README.md)
-  * [Extract Rules](data-management/rule-types/extract-rules.md)
-  * [Rewrite Rules](data-management/rule-types/rewrite-rules.md)
+  * [Filter](data-management/rule-types/filter.md)
+  * [Extract](data-management/rule-types/extract.md)
+  * [Rewrite](data-management/rule-types/rewrite.md)
+  * [SIEM and TAG](data-management/rule-types/siem-and-tag.md)
 * [Timestamp handling](data-management/timestamp-handling.md)
 
 ## Monitoring
@@ -81,7 +82,7 @@
 * [Terminology](log-management/logs-terminology.md)
 * [Explore Logs](log-management/logs-page.md)
   * [Share Search Results](log-management/search-page/share-search-results.md)
-* [Metrics and Custom Indices](log-management/metrics-and-custom-indices.md)
+* [Log2Metrics](log-management/metrics-and-custom-indices.md)
 * [Reports](log-management/reports/README.md)
   * [Accessing Reports results via API](log-management/reports/accessing-api-results-via-api.md)
 * [logiqctl](log-management/logiqctl/README.md)
