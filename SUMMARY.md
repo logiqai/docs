@@ -93,7 +93,7 @@
 
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
-* [Pattern-Signature Usage and Configure](logiq-events/pattern-signature-usage-and-configure.md)
+* [Log Pattern-Signature](logiq-events/log-pattern-signature.md)
 * [Alerts On Logs](logiq-events/alerts.md)
 * [Rule Packs](logiq-events/events.md)
 
