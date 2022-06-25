@@ -2,7 +2,7 @@
 
 The Filter rule filters events that meet its Filter criteria. This is useful when you want to control the data volumes. Assume that you do not want to store and debug/info logs, you can create a Filter rule that would drop all the log lines that are either info or debug. Filter rule can also drop the fields available in the log line without dropping the entire line.
 
-Select a log line user want to create an extract rule, click on the ellipsis available on the logline  and click on the "create rule"
+Select a log line to create an extract rule, click on the ellipsis available on the logline and click on the "create rule".
 
 ![](<../../.gitbook/assets/image (25).png>)
 

@@ -54,7 +54,7 @@ You can also click into a specific application or ProcID to view logs in more de
 
 The following image depicts a typical Explore page on the LOGIQ UI.&#x20;
 
-![The Explore Page](<../.gitbook/assets/image (26) (1).png>)
+![The Explore Page](<../.gitbook/assets/image (26) (1) (1).png>)
 
 
 

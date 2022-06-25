@@ -61,11 +61,12 @@
 ## DATA MANAGEMENT
 
 * [Overview](data-management/overview.md)
-* [Rule Types](data-management/rule-types/README.md)
-  * [Filter](data-management/rule-types/filter.md)
-  * [Extract](data-management/rule-types/extract.md)
-  * [Rewrite](data-management/rule-types/rewrite.md)
-  * [SIEM and TAG](data-management/rule-types/siem-and-tag.md)
+* [Rules](data-management/rules/README.md)
+  * [Filter](data-management/rules/filter.md)
+  * [Extract](data-management/rules/extract.md)
+  * [Rewrite](data-management/rules/rewrite.md)
+  * [SIEM and TAG](data-management/rules/siem-and-tag.md)
+  * [Forward](data-management/rules/forward.md)
 * [Timestamp handling](data-management/timestamp-handling.md)
 
 ## Monitoring
