@@ -1,6 +1,6 @@
 # Overview
 
-LOGIQ automatically parses various log formats. JSON-formatted logs are processed automatically.&#x20;
+LOGIQ automatically parses various log formats. Custom rules can be applied to the incoming log streams which are discussed in the [Rules](rule-types/) Section.
 
 #### Embedded JSON
 
