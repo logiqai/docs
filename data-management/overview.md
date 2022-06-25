@@ -1,0 +1,35 @@
+# Overview
+
+LOGIQ automatically parses various log formats. JSON-formatted logs are processed automatically.&#x20;
+
+#### Embedded JSON
+
+The LOGIQ looks for any well-formatted JSON string embedded in the incoming log line when logs are not JSON-formatted. If there are any, the LOGIQ extracts the key-value pairs and makes them available in the structured data. Fileds get flattened if the nested fields are available in the embedded JSON.
+
+```
+// Unstructured log line with structured data embedded.
+user login attempt {"user":"LGQ123","type":"admin","is_active":1}
+```
+
+LOGIQ extracts `user`, `type`, and `is_active` fields from the above line.
+
+#### Key-Value Pairs
+
+Apart from identifying formatted JSON, LOGIQ also checks for any key-value pairs in the incoming data and makes that available in the structured data.&#x20;
+
+```
+// Unstructured log line with key-value pairs.
+user login attempt user:LGQ123 type=admin is_active:=1
+```
+
+LOGIQ extracts `user`, `type`, and `is_active` fields from the above line.
+
+{% hint style="info" %}
+Teams spend enormous time cleaning data to get a sense of it; readily available fields make reporting, searching, and filtering easier.
+{% endhint %}
+
+#### IP addresses
+
+LOGIQ detects IP addresses in the log lines and extracts them as a separate field. Logs are enriched with geo-location information if public IP addresses are available, making it easier for users to visualize traffic patterns.
+
+![](<../.gitbook/assets/image (13).png>)

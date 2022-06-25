@@ -52,7 +52,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 * Under **Prerequisite - Prepare template**, select **Template is ready**.
 * Under **Specify template** > **Template source**, select **Amazon S3 URL -** Here you will specify the template URL from Step 1 above.
 
-![](<../.gitbook/assets/image (13) (1).png>)
+![](<../.gitbook/assets/image (13) (1) (1).png>)
 
 **Step 4**: To deploy the EKS cluster, we need to enter the **Custom AMI-ID** using which the **node groups of EKS** will be spun up. We need a VPC with 2 subnets. Select them from the Network Configuration and Subnet configuration dropdown lists. Also, provide the ssh-keys for the EKS node groups.
 
