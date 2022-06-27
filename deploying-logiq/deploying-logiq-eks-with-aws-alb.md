@@ -162,7 +162,7 @@ If you have deployed the Logiq on private subnet, you may need to map global acc
 
 If you want to route traffic on http(port:80), ensure your listener rules are configured on port 80
 
-![](<../.gitbook/assets/image (16) (2).png>)
+![](<../.gitbook/assets/image (16) (1) (1) (1).png>)
 
 If you want to route traffic on https(port:443), ensure your listener rules are configured on port 443. As a prerequisite, your global accelerator should have all the certificates configured for this to work.
 

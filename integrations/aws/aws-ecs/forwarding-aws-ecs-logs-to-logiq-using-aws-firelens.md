@@ -69,7 +69,7 @@ To set up log forwarding on AWS ECS, do the following.
 
 * Once you are done with the setup, you should see a logrouter container along with your container (for example, the **`wordpress`** container below).
 
-![](<../../../.gitbook/assets/image (15) (2).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1) (1).png>)
 
 Your ECS container logs will now be forwarded to your LOGIQ instance and will be visible on the **Logs** page on the LOGIQ UI. The **Namespace** will be mapped to your ECS cluster name and **Application** is mapped to the task definition name.&#x20;
 

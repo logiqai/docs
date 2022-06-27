@@ -96,6 +96,11 @@
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
 * [Log Pattern-Signature](logiq-events/log-pattern-signature.md)
+* [Time Series Insights](logiq-events/time-series-insights/README.md)
+  * [Anomaly Detection](logiq-events/time-series-insights/anomaly-detection.md)
+  * [Averaging](logiq-events/time-series-insights/averaging.md)
+  * [Standard Deviation(STD)](logiq-events/time-series-insights/standard-deviation-std.md)
+  * [Forecasting](logiq-events/time-series-insights/forecasting.md)
 * [Alerts On Logs](logiq-events/alerts.md)
 * [Rule Packs](logiq-events/events.md)
 
