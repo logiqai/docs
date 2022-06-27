@@ -109,6 +109,8 @@
 * [Overview](data-sources/overview.md)
 * [Elasticsearch Data source](monitoring/elasticsearch-data-source.md)
 * [JSON Data source](monitoring/json-data-source.md)
+* [PostgreSQL Data Source](data-sources/postgresql-data-source.md)
+* [MongoDB Data Source](data-sources/mongodb-data-source.md)
 
 ## API
 
