@@ -2,6 +2,7 @@
 
 LOGIQ monitoring is powered by Prometheus. LOGIQ offers various ways to bring your monitoring data into the platform.&#x20;
 
+* [Open Telemetry Metrics](../../integrations/open-telemetry.md)
 * [Prometheus Remote Write](../prometheus-remote-write.md)
 * Prometheus Datasource
 * Amazon Managed Service for Prometheus (AMP) Datasource
