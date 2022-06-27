@@ -69,20 +69,21 @@
   * [Forward](data-management/rules/forward.md)
 * [Timestamp handling](data-management/timestamp-handling.md)
 
-## Monitoring
+## Data Source Monitoring
 
-* [Prometheus Data Source](monitoring/prometheus/README.md)
-  * [Writing PromQL Compatible queries](monitoring/prometheus/querying-data.md)
-* [Elasticsearch Data source](monitoring/elasticsearch-data-source.md)
-* [JSON Data source](monitoring/json-data-source.md)
-  * [LOGIQ Search Cheat Sheet](vewing-logs/search-page/search-cheat-sheet.md)
-* [Prometheus Remote Write](monitoring/prometheus-remote-write.md)
+* [Prometheus Data Source](data-source-monitoring/prometheus/README.md)
+  * [Prometheus Remote Write](data-source-monitoring/prometheus/prometheus-remote-write.md)
+  * [Amazon Managed Service for Prometheus](data-source-monitoring/prometheus/amazon-managed-service-for-prometheus.md)
+  * [Writing PromQL Compatible queries](data-source-monitoring/prometheus/querying-data.md)
+* [Elasticsearch Data source](data-source-monitoring/elasticsearch-data-source.md)
+* [JSON Data source](data-source-monitoring/json-data-source.md)
 
 ## LOG MANAGEMENT
 
 * [The LOGIQ UI](log-management/the-logiq-ui.md)
 * [Terminology](log-management/logs-terminology.md)
 * [Explore Logs](log-management/logs-page.md)
+  * [LOGIQ Search Cheat Sheet](log-management/explore-logs/search-cheat-sheet.md)
   * [Share Search Results](log-management/search-page/share-search-results.md)
 * [Log2Metrics](log-management/metrics-and-custom-indices.md)
 * [Reports](log-management/reports/README.md)
