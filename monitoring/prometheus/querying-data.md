@@ -2,10 +2,10 @@
 
 LOGIQ's Prometheus integration allows querying data from the query editor. Enter the PromQL query and see your data and create visualizations in an instant
 
-![](<../.gitbook/assets/image (37).png>)
+![](<../../.gitbook/assets/image (37).png>)
 
 {% hint style="info" %}
-Head over to the [Time Series Insights](../logiq-events/time-series-insights/) section to read about how to apply various anomaly and forecasting capabilities.
+Head over to the [Time Series Insights](../../logiq-events/time-series-insights/) section to read about how to apply various anomaly and forecasting capabilities.
 {% endhint %}
 
 ### Query language
