@@ -54,8 +54,9 @@
 * [Open Telemetry](integrations/open-telemetry.md)
 * [Palo Alto Firewall](integrations/palo-alto-firewall.md)
 * [Prometheus](integrations/prometheus/README.md)
-  * [Prometheus on Windows](integrations/prometheus/prometheus-on-windows.md)
   * [Spring Boot](integrations/prometheus/spring-boot.md)
+  * [Prometheus on Windows](integrations/prometheus/prometheus-on-windows.md)
+  * [Prometheus Remote Write](integrations/prometheus/prometheus-remote-write.md)
 * [Rsyslogd](integrations/rsyslogd.md)
 
 ## DATA MANAGEMENT
@@ -69,14 +70,11 @@
   * [Forward](data-management/rules/forward.md)
 * [Timestamp handling](data-management/timestamp-handling.md)
 
-## Data Source Monitoring
+## Prometheus Monitoring
 
-* [Prometheus Data Source](monitoring/prometheus/README.md)
-  * [Prometheus Remote Write](monitoring/prometheus-remote-write.md)
-  * [Amazon Managed Service for Prometheus](data-source-monitoring/prometheus/amazon-managed-service-for-prometheus.md)
-  * [Writing PromQL Compatible queries](monitoring/prometheus/querying-data.md)
-* [Elasticsearch Data source](monitoring/elasticsearch-data-source.md)
-* [JSON Data source](monitoring/json-data-source.md)
+* [Prometheus Data Source](prometheus-monitoring/prometheus/README.md)
+  * [Amazon Managed Service for Prometheus](prometheus-monitoring/prometheus/amazon-managed-service-for-prometheus.md)
+  * [Writing PromQL Compatible queries](prometheus-monitoring/prometheus/querying-data.md)
 
 ## LOG MANAGEMENT
 
@@ -104,6 +102,12 @@
   * [Forecasting](logiq-events/time-series-insights/forecasting.md)
 * [Alerts On Logs](logiq-events/alerts.md)
 * [Rule Packs](logiq-events/events.md)
+
+## DATA SOURCES
+
+* [Overview](data-sources/overview.md)
+* [Elasticsearch Data source](data-sources/elasticsearch-data-source.md)
+* [JSON Data source](data-sources/json-data-source.md)
 
 ## API
 
