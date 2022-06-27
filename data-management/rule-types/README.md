@@ -15,7 +15,7 @@ To access inbuilt rules click on the "Rules" menu available in the navigations b
 
 Click on individual Rule Packs to see the rules, click "New Rule" button to add a rule to the existing pack.
 
-![](<../../.gitbook/assets/image (31).png>)
+![](<../../.gitbook/assets/image (31) (1).png>)
 
 Current active rules can be viewed under the "Active Rules" menu
 

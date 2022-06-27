@@ -2,7 +2,7 @@
 
 Alerts can be configured from log data from the Search Page. if we want to get alerted on a line of log that is of interest, the user can directly create an **alertable** **event** from the log line.
 
-![](<../.gitbook/assets/image (33) (1).png>)
+![](<../.gitbook/assets/image (33) (1) (1).png>)
 
 &#x20;On clicking the <img src="../.gitbook/assets/Screen Shot 2020-08-11 at 5.34.40 PM.png" alt="" data-size="original">on the log line, user can open the log2Metric event rule editor. Refer to [Metrics And Custom Indices](../log-management/metrics-and-custom-indices.md) section on how to configure log2Metrics. Alert Configuration is available on the third section of log2Metrics modal.&#x20;
 
@@ -35,7 +35,7 @@ All the configured alerts are viewable when navigating to the alerts tab. An Ind
 
 Clicking on the configured alert will open up the respective alert page where it can be modified further for e.g. change the alert rearm duration, add additional alert destinations etc.
 
-![](<../.gitbook/assets/image (31) (1).png>)
+![](<../.gitbook/assets/image (31) (1) (1).png>)
 
 {% hint style="warning" %}
 LOGIQ includes alerts from it's Prometheus alert manager instance that is included with the LOGIQ install. NOTE that the editing of the Prometheus alert rules cannot be done via the UI and must use alert manager CRD's to change those alert rules.

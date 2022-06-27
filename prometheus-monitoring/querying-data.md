@@ -1,8 +1,12 @@
 # Writing PromQL Compatible queries
 
-LOGIQ's Prometheus integration allows querying data from the query editor. Just enter a PromQL query and see your data and create visualizations in an instant
+LOGIQ's Prometheus integration allows querying data from the query editor. Enter the PromQL query and see your data and create visualizations in an instant
 
-![](<../../.gitbook/assets/Screen Shot 2020-04-27 at 6.13.01 PM.png>)
+![](<../.gitbook/assets/image (37).png>)
+
+{% hint style="info" %}
+Head over to the [Time Series Insights](../logiq-events/time-series-insights/) section to read about how to apply various anomaly and forecasting capabilities.
+{% endhint %}
 
 ### Query language
 
@@ -14,7 +18,7 @@ Let's look at an example
 query=go_gc_duration_seconds&duration=15m&step=60
 ```
 
-In the above query, we are looking for the `go_gc_duration_seconds` metric, sampled at 60 second intervals and duration for which data is needed which is the last 15 minutes.
+In the above query, we are looking for the `go_gc_duration_seconds` metric, sampled at 60-second intervals and duration for which data is needed which is the last 15 minutes.
 
 The Prometheus Query API expects `start_time` and `end_time` to be provided in queries. LOGIQ has a simplified `duration` syntax that is compatible with the Prometheus Query API.&#x20;
 

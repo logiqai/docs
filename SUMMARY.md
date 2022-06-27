@@ -56,7 +56,7 @@
 * [Prometheus](integrations/prometheus/README.md)
   * [Spring Boot](integrations/prometheus/spring-boot.md)
   * [Prometheus on Windows](integrations/prometheus/prometheus-on-windows.md)
-  * [Prometheus Remote Write](integrations/prometheus/prometheus-remote-write.md)
+  * [Prometheus Remote Write](monitoring/prometheus-remote-write.md)
 * [Rsyslogd](integrations/rsyslogd.md)
 
 ## DATA MANAGEMENT
@@ -72,9 +72,10 @@
 
 ## Prometheus Monitoring
 
-* [Prometheus Data Source](prometheus-monitoring/prometheus/README.md)
-  * [Amazon Managed Service for Prometheus](prometheus-monitoring/prometheus/amazon-managed-service-for-prometheus.md)
-  * [Writing PromQL Compatible queries](prometheus-monitoring/prometheus/querying-data.md)
+* [Overview](monitoring/prometheus/README.md)
+  * [Connecting Prometheus](prometheus-monitoring/prometheus/connecting-prometheus.md)
+  * [Connecting Amazon Managed Service for Prometheus](prometheus-monitoring/prometheus/connecting-amazon-managed-service-for-prometheus.md)
+* [Writing PromQL Compatible queries](prometheus-monitoring/querying-data.md)
 
 ## LOG MANAGEMENT
 
@@ -106,8 +107,8 @@
 ## DATA SOURCES
 
 * [Overview](data-sources/overview.md)
-* [Elasticsearch Data source](data-sources/elasticsearch-data-source.md)
-* [JSON Data source](data-sources/json-data-source.md)
+* [Elasticsearch Data source](monitoring/elasticsearch-data-source.md)
+* [JSON Data source](monitoring/json-data-source.md)
 
 ## API
 

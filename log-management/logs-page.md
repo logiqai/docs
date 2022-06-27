@@ -10,7 +10,7 @@ The Explore page lists all of the log streams generated across your IT environme
 
 You can also click into a specific application or ProcID to view logs in more detail and to search through or identify patterns within your log data.&#x20;
 
-![Explore Page](<../.gitbook/assets/image (31) (1) (1).png>)
+![Explore Page](<../.gitbook/assets/image (31) (1) (1) (1).png>)
 
 ## Search Tab
 
