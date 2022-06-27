@@ -10,15 +10,17 @@ description: >-
 
 The first step in to create the data source and provide the Elasticsearch cluster URL and optionally provide  the basic auth `login` and `password`.
 
-![Configuring the Elasticsearch data source](<../.gitbook/assets/Screen Shot 2020-08-10 at 5.26.18 PM.png>)
+
+
+![Configuring the Elasticsearch data sour](../.gitbook/assets/elastic-1.png)
 
 ## Writing queries
 
-In the query editor view, select the _Elasticsearch data source_ created above. On the left column, click on the refresh <img src="../.gitbook/assets/Screen Shot 2020-08-10 at 10.07.50 PM.png" alt="" data-size="original"> icon to refresh the schemas (indexes). The schemas are expandible and show the schema details.
+In the query editor view, select the _Elasticsearch data source_ created above. On the left column, click on the refresh <img src="../.gitbook/assets/Screen Shot 2020-08-10 at 10.07.50 PM.png" alt="" data-size="original"> icon to refresh the schemes (indexes). The schemes are expandable and show the schema details.
 
-![Refresh and lookup Elasticsearch indexes](<../.gitbook/assets/Screen Shot 2020-08-10 at 10.06.48 PM.png>)
+![Refresh and lookup Elasticsearch indexes](../.gitbook/assets/elastic-2.png)
 
-&#x20;You can then proceed to the query editor and run the search query. The query uses JSON as passed to the Elasticsearch search API
+You can then proceed to the query editor and run the search query. The query uses JSON as passed to the Elasticsearch search API
 
-![Writing a search query against an Elasticsearch index](<../.gitbook/assets/Screen Shot 2020-08-10 at 10.09.21 PM.png>)
+![Writing a search query against an Elasticsearch index](../.gitbook/assets/elastic-3.png)
 
