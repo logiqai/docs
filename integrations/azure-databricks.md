@@ -174,6 +174,4 @@ ssh ubuntu@machine-ip -p 2200 -i <private_key_file_path>
 systemctl restart td-agent-bit
 ```
 
-Now, when you log into your LOGIQ UI, you should see the logs from your Azure Databricks cluster being ingested.
-
-![](../.gitbook/assets/Databrick.png)
+Now, when you log into your LOGIQ UI, you should see the logs from your Azure Databricks cluster being ingested. See the [Explore](../log-management/logs-page.md) Section to view the logs.

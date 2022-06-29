@@ -1,7 +1,5 @@
 # Prometheus on Windows
 
-Prometheus is a free software application used for event monitoring and alerting. It records real-time metrics in a time series database built using an HTTP pull model, with flexible queries and real-time alerting.
-
 For monitoring Windows with Prometheus, a Windows exporter needs to be installed which is the equivalent of [Node exporter](https://github.com/prometheus/node\_exporter) for Windows. This exporter will start an HTTP endpoint, exposing metrics that will enable Prometheus to scrape them.
 
 #### Windows exporter (node) installation:

@@ -6,8 +6,6 @@ LOGIQ uses an ingest token to secure the ingestion of log data from your data so
 
 You can obtain a secure ingest token from the Edit Profile page on the LOGIQ UI.
 
-![Edit Profile](<../.gitbook/assets/image (12) (1) (1) (1).png>)
-
 To begin, click on the user name on the navbar, and then click "**Edit Profile**". Your secure ingest token will be displayed under the **Ingest Token** field. Click the **Copy** icon next to the token to copy it to your clipboard.&#x20;
 
 ![Ingest Token](../.gitbook/assets/inesttoken.png)
