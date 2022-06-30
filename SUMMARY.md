@@ -107,10 +107,25 @@
 ## DATA SOURCES
 
 * [Overview](data-sources/overview.md)
-* [Elasticsearch Data source](monitoring/elasticsearch-data-source.md)
-* [JSON Data source](monitoring/json-data-source.md)
-* [PostgreSQL Data Source](data-sources/postgresql-data-source.md)
-* [MongoDB Data Source](data-sources/mongodb-data-source.md)
+* [API](data-sources/api/README.md)
+  * [JSON Data source](data-sources/api/json-data-source.md)
+  * [RSS](data-sources/api/rss.md)
+* [OLAP](data-sources/olap/README.md)
+  * [Data Bricks](data-sources/olap/data-bricks.md)
+  * [Druid](data-sources/olap/druid.md)
+  * [Snowflake](data-sources/olap/snowflake.md)
+  * [Amazon Redshift](data-sources/olap/amazon-redshift.md)
+* [NoSQL Data Sources](data-sources/nosql-data-sources/README.md)
+  * [MongoDB](data-sources/nosql-data-sources/mongodb.md)
+  * [Amazon Elasticsearch Service](data-sources/nosql-data-sources/amazon-elasticsearch-service.md)
+  * [Elasticsearch](data-sources/nosql-data-sources/elasticsearch-data-source.md)
+  * [InfluxDB](data-sources/nosql-data-sources/influxdb.md)
+* [SQL Data Sources](data-sources/sql-data-sources/README.md)
+  * [PostgreSQL](data-sources/sql-data-sources/postgresql.md)
+  * [Amazon Athena](data-sources/sql-data-sources/amazon-athena.md)
+  * [Microsoft SQL Server](data-sources/sql-data-sources/microsoft-sql-server.md)
+  * [MySQL Server](data-sources/sql-data-sources/mysql-server.md)
+  * [MySQL Server (Amazon RDS)](data-sources/sql-data-sources/mysql-server-amazon-rds.md)
 
 ## API
 

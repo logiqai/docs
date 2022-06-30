@@ -12,7 +12,7 @@ In the modal that opens, select EXTRACT and enter the details.&#x20;
 
 Like every other rule, Enter Name, Group, Parameters to filter (optional), and Pattern.
 
-![](<../../.gitbook/assets/image (27).png>)
+![](<../../.gitbook/assets/image (27) (1).png>)
 
 LOGIQ uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.&#x20;
 

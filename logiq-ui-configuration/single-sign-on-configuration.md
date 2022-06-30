@@ -11,20 +11,21 @@ LOGIQ can be set up for user login using Single Sign-On (SSO) with SAML by confi
 Login with your admin credentials. Click on `Settings` menu. Enable _"SAML configuration"_ checkbox. \
 Add SAML **Metadata URL, Entity ID, NameID Format.**
 
-Check below on specific [steps for your Identity provider](single-sign-on-configuration.md#idp-configuration)
+Check below for specific [steps for your Identity provider](single-sign-on-configuration.md#idp-configuration)
 
-![LOGIQ (Service Provider) configuration](<../.gitbook/assets/Screen Shot6.png>)
+![LOGIQ (Service Provider) configuration
+](../.gitbook/assets/saml-1.png)
 
-If user-groups are configured on IDP side, create the identical user groups in LOGIQ. This can be done by clicking on "_Settings"_ menu and going to Groups tab. This example shows creating "NonAdmin" user group.
+If user-groups are configured on the IDP side, create the identical user groups in LOGIQ. This can be done by clicking on the "_Settings"_ menu and going to the Groups tab. This example shows creating the "NonAdmin" user group.
 
-![](<../.gitbook/assets/Screen Shot 8.png>)
+![](../.gitbook/assets/saml-2.png)
 
 \
 This concludes the LOGIQ side configuration.
 
-Logout as LOGIQ admin. In the login Screen, "SAML Login" Button should be available to login with the user's SSO credentials.  By clicking the button browser is redirected to the IDP screen where user can login using its  IDP credentials.
+Logout as LOGIQ admin. On the login screen, the "SAML Login" Button should be available to login with the user's SSO credentials.  By clicking the button browser is redirected to the IDP screen where the user can login using its  IDP credentials.
 
-![](<../.gitbook/assets/Screen Shot7.png>)
+![](../.gitbook/assets/saml-3.png)
 
 ## IDP configuration
 
@@ -35,19 +36,20 @@ The following attributes are required. The LOGIQ mappings for each of the attrib
 * First name (FirstName) and Last name (LastName)
 * Group name **** (LogiqGroups)
 
-Use following SAML Assertion Consumer Service (ACS) url&#x20;
+Use following SAML Assertion Consumer Service (ACS) URL
 
 {% hint style="info" %}
 _https://**\<LOGIQ UI IP/Domain>**/saml/callback?org\_slug=default_
 {% endhint %}
 
-With this you should be able to access a SAML metadata URL or SAML metadata file.
+With this, you should be able to access a SAML metadata URL or SAML metadata file.
 
 ### Okta Configuration
 
-This section describes Okta configuration in detail. Users should assume the Okta admin role and start in the Okta control panel by clicking the button to add a new application. Choose `Web` as the platform. The sign-on method is **SAML 2.0**.
+This section describes the Okta configuration in detail. Users should assume the Okta admin role and start in the Okta control panel by clicking the button to add a new application. The sign-on method is **SAML 2.0**.
 
-![Create a New App](<../.gitbook/assets/Screen Shot1.png>)
+![Create a New App
+](../.gitbook/assets/saml-4.png)
 
 On the next screen OKTA has fields for a few URLs:
 
@@ -62,7 +64,7 @@ https://\<LOGIQ domain name>/saml/callback?org\_slug=default\
 Set Name ID format: **EmailAddress**\
 Application username: **Email**
 
-![ACS URL](<../.gitbook/assets/Screen Shot2.png>)
+![](../.gitbook/assets/saml-5.png)
 
 **Configure Attribute statements:**
 
@@ -84,27 +86,39 @@ The `default` group in LOGIQ has access to all data sources. It is highly recomm
 | --------------- | --------------- | ---------------- |
 | **LogiqGroups** | Basic           | Equals: NonAdmin |
 
-![Attribute Setup](<../.gitbook/assets/Screen Shot3.png>)
+![](../.gitbook/assets/saml-6.png)
 
-Continue to create the application as guided by OKTA instructions. Once the application is successfully created, take note of the following information. This is **needed to configure LOGIQ.**&#x20;
+Continue to create the application as guided by OKTA instructions. Once the application is successfully created, the page will navigate to the **Sign On** tab.
 
-1. SAML Metadata URL: "Identity Provider Metadata" URL depicted below in blue can be clicked to find out SAML metadata URL.&#x20;
+![Sign On tab](../.gitbook/assets/saml-7.png)
 
-![](<../.gitbook/assets/Screen Shot4.1.png>)
+Here choose the **SHA-2** certificate and click on the **Actions** button and choose the **View IdP metadata** option.
 
-2\. Entity ID: By navigating to "View Setup Instruction" shown in the above snapshot, You can find Entity ID.
+![](../.gitbook/assets/saml-8.png)
 
-![](<../.gitbook/assets/Screen Shot4.2.png>)
 
-3\. NameIDFormat: NameID can be found in the SAML metadata by searching NameIDFormat, shown as selected gray text in the picture below.
 
-![NameIDFormat in saml metadata](<../.gitbook/assets/Screen Shot4.3.png>)
+This will open a new tab. Here take note of the following information. This is **needed to configure LOGIQ.**&#x20;
+
+****
+
+1. **SAML Metadata URL**: "Identity Provider Metadata" URL depicted below in blue can be copied as a SAML metadata URL or the whole contents of the page can be stored somewhere on the cloud and the path to that file can be used as SAML metadata URL
+
+![](../.gitbook/assets/saml-9.png)
+
+2\. **Entity ID**: On the same page shown in the above snapshot, You can find Entity ID.
+
+![](../.gitbook/assets/saml-10.png)
+
+3\. **NameIDFormat**: NameID can be found in the SAML metadata by searching NameIDFormat, shown as selected blue text in the picture below.
+
+![NameIDFormat in saml metadata](<../.gitbook/assets/saml-11 (1).png>)
 
 Navigate back to the app and edit "**Audience Restriction**" and set it with the IDP issuer described in #2 above.
 
-![](<../.gitbook/assets/Screen Shot5.png>)
+![](../.gitbook/assets/saml-11.png)
 
-If already not there, create users and user groups such as`NonAdmin` in this example. Users and user groups can be also be brought in with inbound federation with ADFS or other identity providers.\
+If already not there, create users and user groups such as`NonAdmin` in this example. Users and user groups can also be brought in with inbound federation with ADFS or other identity providers.\
 Assign the users to the Application or group such as `NonAdmin` in this example to the Application. This concludes the IDP side configuration.
 
 

@@ -12,7 +12,7 @@ In the modal that opens, select FILTER and enter the details.&#x20;
 
 Like every other rule, Enter Name, Group, and Parameters to filter.
 
-![](<../../.gitbook/assets/image (27).png>)
+![](<../../.gitbook/assets/image (27) (1).png>)
 
 ## Filter Fields
 
