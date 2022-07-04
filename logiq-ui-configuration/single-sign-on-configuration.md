@@ -125,6 +125,47 @@ Assign the users to the Application or group such as `NonAdmin` in this example 
 
 ### Google GSuite Configuration
 
+Navigate to Admin Console and go to the "Web and mobile apps" section
+
+![](<../.gitbook/assets/image (35).png>)
+
+Click on "Add custom SAML app"
+
+![](<../.gitbook/assets/image (26).png>)
+
+Fill in the "App details"
+
+![](<../.gitbook/assets/image (36).png>)
+
+Download the Idp Metadata file and host the file in a publically accessible location like AWS S3.
+
+![](../.gitbook/assets/saml.png)
+
+Enter the service provider details
+
+* ACS URL is the LOGIQ domain assigned to you appended with **`/saml/callback?org_slug=default`**
+* Enter a unique identifier as Entity ID
+* Choose Name ID format as `EMAIL`
+* Name ID as `First name`
+
+![](<../.gitbook/assets/image (29).png>)
+
+In the attributes section, either map a "Google Directory attributes" or Group membership to `LOGIQGROUPS`.&#x20;
+
+![](<../.gitbook/assets/image (18).png>)
+
+SAML app by default is disabled in Google, enable it and wait for a few mins and try logging in.
+
+![](<../.gitbook/assets/image (33).png>)
+
+Next head over to the LOGIQ SAML configuration screen in the settings. Select "SAML Enabled", and fill in the details.&#x20;
+
+![](<../.gitbook/assets/image (17).png>)
+
+Now you are ready to use SAML login, Logout, and log back in using the SAML Login option.&#x20;
+
+
+
 {% embed url="https://www.youtube.com/watch?v=pTVHkxcp4mg" %}
 LOGIQ with Google as SAML2.0 IDP Configuration
 {% endembed %}

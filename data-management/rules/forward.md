@@ -10,9 +10,9 @@ Select a log line to create a forward rule, click on the ellipsis available on t
 
 In the modal that opens, select FORWARD and enter the details. In this case, logs only get forwarded if the given condition is satisfied.
 
-![](<../../.gitbook/assets/image (26).png>)
+![](<../../.gitbook/assets/image (26) (1).png>)
 
 Optionally toggle "Forward Labels" and select the fields that need to be forwarded. In this case, if the condition is satisfied, only the selected fields get forwarded.
 
-![](<../../.gitbook/assets/image (18).png>)
+![](<../../.gitbook/assets/image (18) (1).png>)
 

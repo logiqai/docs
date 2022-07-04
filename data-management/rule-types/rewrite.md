@@ -8,7 +8,7 @@ Select a log line user want to create a Rewrite rule, click on the ellipsis avai
 
 In the modal that opens, select REWRIE and enter the details.&#x20;
 
-![](<../../.gitbook/assets/image (29).png>)
+![](<../../.gitbook/assets/image (29) (1).png>)
 
 Like every other rule, Enter Name, Group, Parameters to filter (optional), and Pattern.
 
@@ -67,7 +67,7 @@ It is crucial to be mindful of the context of the regular expression you create 
 
 You can create a custom rewrite rule to match and mask PII in your log data from the Rules section on your LOGIQ UI. To access create a new rule, click **Rules** > **Rule Packs** > **+ New Rule**
 
-![](<../../.gitbook/assets/image (35).png>)
+![](<../../.gitbook/assets/image (35) (1).png>)
 
 
 

@@ -45,7 +45,7 @@ The search happens at the namespace level, select the namespace and applications
 
 Use facets to narrow your search results. LOGIQ's intelligent parsing engine extracts facets at the time of data ingestion. Facets are available on the left side of search results. Select a facet and click on the "apply" button to fetch more results. Filtered results will be displayed in a separate tab.
 
-![](<../.gitbook/assets/image (29) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (29) (1) (1) (1) (1).png>)
 
 
 

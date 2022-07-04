@@ -18,7 +18,7 @@ Like every other rule, Enter Name, Group, and Parameters to filter.
 
 Users can optionally choose to filter selected fields instead of the entire logs line. This is useful in cases when logs contain metadata like the Kubernetes labels that may not be needed to store long term. To enable Field filtering toggle "Labels to Drop" and select or enter fields in the dropdown.
 
-![](<../../.gitbook/assets/image (17).png>)
+![](<../../.gitbook/assets/image (17) (1).png>)
 
 Once the rule is created all the incoming log lines that match the criteria are dropped before sending storage or downstream systems.
 
