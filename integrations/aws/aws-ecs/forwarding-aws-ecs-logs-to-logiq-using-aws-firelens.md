@@ -4,7 +4,7 @@ Amazon Web Services (AWS) Fargate is a serverless compute engine for containers 
 
 ### Configuring AWS FireLens to forward logs <a href="#1-configuring-aws-firelens-to-forward-logs" id="1-configuring-aws-firelens-to-forward-logs"></a>
 
-Possibly the most significant advantage with AWS FireLens is that you can connect it to almost any service endpoint as long as data sinks can process general-purpose JSON over HTTP, FluentForward, or TCP protocols. FireLens transforms log outputs of ECS containers and generates the routing configuration needed for sending logs to the logging service.&#x20;
+Possibly the most significant advantage of AWS FireLens is that you can connect it to almost any service endpoint as long as data sinks can process general-purpose JSON over HTTP, FluentForward, or TCP protocols. FireLens transforms log outputs of ECS containers and generates the routing configuration needed for sending logs to the logging service.&#x20;
 
 The **`awsfirelens`** log driver allows you to specify Fluentd or Fluent Bit output plugin configurations. Your application container logs are routed to a sidecar or independent FireLens container inside your cluster, which further routes your container logs to their destination as defined in your task **`logConfiguration`**. Additionally, you can use the **`options`** field of the **`FireLensConfiguration`** object in the task definition to serve any advanced use case.
 
@@ -67,13 +67,13 @@ To set up log forwarding on AWS ECS, do the following.
             }
 ```
 
-* Once you are done with the setup, you should see a logrouter container along with your container (for example, the **`wordpress`** container below).
+* Once you are done with the setup, you should see a logrouter container along with your container (for example, the **`wordpress`** the container below).
 
 ![](<../../../.gitbook/assets/image (15) (1) (1) (1).png>)
 
-Your ECS container logs will now be forwarded to your LOGIQ instance and will be visible on the **Logs** page on the LOGIQ UI. The **Namespace** will be mapped to your ECS cluster name and **Application** is mapped to the task definition name.&#x20;
+Your ECS container logs will now be forwarded to your LOGIQ instance and will be visible on the **Logs** page on the LOGIQ UI. The **Namespace** will be mapped to your ECS cluster name and the **Application** is mapped to the task definition name.&#x20;
 
-![](<../../../.gitbook/assets/image (18) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1).png>)
 
 ### Creating a custom Fluent Bit image to include custom parsers
 
@@ -92,7 +92,7 @@ docker build -t logiq-config
 docker tag image-id Username.dkr.region.amazon.com/logiqconfiguration
 ```
 
-* Doing this should match the repository on AWS ECR in order to push the image successfully. For more information, read: [https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html)).
+* Doing this should match the repository on AWS ECR in order to push the image successfully. For more information, read [https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html)).
 * Run the following command to get the Docker login credentials to AWS ECR. Use the same credentials to login.
 
 ```

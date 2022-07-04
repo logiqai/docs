@@ -12,14 +12,12 @@ Access to log data for users is managed by namespace controls. To learn more abo
 
 ## UI Controls
 
-When a user has restricted access to select namespaces, the UI will show only the namespaces the user can access for Logs, Search, and Events. In the example below, the user has restricted access to only 2 namespaces; `customer-tooling` and `rc-logiq:rc`
+When a user has restricted access to select namespaces, the UI will show only the namespaces the user can access for Logs, Search, and Events. In the example below, the user has restricted access to only 2 namespaces; `flash:advertise` and `prod-k8s:kube-system`
 
-![](<../.gitbook/assets/Screen Shot 2020-08-11 at 8.54.05 AM.png>)
+![](<../.gitbook/assets/Screenshot from 2022-07-04 16-16-00.png>)
 
 ## Logiqctl Controls
 
-LOGIQ's cli provides a similar restriction when a user tries to access resources under Role-based access controls. In the example below, the same user can be seen to only access the same namespaces;`customer-tooling` and `rc-logiq:rc`
+LOGIQ's CLI provides a similar restriction when a user tries to access resources under Role-based access controls. In the example below, the same user can be seen to only access the same namespaces;`flash:advertise` and `prod-k8s:kube-system`
 
-![](<../.gitbook/assets/Screen Shot 2020-08-11 at 9.09.19 AM.png>)
-
-&#x20;
+![](<../.gitbook/assets/Screenshot from 2022-07-04 16-18-31.png>)
