@@ -152,7 +152,7 @@ Enter the service provider details
 
 In the attributes section, either map a "Google Directory attributes" or Group membership to `LOGIQGROUPS`.&#x20;
 
-![](<../.gitbook/assets/image (18).png>)
+![](<../.gitbook/assets/image (27).png>)
 
 SAML app by default is disabled in Google, enable it and wait for a few mins and try logging in.
 
