@@ -9,11 +9,15 @@ description: >-
 When an alert triggers, LOGIQ Insights sends alert details to its designated alert destinations. LOGIQ Insights supports the following types of alert destinations.
 
 * **E-mail**
-* **Slack**
-* **PagerDuty**&#x20;
-* **OpsGenie**
-* **ServiceNow**
+* **ChatWork**
 * **Generic Webhook**
+* **HipChat**
+* **Mattermost**
+* **OpsGenie**
+* **PagerDuty**
+* **ServiceNow**
+* **Slack**
+* **Zenduty**
 
 ## Configuring Destinations
 
@@ -45,7 +49,7 @@ In your [slack](https://my.slack.com/services/new/incoming-webhook/) console, pi
 
 In your LOGIQ Insight's UI, Open the “Alert Destinations” tab in the settings screen, and click on ”+ New Alert Destination”. Pick “Slack” as the type. Set the name, channel, etc, and provide a “Slack Webhook URL”, from above
 
-![Slack Destination Configuration](<../.gitbook/assets/Screen Shot 2020-08-11 at 1.39.49 PM.png>)
+![Slack Destination Configuration](../.gitbook/assets/slack.png)
 
 ### Pager Duty <a href="#pagerduty" id="pagerduty"></a>
 
