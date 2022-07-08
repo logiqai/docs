@@ -19,7 +19,7 @@ LOGIQ supports data ingestion from Syslog-ng. The following instructions describ
 
 **Syslog-ng** supports both TCP and UDP protocols, LOGIQ recommends ingestion of logs over TCP protocol to ensure packets are not lost or dropped. TCP relies on acknowledgments from the receiver to make sure the packet is delivered.
 
-LOGIQ.AI hosts the lumberjack protocol at port **26514.** The ports are configurable and can be changed if needed.
+LOGIQ.AI hosts the lumberjack protocol at port **514.** The ports are configurable and can be changed if needed.
 
 ### **INPUT**
 
