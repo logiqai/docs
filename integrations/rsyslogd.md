@@ -1,9 +1,9 @@
 # Rsyslogd
 
-Please see below on how to configure Rsyslog to send to LOGIQ server. Rsyslog can send data to LOGIQ using either TCP transport or RELP transport. The RELP module for Rsyslog is called `omrelp` and for the TCP forward is called `omfwd`
+Please see below how to configure Rsyslog to send to the LOGIQ server. Rsyslog can send data to LOGIQ using either TCP transport or RELP transport. The RELP module for Rsyslog is called `omrelp` and for the TCP forward is called `omfwd`
 
 {% hint style="warning" %}
-LOGIQ strongly recommends sending data using the RELP transport to ensure packets are not lost or dropped. RELP relies on acknowledgements from the receiver to make sure packet is delivered. LOGIQ, for its part only sends the acknowledgements back once the data is written to persistent store.
+LOGIQ strongly recommends sending data using the RELP transport to ensure packets are not lost or dropped. RELP relies on acknowledgments from the receiver to make sure the packet is delivered. LOGIQ, for its part only sends the acknowledgments back once the data is written to the persistent store.
 {% endhint %}
 
 ### Using omfwd

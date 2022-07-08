@@ -58,6 +58,7 @@
   * [Prometheus on Windows](integrations/prometheus/prometheus-on-windows.md)
   * [Prometheus Remote Write](monitoring/prometheus-remote-write.md)
 * [Rsyslogd](integrations/rsyslogd.md)
+* [Syslog-ng](integrations/syslog-ng.md)
 
 ## DATA MANAGEMENT
 
