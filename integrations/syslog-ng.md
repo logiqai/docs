@@ -42,7 +42,7 @@ source s_local {
 };
 ```
 
-The below configuration accepts system logs from /dev/log (from applications or forwarded by systemd) and writes everything to a single file before forwarding to LOGIQ:
+The below configuration accepts system logs from /dev/log (from applications or forwarded by systemd) and writes everything to a single file.
 
 ```
 @version: 3.36
