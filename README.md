@@ -1,9 +1,3 @@
----
-cover: >-
-  https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwxOTcwMjR8MHwxfHNlYXJjaHwzfHxkYXRhfGVufDB8fHx8MTY1NTQ0NTQwMQ&ixlib=rb-1.2.1&q=80
-coverY: 0
----
-
 # Overview
 
 ## LOGIQ.AI Full-stack Observability Data Fabric

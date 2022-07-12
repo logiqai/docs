@@ -24,4 +24,4 @@ Provide all  the details and Save.
 
 ![Adding the AMP data source](../../.gitbook/assets/AMP-2.png)
 
-That is all! Now Read about how to query Prometheus data in the [PromQL](../../monitoring/prometheus/querying-data.md) section.
+That is all! Now Read about how to query Prometheus data in the [PromQL](../querying-data.md) section.
