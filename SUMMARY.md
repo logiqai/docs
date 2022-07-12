@@ -73,10 +73,10 @@
 
 ## Infra & Application Monitoring
 
-* [Overview](infra-and-application-monitoring/prometheus/README.md)
-  * [Connecting Prometheus](infra-and-application-monitoring/prometheus/connecting-prometheus.md)
-  * [Connecting Amazon Managed Service for Prometheus](infra-and-application-monitoring/prometheus/connecting-amazon-managed-service-for-prometheus.md)
-* [Writing PromQL Compatible queries](infra-and-application-monitoring/querying-data.md)
+* [Overview](monitoring/prometheus/README.md)
+  * [Connecting Prometheus](prometheus-monitoring/prometheus/connecting-prometheus.md)
+  * [Connecting Amazon Managed Service for Prometheus](data-source-monitoring/prometheus/amazon-managed-service-for-prometheus.md)
+* [Writing PromQL Compatible queries](monitoring/prometheus/querying-data.md)
 
 ## LOG MANAGEMENT
 
