@@ -9,8 +9,8 @@ description: >-
 
 Event Rules are grouped into Rule Packs. Click Rules Page in the left navigation bar to access the Rule Packs page. Click on the individual Rule Pack to see the rules available in each pack.
 
-![](<../.gitbook/assets/image (14).png>)
+![](<../.gitbook/assets/image (14) (1).png>)
 
-![](<../.gitbook/assets/image (18) (1) (1).png>)
+![](<../.gitbook/assets/image (18) (1) (1) (1).png>)
 
 It is easy to narrow down and search for events that you care about using search and filtering. Various types of rules available in LOGIQ are described in DATA MANAGEMENT section

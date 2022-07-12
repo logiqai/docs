@@ -31,7 +31,7 @@ All the alert rules created can be accessed on the Active Rules page.
 
 All the configured alerts are viewable when navigating to the alerts tab. An Individual alerts' configuration can be edited on this page
 
-![](<../.gitbook/assets/image (29) (1) (1).png>)
+![](<../.gitbook/assets/image (29) (1) (1) (1).png>)
 
 Clicking on the configured alert will open up the respective alert page where it can be modified further for e.g. change the alert rearm duration, add additional alert destinations etc.
 

@@ -51,13 +51,13 @@ You are now ready to bring up the LOGIQ stack.
 ### Download container images
 
 ```
-$docker-compose -f docker-compose.quickstart.yml pull
+docker-compose -f docker-compose.quickstart.yml pull
 ```
 
 ### Bring up the stack
 
 ```
-$docker-compose -f docker-compose.quickstart.yml up -d
+docker-compose -f docker-compose.quickstart.yml up -d
 ```
 
 {% hint style="info" %}
@@ -69,7 +69,7 @@ $docker-compose -f docker-compose.quickstart.yml up -d
 If you are done with your evaluation and want to cleanup your environment, please run the following command to stop and delete the LOGIQ stack and free up the used system resources.
 
 ```
-$docker-compose -f docker-compose.quickstart.yml down -v
+docker-compose -f docker-compose.quickstart.yml down -v
 ```
 
 ## Test using LOGIQ UI
@@ -82,7 +82,9 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 ![](<../.gitbook/assets/Screen Shot 2022-03-19 at 8.11.14 AM.png>)
 
-![](<../.gitbook/assets/Screen Shot 2022-03-19 at 9.27.01 AM.png>)
+
+
+![](<../.gitbook/assets/image (20).png>)
 
 ## Ingesting data
 
@@ -90,13 +92,31 @@ For setting up data ingestion from your endpoints and applications into LOGIQ.AI
 
 **The quickstart compose file includes a test data tool** that will generate test log data and also has a couple of dashboards that show LOGIQ's APM capabilities.
 
-The test log data can be view under logs&#x20;
+The test log data can be viewed under Explore page&#x20;
 
-![](<../.gitbook/assets/Screen Shot 2022-03-19 at 9.32.49 AM.png>)
+![](<../.gitbook/assets/image (19).png>)
 
-Running search across logs can be initiated under Logs > Search
+Click on any Procid and you will be taken to the Flows page with detailed logs and a search view. You can search for any log pattern, searches can also be run using regex expressions along with conditional statements using Advanced search across a time period.
 
-![](<../.gitbook/assets/Screen Shot 2022-03-19 at 9.34.11 AM.png>)
+![](<../.gitbook/assets/image (21).png>)
+
+## Distributed Tracing
+
+Logiq.ai provides application performance monitoring (APM) which can help end-to-end monitoring for microservices architectures, traces can be sent over 14250 (gRPC port). To view traces, navigate to **Trace** page under Explore.&#x20;
+
+![](<../.gitbook/assets/image (29).png>)
+
+select the Service and a list of traces will appear on the right-hand side of the screen. The traces have titles that correspond to the **Operator** selector on the search form. The traces can be further analyzed by clicking on the Analyse icon which will pull up the entire logs for the corresponding trace-id.
+
+![](<../.gitbook/assets/image (14).png>)
+
+Analyze icon displays all the logs for the respective trace-id in a given time range.
+
+![](<../.gitbook/assets/image (22).png>)
+
+To view the detailed trace, you can select a specific trace instance and check details like the time taken by each service, errors during execution, and logs.
+
+![](<../.gitbook/assets/image (18).png>)
 
 ### Prometheus monitoring and alerting
 
@@ -120,10 +140,11 @@ LOGIQ service exposes the below ports
 * **20514** - RELP/Rsyslog / TCP - Non TLS
 * **9998** - Server administration web cli
 * **9999** - REST API
-* **8081** - GRPC ( needed for logiqctl CLI )
+* **8081** - gRPC ( needed for logiqctl CLI )
 * **80** - http
 * **443** - https
 * **24224/24225** - FluentForward protocol port / TLS
 * **3000** - Grafana instance (optional), not available with quickstart
+* **14250** - gRPC(traces can be sent over gRPC)
 
 The ports used to bind are configurable via the server configuration file. See [Server options](broken-reference) for more details.

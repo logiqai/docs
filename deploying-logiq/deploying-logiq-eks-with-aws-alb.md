@@ -158,7 +158,7 @@ Note: The rules should be in the same order as shown below
 
 If you have deployed the Logiq on private subnet, you may need to map global accelerator (under Integrated services) to access the public endpoints and DNS on top of it.&#x20;
 
-![](<../.gitbook/assets/image (20) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (20) (1) (1) (1) (1) (1).png>)
 
 If you want to route traffic on http(port:80), ensure your listener rules are configured on port 80
 

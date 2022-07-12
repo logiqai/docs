@@ -69,7 +69,7 @@ az aks nodepool add --cluster-name logiqai --name db --resource-group azure-test
 
 
 
-![](<../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (18) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ## Connecting with your AKS cluster
 

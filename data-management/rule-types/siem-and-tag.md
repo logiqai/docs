@@ -8,4 +8,4 @@ LOGIQ has hundreds of inbuilt SIEM rules which can be accessed on the "Rules" pa
 
 ![Various Rule Packs](<../../.gitbook/assets/image (33) (1) (1).png>)
 
-![A sample Log2Metrics dashboard that tracks Security Incidents and status codes](<../../.gitbook/assets/image (20) (1).png>)
+![A sample Log2Metrics dashboard that tracks Security Incidents and status codes](<../../.gitbook/assets/image (20) (1) (1).png>)

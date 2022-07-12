@@ -1,6 +1,6 @@
-# Writing PromQL Compatible queries
+# Writing queries
 
-LOGIQ's Prometheus integration allows querying data from the query editor. Enter the PromQL query and see your data and create visualizations in an instant
+LOGIQ infra and application monitoring stack is compatible with Prometheus, Thanos, and Victoria Metrics and allows metrics to be pushed via the prometheus remote write protocol. This also allows user to query the metrics using standard PromQL style expressions. Using the query editor, type the PromQL query and see your data and create visualizations in an instant.
 
 ![](<../../.gitbook/assets/image (37).png>)
 

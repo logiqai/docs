@@ -8,7 +8,7 @@ Select a log line to create an extract rule, click on the ellipsis available on 
 
 In the modal that opens, select FILTER and enter the details.&#x20;
 
-![](<../../.gitbook/assets/image (19).png>)
+![](<../../.gitbook/assets/image (19) (1).png>)
 
 Like every other rule, Enter Name, Group, and Parameters to filter.
 

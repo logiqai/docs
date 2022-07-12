@@ -76,7 +76,7 @@
 * [Overview](monitoring/prometheus/README.md)
   * [Connecting Prometheus](prometheus-monitoring/prometheus/connecting-prometheus.md)
   * [Connecting Amazon Managed Service for Prometheus](data-source-monitoring/prometheus/amazon-managed-service-for-prometheus.md)
-* [Writing PromQL Compatible queries](monitoring/prometheus/querying-data.md)
+* [Writing queries](monitoring/prometheus/querying-data.md)
 
 ## LOG MANAGEMENT
 

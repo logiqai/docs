@@ -30,13 +30,13 @@ The **Dashboards** page on the LOGIQ UI lists all of the dashboards you've creat
 
 ![A typical monitoring dashboard on LOGIQ](<../.gitbook/assets/image (16) (1) (1).png>)
 
-![Another example of a LOGIQ dashboard](<../.gitbook/assets/image (14) (1).png>)
+![Another example of a LOGIQ dashboard](<../.gitbook/assets/image (14) (1) (1).png>)
 
 ## **Queries**
 
 LOGIQ enables you to write custom queries to analyze log data, display metrics and events, view and customize events and alerts, and create custom dashboards. The **Queries** page lists all of the queries you've created on LOGIQ. You can mark some of them as favorites or archive the ones, not in use. Your favorite queries also appear in the drop-down menu of the **Queries** tab for quick access.
 
-![](<../.gitbook/assets/image (21) (1).png>)
+![](<../.gitbook/assets/image (21) (1) (1).png>)
 
 ## **Alerts**
 

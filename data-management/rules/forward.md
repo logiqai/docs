@@ -14,5 +14,5 @@ In the modal that opens, select FORWARD and enter the details. In this case, log
 
 Optionally toggle "Forward Labels" and select the fields that need to be forwarded. In this case, if the condition is satisfied, only the selected fields get forwarded.
 
-![](<../../.gitbook/assets/image (18) (1).png>)
+![](<../../.gitbook/assets/image (18) (1) (1).png>)
 

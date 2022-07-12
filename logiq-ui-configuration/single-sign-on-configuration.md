@@ -148,7 +148,7 @@ Enter the service provider details
 * Choose Name ID format as `EMAIL`
 * Name ID as `First name`
 
-![](<../.gitbook/assets/image (29).png>)
+![](<../.gitbook/assets/image (29) (1).png>)
 
 In the attributes section, either map a "Google Directory attributes" or Group membership to `LOGIQGROUPS`.&#x20;
 
