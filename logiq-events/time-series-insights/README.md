@@ -1,7 +1,3 @@
----
-coverY: 0
----
-
 # Time Series Insights
 
 LOGIQ's baselining feature studies the query data in time series format using machine learning algorithms to implement Anomaly detection and forecasting of the data based on historical data. This feature also includes the mathematical implementation of moving averages and moving standard deviation on the query data. The above feature makes it easy for the user to visualize the behavior of the data from a time-series perspective.&#x20;
