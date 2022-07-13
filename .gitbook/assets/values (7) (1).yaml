@@ -259,7 +259,7 @@ global:
     infra: common
     other: common
     db: db 
-    cache: common
+    cache: db
     ingest_sync: common
   taints:
     enabled: false
@@ -305,7 +305,7 @@ global:
     storageClass: gp3
   chart:
     prometheus: true
-    postgres: true
+    postgres: false
     redis: true
     s3gateway: false 
     grafana: false

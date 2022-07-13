@@ -10,7 +10,7 @@ description: >-
 
 * Kubernetes 1.18, 1.19 or 1.20
 * Helm 3.2.0+
-* PV provisioner support in the underlying infrastructure
+* Dynamic PV provisioner support in the underlying infrastructure
 * ReadWriteMany volumes for deployment scaling
 
 LOGIQ K8S components are made available as helm charts. Please read and agree to the [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
@@ -34,7 +34,7 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 ```bash
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.4.13            2.1.29         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    v3.0.1            v3.0.1         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 #### 1.1.1 Update your HELM chart
@@ -45,7 +45,7 @@ If you already added LOGIQ's HELM repository in the past, you can get updated so
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    2.4.13            2.1.29         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    v3.0.1            v3.0.1         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -78,7 +78,7 @@ Sample YAML files for small, medium, large cluster configurations can be downloa
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../../.gitbook/assets/values.large (19).yaml" %}
+{% file src="../../.gitbook/assets/values.large (21).yaml" %}
 {% endtab %}
 {% endtabs %}
 
@@ -104,7 +104,7 @@ This will install LOGIQ and expose the LOGIQ services and UI on the ingress IP. 
 The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. HELM chart can override the default admin settings as well. See section[ 3.7](k8s-quickstart-guide.md#3-7-customize-admin-account) on customizing the admin settings
 {% endhint %}
 
-![Logiq Insights Login UI ](<../../.gitbook/assets/Screen Shot 2020-03-24 at 3.42.55 PM.png>)
+![Logiq Insights Login UI ](../../.gitbook/assets/landing.png)
 
 LOGIQ server provides Ingest, log tailing, data indexing, query, and search capabilities.\
 Besides the web-based UI, LOGIQ also offers [logiqctl, LOGIQ CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.

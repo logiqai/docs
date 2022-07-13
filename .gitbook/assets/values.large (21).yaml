@@ -5,7 +5,7 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: 2.1.24-rc41
+    tag: v3.0
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -153,7 +153,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.37-rc60
+      tag: brew.v3.0
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -164,7 +164,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 4
     image:
-      tag: brew.2.1.37-rc60
+      tag: brew.v3.0
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -212,6 +212,9 @@ ingress:
 
 kubernetes-ingress:
   controller:
+    image:
+      repository: k8s.gcr.io/ingress-nginx/controller
+      tag: "v1.2.0"
     replicaCount: 4
     ingressClass: logiq-ingress
     service:
@@ -227,15 +230,22 @@ kubernetes-ingress:
     create: true
     name: ingress-nginx
 
-prometheus-operator:
+
+prometheus:
   fullnameOverride: prometheus
   persistence:
     enabled: true
     size: 20Gi
   alertmanager:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   prometheus:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   operator:
     replicaCount: 1
   kube-state-metrics:
@@ -245,6 +255,7 @@ prometheus-operator:
 
 grafana:
   fullnameOverride: grafana
+
 
 logiqctl:
   image:

@@ -1,16 +1,16 @@
 logiq-flash:
-  replicaCount: 4
-  replicaCountMl: 2
-  replicaCountSync: 2
+  replicaCount: 1
+  replicaCountMl: 1
+  replicaCountSync: 1
   service:
     type: NodePort
   image:
-    tag: 2.2.20.rc1
+    tag: 2.2.7  
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
-    size: 100Gi
-    ml_size: 20Gi
+    size: 50Gi
+    ml_size: 50Gi
   metrics:
     serviceMonitor:
       enabled: true
@@ -22,7 +22,6 @@ logiq-flash:
         cpu: "1250m"
       requests:
         cpu: "1250m"
-        memory: "2750Mi"
     ml:
       limits:
         cpu: "1000m"
@@ -105,15 +104,15 @@ redis:
     name: redis
 
 postgres:
-  enabled: true
+  enabled: false
   fullnameOverride: postgres
   postgresqlPostgresPassword: postgres
   postgresqlUsername: postgres
   postgresqlDatabase: postgres
   postgresqlPassword: postgres
   postgresqlExtendedConf:
-    maxConnections: "1000"
-    sharedBuffers: "2048MB"
+    maxConnections: "400"
+    sharedBuffers: "1024MB"
   metrics:
     enabled: true
     serviceMonitor:
@@ -121,11 +120,11 @@ postgres:
     additionalLabels:
       release: prometheus
   persistence:
-    size: 100Gi
+    size: 50Gi
   resources:
     requests:
       memory: "4Gi"
-      cpu: "4000m"
+      cpu: "1000m"  
   securityContext:
     enabled: true
     fsGroup: 1001
@@ -138,9 +137,9 @@ flash-coffee:
   service:
     type: ClusterIP
   coffee:
-    replicaCount: 1
+    replicaCount: 2
     image:
-      tag: brew.2.1.56
+      tag: brew.LD-332.rc2
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -149,13 +148,13 @@ flash-coffee:
       limits:
         cpu: "1000m"
   coffee_worker:
-    replicaCount: 3
+    replicaCount: 4
     image:
-      tag: brew.2.1.56
+      tag: brew.LD-332.rc2
       pullPolicy: IfNotPresent
     resources:
       requests:
-        memory: "1Gi"
+        memory: "2Gi"
         cpu: "1000m"
       limits:
         cpu: "1000m"
@@ -194,23 +193,20 @@ s3gateway:
 ingress:
   enabled: true
   name: logiq-ingress
-  tlsEnabled: false
+  tlsEnabled: false 
   tlsSecretName: null
 
 kubernetes-ingress:
   controller:
-    image:
-      repository: k8s.gcr.io/ingress-nginx/controller
-      tag: "v1.2.0"
-    replicaCount: 2
+    replicaCount: 1
     ingressClass: logiq-ingress
     service:
-      type: LoadBalancer
+      type: LoadBalancer 
     defaultTLSSecret:
-      enabled: false
+      enabled: false 
       secret: null
   defaultBackend:
-    replicaCount: 2
+    replicaCount: 1
   podSecurityPolicy:
     enabled: true
   serviceAccount:
@@ -223,12 +219,12 @@ prometheus:
     enabled: true
     size: 20Gi
   alertmanager:
-    replicaCount: 1
+    replicaCount: 2
     persistence:
       enabled: true
       size: 20Gi
   prometheus:
-    replicaCount: 1
+    replicaCount: 2
     persistence:
       enabled: true
       size: 20Gi
@@ -239,9 +235,9 @@ prometheus:
   node-exporter:
     replicaCount: 1
 
+
 grafana:
   fullnameOverride: grafana
-
 
 logiqctl:
   image:
@@ -252,18 +248,19 @@ logiqctl:
 global:
   domain: null
   kubeDistributor:
-      enabled: false
+         enabled: false
   cloudProvider: aws
+  createStorageClass: true 
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
   nodeSelectors:
-    enabled: false
-    ingest: flash
-    infra: infra
-    other: coffee
-    db: db
-    cache: cache
-    ingest_sync: sync
+    enabled: true
+    ingest: ingest
+    infra: common
+    other: common
+    db: db 
+    cache: common
+    ingest_sync: common
   taints:
     enabled: false
     ingest: flash
@@ -295,19 +292,20 @@ global:
     s3_secret: "logiq_secret"
     s3_bucket: "logiq"
     s3_region: "us-east-1"
-    admin_name: "flash-admin@foo.com"
+    admin_name: "logiq"
     admin_password: "flash-password"
     admin_org: "flash-org"
     admin_email: "flash-admin@foo.com"
     license: "license/license.jws"
     upload_dashboard: true
     cluster_id: LOGIQ
-    awsServiceEndpoint: https://s3.us-east-1.amazonaws.com
+    awsServiceEndpoint: https://s3.us-east-1.amazonaws.com 
+    extraflag: "--use_aws_instance_profile --tail_longpoll true"
   persistence:
-    storageClass: standard
+    storageClass: gp3
   chart:
     prometheus: true
     postgres: true
     redis: true
-    s3gateway: true
+    s3gateway: false 
     grafana: false
