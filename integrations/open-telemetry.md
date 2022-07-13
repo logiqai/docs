@@ -1,4 +1,4 @@
-# Open Telemetry
+# OpenTelemetry
 
 ### Overview
 

@@ -8,7 +8,7 @@ E.g. if you are using InfluxDB, just use our InfluxDB connector and you can star
 
 In summary, LOGIQ.AI offers various ways to gather and utilize application and infrastructure metrics.
 
-* [Open Telemetry Metrics](../../integrations/opentelemetry.md)
+* [Open Telemetry Metrics](../../integrations/open-telemetry.md)
 * [Prometheus Remote Write](../prometheus-remote-write.md) Protocol
 * Query external Prometheus compatible Datasource
 * Amazon Managed Service for Prometheus (AMP) Datasource
