@@ -1,6 +1,6 @@
 # Traces
 
-LOGIQ.AI ingests traces and logs from OpenTelemetry and Jaeger collectors and implements scalable streaming and indexing of spans, traces and logs directly to any object storage. Users can search and visualize spans, traces, and logs using a simple intuitive built-in UI. Our UI borrows several key aspects from the Jaeger UI project for familiarity while integrating it seamlessly with our own infinitely scalable backend built on top of object storage.
+LOGIQ.AI ingests traces and logs from OpenTelemetry collector and Jaeger agent. It implements scalable streaming and indexing of spans, traces and logs directly to any object storage. Users can **search** and **visualize** **spans**, **traces**, and **logs** using a simple intuitive **built-in UI**. Our UI borrows several key aspects from the Jaeger UI project while integrating it seamlessly with LOGIQ.AI's infinitely scalable InstaStore backend built on top of object storage.
 
 ### Finding Traces
 
