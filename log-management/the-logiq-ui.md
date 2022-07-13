@@ -1,4 +1,4 @@
-# The LOGIQ UI
+# User Interface
 
 The LOGIQ UI is your window to your IT data, logs, and metrics - ingested from all of your data sources and converged onto a single layer. The LOGIQ UI enables you to perform a wide range of operations – from simple uptime monitoring and error troubleshooting to capacity planning, real-time forensics, performance studies, and many more.&#x20;
 

@@ -2,6 +2,8 @@
 
 Distributed tracing is a technique used to profile and debug distributed systems. A distributed system is a system where components are distributed across multiple machines. Distributed tracing allows you to trace the flow of a request as it goes through the different components of a distributed system. OpenTelemetry and Jaeger are two of the most popular distributed tracing tools.
 
+LOGIQ.AI implements protocol endpoints to ingest directly from both Jaeger and OpenTelemetry connectors while streaming and indexing the data to any object store. This makes the LOGIQ.AI implementation infinitely scalable for large volumes for trace data.
+
 ### OpenTelemetry
 
 OpenTelemetry is an open-source project that provides a set of APIs and SDKs for instrumenting applications.

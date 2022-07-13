@@ -3,7 +3,7 @@
 ## Introduction
 
 * [Overview](README.md)
-* [User Interface](introduction/the-logiq-ui.md)
+* [User Interface](log-management/the-logiq-ui.md)
 * [Releases](release-notes.md)
 
 ## EULA
