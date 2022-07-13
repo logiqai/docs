@@ -26,12 +26,10 @@ A few key points about Jaeger:
 
 ### Benefits
 
-Distributed tracing can be used to find performance bottlenecks, debug errors, and understand the flow of a request through a distributed system.
-
 Benefits of using distributed tracing technologies:
 
 1. Find performance bottlenecks
 2. Debug errors
 3. Understand the flow of a request through a distributed system.
 
-Using distributed tracing can help you to improve the performance of your distributed system and debug errors.
+Using distributed tracing can help your teams root cause issues faster. It's an area of increasing interest for developers and enterprises alike.
