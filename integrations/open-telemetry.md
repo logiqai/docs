@@ -62,3 +62,37 @@ service:
          exporters: [prometheusremotewrite]
 ```
 
+### OpenTelemetry Logs and Traces
+
+LOGIQ.AI supports ingesting Logs and Traces using OpenTelementry agents and collectors. We also maintain compatibility with Jaeger agent and collectors for ingesting logs and traces. This provides broad support for anyone with existing Jaeger agents and collectors deployed as well as someone wanting to adopt the emerging OpenTelemetry standard.
+
+See below for an example of configuring OpenTelemetry collector to push logs and traces to LOGIQ.AI
+
+```
+receivers:
+  otlp:
+    protocols:
+      grpc:
+
+exporters:
+  logging:
+
+  jaeger:
+    endpoint: <logiq-endpoint>:14250
+    tls:
+      insecure: true
+
+processors:
+  batch:
+
+extensions:
+  health_check:
+
+service:
+  extensions: [health_check]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [logging, jaeger]
+```

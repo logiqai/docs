@@ -3,6 +3,7 @@
 ## Introduction
 
 * [Overview](README.md)
+* [User Interface](introduction/the-logiq-ui.md)
 * [Releases](release-notes.md)
 
 ## EULA
@@ -80,7 +81,6 @@
 
 ## LOG MANAGEMENT
 
-* [The LOGIQ UI](log-management/the-logiq-ui.md)
 * [Terminology](log-management/logs-terminology.md)
 * [Explore Logs](log-management/logs-page.md)
   * [LOGIQ Search Cheat Sheet](vewing-logs/search-page/search-cheat-sheet.md)
@@ -93,6 +93,12 @@
   * [Obtaining API Key](log-management/logiqctl/obtaining-api-key.md)
 * [Role-Based Access Control (RBAC)](log-management/role-based-access-control.md)
 * [Configuring RBAC](log-management/configuring-rbac.md)
+
+## Distributed Tracing
+
+* [Overview](distributed-tracing/overview.md)
+* [Traces](distributed-tracing/traces.md)
+* [Logs](distributed-tracing/logs.md)
 
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
