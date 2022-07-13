@@ -40,6 +40,7 @@
 * [Docker Syslog log driver](integrations/docker-syslog-log-driver.md)
 * [Docker Swarm logging](integrations/docker-swarm-logging.md)
 * [Filebeat](integrations/filebeat.md)
+* [Kubernetes](integrations/kubernetes.md)
 * [Fluent Bit](integrations/fluent-bit/README.md)
   * [Forwarding Amazon-Linux logs to LOGIQ using Fluent Bit](integrations/fluent-bit/forwarding-amazon-linux-logs-to-logiq-using-fluent-bit.md)
   * [Fluent Bit installation on Ubuntu](integrations/fluent-bit/fluent-bit-installation-on-ubuntu.md)
