@@ -52,7 +52,7 @@
 * [Kafka](integrations/kafka.md)
 * [Logstash](integrations/logstash.md)
 * [MQTT](integrations/mqtt.md)
-* [Open Telemetry](integrations/open-telemetry.md)
+* [OpenTelemetry](integrations/opentelemetry.md)
 * [Palo Alto Firewall](integrations/palo-alto-firewall.md)
 * [Prometheus](integrations/prometheus/README.md)
   * [Spring Boot](integrations/prometheus/spring-boot.md)
