@@ -126,14 +126,16 @@
 * [NoSQL Data Sources](data-sources/nosql-data-sources/README.md)
   * [MongoDB](data-sources/nosql-data-sources/mongodb.md)
   * [Amazon Elasticsearch Service](data-sources/nosql-data-sources/amazon-elasticsearch-service.md)
-  * [Elasticsearch](data-sources/nosql-data-sources/elasticsearch-data-source.md)
-  * [InfluxDB](data-sources/nosql-data-sources/influxdb.md)
 * [SQL Data Sources](data-sources/sql-data-sources/README.md)
   * [PostgreSQL](data-sources/sql-data-sources/postgresql.md)
   * [Amazon Athena](data-sources/sql-data-sources/amazon-athena.md)
   * [Microsoft SQL Server](data-sources/sql-data-sources/microsoft-sql-server.md)
   * [MySQL Server](data-sources/sql-data-sources/mysql-server.md)
   * [MySQL Server (Amazon RDS)](data-sources/sql-data-sources/mysql-server-amazon-rds.md)
+* [Time Series Databases](data-sources/time-series-databases/README.md)
+  * [Prometheus](data-sources/time-series-databases/prometheus.md)
+  * [Elasticsearch](data-sources/time-series-databases/elasticsearch-data-source.md)
+  * [InfluxDB](data-sources/time-series-databases/influxdb.md)
 
 ## API
 
