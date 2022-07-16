@@ -62,6 +62,7 @@
   * [Prometheus Remote Write](monitoring/prometheus-remote-write.md)
 * [Rsyslogd](integrations/rsyslogd.md)
 * [Syslog-ng](integrations/syslog-ng.md)
+* [Splunk Universal Forwarder](integrations/splunk-universal-forwarder.md)
 
 ## DATA MANAGEMENT
 
