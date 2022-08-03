@@ -96,3 +96,29 @@ service:
       processors: [batch]
       exporters: [logging, jaeger]
 ```
+
+### Language Integrations
+
+#### Java
+
+If you are writing a Java-based application and want to enable OpenTelemetry for instrumenting your application logs, traces, and metrics, you can use the OpenTelemetry Java agent Jar file to attach to your existing Java applications.
+
+The Jar file can be found here - [https://github.com/open-telemetry/opentelemetry-java-instrumentation#about](https://github.com/open-telemetry/opentelemetry-java-instrumentation#about)
+
+{% hint style="danger" %}
+the Prometheus metrics options create a pull metric instance that should be scraped by an external Prometheus compatible instance
+{% endhint %}
+
+|                    JAVA\_OPTS |                    Value                   |                                        Notes                                        |
+| ----------------------------: | :----------------------------------------: | :---------------------------------------------------------------------------------: |
+|            otel.service\_name |               \<User defined>              | Give a service name to group your OpenTelemetry data traces under this service name |
+|          otel.traces.exporter |                   jaeger                   |                                                                                     |
+| otel.exporter.jaeger.endpoint |        http://\<LOGIQ ENDPOINT>14250       |                        LOGIQ.AI OpenTelemetry traces endpoint                       |
+|                     javaagent | \<PATH TO JAR>/opentelemetry-javaagent.jar |                             OpenTelemetry agent Jar file                            |
+|         otel.metrics.exporter |                 prometheus                 |                                                                                     |
+| otel.exporter.prometheus.port |                                            |                                 Default port is 9464                                |
+| otel.exporter.prometheus.host |                                            |                                  Default is 0.0.0.0                                 |
+
+![Launching a java application with OpenTelemetry Agent Jar](<../.gitbook/assets/Screen Shot 2022-08-02 at 7.22.01 PM.png>)
+
+![](<../.gitbook/assets/Screen Shot 2022-08-02 at 6.29.42 PM.png>)
