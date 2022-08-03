@@ -62,6 +62,26 @@ service:
          exporters: [prometheusremotewrite]
 ```
 
+### Scraping Prometheus Metrics
+
+In the OpenTelemetry config file, you can include a scrape section to scrape data from Prometheus endpoints. You can subsequently push that to a remote Prometheus compatible write endpoint using instructions from the section above.
+
+```
+receivers:
+  prometheus:
+      config:
+        scrape_configs:
+        - job_name: 'otel-collector'
+          scrape_interval: 10s
+          static_configs:
+          - targets: ['0.0.0.0:8888']
+
+service:
+  pipelines:
+    metrics:
+         receivers: [prometheus]          
+```
+
 ### OpenTelemetry Logs and Traces
 
 LOGIQ.AI supports ingesting Logs and Traces using OpenTelementry agents and collectors. We also maintain compatibility with Jaeger agent and collectors for ingesting logs and traces. This provides broad support for anyone with existing Jaeger agents and collectors deployed as well as someone wanting to adopt the emerging OpenTelemetry standard.
