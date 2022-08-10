@@ -46,9 +46,72 @@ Your query can include the following keys:
 
 | Key           |                       |
 | ------------- | --------------------- |
-| logGroupName  | string                |
-| logGroupNames | array of strings      |
-| startTime     | integer or timestring |
-| endTime       | integer or timestring |
-| queryString   | string                |
-| limit         | integer               |
+| LogGroupName  | string                |
+| LogGroupNames | array of strings      |
+| StartTime     | integer or timestring |
+| EndTime       | integer or timestring |
+| QueryString   | string                |
+| Limit         | integer               |
+
+### Querying AWS Lambda Metrics
+
+Let's look at a slightly more complex example and query AWS Lambda metrics for AWS Lambda Errors. In this example, we are using the **MetricName**: _"Errors"_ for the _"AWS/Lambda"_ **Namespace.**
+
+When selecting the AWS/Lambda Namespace, you can see the available MetricNames
+
+* **AWS/Lambda**
+  * Errors
+  * ConcurrentExecutions
+  * Invocations
+  * Throttles
+  * Duration
+  * IteratorAge
+  * UnreservedConcurrentExecutions
+
+Below is an example query that tracks AWS Lambda errors as an aggregate metric. The _StartTime_ is templatized and allows dynamic selection.
+
+```
+MetricDataQueries: 
+  - Id: q1
+    MetricStat:
+      Metric:
+        Namespace: AWS/Lambda
+        MetricName: Errors
+      Period: 300
+      Stat: Sum
+StartTime: "{{StartTime}}"
+```
+
+You can further click on the _Errors_ **MetricName** and it will expand to show you **Dimensions** available for further querying. For AWS/Lambda, the **Dimension** _FunctionName_ provides further drill down to show Cloudwatch metrics by Lambda Function Name.
+
+```
+MetricDataQueries: 
+  - Id: q1
+    MetricStat:
+      Metric:
+        Namespace: AWS/Lambda
+        MetricName: Errors
+        Dimensions:
+          - Name: FunctionName
+            Value: <My lambda function name>
+      Period: 300
+      Stat: Sum
+StartTime: "{{StartTime}}"
+```
+
+The query can be further enhanced by making the lambda function name, a templatized parameter. This allows you to pull metrics using a dropdown selection e.g. a list of lambda functions. The FunctionName template below can also be retrieved from another database as a separate query.
+
+```
+MetricDataQueries: 
+  - Id: q1
+    MetricStat:
+      Metric:
+        Namespace: AWS/Lambda
+        MetricName: Errors
+        Dimensions:
+          - Name: FunctionName
+            Value: {{FunctionName}}
+      Period: 300
+      Stat: Sum
+StartTime: "{{StartTime}}"
+```
