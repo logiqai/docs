@@ -134,6 +134,7 @@
   * [Microsoft SQL Server](data-sources/sql-data-sources/microsoft-sql-server.md)
   * [MySQL Server](data-sources/sql-data-sources/mysql-server.md)
   * [MySQL Server (Amazon RDS)](data-sources/sql-data-sources/mysql-server-amazon-rds.md)
+  * [Amazon CloudWatch ( YAML )](data-sources/sql-data-sources/amazon-cloudwatch-yaml.md)
 * [Time Series Databases](data-sources/time-series-databases/README.md)
   * [Prometheus Compatible](data-sources/time-series-databases/prometheus-compatible.md)
   * [Elasticsearch](data-sources/time-series-databases/elasticsearch-data-source.md)
