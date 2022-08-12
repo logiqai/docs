@@ -77,7 +77,7 @@ Once this configuration is complete, any new logs coming to the configured Cloud
 
 ### Create the Logstash VM (or Docker) <a href="#create_the_logstash_vm" id="create_the_logstash_vm"></a>
 
-Install Logstash on Ubuntu as shown below.
+Install Logstash on Ubuntu virtual machine as shown below.
 
 ```
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
@@ -85,7 +85,7 @@ echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee 
 sudo apt-get update
 sudo apt-get install logstash
 
-# Install Logstash google_pubsub plugin
+# Install Logstash logstash-input-cloudwatch
 cd /usr/share/logstash
 sudo -u root sudo -u logstash bin/logstash-plugin install  logstash-input-cloudwatch
 ```
