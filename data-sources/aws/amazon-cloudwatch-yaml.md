@@ -115,3 +115,135 @@ MetricDataQueries:
       Stat: Sum
 StartTime: "{{StartTime}}"
 ```
+
+### Examples Queries
+
+#### Query using a single Expression
+
+```
+StartTime: 1518867432,
+EndTime: 1518868432,
+MetricDataQueries :
+    -Id: errorRate,
+    Label: Error Rate,
+    Expression: errors/requests
+```
+
+An expression can be a mathematical expression of metrics or an sql query.
+
+#### Query using a list of expressions
+
+```
+  StartTime: 1518867432
+  EndTime: 1518868432
+  MetricDataQuerie:
+      - Id: errorRate
+        Label: Error Rate
+        Expression: errors/requests
+      - Id: errorRatePercent
+        Label: %Error Rate
+        Expression: errorRate*100
+        
+```
+
+#### Query using metric-stat or a list of metric-stats:
+
+```
+StartTime: 1518867432
+EndTime: 1518868432
+MetricDataQueries:
+  - Id: invocations
+    MetricStat:
+      Metric:
+        Namespace: AWS/Lambda
+        MetricName: Invocations
+      Period: 600
+      Stat: Sum
+  - Id: errors
+    MetricStat:
+      Metric:
+        Namespace: AWS/Lambda
+        MetricName: Errors
+      Period: 600
+      Stat: Sum
+      
+```
+
+> Each list item in the MetricDataQueries list in the above mentioned examples can contain either an Expression or a MetricStat Query item. we can provide a combination of both also.
+
+#### Query using a combination of MetricStat and Expression:
+
+```
+  StartTime: 1518867432
+  EndTime: 1518868432
+  MetricDataQuerie:
+      - Id: errorRate
+        Label: Error Rate
+        Expression: errors*500
+      - Id: errors
+        MetricStat:
+          Metric:
+            Namespace: AWS/Lambda
+            MetricName: Errors
+          Period: 600
+          Stat: Sum
+          
+```
+
+In the above example the second item uses MetricStat syntax to fetch data and the first item uses expression syntax to fetch the data. here, first item is used to perform a math expression on the data fetched by second item.
+
+#### Query Example to Perform math Expression on fetched data
+
+<pre><code>StartTime: 1518867432
+EndTime: 1518868432
+<strong>MetricDataQueries:
+</strong>  - Id: invocations
+    MetricStat:
+      Metric:
+        Namespace: AWS/Lambda
+        MetricName: Invocations
+      Period: 600
+      Stat: Sum
+  - Id: errors
+    MetricStat:
+      Metric:
+        Namespace: AWS/Lambda
+        MetricName: Errors
+      Period: 600
+      Stat: Sum
+  - Id: errorRatio
+    Expression: errors/invocations*100
+  
+      </code></pre>
+
+In the above example first and second items are used to fetch metric data. the third item is used to perform a mathematical expression on the data fetched using the first and second items.
+
+
+
+#### Query to use Period and Stat in MetricDataQueries items
+
+The period indicates granularity and stat indicates the group by operation to be performed on the fetched data.
+
+```
+Id: errors
+MetricStat:
+      Metric:
+        Namespace: AWS/Lambda
+        MetricName: Invocations
+      Period: 600
+      Stat: Sum
+      
+```
+
+&#x20;                                                                                 or
+
+```
+Id: errors
+Expression: 'some SQL query or a math expression'
+period: 600
+Stat: Avg
+```
+
+for some detailed information on querying cloud-watch metrics, follow the below links\
+[https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API\_GetMetricData.html](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API\_GetMetricData.html)\
+[https://docs.aws.amazon.com/cli/latest/reference/cloudwatch/get-metric-data.html](https://docs.aws.amazon.com/cli/latest/reference/cloudwatch/get-metric-data.html)
