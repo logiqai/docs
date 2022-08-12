@@ -87,7 +87,7 @@ sudo apt-get install logstash
 
 # Install Logstash google_pubsub plugin
 cd /usr/share/logstash
-sudo -u root sudo -u logstash bin/logstash-plugin install logstash-input-google_pubsub
+sudo -u root sudo -u logstash bin/logstash-plugin install  logstash-input-cloudwatch
 ```
 
 #### Configure Logstash <a href="#configure_logstash" id="configure_logstash"></a>
