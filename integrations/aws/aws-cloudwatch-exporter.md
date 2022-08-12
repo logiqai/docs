@@ -1,5 +1,10 @@
 # AWS CloudWatch
 
+You can forward Cloud watch logs to Logiq using 2 methods.
+
+* Logiq CloudWatch exporter Lambda function
+* Run Logstash on VM (or docker)
+
 ## LOGIQ CloudWatch exporter Lambda function
 
 You can export AWS CloudWatch logs to LOGIQ using an AWS Lambada function. The AWS Lambda function acts as a trigger for a CloudWatch log stream.&#x20;
@@ -67,3 +72,81 @@ On the **Add trigger** page, select **CloudWatch**, and then select a CloudWatch
 ![](<../../.gitbook/assets/image (4).png>)
 
 Once this configuration is complete, any new logs coming to the configured CloudWatch Log group will be streamed to the LOGIQ cluster.
+
+
+
+### Create the Logstash VM (or Docker) <a href="#create_the_logstash_vm" id="create_the_logstash_vm"></a>
+
+Install Logstash on Ubuntu as shown below.
+
+```
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+sudo apt-get update
+sudo apt-get install logstash
+
+# Install Logstash google_pubsub plugin
+cd /usr/share/logstash
+sudo -u root sudo -u logstash bin/logstash-plugin install logstash-input-google_pubsub
+```
+
+#### Configure Logstash <a href="#configure_logstash" id="configure_logstash"></a>
+
+Logstash comes with no default configuration. Create a new file `/etc/logstash/conf.d/logstash.conf` with these contents, modifying values as needed:
+
+{% hint style="info" %}
+You need to download and place the FlattenJSON.rb file in your local before you run the Logstash
+{% endhint %}
+
+{% file src="../../.gitbook/assets/flattenJSON.rb" %}
+
+```
+input {
+  cloudwatch_logs {
+    access_key_id => "<Acess-key>"
+    secret_access_key => "<secret-access-key>"
+    region => "<region>"
+    "log_group" => ["<Cloud-watch-log-group"]
+    "log_group_prefix" => true
+    codec => plain
+    start_position => end
+    interval => 30
+  }
+}
+
+filter {
+        ruby {
+           path => "/home/<custom-path>/flattenJSON.rb"
+           script_params => { "field" => "cloudwatch_logs" }
+        }
+        
+	mutate {
+
+           gsub => ["cloudwatch_logs.log_group","\/","-"]
+           gsub => ["cloudwatch_logs.log_group","^-",""]
+	   add_field => { "namespace" => "<custom-namespace>" }
+	   add_field => { "cluster_id" => "<custom-cluster-id>" }
+	   add_field => { "app_name" => "%{[cloudwatch_logs.log_group]}" }
+	   add_field => { "proc_id" => "%{[cloudwatch_logs.log_stream]}" }
+        }
+}
+
+
+output {
+ http {
+       url => "http://<logiq-endpoint>/v1/json_batch"
+       headers => { "Authorization" => "Bearer <SECURE_INGEST_TOKEN>" }
+       http_method => "post"
+       format => "json_batch"
+       content_type => "json_batch"
+       pool_max => 2000
+       pool_max_per_route => 100
+       socket_timeout => 300
+      }
+}
+
+```
+
+You can obtain an ingest token from the LOGIQ UI as described [here](../generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
+
+Your AWS Cloud watch logs will now be forwarded to your LOGIQ instance. See the [Explore](../../log-management/logs-page.md) Section to view the logs.
