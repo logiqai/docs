@@ -76,7 +76,7 @@ gcloud beta pubsub topics add-iam-policy-binding logiq-topic \
 
 ### Create the Logstash VM <a href="#create_the_logstash_vm" id="create_the_logstash_vm"></a>
 
-Create a VM to run `logstash` to pull logs from the Pub/Sub logging sink and send them to ElasticSearch:
+Create a VM to run `logstash` to pull logs from the Pub/Sub logging sink and send them to LOGIQ.AI:
 
 ```
 gcloud compute --project=gcp-customer-1 instances create logstash \
@@ -167,3 +167,20 @@ output {
 You can obtain an ingest token from the LOGIQ UI as described [here](generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
 
 Your GCP Cloud Logging logs will now be forwarded to your LOGIQ instance. See the [Explore](../log-management/logs-page.md) Section to view the logs.
+
+#### Running logstash outside of GCE
+
+If you are running logstash in a VM outside of GCE, you need to provide the service account token in the logstash configuration as well.
+
+```
+input {
+    google_pubsub {
+        project_id => "my-project-1234"
+        topic => "logstash-input-dev"
+        subscription => "logstash-sub"
+
+        # the GCP service account's JSON key file below.
+        json_key_file => "/path/to/service/account/token/pkey.json"
+    }
+}
+```
