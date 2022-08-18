@@ -123,7 +123,7 @@ cd /usr/share/logstash
 sudo -u root sudo -u logstash bin/logstash-plugin install logstash-input-google_pubsub
 ```
 
-#### Configure Logstash <a href="#configure_logstash" id="configure_logstash"></a>
+### Configure Logstash <a href="#configure_logstash" id="configure_logstash"></a>
 
 Logstash comes with no default configuration. Create a new file `/etc/logstash/conf.d/logstash.conf` with these contents, modifying values as needed:
 
@@ -168,7 +168,7 @@ You can obtain an ingest token from the LOGIQ UI as described [here](generating-
 
 Your GCP Cloud Logging logs will now be forwarded to your LOGIQ instance. See the [Explore](../log-management/logs-page.md) Section to view the logs.
 
-#### Running logstash outside of GCE
+### Running logstash outside of GCE
 
 If you are running logstash in a VM outside of GCE, you need to provide the service account token in the logstash configuration as well.
 
