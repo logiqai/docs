@@ -123,9 +123,9 @@ cd /usr/share/logstash
 sudo -u root sudo -u logstash bin/logstash-plugin install logstash-input-google_pubsub
 ```
 
-### Configure Logstash <a href="#configure_logstash" id="configure_logstash"></a>
+### Configure Logstash (self managed GKE) <a href="#configure_logstash" id="configure_logstash"></a>
 
-Logstash comes with no default configuration. Create a new file `/etc/logstash/conf.d/logstash.conf` with these contents, modifying values as needed:
+Logstash comes with no default configuration. Create a new file `/etc/logstash/conf.d/logstash.conf` with the below contents, modifying values as needed:
 
 ```
 input
@@ -162,6 +162,103 @@ output {
       }
 }
 
+```
+
+### GKE Autopilot cluster
+
+Autopilot is a new _mode of operation_ in Google Kubernetes Engine (GKE) that is designed to reduce the operational cost of managing clusters, optimize your clusters for production, and yield higher workload availability, use the below configuration on Logstash configuration to forward logs to Logiq.
+
+```
+input
+{
+   google_pubsub {
+       project_id => "gcp-customer-1"
+       topic => "logiq-topic"
+       subscription => "logstash-sub"
+       include_metadata => true
+       codec => "json"
+   }
+}
+filter {
+      json {
+         source => "message"
+       }
+      if [resource][type] == "k8s_container" {
+         mutate {
+           add_field => { "namespace" => "%{[resource][labels][namespace_name]}" }
+           add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
+           add_field => { "app_name" => "%{[resource][labels][container_name]}" }
+           add_field => { "proc_id" => "%{[resource][labels][pod_name]}"  }
+        }
+        }
+      else if [resource][type] == "k8s_pod" {
+         mutate {
+           add_field => { "namespace" => "%{[resource][labels][namespace_name]}" }
+           add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
+           add_field => { "app_name" => "%{[involvedObject][name]}" }
+           add_field => { "proc_id" => "%{[resource][labels][pod_name]}"  }
+        }}
+      else if [resource][type] == "k8s_cluster" and [jsonPayload] and [resource][labels][container_name] {        
+         mutate {
+           add_field => { "namespace" => "%{[resource][labels][namespace_name]}" }
+           add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
+           add_field => { "app_name" => "%{[resource][labels][container_name]}" }
+           add_field => { "proc_id" => "%{[resource][labels][pod_name]}"  }
+        }
+         }
+      else if [resource][type] == "k8s_node" {
+         mutate {
+           add_field => { "namespace" => "%{[resource][labels][project_id]}" }
+           add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
+           add_field => { "app_name" => "%{[resource][labels][node_name]}" }
+           add_field => { "proc_id" => "%{[jsonpayload][_machine_id]}"  }
+        }
+         }
+      else if [resource][type] == "k8s_cluster" and [protoPayload] {
+         mutate {
+           add_field => { "namespace" => "%{[resource][labels][project_id]}" }
+           add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
+           add_field => { "app_name" => "%{[protoPayload][serviceName]}" }
+           add_field => { "proc_id" => "%{[operation][id]}"  }
+
+        }
+        }
+      else if [resource][type] == "k8s_cluster" and [jsonPayload][metadata][namespace] {
+         mutate {
+           add_field => { "namespace" => "%{[jsonPayload][metadata][namespace]}" }
+           add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
+           add_field => { "app_name" => "%{[jsonpayload][source][component]}" }
+           add_field => { "proc_id" => "%{[jsonpayload][involvedobject][uid]}"  }
+        }}
+     else if [resource][type] == "k8s_cluster" and [jsonPayload] {
+         mutate {
+           add_field => { "namespace" => "%{[resource][labels][project_id]}" }
+           add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
+           add_field => { "app_name" => "%{[resource][type]}"  }
+        }
+         }
+
+      else {
+         mutate {
+           add_field => { "namespace" => "%{[resource][labels][project_id]}" }
+           add_field => { "cluster_id" => "dev" }
+           add_field => { "app_name" => "%{[resource][labels][service_name]}" }
+           add_field => { "proc_id" => "%{[resource][labels][revision_name]}"  }
+        }
+        }   
+}
+output {
+ http {
+       url => "http://<logiq-endpoint>.logiq.ai/v1/json_batch"
+       headers => { "Authorization" => "Bearer <SECURE_INGEST_TOKEN>" }
+       http_method => "post"
+       format => "json_batch"
+       content_type => "json_batch"
+       pool_max => 2000
+       pool_max_per_route => 100
+       socket_timeout => 300
+      }
+}
 ```
 
 You can obtain an ingest token from the LOGIQ UI as described [here](generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
