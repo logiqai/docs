@@ -182,7 +182,7 @@ input
 filter {
       json {
          source => "message"
-       }
+      }
       if [resource][type] == "k8s_container" {
          mutate {
            add_field => { "namespace" => "%{[resource][labels][namespace_name]}" }
@@ -190,62 +190,51 @@ filter {
            add_field => { "app_name" => "%{[resource][labels][container_name]}" }
            add_field => { "proc_id" => "%{[resource][labels][pod_name]}"  }
         }
+        if [textPayload] {
+          mutate {
+           add_field => { "message" => "%{[textPayload]}" }
+          }
         }
+        if [jsonPayload][message] {
+          mutate {
+           add_field => { "message" => "%{[jsonPayload][message]}" }
+          }
+        }
+      }
       else if [resource][type] == "k8s_pod" {
          mutate {
            add_field => { "namespace" => "%{[resource][labels][namespace_name]}" }
            add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
            add_field => { "app_name" => "%{[involvedObject][name]}" }
            add_field => { "proc_id" => "%{[resource][labels][pod_name]}"  }
-        }}
-      else if [resource][type] == "k8s_cluster" and [jsonPayload] and [resource][labels][container_name] {        
+        }
+        if [message] {
+          mutate {
+           add_field => { "message" => "%{[message]}" }
+          }
+        }
+      } else if [resource][type] == "k8s_node" {
          mutate {
-           add_field => { "namespace" => "%{[resource][labels][namespace_name]}" }
+           add_field => { "namespace" => "k8s_node" }
            add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
-           add_field => { "app_name" => "%{[resource][labels][container_name]}" }
-           add_field => { "proc_id" => "%{[resource][labels][pod_name]}"  }
+           add_field => { "app_name" => "k8s_node" }
+           add_field => { "proc_id" => "%{[resource][labels][node_name]}"  }
         }
-         }
-      else if [resource][type] == "k8s_node" {
+        if [jsonPayload][MESSAGE] {
+          mutate {
+           add_field => { "message" => "%{[jsonPayload][MESSAGE]}" }
+          }
+        }
+      } else if [resource][type] == "k8s_cluster" {
          mutate {
-           add_field => { "namespace" => "%{[resource][labels][project_id]}" }
+           add_field => { "namespace" => "k8s_cluster" }
            add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
-           add_field => { "app_name" => "%{[resource][labels][node_name]}" }
-           add_field => { "proc_id" => "%{[jsonpayload][_machine_id]}"  }
+           add_field => { "app_name" => "k8s_cluster" }
+           add_field => { "proc_id" => "-"  }
         }
-         }
-      else if [resource][type] == "k8s_cluster" and [protoPayload] {
-         mutate {
-           add_field => { "namespace" => "%{[resource][labels][project_id]}" }
-           add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
-           add_field => { "app_name" => "%{[protoPayload][serviceName]}" }
-           add_field => { "proc_id" => "%{[operation][id]}"  }
-
-        }
-        }
-      else if [resource][type] == "k8s_cluster" and [jsonPayload][metadata][namespace] {
-         mutate {
-           add_field => { "namespace" => "%{[jsonPayload][metadata][namespace]}" }
-           add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
-           add_field => { "app_name" => "%{[jsonpayload][source][component]}" }
-           add_field => { "proc_id" => "%{[jsonpayload][involvedobject][uid]}"  }
-        }}
-     else if [resource][type] == "k8s_cluster" and [jsonPayload] {
-         mutate {
-           add_field => { "namespace" => "%{[resource][labels][project_id]}" }
-           add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
-           add_field => { "app_name" => "%{[resource][type]}"  }
-        }
-         }
-
-      else {
-         mutate {
-           add_field => { "namespace" => "%{[resource][labels][project_id]}" }
-           add_field => { "cluster_id" => "dev" }
-           add_field => { "app_name" => "%{[resource][labels][service_name]}" }
-           add_field => { "proc_id" => "%{[resource][labels][revision_name]}"  }
-        }
-        }   
+      }
+# There could be other resource types you may want to add if you want to 
+# pull more logs.      
 }
 output {
  http {
