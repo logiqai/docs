@@ -17,9 +17,9 @@ To install Syslog-ng on your system, please refer to the official git repo given
 
 LOGIQ supports data ingestion from Syslog-ng. The following instructions describe the steps for configuring log forwarding from Syslog-ng to LOGIQ by modifying the Syslog-ng configuration file.&#x20;
 
-**Syslog-ng** supports both TCP and UDP protocols, LOGIQ recommends ingestion of logs over TCP protocol to ensure packets are not lost or dropped. TCP relies on acknowledgments from the receiver to make sure the packet is delivered.
+**Syslog-ng** supports both TCP and UDP protocols, LOGIQ only supports ingestion of logs over TCP protocol to ensure packets are not lost or dropped. TCP relies on acknowledgments from the receiver to make sure the packet is delivered.
 
-LOGIQ.AI hosts the lumberjack protocol at port **514.** The ports are configurable and can be changed if needed.
+LOGIQ.AI hosts the syslog protocol at port **514.** The ports are configurable and can be changed if needed. Additonal port for TLS is available at **7514**
 
 ### **INPUT**
 
@@ -80,7 +80,7 @@ The below configuration forwards logs over TLS to LOGIQ over non-TLS protocol us
 destination d_syslog_tls {
     syslog("<logiq-endpoint>"
         transport("tls")
-        port(2514)
+        port(7514)
         tls(peer-verify(required-trusted)
             ca-dir('/opt/syslog-ng/etc/syslog-ng/keys/ca.d/')
             key-file('/opt/syslog-ng/etc/syslog-ng/keys/client_key.pem')
@@ -115,7 +115,7 @@ source s_local {
 destination d_network {
     syslog("<logiq-endpoint>" 
     transport("tcp") 
-    port(26514));
+    port(514));
 };
 
 
