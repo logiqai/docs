@@ -145,9 +145,11 @@ With http/https publish, the following are mandatory
 
 In addition to the fields above, arbitrary json attributes can be provided. Nested JSON will automatically get flattened.
 
+Example config below. Please modify relevant fields such as cluster\__id, namespace, application\_name before sending data_
+
 ```javascript
 destination d_logiq {
-    http(url("http://192.168.68.114:8081/v1/json")
+    http(url("https://<logiq dns or ip>/v1/json")
         method("POST")
         peer-verify(no)
         headers("Content-Type: application/json")
