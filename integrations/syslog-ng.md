@@ -126,4 +126,44 @@ log {
 
 ```
 
+### OUTPUT http/https
+
+{% hint style="danger" %}
+NOTE: The payload in ${MSG} and other fields that come from syslog-ng variable need to be escaped properly, otherwise they will be rejeced with a 400 error.
+
+Below example shows how to construct a body
+{% endhint %}
+
+With http/https publish, the following are mandatory
+
+* Ingest token
+* namespace
+* @timestamp
+* application\_name
+* cluster\_id
+* hostname
+
+In addition to the fields above, arbitrary json attributes can be provided. Nested JSON will automatically get flattened.
+
+```javascript
+destination d_logiq {
+    http(url("http://192.168.68.114:8081/v1/json")
+        method("POST")
+        peer-verify(no)
+        headers("Content-Type: application/json")
+        headers("Authorization: Bearer <ingest token goes here>")
+        body("{ \"@timestamp\": \"${ISODATE}\",
+                \"hostname\": \"${HOST}\",
+                \"namespace\": \"syslogng-test-logs\",
+                \"message\": \"${MSG}\",
+                \"application_name\": \"${PROGRAM}\",
+                \"proc_id\": \"${PID}\",
+                \"cluster_id\": \"logiq-cluster-1\",
+                \"severity\": \"${LEVEL}\",
+                \"sourcetype\": \"mysourcetype2\"
+              }")
+    );
+};
+```
+
 For more information please refer Syslog-ng documentation
