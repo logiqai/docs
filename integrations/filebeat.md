@@ -68,8 +68,6 @@ We strongly recommend partitioning your data for better organization as well as 
 The following is a complete _Filebeat_ configuration for forwarding logs to LOGIQ without SSL.&#x20;
 
 ```
-output.logstash:
-  hosts: ["logs.mycompany.com:5044"]
 filebeat:
   inputs:
   - enabled: true
@@ -88,7 +86,8 @@ output:
 #  console:
 #   pretty: true
   logstash:
-    hosts:["Logiq-endpoint>:25224"]
+    hosts:
+    - "<Logiq-endpoint>:25224"
 processors:
 - add_host_metadata:
     when:
