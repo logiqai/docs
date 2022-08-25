@@ -39,7 +39,8 @@ The output section describes how to send data to LOGIQ. The LOGIQ layer supports
 ```
 output:
   logstash:
-    hosts:["Logiq-endpoint>:25224"]
+    hosts:
+    - "<Logiq-endpoint>:25224"
 ```
 
 ### PROCESSORS
