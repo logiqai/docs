@@ -23,7 +23,39 @@ These instructions assume you are familiar with the CloudWatch ad-hoc query lang
 
 ![Query Page and Schema Navigator](../../.gitbook/assets/cloudwatch.png)
 
-To query you should be familiar with YAML syntax.  It should be an array of **`MetricDataQuery`** objects under a key called **`MetricsDataQueries`**.
+### CloudWatch query designer wizard
+
+LOGIQ.AI includes a simple point-and-click wizard for creating CloudWatch queries. You can launch the query wizard by selecting the CloudWatch YAML data source and selecting the "Construct CloudWatch query" icon.
+
+<figure><img src="../../.gitbook/assets/Screen Shot 2022-08-29 at 10.32.49 AM.png" alt=""><figcaption><p>CloudWatch query wizard</p></figcaption></figure>
+
+In the query designer, you can select the Namespace, Metric, and Dimensions along with the Stat. You can add one or more Namespaces, Metric using a simple point-and-click interface.
+
+<div>
+
+<figure><img src="../../.gitbook/assets/Screen Shot 2022-08-29 at 10.41.47 AM.png" alt=""><figcaption><p>Add Metric</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/Screen Shot 2022-08-29 at 10.41.57 AM.png" alt=""><figcaption><p>Add dimension</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/Screen Shot 2022-08-29 at 10.42.23 AM.png" alt=""><figcaption><p>Edit a query manually</p></figcaption></figure>
+
+ 
+
+<figure><img src="../../.gitbook/assets/Screen Shot 2022-08-29 at 10.42.53 AM.png" alt=""><figcaption><p>Select supported Stat for the query</p></figcaption></figure>
+
+</div>
+
+You are now ready to run and plot the metric. Running Execute will automatically create the built-in line graph for your metric. You can further create additional visualizations using "_New Visualization_".
+
+<figure><img src="../../.gitbook/assets/Screen Shot 2022-08-29 at 10.51.05 AM.png" alt=""><figcaption><p>Running a query and plotting the time-series data</p></figcaption></figure>
+
+### Deep-dive into query language for CloudWatch queries
+
+For the curious, here is a breakdown of the YAML syntax and what the various attributes mean. NOTE: You don't need to write or type these to query data. The **No-code** built-in WYSIWYG editor makes it easy to query CloudWatch without writing any code. Let us look at the YAML syntax now.  It should be an array of **`MetricDataQuery`** objects under a key called **`MetricsDataQueries`**.
 
 Here's an example that sends **`MetricDataQuery`**
 
