@@ -205,7 +205,7 @@ filter {
          mutate {
            add_field => { "namespace" => "%{[resource][labels][namespace_name]}" }
            add_field => { "cluster_id" => "%{[resource][labels][cluster_name]}" }
-           add_field => { "app_name" => "%{[involvedObject][name]}" }
+           add_field => { "app_name" => "k8s_pod" }
            add_field => { "proc_id" => "%{[resource][labels][pod_name]}"  }
         }
         if [message] {
