@@ -234,7 +234,7 @@ filter {
         }
       }
 # There could be other resource types you may want to add if you want to 
-# pull more logs.      
+# pull more logs.     
 }
 output {
  http {
@@ -249,6 +249,10 @@ output {
       }
 }
 ```
+
+{% hint style="danger" %}
+The mappings for k8s\__node, k8s\_pod, k8s\_cluster can further be refined by mapping into the json logs from cloud logging. The above mapping is an example on how you can use flexible mappings to suite your needs._
+{% endhint %}
 
 You can obtain an ingest token from the LOGIQ UI as described [here](generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
 
