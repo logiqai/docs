@@ -54,7 +54,94 @@ log {
 };
 ```
 
-### OUTPUT (**non-TLS)**
+### OUTPUT
+
+LOGIQ.AI supports multiple way to ingest data via standard interfaces. With syslog-ng you can use the built-in syslog, http output destinations to push data to LOGIQ.AI. We however recommend using LOGIQ.AI's python destination for syslog-ng driver as it provides most capabilities and control over pushing you data at scale.
+
+### Python syslog-ng destination for LOGIQ.AI
+
+The syslog-ng python destination driver for LOGIQ.AI is avalable as a python package and can be installed via pip. To enable the python destination support, first install the python destination support for syslog-ng. Below is an example of how to do this on an ubuntu system.&#x20;
+
+```
+apt-get install syslog-ng-mod-python
+```
+
+You can refer to the syslog-ng website for other operating systems. You can now proceed to install the LOGIQ.AI driver next. This assumes you have python3 installed. More details on the LOGIQ.AI driver can be found at [https://pypi.org/project/logiqaidstsyslogng/](https://pypi.org/project/logiqaidstsyslogng/)
+
+```
+pip install --upgrade logiqaidstsyslogng
+```
+
+#### Creating a logiq.conf for the driver
+
+A _logiq.conf_ is required that provides details of the LOGIA.AI instance and how to connect to it. Please note down the path where you save the config as we will need it to configure the destination in syslog-ng.conf. We recommend you store it in _/etc/syslog-ng/logiq.conf_ along with rest of the syslog-ng configruation files.
+
+{% code title="logiq.conf" overflow="wrap" lineNumbers="true" %}
+```systemd
+[logiq]
+# Host or IP for LOGIQ.AI
+host = my-logiq-cluster.example.com
+# Protocol https
+protocol = https
+# API Ingest token
+key = <JWT Token>
+```
+{% endcode %}
+
+#### Creating a syslog-ng destination for LOGIQ.AI
+
+You are now ready to update your syslog-ng conf to add a LOGIQ.AI python destination
+
+{% code title="syslog-ng.conf" overflow="wrap" lineNumbers="true" %}
+```
+
+destination d_logiq {
+    python(
+        batch-timeout(500)
+        batch-lines(400)
+        class("logiqaidstsyslogng.LogDestination")
+        value-pairs(
+          key(ISODATE)
+          scope(rfc5424 nv-pairs)
+        )
+        options(config "/etc/syslog-ng/logiq.conf")
+        options(workers 8)
+        options(worker-batch-lines 25)
+        options(loglevel WARN)
+    );
+};
+
+# Connect the source to the logiq destination
+log { source(s_local); destination(d_logiq); };
+```
+{% endcode %}
+
+| Option Name        | Values                         | Default | Notes                                                                                                   |
+| ------------------ | ------------------------------ | ------- | ------------------------------------------------------------------------------------------------------- |
+| config             | e.g. /etc/syslog-ng/logiq.conf | None    | Location of logiq.conf file                                                                             |
+| workers            | e.g. 8/16                      | 1       | Number of workers, more workers allow more parallelism when pushing to a loadbalanced LOGIQ.AI endpoint |
+| worker-batch-lines | e.g. 25                        | 25      | How many maximum log events are batched per worker                                                      |
+| loglevel           | e.g. INFO/WARN/ERROR/DEBUG     | INFO    | Debug level. Logs are sent to /var/log/logiqaidstsyslogns                                               |
+| debug              | true/false                     | false   | Prints additional debug including log event to the log file                                             |
+| namespace-key      | e.g. HOST                      | Not set | Which key from log event maps to namespace                                                              |
+| application-key    | e.g. PROGRAM                   | Not set | Which key from log event maps to application                                                            |
+| cluster-key        | e.g. HOST                      | Not set | Which key from log event maps to cluster/group identifier                                               |
+
+### Organizing data in LOGIQ.AI
+
+Data in the LOGIQ.AI gets organized as flows. A flow consists of a Namespace, an application name and one or more subflows or ProcId's. This allows mapping most legacy and cloud native environments in LOGIQ.AI with minimal configuration
+
+{% hint style="info" %}
+Please set namespace, application and cluster\_id mappings in syslogn-ng.conf. If this is not configured, default mappings will be used.
+{% endhint %}
+
+### Additional output methods
+
+{% hint style="danger" %}
+Additional methods to push data via syslog-ng are documented below but are not recommended for production and scale use.
+{% endhint %}
+
+#### OUTPUT (**non-TLS)**
 
 The below configuration describes how logs are sent to LOGIQ over non-TLS protocol using **syslog()** driver
 
@@ -72,7 +159,7 @@ log {
 };
 ```
 
-### OUTPUT (TLS)
+#### OUTPUT (TLS)
 
 The below configuration forwards logs over TLS to LOGIQ over non-TLS protocol using **syslog()** driver
 
@@ -92,7 +179,7 @@ destination d_syslog_tls {
 
 
 
-### Example (non-TLS)
+#### Example (non-TLS)
 
 The below configuration shows the full configuration of how Syslog-ng forwards logs over non-TLS protocol using **syslog()** driver
 
@@ -126,7 +213,7 @@ log {
 
 ```
 
-### OUTPUT http/https
+#### OUTPUT http/https
 
 {% hint style="danger" %}
 NOTE: The payload in ${MSG} and other fields that come from syslog-ng variable need to be escaped properly, otherwise they will be rejeced with a 400 error.
