@@ -116,6 +116,22 @@ log { source(s_local); destination(d_logiq); };
 ```
 {% endcode %}
 
+{% hint style="info" %}
+LOGIQ.AI only works with RFC3339/ISO8601 time stamps so the python destination must add the ISODATE key which will be sent as timestamp.
+
+The scope for value-pairs also needs to contain rfc5424 so we can pull out all the standard syslog fields such as host, application, pid, sdata etc.
+{% endhint %}
+
+The python destination provides some usefule options as described below
+
+| Name          | Values                                                                         | Default | Notes                                                                                                       |
+| ------------- | ------------------------------------------------------------------------------ | ------- | ----------------------------------------------------------------------------------------------------------- |
+| batch-timeout | e.g. 500 (milliseconds)                                                        | NA      | Refer to syslog-ng documentation. This allows for batching logs                                             |
+| batch-lines   | e.g. 400                                                                       | NA      | Refer to syslog-ng documentation. This limits the max batch size allowed before python plugin calls a flush |
+| class         | <pre data-overflow="wrap"><code>logiqaidstsyslogng.LogDestination</code></pre> | NA      | Specifies the LOGIQ.AI python driver class to load                                                          |
+
+The LOGIQ.AI driver provides various options as described below
+
 | Option Name        | Values                         | Default | Notes                                                                                                   |
 | ------------------ | ------------------------------ | ------- | ------------------------------------------------------------------------------------------------------- |
 | config             | e.g. /etc/syslog-ng/logiq.conf | None    | Location of logiq.conf file                                                                             |
