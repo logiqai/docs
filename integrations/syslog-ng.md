@@ -111,13 +111,13 @@ log { source(s_dummy); destination(d_test); };
 
 Run syslog-ng with the above dummy config and you should see the version of python that it loads
 
-```
+```shell
 #syslog-ng -f ./dummy-syslog-ng.conf --foreground
 3.8.10 (default, Jun 22 2022, 20:18:18)
 [GCC 9.4.0]
 ```
 
-```
+```shell
 # syslog-ng -f ./dummy-syslog-ng.conf --foreground
 2.7.17 (default, Jul  1 2022, 15:56:32)
 [GCC 7.5.0]
