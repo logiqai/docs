@@ -85,6 +85,8 @@ host = my-logiq-cluster.example.com
 protocol = https
 # API Ingest token
 key = <JWT Token>
+# destination reachability timeout in seconds
+timeout = 5
 ```
 {% endcode %}
 
