@@ -105,7 +105,7 @@ destination d_logiq {
           scope(rfc5424 nv-pairs)
         )
         options(config "/etc/syslog-ng/logiq.conf")
-        options(workers 8)
+        options(workers-batch 8)
         options(worker-batch-lines 25)
         options(loglevel WARN)
     );
@@ -135,7 +135,7 @@ The LOGIQ.AI driver provides various options as described below
 | Option Name        | Values                         | Default | Notes                                                                                                   |
 | ------------------ | ------------------------------ | ------- | ------------------------------------------------------------------------------------------------------- |
 | config             | e.g. /etc/syslog-ng/logiq.conf | None    | Location of logiq.conf file                                                                             |
-| workers            | e.g. 8/16                      | 1       | Number of workers, more workers allow more parallelism when pushing to a loadbalanced LOGIQ.AI endpoint |
+| workers-batch      | e.g. 8/16                      | 1       | Number of workers, more workers allow more parallelism when pushing to a loadbalanced LOGIQ.AI endpoint |
 | worker-batch-lines | e.g. 25                        | 25      | How many maximum log events are batched per worker                                                      |
 | loglevel           | e.g. INFO/WARN/ERROR/DEBUG     | INFO    | Debug level. Logs are sent to /var/log/logiqaidstsyslogns                                               |
 | debug              | true/false                     | false   | Prints additional debug including log event to the log file                                             |
