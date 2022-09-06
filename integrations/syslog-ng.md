@@ -82,7 +82,7 @@ pip3 install --upgrade logiqaidstsyslogng
 Note you may need to use pip3 vs pip to install depending on what the syslog-ng python linkage is. A quick way to test your python linkage is to create a dummy  syslong-ng confi file with a python destination. See below
 {% endhint %}
 
-#### Checking python linkage for syslog-ng
+### Checking python linkage for syslog-ng
 
 ```
 @version: 3.38
