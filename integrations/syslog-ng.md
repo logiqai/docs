@@ -62,14 +62,65 @@ LOGIQ.AI supports multiple way to ingest data via standard interfaces. With sysl
 
 The syslog-ng python destination driver for LOGIQ.AI is avalable as a python package and can be installed via pip. To enable the python destination support, first install the python destination support for syslog-ng. Below is an example of how to do this on an ubuntu system.&#x20;
 
-```
+```shell
 apt-get install syslog-ng-mod-python
 ```
 
 You can refer to the syslog-ng website for other operating systems. You can now proceed to install the LOGIQ.AI driver next. This assumes you have python3 installed. More details on the LOGIQ.AI driver can be found at [https://pypi.org/project/logiqaidstsyslogng/](https://pypi.org/project/logiqaidstsyslogng/)
 
-```
+```shell
 pip install --upgrade logiqaidstsyslogng
+```
+
+or
+
+```shell
+pip3 install --upgrade logiqaidstsyslogng
+```
+
+{% hint style="info" %}
+Note you may need to use pip3 vs pip to install depending on what the syslog-ng python linkage is. A quick way to test your python linkage is to create a dummy  syslong-ng confi file with a python destination. See below
+{% endhint %}
+
+#### Checking python linkage for syslog-ng
+
+```
+@version: 3.38
+
+source s_dummy {
+};
+
+python {
+import sys
+class VersionTest(object):
+    def init(self, options):
+        print(sys.version)
+        return True
+    def send(self, msg):
+        return True
+};
+
+destination d_test {
+    python(
+        class("VersionTest")
+    );
+};
+
+log { source(s_dummy); destination(d_test); };
+```
+
+Run syslog-ng with the above dummy config and you should see the version of python that it loads
+
+```
+#syslog-ng -f ./dummy-syslog-ng.conf --foreground
+3.8.10 (default, Jun 22 2022, 20:18:18)
+[GCC 9.4.0]
+```
+
+```
+# syslog-ng -f ./dummy-syslog-ng.conf --foreground
+2.7.17 (default, Jul  1 2022, 15:56:32)
+[GCC 7.5.0]
 ```
 
 #### Creating a logiq.conf for the driver
