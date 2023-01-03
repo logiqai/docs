@@ -36,4 +36,5 @@ description: 'Version: v3.5.8.4'
 * Added support for ingesting **Splunk Metrics**
 * Added support for [**Archiving alerts**](https://docs.logiq.ai/logiq-ui-configuration/audit-trail/alerts-trail) in InstaStore which will be available as an audit trail
 * Added support for [**Archiving events**](https://docs.logiq.ai/logiq-ui-configuration/audit-trail/events-trail) that are older than 24 hours which will be available under events history
+* Added new [**Severity Metrics**](../../log-management/explore-logs/severity-metrics.md) to measure the logs levels within the time range.
 * Made **Search** and **UI performance** enhancements ✨
