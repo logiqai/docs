@@ -256,7 +256,7 @@ The mappings for k8s\__node, k8s\_pod, k8s\_cluster can further be refined by ma
 
 You can obtain an ingest token from the LOGIQ UI as described [here](overview/generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
 
-Your GCP Cloud Logging logs will now be forwarded to your LOGIQ instance. See the [Explore](../log-management/explore-logs/) Section to view the logs.
+Your GCP Cloud Logging logs will now be forwarded to your LOGIQ instance. See the [Explore](../log-management/explore-logs.md) Section to view the logs.
 
 ### Running logstash outside of GCE
 

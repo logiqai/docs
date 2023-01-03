@@ -149,4 +149,4 @@ output {
 
 You can obtain an ingest token from the LOGIQ UI as described [here](../overview/generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
 
-Your AWS Cloud watch logs will now be forwarded to your LOGIQ instance. See the [Explore](../../log-management/explore-logs/) Section to view the logs.
+Your AWS Cloud watch logs will now be forwarded to your LOGIQ instance. See the [Explore](../../log-management/explore-logs.md) Section to view the logs.
