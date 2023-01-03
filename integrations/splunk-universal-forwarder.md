@@ -4,7 +4,7 @@ description: Configuring Splunk Universal Forwarder to send data to LOGIQ
 
 # Splunk Universal Forwarder
 
-### Splunk Raw mode
+### Raw mode ( not cooked )
 
 {% hint style="info" %}
 Splunk universal forwarders support forwarding raw data as it is collected as well in Splunk's proprietary protocol S2S. LOGIQ.AI can directly ingest from Splunk UF in raw mode that does not use proprietary S2S protocol.
