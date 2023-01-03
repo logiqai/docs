@@ -28,6 +28,10 @@ negotiateProtocolLevel = 0
 
 LOGIQ.AI can ingest data from Splunk forwarders in cooked mode as well.  You can create an S2S Ingest app extension to directly ingest data from Splunk universal forwarder and Heavy forwarder in cooked mode.
 
+{% hint style="success" %}
+Logs/Events/Metrics can be ingested into LOGIQ.AI using cooked mode
+{% endhint %}
+
 Go to "Explore" -> "App Extensions" and create your S2S Ingest app extension
 
 <figure><img src="../.gitbook/assets/Screen Shot 2023-01-02 at 1.20.49 PM.png" alt=""><figcaption><p>S2S Cooked mode plugin</p></figcaption></figure>
