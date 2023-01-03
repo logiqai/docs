@@ -84,13 +84,6 @@
 * [Splunk Universal Forwarder](integrations/splunk-universal-forwarder.md)
 * [Splunk Heavy Forwarder](integrations/splunk-heavy-forwarder.md)
 
-## Log based HIDS
-
-* [HIDS Overview](log-based-hids/hids-overview.md)
-* [OSSEC](log-based-hids/ossec.md)
-* [Wazuh](log-based-hids/wazuh.md)
-* [Atomic](log-based-hids/atomic.md)
-
 ## DATA MANAGEMENT
 
 * [Overview](data-management/overview.md)
