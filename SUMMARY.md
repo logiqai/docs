@@ -133,9 +133,9 @@
   * [Averaging](logiq-events/time-series-ai-ml/averaging.md)
   * [Standard Deviation(STD)](logiq-events/time-series-ai-ml/standard-deviation-std.md)
   * [Forecasting](logiq-events/time-series-ai-ml/forecasting.md)
-* [Alerts](logiq-events/alerts/README.md)
-  * [Alerts On Queries](logiq-events/alerts/alerts-on-queries.md)
-  * [Alerts On Logs](logiq-events/alerts/alerts.md)
+* [Alerts](logiq-events/alerts.md)
+* [Alerts (Simple/Anomaly)](logiq-events/alerts-simple-anomaly.md)
+* [Alerts On Logs](logiq-events/alerts-1.md)
 * [Rule Packs](logiq-events/rule-packs.md)
 
 ## DATA SOURCES
