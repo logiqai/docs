@@ -38,7 +38,11 @@
 
 * [logiqctl](command-line-interface/logiqctl/README.md)
   * [Obtaining API Key](command-line-interface/logiqctl/obtaining-api-key.md)
-* [logiqctl](https://logiqctl.logiq.ai/)
+* [logiqctl Documentation](https://logiqctl.logiq.ai/)
+
+## Logflow
+
+* [Logflow Documentation](https://logflow-docs.logiq.ai/)
 
 ## INTEGRATIONS
 
