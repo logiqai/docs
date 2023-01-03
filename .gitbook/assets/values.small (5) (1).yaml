@@ -1,16 +1,16 @@
 logiq-flash:
-  replicaCount: 3
-  replicaCountMl: 2
-  replicaCountSync: 2
+  replicaCount: 1
+  replicaCountMl: 1
+  replicaCountSync: 1
   service:
     type: NodePort
   image:
-    tag: 2.1.11.32
-    pullPolicy: IfNotPresent
+    tag: 2.1.0
+    pullPolicy: Always
   persistence:
     enabled: true
-    size: 100Gi
-    ml_size: 20Gi
+    size: 10Gi
+    ml_size: 10Gi
   metrics:
     serviceMonitor:
       enabled: true
@@ -19,23 +19,20 @@ logiq-flash:
   resources:
     ingest:
       requests:
-        cpu: "3500m"
-        memory: "7500Mi"
-      limits:
-        cpu: "3500m"
+        cpu: "4000m"
     ml:
       requests:
         cpu: "1000m"
     sync:
       requests:
-        cpu: "3500m"
+        cpu: "1000m"
 
 flash-discovery:
   fullnameOverride: flash-discovery
   image:
     tag: 2.0.1
     pullPolicy: IfNotPresent
-  replicaCountDiscovery: 2
+  replicaCountDiscovery: 1
   persistence:
     enabled: true
     size: 2Gi
@@ -45,7 +42,7 @@ redis:
   fullnameOverride: redis
   usePassword: false
   cluster:
-    slaveCount: 0
+    slaveCount: 1
   master:
     disableCommands: []
     affinity:
@@ -103,15 +100,15 @@ redis:
     name: redis
 
 postgres:
-  enabled: true
+  enabled: false
   fullnameOverride: postgres
   postgresqlPostgresPassword: postgres
   postgresqlUsername: postgres
   postgresqlDatabase: postgres
   postgresqlPassword: postgres
   postgresqlExtendedConf:
-    maxConnections: "1000"
-    sharedBuffers: "2048MB"
+    maxConnections: "400"
+    sharedBuffers: "1024MB"
   metrics:
     enabled: true
     serviceMonitor:
@@ -119,11 +116,11 @@ postgres:
     additionalLabels:
       release: prometheus
   persistence:
-    size: 100Gi
+    size: 20Gi
   resources:
     requests:
       memory: "4Gi"
-      cpu: "4000m"
+      cpu: "1000m"
   securityContext:
     enabled: true
     fsGroup: 1001
@@ -138,8 +135,8 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.17.6
-      pullPolicy: IfNotPresent
+      tag: brew.2.0.4
+      pullPolicy: Always
     resources:
       requests:
         memory: "4Gi"
@@ -147,10 +144,10 @@ flash-coffee:
       limits:
         cpu: "1000m"
   coffee_worker:
-    replicaCount: 3
+    replicaCount: 1
     image:
-      tag: brew.2.1.17.6
-      pullPolicy: IfNotPresent
+      tag: brew.2.0.4
+      pullPolicy: Always
     resources:
       requests:
         memory: "1Gi"
@@ -158,13 +155,13 @@ flash-coffee:
       limits:
         cpu: "1000m"
 
-s3gateway:
-  s3gateway:
-    enabled: false
+s3-gateway:
   mode: distributed
   image:
     repository: minio/minio
     tag: RELEASE.2020-09-17T04-49-20Z
+  s3gateway:
+    enabled: false
   defaultBucket:
     enabled: true
   fullnameOverride: s3-gateway
@@ -197,15 +194,13 @@ ingress:
 
 kubernetes-ingress:
   controller:
-    replicaCount: 2
+    replicaCount: 1
     ingressClass: logiq-ingress
     service:
       type: LoadBalancer
     defaultTLSSecret:
       enabled: false
       secret: null
-  defaultBackend:
-    replicaCount: 2
   podSecurityPolicy:
     enabled: true
   serviceAccount:
@@ -228,9 +223,6 @@ prometheus-operator:
   node-exporter:
     replicaCount: 1
 
-grafana:
-  fullnameOverride: grafana
-
 logiqctl:
   image:
     repository: logiqai/logiqctl
@@ -239,25 +231,14 @@ logiqctl:
 
 global:
   domain: null
-  cloudProvider: aws
+  cloudProvider: gcp
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
-  nodeSelectors:
-    enabled: false
-    ingest: flash
-    infra: infra
-    other: coffee
-    db: db
-    cache: cache
-    ingest_sync: sync
   taints:
     enabled: false
     ingest: flash
-    infra: infra
+    infra: cache-infra
     other: coffee
-    db: db
-    cache: cache
-    ingest_sync: sync
   job:
     ttlSecondsAfterFinished: 100
   toolbox:
@@ -295,5 +276,4 @@ global:
     prometheus: true
     postgres: true
     redis: true
-    s3gateway: true
-    grafana: true
+    s3-gateway: true

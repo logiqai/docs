@@ -6,6 +6,6 @@ This is useful for identifying the interesting events that may occur in logs in 
 
 LOGIQ has hundreds of inbuilt SIEM rules which can be accessed on the "Rules" page.&#x20;
 
-![Various Rule Packs](<../.gitbook/assets/image (120).png>)
+![Various Rule Packs](<../.gitbook/assets/image (33) (1) (1).png>)
 
-![A sample Log2Metrics dashboard that tracks Security Incidents and status codes](<../.gitbook/assets/image (39).png>)
+![A sample Log2Metrics dashboard that tracks Security Incidents and status codes](<../.gitbook/assets/image (20) (1) (1).png>)

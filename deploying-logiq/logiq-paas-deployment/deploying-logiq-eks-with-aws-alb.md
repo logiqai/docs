@@ -25,14 +25,14 @@ Chart version 3.0.5 or greater is required for ALB provisioning support
 
 If you have deployed the Logiq on private subnet, you may need to map global accelerator (under Integrated services) to access the public endpoints and DNS on top of it.&#x20;
 
-![](<../../.gitbook/assets/image (34).png>)
+![](<../../.gitbook/assets/image (20) (1) (1) (1) (1) (1).png>)
 
 #### Using https
 
 By default the ALB will be configured to used port 80
 
-![](<../../.gitbook/assets/image (43).png>)
+![](<../../.gitbook/assets/image (16) (1) (1) (1).png>)
 
 If you want to route traffic on https(port:443), ensure your listener rules are configured on port 443. As a prerequisite, your global accelerator should have all the certificates configured for this to work. Please refer to the AWS documentation on <mark style="color:blue;">how to configure HTTPS -</mark> [<mark style="color:blue;">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html</mark>](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html)<mark style="color:blue;"></mark>
 
-![](<../../.gitbook/assets/image (86).png>)
+![](<../../.gitbook/assets/image (12) (1).png>)

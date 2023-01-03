@@ -1,5 +1,5 @@
 logiq-flash:
-  replicaCount: 3
+  replicaCount: 6
   service:
     type: NodePort
   image:
@@ -13,8 +13,8 @@ logiq-flash:
   metrics:
     serviceMonitor:
       enabled: true
-      selector:
-        release: prometheus
+    selector:
+      release: prometheus
   resources:
     requests:
       cpu: "1000m"
@@ -36,7 +36,7 @@ redis:
   fullnameOverride: redis
   usePassword: false
   cluster:
-    slaveCount: 2
+    slaveCount: 4
   master:
     disableCommands: []
     affinity:
@@ -97,8 +97,8 @@ postgres:
   postgresqlDatabase: postgres
   postgresqlPassword: postgres
   postgresqlExtendedConf:
-    maxConnections: "800"
-    sharedBuffers: "2048MB"
+    maxConnections: "1600"
+    sharedBuffers: "4096MB"
   metrics:
     enabled: true
     serviceMonitor:
@@ -109,8 +109,8 @@ postgres:
     size: 20Gi
   resources:
     requests:
-      memory: "8Gi"
-      cpu: "2000m"
+      memory: "12Gi"
+      cpu: "3000m"
   securityContext:
     enabled: true
     fsGroup: 1001
@@ -134,7 +134,7 @@ flash-coffee:
       limits:
         cpu: "1000m"
   coffee_worker:
-    replicaCount: 4
+    replicaCount: 8
     image:
       tag: brew.2.0.3
       pullPolicy: IfNotPresent
@@ -181,9 +181,9 @@ ingress:
 
 kubernetes-ingress:
   defaultBackend:
-    replicaCount: 2
+    replicaCount: 4
   controller:
-    replicaCount: 2
+    replicaCount: 4
     ingressClass: logiq-ingress
     service:
       type: LoadBalancer
@@ -214,7 +214,7 @@ global:
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
   job:
-    ttlSecondsAfterFinished: 60
+    ttlSecondsAfterFinished: 100
   toolbox:
     image:
       repository: logiqai/toolbox
@@ -245,12 +245,12 @@ global:
     admin_password: "flash-password"
     admin_org: "flash-org"
     admin_email: "flash-admin@foo.com"
-    license: "license/license_medium.jws"
+    license: "license/license_large.jws"
     upload_dashboard: true
     cluster_id: LOGIQ
     awsServiceEndpoint: https://s3.us-east-1.amazonaws.com
   persistence:
-    storageClass: "standard"
+    storageClass: standard
   chart:
     prometheus: true
     postgres: true

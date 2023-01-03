@@ -1,7 +1,7 @@
 logiq-flash:
   replicaCount: 6
   image:
-    tag: 2.0.1
+    tag: 2.0.0
     pullPolicy: IfNotPresent
   environment:
     flags_extra: "-workers 800 -timeout_inital_logs 1h -s3_partition_object_max_size 8388608"
@@ -22,9 +22,8 @@ logiq-flash:
 flash-discovery:
   fullnameOverride: flash-discovery
   image:
-    tag: 2.0.1
+    tag: 2.0.0
     pullPolicy: IfNotPresent
-  replicaCountDiscovery: 2
   persistence:
     enabled: true
     size: 2Gi
@@ -35,30 +34,6 @@ redis:
   usePassword: false
   cluster:
     slaveCount: 4
-  master:
-    disableCommands: []
-    affinity:
-      podAntiAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-        - labelSelector:
-            matchExpressions:
-            - key: app
-              operator: In
-              values:
-                - redis
-          topologyKey: "kubernetes.io/hostname"
-  slave:
-    disableCommands: []
-    affinity:
-      podAntiAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-        - labelSelector:
-            matchExpressions:
-            - key: app
-              operator: In
-              values:
-                - redis
-          topologyKey: "kubernetes.io/hostname"
   metrics:
     enabled: true
     serviceMonitor:
@@ -121,7 +96,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.0.1
+      tag: brew.2.0.0
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -132,7 +107,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 8
     image:
-      tag: brew.2.0.1
+      tag: brew.2.0.0
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -193,21 +168,9 @@ prometheus-operator:
     enabled: true
     size: 20Gi
 
-logiqctl:
-  image:
-    repository: logiqai/logiqctl
-    tag: 2.0.1
-    pullPolicy: IfNotPresent
-
 global:
   domain: null
   sharedSecretName: logiq-shared-secret
-  job:
-    ttlSecondsAfterFinished: 100
-  toolbox:
-    image:
-      repository: logiqai/toolbox
-      tag: 2.0.1
   environment:
     logiq_flash_host: logiq-flash
     logiq_flash_port: 9999

@@ -13,9 +13,9 @@ To share a search result, do the following:
 3. Toggle the **Share** button to generate a shareable URL.
 4. Copy and store the generated URL for future use.
 
-![](<../../.gitbook/assets/image (99).png>)
+![](<../../.gitbook/assets/image (26) (1) (1).png>)
 
-![](<../../.gitbook/assets/image (54).png>)
+![](<../../.gitbook/assets/image (16) (1).png>)
 
 You can now share this URL in any way you please. Those who access this URL will be able to view **** and sort through the search results you shared.
 
@@ -27,7 +27,7 @@ You can now share this URL in any way you please. Those who access this URL will
 
 LOGIQ saves shared searches for quick access in the search bar under **Favorites**. You can access **Favorites** by clicking the **Show Favorites** button in the search bar.&#x20;
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (15) (1).png>)
 
 
 

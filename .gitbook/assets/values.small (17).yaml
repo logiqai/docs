@@ -5,7 +5,7 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: 2.1.11.1
+    tag: 2.1.11.10
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -20,7 +20,7 @@ logiq-flash:
     ingest:
       requests:
         cpu: "3500m"
-        memory: "8704Mi"
+        memory: "7500Mi"
       limits:
         cpu: "3500m"
     ml:
@@ -138,7 +138,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.5
+      tag: brew.2.1.7
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -149,7 +149,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 1
     image:
-      tag: brew.2.1.5
+      tag: brew.2.1.7
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -228,6 +228,9 @@ prometheus-operator:
   node-exporter:
     replicaCount: 1
 
+grafana:
+  fullnameOverride: grafana
+
 logiqctl:
   image:
     repository: logiqai/logiqctl
@@ -293,3 +296,4 @@ global:
     postgres: true
     redis: true
     s3gateway: true
+    grafana: true

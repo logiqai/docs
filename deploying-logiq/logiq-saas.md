@@ -36,7 +36,7 @@ You'll now have access to and can interact with the LOGIQ UI.&#x20;
 
 Now that you have access to the LOGIQ UI, you can go ahead and:
 
-* [ ] [Get acquainted with the LOGIQ UI](../introduction/the-logiq-ui.md)
+* [ ] [Get acquainted with the LOGIQ UI](../log-management/the-logiq-ui.md)
 * [ ] [Configure your data sources](../integrations/overview/)
 * [ ] [Configure LOGIQ to send alerts to your email server](../logiq-ui-configuration/email-configuration-setup.md)
 * [ ] [Add and configure alert destinations like email, Slack, and PagerDuty](../integrations/alert-destinations.md)

@@ -5,8 +5,8 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: 2.1.0
-    pullPolicy: Always
+    tag: 2.1.9
+    pullPolicy: IfNotPresent
   persistence:
     enabled: true
     size: 10Gi
@@ -19,20 +19,22 @@ logiq-flash:
   resources:
     ingest:
       requests:
-        cpu: "4000m"
+        cpu: "3500m"
+      limits:
+        cpu: "3500m"
     ml:
       requests:
         cpu: "1000m"
     sync:
       requests:
-        cpu: "1000m"
+        cpu: "3500m"
 
 flash-discovery:
   fullnameOverride: flash-discovery
   image:
     tag: 2.0.1
     pullPolicy: IfNotPresent
-  replicaCountDiscovery: 1
+  replicaCountDiscovery: 2
   persistence:
     enabled: true
     size: 2Gi
@@ -42,7 +44,7 @@ redis:
   fullnameOverride: redis
   usePassword: false
   cluster:
-    slaveCount: 1
+    slaveCount: 0
   master:
     disableCommands: []
     affinity:
@@ -135,8 +137,8 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.0.4
-      pullPolicy: Always
+      tag: brew.2.1.3
+      pullPolicy: IfNotPresent
     resources:
       requests:
         memory: "4Gi"
@@ -146,8 +148,8 @@ flash-coffee:
   coffee_worker:
     replicaCount: 1
     image:
-      tag: brew.2.0.4
-      pullPolicy: Always
+      tag: brew.2.1.3
+      pullPolicy: IfNotPresent
     resources:
       requests:
         memory: "1Gi"
@@ -155,13 +157,13 @@ flash-coffee:
       limits:
         cpu: "1000m"
 
-s3-gateway:
+s3gateway:
+  s3gateway:
+    enabled: false
   mode: distributed
   image:
     repository: minio/minio
     tag: RELEASE.2020-09-17T04-49-20Z
-  s3gateway:
-    enabled: false
   defaultBucket:
     enabled: true
   fullnameOverride: s3-gateway
@@ -201,6 +203,8 @@ kubernetes-ingress:
     defaultTLSSecret:
       enabled: false
       secret: null
+  defaultBackend:
+    replicaCount: 1
   podSecurityPolicy:
     enabled: true
   serviceAccount:
@@ -231,14 +235,25 @@ logiqctl:
 
 global:
   domain: null
-  cloudProvider: gcp
+  cloudProvider: aws
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
+  nodeSelectors:
+    enabled: false
+    ingest: flash
+    infra: infra
+    other: coffee
+    db: db
+    cache: cache
+    ingest_sync: sync
   taints:
     enabled: false
     ingest: flash
-    infra: cache-infra
+    infra: infra
     other: coffee
+    db: db
+    cache: cache
+    ingest_sync: sync
   job:
     ttlSecondsAfterFinished: 100
   toolbox:
@@ -276,4 +291,4 @@ global:
     prometheus: true
     postgres: true
     redis: true
-    s3-gateway: true
+    s3gateway: true

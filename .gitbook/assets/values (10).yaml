@@ -5,7 +5,7 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: 2.2.20.rc1  
+    tag: 2.2.20.rc1
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -261,8 +261,8 @@ global:
     ingest: ingest
     infra: common
     other: common
-    db: db 
-    cache: db
+    db: common 
+    cache: common
     ingest_sync: common
   taints:
     enabled: false

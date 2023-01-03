@@ -5,8 +5,8 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: 2.1.0
-    pullPolicy: Always
+    tag: 2.1.0.2
+    pullPolicy: IfNotPresent
   persistence:
     enabled: true
     size: 10Gi
@@ -135,8 +135,8 @@ flash-coffee:
   coffee:
     replicaCount: 2
     image:
-      tag: brew.2.0.4
-      pullPolicy: Always
+      tag: brew.2.0.5
+      pullPolicy: IfNotPresent
     resources:
       requests:
         memory: "4Gi"
@@ -146,8 +146,8 @@ flash-coffee:
   coffee_worker:
     replicaCount: 4
     image:
-      tag: brew.2.0.4
-      pullPolicy: Always
+      tag: brew.2.0.5
+      pullPolicy: IfNotPresent
     resources:
       requests:
         memory: "1Gi"
@@ -262,6 +262,11 @@ global:
     s3_secret: "logiq_secret"
     s3_bucket: "logiq"
     s3_region: "us-east-1"
+    mail_server: "smtp-mail-server"
+    mail_port: "587"
+    mail_username: "user"
+    mail_password: "password"
+    mail_default_sender: "flash-admin@foo.com"
     admin_name: "flash-admin@foo.com"
     admin_password: "flash-password"
     admin_org: "flash-org"

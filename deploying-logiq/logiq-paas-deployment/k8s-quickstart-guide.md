@@ -34,7 +34,7 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 ```bash
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    v3.0.1            v3.0.1         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    v3.0.2            v3.0.2         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 #### 1.1.1 Update your HELM chart
@@ -45,7 +45,7 @@ If you already added LOGIQ's HELM repository in the past, you can get updated so
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq    v3.0.1            v3.0.1         LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq    v3.0.2            v3.0.2         LOGIQ Observability HELM chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -70,15 +70,15 @@ Sample YAML files for small, medium, large cluster configurations can be downloa
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../../.gitbook/assets/values.small (7).yaml" %}
+{% file src="../../.gitbook/assets/values.large (3).yaml" %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../../.gitbook/assets/values.medium (11).yaml" %}
+{% file src="../../.gitbook/assets/values.medium (3).yaml" %}
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../../.gitbook/assets/values.large (8).yaml" %}
+{% file src="../../.gitbook/assets/values.large (21).yaml" %}
 {% endtab %}
 {% endtabs %}
 

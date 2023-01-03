@@ -1,16 +1,16 @@
 logiq-flash:
-  replicaCount: 6
+  replicaCount: 8
   replicaCountMl: 2
-  replicaCountSync: 1
+  replicaCountSync: 2
   service:
     type: NodePort
   image:
-    tag: 2.1.0.2
+    tag: v3.1
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
-    size: 10Gi
-    ml_size: 10Gi
+    size: 100Gi
+    ml_size: 20Gi
   metrics:
     serviceMonitor:
       enabled: true
@@ -18,14 +18,19 @@ logiq-flash:
       release: prometheus
   resources:
     ingest:
+      limits:
+        cpu: "1250m"
       requests:
-        cpu: "4000m"
+        cpu: "1250m"
+        memory: "2750Mi"
     ml:
-      requests:
+      limits:
         cpu: "1000m"
+      requests:
+        cpu: "500m"
     sync:
       requests:
-        cpu: "1000m"
+        cpu: "100m"
 
 flash-discovery:
   fullnameOverride: flash-discovery
@@ -42,7 +47,7 @@ redis:
   fullnameOverride: redis
   usePassword: false
   cluster:
-    slaveCount: 2
+    slaveCount: 0
   master:
     disableCommands: []
     affinity:
@@ -107,8 +112,21 @@ postgres:
   postgresqlDatabase: postgres
   postgresqlPassword: postgres
   postgresqlExtendedConf:
-    maxConnections: "3200"
-    sharedBuffers: "8192MB"
+    sharedBuffers: "4096MB"
+    effectiveCacheSize: "12288MB"
+    maintenanceWorkMem: "1024MB"
+    checkpointCompletionTarget: "0.7"
+    walBuffers: "16MB"
+    defaultStatisticsTarget: "100"
+    randomPageCost: "1.1"
+    effectiveIoConcurrency: "200"
+    workMem: "327kB"
+    minWalSize: "1024MB"
+    maxWalSize: "4096MB"
+    maxWorkerProcesses: "10"
+    maxParallelWorkersPerGather: "4"
+    maxParallelWorkers: "10"
+    maxParallelMaintenanceWorkers: "4"
   metrics:
     enabled: true
     serviceMonitor:
@@ -133,9 +151,9 @@ flash-coffee:
   service:
     type: ClusterIP
   coffee:
-    replicaCount: 2
+    replicaCount: 1
     image:
-      tag: brew.2.0.5
+      tag: brew.v3.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -146,7 +164,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 4
     image:
-      tag: brew.2.0.5
+      tag: brew.v3.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -155,13 +173,13 @@ flash-coffee:
       limits:
         cpu: "1000m"
 
-s3-gateway:
+s3gateway:
+  s3gateway:
+    enabled: false
   mode: distributed
   image:
     repository: minio/minio
     tag: RELEASE.2020-09-17T04-49-20Z
-  s3gateway:
-    enabled: false
   defaultBucket:
     enabled: true
   fullnameOverride: s3-gateway
@@ -194,34 +212,50 @@ ingress:
 
 kubernetes-ingress:
   controller:
-    replicaCount: 3
+    image:
+      repository: k8s.gcr.io/ingress-nginx/controller
+      tag: "v1.2.0"
+    replicaCount: 4
     ingressClass: logiq-ingress
     service:
       type: LoadBalancer
     defaultTLSSecret:
       enabled: false
       secret: null
+  defaultBackend:
+    replicaCount: 2
   podSecurityPolicy:
     enabled: true
   serviceAccount:
     create: true
     name: ingress-nginx
 
-prometheus-operator:
+
+prometheus:
   fullnameOverride: prometheus
   persistence:
     enabled: true
     size: 20Gi
   alertmanager:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   prometheus:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   operator:
     replicaCount: 1
   kube-state-metrics:
     replicaCount: 1
   node-exporter:
     replicaCount: 1
+
+grafana:
+  fullnameOverride: grafana
+
 
 logiqctl:
   image:
@@ -231,14 +265,29 @@ logiqctl:
 
 global:
   domain: null
-  cloudProvider: gcp
+  enableAwsAlb:
+      enabled: false
+  kubeDistributor:
+      enabled: false
+  cloudProvider: aws
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
+  nodeSelectors:
+    enabled: false
+    ingest: flash
+    infra: infra
+    other: coffee
+    db: db
+    cache: cache
+    ingest_sync: sync
   taints:
     enabled: false
     ingest: flash
-    infra: cache-infra
+    infra: infra
     other: coffee
+    db: db
+    cache: cache
+    ingest_sync: sync
   job:
     ttlSecondsAfterFinished: 100
   toolbox:
@@ -262,11 +311,6 @@ global:
     s3_secret: "logiq_secret"
     s3_bucket: "logiq"
     s3_region: "us-east-1"
-    mail_server: "smtp-mail-server"
-    mail_port: "587"
-    mail_username: "user"
-    mail_password: "password"
-    mail_default_sender: "flash-admin@foo.com"
     admin_name: "flash-admin@foo.com"
     admin_password: "flash-password"
     admin_org: "flash-org"
@@ -281,4 +325,5 @@ global:
     prometheus: true
     postgres: true
     redis: true
-    s3-gateway: true
+    s3gateway: true
+    grafana: false

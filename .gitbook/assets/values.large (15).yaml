@@ -1,11 +1,11 @@
 logiq-flash:
-  replicaCount: 8
+  replicaCount: 6
   replicaCountMl: 2
   replicaCountSync: 2
   service:
     type: NodePort
   image:
-    tag: 2.1.24-rc41
+    tag: 2.1.11.10
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -18,19 +18,17 @@ logiq-flash:
       release: prometheus
   resources:
     ingest:
-      limits:
-        cpu: "1250m"
       requests:
-        cpu: "1250m"
-        memory: "2750Mi"
+        cpu: "3500m"
+        memory: "8704Mi"
+      limits:
+        cpu: "3500m"
     ml:
-      limits:
-        cpu: "1000m"
       requests:
-        cpu: "500m"
+        cpu: "1000m"
     sync:
       requests:
-        cpu: "100m"
+        cpu: "3500m"
 
 flash-discovery:
   fullnameOverride: flash-discovery
@@ -153,7 +151,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.37-rc60
+      tag: brew.2.1.7
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -164,7 +162,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 4
     image:
-      tag: brew.2.1.37-rc60
+      tag: brew.2.1.7
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -212,7 +210,7 @@ ingress:
 
 kubernetes-ingress:
   controller:
-    replicaCount: 4
+    replicaCount: 3
     ingressClass: logiq-ingress
     service:
       type: LoadBalancer
@@ -220,7 +218,7 @@ kubernetes-ingress:
       enabled: false
       secret: null
   defaultBackend:
-    replicaCount: 2
+    replicaCount: 3
   podSecurityPolicy:
     enabled: true
   serviceAccount:
@@ -254,8 +252,6 @@ logiqctl:
 
 global:
   domain: null
-  kubeDistributor:
-      enabled: false
   cloudProvider: aws
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
@@ -313,4 +309,4 @@ global:
     postgres: true
     redis: true
     s3gateway: true
-    grafana: false
+    grafana: true
