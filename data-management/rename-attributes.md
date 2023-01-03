@@ -25,7 +25,7 @@ You should use this feature if:
 To rename the log attributes you can head to the `Create Rule` page.
 
 * Go to the `Forward` section.
-* Fill the details that are asked such as `Name`, `Group`, `Description`, `Namespace`, `Application Match`, and if you want you can add `Add more parameters`.
+* Fill the details that are asked such as `Name`, `Group`, `Description`, `Namespace`, `Application Match`, and if you want you can add more parameters.
 * Toggle the `Forward Labels` button, and select the Labels that are to be Forwarded to the destination.
 * Toggle the `Rename Labels` button, and Select the labels that have to be renamed before they are forwarded.
 * You will be able to see all the selected labels and Input fields corresponding to every labels, Rename the labels according to your needs.
@@ -53,10 +53,14 @@ To edit the renamed labels you should go to `Active Rules` page.
 
 <figure><img src="../.gitbook/assets/Screenshot from 2023-01-02 19-22-44 (1).png" alt=""><figcaption><p>Forward Rule in Active Rules</p></figcaption></figure>
 
-> You will be able to see the `Renamed Labels` in red tags. Each tag shows the old label name and the new labels name. &#x20;
+> You will be able to see the `Renamed Labels` in red tags. Each tag shows the old label name and the new labels name in the format `LABEL➤RENAMED_LABEL`.&#x20;
 
 <figure><img src="../.gitbook/assets/Screenshot from 2023-01-02 19-23-12.png" alt=""><figcaption><p>Edit Rule page</p></figcaption></figure>
 
-> You will be able to `edit a existing label name and renamed label`, `delete a renamed label mapping` and `add new labels to rename`.
+> You will be able to:&#x20;
+>
+> * edit a existing label name and renamed label
+> * delete a renamed label mapping&#x20;
+> * add new labels to rename
 
-After mapping forwarder to namespace, this rule will start working and all the logs which are being forwarded will have the renamed attributes instead of the default attributes.&#x20;
+After [mapping forwarder to namespace](https://logflow-docs.logiq.ai/flow-management/forwarders), this rule will start working and all the logs which are being forwarded will have the renamed attributes instead of the default attributes.&#x20;
