@@ -6,8 +6,6 @@ description: 'Version: v3.5.8.4'
 
 **📆 Thu, Dec 29, 2022**
 
-****
-
 * Added support for **Grafana dashboard import** for:&#x20;
   * Fluent Bit
   * Go
@@ -26,6 +24,7 @@ description: 'Version: v3.5.8.4'
   * GCP PubSub
   * AWS Kinesis
   * S3 Compatible object storage
+  * Splunk S2S cooked mode
 * Added new **Forwarder plugins** for:
   * Splunk Metric index
   * Azure EventHub
