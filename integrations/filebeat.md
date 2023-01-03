@@ -41,6 +41,9 @@ output:
   logstash:
     hosts:
     - "<Logiq-endpoint>:25224"
+    worker: 12
+    bulk_max_size: 25
+    ttl: 5s
 ```
 
 ### PROCESSORS
@@ -63,6 +66,21 @@ We strongly recommend partitioning your data for better organization as well as 
             application: test
             cluster_id: foo
 ```
+
+### PERSISTENCE
+
+We strongly recommend running fiilebeats with disk persistence enabled. Not doing so can result in data loss when there are mismatches in throughput, sudden data bursts etc.
+
+
+
+```
+queue:
+  disk:
+    max_size: 1GB
+    path: <path to your diskqueue e.g. ./diskqueue>
+```
+
+Please note the diskqueue folder must exist and have write permissions for filebeats
 
 ### Example&#x20;
 

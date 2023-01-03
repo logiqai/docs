@@ -70,15 +70,15 @@ Sample YAML files for small, medium, large cluster configurations can be downloa
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../../.gitbook/assets/values.small (24).yaml" %}
+{% file src="../../.gitbook/assets/values.small (7).yaml" %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../../.gitbook/assets/values.medium (23).yaml" %}
+{% file src="../../.gitbook/assets/values.medium (11).yaml" %}
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../../.gitbook/assets/values.large (21).yaml" %}
+{% file src="../../.gitbook/assets/values.large (8).yaml" %}
 {% endtab %}
 {% endtabs %}
 
@@ -256,6 +256,8 @@ helm upgrade --namespace logiq \
 logiq logiq-repo/logiq
 ```
 
+* Provisioning GP3 CSI Driver on AWS EKS - [https://docs.logiq.ai/deploying-logiq/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-cloudformation#5.3-enable-gp3-storage-class-for-eks](https://docs.logiq.ai/deploying-logiq/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-cloudformation#5.3-enable-gp3-storage-class-for-eks)
+
 ### 3.5 Using external AWS RDS Postgres database instance
 
 To use external AWS RDS Postgres database for your LOGIQ deployment, execute the following command.
@@ -432,6 +434,13 @@ helm upgrade --install logiq --namespace logiq \
 ```
 
 The Grafana instance is exposed at port 3000 on the ingress controller. The deployed Grafana instance uses the same credentials as the LOGIQ UI
+
+### 3.14 Configuring ALB Ingress on EKS <a href="#3.14-configuring-alb-on-eks" id="3.14-configuring-alb-on-eks"></a>
+
+LOGIQ creates an Ingress resource in the namespace it is deployed.&#x20;
+
+* Creating an OIDC provider for your EKS cluster - [https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.htm](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html)
+* Please refer to the EKS configuration on how to automatically provision an ALB here - [https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
 
 ## 4 Teardown
 

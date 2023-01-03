@@ -78,11 +78,11 @@ or
 pip3 install --upgrade logiqaidstsyslogng
 ```
 
+### Checking Python2/3 linkage for syslog-ng
+
 {% hint style="info" %}
 Note you may need to use pip3 vs pip to install depending on what the syslog-ng python linkage is. A quick way to test your python linkage is to create a dummy  syslong-ng confi file with a python destination. See below
 {% endhint %}
-
-### Checking python linkage for syslog-ng
 
 ```
 @version: 3.38
@@ -177,11 +177,12 @@ The scope for value-pairs also needs to contain rfc5424 so we can pull out all t
 
 The python destination provides some usefule options as described below
 
-| Name          | Values                                                                         | Default | Notes                                                                                                       |
-| ------------- | ------------------------------------------------------------------------------ | ------- | ----------------------------------------------------------------------------------------------------------- |
-| batch-timeout | e.g. 500 (milliseconds)                                                        | NA      | Refer to syslog-ng documentation. This allows for batching logs                                             |
-| batch-lines   | e.g. 400                                                                       | NA      | Refer to syslog-ng documentation. This limits the max batch size allowed before python plugin calls a flush |
-| class         | <pre data-overflow="wrap"><code>logiqaidstsyslogng.LogDestination</code></pre> | NA      | Specifies the LOGIQ.AI python driver class to load                                                          |
+| Name          | Values                                                                          | Default | Notes                                                                                                       |
+| ------------- | ------------------------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
+| batch-timeout | e.g. 500 (milliseconds)                                                         | NA      | Refer to syslog-ng documentation. This allows for batching logs                                             |
+| batch-lines   | e.g. 400                                                                        | NA      | Refer to syslog-ng documentation. This limits the max batch size allowed before python plugin calls a flush |
+| class         | <pre data-overflow="wrap"><code>logiqaidstsyslogng.LogDestination
+</code></pre> | NA      | Specifies the LOGIQ.AI python driver class to load                                                          |
 
 The LOGIQ.AI driver provides various options as described below
 

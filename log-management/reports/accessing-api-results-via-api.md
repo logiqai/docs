@@ -119,7 +119,7 @@ post_query()
 ```
 
 {% hint style="info" %}
-[Refer here to get the API key ](../logiqctl/obtaining-api-key.md)
+[Refer here to get the API key ](../../command-line-interface/logiqctl/obtaining-api-key.md)
 {% endhint %}
 
 

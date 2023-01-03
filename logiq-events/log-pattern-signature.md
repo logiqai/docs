@@ -2,7 +2,7 @@
 description: Log Pattern-Signature explained, usage, and configure.
 ---
 
-# Pattern-Signature Usage and Configure
+# Log Pattern-Signature
 
 ## Log Pattern-Signature Explained
 
@@ -66,7 +66,7 @@ Example log display from namespace selection
 
 After that, go to the right side and click on the log summary button (see below) to display the PSes. See the final log PS display below.
 
-![](<../.gitbook/assets/t3-ex-s3aa-2022-06-21\_13-37-36 (1).jpg>)
+![](../.gitbook/assets/t3-ex-s3aa-2022-06-21\_13-37-36.jpg)
 
 Annotation explanations
 

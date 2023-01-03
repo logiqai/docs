@@ -3,7 +3,7 @@
 ## Introduction
 
 * [Overview](README.md)
-* [User Interface](log-management/the-logiq-ui.md)
+* [User Interface](introduction/the-logiq-ui.md)
 * [Releases](introduction/releases/README.md)
   * [Releases-old](introduction/releases/release-notes.md)
 
@@ -17,18 +17,33 @@
 * [SaaS](deploying-logiq/logiq-saas.md)
 * [PaaS deployment](deploying-logiq/logiq-paas-deployment/README.md)
   * [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/logiq-paas-deployment/k8s-quickstart-guide.md)
-  * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/deploying-logiq-paas-on-microk8s.md)
-  * [Deploying LOGIQ PaaS on AWS](deploying-logiq/aws-cloudformation.md)
-  * [Deploying LOGIQ EKS on AWS using CloudFormation](deploying-logiq/deploying-logiq-eks-on-aws-using-cloudformation.md)
-  * [Deploying LOGIQ EKS on AWS using custom AMI](deploying-logiq/deploying-logiq-eks-on-aws-using-custom-ami.md)
-  * [Deploying Logiq EKS with AWS ALB](deploying-logiq/deploying-logiq-eks-with-aws-alb.md)
-  * [Deploying LOGIQ PaaS in Azure Kubernetes Service](deploying-logiq/deploying-logiq-paas-in-azure-kubernetes-service.md)
-    * [Azure Blob Storage Lifecycle Management](deploying-logiq/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
+  * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-on-microk8s.md)
+  * [Deploying LOGIQ PaaS on AWS](deploying-logiq/logiq-paas-deployment/aws-cloudformation.md)
+  * [Deploying LOGIQ EKS on AWS using CloudFormation](deploying-logiq/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-cloudformation.md)
+  * [Deploying LOGIQ EKS on AWS using custom AMI](deploying-logiq/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-custom-ami.md)
+  * [Deploying Logiq EKS with AWS ALB](deploying-logiq/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
+  * [Deploying LOGIQ PaaS in Azure Kubernetes Service](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
+    * [Azure Blob Storage Lifecycle Management](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
+
+## Dashboards
+
+* [Overview](dashboards/overview.md)
+* [Create Your First Dashboard](dashboards/create-your-first-dashboard.md)
+* [Building auto-refreshing Dashboard](dashboards/building-auto-refreshing-dashboard.md)
+* [Adding widgets to the Dashboard](dashboards/adding-widgets-to-the-dashboard.md)
+* [Using Pre-defined Dashboards](dashboards/using-pre-defined-dashboards.md)
+* [Import Grafana Dashboards](dashboards/import-grafana-dashboards.md)
+
+## COMMAND LINE INTERFACE
+
+* [logiqctl](command-line-interface/logiqctl/README.md)
+  * [Obtaining API Key](command-line-interface/logiqctl/obtaining-api-key.md)
+* [logiqctl](https://logiqctl.logiq.ai/)
 
 ## INTEGRATIONS
 
-* [Overview](integrations/overview.md)
-  * [Generating a secure ingest token](integrations/generating-a-secure-ingest-token.md)
+* [Overview](integrations/overview/README.md)
+  * [Generating a secure ingest token](integrations/overview/generating-a-secure-ingest-token.md)
 * [AWS](integrations/aws/README.md)
   * [AWS CloudWatch](integrations/aws/aws-cloudwatch-exporter.md)
   * [AWS ECS](integrations/aws/aws-ecs/README.md)
@@ -36,8 +51,8 @@
     * [ECS prometheus metrics to Logiq](integrations/aws/aws-ecs/ecs-prometheus-metrics-to-logiq.md)
   * [AWS S3](integrations/aws/aws-s3.md)
 * [Azure](integrations/azure/README.md)
-  * [Azure Databricks](integrations/azure-databricks.md)
-  * [Azure Event Hubs](integrations/azure-event-hubs.md)
+  * [Azure Databricks](integrations/azure/azure-databricks.md)
+  * [Azure Event Hubs](integrations/azure/azure-event-hubs.md)
 * [Docker Syslog log driver](integrations/docker-syslog-log-driver.md)
 * [Docker Swarm logging](integrations/docker-swarm-logging.md)
 * [Filebeat](integrations/filebeat.md)
@@ -49,52 +64,54 @@
 * [Fluentd](integrations/fluentd.md)
 * [FortiNet Firewalls](integrations/fortinet-firewalls.md)
 * [GCP Cloud Logging](integrations/gcp-cloud-logging.md)
-* [Incident management](logiq-ui-configuration/alert-destinations.md)
+* [Incident management](integrations/alert-destinations.md)
 * [Jaeger](integrations/jaeger.md)
 * [Kafka](integrations/kafka.md)
 * [Kubernetes](integrations/kubernetes.md)
 * [Logstash](integrations/logstash.md)
 * [MQTT](integrations/mqtt.md)
-* [OpenTelemetry](integrations/open-telemetry.md)
+* [Network Packets](integrations/network-packets.md)
+* [OpenTelemetry](integrations/opentelemetry.md)
+* [Object store (S3 Compatible)](integrations/object-store-s3-compatible.md)
 * [Palo Alto Firewall](integrations/palo-alto-firewall.md)
 * [Prometheus](integrations/prometheus/README.md)
   * [Spring Boot](integrations/prometheus/spring-boot.md)
   * [Prometheus on Windows](integrations/prometheus/prometheus-on-windows.md)
-  * [Prometheus Remote Write](monitoring/prometheus-remote-write.md)
+  * [Prometheus Remote Write](integrations/prometheus/prometheus-remote-write.md)
 * [Rsyslogd](integrations/rsyslogd.md)
 * [Syslog-ng](integrations/syslog-ng.md)
 * [Splunk Universal Forwarder](integrations/splunk-universal-forwarder.md)
+* [Splunk Heavy Forwarder](integrations/splunk-heavy-forwarder.md)
 
 ## DATA MANAGEMENT
 
 * [Overview](data-management/overview.md)
-* [Rules](data-management/rule-types/README.md)
-  * [Filter](data-management/rule-types/filter.md)
-  * [Extract](data-management/rule-types/extract.md)
-  * [Rewrite](data-management/rule-types/rewrite.md)
-  * [SIEM and TAG](data-management/rule-types/siem-and-tag.md)
-  * [Forward](data-management/rules/forward.md)
+* [Rules](data-management/rules.md)
+* [Extract](data-management/extract.md)
+* [Filter](data-management/filter.md)
+* [Rewrite](data-management/rewrite.md)
+* [SIEM and TAG](data-management/siem-and-tag.md)
+* [Forward](data-management/forward.md)
+* [Rename Attributes](data-management/rename-attributes.md)
 * [Timestamp handling](data-management/timestamp-handling.md)
+* [Large log/events/metrics/traces](data-management/large-log-events-metrics-traces.md)
 
 ## Infra & Application Monitoring
 
-* [Overview](monitoring/prometheus/README.md)
-  * [Connecting Prometheus](prometheus-monitoring/prometheus/connecting-prometheus.md)
-  * [Connecting Amazon Managed Service for Prometheus](data-source-monitoring/prometheus/amazon-managed-service-for-prometheus.md)
-* [Writing queries](monitoring/prometheus/querying-data.md)
+* [Overview](infra-and-application-monitoring/prometheus/README.md)
+  * [Connecting Prometheus](infra-and-application-monitoring/prometheus/connecting-prometheus.md)
+  * [Connecting Amazon Managed Service for Prometheus](infra-and-application-monitoring/prometheus/connecting-amazon-managed-service-for-prometheus.md)
+* [Writing queries](infra-and-application-monitoring/querying-data.md)
 
 ## LOG MANAGEMENT
 
 * [Terminology](log-management/logs-terminology.md)
-* [Explore Logs](log-management/logs-page.md)
-  * [LOGIQ Search Cheat Sheet](vewing-logs/search-page/search-cheat-sheet.md)
-  * [Share Search Results](log-management/search-page/share-search-results.md)
+* [Explore Logs](log-management/explore-logs/README.md)
+  * [LOGIQ Search Cheat Sheet](log-management/explore-logs/search-cheat-sheet.md)
+  * [Share Search Results](log-management/explore-logs/share-search-results.md)
 * [Log2Metrics](log-management/metrics-and-custom-indices.md)
 * [Reports](log-management/reports/README.md)
   * [Accessing Reports results via API](log-management/reports/accessing-api-results-via-api.md)
-* [logiqctl](log-management/logiqctl/README.md)
-  * [Configuring logiqctl](log-management/logiqctl/configuring-logiqctl.md)
-  * [Obtaining API Key](log-management/logiqctl/obtaining-api-key.md)
 * [Role-Based Access Control (RBAC)](log-management/role-based-access-control.md)
 * [Configuring RBAC](log-management/configuring-rbac.md)
 
@@ -107,13 +124,13 @@
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
 * [Log Pattern-Signature](logiq-events/log-pattern-signature.md)
-* [Time Series Insights](logiq-events/time-series-insights/README.md)
-  * [Anomaly Detection](logiq-events/time-series-insights/anomaly-detection.md)
-  * [Averaging](logiq-events/time-series-insights/averaging.md)
-  * [Standard Deviation(STD)](logiq-events/time-series-insights/standard-deviation-std.md)
-  * [Forecasting](logiq-events/time-series-insights/forecasting.md)
+* [Time Series (AI/ML)](logiq-events/time-series-ai-ml/README.md)
+  * [Anomaly Detection](logiq-events/time-series-ai-ml/anomaly-detection.md)
+  * [Averaging](logiq-events/time-series-ai-ml/averaging.md)
+  * [Standard Deviation(STD)](logiq-events/time-series-ai-ml/standard-deviation-std.md)
+  * [Forecasting](logiq-events/time-series-ai-ml/forecasting.md)
 * [Alerts On Logs](logiq-events/alerts.md)
-* [Rule Packs](logiq-events/events.md)
+* [Rule Packs](logiq-events/rule-packs.md)
 
 ## DATA SOURCES
 

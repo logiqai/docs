@@ -5,12 +5,12 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: 2.1.4
+    tag: 2.1.11.6
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
-    size: 10Gi
-    ml_size: 10Gi
+    size: 100Gi
+    ml_size: 20Gi
   metrics:
     serviceMonitor:
       enabled: true
@@ -20,6 +20,7 @@ logiq-flash:
     ingest:
       requests:
         cpu: "3500m"
+        memory: "8704Mi"
       limits:
         cpu: "3500m"
     ml:
@@ -137,7 +138,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.0-rc7
+      tag: brew.2.1.6
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -148,7 +149,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 1
     image:
-      tag: brew.2.1.0-rc7
+      tag: brew.2.1.6
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -157,13 +158,13 @@ flash-coffee:
       limits:
         cpu: "1000m"
 
-s3-gateway:
+s3gateway:
+  s3gateway:
+    enabled: false
   mode: distributed
   image:
     repository: minio/minio
     tag: RELEASE.2020-09-17T04-49-20Z
-  s3gateway:
-    enabled: false
   defaultBucket:
     enabled: true
   fullnameOverride: s3-gateway
@@ -238,6 +239,14 @@ global:
   cloudProvider: aws
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
+  nodeSelectors:
+    enabled: false
+    ingest: flash
+    infra: infra
+    other: coffee
+    db: db
+    cache: cache
+    ingest_sync: sync
   taints:
     enabled: false
     ingest: flash
@@ -283,4 +292,4 @@ global:
     prometheus: true
     postgres: true
     redis: true
-    s3-gateway: false
+    s3gateway: true

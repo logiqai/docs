@@ -5,7 +5,7 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: 2.1.0.2
+    tag: 2.1.1
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -231,7 +231,7 @@ logiqctl:
 
 global:
   domain: null
-  cloudProvider: gcp
+  cloudProvider: aws
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
   taints:

@@ -1,6 +1,6 @@
 # Overview
 
-LOGIQ automatically parses various log formats. Custom rules can be applied to the incoming log streams which are discussed in the [Rules](rule-types/) Section.
+LOGIQ automatically parses various log formats. Custom rules can be applied to the incoming log streams which are discussed in the [Rules](rules.md) Section.
 
 #### Embedded JSON
 
@@ -32,4 +32,4 @@ Teams spend enormous time cleaning data to get a sense of it; readily available 
 
 LOGIQ detects IP addresses in the log lines and extracts them as a separate field. Logs are enriched with geo-location information if public IP addresses are available, making it easier for users to visualize traffic patterns.
 
-![](<../.gitbook/assets/image (13).png>)
+![](<../.gitbook/assets/image (112).png>)

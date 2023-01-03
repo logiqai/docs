@@ -1,11 +1,11 @@
 logiq-flash:
-  replicaCount: 3
+  replicaCount: 4
   replicaCountMl: 2
   replicaCountSync: 2
   service:
     type: NodePort
   image:
-    tag: 2.1.11
+    tag: v3.0
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -18,17 +18,19 @@ logiq-flash:
       release: prometheus
   resources:
     ingest:
-      requests:
-        cpu: "3500m"
-        memory: "8704Mi"
       limits:
-        cpu: "3500m"
-    ml:
+        cpu: "1250m"
       requests:
+        cpu: "1250m"
+        memory: "2750Mi"
+    ml:
+      limits:
         cpu: "1000m"
+      requests:
+        cpu: "500m"
     sync:
       requests:
-        cpu: "3500m"
+        cpu: "100m"
 
 flash-discovery:
   fullnameOverride: flash-discovery
@@ -138,7 +140,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.5
+      tag: brew.v3.0
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -149,7 +151,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 3
     image:
-      tag: brew.2.1.5
+      tag: brew.v3.0
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -197,6 +199,9 @@ ingress:
 
 kubernetes-ingress:
   controller:
+    image:
+      repository: k8s.gcr.io/ingress-nginx/controller
+      tag: "v1.2.0"
     replicaCount: 2
     ingressClass: logiq-ingress
     service:
@@ -212,21 +217,31 @@ kubernetes-ingress:
     create: true
     name: ingress-nginx
 
-prometheus-operator:
+prometheus:
   fullnameOverride: prometheus
   persistence:
     enabled: true
     size: 20Gi
   alertmanager:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   prometheus:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   operator:
     replicaCount: 1
   kube-state-metrics:
     replicaCount: 1
   node-exporter:
     replicaCount: 1
+
+grafana:
+  fullnameOverride: grafana
+
 
 logiqctl:
   image:
@@ -236,6 +251,8 @@ logiqctl:
 
 global:
   domain: null
+  kubeDistributor:
+      enabled: false
   cloudProvider: aws
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
@@ -293,3 +310,4 @@ global:
     postgres: true
     redis: true
     s3gateway: true
+    grafana: false

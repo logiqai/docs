@@ -2,7 +2,7 @@
 description: This section describes how to use Log2Metrics in LOGIQ.
 ---
 
-# Metrics and Custom Indices
+# Log2Metrics
 
 LOGIQ Log2Metrics is a powerful feature that helps you convert your log data into a real-time metric. Using Log2Metrics, you can visualize your log data, plot distributions, create a custom index, and create alerts for events.
 
@@ -40,9 +40,9 @@ The configuration depicted in the image above creates a Log2Metric named `ingres
 
 ### Analyze log2metric
 
-Log2metrics helps to analyze the log for the specified time series. Click Analyse button will open the popup with values that can be choose to verify the logs.&#x20;
+Log2metrics helps to analyze the log for the specified time series.&#x20;
 
-On click of Analyse button shows a popup with the option to select the value/s as shown below. Choose the values that you want to analyze within the logs and click Apply button, on click will navigate to the search view and loads the corresponding logs to verify.
+Clicking the `Analyse` button will open the popup with values that can be choose to verify the logs as shown below. Choose the values that you want to analyze within the logs and click `Apply` button, it will navigate to the search view and the corresponding logs will be loaded to verify.
 
 ![Analyze Log2Metrics](../.gitbook/assets/analyze\_log2metrics.png)
 

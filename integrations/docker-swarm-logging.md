@@ -16,7 +16,7 @@ Create the following files:
 
 #### fluent-bit.conf
 
-Update the LOGIQ `host` and `Authorization Header` in the file. The token can be obtained from LOGIQ UI as described [here](generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui).
+Update the LOGIQ `host` and `Authorization Header` in the file. The token can be obtained from LOGIQ UI as described [here](overview/generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui).
 
 ```apacheconf
 [SERVICE]

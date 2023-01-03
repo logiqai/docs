@@ -38,21 +38,21 @@ management.endpoints.web.exposure.include=health,info,prometheus
 
 Restart the server and navigate to `http://localhost:<port>/actuator/` to verifiy if the Actuator endpoints are enabled.&#x20;
 
-![Actuator Endpoints](<../../.gitbook/assets/image (16) (1) (1) (1) (1) (1) (1).png>)
+![Actuator Endpoints](<../../.gitbook/assets/image (37).png>)
 
 Navigate to `http://localhost:<port>/actuator/prometheus` and verify if your Prometheus metrics are being displayed.
 
-![](<../../.gitbook/assets/image (12) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (108).png>)
 
 ### Enable API Timings
 
 Micrometer comes with a [timed annotation](https://micrometer.io/docs/concepts#\_the\_timed\_annotation). Annotate Spring Controller methods with the`@Timed`annotation, as shown below.&#x20;
 
-![](<../../.gitbook/assets/image (13) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (109).png>)
 
 Restart the server, invoke your APIs a few times and navigate to `http://localhost:<port>/actuator/prometheus`. You will now see the API stats being displayed along with other metrics.&#x20;
 
-![](<../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (57).png>)
 
 Once these metrics are available, you can use LOGIQ to visualize them and set up alerts for important events. The following image depicts an example of Spring Boot monitoring dashboard built by visualizing metrics ingested into LOGIQ via Prometheus.&#x20;
 

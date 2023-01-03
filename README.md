@@ -18,7 +18,7 @@ Because LOGIQ.AI supports the full collection of Log Data, it also includes a bu
 
 LOGIQ.AI brings a unified view for your enterprise with its full-stack approach to observability data life cycle management. An integrated approach means it is easier to root cause issues as all the capabilities work together in an integrated manner.
 
-![](<.gitbook/assets/LOGIQ-ALL (1).png>)
+![](<.gitbook/assets/LOGIQ-ALL (2).png>)
 
 ### Communities
 

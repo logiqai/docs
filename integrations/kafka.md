@@ -1,8 +1,8 @@
 # Kafka
 
-LOGIQ can run streaming analytics on any Kafka streams. The data in Kafka can be pushed to LOGIQ if the Kafka servers are running inside the customer network. If the Kafka endpoint is accessible to the LOGIQ network LOGIQ can pull the data directly from Kafka.
+LOGIQ.AI can run streaming analytics from one or more Kafka topics. Both push and pull modes are supported. The data in Kafka can be pushed to LOGIQ if the Kafka servers are running inside the customer network. If the Kafka endpoint is accessible to the LOGIQ network LOGIQ can pull the data directly from Kafka.
 
-## Pushing data to Logiq
+## PUSH Method: Pushing data using logstash
 
 ![Push data to Kafka](../.gitbook/assets/kafka\_push.png)
 
@@ -48,10 +48,22 @@ filter {
 }
 ```
 
-## Pulling Data from Kafka
+## PULL Method : Pulling Data from Kafka topics
 
 LOGIQ can pull data using Kafka Input Plugins. This method requires the Kafka endpoint to be reachable from LOGIQ network.&#x20;
 
 Kafka endpoint, Topic name, namespace, and application name are needed to configure the Kafka input plugin. Namespace and Application define how the data is partitioned in LOGIQ, see [here for more information](../log-management/logs-terminology.md).&#x20;
 
-![](../.gitbook/assets/kafka\_pull.png)
+![Kafka Input App Extension](../.gitbook/assets/kafka\_pull.png)
+
+{% hint style="info" %}
+Multiple Pull extensions can be created and running simultaneously
+{% endhint %}
+
+Creating a Kafka pull application can be done from the "_Explore_" -> "_App Extensions_"
+
+<figure><img src="../.gitbook/assets/Screen Shot 2023-01-02 at 5.18.11 PM.png" alt=""><figcaption><p>Kafka/Confluent App Extension</p></figcaption></figure>
+
+The plugin configuration page provides the various options to pick a Kafka topic, consumer group etc.
+
+<figure><img src="../.gitbook/assets/Screen Shot 2023-01-02 at 5.18.40 PM.png" alt=""><figcaption></figcaption></figure>

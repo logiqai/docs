@@ -57,15 +57,15 @@ To enable remote-write on Prometheus, include the remote-write endpoint as shown
 
 ```
 remote_write:
-  - url: https://<Logiq-endpoint>/api/v1/receive
+  - url: https://<Logiq-Endpoint>/api/v1/receive
     tls_config:
       ca_file: <CA-file>
       cert_file: <cert-file>
       key_file: <key-file>
 scrape_configs:
-  - job_name: prometheus-test6
+  - job_name: "windows-exporter"
     metrics_path: '/metrics'
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ['localhost:9182']
 
 ```

@@ -4,43 +4,59 @@
 
 _HTTP_ output plugin allows flushing your records into an HTTP endpoint. The **HTTP** output plugin allows to provide interoperability between compatible systems, Logiq being one.
 
-The below code block defines the minimal changes to be added to the fluent-bit configuration using the HTTP plugin to start sending log events to flash.
+The below code block defines the minimal changes to be added to the fluent-bit configuration using the HTTP plugin to start sending log events to flash.The below config supports storage persistence.
+
+
 
 ```
 [SERVICE]
-    Flush        1
-    Parsers_File /etc/td-agent-bit/parsers.conf
-    Log_Level    error
+    Flush                      1
+    Parsers_File              /etc/td-agent-bit/parsers.conf
+    Log_Level                 error
+    Storage.type              filesystem
+    Storage.path              /var/log/flb_storage_
+    Buffer storage.sync       normal
+    Storage.checksum          On
+    Storage.backlog.mem_limit 700kb
+    Storage.metrics           On
     
 [INPUT]
     Name              tail
-    Path              /var/log/*
-    Path_Key          On
+    Path              /var/log/*.log
+    Path_Key          filename
     Tag               logiq
     Buffer_Max_Size   1024k
     Read_from_Head    On
     Mem_Buf_Limit     1MB
+    Refresh_Interval  5
+    Storage.type      filesystem
 
 [FILTER]
-    Name          record_modifier
-    Match         logiq
-    Record cluster_id flash
+    Name               record_modifier
+    Match              logiq
+    Record cluster_id  flash
 
 [FILTER]
-    Name          record_modifier
-    Match         logiq
-    Record namespace mesos
+    Name             record_modifier
+    Match            logiq
+    Record namespace  xyz
 
 [FILTER]
-    Name          record_modifier
-    Match         logiq
-    Record app_name fluentbit
+    Name            record_modifier
+    Match           logiq
+    Record app_name system_logs
 
+[FILTER}
+    Name            throttle
+    Match           *
+    Rate            700
+    Window          300
+    Interval        1s
 
 [OUTPUT]
     Name          http
     Match         *
-    Host          localhost
+    Host          lq5955.logiq.ai
     Port          80
     URI           /v1/json_batch
     Format        json
@@ -129,5 +145,14 @@ To forward Windows logs to LOGIQ using Fluent Bit, do the following.&#x20;
 
 You'll now see a Fluent Bit service running on your Windows machine.&#x20;
 
+OR\
+You can also run the `.\status.ps1` helper scripts present at [https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/windows/helper-scripts](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/windows/helper-scripts)
 
+We have scripts to:&#x20;
+
+* `Restart` Fluent-Bit service.
+* `Start` Fluent-Bit service.
+* `Status` of fluent-Bit service.
+* `Stop` Fluent-Bit service.
+* `Uninstall` Fluent-Bit service.
 
