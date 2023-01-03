@@ -36,8 +36,6 @@
 
 ## COMMAND LINE INTERFACE
 
-* [logiqctl](command-line-interface/logiqctl/README.md)
-  * [Obtaining API Key](command-line-interface/logiqctl/obtaining-api-key.md)
 * [logiqctl Documentation](https://logiqctl.logiq.ai/)
 
 ## Logflow

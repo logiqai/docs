@@ -307,7 +307,7 @@ The following table describes the Helm options that are passed with the command 
 
 The LOGIQ PaaS Community Edition gives you access to Enterprise Edition features but with lesser daily log ingest rates and ingest worker processes. If you feel the need to up your daily ingest rates and make the most out of LOGIQ by extending its use to the rest of your team with SSO and RBAC, you can upgrade to the LOGIQ PaaS Enterprise Edition.&#x20;
 
-You can get yourself an Enterprise Edition license by contacting us via [license@logiq.ai](mailto:%20license@logiq.ai). Once you receive your new license, you can apply it to your LOGIQ deployment using LOGIQ's CLI, [`logiqctl`](../../command-line-interface/logiqctl/).&#x20;
+You can get yourself an Enterprise Edition license by contacting us via [license@logiq.ai](mailto:%20license@logiq.ai). Once you receive your new license, you can apply it to your LOGIQ deployment using LOGIQ's CLI, [`logiqctl`](broken-reference).&#x20;
 
 To use `logiqctl`, generate an API token from the LOGIQ UI, as shown in the following image.&#x20;
 
