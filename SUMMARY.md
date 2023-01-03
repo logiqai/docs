@@ -73,6 +73,7 @@
 * [Network Packets](integrations/network-packets.md)
 * [OpenTelemetry](integrations/opentelemetry.md)
 * [Object store (S3 Compatible)](integrations/object-store-s3-compatible.md)
+* [OSSEC Variants (OSSEC/WAZUH/ATOMIC)](integrations/ossec-variants-ossec-wazuh-atomic.md)
 * [Palo Alto Firewall](integrations/palo-alto-firewall.md)
 * [Prometheus](integrations/prometheus/README.md)
   * [Spring Boot](integrations/prometheus/spring-boot.md)
