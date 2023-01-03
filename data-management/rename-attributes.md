@@ -29,7 +29,7 @@ To rename the log attributes you can head to the `Create Rule` page.
 * Toggle the `Forward Labels` button, and select the Labels that are to be Forwarded to the destination.
 * Toggle the `Rename Labels` button, and Select the labels that have to be renamed before they are forwarded.
 * You will be able to see all the selected labels and Input fields corresponding to every labels, Rename the labels according to your needs.
-* Hit `Create rule` button.
+* Click `Create rule` button.
 * Now, this Rule is created and it can be previewed in `Active Rules` page.
 
 {% hint style="warning" %}
