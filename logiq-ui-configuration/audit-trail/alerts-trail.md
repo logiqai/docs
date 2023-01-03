@@ -1,6 +1,6 @@
 # Alerts Trail
 
-LogiqAI automatically logs all the alerts notifications which are happening in the logiq applications. This will be available on the alerts page.
+Logiq automatically logs all the alerts notifications that are happening in the logiq applications. This will be available on the alerts page.
 
 ### Steps to View Alert History
 
