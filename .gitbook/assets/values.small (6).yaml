@@ -1,16 +1,16 @@
 logiq-flash:
-  replicaCount: 1
+  replicaCount: 2
   replicaCountMl: 1
   replicaCountSync: 1
   service:
     type: NodePort
   image:
-    tag: 2.1.0.2
+    tag: v3.0
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
-    size: 10Gi
-    ml_size: 10Gi
+    size: 100Gi
+    ml_size: 20Gi
   metrics:
     serviceMonitor:
       enabled: true
@@ -18,21 +18,26 @@ logiq-flash:
       release: prometheus
   resources:
     ingest:
+      limits:
+        cpu: "1250m"
       requests:
-        cpu: "4000m"
+        cpu: "1250m"
+        memory: "2750Mi"
     ml:
-      requests:
+      limits:
         cpu: "1000m"
+      requests:
+        cpu: "500m"
     sync:
       requests:
-        cpu: "1000m"
+        cpu: "100m"
 
 flash-discovery:
   fullnameOverride: flash-discovery
   image:
     tag: 2.0.1
     pullPolicy: IfNotPresent
-  replicaCountDiscovery: 1
+  replicaCountDiscovery: 2
   persistence:
     enabled: true
     size: 2Gi
@@ -42,7 +47,7 @@ redis:
   fullnameOverride: redis
   usePassword: false
   cluster:
-    slaveCount: 1
+    slaveCount: 0
   master:
     disableCommands: []
     affinity:
@@ -135,7 +140,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.0.5
+      tag: brew.v3.0
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -146,7 +151,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 1
     image:
-      tag: brew.2.0.5
+      tag: brew.v3.0
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -155,13 +160,13 @@ flash-coffee:
       limits:
         cpu: "1000m"
 
-s3-gateway:
+s3gateway:
+  s3gateway:
+    enabled: false
   mode: distributed
   image:
     repository: minio/minio
     tag: RELEASE.2020-09-17T04-49-20Z
-  s3gateway:
-    enabled: false
   defaultBucket:
     enabled: true
   fullnameOverride: s3-gateway
@@ -194,34 +199,48 @@ ingress:
 
 kubernetes-ingress:
   controller:
-    replicaCount: 1
+    image:
+      repository: k8s.gcr.io/ingress-nginx/controller
+      tag: "v1.2.0"
+    replicaCount: 2
     ingressClass: logiq-ingress
     service:
       type: LoadBalancer
     defaultTLSSecret:
       enabled: false
       secret: null
+  defaultBackend:
+    replicaCount: 2
   podSecurityPolicy:
     enabled: true
   serviceAccount:
     create: true
     name: ingress-nginx
 
-prometheus-operator:
+prometheus:
   fullnameOverride: prometheus
   persistence:
     enabled: true
     size: 20Gi
   alertmanager:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   prometheus:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   operator:
     replicaCount: 1
   kube-state-metrics:
     replicaCount: 1
   node-exporter:
     replicaCount: 1
+
+grafana:
+  fullnameOverride: grafana
 
 logiqctl:
   image:
@@ -231,14 +250,28 @@ logiqctl:
 
 global:
   domain: null
-  cloudProvider: gcp
+  kubeDistributor:
+         enabled: false
+  cloudProvider: aws
+  createStorageClass: false
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
+  nodeSelectors:
+    enabled: false
+    ingest: flash
+    infra: infra
+    other: coffee
+    db: db
+    cache: cache
+    ingest_sync: sync
   taints:
     enabled: false
     ingest: flash
-    infra: cache-infra
+    infra: infra
     other: coffee
+    db: db
+    cache: cache
+    ingest_sync: sync
   job:
     ttlSecondsAfterFinished: 100
   toolbox:
@@ -262,11 +295,6 @@ global:
     s3_secret: "logiq_secret"
     s3_bucket: "logiq"
     s3_region: "us-east-1"
-    mail_server: "smtp-mail-server"
-    mail_port: "587"
-    mail_username: "user"
-    mail_password: "password"
-    mail_default_sender: "flash-admin@foo.com"
     admin_name: "flash-admin@foo.com"
     admin_password: "flash-password"
     admin_org: "flash-org"
@@ -281,4 +309,5 @@ global:
     prometheus: true
     postgres: true
     redis: true
-    s3-gateway: true
+    s3gateway: true
+    grafana: false

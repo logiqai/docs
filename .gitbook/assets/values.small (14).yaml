@@ -5,7 +5,7 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: 2.1.11.1
+    tag: 2.1.11
     pullPolicy: IfNotPresent
   persistence:
     enabled: true

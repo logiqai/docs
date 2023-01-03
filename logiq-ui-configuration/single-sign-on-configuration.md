@@ -127,15 +127,15 @@ Assign the users to the Application or group such as `NonAdmin` in this example 
 
 Navigate to Admin Console and go to the "Web and mobile apps" section
 
-![](<../.gitbook/assets/image (35).png>)
+![](<../.gitbook/assets/image (101).png>)
 
 Click on "Add custom SAML app"
 
-![](<../.gitbook/assets/image (26).png>)
+![](<../.gitbook/assets/image (88).png>)
 
 Fill in the "App details"
 
-![](<../.gitbook/assets/image (36).png>)
+![](<../.gitbook/assets/image (65).png>)
 
 Download the Idp Metadata file and host the file in a publically accessible location like AWS S3.
 
@@ -155,11 +155,11 @@ In the attributes section, either map a "Google Directory attributes" or Group m
 
 SAML app by default is disabled in Google, enable it and wait for a few mins and try logging in.
 
-![](<../.gitbook/assets/image (33).png>)
+![](<../.gitbook/assets/image (87).png>)
 
 Next head over to the LOGIQ SAML configuration screen in the settings. Select "SAML Enabled", and fill in the details.&#x20;
 
-![](<../.gitbook/assets/image (17).png>)
+![](<../.gitbook/assets/image (71).png>)
 
 Now you are ready to use SAML login, Logout, and log back in using the SAML Login option.&#x20;
 

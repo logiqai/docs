@@ -52,7 +52,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 * Under **Prerequisite - Prepare template**, select **Template is ready**.
 * Under **Specify template** > **Template source**, select **Amazon S3 URL -** Here you will specify the template URL from Step 1 above.
 
-![](<../.gitbook/assets/image (13) (1) (1).png>)
+![](<../.gitbook/assets/image (44).png>)
 
 **Step 4**: To deploy the EKS cluster, we need to enter the **Custom AMI-ID** using which the **node groups of EKS** will be spun up. We need a VPC with 2 subnets. Select them from the Network Configuration and Subnet configuration dropdown lists. Also, provide the ssh-keys for the EKS node groups.
 
@@ -60,7 +60,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 **Important:** You **MUST** choose 2 different subnets from the same VPC.&#x20;
 {% endhint %}
 
-![](<../.gitbook/assets/image (12) (1) (1).png>)
+![](<../.gitbook/assets/image (78).png>)
 
 The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
 
@@ -69,15 +69,15 @@ The EKS cluster will need the following node groups. Ensure that you select the 
 | **ingest** | c5.xlarge (4 Core 8 GB RAM)     | 2          |
 | **common** | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
 
-![](<../.gitbook/assets/image (19) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (105).png>)
 
 **Step 5:** Provide the **S3 bucket name** from **section 3,** the Cloudformation will create the S3 bucket, S3 bucket name needs to be globally unique.
 
-![](<../.gitbook/assets/image (21) (1) (1) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (73).png>)
 
 **Step 6:** Provide the KMS key ARN
 
-![](<../.gitbook/assets/image (21) (1) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (50).png>)
 
 **Step 7**: Click **Next**, and follow the instructions on the screen to create the stack.
 
@@ -137,7 +137,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 {% tabs %}
 {% tab title="Values File For Helm" %}
-{% file src="../.gitbook/assets/values (10).yaml" %}
+{% file src="../.gitbook/assets/values (5).yaml" %}
 {% endtab %}
 {% endtabs %}
 

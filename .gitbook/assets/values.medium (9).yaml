@@ -5,12 +5,12 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: 2.1.9
+    tag: 2.1.11
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
-    size: 10Gi
-    ml_size: 10Gi
+    size: 100Gi
+    ml_size: 20Gi
   metrics:
     serviceMonitor:
       enabled: true
@@ -20,6 +20,7 @@ logiq-flash:
     ingest:
       requests:
         cpu: "3500m"
+        memory: "8704Mi"
       limits:
         cpu: "3500m"
     ml:
@@ -137,7 +138,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.2
+      tag: brew.2.1.5
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -148,7 +149,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 3
     image:
-      tag: brew.2.1.2
+      tag: brew.2.1.5
       pullPolicy: IfNotPresent
     resources:
       requests:

@@ -3,7 +3,7 @@
 ## Introduction
 
 * [Overview](README.md)
-* [User Interface](log-management/the-logiq-ui.md)
+* [User Interface](introduction/the-logiq-ui.md)
 * [Release Notes 🚀](introduction/release-notes/README.md)
   * [Releases-old](introduction/release-notes/release-notes.md)
 
@@ -17,13 +17,13 @@
 * [SaaS](deploying-logiq/logiq-saas.md)
 * [PaaS deployment](deploying-logiq/logiq-paas-deployment/README.md)
   * [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/logiq-paas-deployment/k8s-quickstart-guide.md)
-  * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/deploying-logiq-paas-on-microk8s.md)
+  * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-on-microk8s.md)
   * [Deploying LOGIQ PaaS on AWS](deploying-logiq/logiq-paas-deployment/aws-cloudformation.md)
   * [Deploying LOGIQ EKS on AWS using CloudFormation](deploying-logiq/deploying-logiq-eks-on-aws-using-cloudformation.md)
   * [Deploying LOGIQ EKS on AWS using custom AMI](deploying-logiq/deploying-logiq-eks-on-aws-using-custom-ami.md)
   * [Deploying Logiq EKS with AWS ALB](deploying-logiq/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
-  * [Deploying LOGIQ PaaS in Azure Kubernetes Service](deploying-logiq/deploying-logiq-paas-in-azure-kubernetes-service.md)
-    * [Azure Blob Storage Lifecycle Management](deploying-logiq/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
+  * [Deploying LOGIQ PaaS in Azure Kubernetes Service](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
+    * [Azure Blob Storage Lifecycle Management](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
 
 ## Dashboards
 
@@ -130,12 +130,12 @@
 
 * [Log Pattern-Signature](logiq-events/log-pattern-signature.md)
 * [Time Series (AI/ML)](logiq-events/time-series-ai-ml/README.md)
-  * [Anomaly Detection](logiq-events/time-series-insights/anomaly-detection.md)
-  * [Averaging](logiq-events/time-series-insights/averaging.md)
-  * [Standard Deviation(STD)](logiq-events/time-series-insights/standard-deviation-std.md)
-  * [Forecasting](logiq-events/time-series-insights/forecasting.md)
+  * [Anomaly Detection](logiq-events/time-series-ai-ml/anomaly-detection.md)
+  * [Averaging](logiq-events/time-series-ai-ml/averaging.md)
+  * [Standard Deviation(STD)](logiq-events/time-series-ai-ml/standard-deviation-std.md)
+  * [Forecasting](logiq-events/time-series-ai-ml/forecasting.md)
 * [Alerts On Logs](logiq-events/alerts.md)
-* [Rule Packs](logiq-events/events.md)
+* [Rule Packs](logiq-events/rule-packs.md)
 
 ## DATA SOURCES
 
@@ -147,7 +147,7 @@
   * [Amazon Athena](data-sources/aws/amazon-athena.md)
   * [Amazon CloudWatch ( YAML )](data-sources/aws/amazon-cloudwatch-yaml.md)
   * [Amazon Elasticsearch Service](data-sources/aws/amazon-elasticsearch-service.md)
-  * [Amazon Redshift](data-sources/olap/amazon-redshift.md)
+  * [Amazon Redshift](data-sources/aws/amazon-redshift.md)
   * [MySQL Server (Amazon RDS)](data-sources/aws/mysql-server-amazon-rds.md)
 * [NoSQL Data Sources](data-sources/nosql-data-sources/README.md)
   * [MongoDB](data-sources/nosql-data-sources/mongodb.md)
@@ -172,4 +172,5 @@
 
 * [E-Mail Configuration](logiq-ui-configuration/email-configuration-setup.md)
 * [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration.md)
-* [Audit Trail](logiq-ui-configuration/audit-trail.md)
+* [Audit Trail](logiq-ui-configuration/audit-trail/README.md)
+  * [Events Trail](logiq-ui-configuration/audit-trail/events-trail.md)

@@ -5,7 +5,7 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: 2.1.11.10
+    tag: 2.1.11.32
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -20,7 +20,7 @@ logiq-flash:
     ingest:
       requests:
         cpu: "3500m"
-        memory: "8704Mi"
+        memory: "7500Mi"
       limits:
         cpu: "3500m"
     ml:
@@ -138,7 +138,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.7
+      tag: brew.2.1.17.6
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -149,7 +149,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 1
     image:
-      tag: brew.2.1.7
+      tag: brew.2.1.17.6
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -296,4 +296,4 @@ global:
     postgres: true
     redis: true
     s3gateway: true
-    grafana: true
+    grafana: false

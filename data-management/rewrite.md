@@ -4,15 +4,15 @@ Your incoming log data might include Personally Identifiable Information (PII) t
 
 Select a log line user want to create a Rewrite rule, click on the ellipsis available on the logline  and click on the "create rule"
 
-![](<../.gitbook/assets/image (25).png>)
+![](<../.gitbook/assets/image (69).png>)
 
 In the modal that opens, select REWRIE and enter the details.&#x20;
 
-![](<../.gitbook/assets/image (29) (1) (1).png>)
+![](<../.gitbook/assets/image (3).png>)
 
 Like every other rule, Enter Name, Group, Parameters to filter (optional), and Pattern.
 
-![](<../.gitbook/assets/image (27) (1) (1).png>)
+![](<../.gitbook/assets/image (116).png>)
 
 LOGIQ uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.&#x20;
 
@@ -67,7 +67,7 @@ It is crucial to be mindful of the context of the regular expression you create 
 
 You can create a custom rewrite rule to match and mask PII in your log data from the Rules section on your LOGIQ UI. To access create a new rule, click **Rules** > **Rule Packs** > **+ New Rule**
 
-![](<../.gitbook/assets/image (35) (1).png>)
+![](<../.gitbook/assets/image (128).png>)
 
 
 
@@ -83,10 +83,10 @@ To configure your rewrite rule, do the following.&#x20;
 8. Optionally, Add more Parameters to filter data
 9. Click **Create Rule**.&#x20;
 
-![](<../.gitbook/assets/image (15).png>)
+![](<../.gitbook/assets/image (22).png>)
 
 Your new rewrite rule is now created. Your new rule will apply to all incoming log data for the specified namespace, look for patterns within the log data that match the match expression, and rewrite log data as per the rewrite expression.&#x20;
 
 LOGIQ offers many inbuilt rules for obfuscating sensitive information like credit card numbers, SSN, phone numbers, etc...
 
-![](<../.gitbook/assets/image (22) (1).png>)
+![](<../.gitbook/assets/image (15).png>)

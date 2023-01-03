@@ -6,8 +6,8 @@
 
 Click on the "Prometheus"  data source.
 
-![List of Datasources ](<../../.gitbook/assets/image (33) (1).png>)
+![List of Datasources ](<../../.gitbook/assets/image (118).png>)
 
 Provide the Prometheus URL, Name and click "Save". Now you are ready to create dashboards and alerts. Read about how to query Prometheus data in the [PromQL](../querying-data.md) section.
 
-![Adding a Prometheus Datasource](<../../.gitbook/assets/image (24) (1).png>)
+![Adding a Prometheus Datasource](<../../.gitbook/assets/image (114).png>)

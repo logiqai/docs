@@ -4,7 +4,7 @@
 
 
 
-![](../../.gitbook/assets/flash-high-level-s3.png)
+![](<../../.gitbook/assets/flash-high-level-s3 (1).png>)
 
 ### Creating a Lambda function
 

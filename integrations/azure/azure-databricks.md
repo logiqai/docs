@@ -21,7 +21,7 @@ To configure your Azure Databricks cluster to forward logs to your LOGIQ endpoin
 * Choose your cluster size.
 * Click **Advanced options >** **SSH**. **** Paste your public key under **SSH public key**. You can generate a public key by running the command `ssh-keygen -t rsa -b 4096 -C "email-id”`. You will use the private key to log into the machine later on.
 
-![](<../../.gitbook/assets/0 (3)>)
+![](<../../.gitbook/assets/0 (4)>)
 
 * Next, on the Azure portal, under **Network security group**, add port `2200` in the **Inbound ports** section for the machines that the Databricks cluster spun up.
 

@@ -14,13 +14,13 @@ To set up log forwarding on AWS ECS, do the following.
 * Click on **Edit container**
 * Navigate to the **STORAGE AND LOGGING** section.
 
-![](<../../../.gitbook/assets/image (22) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (12).png>)
 
 * By default, the container will be sending logs to AWS CloudWatch. Uncheck **Auto configure to CloudWatch Logs**
 * Next, choose the Log driver as **awsfirelens**&#x20;
 * Add the following variables in the **Log options** section.
 
-![](<../../../.gitbook/assets/image (23) (1).png>)
+![](<../../../.gitbook/assets/image (119).png>)
 
 * The following are the mandatory fields that need to be passed in order to forward logs to LOGIQ.
 
@@ -40,7 +40,7 @@ To set up log forwarding on AWS ECS, do the following.
 
 * After saving the container definition, in the **Log router integration** section, you will see that **Enable FireLens integration Type** checkbox is checked along with the image which will be used (might differ as per region).
 
-![](<../../../.gitbook/assets/image (19) (1) (1).png>)
+![](<../../../.gitbook/assets/image (47).png>)
 
 * If you are using the **Configure via JSON** option, in the container definition section, add the following.
 
@@ -69,7 +69,7 @@ To set up log forwarding on AWS ECS, do the following.
 
 * Once you are done with the setup, you should see a logrouter container along with your container (for example, the **`wordpress`** the container below).
 
-![](<../../../.gitbook/assets/image (15) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (110).png>)
 
 Your ECS container logs will now be forwarded to your LOGIQ instance and will be visible on the **Logs** page on the LOGIQ UI. The **Namespace** will be mapped to your ECS cluster name and the **Application** is mapped to the task definition name.&#x20;
 

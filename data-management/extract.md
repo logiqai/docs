@@ -4,15 +4,15 @@ Ingested Log events fields can be fully parsed using the pre-built LOGIQ.ai pack
 
 Select a log line user want to create an extract rule, click on the ellipsis available on the logline  and click on the "create rule"
 
-![](<../.gitbook/assets/image (25).png>)
+![](<../.gitbook/assets/image (69).png>)
 
 In the modal that opens, select EXTRACT and enter the details.&#x20;
 
-![](<../.gitbook/assets/image (29) (1) (1).png>)
+![](<../.gitbook/assets/image (3).png>)
 
 Like every other rule, Enter Name, Group, Parameters to filter (optional), and Pattern.
 
-![](<../.gitbook/assets/image (27) (1) (1).png>)
+![](<../.gitbook/assets/image (116).png>)
 
 LOGIQ uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.&#x20;
 
