@@ -8,7 +8,7 @@ Select a log line user want to create a Rewrite rule, click on the ellipsis avai
 
 In the modal that opens, select REWRIE and enter the details.&#x20;
 
-![](<../.gitbook/assets/image (3) (1).png>)
+![](<../.gitbook/assets/image (3).png>)
 
 Like every other rule, Enter Name, Group, Parameters to filter (optional), and Pattern.
 

@@ -112,6 +112,7 @@
 * [Explore Logs](log-management/explore-logs/README.md)
   * [LOGIQ Search Cheat Sheet](log-management/explore-logs/search-cheat-sheet.md)
   * [Share Search Results](log-management/explore-logs/share-search-results.md)
+  * [Severity Metrics](log-management/explore-logs/severity-metrics.md)
 * [Log2Metrics](log-management/metrics-and-custom-indices.md)
 * [Reports](log-management/reports/README.md)
   * [Accessing Reports results via API](log-management/reports/accessing-api-results-via-api.md)
