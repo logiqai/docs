@@ -22,13 +22,51 @@ Launching the LOGIQ.AI OSSEC components is accomplished by launching the OSSEC I
 
 <figure><img src="../.gitbook/assets/Screen Shot 2023-01-02 at 10.19.49 PM.png" alt=""><figcaption><p>Launch the OSSEC HIDS components in LOGIQ.AI</p></figcaption></figure>
 
-You can now provide the credentials that that the agents can use to connect to LOGIQ.AI instance
+You can now provide the credentials that the agents can use to connect to LOGIQ.AI instance
 
 <figure><img src="../.gitbook/assets/Screen Shot 2023-01-02 at 10.24.04 PM.png" alt=""><figcaption><p>OSSEC Agent auth token</p></figcaption></figure>
 
+* HostName - Enter a name
+* AuthToken - The user chooses a 32-digit hex number, for example 'deadbeef01234567deadbeef98765432'.
+* Resources - The user enters CPU and MEM usage limit, format adopted from Kubernetes resource notation - see explanation here, [https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)  Example setting, cpu/cpu\_limit = 1000m, mem/mem\_limit=4Gi.
+* Version - Enters the image here.  The latest LOGIQ.ai OSSEC component image can be browsed here, [https://hub.docker.com/r/logiqai/hauler-ossec/tags](https://hub.docker.com/r/logiqai/hauler-ossec/tags)  Example image is 'logiqai/hauler-ossec:rc6'.
+
+Shortly after the user configures all of the above, he will see the assigned [_manager IP address_](#user-content-fn-1)[^1] appears in the display below.  This IP is needed for setting up the agent next.
+
+<figure><img src="../.gitbook/assets/ossec-display-2023-01-03_12-11-18.jpg" alt=""><figcaption><p>OSSEC Manager Configuration Display</p></figcaption></figure>
+
+### Wazuh agent installation
+
+OSS (open source software) OSSEC/Automic agent variation Wazuh agent is used for capturing host observability data.   Wazuh agent is better than the OSSEC agent in terms of performance, functionality and scalability. Wazuh agent has a better rules engine that is more efficient for large-scale deployments. It also offers enhanced logging capabilities with the ability to tag events and generate alerts in real-time. Furthermore, Wazuh can collect data from multiple sensors, such as Windows hosts, Linux systems, cloud platforms, and network devices.&#x20;
+
+Wazuh agent can easily be installed on both Linux and Windows platforms.  Please follow the simple installation steps below,
+
+{% embed url="https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-linux.html" %}
+
+{% embed url="https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-windows.html" %}
+
 ### Configuring the agents
 
-OSSEC/Wazuh/Atomic agents can connect to the LOGIQ.AI instance using agent-auth tool
+OSSEC/Automic OSS agent variation Wazuh agents can connect to the LOGIQ.AI instance using the agent-auth tool once after successfully installed.  For Debian-style Linux distribution, the command below is used to link the agent to the manager.&#x20;
 
-<pre><code><strong>agent-auth -m &#x3C;logiq.ai instance> -p 1514 -P &#x3C;auth token> -A &#x3C;agent identifier>
+<pre><code><strong>sudo /var/ossec/bin/agent-auth -m &#x3C;manager IP address> -p 1515 -P &#x3C;AuthToken> -A &#x3C;user-assigned agent name>
 </strong></code></pre>
+
+Windows system runs similarly from cmd or power shell window with Administrator privileges.
+
+```
+
+PS C:\Program Files (x86)\ossec-agent> .\agent-auth.exe -m <manager IP address> -p 1515 -P <AuthToken> -A <user-assigned agent name>
+```
+
+### Enable automatic vulnerability scan at the endpoint
+
+Wazuh agent supports automatic vulnerability scans, file integrity monitoring, and policy compliance features.  With the LOGIQ.ai server manager activated, the platform will provide comprehensive visibility across the entire environment with centralized management of security policies and events.&#x20;
+
+
+
+
+
+
+
+[^1]: 
