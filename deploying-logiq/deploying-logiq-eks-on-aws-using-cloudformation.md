@@ -264,7 +264,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 **Important:** You **MUST** choose 2 different subnets from the same VPC.&#x20;
 {% endhint %}
 
-![](https://lh3.googleusercontent.com/EqMNa2KCWo7OWbPuKcKitEmdftOoEBX9-7roQd1LbMIymmdU5FZS1McW87RvrPnReWqnlB9g8hIDVKov6svSTkiBVJNRaa--xdEL1UxL4ukGs42Ks3alRQW3ou3CyHhGKxQFYjBQ)
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
 
@@ -274,9 +274,7 @@ The EKS cluster will need the following node groups. Ensure that you select the 
 | **common** | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
 | **db**     | c5.xlarge (4 Core 8 GB RAM)     | 2          |
 
-****
-
-![](https://lh3.googleusercontent.com/VfIfmOgZkMHYNb06obLoPM-M67pz07uMXrwzmM4S1xd4N0irZX49AE\_JMACp7KDjvSUPpFPqnVrPSvcNC54l88WwTVBXfBPBzWtHenDqJqmt5p6fTxZcmYp4a9tvCOvTkOHX9m6q)
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 **Step 5:** Provide the **S3 bucket name** from **section 3,** the Cloudformation will create the S3 bucket, S3 bucket name needs to be globally unique.
 
