@@ -1,6 +1,10 @@
 # AWS S3
 
-## LOGIQ S3 exporter Lambda function
+## LOGIQ S3 Import App Extension (PULL)
+
+Refer to the section on [<mark style="color:blue;">**importing logs directly from S3 and S3 compatible stores**</mark>](../object-store-s3-compatible.md) using a pull Extension.
+
+## LOGIQ S3 exporter Lambda function (PUSH)
 
 
 
