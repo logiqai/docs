@@ -74,7 +74,11 @@ gcloud beta pubsub topics add-iam-policy-binding logiq-topic \
 --role roles/pubsub.publisher
 ```
 
-### Create the Logstash VM <a href="#create_the_logstash_vm" id="create_the_logstash_vm"></a>
+### Create a GCP PubSub App extension
+
+You can now launch the LOGIQ.AI GCP PubSub App extension and pull logs directly from the created topic and subscription. Please refer to the [<mark style="color:blue;">**documenation**</mark>](gcp-pubsub.md) <mark style="color:blue;">****</mark> on how to do so.
+
+### Create the Logstash VM (Deprecated) <a href="#create_the_logstash_vm" id="create_the_logstash_vm"></a>
 
 Create a VM to run `logstash` to pull logs from the Pub/Sub logging sink and send them to LOGIQ.AI:
 
@@ -164,7 +168,7 @@ output {
 
 ```
 
-### GKE Autopilot cluster
+### GKE Autopilot cluster (Deprecated)
 
 Autopilot is a new _mode of operation_ in Google Kubernetes Engine (GKE) that is designed to reduce the operational cost of managing clusters, optimize your clusters for production, and yield higher workload availability, use the below configuration on Logstash configuration to forward logs to Logiq.
 
