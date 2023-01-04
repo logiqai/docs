@@ -1,16 +1,16 @@
 logiq-flash:
-  replicaCount: 3
+  replicaCount: 8
   replicaCountMl: 2
   replicaCountSync: 2
   service:
     type: NodePort
   image:
-    tag: 2.1.4
+    tag: v3.1
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
-    size: 10Gi
-    ml_size: 10Gi
+    size: 100Gi
+    ml_size: 20Gi
   metrics:
     serviceMonitor:
       enabled: true
@@ -18,16 +18,19 @@ logiq-flash:
       release: prometheus
   resources:
     ingest:
-      requests:
-        cpu: "3500m"
       limits:
-        cpu: "3500m"
-    ml:
+        cpu: "1250m"
       requests:
+        cpu: "1250m"
+        memory: "2750Mi"
+    ml:
+      limits:
         cpu: "1000m"
+      requests:
+        cpu: "500m"
     sync:
       requests:
-        cpu: "3500m"
+        cpu: "100m"
 
 flash-discovery:
   fullnameOverride: flash-discovery
@@ -109,8 +112,21 @@ postgres:
   postgresqlDatabase: postgres
   postgresqlPassword: postgres
   postgresqlExtendedConf:
-    maxConnections: "1000"
-    sharedBuffers: "2048MB"
+    sharedBuffers: "4096MB"
+    effectiveCacheSize: "12288MB"
+    maintenanceWorkMem: "1024MB"
+    checkpointCompletionTarget: "0.7"
+    walBuffers: "16MB"
+    defaultStatisticsTarget: "100"
+    randomPageCost: "1.1"
+    effectiveIoConcurrency: "200"
+    workMem: "327kB"
+    minWalSize: "1024MB"
+    maxWalSize: "4096MB"
+    maxWorkerProcesses: "10"
+    maxParallelWorkersPerGather: "4"
+    maxParallelWorkers: "10"
+    maxParallelMaintenanceWorkers: "4"
   metrics:
     enabled: true
     serviceMonitor:
@@ -118,11 +134,11 @@ postgres:
     additionalLabels:
       release: prometheus
   persistence:
-    size: 100Gi
+    size: 256Gi
   resources:
     requests:
-      memory: "4Gi"
-      cpu: "4000m"
+      memory: "16Gi"
+      cpu: "7000m"
   securityContext:
     enabled: true
     fsGroup: 1001
@@ -137,7 +153,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.0-rc7
+      tag: brew.v3.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -146,9 +162,9 @@ flash-coffee:
       limits:
         cpu: "1000m"
   coffee_worker:
-    replicaCount: 3
+    replicaCount: 4
     image:
-      tag: brew.2.1.0-rc7
+      tag: brew.v3.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -157,13 +173,13 @@ flash-coffee:
       limits:
         cpu: "1000m"
 
-s3-gateway:
+s3gateway:
+  s3gateway:
+    enabled: false
   mode: distributed
   image:
     repository: minio/minio
     tag: RELEASE.2020-09-17T04-49-20Z
-  s3gateway:
-    enabled: false
   defaultBucket:
     enabled: true
   fullnameOverride: s3-gateway
@@ -196,7 +212,10 @@ ingress:
 
 kubernetes-ingress:
   controller:
-    replicaCount: 2
+    image:
+      repository: k8s.gcr.io/ingress-nginx/controller
+      tag: "v1.2.0"
+    replicaCount: 4
     ingressClass: logiq-ingress
     service:
       type: LoadBalancer
@@ -211,21 +230,32 @@ kubernetes-ingress:
     create: true
     name: ingress-nginx
 
-prometheus-operator:
+
+prometheus:
   fullnameOverride: prometheus
   persistence:
     enabled: true
     size: 20Gi
   alertmanager:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   prometheus:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   operator:
     replicaCount: 1
   kube-state-metrics:
     replicaCount: 1
   node-exporter:
     replicaCount: 1
+
+grafana:
+  fullnameOverride: grafana
+
 
 logiqctl:
   image:
@@ -235,9 +265,21 @@ logiqctl:
 
 global:
   domain: null
+  enableAwsAlb:
+      enabled: false
+  kubeDistributor:
+      enabled: false
   cloudProvider: aws
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
+  nodeSelectors:
+    enabled: false
+    ingest: flash
+    infra: infra
+    other: coffee
+    db: db
+    cache: cache
+    ingest_sync: sync
   taints:
     enabled: false
     ingest: flash
@@ -283,4 +325,5 @@ global:
     prometheus: true
     postgres: true
     redis: true
-    s3-gateway: false
+    s3gateway: true
+    grafana: false

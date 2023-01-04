@@ -44,7 +44,7 @@ LOGIQ enables you to set alerts against events, data, or metrics of interest der
 
 The following image depicts a typical **Alerts** page on the LOGIQ UI.&#x20;
 
-![](<../.gitbook/assets/image (21).png>)
+![](<../.gitbook/assets/image (21) (1).png>)
 
 ## Explore
 
