@@ -10,7 +10,7 @@ The LOGIQ.AI data fabric unifies observability data into a single platform by br
 
 ![](.gitbook/assets/RCA.png)
 
-Because LOGIQ.AI supports the full collection of Log Data, it also includes a built-in security monitoring layer for a log-based HIDS (Host Intrusion Detection System) that is compatible with OSSec, Atomic, and Wazuh agents. In addition, LOGIQ.AI integrates rules from the open source Sigma project for SIEM rules. This makes the LOGIQ.AI data fabric an ideal first-mile solution to consolidate MELT and security monitoring data for your enterprise environments.
+Because LOGIQ.AI supports the full collection of Log Data, it also includes a built-in security monitoring layer for a log-based HIDS (Host Intrusion Detection System) that is compatible with OSSEC, Atomic, and Wazuh agents. In addition, LOGIQ.AI integrates rules from the open source Sigma project for SIEM rules. This makes the LOGIQ.AI data fabric an ideal first-mile solution to consolidate MELT and security monitoring data for your enterprise environments.
 
 ![LOGIQ.AI Data Fabric](.gitbook/assets/LOGIQ-OVERVIEW.png)
 
@@ -22,7 +22,7 @@ LOGIQ.AI brings a unified view for your enterprise with its full-stack approach 
 
 ### Communities
 
-LOGIQ.AI is a SOC2 Type2 Compliance platform and a member of the CNCF
+LOGIQ.AI is a SOC 2 Type II Compliance platform and a member of the CNCF.
 
 | ![](.gitbook/assets/SOC2.png) | ![](.gitbook/assets/cncf-featured.png) |
 | ----------------------------- | -------------------------------------- |
