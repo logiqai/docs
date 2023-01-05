@@ -18,19 +18,19 @@ description: 'Version: v3.5.8.4'
 * Added support for [**Large log messages**](https://docs.logiq.ai/data-management/large-log-events-metrics-traces) up to 1Mb
 * Added native support for **Azure blob store** for InstaStore
 * Added new **Ingest plugins** for:
-  * [Kafka/Confluent](https://docs.logiq.ai/integrations/kafka)
+  * ****[**Kafka/Confluent**](https://docs.logiq.ai/integrations/kafka)****
   * OCI bucket
-  * [Azure EventHub](https://docs.logiq.ai/integrations/azure/azure-event-hubs)
-  * [GCP PubSub](https://docs.logiq.ai/integrations/gcp-cloud-logging)
-  * AWS Kinesis
-  * [S3 Compatible object storage](https://logflow-docs.logiq.ai/object-store-forwarding/s3-compatible)
+  * ****[**Azure EventHub**](https://docs.logiq.ai/integrations/azure/azure-event-hubs)****
+  * ****[**GCP PubSub**](https://docs.logiq.ai/integrations/gcp-cloud-logging)****
+  * ****[**AWS Kinesis**](https://docs.logiq.ai/integrations/kinesis)****
+  * ****[**S3 Compatible object storage**](https://docs.logiq.ai/integrations/object-store-s3-compatible)****
   * Splunk S2S cooked mode
 * Added new **Forwarder plugins** for:
   * Splunk Metric index
-  * [Azure EventHub](https://logflow-docs.logiq.ai/real-time-stream-forwarding/azure-eventhub)
-  * [AWS Kinesis](https://logflow-docs.logiq.ai/real-time-stream-forwarding/aws-kinesis)
-  * [Google PubSub](https://logflow-docs.logiq.ai/real-time-stream-forwarding/google-pub-sub)
-  * [S3 compatible object stores](https://logflow-docs.logiq.ai/object-store-forwarding/s3-compatible) **** and [Azure Blob store](https://logflow-docs.logiq.ai/object-store-forwarding/azure-blob-storage)
+  * ****[**Azure EventHub**](https://logflow-docs.logiq.ai/real-time-stream-forwarding/azure-eventhub)****
+  * ****[**AWS Kinesis**](https://logflow-docs.logiq.ai/real-time-stream-forwarding/aws-kinesis)****
+  * ****[**Google PubSub**](https://logflow-docs.logiq.ai/real-time-stream-forwarding/google-pub-sub)****
+  * ****[**S3 compatible object stores**](https://logflow-docs.logiq.ai/object-store-forwarding/s3-compatible) **** and [**Azure Blob store**](https://logflow-docs.logiq.ai/object-store-forwarding/azure-blob-storage)****
 * Added support for [**Renaming attributes**](https://docs.logiq.ai/data-management/rename-attributes) of logs before forwarding data to the destination
 * Added support for ingesting directly from [**Splunk UF**](https://docs.logiq.ai/integrations/splunk-universal-forwarder) (Universal Forwarder) and [**Splunk HF**](https://docs.logiq.ai/integrations/splunk-heavy-forwarder) (Heavy Forwarder) using **Splunk cooked mode**
 * Added support for ingesting **Splunk Metrics**
