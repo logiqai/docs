@@ -1,10 +1,12 @@
 ---
 description: >-
-  This feature allows the user to rename the log attributes before forwarding it
-  to any destination.
+  You will be able to rename the log attributes before forwarding it to any
+  destination.
 ---
 
 # Rename Attributes
+
+This feature allows the user to rename the log attributes before forwarding the data to any destinations.
 
 > Attribute is a piece of information which determines the properties of a field or tag.
 
@@ -15,20 +17,20 @@ Renaming log attributes will only work when logs are being forwarded to any dest
 \
 You should use this feature if:
 
-* You want to **increase cost savings**
-* You want to **decrease the payload size** being forwarded
-* You want to rename the labels to **maintain a set standard across teams**
-* You want to rename the attributes to **enhance the readability**&#x20;
+* You want to increase cost savings
+* You want to decrease the payload size being forwarded
+* You want to rename the labels to maintain a set standard across teams
+* You want to rename the attributes to enhance the readability&#x20;
 
 To rename the log attributes you can head to the `Create Rule` page.
 
-* Go to the "Forward" section.
-* Fill the details that are asked such as "_Name", "Group", "Description", "Namespace", "Application Match"_, and if you want you can add more parameters.
-* Toggle the "Forward Labels" button, and select the Labels that are to be Forwarded to the destination.
-* Toggle the "Rename Labels" button, and Select the labels that have to be renamed before they are forwarded.
+* Go to the `Forward` section.
+* Fill the details that are asked such as `Name`, `Group`, `Description`, `Namespace`, `Application Match`, and if you want you can add more parameters.
+* Toggle the `Forward Labels` button, and select the Labels that are to be Forwarded to the destination.
+* Toggle the `Rename Labels` button, and Select the labels that have to be renamed before they are forwarded.
 * You will be able to see all the selected labels and Input fields corresponding to every labels, Rename the labels according to your needs.
-* Click "Create rule" button.
-* Now, this Rule is created and it can be previewed in "Active Rules" page.
+* Click `Create rule` button.
+* Now, this Rule is created and it can be previewed in `Active Rules` page.
 
 {% hint style="warning" %}
 **NOTE:**\
@@ -41,17 +43,17 @@ You should make sure that multiple rules are not active on a similar namespace, 
 
 ## Editing Renamed Labels
 
-To edit the renamed labels you should go to "Active Rules" page.
+To edit the renamed labels you should go to `Active Rules` page.
 
 * You will be able to see the renamed labels in the red tags.
-* You will get the "Edit Rule" option from the three dots at the end of the row.
+* You will get the `Edit Rule` option from the three dots at the end of the row.
 * Clicking on the Edit Rule will open a modal which has a table with all the old label names and the corresponding new label names.
 * You can edit any of the fields, you can add new labels which have to be renamed, you can even delete a mapping.
-* After clicking "Update" button, this forward rule will be updated and the changes will be reflected across the LOGIQ system.&#x20;
+* After clicking `Update` button, this forward rule will be updated and the changes will be reflected across the LOGIQ system.&#x20;
 
 <figure><img src="../.gitbook/assets/Screenshot from 2023-01-02 19-22-44 (1).png" alt=""><figcaption><p>Forward Rule in Active Rules</p></figcaption></figure>
 
-> You will be able to see the `Renamed Labels` in red tags. Each tag shows the old label name and the new labels name in the format <mark style="background-color:red;">LABEL➤RENAMED\_LABEL</mark>.&#x20;
+> You will be able to see the `Renamed Labels` in red tags. Each tag shows the old label name and the new labels name in the format `LABEL➤RENAMED_LABEL`.&#x20;
 
 <figure><img src="../.gitbook/assets/Screenshot from 2023-01-02 19-23-12.png" alt=""><figcaption><p>Edit Rule page</p></figcaption></figure>
 

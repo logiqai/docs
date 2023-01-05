@@ -26,14 +26,14 @@ description: 'Version: v3.5.8.4'
   * ****[**S3 Compatible object storage**](https://docs.logiq.ai/integrations/object-store-s3-compatible)****
   * Splunk S2S cooked mode
 * Added new **Forwarder plugins** for:
-  * Splunk Metric index
+  * ****[**Splunk Metric index**](https://logflow-docs.logiq.ai/splunk-forwarding/metric-indexes)****
   * ****[**Azure EventHub**](https://logflow-docs.logiq.ai/real-time-stream-forwarding/azure-eventhub)****
   * ****[**AWS Kinesis**](https://logflow-docs.logiq.ai/real-time-stream-forwarding/aws-kinesis)****
   * ****[**Google PubSub**](https://logflow-docs.logiq.ai/real-time-stream-forwarding/google-pub-sub)****
   * ****[**S3 compatible object stores**](https://logflow-docs.logiq.ai/object-store-forwarding/s3-compatible) **** and [**Azure Blob store**](https://logflow-docs.logiq.ai/object-store-forwarding/azure-blob-storage)****
 * Added support for [**Renaming attributes**](https://docs.logiq.ai/data-management/rename-attributes) of logs before forwarding data to the destination
 * Added support for ingesting directly from [**Splunk UF**](https://docs.logiq.ai/integrations/splunk-universal-forwarder) (Universal Forwarder) and [**Splunk HF**](https://docs.logiq.ai/integrations/splunk-heavy-forwarder) (Heavy Forwarder) using **Splunk cooked mode**
-* Added support for ingesting **Splunk Metrics**
+* Added support for ingesting [**Splunk Metrics**](https://logflow-docs.logiq.ai/splunk-forwarding/metric-indexes)****
 * Added support for [**Archiving alerts**](https://docs.logiq.ai/logiq-ui-configuration/audit-trail/alerts-trail) in InstaStore which will be available as an audit trail
 * Added support for [**Archiving events**](https://docs.logiq.ai/logiq-ui-configuration/audit-trail/events-trail) that are older than 24 hours which will be available under events history
 * Added new [**Severity Metrics**](https://docs.logiq.ai/log-management/explore-logs/severity-metrics) to measure the logs levels within the time range.

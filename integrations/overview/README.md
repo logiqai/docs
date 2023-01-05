@@ -35,16 +35,16 @@ You can also ingest logs from endpoint devices running:
 
 LOGIQ's support for logs based HIDS enables data ingest directly from log based hids agents. Supported agents are as follows
 
-* OSSEC
-* Atomic
-* Wazuh
+* [OSSEC](https://docs.logiq.ai/integrations/ossec-variants-ossec-wazuh-atomic)
+* [Atomic](https://docs.logiq.ai/integrations/ossec-variants-ossec-wazuh-atomic)
+* [Wazuh](https://docs.logiq.ai/integrations/ossec-variants-ossec-wazuh-atomic)
 
 ### Incident management
 
-Users can choose a variety of i[ncident management integrations](../alert-destinations.md) to bring reliability into your production operations.
+Users can choose a variety of [incident management integrations](https://docs.logiq.ai/integrations/alert-destinations) to bring reliability into your production operations.
 
-* Email
-* Slack
-* OpsGenie
-* PagerDuty
+* [Email](https://docs.logiq.ai/integrations/alert-destinations#email)
+* [Slack](https://docs.logiq.ai/integrations/alert-destinations#slack)
+* [OpsGenie](https://docs.logiq.ai/integrations/alert-destinations#opsgenie)
+* [PagerDuty](https://docs.logiq.ai/integrations/alert-destinations#pagerduty)
 * ServiceNow
