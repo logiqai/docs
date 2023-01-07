@@ -15,7 +15,7 @@ LOGIQ currently integrates with over 150+ data sources via support for popular o
 * [Rsyslogd](../rsyslogd.md)
 * [AWS CloudWatch](../aws/aws-cloudwatch-exporter.md)
 * [Palo Alto Firewall](../palo-alto-firewall.md)
-* [Azure Event Hubs](../azure/azure-event-hubs.md)
+* [Azure Event Hubs](../azure-event-hubs.md)
 * [Prometheus](../prometheus/)
 * [Docker Syslog log driver](../docker-syslog-log-driver.md)
 * [Docker swarm logging](../docker-swarm-logging.md)
