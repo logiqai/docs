@@ -1,16 +1,16 @@
 logiq-flash:
-  replicaCount: 8
+  replicaCount: 3
   replicaCountMl: 2
   replicaCountSync: 2
   service:
     type: NodePort
   image:
-    tag: v3.5.8.5
+    tag: 2.1.4
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
-    size: 100Gi
-    ml_size: 20Gi
+    size: 10Gi
+    ml_size: 10Gi
   metrics:
     serviceMonitor:
       enabled: true
@@ -18,24 +18,21 @@ logiq-flash:
       release: prometheus
   resources:
     ingest:
-      limits:
-        cpu: "1250m"
       requests:
-        cpu: "1250m"
-        memory: "2750Mi"
+        cpu: "3500m"
+      limits:
+        cpu: "3500m"
     ml:
-      limits:
-        cpu: "1000m"
       requests:
-        cpu: "500m"
+        cpu: "1000m"
     sync:
       requests:
-        cpu: "100m"
+        cpu: "3500m"
 
 flash-discovery:
   fullnameOverride: flash-discovery
   image:
-    tag: v2.0.3
+    tag: 2.0.1
     pullPolicy: IfNotPresent
   replicaCountDiscovery: 2
   persistence:
@@ -112,21 +109,8 @@ postgres:
   postgresqlDatabase: postgres
   postgresqlPassword: postgres
   postgresqlExtendedConf:
-    sharedBuffers: "4096MB"
-    effectiveCacheSize: "12288MB"
-    maintenanceWorkMem: "1024MB"
-    checkpointCompletionTarget: "0.7"
-    walBuffers: "16MB"
-    defaultStatisticsTarget: "100"
-    randomPageCost: "1.1"
-    effectiveIoConcurrency: "200"
-    workMem: "327kB"
-    minWalSize: "1024MB"
-    maxWalSize: "4096MB"
-    maxWorkerProcesses: "10"
-    maxParallelWorkersPerGather: "4"
-    maxParallelWorkers: "10"
-    maxParallelMaintenanceWorkers: "4"
+    maxConnections: "1000"
+    sharedBuffers: "2048MB"
   metrics:
     enabled: true
     serviceMonitor:
@@ -134,11 +118,11 @@ postgres:
     additionalLabels:
       release: prometheus
   persistence:
-    size: 256Gi
+    size: 100Gi
   resources:
     requests:
-      memory: "16Gi"
-      cpu: "7000m"
+      memory: "4Gi"
+      cpu: "4000m"
   securityContext:
     enabled: true
     fsGroup: 1001
@@ -153,7 +137,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.v3.1.4.1
+      tag: brew.2.1.0-rc7
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -162,9 +146,9 @@ flash-coffee:
       limits:
         cpu: "1000m"
   coffee_worker:
-    replicaCount: 4
+    replicaCount: 3
     image:
-      tag: brew.v3.1.4.1
+      tag: brew.2.1.0-rc7
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -173,13 +157,13 @@ flash-coffee:
       limits:
         cpu: "1000m"
 
-s3gateway:
-  s3gateway:
-    enabled: false
+s3-gateway:
   mode: distributed
   image:
     repository: minio/minio
     tag: RELEASE.2020-09-17T04-49-20Z
+  s3gateway:
+    enabled: false
   defaultBucket:
     enabled: true
   fullnameOverride: s3-gateway
@@ -212,10 +196,7 @@ ingress:
 
 kubernetes-ingress:
   controller:
-    image:
-      repository: k8s.gcr.io/ingress-nginx/controller
-      tag: "v1.2.0"
-    replicaCount: 4
+    replicaCount: 2
     ingressClass: logiq-ingress
     service:
       type: LoadBalancer
@@ -230,32 +211,21 @@ kubernetes-ingress:
     create: true
     name: ingress-nginx
 
-
-prometheus:
+prometheus-operator:
   fullnameOverride: prometheus
   persistence:
     enabled: true
     size: 20Gi
   alertmanager:
     replicaCount: 1
-    persistence:
-      enabled: true
-      size: 20Gi
   prometheus:
     replicaCount: 1
-    persistence:
-      enabled: true
-      size: 20Gi
   operator:
     replicaCount: 1
   kube-state-metrics:
     replicaCount: 1
   node-exporter:
     replicaCount: 1
-
-grafana:
-  fullnameOverride: grafana
-
 
 logiqctl:
   image:
@@ -265,21 +235,9 @@ logiqctl:
 
 global:
   domain: null
-  enableAwsAlb:
-      enabled: false
-  kubeDistributor:
-      enabled: false
   cloudProvider: aws
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
-  nodeSelectors:
-    enabled: false
-    ingest: flash
-    infra: infra
-    other: coffee
-    db: db
-    cache: cache
-    ingest_sync: sync
   taints:
     enabled: false
     ingest: flash
@@ -325,5 +283,4 @@ global:
     prometheus: true
     postgres: true
     redis: true
-    s3gateway: true
-    grafana: false
+    s3-gateway: false

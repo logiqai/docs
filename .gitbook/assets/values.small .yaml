@@ -1,11 +1,11 @@
 logiq-flash:
-  replicaCount: 8
-  replicaCountMl: 2
-  replicaCountSync: 2
+  replicaCount: 2
+  replicaCountMl: 1
+  replicaCountSync: 1
   service:
     type: NodePort
   image:
-    tag: v3.5.8.5
+    tag: logiq-v3.5.8.5
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -105,28 +105,15 @@ redis:
     name: redis
 
 postgres:
-  enabled: true
+  enabled: false
   fullnameOverride: postgres
   postgresqlPostgresPassword: postgres
   postgresqlUsername: postgres
   postgresqlDatabase: postgres
   postgresqlPassword: postgres
   postgresqlExtendedConf:
-    sharedBuffers: "4096MB"
-    effectiveCacheSize: "12288MB"
-    maintenanceWorkMem: "1024MB"
-    checkpointCompletionTarget: "0.7"
-    walBuffers: "16MB"
-    defaultStatisticsTarget: "100"
-    randomPageCost: "1.1"
-    effectiveIoConcurrency: "200"
-    workMem: "327kB"
-    minWalSize: "1024MB"
-    maxWalSize: "4096MB"
-    maxWorkerProcesses: "10"
-    maxParallelWorkersPerGather: "4"
-    maxParallelWorkers: "10"
-    maxParallelMaintenanceWorkers: "4"
+    maxConnections: "400"
+    sharedBuffers: "1024MB"
   metrics:
     enabled: true
     serviceMonitor:
@@ -134,11 +121,11 @@ postgres:
     additionalLabels:
       release: prometheus
   persistence:
-    size: 256Gi
+    size: 20Gi
   resources:
     requests:
-      memory: "16Gi"
-      cpu: "7000m"
+      memory: "4Gi"
+      cpu: "1000m"
   securityContext:
     enabled: true
     fsGroup: 1001
@@ -162,7 +149,7 @@ flash-coffee:
       limits:
         cpu: "1000m"
   coffee_worker:
-    replicaCount: 4
+    replicaCount: 1
     image:
       tag: brew.v3.1.4.1
       pullPolicy: IfNotPresent
@@ -212,10 +199,7 @@ ingress:
 
 kubernetes-ingress:
   controller:
-    image:
-      repository: k8s.gcr.io/ingress-nginx/controller
-      tag: "v1.2.0"
-    replicaCount: 4
+    replicaCount: 2
     ingressClass: logiq-ingress
     service:
       type: LoadBalancer
@@ -229,7 +213,6 @@ kubernetes-ingress:
   serviceAccount:
     create: true
     name: ingress-nginx
-
 
 prometheus:
   fullnameOverride: prometheus
@@ -256,7 +239,6 @@ prometheus:
 grafana:
   fullnameOverride: grafana
 
-
 logiqctl:
   image:
     repository: logiqai/logiqctl
@@ -265,11 +247,10 @@ logiqctl:
 
 global:
   domain: null
-  enableAwsAlb:
-      enabled: false
   kubeDistributor:
-      enabled: false
+         enabled: false
   cloudProvider: aws
+  createStorageClass: false
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
   nodeSelectors:

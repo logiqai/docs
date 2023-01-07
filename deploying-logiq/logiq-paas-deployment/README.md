@@ -31,8 +31,8 @@ Running this command displays a list of the available Helm charts along with the
 ```
 $ helm repo update
 $ helm search repo logiq-repo
-NAME                CHART VERSION    APP VERSION    DESCRIPTION
-logiq-repo/logiq      v3.0.1          v3.0.1         LOGIQ Observability HELM chart for Kubernetes
+NAME                CHART VERSION    APP VERSION            DESCRIPTION
+logiq-repo/logiq      v3.0.7          v3.5.8.5        LOGIQ Observability HELM chart for Kubernetes
 ```
 
 If you've already added LOGIQ's Helm repository in the past, you can update the repository by running the following command.
