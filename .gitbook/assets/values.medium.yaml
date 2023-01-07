@@ -5,7 +5,7 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: v3.5.8.5
+    tag: v3.5.8.4
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -35,7 +35,7 @@ logiq-flash:
 flash-discovery:
   fullnameOverride: flash-discovery
   image:
-    tag: v2.0.3
+    tag: 2.0.3
     pullPolicy: IfNotPresent
   replicaCountDiscovery: 2
   persistence:
@@ -140,7 +140,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.v3.1.4.1
+      tag: brew.v3.1.4
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -151,7 +151,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 3
     image:
-      tag: brew.v3.1.4.1
+      tag: brew.v3.1.4
       pullPolicy: IfNotPresent
     resources:
       requests:
