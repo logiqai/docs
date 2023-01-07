@@ -19,8 +19,8 @@ description: 'Version: v3.5.8.4'
 * Added native support for **Azure blob store** for InstaStore
 * Added new **Ingest plugins** for:
   * ****[**Kafka/Confluent**](https://docs.logiq.ai/integrations/kafka)****
-  * ****[**Azure EventHub**](https://docs.logiq.ai/integrations/azure/azure-event-hubs)****
-  * ****[**GCP PubSub**](https://docs.logiq.ai/integrations/gcp-cloud-logging)****
+  * ****[**Azure EventHub**](https://docs.logiq.ai/integrations/azure-eventhub)****
+  * ****[**GCP PubSub**](https://docs.logiq.ai/integrations/gcp-pubsub)****
   * ****[**AWS Kinesis**](https://docs.logiq.ai/integrations/kinesis)****
   * ****[**S3 Compatible object storage**](https://docs.logiq.ai/integrations/object-store-s3-compatible)****
   * ****[**Splunk S2S cooked mode**](https://docs.logiq.ai/integrations/splunk-heavy-forwarder#splunk-cooked-mode)****
