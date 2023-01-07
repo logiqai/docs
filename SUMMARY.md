@@ -72,6 +72,7 @@
 * [Jaeger](integrations/jaeger.md)
 * [Kafka](integrations/kafka.md)
 * [Kinesis](integrations/kinesis.md)
+* [IBM QRadar](integrations/ibm-qradar.md)
 * [Kubernetes](integrations/kubernetes.md)
 * [Logstash](integrations/logstash.md)
 * [MQTT](integrations/mqtt.md)
