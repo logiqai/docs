@@ -24,6 +24,8 @@ description: 'Version: v3.5.8.4'
   * ****[**AWS Kinesis**](https://docs.logiq.ai/integrations/kinesis)****
   * ****[**S3 Compatible object storage**](https://docs.logiq.ai/integrations/object-store-s3-compatible)****
   * ****[**Splunk S2S cooked mode**](https://docs.logiq.ai/integrations/splunk-heavy-forwarder#splunk-cooked-mode)****
+  * ****[**IBM QRadar**](https://docs.logiq.ai/integrations/ibm-qradar)****
+  * ****[**OSSEC**](https://docs.logiq.ai/integrations/ossec-variants-ossec-wazuh-atomic#starting-the-manager-ossec-server)****
 * Added new **Forwarder plugins** for:
   * ****[**Splunk Metric index**](https://logflow-docs.logiq.ai/splunk-forwarding/metric-indexes)****
   * ****[**Azure EventHub**](https://logflow-docs.logiq.ai/real-time-stream-forwarding/azure-eventhub)****
