@@ -54,6 +54,7 @@
   * [AWS S3](integrations/aws/aws-s3.md)
 * [Azure Databricks](integrations/azure-databricks.md)
 * [Azure Event Hubs](integrations/azure-event-hubs.md)
+* [Docker Compose](integrations/docker-compose.md)
 * [Docker Syslog log driver](integrations/docker-syslog-log-driver.md)
 * [Docker Swarm logging](integrations/docker-swarm-logging.md)
 * [Azure Eventhub](integrations/azure-eventhub.md)
