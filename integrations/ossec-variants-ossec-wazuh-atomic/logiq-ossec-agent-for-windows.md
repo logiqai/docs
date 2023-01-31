@@ -1,6 +1,6 @@
 # LOGIQ-OSSEC Agent for Windows
 
-We have discussed earlier how to make a `secmon-hids` App Extension. You can refer this [link](https://docs.logiq.ai/integrations/ossec-variants-ossec-wazuh-atomic).
+We have [discussed earlier](https://docs.logiq.ai/integrations/ossec-variants-ossec-wazuh-atomic) how to make a ossec`-hids` App Extension.
 
 
 
