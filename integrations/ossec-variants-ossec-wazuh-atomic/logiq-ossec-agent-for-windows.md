@@ -24,6 +24,10 @@ LOGIQ\_OSSEC\_MANAGER is the LoadBalancer-IP.
 
 LOGIQ\_OSSEC\_PASSWORD is the authtoken.
 
+<figure><img src="../../.gitbook/assets/ossec-display.jpg" alt=""><figcaption><p>LoadBalancer-IP and authtoken fields in App Extensions page</p></figcaption></figure>
+
+
+
 {% file src="../../.gitbook/assets/logiq-ossec-installer.ps1" %}
 
 You can run this powershell script like this.\
