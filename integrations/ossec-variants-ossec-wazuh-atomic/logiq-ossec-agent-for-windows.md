@@ -1,28 +1,26 @@
 # LOGIQ-OSSEC Agent for Windows
 
-We have discussed earlier how to make a `secmon-hids` App Extension.\
-You can refer this [link](https://docs.logiq.ai/integrations/ossec-variants-ossec-wazuh-atomic).
+We have discussed earlier how to make a `secmon-hids` App Extension. You can refer this [link](https://docs.logiq.ai/integrations/ossec-variants-ossec-wazuh-atomic).
 
 
 
-After creating a App Extension you can copy the LoadBalancer IP and AuthToken from the `Explore > App Extension` page.\
+After creating a App Extension you can copy the **LoadBalancer-IP** and **authtoken** from the `Explore > App Extension` page.\
 
 
-After this, you are ready to connect the Logiq-OSSEC-Agent to the LOGIQ-OSSEC Manager.\
+After this, you are ready to connect the Logiq-OSSEC Agent to the LOGIQ-OSSEC Manager.\
 \
 Please download this powershell script file and run it from the source machine with 2 parameters.
 
-Parameters:
+Required Parameters:
 
 * LOGIQ\_OSSEC\_MANAGER
 * LOGIQ\_OSSEC\_PASSWORD
 
-You can find these 2 values in `Explore > App Extensions > ossec-hids`.\
+You can find these 2 values in `Explore > App Extensions > ossec-hids`.
 
+**LOGIQ\_OSSEC\_MANAGER** is the **LoadBalancer-IP**.
 
-LOGIQ\_OSSEC\_MANAGER is the LoadBalancer-IP.
-
-LOGIQ\_OSSEC\_PASSWORD is the authtoken.
+**LOGIQ\_OSSEC\_PASSWORD** is the **authtoken**.
 
 <figure><img src="../../.gitbook/assets/ossec-display.jpg" alt=""><figcaption><p>LoadBalancer-IP and authtoken fields in App Extensions page</p></figcaption></figure>
 
@@ -30,13 +28,12 @@ LOGIQ\_OSSEC\_PASSWORD is the authtoken.
 
 {% file src="../../.gitbook/assets/logiq-ossec-installer.ps1" %}
 
-You can run this powershell script like this.\
+You can run this powershell script like this.
 
-
-> NOTE: Please replace the LoadBalancer-IP, and Auth token in the below command.
+> NOTE: Please replace the LoadBalancer-IP, and authtoken in the below command.
 
 ```
- .\logiq-ossec-installer.ps1 -LOGIQ_OSSEC_MANAGER "<Loadbalancer-IP>" -LOGIQ_OSSEC_PASSWORD "<AuthToken>"
+ .\logiq-ossec-installer.ps1 -LOGIQ_OSSEC_MANAGER "<Loadbalancer-IP>" -LOGIQ_OSSEC_PASSWORD "<authtoken>"
 ```
 
 
