@@ -52,6 +52,12 @@ OSSEC/Automic OSS agent variation Wazuh agents can connect to the LOGIQ.AI insta
 <pre><code><strong>sudo /var/ossec/bin/agent-auth -m &#x3C;manager IP address> -p 1515 -P &#x3C;AuthToken> -A &#x3C;user-assigned agent name>
 </strong></code></pre>
 
+Windows system runs similarly from cmd or power shell window with Administrator privileges.
+
+```
+PS C:\Program Files (x86)\ossec-agent> .\agent-auth.exe -m <manager IP address> -p 1515 -P <AuthToken> -A <user-assigned agent name>
+```
+
 For Windows system we have a powershell script which can directly setup OSSEC agent. Please follow this [link](https://docs.logiq.ai/integrations/ossec-variants-ossec-wazuh-atomic/logiq-ossec-agent-for-windows) for Windows OSSEC agent setup.
 
 ### Enable automatic vulnerability scan at the endpoint
