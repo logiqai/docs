@@ -110,6 +110,7 @@
   * [Connecting Prometheus](infra-and-application-monitoring/prometheus/connecting-prometheus.md)
   * [Connecting Amazon Managed Service for Prometheus](infra-and-application-monitoring/prometheus/connecting-amazon-managed-service-for-prometheus.md)
 * [Writing queries](infra-and-application-monitoring/querying-data.md)
+* [Windows Redis Monitoring](infra-and-application-monitoring/windows-redis-monitoring.md)
 
 ## LOG MANAGEMENT
 
