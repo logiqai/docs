@@ -64,7 +64,6 @@ $newConfig = [string[]]$prometheusConfig[0..($remoteWriteIndex - 1)] + $redisExp
 
 Set-Content $PROMETHEUS_CONFIG_PATH -Value $newConfig
 
-<#
 $prometheusConfig1 = [string[]](Get-Content $PROMETHEUS_CONFIG_PATH)
 $relabelRedisLabelsConfig = @'
     - action: replace
@@ -79,7 +78,6 @@ $writeRelabelConfigIndex = $prometheusConfig1.IndexOf("    write_relabel_configs
 $newConfig1 = [string[]]$prometheusConfig1[0..($writeRelabelConfigIndex)] + $relabelRedisLabelsConfig + [string[]]$prometheusConfig1[($writeRelabelConfigIndex + 1)..($prometheusConfig1.Count - 1)]
 
 Set-Content $PROMETHEUS_CONFIG_PATH -Value $newConfig1
-#>
 
 $promServiceName = (Get-Service | Where-Object {$_.Name -like "prom*"}).Name
 
