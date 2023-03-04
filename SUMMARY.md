@@ -87,6 +87,7 @@
   * [Prometheus on Windows](integrations/prometheus/prometheus-on-windows.md)
   * [Prometheus Remote Write](integrations/prometheus/prometheus-remote-write.md)
   * [MongoDB Exporter](integrations/prometheus/mongodb-exporter.md)
+  * [JMX Exporter](integrations/prometheus/jmx-exporter.md)
 * [Rsyslogd](integrations/rsyslogd.md)
 * [Syslog-ng](integrations/syslog-ng.md)
 * [Splunk Universal Forwarder](integrations/splunk-universal-forwarder.md)
