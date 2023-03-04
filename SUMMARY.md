@@ -85,6 +85,7 @@
 * [Prometheus](integrations/prometheus/README.md)
   * [Spring Boot](integrations/prometheus/spring-boot.md)
   * [Prometheus on Windows](integrations/prometheus/prometheus-on-windows.md)
+  * [MongoDB Exporter](integrations/prometheus/mongodb-exporter.md)
   * [Prometheus Remote Write](integrations/prometheus/prometheus-remote-write.md)
 * [Rsyslogd](integrations/rsyslogd.md)
 * [Syslog-ng](integrations/syslog-ng.md)
