@@ -52,7 +52,7 @@ scrape_configs:
         cluster_id: 'logiq'
         namespace: 'engr'
 
-  - job_name: 'java_metrics'               # <------- Added configuration for scraping localhost:9094/metrics --------
+  - job_name: 'java_metrics'               # <------- Added configuration for scraping localhost:12345/metrics --------
 
     static_configs:
     - targets: ['localhost:12345']

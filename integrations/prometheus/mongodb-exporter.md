@@ -57,7 +57,7 @@ After the script has executed successfully you will be able to see the metrics e
 
 \---
 
-Now we have the metrics being exposed at a endpoint, we can go ahead and scrape it using `prometheus`.
+Now we have the metrics being exposed at a endpoint, we can go ahead and scrape it using `prometheus` and send it to LOGIQ endpoint via. remote\_write.
 
 Locate the prometheus configuration file and add a job in `scrape_configs` for mongodb\_exporter like this:
 
@@ -88,6 +88,6 @@ scrape_configs:
 
 Save the prometheus config file and restart/start the prometheus sytemd service by using these commands:
 
-> `sudo systemctl restart prometheus / sudo systemctl start prometheus`
+> `sudo systemctl restart prometheus` OR `sudo systemctl start prometheus`
 
 You will see the metrics populate at logiq engpoint in Query editor in some time.
