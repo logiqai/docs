@@ -26,10 +26,10 @@ You can now provide the credentials that the agents can use to connect to LOGIQ.
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2023-01-02 at 10.24.04 PM.png" alt=""><figcaption><p>OSSEC Agent auth token</p></figcaption></figure>
 
-* HostName - Enter a name
-* AuthToken - The user chooses a 32-digit hex number, for example 'deadbeef01234567deadbeef98765432'.
-* Resources - The user enters CPU and MEM usage limit, format adopted from Kubernetes resource notation - see explanation here, [https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)  Example setting, cpu/cpu\_limit = 1000m, mem/mem\_limit=4Gi.
-* Version - Enters the image here.  The latest LOGIQ.ai OSSEC component image can be browsed here, [https://hub.docker.com/r/logiqai/hauler-ossec/tags](https://hub.docker.com/r/logiqai/hauler-ossec/tags)  Example image is 'logiqai/hauler-ossec:rc6'.
+* HostName - Enter a name for the app extension.
+* AuthToken - The user chooses a 32-digit hex number, for example '2DAEF3165265A....FB793126B780BA4'.
+* Resources - The user enters CPU and MEM usage limit, format adopted from Kubernetes resource notation - see explanation here, [https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)  Example setting, **`cpu/cpu_limit = 1000m`**, **`mem/mem_limit=4Gi`**.
+* Version - Enters the image here.  The latest LOGIQ.ai OSSEC component image can be browsed here, [https://hub.docker.com/r/logiqai/hauler-ossec/tags](https://hub.docker.com/r/logiqai/hauler-ossec/tags)  Example image is '**logiqai/hauler-ossec:v1**'.
 
 Shortly after the user configures all of the above, he will see the assigned [_manager IP address_](#user-content-fn-1)[^1] appears in the display below.  This IP is needed for setting up the agent next.
 
