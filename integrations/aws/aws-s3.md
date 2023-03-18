@@ -1,6 +1,6 @@
 # AWS S3
 
-## <mark style="background-color:red;">LOGIQ S3 Import App Extension (PULL)</mark>
+## <mark style="background-color:blue;">LOGIQ S3 Import App Extension (PULL)</mark>
 
 LOGIQ.AI can ingest data directly from any S3 compatible object storage. Head over to the App extensions to create an object importer app extension.&#x20;
 
@@ -18,7 +18,7 @@ And that is all you need. You data from the Object store bucket will show up as 
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2023-01-02 at 2.05.18 PM.png" alt=""><figcaption><p>Viewing the object store data import in "Explore" as a Flow</p></figcaption></figure>
 
-## <mark style="background-color:red;">LOGIQ S3 exporter Lambda function (PUSH)</mark>
+## <mark style="background-color:blue;">LOGIQ S3 exporter Lambda function (PUSH)</mark>
 
 
 
