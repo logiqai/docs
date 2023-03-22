@@ -142,3 +142,13 @@ the Prometheus metrics options create a pull metric instance that should be scra
 ![Launching a java application with OpenTelemetry Agent Jar](<../.gitbook/assets/Screen Shot 2022-08-02 at 7.22.01 PM.png>)
 
 ![](<../.gitbook/assets/Screen Shot 2022-08-02 at 6.29.42 PM.png>)
+
+### Example Petclinic app with open telemetry integration
+
+You can use our freely available petclinc java application for opentelmetry integration. Just launch our free container as below and point it to the logiq service IP/DNS
+
+{% code overflow="wrap" %}
+```
+docker run --name petclinic -d -p 8080:8080 -e LOGIQ_SERVER=mylogiqip.example.com logiqai/petclinic_open_telemetry
+```
+{% endcode %}
