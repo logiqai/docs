@@ -152,3 +152,8 @@ You can use our freely available petclinc java application for opentelmetry inte
 docker run --name petclinic -d -p 8080:8080 -e LOGIQ_SERVER=mylogiqip.example.com logiqai/petclinic_open_telemetry
 ```
 {% endcode %}
+
+{% hint style="warning" %}
+Make sure your logiq server is running and port 14250 is reachable
+{% endhint %}
+
