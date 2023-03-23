@@ -145,7 +145,7 @@ the Prometheus metrics options create a pull metric instance that should be scra
 
 ### Example Petclinic app with open telemetry integration
 
-You can use our freely available petclinc java application for opentelmetry integration. Just launch our free container as below and point it to the logiq service IP/DNS
+You can use our freely available petclinc java application for opentelmetry integration testing. Just launch our free container as below and point it to the logiq service IP/DNS
 
 {% code overflow="wrap" %}
 ```
