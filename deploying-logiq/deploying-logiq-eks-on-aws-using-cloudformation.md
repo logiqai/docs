@@ -274,7 +274,7 @@ The EKS cluster will need the following node groups. Ensure that you select the 
 | **common** | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
 | **db**     | c5.xlarge (4 Core 8 GB RAM)     | 2          |
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 **Step 5:** Provide the **S3 bucket name** from **section 3,** the Cloudformation will create the S3 bucket, S3 bucket name needs to be globally unique.
 
@@ -340,7 +340,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 {% tabs %}
 {% tab title="Values File For Helm" %}
-{% file src="../.gitbook/assets/values (4) (1).yaml" %}
+{% file src="../.gitbook/assets/values (1).yaml" %}
 {% endtab %}
 {% endtabs %}
 
