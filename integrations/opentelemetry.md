@@ -140,7 +140,12 @@ the Prometheus metrics options create a pull metric instance that should be scra
 | otel.exporter.prometheus.port |                                            |                                 Default port is 9464                                |
 | otel.exporter.prometheus.host |                                            |                                  Default is 0.0.0.0                                 |
 
-![Launching a java application with OpenTelemetry Agent Jar](<../.gitbook/assets/Screen Shot 2022-08-02 at 7.22.01 PM.png>)
+<pre class="language-shell" data-overflow="wrap" data-line-numbers><code class="lang-shell">$> java -javaagent:opentelemetry-javaagent.jar -Dotel.exporter.otlp.certificate=./ca.crt -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=<a data-footnote-ref href="#user-content-fn-1">https</a>://$LOGIQ_SERVER:14250 -Dotel.metrics.exporter=none -Dotel.service-name=java-petclinic-sample-app -Dotel.exporter.logging.prefix -jar -Djava.util.logging.config.file=logging.properties target/spring-petclinic-2.7.0-SNAPSHOT.jar --server.port=8080
+</code></pre>
+
+{% hint style="info" %}
+When using TLS please ensure you have the CA cert of the LOGIQ environment installed in the JVM Cert store. Instructions can be found here - [https://connect2id.com/blog/importing-ca-root-cert-into-jvm-trust-store](https://connect2id.com/blog/importing-ca-root-cert-into-jvm-trust-store)
+{% endhint %}
 
 ![](<../.gitbook/assets/Screen Shot 2022-08-02 at 6.29.42 PM.png>)
 
@@ -158,3 +163,6 @@ docker run --name petclinic -d -p 8080:8080 -e LOGIQ_SERVER=mylogiqip.example.co
 Make sure your logiq server is running and port 14250 is reachable
 {% endhint %}
 
+
+
+[^1]: TLS Enabled, Use http if TLS is not enabled.
