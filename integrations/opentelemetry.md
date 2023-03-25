@@ -133,7 +133,8 @@ the Prometheus metrics options create a pull metric instance that should be scra
 | ----------------------------: | :----------------------------------------: | :---------------------------------------------------------------------------------: |
 |            otel.service\_name |               \<User defined>              | Give a service name to group your OpenTelemetry data traces under this service name |
 |          otel.traces.exporter |                   jaeger                   |                                                                                     |
-| otel.exporter.jaeger.endpoint |        http://\<LOGIQ ENDPOINT>14250       |                        LOGIQ.AI OpenTelemetry traces endpoint                       |
+| otel.exporter.jaeger.endpoint |       http://\<LOGIQ ENDPOINT>:14250       |                        LOGIQ.AI OpenTelemetry traces endpoint                       |
+|                               |       https://\<LOGIQ ENDPOINT>:14250      |            TLS must be enabled on the collector port on the logiq server            |
 |                     javaagent | \<PATH TO JAR>/opentelemetry-javaagent.jar |                             OpenTelemetry agent Jar file                            |
 |         otel.metrics.exporter |                 prometheus                 |                                                                                     |
 | otel.exporter.prometheus.port |                                            |                                 Default port is 9464                                |
