@@ -74,11 +74,11 @@ Sample YAML files for small, medium, large cluster configurations can be downloa
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../../.gitbook/assets/values.medium.yaml" %}
+{% file src="../../.gitbook/assets/values.medium (2).yaml" %}
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../../.gitbook/assets/values.large.yaml" %}
+{% file src="../../.gitbook/assets/values.large (3).yaml" %}
 {% endtab %}
 {% endtabs %}
 
@@ -128,7 +128,7 @@ The default login and password to use is `flash-admin@foo.com` and `flash-passwo
 {% endhint %}
 
 {% hint style="info" %}
-The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](../quickstart-guide.md#ports).
+The `logiq.my-domain.com` also fronts all the LOGIQ service ports as described in the [port details section](broken-reference).
 {% endhint %}
 
 | HELM Option                                              | Description                                                                                                                                                                                                  | Defaults   |
