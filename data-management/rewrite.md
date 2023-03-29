@@ -1,12 +1,12 @@
 # Rewrite
 
-Your incoming log data might include Personally Identifiable Information (PII) that can identify an individual, either on its own or in combination with other relevant data. You may need to redact or replace PII or other sensitive data to stay compliant with data security regulations or support your business use case. LOGIQ supports the creation and use of custom regular expressions that match patterns in your incoming data stream and mask or replace these matched patterns.
+If your incoming log data contains Personally Identifiable Information (PII) or other sensitive data, you may need to redact or replace that data to comply with data security regulations or meet your business needs. With LOGIQ, you can create custom Rewrite Rules using regular expressions to match patterns in your incoming data stream and mask or replace these patterns.
 
-Select a log line user want to create a Rewrite rule, click on the ellipsis available on the logline  and click on the "create rule"
+To create a Rewrite Rule, select a log line that contains the pattern you want to mask or replace. Click on the ellipsis available on the logline and click on "Create Rule".
 
 ![](<../.gitbook/assets/image (69).png>)
 
-In the modal that opens, select REWRIE and enter the details.&#x20;
+In the modal that opens, select REWRITE and enter the details.&#x20;
 
 ![](<../.gitbook/assets/image (3) (1).png>)
 
@@ -22,7 +22,7 @@ In this example, assume that the following lines of data are from an incoming lo
 
 ```
 2021-08-28 01:34:55.001Z Jane Smith phone number : (408) 555-1212
-2021-08-29 01:34:55.002Z Raj Sigh local phone number => 206-555-1212
+2021-08-29 01:34:55.002Z Raj Singh local phone number => 206-555-1212
 2021-08-30 01:34:55.003Z Tim White office phone number is 408121324
 ```
 
