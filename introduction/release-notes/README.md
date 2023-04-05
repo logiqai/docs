@@ -1,12 +1,12 @@
 ---
-description: 'Version: v3.5.9.1'
+description: 'Latest release: v3.5.9.1'
 ---
 
 # Release Notes 🚀
 
-#### Version: v3.5.9.1 <a href="#uversionv359u" id="uversionv359u"></a>
+## v3.5.9.1 <a href="#uversionv359u" id="uversionv359u"></a>
 
-**📅 Fri, Mar 24, 2023**
+### **📅 Fri, Mar 24, 2023**
 
 *   **Topology-powered root-cause analysis**.
 
@@ -33,7 +33,9 @@ description: 'Version: v3.5.9.1'
 * **Memory and performance improvements**.
 * **Automated agent installation for Linux and Windows**.
 
-**📆 Thu, Dec 29, 2022**
+## v3.5.8.4
+
+### **📆 Thu, Dec 29, 2022**
 
 * Added support for [**Grafana dashboard import**](https://docs.logiq.ai/dashboards/import-grafana-dashboards) for:&#x20;
   * Fluent Bit
