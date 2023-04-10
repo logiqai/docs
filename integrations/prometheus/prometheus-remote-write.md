@@ -19,6 +19,27 @@ You may also want to add a relabel configuration section to make sure the metric
         # Optional - key_file: &#x3C;file-name>
 </code></pre>
 
+#### Prometheus Remote Write in Helm Chart
+
+Prometheus helm&#x20;
+
+Helm Chart for Prometheus document can is found here:&#x20;
+
+{% embed url="https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus" %}
+
+Remote write configuration in Helm _value.yaml_ is a bit different.   Notice that configures file value.yml under server: enclose it with _**remoteWrite:**_ keyword instead of the keyword _**remote\_write:**_ seen above. &#x20;
+
+```
+server:
+  remoteWrite:
+  - url: https://<Logiq-endpoint>/api/v1/receive
+    tls_config:
+        insecure_skip_verify: true
+        # Optional - ca_file: <file-name>
+        # Optional - cert_file: <file-name>
+        # Optional - key_file: <file-name>
+```
+
 #### Adding relabel configuration to prefix your metrics
 
 Replace \<prefix> in the _replacement_ attribute in the _write\_relabel\_configs s_ection to a prefix that can easily help you identify your metrics.
@@ -78,11 +99,11 @@ service:
 
 ### **VictoriaMetrics configuration**
 
-VictoriaMetrics is a fast, cost-effective, and scalable monitoring solution and time-series database. `vmagent` is an agent which helps you collect metrics from various sources and store them in [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) or any other Prometheus-compatible storage systems that support the `remote_write` protocol. VMagent has the ability to push metrics additionally to pulling them; **** push model is a traditional model of the client sending data to the server:
+VictoriaMetrics is a fast, cost-effective, and scalable monitoring solution and time-series database. `vmagent` is an agent which helps you collect metrics from various sources and store them in [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) or any other Prometheus-compatible storage systems that support the `remote_write` protocol. VMagent has the ability to push metrics additionally to pulling them; push model is a traditional model of the client sending data to the server:
 
 ![](https://docs.victoriametrics.com/keyConcepts\_push\_model.png)
 
-Run the [<mark style="color:blue;"><mark style="color:purple;">**vmagent**<mark style="color:purple;"></mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> ](https://docs.victoriametrics.com/vmagent.html#quick-start)as shown below and pass the below parameters
+Run the [<mark style="color:blue;"><mark style="color:purple;">**vmagent**<mark style="color:purple;"></mark> ](https://docs.victoriametrics.com/vmagent.html#quick-start)as shown below and pass the below parameters
 
 {% hint style="info" %}
 &#x20;remoteWrite.tls.url=https://\<Logiq-endpoint>/api/v1/receive
