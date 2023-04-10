@@ -23,7 +23,7 @@ You may also want to add a relabel configuration section to make sure the metric
 
 Prometheus helm&#x20;
 
-Helm Chart for Prometheus document can is found here:&#x20;
+Helm Chart for Prometheus document is found here:&#x20;
 
 {% embed url="https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus" %}
 
