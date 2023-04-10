@@ -27,7 +27,7 @@ Helm Chart for Prometheus document is found here:&#x20;
 
 {% embed url="https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus" %}
 
-Remote write configuration in Helm _value.yaml_ is a bit different.   Notice that configures file value.yml under server: enclose it with _**remoteWrite:**_ keyword instead of the keyword _**remote\_write:**_ seen above. &#x20;
+Remote write configuration in Helm _value.yaml_ is a little different.   Notice that the configures file value.yml under the server: section uses _**remoteWrite:**_ keyword instead of _**remote\_write:**_ keyword, the prometheus.yml file, seen above. &#x20;
 
 ```
 server:
