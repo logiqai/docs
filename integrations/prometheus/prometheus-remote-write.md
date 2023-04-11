@@ -4,7 +4,7 @@ LOGIQ can collect Prometheus metrics from externally hosted Prometheus. LOGIQ us
 
 ### **Prometheus configuration**
 
-To send metrics from Prometheus to Logiq endpoint, use the configuration below.&#x20;
+To send metrics from Prometheus to LOGIQ endpoint, use the configuration below.&#x20;
 
 {% hint style="info" %}
 You may also want to add a relabel configuration section to make sure the metrics from your prometheus instance are prefixed for easier identification See Section below.
@@ -27,7 +27,7 @@ Helm Chart for Prometheus document is found here:&#x20;
 
 {% embed url="https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus" %}
 
-Remote write configuration in Helm _value.yaml_ is a little different.   Notice that the configures file value.yml under the server: section uses _**remoteWrite:**_ keyword instead of _**remote\_write:**_ keyword, the prometheus.yml file, seen above. &#x20;
+The configuration for remote write in the Helm _**values.yaml**_ file differs slightly from that in the _**prometheus.yml**_ file. Note that in the _**values.yaml**_ file, the configuration file under the _**server section**_ uses the _**remoteWrite**_ keyword instead of _**remote\_write**_, which is used in the _**prometheus.yml**_ file. This distinction in syntax is important to ensure that the remote write functionality is correctly configured in your deployment.
 
 ```
 server:
@@ -42,7 +42,7 @@ server:
 
 #### Adding relabel configuration to prefix your metrics
 
-Replace \<prefix> in the _replacement_ attribute in the _write\_relabel\_configs s_ection to a prefix that can easily help you identify your metrics.
+To ensure that your metrics are easily identifiable, replace _**\<prefix>**_ in the _**replacement**_ attribute within the _**write\_relabel\_configs**_ section with a descriptive prefix of your choice. This prefix will be appended to the beginning of all metrics sent to the output stream, allowing you to easily differentiate them from other metrics in your system.
 
 ```
   remote_write:
@@ -60,7 +60,7 @@ Replace \<prefix> in the _replacement_ attribute in the _write\_relabel\_configs
 
 ### **OpenTelemetry configuration**
 
-Prometheus Remote Write Exporter can be leveraged to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/), and these metrics can be visualized on LOGIQ.
+The Prometheus Remote Write Exporter can be used to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/). By leveraging this capability, you can easily visualize these metrics on the LOGIQ platform, allowing you to gain valuable insights into the performance of your system.
 
 ```
 exporters:
