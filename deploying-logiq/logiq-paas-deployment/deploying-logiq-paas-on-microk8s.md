@@ -28,17 +28,18 @@ The first step in this deployment is to install MicroK8s on your machine. To ins
     ```
     sudo usermod -a -G microk8s $USER
     ```
-5.  Add your current user to the group to gain access to the `.kube` caching directory by running the following command.
+5. Create the .kube directory
+6.  Add your current user to the group to gain access to the `.kube` caching directory by running the following command.
 
     ```
     sudo chown -f -R $USER ~/.kube
     ```
-6.  Generate your MicroK8s configuration and merge it with your Kubernetes configuration by running the following command.
+7.  Generate your MicroK8s configuration and merge it with your Kubernetes configuration by running the following command.
 
     ```
     sudo microk8s config > ~/.kube/config
     ```
-7.  Check whether MicroK8s is up and running with the following command.
+8.  Check whether MicroK8s is up and running with the following command.
 
     ```
     sudo microk8s status
