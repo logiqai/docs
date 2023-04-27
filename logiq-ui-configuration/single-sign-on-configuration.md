@@ -34,7 +34,7 @@ This document provides detailed information to configure OKTA and Google as Iden
 The following attributes are required. The LOGIQ mappings for each of the attributes are in brackets. Please use the correct attribute name otherwise LOGIQ will not be able to recognize the SAML assertion
 
 * First name (FirstName) and Last name (LastName)
-* Group name **** (LogiqGroups)
+* Group name  (LogiqGroups)
 
 Use following SAML Assertion Consumer Service (ACS) URL
 
@@ -100,7 +100,7 @@ Here choose the **SHA-2** certificate and click on the **Actions** button and ch
 
 This will open a new tab. Here take note of the following information. This is **needed to configure LOGIQ.**&#x20;
 
-****
+
 
 1. **SAML Metadata URL**: "Identity Provider Metadata" URL depicted below in blue can be copied as a SAML metadata URL or the whole contents of the page can be stored somewhere on the cloud and the path to that file can be used as SAML metadata URL
 

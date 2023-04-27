@@ -20,7 +20,7 @@ The Cloud formation template provisions the following resources
 
 ### 3.1 IAM Role
 
-Create a role for EKS and EKS Node Pools with the below policies. Alternatively, this can be created using Cloud formation template **** [**https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiqiamrole.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiqiamrole.yaml)**,** details of created resources will be in the output section of Cloud formation, these details are used in section 5(step 4 and 5).
+Create a role for EKS and EKS Node Pools with the below policies. Alternatively, this can be created using Cloud formation template [**https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiqiamrole.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiqiamrole.yaml)**,** details of created resources will be in the output section of Cloud formation, these details are used in section 5(step 4 and 5).
 
 * AmazonEKSWorkerNodePolicy&#x20;
 * AmazonEC2ContainerRegistryReadOnly&#x20;
@@ -247,7 +247,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 ### 5.1 Create EKS Cluster
 
-**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL: **** [ **** ](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiq-eks.yaml)****[**https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster.yaml) ****&#x20;
+**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL: [ ](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiq-eks.yaml)[**https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster.yaml)&#x20;
 
 **Step 2**: On your AWS Console, navigate to CloudFormation and select **Create stack**.&#x20;
 

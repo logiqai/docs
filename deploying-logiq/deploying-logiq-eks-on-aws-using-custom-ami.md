@@ -41,9 +41,9 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 ### 5.1 Create EKS Cluster
 
-**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL: **** [ **** ](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiq-eks.yaml)****
+**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL: [ ](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiq-eks.yaml)
 
-****[**https://logiq-scripts.s3.ap-south-1.amazonaws.com/aws-custom-ami.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/aws-custom-ami.yaml)****
+[**https://logiq-scripts.s3.ap-south-1.amazonaws.com/aws-custom-ami.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/aws-custom-ami.yaml)
 
 **Step 2**: On your AWS Console, navigate to CloudFormation and select **Create stack**.&#x20;
 
@@ -137,7 +137,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 {% tabs %}
 {% tab title="Values File For Helm" %}
-{% file src="../.gitbook/assets/values (5).yaml" %}
+{% file src="../.gitbook/assets/values.yaml" %}
 {% endtab %}
 {% endtabs %}
 

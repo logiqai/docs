@@ -53,7 +53,7 @@ Create the below policy and attach it to the IAM role that the Prometheus ECS ta
 }
 ```
 
-****
+
 
 ### **Prometheus containers**
 

@@ -10,7 +10,7 @@ The first step is to add Druid Data Source to your LOGIQ. Fill out the below fie
 
 * **Name**: Name of the data source
 * **Scheme (optional)**: HTTP/HTTPS scheme of your Druid instance
-* **Host:** Host **** Endpoint point of your Druid Instance
+* **Host:** Host Endpoint point of your Druid Instance
 * **Port:** Port address of your Druid Instance
 
 ![Selecting Druid data source](../../.gitbook/assets/druid-1.png)

@@ -34,7 +34,7 @@ You can now run `helm search repo logiq-repo` to see the available helm charts
 ```bash
 $ helm search repo logiq-repo
 NAME                CHART VERSION     APP VERSION              DESCRIPTION
-logiq-repo/logiq      v3.0.7           v3.5.8.5        LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq      v3.0.9           v3.5.9.1        LOGIQ Observability HELM chart for Kubernetes
 ```
 
 #### 1.1.1 Update your HELM chart
@@ -45,7 +45,7 @@ If you already added LOGIQ's HELM repository in the past, you can get updated so
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION          DESCRIPTION
-logiq-repo/logiq       v3.0.7         v3.5.8.5    LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq       v3.0.9         v3.5.9.1    LOGIQ Observability HELM chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where LOGIQ will be deployed
@@ -70,7 +70,7 @@ Sample YAML files for small, medium, large cluster configurations can be downloa
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../../.gitbook/assets/values.small .yaml" %}
+{% file src="../../.gitbook/assets/values.small (1).yaml" %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}

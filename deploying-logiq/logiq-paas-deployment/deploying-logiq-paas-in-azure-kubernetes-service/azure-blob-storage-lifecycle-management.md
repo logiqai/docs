@@ -14,7 +14,7 @@ You can use Azure Blob Storage lifecycle management policies to:
 
 A lifecycle management policy contains one or more rules that define a set of actions to take on a blob based on a pre-configured condition being met. To add lifecycle management rules in your Storage Account, do the following.
 
-**Step 1:**  On your Storage account in the Azure portal, navigate to the **Data Management section** and **** click on **Lifecycle management** > **Add a rule**.
+**Step 1:**  On your Storage account in the Azure portal, navigate to the **Data Management section** and click on **Lifecycle management** > **Add a rule**.
 
 ![](../../../.gitbook/assets/lifecycle..png)
 

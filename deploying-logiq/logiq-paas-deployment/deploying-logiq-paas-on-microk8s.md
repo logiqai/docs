@@ -143,7 +143,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
     ```
     microk8s kubectl create namespace logiq
     ```
-4.  Prepare your values.microk8s.yaml file. You can use the **** [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your LOGIQ PaaS deployment
+4.  Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your LOGIQ PaaS deployment
 
     > Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://github.com/logiqai/logiq-installation/blob/main/values/values.yaml) instead. run the following command.
     >

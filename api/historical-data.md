@@ -69,7 +69,7 @@ $ curl 'https://cluster-1.logiq.ai/v1/data/4c977d08-4acf-52b5-a99d-d8c0eb41fe4b-
 | -------- | ---------------------- | ----------------------------------------------------------------- |
 | 200      | A successful response. | [queryGetQueryResponse](historical-data.md#querygetqueryresponse) |
 
-****
+
 
 #### /v1/data/{queryId}/next
 

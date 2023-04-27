@@ -10,7 +10,7 @@ To carry out a simple search, type any word or series of words into the **Search
 
 ![Search Bar](<../.gitbook/assets/image (6) (1).png>)
 
-By default, LOGIQ scans for your search term(s) using the `and` operator. If your search query contains more than one word, the search engine looks for occurrences that contain both words. For example, searching for the term `Read Error` returns records that contain both `read` and `error` _****_ and not necessarily in the same sequence. Searches are also not case sensitive. For example, searching for `ReadError` returns records that contain both `read` and `error`.&#x20;
+By default, LOGIQ scans for your search term(s) using the `and` operator. If your search query contains more than one word, the search engine looks for occurrences that contain both words. For example, searching for the term `Read Error` returns records that contain both `read` and `error` and not necessarily in the same sequence. Searches are also not case sensitive. For example, searching for `ReadError` returns records that contain both `read` and `error`.&#x20;
 
 ### Exact match
 

@@ -2,10 +2,10 @@
 
 The following guide takes you through deploying LOGIQ PaaS in an Azure Kubernetes Service cluster. The deployment involves the following steps:
 
-* [<mark style="color:blue;">Creating an Azure Kubernetes Service cluster</mark>](./#creating-an-azure-kubernetes-cluster)<mark style="color:blue;"></mark>
-* [<mark style="color:blue;">Configuring the node pool</mark>](./#configuring-the-node-pool)<mark style="color:blue;"></mark>
-* <mark style="color:blue;"></mark>[<mark style="color:blue;">Connecting to the cluster</mark>](./#connecting-with-your-aks-cluster)<mark style="color:blue;"></mark>
-* <mark style="color:blue;"></mark>[<mark style="color:blue;">Creating the MinIO blob storage gateway</mark>](./#creating-the-minio-blob-storage-gateway-for-s3-compatibility)<mark style="color:blue;"></mark>
+* [<mark style="color:blue;">Creating an Azure Kubernetes Service cluster</mark>](./#creating-an-azure-kubernetes-cluster)
+* [<mark style="color:blue;">Configuring the node pool</mark>](./#configuring-the-node-pool)
+* [<mark style="color:blue;">Connecting to the cluster</mark>](./#connecting-with-your-aks-cluster)
+* [<mark style="color:blue;">Creating the MinIO blob storage gateway</mark>](./#creating-the-minio-blob-storage-gateway-for-s3-compatibility)
 * [Deploying LOGIQ PaaS](./#deploying-logiq-paas)
 
 {% hint style="warning" %}
@@ -121,7 +121,7 @@ storageClass: ultra-disk-sc
 creatStorageClass: true
 ```
 
-Next, follow the instructions on LOGIQ’s [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide) to spin up the LOGIQ stack on this AKS cluster.  **** &#x20;
+Next, follow the instructions on LOGIQ’s [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide) to spin up the LOGIQ stack on this AKS cluster. &#x20;
 
 Once you've successfully deployed LOGIQ, you can (optionally) disable monitoring AKS with container insights on your cluster by running the following command.&#x20;
 

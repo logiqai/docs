@@ -76,7 +76,7 @@ gcloud beta pubsub topics add-iam-policy-binding logiq-topic \
 
 ### Create a GCP PubSub App extension
 
-You can now launch the LOGIQ.AI GCP PubSub App extension and pull logs directly from the created topic and subscription. Please refer to the [<mark style="color:blue;">**documenation**</mark>](gcp-pubsub.md) <mark style="color:blue;">****</mark> on how to do so.
+You can now launch the LOGIQ.AI GCP PubSub App extension and pull logs directly from the created topic and subscription. Please refer to the [<mark style="color:blue;">**documenation**</mark>](gcp-pubsub.md)  on how to do so.
 
 ### Create the Logstash VM (Deprecated) <a href="#create_the_logstash_vm" id="create_the_logstash_vm"></a>
 

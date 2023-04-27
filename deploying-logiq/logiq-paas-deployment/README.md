@@ -32,7 +32,7 @@ Running this command displays a list of the available Helm charts along with the
 $ helm repo update
 $ helm search repo logiq-repo
 NAME                CHART VERSION    APP VERSION            DESCRIPTION
-logiq-repo/logiq      v3.0.7          v3.5.8.5        LOGIQ Observability HELM chart for Kubernetes
+logiq-repo/logiq      v3.0.9          v3.5.9.1        LOGIQ Observability HELM chart for Kubernetes
 ```
 
 If you've already added LOGIQ's Helm repository in the past, you can update the repository by running the following command.
@@ -43,7 +43,7 @@ helm repo update
 
 ### Create a namespace to deploy LOGIQ
 
-Create a namespace **** where we'll deploy LOGIQ PaaS by running the following command.
+Create a namespace where we'll deploy LOGIQ PaaS by running the following command.
 
 ```
 kubectl create namespace logiq
@@ -63,15 +63,15 @@ To give you a head start with configuring your LOGIQ deployment, we've provided 
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../../.gitbook/assets/values.small (26).yaml" %}
+{% file src="../../.gitbook/assets/values.small (1).yaml" %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-
+{% file src="../../.gitbook/assets/values.medium (2).yaml" %}
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-
+{% file src="../../.gitbook/assets/values.large (3).yaml" %}
 {% endtab %}
 {% endtabs %}
 
@@ -202,14 +202,14 @@ The command above automatically provisions an S3 bucket for you in the region yo
 
 The following table describes all of the Helm options passed in the command above.&#x20;
 
-| elm option                                 | Description                                                                                                                            | Default                                                                        |
-| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| `global.cloudProvider`                     | This helm option specifies the supported `cloudProvider` that is hosting the S3 compatible bucket. Currently, only `aws` is supported. | `aws`                                                                          |
-| `global.environment.s3_bucket`             | The name of the S3 bucket in AWS                                                                                                       | `logiq`                                                                        |
-| `global.environment.awsServiceEndpoint`    | The S3 Service endpoint: https://s3.\*\*\<region>\*\*.amazonaws.com                                                                    | ``[`https://s3.us-east-1.amazonaws.co`](https://s3.us-east-1.amazonaws.com)`m` |
-| `global.environment.AWS_ACCESS_KEY_ID`     | The AWS Access key for accessing the bucket                                                                                            | No default                                                                     |
-| `global.environment.AWS_SECRET_ACCESS_KEY` | The AWS Secret key for accessing the bucket                                                                                            | No default                                                                     |
-| `global.environment.s3_region`             | The AWS Region where the bucket is hosted                                                                                              | `us-east-1`                                                                    |
+| elm option                                 | Description                                                                                                                            | Default                                                                      |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `global.cloudProvider`                     | This helm option specifies the supported `cloudProvider` that is hosting the S3 compatible bucket. Currently, only `aws` is supported. | `aws`                                                                        |
+| `global.environment.s3_bucket`             | The name of the S3 bucket in AWS                                                                                                       | `logiq`                                                                      |
+| `global.environment.awsServiceEndpoint`    | The S3 Service endpoint: https://s3.\*\*\<region>\*\*.amazonaws.com                                                                    | [`https://s3.us-east-1.amazonaws.co`](https://s3.us-east-1.amazonaws.com)`m` |
+| `global.environment.AWS_ACCESS_KEY_ID`     | The AWS Access key for accessing the bucket                                                                                            | No default                                                                   |
+| `global.environment.AWS_SECRET_ACCESS_KEY` | The AWS Secret key for accessing the bucket                                                                                            | No default                                                                   |
+| `global.environment.s3_region`             | The AWS Region where the bucket is hosted                                                                                              | `us-east-1`                                                                  |
 
 ### Install LOGIQ server and client CA certificates (optional)
 
