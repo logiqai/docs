@@ -48,3 +48,13 @@ Users can choose a variety of [incident management integrations](https://docs.lo
 * [OpsGenie](https://docs.logiq.ai/integrations/alert-destinations#opsgenie)
 * [PagerDuty](https://docs.logiq.ai/integrations/alert-destinations#pagerduty)
 * ServiceNow
+
+### Logiq data collect agent - _logiqcoll_
+
+Multiple data collection packages are combined and automate the installation and management using the script from tarball logiqcoll.tgz.  The data collection agent consists of
+
+* Prometheus metrics data collector
+* Fluent-bit log data collector
+* Prometheus node exporter that produces Linux system OS metrics data
+* OSSEC agent
+

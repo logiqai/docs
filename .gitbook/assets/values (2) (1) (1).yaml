@@ -1,11 +1,11 @@
 logiq-flash:
-  replicaCount: 2
+  replicaCount: 1
   replicaCountMl: 1
   replicaCountSync: 1
   service:
     type: NodePort
   image:
-    tag: v3.5.8.5
+    tag: 2.2.7  
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -34,7 +34,7 @@ logiq-flash:
 flash-discovery:
   fullnameOverride: flash-discovery
   image:
-    tag: v2.0.3
+    tag: 2.0.1
     pullPolicy: IfNotPresent
   replicaCountDiscovery: 2
   persistence:
@@ -139,7 +139,7 @@ flash-coffee:
   coffee:
     replicaCount: 2
     image:
-      tag: brew.v3.1.4.1
+      tag: brew.LD-332.rc2
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -150,7 +150,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 4
     image:
-      tag: brew.v3.1.4.1
+      tag: brew.LD-332.rc2
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -198,9 +198,6 @@ ingress:
 
 kubernetes-ingress:
   controller:
-    image:
-      repository: k8s.gcr.io/ingress-nginx/controller
-      tag: "v1.2.0"
     replicaCount: 1
     ingressClass: logiq-ingress
     service:
@@ -250,8 +247,6 @@ logiqctl:
 
 global:
   domain: null
-  enableAwsAlb:
-      enabled: false
   kubeDistributor:
          enabled: false
   cloudProvider: aws
@@ -264,7 +259,7 @@ global:
     infra: common
     other: common
     db: db 
-    cache: db
+    cache: common
     ingest_sync: common
   taints:
     enabled: false

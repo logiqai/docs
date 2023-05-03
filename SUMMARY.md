@@ -96,6 +96,10 @@
 * [Splunk Universal Forwarder](integrations/splunk-universal-forwarder.md)
 * [Splunk Heavy Forwarder](integrations/splunk-heavy-forwarder.md)
 
+***
+
+* [LOGIQ.ai Observability Data Collector Agent](logiq.ai-observability-data-collector-agent.md)
+
 ## DATA MANAGEMENT
 
 * [Overview](data-management/overview.md)
