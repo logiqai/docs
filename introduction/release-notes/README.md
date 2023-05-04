@@ -1,8 +1,39 @@
 ---
-description: 'Latest release: v3.5.9.1'
+description: 'Latest release: v3.6'
 ---
 
 # Release Notes 🚀
+
+## **V3.6**
+
+### :date: &#x20;
+
+*   **Implementation of **<mark style="color:blue;">**ALIVE**</mark>** ( Autonomous Log Interaction Visual Explorer ) .**&#x20;
+
+    It's an interactive visualisation tool that allows you to pinpoint issues and patterns in your application.It provides an insightful representation of unstructured logs. Key features include:&#x20;
+
+    * Autonomous log analysis&#x20;
+    * Interactive visualisation&#x20;
+    * Flow representation&#x20;
+    * Insightful representation&#x20;
+    * Scalability
+*   **Improved On boarding Experience by **<mark style="color:blue;">**App Tour**</mark>** .**&#x20;
+
+    With the App Tour users can now enjoy a guided introduction to our platforms'key features, ensuring a smooth and intuitive navigation right from the start . Whether you are a new user or a returning one , the app tour will help you quickly get acquainted with our app's functionalities,making it easier than ever to make the most of our platform.
+*   **Enhancement in Search feature by adding **<mark style="color:blue;">**Regex for Extract**</mark>** .**&#x20;
+
+    Get a holistic taxonomy of logs by automatically categorising them based on their content,context and other characterstics. This capability provides users with a way to extract and classify logs automatically,improving the speed and accuracy of log-analysis. This saves time and effort by automating the process of field extraction, eliminating the need for users to manually identify and extract fields .&#x20;
+*   <mark style="color:blue;">**Apica**</mark>** Input Plugin.**&#x20;
+
+    The Apica Input plugin is a component designed to integrate with the Apica Synthetics and Load test platform. Its main purpose is to retrieve check results from the Apica platform and make them available for further processing or analysis within another system or tool.
+*   **New forwarder for **<mark style="color:blue;">**Corologix**</mark>**.**&#x20;
+
+    By using the forwarder,Users can selectively send specific log data to Coralogix based on their filtering criteria, thereby reducing the amount of data stored and analyzed. This can lead to cost optimization as it allows users to focus their resources on the most relevant and important log data, rather than storing and processing unnecessary or redundant information.
+* <mark style="color:blue;">**GCP BigQuery**</mark>** Forwarder (** [**know more ..**](http://localhost:5000/s/8WGNQCWSTnL2NgouIRTq/forwarding-to-data-warehouse/gcp-bigquery)**)**
+*   **Topology view **<mark style="color:blue;">**Enhancements**</mark> :sparkles:
+
+    Recent enhancements in the topology view is the inclusion of the total events information. This improvement provides users with a clearer understanding of the overall event activity within the system or network.
+* **Various Bug fixes and Improvements .**&#x20;
 
 ## v3.5.9.1 <a href="#uversionv359u" id="uversionv359u"></a>
 
