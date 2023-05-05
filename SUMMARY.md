@@ -98,7 +98,7 @@
 
 ***
 
-* [LOGIQ.ai Observability Data Collector Agent](logiq.ai-observability-data-collector-agent.md)
+* [LOGIQ.AI Observability Data Collector Agent](logiq.ai-observability-data-collector-agent.md)
 
 ## DATA MANAGEMENT
 
