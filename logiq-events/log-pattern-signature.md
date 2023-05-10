@@ -122,7 +122,7 @@ Maximum number of Pattern-Signatures (PS) that each namespace-application log st
 
 A maximum number of total Pattern-Signatures (PS) the cluster can create. Once the total maximum count is reached, subsequent log event PS will be set to default PS id \*6. The default max count is set to 20,000.
 
-### PS\_STREAM\_ENABLE
+### PS\_STREAM\_ENAB <a href="#ps_stream_enable" id="ps_stream_enable"></a>
 
 **\[ ( \<ns> \<app>,)\*]**
 

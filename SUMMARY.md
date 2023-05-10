@@ -143,6 +143,7 @@
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
 * [Log Pattern-Signature](logiq-events/log-pattern-signature.md)
+* [Autonomous Log Interactive Visual Explorer (ALIVE)](logiq-events/autonomous-log-interactive-visual-explorer-alive.md)
 * [Time Series (AI/ML)](logiq-events/time-series-ai-ml/README.md)
   * [Anomaly Detection](logiq-events/time-series-ai-ml/anomaly-detection.md)
   * [Averaging](logiq-events/time-series-ai-ml/averaging.md)
