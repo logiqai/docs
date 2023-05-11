@@ -30,7 +30,7 @@ To access your LOGIQ SaaS instance, do the following.&#x20;
 
 You'll now have access to and can interact with the LOGIQ UI.&#x20;
 
-![](<../.gitbook/assets/Screen Shot 2022-03-19 at 8.11.14 AM.png>)
+![](<../.gitbook/assets/Screen Shot 2022-03-19 at 8.11.14 AM (1).png>)
 
 ## What's next?
 

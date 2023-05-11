@@ -10,4 +10,4 @@ Logiq automatically logs all the alerts notifications that are happening in the 
 
 <figure><img src="../../.gitbook/assets/view alerts.png" alt=""><figcaption><p>view history</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption></figcaption></figure>

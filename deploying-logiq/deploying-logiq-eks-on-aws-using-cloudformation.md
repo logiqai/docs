@@ -264,7 +264,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 **Important:** You **MUST** choose 2 different subnets from the same VPC.&#x20;
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
 
@@ -340,7 +340,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 {% tabs %}
 {% tab title="Values File For Helm" %}
-{% file src="../.gitbook/assets/values (1).yaml" %}
+{% file src="../.gitbook/assets/values (1) (2).yaml" %}
 {% endtab %}
 {% endtabs %}
 

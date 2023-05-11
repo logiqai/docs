@@ -13,6 +13,7 @@
 
 ## Deploying LOGIQ
 
+* [Quickstart with Docker-Compose](deploying-logiq/quickstart-with-docker-compose.md)
 * [SaaS](deploying-logiq/logiq-saas.md)
 * [PaaS deployment](deploying-logiq/logiq-paas-deployment/README.md)
   * [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/logiq-paas-deployment/k8s-quickstart-guide.md)
