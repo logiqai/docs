@@ -28,7 +28,7 @@ The first step in this deployment is to install MicroK8s on your machine. To ins
     ```
     sudo usermod -a -G microk8s $USER
     ```
-5. Create the .kube directory
+5. **Create the .kube directory**
 6.  Add your current user to the group to gain access to the `.kube` caching directory by running the following command.
 
     ```
