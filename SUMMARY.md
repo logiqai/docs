@@ -136,6 +136,10 @@
 * [Configuring RBAC](log-management/configuring-rbac.md)
 * [Topology](log-management/topology.md)
 
+***
+
+* [Data Flow Pipelines](data-flow-pipelines.md)
+
 ## Distributed Tracing
 
 * [Overview](distributed-tracing/overview.md)

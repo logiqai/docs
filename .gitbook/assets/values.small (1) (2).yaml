@@ -1,11 +1,11 @@
 logiq-flash:
-  replicaCount: 3
-  replicaCountMl: 2
-  replicaCountSync: 2
+  replicaCount: 2
+  replicaCountMl: 1
+  replicaCountSync: 1
   service:
     type: NodePort
   image:
-    tag: 2.1.11.6
+    tag: logiq-v3.5.9.1
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
@@ -18,22 +18,24 @@ logiq-flash:
       release: prometheus
   resources:
     ingest:
-      requests:
-        cpu: "3500m"
-        memory: "8704Mi"
       limits:
-        cpu: "3500m"
-    ml:
+        cpu: "1250m"
       requests:
+        cpu: "1250m"
+        memory: "2750Mi"
+    ml:
+      limits:
         cpu: "1000m"
+      requests:
+        cpu: "500m"
     sync:
       requests:
-        cpu: "3500m"
+        cpu: "100m"
 
 flash-discovery:
   fullnameOverride: flash-discovery
   image:
-    tag: 2.0.1
+    tag: v2.0.3
     pullPolicy: IfNotPresent
   replicaCountDiscovery: 2
   persistence:
@@ -103,15 +105,15 @@ redis:
     name: redis
 
 postgres:
-  enabled: true
+  enabled: false
   fullnameOverride: postgres
   postgresqlPostgresPassword: postgres
   postgresqlUsername: postgres
   postgresqlDatabase: postgres
   postgresqlPassword: postgres
   postgresqlExtendedConf:
-    maxConnections: "1000"
-    sharedBuffers: "2048MB"
+    maxConnections: "400"
+    sharedBuffers: "1024MB"
   metrics:
     enabled: true
     serviceMonitor:
@@ -119,11 +121,11 @@ postgres:
     additionalLabels:
       release: prometheus
   persistence:
-    size: 100Gi
+    size: 20Gi
   resources:
     requests:
       memory: "4Gi"
-      cpu: "4000m"
+      cpu: "1000m"
   securityContext:
     enabled: true
     fsGroup: 1001
@@ -138,7 +140,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.2.1.6
+      tag: brew.v3.1.5.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -147,9 +149,9 @@ flash-coffee:
       limits:
         cpu: "1000m"
   coffee_worker:
-    replicaCount: 3
+    replicaCount: 1
     image:
-      tag: brew.2.1.6
+      tag: brew.v3.1.5.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -212,21 +214,30 @@ kubernetes-ingress:
     create: true
     name: ingress-nginx
 
-prometheus-operator:
+prometheus:
   fullnameOverride: prometheus
   persistence:
     enabled: true
     size: 20Gi
   alertmanager:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   prometheus:
     replicaCount: 1
+    persistence:
+      enabled: true
+      size: 20Gi
   operator:
     replicaCount: 1
   kube-state-metrics:
     replicaCount: 1
   node-exporter:
     replicaCount: 1
+
+grafana:
+  fullnameOverride: grafana
 
 logiqctl:
   image:
@@ -236,7 +247,10 @@ logiqctl:
 
 global:
   domain: null
+  kubeDistributor:
+         enabled: false
   cloudProvider: aws
+  createStorageClass: false
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
   nodeSelectors:
@@ -293,3 +307,4 @@ global:
     postgres: true
     redis: true
     s3gateway: true
+    grafana: false
