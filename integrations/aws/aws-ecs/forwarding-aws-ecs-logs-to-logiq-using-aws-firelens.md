@@ -14,7 +14,7 @@ To set up log forwarding on AWS ECS, do the following.
 * Click on **Edit container**
 * Navigate to the **STORAGE AND LOGGING** section.
 
-![](<../../../.gitbook/assets/image (12) (1).png>)
+![](<../../../.gitbook/assets/image (12).png>)
 
 * By default, the container will be sending logs to AWS CloudWatch. Uncheck **Auto configure to CloudWatch Logs**
 * Next, choose the Log driver as **awsfirelens**&#x20;

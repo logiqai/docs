@@ -5,11 +5,11 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: logiq-v3.5.8.4
+    tag: logiq-v3.5.9.1
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
-    size: 100Gi
+    size: 20Gi
     ml_size: 20Gi
   metrics:
     serviceMonitor:
@@ -21,7 +21,7 @@ logiq-flash:
       limits:
         cpu: "1250m"
       requests:
-        cpu: "1250m"
+        cpu: "1000m"
         memory: "2750Mi"
     ml:
       limits:
@@ -29,13 +29,15 @@ logiq-flash:
       requests:
         cpu: "500m"
     sync:
+      limits:
+        cpu: "250m"
       requests:
         cpu: "100m"
 
 flash-discovery:
   fullnameOverride: flash-discovery
   image:
-    tag: 2.0.3
+    tag: v2.0.3
     pullPolicy: IfNotPresent
   replicaCountDiscovery: 2
   persistence:
@@ -140,7 +142,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.v3.1.4
+      tag: brew.v3.1.5.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -151,7 +153,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 1
     image:
-      tag: brew.v3.1.4
+      tag: brew.v3.1.5.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -236,6 +238,40 @@ prometheus:
   node-exporter:
     replicaCount: 1
 
+thanos:
+  receive:
+    logLevel: debug
+    service:
+    ## @param receive.service.type Kubernetes service type
+    ##
+       type: ClusterIP
+    enabled: true
+  query:
+    enabled: true
+    dnsDiscovery:
+      enabled: true
+  bucketweb:
+    enabled: true
+  compactor:
+    enabled: true
+  storegateway:
+    enabled: true
+  ruler:
+    enabled: true
+    alertmanagers:
+      - prometheus-alertmanager
+    config: |-
+      groups:
+        - name: "metamonitoring"
+          rules:
+            - alert: "PrometheusDown"
+              expr: absent(up{prometheus="logiq/logiq-prometheus-prometheus"})
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+
+
 grafana:
   fullnameOverride: grafana
 
@@ -290,7 +326,7 @@ global:
     s3_url: "http://s3-gateway:9000"
     s3_access: "logiq_access"
     s3_secret: "logiq_secret"
-    s3_bucket: "logiq"
+    s3_bucket: "lgq-lq5955-5cc60d14-abee-439d-88d9-d46f008fbab7"
     s3_region: "us-east-1"
     admin_name: "flash-admin@foo.com"
     admin_password: "flash-password"
@@ -306,5 +342,5 @@ global:
     prometheus: true
     postgres: true
     redis: true
-    s3gateway: true
+    s3gateway: false
     grafana: false

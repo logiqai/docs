@@ -1,15 +1,15 @@
 logiq-flash:
-  replicaCount: 4
+  replicaCount: 3
   replicaCountMl: 2
   replicaCountSync: 2
   service:
     type: NodePort
   image:
-    tag: v3.5.9.1
+    tag: 2.1.11.6
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
-    size: 20Gi
+    size: 100Gi
     ml_size: 20Gi
   metrics:
     serviceMonitor:
@@ -18,24 +18,22 @@ logiq-flash:
       release: prometheus
   resources:
     ingest:
-      limits:
-        cpu: "1250m"
       requests:
-        cpu: "1000m"
-        memory: "2750Mi"
+        cpu: "3500m"
+        memory: "8704Mi"
+      limits:
+        cpu: "3500m"
     ml:
-      limits:
-        cpu: "1000m"
       requests:
-        cpu: "500m"
+        cpu: "1000m"
     sync:
       requests:
-        cpu: "100m"
+        cpu: "3500m"
 
 flash-discovery:
   fullnameOverride: flash-discovery
   image:
-    tag: v2.0.3
+    tag: 2.0.1
     pullPolicy: IfNotPresent
   replicaCountDiscovery: 2
   persistence:
@@ -140,7 +138,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.v3.1.5.1
+      tag: brew.2.1.6
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -151,7 +149,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 3
     image:
-      tag: brew.v3.1.5.1
+      tag: brew.2.1.6
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -199,9 +197,6 @@ ingress:
 
 kubernetes-ingress:
   controller:
-    image:
-      repository: k8s.gcr.io/ingress-nginx/controller
-      tag: "v1.2.0"
     replicaCount: 2
     ingressClass: logiq-ingress
     service:
@@ -217,65 +212,21 @@ kubernetes-ingress:
     create: true
     name: ingress-nginx
 
-prometheus:
+prometheus-operator:
   fullnameOverride: prometheus
   persistence:
     enabled: true
     size: 20Gi
   alertmanager:
     replicaCount: 1
-    persistence:
-      enabled: true
-      size: 20Gi
   prometheus:
     replicaCount: 1
-    persistence:
-      enabled: true
-      size: 20Gi
   operator:
     replicaCount: 1
   kube-state-metrics:
     replicaCount: 1
   node-exporter:
     replicaCount: 1
-
-thanos:
-  receive:
-    logLevel: debug
-    service:
-    ## @param receive.service.type Kubernetes service type
-    ##
-       type: ClusterIP
-    enabled: true
-  query:
-    enabled: true
-    dnsDiscovery:
-      enabled: true
-  bucketweb:
-    enabled: true
-  compactor:
-    enabled: true
-  storegateway:
-    enabled: true
-  ruler:
-    enabled: true
-    alertmanagers:
-      - prometheus-alertmanager
-    config: |-
-      groups:
-        - name: "metamonitoring"
-          rules:
-            - alert: "PrometheusDown"
-              expr: absent(up{prometheus="logiq/logiq-prometheus-prometheus"})
-  metrics:
-    enabled: true
-    serviceMonitor:
-      enabled: true
-
-
-grafana:
-  fullnameOverride: grafana
-
 
 logiqctl:
   image:
@@ -285,10 +236,6 @@ logiqctl:
 
 global:
   domain: null
-  enableAwsAlb:
-      enabled: false
-  kubeDistributor:
-      enabled: false
   cloudProvider: aws
   enableMetricsServer: false
   sharedSecretName: logiq-shared-secret
@@ -346,4 +293,3 @@ global:
     postgres: true
     redis: true
     s3gateway: true
-    grafana: false

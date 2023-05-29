@@ -63,7 +63,7 @@ Once the CloudFormation stack is created, navigate to the AWS Lambda function (`
 
 On the **Add trigger** page, select **CloudWatch**, and then select a CloudWatch Logs **Log Group**.&#x20;
 
-![](<../../.gitbook/assets/image (8) (1).png>)
+![](<../../.gitbook/assets/image (8).png>)
 
 Once this configuration is complete, any new logs coming to the configured CloudWatch Log group will be streamed to the LOGIQ cluster.
 

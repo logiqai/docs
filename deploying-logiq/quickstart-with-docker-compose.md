@@ -82,7 +82,7 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 <figure><img src="../.gitbook/assets/Screen Shot 2022-03-19 at 8.11.14 AM.png" alt=""><figcaption><p>LOGIQ Login Page</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>LOGIQ Dashboards</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>LOGIQ Dashboards</p></figcaption></figure>
 
 ## Ingesting data
 
@@ -92,11 +92,11 @@ For setting up data ingestion from your endpoints and applications into LOGIQ.AI
 
 The test log data can be viewed under Explore page&#x20;
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Click on any Procid and you will be taken to the Flows page with detailed logs and a search view. You can search for any log pattern, searches can also be run using regex expressions along with conditional statements using Advanced search across a time period.
 
-<figure><img src="../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (4).png" alt=""><figcaption></figcaption></figure>
 
 ## Distributed Tracing
 
@@ -104,15 +104,15 @@ Logiq.ai provides application performance monitoring (APM) which can help end-to
 
 select the Service and a list of traces will appear on the right-hand side of the screen. The traces have titles that correspond to the **Operator** selector on the search form. The traces can be further analyzed by clicking on the Analyse icon which will pull up the entire logs for the corresponding trace-id.
 
-<figure><img src="../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Analyze icon displays all the logs for the respective trace-id in a given time range.
 
-<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 To view the detailed trace, you can select a specific trace instance and check details like the time taken by each service, errors during execution, and logs.
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ### Prometheus monitoring and alerting
 

@@ -5,11 +5,11 @@ logiq-flash:
   service:
     type: NodePort
   image:
-    tag: v3.5.8.4
+    tag: v3.5.9.1
     pullPolicy: IfNotPresent
   persistence:
     enabled: true
-    size: 100Gi
+    size: 20Gi
     ml_size: 20Gi
   metrics:
     serviceMonitor:
@@ -21,7 +21,7 @@ logiq-flash:
       limits:
         cpu: "1250m"
       requests:
-        cpu: "1250m"
+        cpu: "1000m"
         memory: "2750Mi"
     ml:
       limits:
@@ -35,7 +35,7 @@ logiq-flash:
 flash-discovery:
   fullnameOverride: flash-discovery
   image:
-    tag: 2.0.3
+    tag: v2.0.3
     pullPolicy: IfNotPresent
   replicaCountDiscovery: 2
   persistence:
@@ -153,7 +153,7 @@ flash-coffee:
   coffee:
     replicaCount: 1
     image:
-      tag: brew.v3.1.4
+      tag: brew.v3.1.5.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -164,7 +164,7 @@ flash-coffee:
   coffee_worker:
     replicaCount: 4
     image:
-      tag: brew.v3.1.4
+      tag: brew.v3.1.5.1
       pullPolicy: IfNotPresent
     resources:
       requests:
@@ -252,6 +252,39 @@ prometheus:
     replicaCount: 1
   node-exporter:
     replicaCount: 1
+
+thanos:
+  receive:
+    logLevel: debug
+    service:
+    ## @param receive.service.type Kubernetes service type
+    ##
+       type: ClusterIP
+    enabled: true
+  query:
+    enabled: true
+    dnsDiscovery:
+      enabled: true
+  bucketweb:
+    enabled: true
+  compactor:
+    enabled: true
+  storegateway:
+    enabled: true
+  ruler:
+    enabled: true
+    alertmanagers:
+      - prometheus-alertmanager
+    config: |-
+      groups:
+        - name: "metamonitoring"
+          rules:
+            - alert: "PrometheusDown"
+              expr: absent(up{prometheus="logiq/logiq-prometheus-prometheus"})
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
 
 grafana:
   fullnameOverride: grafana

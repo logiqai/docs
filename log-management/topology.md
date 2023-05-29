@@ -12,7 +12,7 @@ Here are the steps for accessing the topology view of your namespaces,
 * You will find the topology in the second tab. Select the `topology` tab
 * You will be displayed with your namespaces and applications as a top-down tree structure with errors and warnings count, for the default time range, below every node
 
-<figure><img src="../.gitbook/assets/image (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (4).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### RCA with topology
 
@@ -30,7 +30,7 @@ To run a search query for the errors, click on errors under the node with errors
 
 <figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (9).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Organizing apps with Virtual Nodes
 
@@ -49,7 +49,7 @@ Here are the steps to create a virtual node,
 * To add namespaces under your group, expand the groups in which you want to add namespaces and all other namespaces which are not grouped will be under the namespaces group
 * Drag the namespace to the respective group and click update
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Tagging Nodes
 
@@ -61,12 +61,12 @@ Here are the steps to create tags in the topology
 * All the nodes will be listed with expand/collapse view
 * Expand the node to view all the tags under the node
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Click on `add tag` to create tag
 * Provide key and value and press enter
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -79,7 +79,7 @@ Here are the steps to filter nodes,
 * Select the `key` one with which you want to filter nodes
 * Select the `value`. After selecting it, the filter will be applied and the nodes which have that key and value will be displayed in the view and others will be filtered
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 Note:\
 When we add multiple tags for filtering, then `OR`  condition will be applied for combining those filters.
