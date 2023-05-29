@@ -27,7 +27,7 @@ You can now share this URL in any way you please. Those who access this URL will
 
 LOGIQ saves shared searches for quick access in the search bar under **Favorites**. You can access **Favorites** by clicking the **Show Favorites** button in the search bar.&#x20;
 
-![](<../.gitbook/assets/image (11).png>)
+![](<../.gitbook/assets/image (11) (1).png>)
 
 
 

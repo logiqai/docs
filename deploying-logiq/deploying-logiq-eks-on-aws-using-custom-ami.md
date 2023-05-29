@@ -64,10 +64,7 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
 
-| Node group | Instance size (min recommended) | Nodes (HA) |
-| ---------- | ------------------------------- | ---------- |
-| **ingest** | c5.xlarge (4 Core 8 GB RAM)     | 2          |
-| **common** | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
+<table><thead><tr><th width="216.5557129983348">Node group</th><th width="275.2866694599267">Instance size (min recommended)</th><th>Nodes (HA)</th></tr></thead><tbody><tr><td><strong>ingest</strong></td><td>c5.xlarge (4 Core 8 GB RAM)</td><td>2</td></tr><tr><td><strong>common</strong></td><td>c5.2xlarge (8 Core 32 GB RAM)</td><td>2</td></tr></tbody></table>
 
 ![](<../.gitbook/assets/image (105).png>)
 
@@ -137,7 +134,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 {% tabs %}
 {% tab title="Values File For Helm" %}
-{% file src="../.gitbook/assets/values.yaml" %}
+{% file src="../.gitbook/assets/values (2).yaml" %}
 {% endtab %}
 {% endtabs %}
 

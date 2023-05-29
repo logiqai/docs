@@ -53,13 +53,7 @@ https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-exporter.y
 
 This CloudFormation stack creates a Lambda function and its necessary permissions. You must configure the following attributes.
 
-| Parameter     | Description                                                                                                                                     |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `APPNAME`     | Application name - a readable name for LOGIQ to partition logs.                                                                                 |
-| `CLUSTERID`   | Cluster ID - a readable name for LOGIQ to partition logs.                                                                                       |
-| `NAMESPACE`   | Namespace - a readable name for LOGIQ to partition logs.                                                                                        |
-| `LOGIQHOST`   | IP address or hostname of the LOGIQ server. (Without http or https)                                                                             |
-| `INGESTTOKEN` | JWT token to securely ingest logs. Refer [here](../overview/generating-a-secure-ingest-token.md#generating-using-ui) to generate ingest token.  |
+<table data-header-hidden><thead><tr><th width="275.3024830699774">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Description</td></tr><tr><td><code>APPNAME</code></td><td>Application name - a readable name for LOGIQ to partition logs.</td></tr><tr><td><code>CLUSTERID</code></td><td>Cluster ID - a readable name for LOGIQ to partition logs.</td></tr><tr><td><code>NAMESPACE</code></td><td>Namespace - a readable name for LOGIQ to partition logs.</td></tr><tr><td><code>LOGIQHOST</code></td><td>IP address or hostname of the LOGIQ server. (Without http or https)</td></tr><tr><td><code>INGESTTOKEN</code></td><td>JWT token to securely ingest logs. Refer <a href="../overview/generating-a-secure-ingest-token.md#generating-using-ui">here</a> to generate ingest token. </td></tr></tbody></table>
 
 ## Configuring the CloudWatch trigger
 
@@ -69,7 +63,7 @@ Once the CloudFormation stack is created, navigate to the AWS Lambda function (`
 
 On the **Add trigger** page, select **CloudWatch**, and then select a CloudWatch Logs **Log Group**.&#x20;
 
-![](<../../.gitbook/assets/image (8).png>)
+![](<../../.gitbook/assets/image (8) (1).png>)
 
 Once this configuration is complete, any new logs coming to the configured CloudWatch Log group will be streamed to the LOGIQ cluster.
 

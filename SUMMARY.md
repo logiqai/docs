@@ -134,6 +134,7 @@
   * [Accessing Reports results via API](log-management/reports/accessing-api-results-via-api.md)
 * [Role-Based Access Control (RBAC)](log-management/role-based-access-control.md)
 * [Configuring RBAC](log-management/configuring-rbac.md)
+* [Topology](log-management/topology.md)
 
 ## Distributed Tracing
 
