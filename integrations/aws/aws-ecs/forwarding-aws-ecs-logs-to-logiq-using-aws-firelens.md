@@ -48,6 +48,13 @@ To set up log forwarding on AWS ECS, do the following.
         {
             "dnsSearchDomains": null,
             "environmentFiles": null,
+            "firelensConfiguration": {
+                "type": "fluentbit",
+		"options": {
+        		"config-file-type": "s3",
+			"config-file-value": "arn:aws:s3:::yourbucket/yourdirectory/extra.conf"
+				}
+			},
             "logConfiguration": {
                 "logDriver": "awsfirelens",
                 "secretOptions": null,
@@ -65,6 +72,26 @@ To set up log forwarding on AWS ECS, do the following.
                     "Name": "http"
                 }
             }
+            
+```
+
+* &#x20;You can add/remove records in extra conf file . Your extra conf file looks similar to below file .
+
+```
+[FILTER]
+    Name               record_modifier
+    Match              logiq
+    Record cluster_id  flash
+
+[FILTER]
+    Name             record_modifier
+    Match            logiq
+    Record namespace  xyz
+
+[FILTER]
+    Name            record_modifier
+    Match           logiq
+    Record app_name system_logs
 ```
 
 * Once you are done with the setup, you should see a logrouter container along with your container (for example, the **`wordpress`** the container below).
