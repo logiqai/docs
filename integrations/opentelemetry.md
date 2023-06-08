@@ -8,7 +8,7 @@ OpenTelemetry is a collection of tools, APIs, and SDKs. Use it to instrument, ge
 
 Prometheus Remote Write Exporter can be used to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/)
 
-LOGIQ.AI implements a preometheus remote write backend so metric data from open telementry collectors can be sent to LOGIQ with a simple configuration as described below.
+LOGIQ.AI implements a prometheus remote write backend so metric data from open telementry collectors can be sent to LOGIQ with a simple configuration as described below.
 
 Enable the _prometheusremorewrite_ exporter in your open telemetry configuration yaml
 
