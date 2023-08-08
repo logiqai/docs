@@ -137,7 +137,7 @@ Fill in the "App details"
 
 ![](<../.gitbook/assets/image (65).png>)
 
-Download the Idp Metadata file and host the file in a publically accessible location like AWS S3.
+Download the Idp Metadata file and host the file in a publicly accessible location like AWS S3.
 
 ![](../.gitbook/assets/saml.png)
 
@@ -153,7 +153,7 @@ In the attributes section, either map a "Google Directory attributes" or Group m
 
 <figure><img src="../.gitbook/assets/Screen Shot 2022-11-01 at 3.35.55 PM.png" alt=""><figcaption><p>Configure SAML Attribute for LOGIQ Groups</p></figcaption></figure>
 
-SAML app by default is disabled in Google, enable it and wait for a few mins and try logging in.
+SAML app by default is disabled in Google, enable it and wait for a few minutes and try logging in.
 
 ![](<../.gitbook/assets/image (87).png>)
 
