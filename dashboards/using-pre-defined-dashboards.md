@@ -19,4 +19,4 @@ We help you to build a viable dashboard with a few clicks by providing you with 
 
 <figure><img src="../.gitbook/assets/Screenshot from 2023-01-02 19-26-12.png" alt=""><figcaption><p>import dashboard page</p></figcaption></figure>
 
-LOGIQ.AI also includes a grafana dashboard import section where popular grafana dashboards can be directly imported into LOGIQ.AI. See section on [Grafana Dashboard import](import-grafana-dashboards.md) for how to use that capability.
+Apica Ascent also includes a grafana dashboard import section where popular grafana dashboards can be directly imported into Apica Ascent. See section on [Grafana Dashboard import](import-grafana-dashboards.md) for how to use that capability.

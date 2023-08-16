@@ -2,14 +2,14 @@
 
 ## Fluent Bit K8S
 
-If you are running a K8S cluster, you can use fluent-bit to send data to the LOGIQ. Please see below for instructions
+If you are running a K8S cluster, you can use fluent-bit to send data to the Apica Ascent. Please see below for instructions
 
-### Managing multiple K8S clusters in a single LOGIQ instance
+### Managing multiple K8S clusters in a single Apica Ascent instance
 
-LOGIQ has provided its own fluent-bit daemon for deploying on K8S clusters. It is available at [https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/](https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/). It allows the administrator to pass a human-readable `CLUSTER_ID` or cluster identifier with all the log data.
+Apica Ascent has provided its own fluent-bit daemon for deploying on K8S clusters. It is available at [https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/](https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/). It allows the administrator to pass a human-readable `CLUSTER_ID` or cluster identifier with all the log data.
 
 {% hint style="success" %}
-Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters.
+Providing a CLUSTER\_ID allows Apica Ascent to separate namespaces that may be conflicting in two separate K8S clusters.
 {% endhint %}
 
 ### Running the fluent-bit daemonset
@@ -56,7 +56,7 @@ $ kubectl create -f fluent-bit-config-logiq-forward.yml
 
 #### Enabling TLS
 
-You can enable TLS for Fluent Bit if you'd like to secure the data transferred through Fluent Bit to LOGIQ. To do so, edit the \`fluent-bit-config-logiq-forward.yaml\` file as shown below.
+You can enable TLS for Fluent Bit if you'd like to secure the data transferred through Fluent Bit to Apica Ascent. To do so, edit the \`fluent-bit-config-logiq-forward.yaml\` file as shown below.
 
 ```
 output-logiq.conf: |
@@ -81,7 +81,7 @@ Be sure to also configure the following:
 * name: CLUSTER\_ID value: "YOUR\_CLUSTER\_ID"
 * name: LOGIQ\_TOKEN value: "YOUR\_INGEST\_TOKEN"
 
-Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Cluster, configure the following in deamonset `fluent-bit-daemonset-logiq-output.yml`. If you do not have your ingest token, You can generate them using [`logiqctl`](https://docs.logiq.ai/logiq-server/agentless/generating-secure-ingest-token)
+Fluent Bit DaemonSet is ready to be used with Apica Ascent on a regular Kubernetes Cluster, configure the following in deamonset `fluent-bit-daemonset-logiq-output.yml`. If you do not have your ingest token, You can generate them using [`apicactl`](https://docs.logiq.ai/logiq-server/agentless/generating-secure-ingest-token)
 
 *   name: LOGIQ\_HOST
 

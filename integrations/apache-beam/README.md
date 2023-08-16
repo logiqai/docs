@@ -8,7 +8,7 @@ Beam is particularly useful for [embarrassingly parallel](https://en.wikipedia.o
 
 
 
-LOGIQ.AI provides integrations to let you integrate LOGIQ  with Apache Beam. Checkout the sub-modules to learn more about it.
+Apica Ascent provides integrations to let you integrate Apica Ascent with Apache Beam. Checkout the submodules to learn more about it.
 
 {% content-ref url="export-metrics-to-prometheus/" %}
 [export-metrics-to-prometheus](export-metrics-to-prometheus/)

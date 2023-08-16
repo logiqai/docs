@@ -2,7 +2,7 @@
 
 ## Fluent Bit configuration
 
-_HTTP_ output plugin allows flushing your records into an HTTP endpoint. The **HTTP** output plugin allows to provide interoperability between compatible systems, Logiq being one.
+_HTTP_ output plugin allows flushing your records into an HTTP endpoint. The **HTTP** output plugin allows to provide interoperability between compatible systems, Apica Ascent being one.
 
 The below code block defines the minimal changes to be added to the fluent-bit configuration using the HTTP plugin to start sending log events to flash.The below config supports storage persistence.
 
@@ -69,7 +69,7 @@ The below code block defines the minimal changes to be added to the fluent-bit c
 
 ## Fluent Bit for Windows
 
-You can use Fluent Bit to ship Windows logs to LOGIQ by leveraging the following Fluent Bit configuration.
+You can use Fluent Bit to ship Windows logs to Apica Ascent by leveraging the following Fluent Bit configuration.
 
 The instruction to install fluent-bit for windows is available at the following git repository - [<mark style="color:blue;">https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/windows</mark>](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/windows)<mark style="color:blue;"></mark>
 
@@ -120,11 +120,11 @@ NOTE: You will need to finalize the fluent configuration and then restart the se
     Header Authorization Bearer <token>
 ```
 
-To forward Windows logs to LOGIQ using Fluent Bit, do the following.&#x20;
+To forward Windows logs to Apica Ascent using Fluent Bit, do the following.&#x20;
 
 1. Copy the configuration provided above and save it locally in a temporary folder.&#x20;
-2. Edit the fields in the `[OUTPUT]` section of the configuration file to match your LOGIQ instance.&#x20;
-3. Clone the LOGIQ installation GitHub repository locally and navigate to the `windows` folder.
+2. Edit the fields in the `[OUTPUT]` section of the configuration file to match your Apica Ascent instance.&#x20;
+3. Clone the Apica Ascent installation GitHub repository locally and navigate to the `windows` folder.
 4. Copy and paste the `fluent-install.ps1` script into the folder where you saved the Fluent Bit configuration file.&#x20;
 5.  Since Windows does not allow you to execute scripts due to default PowerShell script execution policies, you should update the set execution policy by running:&#x20;
 

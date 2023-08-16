@@ -1,4 +1,4 @@
-# LOGIQ-OSSEC Agent for Windows
+# Apica-OSSEC Agent for Windows
 
 We have [discussed earlier](https://docs.logiq.ai/integrations/ossec-variants-ossec-wazuh-atomic) how to make a ossec`-hids` App Extension.
 
@@ -7,7 +7,7 @@ We have [discussed earlier](https://docs.logiq.ai/integrations/ossec-variants-os
 After creating a App Extension you can copy the **LoadBalancer-IP** and **authtoken** from the `Explore > App Extension` page.\
 
 
-After this, you are ready to connect the Logiq-OSSEC Agent to the LOGIQ-OSSEC Manager.\
+After this, you are ready to connect the Apica-OSSEC Agent to the Apica-OSSEC Manager.\
 \
 Please download this powershell script file and run it from the source machine with 2 parameters.
 

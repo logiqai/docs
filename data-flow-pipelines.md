@@ -70,7 +70,7 @@ Before adding the forwarder rule.  create a forwarder and map the forwarder in t
 
 After adding the forwarder the new node will be added as bellow
 
-<figure><img src=".gitbook/assets/Screenshot from 2023-05-29 07-12-25.png" alt=""><figcaption><p>Pipeline with the forwaarder</p></figcaption></figure>
+<figure><img src=".gitbook/assets/Screenshot from 2023-05-29 07-12-25.png" alt=""><figcaption><p>Pipeline with the forwarder</p></figcaption></figure>
 
 Click on the + icon to choose an existing or create a new forwarder rule for the application and target.\
 After adding the forwarder rule, a new node will be shown between the application and the forwarder.
@@ -90,7 +90,7 @@ Each rule node will have the following details.\
 
 ### Rule details
 
-To view rule details, click on the info icon which is present at the top right corner, new popup shows with rule details on click of the icon.
+To view rule details, click on the info icon which is present in the top right corner, new popup shows with rule details on click of the icon.
 
 <figure><img src=".gitbook/assets/Screenshot from 2023-05-29 09-10-14.png" alt=""><figcaption><p>Rule details</p></figcaption></figure>
 

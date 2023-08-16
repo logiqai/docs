@@ -1,6 +1,6 @@
 # Extract
 
-LOGIQ.AI provides pre-built rules to parse the fields of ingested log events. However, you can customize these rules to meet your specific needs. Here's how:
+Apica Ascent provides pre-built rules to parse the fields of ingested log events. However, you can customize these rules to meet your specific needs. Here's how:
 
 1. Select a log line that you want to create an extract rule for.
 2. Hover/Click on the ellipsis button that's available on the log line.
@@ -18,7 +18,7 @@ Like every other rule, when creating an Extract Rule, you will need to enter a n
 
 ![](<../.gitbook/assets/image (116).png>)
 
-LOGIQ uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.&#x20;
+Apica Ascent uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.&#x20;
 
 ```
 (?P<server_ip>\S+) (?P<method>\S+) (?P<uri>\S+) (?P<uri_query>\S+) (?P<server_port>\d+) (?P<username>\S+) (?P<client_ip>\S+) (?P<user_agent>\S+) (?P<referer>\S+) (?P<status>\S+) (?P<substatus>\S+) (?P<win32_status>\S+) (?P<time_taken>\S+)
@@ -26,4 +26,4 @@ LOGIQ uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) 
 
 Once you have created an Extract Rule, all incoming log lines that match the specified criteria will be evaluated, and the fields will be extracted if available.
 
-In addition to the ability to create custom Extract Rules, LOGIQ also offers a variety of pre-built rules for popular applications such as IIS, ingress, AWS VPC Flow logs, etc. These pre-built rules can help you get started quickly and streamline the process of configuring your data management rules.
+In addition to the ability to create custom Extract Rules, Apica Ascent also offers a variety of pre-built rules for popular applications such as IIS, ingress, AWS VPC Flow logs, etc. These pre-built rules can help you get started quickly and streamline the process of configuring your data management rules.

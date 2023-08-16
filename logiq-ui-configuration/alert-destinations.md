@@ -6,7 +6,7 @@ description: >-
 
 # Incident management
 
-When an alert triggers, LOGIQ Insights sends alert details to its designated alert destinations. LOGIQ Insights supports the following types of alert destinations.
+When an alert triggers, Apica Ascent Insights sends alert details to its designated alert destinations. Apica Ascent Insights supports the following types of alert destinations.
 
 * **E-mail**
 * **ChatWork**
@@ -47,7 +47,7 @@ In your [slack](https://my.slack.com/services/new/incoming-webhook/) console, pi
 
 ![Slack Webhooks integration](<../.gitbook/assets/Screen Shot 2020-08-11 at 3.10.58 PM.png>)
 
-In your LOGIQ Insight's UI, Open the “Alert Destinations” tab in the settings screen, and click on ”+ New Alert Destination”. Pick “Slack” as the type. Set the name, channel, etc, and provide a “Slack Webhook URL”, from above
+In your Apica Ascent Insight's UI, Open the “Alert Destinations” tab in the settings screen, and click on ”+ New Alert Destination”. Pick “Slack” as the type. Set the name, channel, etc, and provide a “Slack Webhook URL”, from above
 
 ![Slack Destination Configuration](../.gitbook/assets/slack.png)
 
@@ -70,7 +70,7 @@ After obtaining the Integration Key:
 In the OpsGenie UI, navigate to your **Teams** page and select the team for which you want to create the alert integration. In the example below we will use the logflow team.
 
 {% hint style="info" %}
-NOTE: More than one OpsGenie alert destination can be defined in LOGIQ
+NOTE: More than one OpsGenie alert destination can be defined in Apica Ascent
 {% endhint %}
 
 ![Select the team](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.17.24 PM.png>)
@@ -89,15 +89,15 @@ Copy the API integration key from the integration created above.
 The API Key must be created with **Read** and **Create and Update** permissions and must be **Enabled**
 {% endhint %}
 
-You are now ready to add the OpsGenie integration in LOGIQ under alert destinations. Provide a name for the integration and the **OpsGenie API key**. You are now ready to receive incident notifications from LOGIQ.
+You are now ready to add the OpsGenie integration in Apica Ascent under alert destinations. Provide a name for the integration and the **OpsGenie API key**. You are now ready to receive incident notifications from Apica Ascent.
 
 ![OpsGenie Alert destination](../.gitbook/assets/2022-07-04\_17-07.png)
 
-#### OpsGenie alerts view for LOGIQ alerts
+#### OpsGenie alerts view for Apica Ascent alerts
 
 You can now see the alerts being raised in the OpsGenie UI under the alerts tab.
 
-![OpsGenie alerts table](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.22.53 PM.png>) ![OpsGenie LOGIQ generated alert detail](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.23.18 PM.png>)
+![OpsGenie alerts table](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.22.53 PM.png>) ![OpsGenie Apica Ascent generated alert detail](<../.gitbook/assets/Screen Shot 2021-11-16 at 9.23.18 PM.png>)
 
 ## Associating alert destinations to alert
 

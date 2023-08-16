@@ -1,6 +1,6 @@
 # InfluxDB
 
-LOGIQ helps you to connect to your InfluxDB for analyzing and visualization of your data.&#x20;
+Apica Ascent helps you to connect to your InfluxDB for analyzing and visualization of your data.&#x20;
 
 ### Adding InfluxDB data source
 

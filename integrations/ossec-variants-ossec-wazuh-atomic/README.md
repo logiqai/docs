@@ -2,7 +2,7 @@
 
 ### Overview
 
-LOGIQ.AI supports ingesting security events logs directlry from OSSEC compatible agents. OSSEC (Open Source Security) is a powerful, open-source host-based intrusion detection system (HIDS) developed to detect and prevent malicious activities on systems. It has the ability to monitor all types of environments, including Windows, Mac OS X, Linux and Solaris systems. OSSEC works by monitoring the system.
+Apica Ascent supports ingesting security events logs directly from OSSEC compatible agents. OSSEC (Open Source Security) is a powerful, open-source host-based intrusion detection system (HIDS) developed to detect and prevent malicious activities on systems. It has the ability to monitor all types of environments, including Windows, Mac OS X, Linux and Solaris systems. OSSEC works by monitoring the system.
 
 The OSSEC architecture consists of three main components: the manager, the agent, and the local OSSEC server.
 
@@ -14,22 +14,22 @@ The OSSEC architecture consists of three main components: the manager, the agent
 
 OSSEC is an incredibly powerful tool that can be used to detect and prevent malicious activities on systems. It is an invaluable asset for any organization looking to secure their networks from threats both outside and within the company.
 
-LOGIQ.AI takes over the functions of the manager and the local OSSEC server and makes it easy to bring together security related events into your data fabric for instant consumption.
+Apica Ascent takes over the functions of the manager and the local OSSEC server and makes it easy to bring together security related events into your data fabric for instant consumption.
 
 ### Starting the manager, ossec server
 
-Launching the LOGIQ.AI OSSEC components is accomplished by launching the OSSEC Input _"App Extension"_ which can be found under _"Explore"_
+Launching the Apica Ascent OSSEC components is accomplished by launching the OSSEC Input _"App Extension"_ which can be found under _"Explore"_
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-02 at 10.19.49 PM.png" alt=""><figcaption><p>Launch the OSSEC HIDS components in LOGIQ.AI</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-02 at 10.19.49 PM.png" alt=""><figcaption><p>Launch the OSSEC HIDS components in Apica Ascent</p></figcaption></figure>
 
-You can now provide the credentials that the agents can use to connect to LOGIQ.AI instance
+You can now provide the credentials that the agents can use to connect to Apica Ascent instance
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2023-01-02 at 10.24.04 PM.png" alt=""><figcaption><p>OSSEC Agent auth token</p></figcaption></figure>
 
 * HostName - Enter a name for the app extension.
 * AuthToken - The user chooses a 32-digit hex number, for example '2DAEF3165265A....FB793126B780BA4'.
 * Resources - The user enters CPU and MEM usage limit, format adopted from Kubernetes resource notation - see explanation here, [https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)  Example setting, **`cpu/cpu_limit = 1000m`**, **`mem/mem_limit=4Gi`**.
-* Version - Enters the image here.  The latest LOGIQ.ai OSSEC component image can be browsed here, [https://hub.docker.com/r/logiqai/hauler-ossec/tags](https://hub.docker.com/r/logiqai/hauler-ossec/tags)  Example image is '**logiqai/hauler-ossec:v1**'.
+* Version - Enters the image here.  The latest Apica Ascent OSSEC component image can be browsed here, [https://hub.docker.com/r/logiqai/hauler-ossec/tags](https://hub.docker.com/r/logiqai/hauler-ossec/tags)  Example image is '**logiqai/hauler-ossec:v1**'.
 
 Shortly after the user configures all of the above, he will see the assigned [_manager IP address_](#user-content-fn-1)[^1] appears in the display below.  This IP is needed for setting up the agent next.
 
@@ -47,7 +47,7 @@ Wazuh agent can easily be installed on both Linux and Windows platforms.  Please
 
 ### Configuring the agents
 
-OSSEC/Automic OSS agent variation Wazuh agents can connect to the LOGIQ.AI instance using the agent-auth tool once after successfully installed.  For Debian-style Linux distribution, the command below is used to link the agent to the manager.&#x20;
+OSSEC/Automic OSS agent variation Wazuh agents can connect to the Apica Ascent instance using the agent-auth tool once after successfully installed.  For Debian-style Linux distribution, the command below is used to link the agent to the manager.&#x20;
 
 <pre><code><strong>sudo /var/ossec/bin/agent-auth -m &#x3C;manager IP address> -p 1515 -P &#x3C;AuthToken> -A &#x3C;user-assigned agent name>
 </strong></code></pre>
@@ -62,7 +62,7 @@ For Windows system we have a powershell script which can directly setup OSSEC ag
 
 ### Enable automatic vulnerability scan at the endpoint
 
-Wazuh agent supports automatic vulnerability scans, file integrity monitoring, and policy compliance features.  With the LOGIQ.AI server manager activated, the platform will provide comprehensive visibility across the entire environment with centralized management of security policies and events.&#x20;
+Wazuh agent supports automatic vulnerability scans, file integrity monitoring, and policy compliance features.  With the Apica Ascent server manager activated, the platform will provide comprehensive visibility across the entire environment with centralized management of security policies and events.&#x20;
 
 
 

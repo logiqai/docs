@@ -1,5 +1,5 @@
 ---
-description: Configuring Splunk Heavy Forwarder to send data to LOGIQ
+description: Configuring Splunk Heavy Forwarder to send data to Apica Ascent
 ---
 
 # Splunk Heavy Forwarder
@@ -7,10 +7,10 @@ description: Configuring Splunk Heavy Forwarder to send data to LOGIQ
 ### Splunk Raw mode
 
 {% hint style="info" %}
-Splunk heavy forwarders support forwarding raw data as it is collected as well in Splunk's proprietary protocol S2S. LOGIQ.AI can directly ingest from Splunk heavy forwarder in raw mode that does not use proprietary S2S protocol.
+Splunk heavy forwarders support forwarding raw data as it is collected as well in Splunk's proprietary protocol S2S. Apica Ascent can directly ingest from Splunk heavy forwarder in raw mode that does not use proprietary S2S protocol.
 {% endhint %}
 
-Splunk Heavy Forwarder can be configured to send raw TCP data to LOGIQ. To enable forwarding to LOGIQ edit `$SPLUNK_HOME/etc/system/local/outputs.conf` file and enable TCP forwarding.
+Splunk Heavy Forwarder can be configured to send raw TCP data to Apica Ascent. To enable forwarding to Apica Ascent edit `$SPLUNK_HOME/etc/system/local/outputs.conf` file and enable TCP forwarding.
 
 ```
 [tcpout]
@@ -38,7 +38,7 @@ server = <logiq_instance>:<logiq syslog_port>
 
 ### RFS:S3
 
-LOGIQ.AI also fronts an S3 compatible protocol port where Splunk Heavy Forwarders can directly forward data using rfs:s3 output specification. Example is below
+Apica Ascent also fronts an S3 compatible protocol port where Splunk Heavy Forwarders can directly forward data using rfs:s3 output specification. Example is below
 
 #### outputs.conf
 
@@ -60,10 +60,10 @@ remote.s3.auth_region = us-east-1
 
 ### Splunk Cooked mode
 
-LOGIQ.AI can ingest data from splunk forwarders in Cooked mode as well.  You can create a S2S Ingest app extension to directly ingest data from Splunk universal forwarder and Heavy forwarder in cooked mode.
+Apica Ascent can ingest data from splunk forwarders in Cooked mode as well.  You can create a S2S Ingest app extension to directly ingest data from Splunk universal forwarder and Heavy forwarder in cooked mode.
 
 {% hint style="success" %}
-Logs/Events/Metrics can be ingested into LOGIQ.AI using cooked mode
+Logs/Events/Metrics can be ingested into Apica Ascent using cooked mode
 {% endhint %}
 
 Go to _"Explore"_ -> _"App Extensions"_ and create your S2S Ingest app extension

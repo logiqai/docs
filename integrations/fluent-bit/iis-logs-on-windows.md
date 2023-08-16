@@ -57,7 +57,7 @@ Also, make sure to edit the _parsers.conf_ path to the folder where you installe
 
 ## Multiple Source Fluent-bit Configuration
 
-Fluent-bit service can gather data sources from multiple locations such as log files from a different directory.  There can be multiple \[INPUT] and \[FILTER] section blocks within a td-fluent.conf file and each \[INPUT] and \[FILTER] block is linked via _\[INPUT] Tag_ and _\[FILTER] Matching_ pairs.     Below shows an example partial configuration file.
+Fluent-bit service can gather data sources from multiple locations such as log files from a different directory.  There can be multiple \[INPUT] and \[FILTER] section blocks within a td-fluent.conf file and each \[INPUT] and \[FILTER] block is linked via _\[INPUT] Tag_ and _\[FILTER] Matching_ pairs. Below shows an example partial configuration file.
 
 ```
 
@@ -108,7 +108,7 @@ Fluent-bit service can gather data sources from multiple locations such as log f
 
 Follow the steps in Installing[ <mark style="color:blue;">fluent-bit for windows</mark>](https://docs.logiq.ai/integrations/fluent-bit#fluent-bit-for-windows) to setup your fluent-bit agent and service. Use the modified config file above to match your environment during the setup process.
 
-Fluent-bit service will automatically started upon the end of the script installation.   However, one can use Windows service mangement tool to control its state.  Below show how to start the Windows service tool GUI.
+Fluent-bit service will automatically be started upon the end of the script installation.   However, one can use Windows service management tool to control its state.  Below show how to start the Windows service tool GUI.
 
 ![](../../.gitbook/assets/services.msc-2022-01-27\_11-59-36.png)
 

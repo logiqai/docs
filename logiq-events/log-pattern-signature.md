@@ -6,11 +6,11 @@ description: Log Pattern-Signature explained, usage, and configure.
 
 ## Log Pattern-Signature Explained
 
-Machine log is known difficult to analyze due to its non-structured or semi-structured nature.  The non-conforming format plus its volume growth velocity make it challenging to extract values using conventional means such as search and monitoring.  LOGIQ.ai normalizes all incoming logs into Pattern-Signature (PS).  PS grouping or clustering all the ingested logs based on their underlying logging structure, in the structure-data term, Schema.&#x20;
+Machine log is known difficult to analyze due to its non-structured or semi-structured nature.  The non-conforming format plus its volume growth velocity make it challenging to extract values using conventional means such as search and monitoring.  Apica Ascent normalizes all incoming logs into Pattern-Signature (PS).  PS grouping or clustering all the ingested logs based on their underlying logging structure, in the structure-data term, Schema.&#x20;
 
 The current logging method tries to unify the logs into a machine-like format such as homogeneous field assignments or key-value pair JSON format for simplifying the post analytics.  The practice, however, limits logging capability which is analogous to limiting all the observability log data to only one schema.  Moreover, a homogeneous machine log form is not intuitive and notoriously difficult to interpret.  The use of the advanced Pattern-Signature AI/ML method will make it fruitful.&#x20;
 
-LOGIQ.ai Pattern-Signature autonomously derives the underlying schema for every log stream, see the example below,
+Apica Ascent Pattern-Signature autonomously derives the underlying schema for every log stream, see the example below,
 
 ```
 PS_ID	Log Line
@@ -54,7 +54,7 @@ Pattern-Signature (PS) has many use cases.
 
 The logs can be forwarded or dropped based on their structure form or Pattern-Signature Id.&#x20;
 
-For example, debugging logs are useful for a specifically targeted instance/time.  The developers often do not always remove them when done troubleshooting the code.  Added logs to the already overloaded log ingestion pipeline.  SRE’s/DevOps, on the other hand, are never sure what logs are to be dropped and forwarded for storing and therefore took all in.  LOGIQ.ai PS generation will examine and analyze log pattern signatures holistically and therefore better and more accurately assess the log state for logging efficiency.
+For example, debugging logs are useful for a specifically targeted instance/time.  The developers often do not always remove them when done troubleshooting the code.  Added logs to the already overloaded log ingestion pipeline.  SRE’s/DevOps, on the other hand, are never sure what logs are to be dropped and forwarded for storing and therefore took all in.  Apica Ascent PS generation will examine and analyze log pattern signatures holistically and therefore better and more accurately assess the log state for logging efficiency.
 
 To get to the PS listing, one first goes to the log explorer page and set the namespace and application parameters for the log records to display.&#x20;
 
@@ -95,7 +95,7 @@ Click on the search icon to further drill down to one PS type.&#x20;
 
 ## Log Comparison Analysis
 
-LOGIQ.ai provides a robust platform for comparing logs from two different periods or different log partition spaces such as different namespaces or applications.  See the figure below where the PS comparison is made for the different time intervals of 12 hours.&#x20;
+Apica Ascent provides a robust platform for comparing logs from two different periods or different log partition spaces such as different namespaces or applications.  See the figure below where the PS comparison is made for the different time intervals of 12 hours.&#x20;
 
 Investigation Group #1, IG1.  Notice that there are two tab groups; IG#1 and IG#2.  The tab group access method is shown below.&#x20;
 

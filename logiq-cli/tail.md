@@ -8,10 +8,10 @@ description: This page documents command-line usage for the Tail command
 
 ```text
 NAME:
-   logiqbox tail - tail logs filtered by namespace, application, labels or process / pod name
+   logiqctl tail - tail logs filtered by namespace, application, labels or process / pod name
 
 USAGE:
-   logiqbox tail [command options] [-apps application names and/or -namespaces K8S namespace names and/or -labels K8S labels - procs process id / pod name]
+   logiqctl tail [command options] [-apps application names and/or -namespaces K8S namespace names and/or -labels K8S labels - procs process id / pod name]
 
 OPTIONS:
    --namespaces              Namespace from which we tail the data (default: false)
@@ -27,19 +27,19 @@ OPTIONS:
 The query output formatting can be controlled with the `--output` option. Three values are allowed - `raw`, `column` and `json`
 
 ```text
-$logiqbox tail --output json
+$logiqctl tail --output json
 ```
 
 The above command returns the data with each row of data formatted as JSON.
 
 ## Tail logs for an application
 
-_**logiqbox**_ tailing allows a user to narrow down the logs to a smaller set of applications that the user is interested in and shows the logs from the requested application in the current live logs streaming into the server. 
+_**apicactl**_ tailing allows a user to narrow down the logs to a smaller set of applications that the user is interested in and shows the logs from the requested application in the current live logs streaming into the server. 
 
 Tailing does not return historical data. For historical data, please see the [Query](query.md) section
 
 ```text
-#./logiqbox tail --apps redis
+#./logiqctl tail --apps redis
 Crunching data for you...
 timestamp|severity_string|hostname|source_ip|proc_id|app_name|facility_string|message
 2019-12-12T23:57:31Z             |info  |docker-desktop|10.0.1.22|1405 |redis|system daemon|1:C 12 Dec 2019 23:57:31.618 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
@@ -55,7 +55,7 @@ timestamp|severity_string|hostname|source_ip|proc_id|app_name|facility_string|me
 ## Tail logs for namespaces
 
 ```text
-#./logiqbox tail --namespaces redis
+#./logiqctl tail --namespaces redis
 Crunching data for you...
 timestamp|severity_string|hostname|source_ip|proc_id|app_name|facility_string|message
 2019-12-12T23:57:31Z             |info  |docker-desktop|10.0.1.22|1405 |redis|system daemon|1:C 12 Dec 2019 23:57:31.618 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
@@ -73,7 +73,7 @@ timestamp|severity_string|hostname|source_ip|proc_id|app_name|facility_string|me
 If you are pushing data from a Kubernetes environment , you can tail logs by kubernetes label match. This applies to all resources that have the label applied
 
 ```text
-#./logiqbox tail --labels app:redis
+#./logiqctl tail --labels app:redis
 Crunching data for you...
 timestamp|severity_string|hostname|source_ip|proc_id|app_name|facility_string|message
 2019-12-12T23:57:31Z             |info  |docker-desktop|10.0.1.22|1405 |redis|system daemon|1:C 12 Dec 2019 23:57:31.618 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo

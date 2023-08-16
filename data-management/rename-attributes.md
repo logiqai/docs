@@ -47,7 +47,7 @@ To edit the renamed labels you should go to "Active Rules" page.
 * You will get the "Edit Rule" option from the three dots at the end of the row.
 * Clicking on the Edit Rule will open a modal which has a table with all the old label names and the corresponding new label names.
 * You can edit any of the fields, you can add new labels which have to be renamed, you can even delete a mapping.
-* After clicking "Update" button, this forward rule will be updated and the changes will be reflected across the LOGIQ system.&#x20;
+* After clicking "Update" button, this forward rule will be updated and the changes will be reflected across the Apica Ascent system.&#x20;
 
 <figure><img src="../.gitbook/assets/Screenshot from 2023-01-02 19-22-44 (1).png" alt=""><figcaption><p>Forward Rule in Active Rules</p></figcaption></figure>
 

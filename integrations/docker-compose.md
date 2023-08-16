@@ -2,7 +2,7 @@
 
 ### Overview
 
-Gathering logs from docker-compose scripts is easy to do and all it takes is for your to configure the fluentd driver to push data to LOGIQ.AI
+Gathering logs from docker-compose scripts is easy to do and all it takes is for your to configure the fluentd driver to push data to Apica Ascent
 
 Lets look at a simple compose file with a single service _"web"_
 
@@ -30,7 +30,7 @@ services:
 
 ### Specifying the logging driver
 
-The _fluentd_ logging driver can be configured to send logs directly to LOGIQ.AI either via TLS or non-TLS. use port _24224_ for non-TLS and port _24225_ for TLS.
+The _fluentd_ logging driver can be configured to send logs directly to Apica Ascent either via TLS or non-TLS. use port _24224_ for non-TLS and port _24225_ for TLS.
 
 ```yaml
 logging:
@@ -43,7 +43,7 @@ logging:
 
 ### Adding metadata
 
-Logs get organized in LOGIQ.AI as flows. A Flow is a combination of a _Namespace_ and an _application_. You can optionally also add a third grouping attribute _cluster\_id_.
+Logs get organized in Apica Ascent as flows. A Flow is a combination of a _Namespace_ and an _application_. You can optionally also add a third grouping attribute _cluster\_id_.
 
 Aside from this, the labels and environment section allows additional metadata to be sent with logs and can be used for search indexing, aggregate queries
 

@@ -1,8 +1,8 @@
 # Deploying LOGIQ PaaS on MicroK8s
 
-[MicroK8s](https://microk8s.io) is a lightweight, pure-upstream Kubernetes aiming to reduce entry barriers for K8s and cloud-native application development. It comes in a single package that installs a single-node \(standalone\) K8s cluster in under 60 seconds. The lightweight nature of LOGIQ PaaS enables you to deploy LOGIQ on lightweight, single-node clusters like MicroK8s.
+[MicroK8s](https://microk8s.io) is a lightweight, pure-upstream Kubernetes aiming to reduce entry barriers for K8s and cloud-native application development. It comes in a single package that installs a single-node \(standalone\) K8s cluster in under 60 seconds. The lightweight nature of Apica Ascent PaaS enables you to deploy Apica Ascent on lightweight, single-node clusters like MicroK8s.
 
-The following guide takes you through deploying LOGIQ PaaS on MicroK8s.
+The following guide takes you through deploying Apica Ascent PaaS on MicroK8s.
 
 ## Installing MicroK8s
 
@@ -102,7 +102,7 @@ To enable add-ons on your MicroK8s cluster, run the following commands in succes
 
 ## Provisioning an IP address
 
-In this step, we'll provision an endpoint or an IP address where we access LOGIQ PaaS after deploying it on MicroK8s. You can skip this step if its your local implementation. For this, we'll leverage [MetalLB](https://metallb.universe.tf) which is a load-balancer implementation that uses standard routing protocols for bare metal Kubernetes clusters.
+In this step, we'll provision an endpoint or an IP address where we access Apica Ascent PaaS after deploying it on MicroK8s. You can skip this step if its your local implementation. For this, we'll leverage [MetalLB](https://metallb.universe.tf) which is a load-balancer implementation that uses standard routing protocols for bare metal Kubernetes clusters.
 
 {% hint style="info" %}
 **Note:** Since MetalLB is available as an add-on for MicroK8s, you can also run these steps while enabling add-ons for your MicroK8s cluster.
@@ -130,11 +130,11 @@ To provision an IP address, do the following:
 **Note:** MetalLB will not work on macOS due to network filtering that macOS applies. MetalLB might not work if you're provisioning an EC2 instance on AWS due to your private/public IP configuration.
 {% endhint %}
 
-## Installing LOGIQ PaaS
+## Installing Apica Ascent PaaS
 
-Now that your MicroK8s environment is configured and ready, we can proceed with installing LOGIQ PaaS on it. To install LOGIQ PaaS using Helm, do the following:
+Now that your MicroK8s environment is configured and ready, we can proceed with installing Apica Ascent PaaS on it. To install Apica Ascent PaaS using Helm, do the following:
 
-1. Add the LOGIQ PaaS Helm chart to your Helm repository by running the following command.
+1. Add the Apica Ascent PaaS Helm chart to your Helm repository by running the following command.
 
    ```text
    helm repo add logiq-repo https://logiqai.github.io/helm-charts
@@ -146,13 +146,13 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
    helm repo update
    ```
 
-3. Create a namespace on MicroK8s on which to install LOGIQ PaaS.
+3. Create a namespace on MicroK8s on which to install Apica Ascent PaaS.
 
    ```text
    microk8s kubectl create namespace logiq
    ```
 
-4. Prepare your values.microk8s.yaml file. You can use the [starter `values.microk8s.yaml`](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your LOGIQ PaaS deployment
+4. Prepare your values.microk8s.yaml file. You can use the [starter `values.microk8s.yaml`](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your Apica Ascent PaaS deployment
 
    > Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://github.com/logiqai/logiq-installation/blob/main/values/values.yaml) instead. run the following command.
    >
@@ -182,7 +182,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
    > storageClass: microk8s-hostpath
    > ```
 
-5. Install LOGIQ PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
+5. Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
    ```text
    helm install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/logiq -f  values.microk8s.yaml  --debug --timeout 10m
@@ -190,9 +190,9 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
 
 LOGIQ PaaS is now installed in your MicroK8s environment.
 
-## Accessing LOGIQ PaaS
+## Accessing Apica Ascent PaaS
 
-Now that LOGIQ PaaS is installed on your MicroK8s cluster, you can visit the LOGIQ PaaS UI by accessing the MetalLB endpoint we defined in the pre-install steps. To access the LOGIQ PaaS UI, do the following:
+Now that Apica Ascent PaaS is installed on your MicroK8s cluster, you can visit the Apica Ascent PaaS UI by accessing the MetalLB endpoint we defined in the pre-installation steps. To access the Apica Ascent PaaS UI, do the following:
 
 1. Inspect the pods in your MicroK8s cluster in the `logiq` namespace by running the following command.
 
@@ -200,7 +200,7 @@ Now that LOGIQ PaaS is installed on your MicroK8s cluster, you can visit the LOG
    microk8s kubectl get pod -n logiq
    ```
 
-2. Find the exact MetalLB endpoint that's serving the LOGIQ PaaS UI by running the following command.
+2. Find the exact MetalLB endpoint that's serving the Apica Ascent PaaS UI by running the following command.
 
    ```text
    microk8s kubectl get service -n logiq |grep -i loadbalancer
@@ -216,7 +216,7 @@ Now that LOGIQ PaaS is installed on your MicroK8s cluster, you can visit the LOG
 
 3. Using a web browser of your choice, access the IP address shown by the load balancer service above. For example, `http://192.168.1.27:80`.
 
-Your LOGIQ PaaS UI is now available in your web browser. You can log into LOGIQ PaaS using the following default credentials.
+Your Apica Ascent PaaS UI is now available in your web browser. You can log into Apica Ascent PaaS using the following default credentials.
 
 * **Username**: `flash-admin@foo.com`
 * **Password**: `flash-password`

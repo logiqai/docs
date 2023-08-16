@@ -4,7 +4,7 @@ description: SSO configuration details.
 
 # Single Sign-On with SAML
 
-LOGIQ can be set up for user login using Single Sign-On (SSO) with SAML by configuring LOGIQ as Service Provider(SP) and OKTA, Google, or in general any SAML2.0 compliant identity provider (IDP). This is a two-step process.
+Apica Ascent can be set up for user login using Single Sign-On (SSO) with SAML by configuring Apica Ascent as Service Provider(SP) and OKTA, Google, or in general any SAML2.0 compliant identity provider (IDP). This is a two-step process.
 
 ## Enabling SAML
 
@@ -13,33 +13,32 @@ Add SAML **Metadata URL, Entity ID, NameID Format.**
 
 Check below for specific [steps for your Identity provider](single-sign-on-configuration.md#idp-configuration)
 
-![LOGIQ (Service Provider) configuration
-](../.gitbook/assets/saml-1.png)
+![Apica Ascent (Service Provider) configuration](../.gitbook/assets/saml-1.png)
 
-If user-groups are configured on the IDP side, create the identical user groups in LOGIQ. This can be done by clicking on the "_Settings"_ menu and going to the Groups tab. This example shows creating the "NonAdmin" user group.
+If user-groups are configured on the IDP side, create the identical user groups in Apica Ascent. This can be done by clicking on the "_Settings"_ menu and going to the Groups tab. This example shows creating the "NonAdmin" user group.
 
 ![](../.gitbook/assets/saml-2.png)
 
 \
-This concludes the LOGIQ side configuration.
+This concludes the Apica Ascent side configuration.
 
-Logout as LOGIQ admin. On the login screen, the "SAML Login" Button should be available to login with the user's SSO credentials.  By clicking the button browser is redirected to the IDP screen where the user can login using its  IDP credentials.
+Logout as Apica Ascent admin. On the login screen, the "SAML Login" Button should be available to login with the user's SSO credentials.  By clicking the button browser is redirected to the IDP screen where the user can log in using its  IDP credentials.
 
 ![](../.gitbook/assets/saml-3.png)
 
 ## IDP configuration
 
-This document provides detailed information to configure OKTA and Google as Identity providers. For other identity providers, please refer to identity providers' documentation. In your IDP application, provide the SAML Assertion Consumer Service (ACS) URL for your LOGIQ environment and attribute mappings&#x20;
+This document provides detailed information to configure OKTA and Google as Identity providers. For other identity providers, please refer to identity providers' documentation. In your IDP application, provide the SAML Assertion Consumer Service (ACS) URL for your Apica Ascent environment and attribute mappings&#x20;
 
-The following attributes are required. The LOGIQ mappings for each of the attributes are in brackets. Please use the correct attribute name otherwise LOGIQ will not be able to recognize the SAML assertion
+The following attributes are required. The Apica Ascent mappings for each of the attributes are in brackets. Please use the correct attribute name otherwise Apica Ascent will not be able to recognize the SAML assertion
 
 * First name (FirstName) and Last name (LastName)
-* Group name  (LogiqGroups)
+* Group name  (ApicaAscentGroups)
 
 Use following SAML Assertion Consumer Service (ACS) URL
 
 {% hint style="info" %}
-_https://**\<LOGIQ UI IP/Domain>**/saml/callback?org\_slug=default_
+_https://**\<Apica Ascent UI IP/Domain>**/saml/callback?org\_slug=default_
 {% endhint %}
 
 With this, you should be able to access a SAML metadata URL or SAML metadata file.
@@ -48,8 +47,7 @@ With this, you should be able to access a SAML metadata URL or SAML metadata fil
 
 This section describes the Okta configuration in detail. Users should assume the Okta admin role and start in the Okta control panel by clicking the button to add a new application. The sign-on method is **SAML 2.0**.
 
-![Create a New App
-](../.gitbook/assets/saml-4.png)
+![Create a New App](../.gitbook/assets/saml-4.png)
 
 On the next screen OKTA has fields for a few URLs:
 
@@ -58,8 +56,8 @@ On the next screen OKTA has fields for a few URLs:
 * Destination URL&#x20;
 * Audience Restriction
 
-Use your LOGIQ endpoint url in following format:\
-https://\<LOGIQ domain name>/saml/callback?org\_slug=default\
+Use your Apica Ascent endpoint url in following format:\
+https://\<apica-ascent-domain-name>/saml/callback?org\_slug=default\
 \
 Set Name ID format: **EmailAddress**\
 Application username: **Email**
@@ -73,10 +71,10 @@ Application username: **Email**
 | FirstName | Unspecified     | user.firstName |
 | LastName  | Unspecified     | user.lastName  |
 
-By default, any user that is created with SAML/SSO will join the default user-group in LOGIQ. It’s possible to configure OKTA to pass groups the user should join by setting the **`LogiqGroups`** parameter with the intended group name. For example, if the SAML user is a member of the NonAdmin group in Okta, at the user login, the user will be authenticated and added to "NonAdmin" group.
+By default, any user that is created with SAML/SSO will join the default user-group in Apica Ascent. It’s possible to configure OKTA to pass groups the user should join by setting the **`ApicaAscentGroups`** parameter with the intended group name. For example, if the SAML user is a member of the NonAdmin group in Okta, at the user login, the user will be authenticated and added to "NonAdmin" group.
 
 {% hint style="danger" %}
-The `default` group in LOGIQ has access to all data sources. It is highly recommended to create a group assignment for your users and configure `LogiqGroups` as described above. This allows RBAC policies and limits access to what data a user can access
+The `default` group in Apica Ascent has access to all data sources. It is highly recommended to create a group assignment for your users and configure `ApicaAscentGroups` as described above. This allows RBAC policies and limits access to what data a user can access
 {% endhint %}
 
 \
@@ -84,7 +82,7 @@ The `default` group in LOGIQ has access to all data sources. It is highly recomm
 
 | **Group Name**  | **Name Format** | **Value**        |
 | --------------- | --------------- | ---------------- |
-| **LogiqGroups** | Basic           | Equals: NonAdmin |
+| **ApicaAscentGroups** | Basic           | Equals: NonAdmin |
 
 ![](../.gitbook/assets/saml-6.png)
 
@@ -98,7 +96,7 @@ Here choose the **SHA-2** certificate and click on the **Actions** button and ch
 
 
 
-This will open a new tab. Here take note of the following information. This is **needed to configure LOGIQ.**&#x20;
+This will open a new tab. Here take note of the following information. This is **needed to configure Apica Ascent.**&#x20;
 
 
 
@@ -137,27 +135,27 @@ Fill in the "App details"
 
 ![](<../.gitbook/assets/image (65).png>)
 
-Download the Idp Metadata file and host the file in a publically accessible location like AWS S3.
+Download the Idp Metadata file and host the file in a publicly accessible location like AWS S3.
 
 ![](../.gitbook/assets/saml.png)
 
 Enter the service provider details
 
-* ACS URL is the LOGIQ.AI domain assigned to you appended with **`/saml/callback?org_slug=default`**
+* ACS URL is the Apica Ascent domain assigned to you appended with **`/saml/callback?org_slug=default`**
 * Choose Name ID format as `EMAIL`
 * Name ID as `First name`
 
 <figure><img src="../.gitbook/assets/Screen Shot 2022-11-01 at 3.33.08 PM.png" alt=""><figcaption><p>SAML Configuration for gsuite</p></figcaption></figure>
 
-In the attributes section, either map a "Google Directory attributes" or Group membership to `LogiqGroups`.&#x20;
+In the attributes section, either map a "Google Directory attributes" or Group membership to `ApicaAscentGroups`.&#x20;
 
-<figure><img src="../.gitbook/assets/Screen Shot 2022-11-01 at 3.35.55 PM.png" alt=""><figcaption><p>Configure SAML Attribute for LOGIQ Groups</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2022-11-01 at 3.35.55 PM.png" alt=""><figcaption><p>Configure SAML Attribute for Apica Ascent Groups</p></figcaption></figure>
 
-SAML app by default is disabled in Google, enable it and wait for a few mins and try logging in.
+SAML app by default is disabled in Google, enable it and wait for a few minutes and try logging in.
 
 ![](<../.gitbook/assets/image (87).png>)
 
-Next head over to the LOGIQ SAML configuration screen in the settings. Select "SAML Enabled", and fill in the details.&#x20;
+Next head over to the Apica Ascent SAML configuration screen in the settings. Select "SAML Enabled", and fill in the details.&#x20;
 
 ![](<../.gitbook/assets/image (71).png>)
 
@@ -166,6 +164,6 @@ Now you are ready to use SAML login, Logout, and log back in using the SAML Logi
 
 
 {% embed url="https://www.youtube.com/watch?v=pTVHkxcp4mg" %}
-LOGIQ with Google as SAML2.0 IDP Configuration
+Apica Ascent with Google as SAML2.0 IDP Configuration
 {% endembed %}
 

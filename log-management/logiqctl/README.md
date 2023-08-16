@@ -1,10 +1,10 @@
 ---
-description: The LOGIQ command line toolkit
+description: The Apica Ascent command line toolkit
 ---
 
-# logiqctl
+# apicactl
 
-The LOGIQ command line toolkit, logiqctl, allows you to run commands against LOGIQ Observability stack.
+The Apica Ascent command line toolkit, apicactl, allows you to run commands against Apica Ascent Observability stack.
 
 You can&#x20;
 

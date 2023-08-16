@@ -1,8 +1,8 @@
-# Deploying LOGIQ EKS on AWS using CloudFormation
+# Deploying Apica Ascent EKS on AWS using CloudFormation
 
 ## 1. Overview
 
-This guide will take you through deploying LOGIQ.AI on an EKS cluster on AWS using CloudFormation and HELM. The installation will create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with default encryption and bucket policies.&#x20;
+This guide will take you through deploying Apica Ascent on an EKS cluster on AWS using CloudFormation and HELM. The installation will create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with default encryption and bucket policies.&#x20;
 
 ## 2. EKS K8S compatibility
 
@@ -330,7 +330,7 @@ ebs-csi-node-fwwn2 3/3 Running 0 3h53m
 ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 ```
 
-### 5.4 Deploy LOGIQ.AI using HELM
+### 5.4 Deploy Apica Ascent using HELM
 
 **Step 1**: Download the values file below and customize it per the instructions below.&#x20;
 
@@ -340,7 +340,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 {% endtab %}
 {% endtabs %}
 
-**Step 2**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the LOGIQ stack on your EKS cluster.
+**Step 2**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the Apica Ascent stack on your EKS cluster.
 
 1. `awsServiceEndpoint`: https://s3.\<aws-region>.amazonaws.com
 2. `s3_bucket`: S3 bucket name
@@ -352,7 +352,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 kubectl create namespace logiq
 ```
 
-**Step 4:** Deploy LOGIQ.AI stack using helm and updated values file, see below for additional options to customize the deployment for enabling https and to use external Postgres database
+**Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customize the deployment for enabling https and to use external Postgres database
 
 ```bash
 helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq
@@ -361,7 +361,7 @@ helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq
 **Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
 
 {% hint style="info" %}
-NOTE: Your DNS will need to be programmed separately to map the domain to the service endpoint for logiq. Please see Step 7 below on how to obtain the service endpoint.
+NOTE: Your DNS will need to be programmed separately to map the domain to the service endpoint for Apica Ascent. Please see Step 7 below on how to obtain the service endpoint.
 {% endhint %}
 
 ```bash

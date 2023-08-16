@@ -1,6 +1,6 @@
 # Azure Eventhub
 
-LOGIQ.AI App extension for Azure Eventhub provides an easy way to pull data from Azure Eventhub
+Apica Ascent App extension for Azure Eventhub provides an easy way to pull data from Azure Eventhub
 
 Have the following information ready to configure your Azure Eventhub App extension
 

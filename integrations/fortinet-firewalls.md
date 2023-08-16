@@ -1,6 +1,6 @@
 # FortiNet Firewalls
 
-You can integrate LOGIQ.AI with your FortiGate Firewall to forward either all or selected logs to LOGIQ.AI using the firewall's built-in syslog forwarding capabilities.&#x20;
+You can integrate Apica Ascent with your FortiGate Firewall to forward either all or selected logs to Apica Ascent using the firewall's built-in syslog forwarding capabilities.&#x20;
 
 ## Configuration
 
@@ -14,11 +14,11 @@ config log syslogd setting
 
 ## Syslogd forwarding
 
-Once in the syslogd configuration settings, set the following to enable forwarding to LOGIQ.AI
+Once in the syslogd configuration settings, set the following to enable forwarding to Apica Ascent
 
 ```
 set status enable
-set server <IP/FQDNS of LOGIQ.AI Server here>
+set server <IP/FQDNS of Apica Ascent Server here>
 set mode reliable
 set facility local1
 set format rfc5424
@@ -26,7 +26,7 @@ set format rfc5424
 
 ## Log Filtering configurations
 
-For the log forwarding to work,  you will may need to tweak additional settings such as filtering. E.g. in the below configuration all logs level debug and above are configured to be sent to LOGIQ.AI
+For the log forwarding to work, you may need to tweak additional settings such as filtering. E.g. in the below configuration all logs level debug and above are configured to be sent to Apica Ascent
 
 ```
 FGTAWSX5HFDA6I36 # config log syslogd filter

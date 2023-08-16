@@ -16,13 +16,13 @@
 * [Quickstart with Docker-Compose](deploying-logiq/quickstart-with-docker-compose.md)
 * [SaaS](deploying-logiq/logiq-saas.md)
 * [PaaS deployment](deploying-logiq/logiq-paas-deployment/README.md)
-  * [Deploying LOGIQ PaaS on Kubernetes](deploying-logiq/logiq-paas-deployment/k8s-quickstart-guide.md)
-  * [Deploying LOGIQ PaaS on MicroK8s](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-on-microk8s.md)
-  * [Deploying LOGIQ PaaS on AWS](deploying-logiq/logiq-paas-deployment/aws-cloudformation.md)
-  * [Deploying LOGIQ EKS on AWS using CloudFormation](deploying-logiq/deploying-logiq-eks-on-aws-using-cloudformation.md)
-  * [Deploying LOGIQ EKS on AWS using custom AMI](deploying-logiq/deploying-logiq-eks-on-aws-using-custom-ami.md)
-  * [Deploying Logiq EKS with AWS ALB](deploying-logiq/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
-  * [Deploying LOGIQ PaaS in Azure Kubernetes Service](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
+  * [Deploying Apica Ascent PaaS on Kubernetes](deploying-logiq/logiq-paas-deployment/k8s-quickstart-guide.md)
+  * [Deploying Apica Ascent PaaS on MicroK8s](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-on-microk8s.md)
+  * [Deploying Apica Ascent PaaS on AWS](deploying-logiq/logiq-paas-deployment/aws-cloudformation.md)
+  * [Deploying Apica Ascent EKS on AWS using CloudFormation](deploying-logiq/deploying-logiq-eks-on-aws-using-cloudformation.md)
+  * [Deploying Apica Ascent EKS on AWS using custom AMI](deploying-logiq/deploying-logiq-eks-on-aws-using-custom-ami.md)
+  * [Deploying Apica Ascent EKS with AWS ALB](deploying-logiq/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
+  * [Deploying Apica Ascent PaaS in Azure Kubernetes Service](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
     * [Azure Blob Storage Lifecycle Management](deploying-logiq/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
 
 ## Dashboards
@@ -36,7 +36,7 @@
 
 ## COMMAND LINE INTERFACE
 
-* [logiqctl Documentation](https://logiqctl.logiq.ai/)
+* [apicactl Documentation](https://logiqctl.logiq.ai/)
 
 ## Logflow
 
@@ -49,12 +49,12 @@
 * [Apache Beam](integrations/apache-beam/README.md)
   * [Export Metrics to Prometheus](integrations/apache-beam/export-metrics-to-prometheus/README.md)
     * [Pull Mechanism via Push-Gateway](integrations/apache-beam/export-metrics-to-prometheus/pull-mechanism-via-push-gateway.md)
-  * [Export Events to LOGIQ](integrations/apache-beam/export-events-to-logiq.md)
+  * [Export Events to Apica Ascent](integrations/apache-beam/export-events-to-logiq.md)
 * [AWS](integrations/aws/README.md)
   * [AWS CloudWatch](integrations/aws/aws-cloudwatch-exporter.md)
   * [AWS ECS](integrations/aws/aws-ecs/README.md)
-    * [Forwarding AWS ECS logs to LOGIQ using AWS FireLens](integrations/aws/aws-ecs/forwarding-aws-ecs-logs-to-logiq-using-aws-firelens.md)
-    * [ECS prometheus metrics to Logiq](integrations/aws/aws-ecs/ecs-prometheus-metrics-to-logiq.md)
+    * [Forwarding AWS ECS logs to Apica Ascent using AWS FireLens](integrations/aws/aws-ecs/forwarding-aws-ecs-logs-to-logiq-using-aws-firelens.md)
+    * [ECS prometheus metrics to Apica Ascent](integrations/aws/aws-ecs/ecs-prometheus-metrics-to-logiq.md)
   * [AWS S3](integrations/aws/aws-s3.md)
 * [Azure Databricks](integrations/azure-databricks.md)
 * [Azure Event Hubs](integrations/azure-event-hubs.md)
@@ -64,7 +64,7 @@
 * [Azure Eventhub](integrations/azure-eventhub.md)
 * [Filebeat](integrations/filebeat.md)
 * [Fluent Bit](integrations/fluent-bit/README.md)
-  * [Forwarding Amazon-Linux logs to LOGIQ using Fluent Bit](integrations/fluent-bit/forwarding-amazon-linux-logs-to-logiq-using-fluent-bit.md)
+  * [Forwarding Amazon-Linux logs to Apica Ascent using Fluent Bit](integrations/fluent-bit/forwarding-amazon-linux-logs-to-logiq-using-fluent-bit.md)
   * [Fluent Bit installation on Ubuntu](integrations/fluent-bit/fluent-bit-installation-on-ubuntu.md)
   * [Enabling IoT(MQTT) Input (PAAS)](integrations/fluent-bit/enabling-iot-mqtt-input-paas.md)
   * [IIS Logs on Windows](integrations/fluent-bit/iis-logs-on-windows.md)
@@ -84,7 +84,7 @@
 * [OpenTelemetry](integrations/opentelemetry.md)
 * [Object store (S3 Compatible)](integrations/object-store-s3-compatible.md)
 * [OSSEC Variants (OSSEC/WAZUH/ATOMIC)](integrations/ossec-variants-ossec-wazuh-atomic/README.md)
-  * [LOGIQ-OSSEC Agent for Windows](integrations/ossec-variants-ossec-wazuh-atomic/logiq-ossec-agent-for-windows.md)
+  * [Apica Ascent-OSSEC Agent for Windows](integrations/ossec-variants-ossec-wazuh-atomic/logiq-ossec-agent-for-windows.md)
 * [Palo Alto Firewall](integrations/palo-alto-firewall.md)
 * [Prometheus](integrations/prometheus/README.md)
   * [Spring Boot](integrations/prometheus/spring-boot.md)
@@ -99,7 +99,7 @@
 
 ***
 
-* [LOGIQ.AI Observability Data Collector Agent](logiq.ai-observability-data-collector-agent.md)
+* [Apica Ascent Observability Data Collector Agent](logiq.ai-observability-data-collector-agent.md)
 
 ## DATA MANAGEMENT
 
@@ -126,7 +126,7 @@
 
 * [Terminology](log-management/logs-terminology.md)
 * [Explore Logs](log-management/explore-logs.md)
-* [LOGIQ Search Cheat Sheet](log-management/search-cheat-sheet.md)
+* [Apica Ascent Search Cheat Sheet](log-management/search-cheat-sheet.md)
 * [Share Search Results](log-management/share-search-results.md)
 * [Severity Metrics](log-management/severity-metrics.md)
 * [Log2Metrics](log-management/metrics-and-custom-indices.md)

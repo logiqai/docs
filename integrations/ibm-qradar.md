@@ -1,6 +1,6 @@
 # IBM QRadar
 
-LOGIQ.AI App extenson for IBM QRadar provides an easy way to pull data from IBM QRadar.
+Apica Ascent App extension for IBM QRadar provides an easy way to pull data from IBM QRadar.
 
 Have the following information ready to configure your IBM QRadar App Extension.
 

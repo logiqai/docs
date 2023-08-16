@@ -5,7 +5,7 @@ Azure is a subsidiary of Microsoft that provides on-demand cloud computing platf
 
 ## Integrations
 
-Azure provides a wide array of services that generate observability data via different software tools. 
-LOGIQ.AI integrates all these tools into a single interface for easy consumption.
+Azure provides a wide array of services that generate observability data via different software tools.
+Apica Ascent integrates all these tools into a single interface for easy consumption.
 
-See the sub modules to this page for integrations for Azure enabled by LOGIQ.AI
+See the submodules to this page for integrations for Azure enabled by Apica Ascent

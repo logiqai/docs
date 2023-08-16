@@ -3,12 +3,12 @@
 ## Help
 
 ```bash
-#./logiqbox s -h
+#./logiqctl s -h
 NAME:
-   Logiq-box search - search sudo
+   logiqctl search - search sudo
 
 USAGE:
-   Logiq-box search command [command options] [search_term, relative time]
+   logiqctl search command [command options] [search_term, relative time]
 
 COMMANDS:
    next, n  query n
@@ -26,7 +26,7 @@ OPTIONS:
 ## Providing a search term
 
 ```bash
-#./logiqbox s superuser
+#./logiqctl s superuser
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|Error: Database is uninitialized and superuser password is not specified.
 Enter `n` or `next' to continue.

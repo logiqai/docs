@@ -8,10 +8,10 @@ description: This page documents command-line usage for the Query command
 
 ```text
 NAME:
-   Logiq-box query - query "sudo cron" 2h
+   logiqctl query - query "sudo cron" 2h
 
 USAGE:
-   Logiq-box query command [command options] [application names, relative time]
+   logiqctl query command [command options] [application names, relative time]
 
 COMMANDS:
    next, n  query n
@@ -29,12 +29,12 @@ OPTIONS:
 
 ## Historical queries
 
-Historical log data can be queries using logiqbox. Filters allow the user to specify a time range, filter criteria like application name, matching patterns etc.
+Historical log data can be queries using apicactl. Filters allow the user to specify a time range, filter criteria like application name, matching patterns etc.
 
-For e.g. to query all postgrees logs within the last 1 hr, one would pass the application names and the start time for the query
+For e.g. to query all postgres logs within the last 1 hr, one would pass the application names and the start time for the query
 
 ```text
-$logiqbox q postgres --st 1h
+$logiqctl q postgres --st 1h
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|Error: Database is uninitialized and superuser password is not specified.
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|
@@ -52,7 +52,7 @@ Enter `n` or `next' to continue.
 The query output formatting can be controlled with the `--output` option. Three values are allowed - `raw`, `column` and `json`
 
 ```text
-$logiqbox q postgres --st 1h --output json
+$logiqctl q postgres --st 1h --output json
 ```
 
 The above command returns the data with each row of data formatted as JSON.

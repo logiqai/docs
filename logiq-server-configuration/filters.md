@@ -1,8 +1,8 @@
 # Filters
 
-Incoming data streams can be filtered before they are written to the final store in the S3 / S3 compatible bucket. Filter expressions allow fine grained matching on key attributes from the ingested data.
+Incoming data streams can be filtered before they are written to the final store in the S3 / S3 compatible bucket. Filter expressions allow fine-grained matching on key attributes from the ingested data.
 
-Filters are defined using the _**"filters"**_ keyword in the LOGIQ configuration file. A filter definition consists of a name and a condition. E.g.
+Filters are defined using the _**"filters"**_ keyword in the Apica Ascent configuration file. A filter definition consists of a name and a condition. E.g.
 
 ```text
 filters:

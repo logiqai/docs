@@ -1,6 +1,6 @@
 # Destinations
 
-Every LOGIQ server configuration file must have one or more destination for the data to be written to. 
+Every Apica Ascent server configuration file must have one or more destination for the data to be written to. 
 
 ```text
 destinations:
@@ -46,7 +46,7 @@ rules:
 
 ## partition \[optional\]
 
-An optional partition reference can be provided which tells the LOGIQ server on how to organize the data at the destination.
+An optional partition reference can be provided which tells the Apica Ascent server on how to organize the data at the destination.
 
 In the example below, there are two destinations defined: _**t\_webservers** and **t\_debug**_**.** A partition reference ****_**p\_by\_day**_ ****is specified for the destination ****_**t\_webservers** \_but not for_  **t**\_**debug.** The p\_by\_day is a named reference to a partition definition. See section on [Partitions](partitions.md) on how to specify a partitioning scheme for destination data.
 
@@ -81,7 +81,7 @@ A destination definition must specify one of the below defined types. A destinat
 
 An S3 destination is used for AWS S3 and AWS S3 compatible object stores. 
 
-_NOTE: For AWS S3 compatible object store, the AWS SDK should work on the object store and support bucket listing, creation and multi-part uploads._
+_NOTE: For AWS S3 compatible object store, the AWS SDK should work on the object store and support bucket listing, creation and multipart uploads._
 
 Below are two examples. The first destination _**t\_webservers**_ is a definition of a bucket in AWS S3. The second destination ****_**t\_minio\_webservers**_ is a definition of a bucket hosted in an S3 compatible object store. An S3 compatible object stores supports an optional endpoint key in the s3 definition that points to the http endpoint where the object store is hosted.
 
@@ -121,7 +121,7 @@ Below are two examples. The first destination _**t\_webservers**_ is a definitio
 
 ### bucket \[required\]
 
-The bucket key specifies the bucket in the S3 compatible store where LOGIQ will upload the log data. This is a required parameter and the bucket must exist. LOGIQ currently doesn't support creating the bucket automatically.
+The bucket key specifies the bucket in the S3 compatible store where Apica Ascent will upload the log data. This is a required parameter and the bucket must exist. Apica Ascent currently doesn't support creating the bucket automatically.
 
 ### credential \[required\]
 

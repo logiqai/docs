@@ -2,15 +2,15 @@
 
 Filebeat is a lightweight shipper for **forwarding and centralizing log data**. Installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
 
-LOGIQ supports data ingestion from Filebeat. The following section describes the steps for configuring log forwarding from Filebeat to LOGIQ by modifying the Filebeat configuration file.&#x20;
+Apica Ascent supports data ingestion from Filebeat. The following section describes the steps for configuring log forwarding from Filebeat to Apica Ascent by modifying the Filebeat configuration file.&#x20;
 
-## Configuring Filebeat to forward logs to LOGIQ
+## Configuring Filebeat to forward logs to Apica Ascent
 
 To configure Filebeat, you need to configure the Filebeat configuration file. The location of your Filebeat configuration file can vary depending on your platform. Locate and access the configuration file and modify it as described below.
 
 ### Ingest Ports
 
-LOGIQ.AI hosts the lumberjack protocol at port **25224 (non-TLS)**
+Apica Ascent hosts the lumberjack protocol at port **25224 (non-TLS)**
 
 The ports are configurable and can be changed if needed.
 
@@ -34,7 +34,7 @@ inputs:
 
 ### OUTPUT
 
-The output section describes how to send data to LOGIQ. The LOGIQ layer supports the lumberjack protocols v1 and v2 for ingesting data and is compatible with _logstash_. Use output type _logstash_
+The output section describes how to send data to Apica Ascent. The Apica Ascent layer supports the lumberjack protocols v1 and v2 for ingesting data and is compatible with _logstash_. Use output type _logstash_
 
 ```
 output:
@@ -48,9 +48,9 @@ output:
 
 ### PROCESSORS
 
-Under the `input` section, including the `processors` the section in addition to your existing Filebeat configuration along with **`namespace`**, **`application`**, and **`cluster_id`**. Doing so ensures that the logs you forward to LOGIQ can be identified and partitioned easily
+Under the `input` section, including the `processors` the section in addition to your existing Filebeat configuration along with **`namespace`**, **`application`**, and **`cluster_id`**. Doing so ensures that the logs you forward to Apica Ascent can be identified and partitioned easily
 
-We strongly recommend partitioning your data for better organization as well as query performance. Each Cluster, Namespace, and Application tuple becomes a partition in LOGIQ and can be used to organize data that is logically related
+We strongly recommend partitioning your data for better organization as well as query performance. Each Cluster, Namespace, and Application tuple becomes a partition in Apica Ascent and can be used to organize data that is logically related
 
 ```
   inputs:
@@ -84,7 +84,7 @@ Please note the diskqueue folder must exist and have write permissions for fileb
 
 ### Example&#x20;
 
-The following is a complete _Filebeat_ configuration for forwarding logs to LOGIQ without SSL.&#x20;
+The following is a complete _Filebeat_ configuration for forwarding logs to Apica Ascent without SSL.&#x20;
 
 ```
 filebeat:

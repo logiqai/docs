@@ -57,7 +57,7 @@ description: 'Latest release: v3.6'
 *   **OSSEC HIDS Mappings**
 
     Automatically map OSSEC HIDS event severity and log messages for Linux and Windows environments.
-* **Added support for exporting events and metrics from** [**Apache Beam**](https://docs.logiq.ai/integrations/apache-beam) **to LOGIQ**.
+* **Added support for exporting events and metrics from** [**Apache Beam**](https://docs.logiq.ai/integrations/apache-beam) **to Apica Ascent**.
 *   **OpenTelemetry `otel.status_code` Mapping**
 
     Detect OpenTelemetry severity and level embeddings and map them into severity levels.

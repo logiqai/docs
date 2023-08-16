@@ -1,12 +1,12 @@
 # Microsoft SQL Server
 
-LOGIQ lets you connect to the Microsoft SQL Server which is a relational database management system (RDBMS) that supports a wide variety of transaction processing, business intelligence, and analytics applications in corporate IT environments.
+Apica Ascent lets you connect to the Microsoft SQL Server which is a relational database management system (RDBMS) that supports a wide variety of transaction processing, business intelligence, and analytics applications in corporate IT environments.
 
-With LOGIQ you can easily query, monitor, and visualize the MS SQL Server data
+With Apica Ascent you can easily query, monitor, and visualize the MS SQL Server data
 
-### Adding MS SQL Server to LOGIQ
+### Adding MS SQL Server to Apica Ascent
 
-The first step is to create and add MS SQL Server to LOGIQ and add fill out the below fields and save
+The first step is to create and add MS SQL Server to Apica Ascent and add fill out the below fields and save
 
 * **Name**: Name the data source
 * **User**: A user of the MS SQL Server which is in the form: `user@server-name`
@@ -17,7 +17,7 @@ The first step is to create and add MS SQL Server to LOGIQ and add fill out the 
 * **Character Set:** Character encoding of your MS SQL Server
 * **Database name**: The name of the database of the MS SQL Server
 
-Also make sure to Check out [Microsoft’s documentation](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#create-a-server-level-firewall-rule) for instructions to whitelist your LOGIQ IP address when connecting to Synapse.
+Also make sure to Check out [Microsoft’s documentation](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#create-a-server-level-firewall-rule) for instructions to whitelist your Apica Ascent IP address when connecting to Synapse.
 
 ![Configuring MS SQL Server](<../../.gitbook/assets/Screenshot from 2022-06-29 21-17-37.png>)
 

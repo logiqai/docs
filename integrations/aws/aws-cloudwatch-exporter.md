@@ -1,27 +1,27 @@
 # AWS CloudWatch
 
-You can forward Cloud watch logs to Logiq using 2 methods.
+You can forward Cloud watch logs to Apica Ascent using 2 methods.
 
-* Logiq CloudWatch exporter Lambda function
+* Apica Ascent CloudWatch exporter Lambda function
 * Run Logstash on VM (or docker)
 
-## LOGIQ CloudWatch exporter Lambda function
+## Apica Ascent CloudWatch exporter Lambda function
 
-You can export AWS CloudWatch logs to LOGIQ using an AWS Lambada function. The AWS Lambda function acts as a trigger for a CloudWatch log stream.&#x20;
+You can export AWS CloudWatch logs to Apica Ascent using an AWS Lambada function. The AWS Lambda function acts as a trigger for a CloudWatch log stream.&#x20;
 
-This guide explains the process for setting up an AWS Lambda function and configuring an AWS CloudWatch trigger to forward CloudWatch logs to LOGIQ.
+This guide explains the process for setting up an AWS Lambda function and configuring an AWS CloudWatch trigger to forward CloudWatch logs to Apica Ascent.
 
 ![](../../.gitbook/assets/flash-high-level-cloudwatch\(1\).png)
 
 ### Creating a Lambda function
 
-LOGIQ provides CloudFormation templates to create the LOGIQ CloudWatch exporter Lambda function.&#x20;
+Apica Ascent provides CloudFormation templates to create the Apica Ascent CloudWatch exporter Lambda function.&#x20;
 
 Depending on the type of logs you'd like to export, use the appropriate CloudFormation template from the following list.&#x20;
 
 #### Exporting Lambda Function logs
 
-Use the following CloudFormation template to export AWS Lambda function logs to LOGIQ.
+Use the following CloudFormation template to export AWS Lambda function logs to Apica Ascent.
 
 ```
 https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-lambda-logs-exporter.yaml
@@ -29,7 +29,7 @@ https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-lambda-log
 
 #### Exporting CloudTrail Logs
 
-Use the following CloudFormation template to export CloudTrail logs to LOGIQ.
+Use the following CloudFormation template to export CloudTrail logs to Apica Ascent.
 
 ```
 https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-cloudtrail-exporter.yaml
@@ -37,7 +37,7 @@ https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-cloudtrail
 
 #### Exporting AWS VPC Flowlogs
 
-Use the following CloudFormation template to export Flowlogs logs to LOGIQ.
+Use the following CloudFormation template to export Flowlogs logs to Apica Ascent.
 
 ```
 https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-flowlogs-exporter.yaml
@@ -53,7 +53,7 @@ https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-exporter.y
 
 This CloudFormation stack creates a Lambda function and its necessary permissions. You must configure the following attributes.
 
-<table data-header-hidden><thead><tr><th width="275.3024830699774">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Description</td></tr><tr><td><code>APPNAME</code></td><td>Application name - a readable name for LOGIQ to partition logs.</td></tr><tr><td><code>CLUSTERID</code></td><td>Cluster ID - a readable name for LOGIQ to partition logs.</td></tr><tr><td><code>NAMESPACE</code></td><td>Namespace - a readable name for LOGIQ to partition logs.</td></tr><tr><td><code>LOGIQHOST</code></td><td>IP address or hostname of the LOGIQ server. (Without http or https)</td></tr><tr><td><code>INGESTTOKEN</code></td><td>JWT token to securely ingest logs. Refer <a href="../overview/generating-a-secure-ingest-token.md#generating-using-ui">here</a> to generate ingest token. </td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="275.3024830699774">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Description</td></tr><tr><td><code>APPNAME</code></td><td>Application name - a readable name for Apica Ascent to partition logs.</td></tr><tr><td><code>CLUSTERID</code></td><td>Cluster ID - a readable name for Apica Ascent to partition logs.</td></tr><tr><td><code>NAMESPACE</code></td><td>Namespace - a readable name for Apica Ascent to partition logs.</td></tr><tr><td><code>LOGIQHOST</code></td><td>IP address or hostname of the Apica Ascent server. (Without http or https)</td></tr><tr><td><code>INGESTTOKEN</code></td><td>JWT token to securely ingest logs. Refer <a href="../overview/generating-a-secure-ingest-token.md#generating-using-ui">here</a> to generate ingest token. </td></tr></tbody></table>
 
 ## Configuring the CloudWatch trigger
 
@@ -65,7 +65,7 @@ On the **Add trigger** page, select **CloudWatch**, and then select a CloudWatch
 
 ![](<../../.gitbook/assets/image (8).png>)
 
-Once this configuration is complete, any new logs coming to the configured CloudWatch Log group will be streamed to the LOGIQ cluster.
+Once this configuration is complete, any new logs coming to the configured CloudWatch Log group will be streamed to the Apica Ascent cluster.
 
 
 
@@ -141,6 +141,6 @@ output {
 
 ```
 
-You can obtain an ingest token from the LOGIQ UI as described [here](../overview/generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
+You can obtain an ingest token from the Apica Ascent UI as described [here](../overview/generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
 
-Your AWS Cloud watch logs will now be forwarded to your LOGIQ instance. See the [Explore](../../log-management/explore-logs.md) Section to view the logs.
+Your AWS Cloud watch logs will now be forwarded to your Apica Ascent instance. See the [Explore](../../log-management/explore-logs.md) Section to view the logs.

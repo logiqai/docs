@@ -1,6 +1,6 @@
 # Windows Redis Monitoring
 
-To monitor a Redis server running on a Windows machine, you can use a combination of Windows Exporter and Prometheus to send metrics to LOGIQ.AI.
+To monitor a Redis server running on a Windows machine, you can use a combination of Windows Exporter and Prometheus to send metrics to Apica Ascent.
 
 This script will help you setup Redis Exporter as a service on a 64-bit Windows Machine and it requires two arguments:
 
@@ -21,7 +21,7 @@ Powershell Script to install Redis Exporter
 
 > Make sure that the script finishes running successfully and the NSSM was able to start the service successfully in the end. If not, then please check the indentation in the `prometheus.yml` file.
 
-After you are done running the script, we have to add a code block in the prometheus.yml file and we have to restart the prometheus service using NSSM.
+After you are done running the script, we have to add a code block in the prometheus.yml file, and we have to restart the prometheus service using NSSM.
 
 This code block will rename all the outgoing `redis_...` metrics to `cli_redis_...`.
 

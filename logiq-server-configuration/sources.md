@@ -82,7 +82,7 @@ sources:
 
 ### Stackdriver logs from GCP cloud storage
 
-LOGIQ can directly ingest from Stackdriver's Google cloud storage sink. You do not need to incur additional pub sub costs for this. Create a `google_cloud_storage` source in LOGIQ config for this.
+Apica Ascent can directly ingest from Stackdriver's Google cloud storage sink. You do not need to incur additional pub sub costs for this. Create a `google_cloud_storage` source in Apica Ascent config for this.
 
 ```text
 -

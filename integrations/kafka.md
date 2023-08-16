@@ -1,12 +1,12 @@
 # Kafka
 
-LOGIQ.AI can run streaming analytics from one or more Kafka topics. Both push and pull modes are supported. The data in Kafka can be pushed to LOGIQ if the Kafka servers are running inside the customer network. If the Kafka endpoint is accessible to the LOGIQ network LOGIQ can pull the data directly from Kafka.
+Apica Ascent can run streaming analytics from one or more Kafka topics. Both push and pull modes are supported. The data in Kafka can be pushed to Apica Ascent if the Kafka servers are running inside the customer network. If the Kafka endpoint is accessible to the Apica Ascent network Apica Ascent can pull the data directly from Kafka.
 
 ## PUSH Method: Pushing data using logstash
 
 ![Push data to Kafka](../.gitbook/assets/kafka\_push.png)
 
-Logstash instances deployed in the customer network can read data from Kafka and push it to LOGIQ. Use the below configuration to read from Kafka.
+Logstash instances deployed in the customer network can read data from Kafka and push it to Apica Ascent. Use the below configuration to read from Kafka.
 
 ### Input Logstash configuration
 
@@ -50,9 +50,9 @@ filter {
 
 ## PULL Method : Pulling Data from Kafka topics
 
-LOGIQ can pull data using Kafka Input Plugins. This method requires the Kafka endpoint to be reachable from LOGIQ network.&#x20;
+Apica Ascent can pull data using Kafka Input Plugins. This method requires the Kafka endpoint to be reachable from Apica Ascent network.&#x20;
 
-Kafka endpoint, Topic name, namespace, and application name are needed to configure the Kafka input plugin. Namespace and Application define how the data is partitioned in LOGIQ, see [here for more information](../log-management/logs-terminology.md).&#x20;
+Kafka endpoint, Topic name, namespace, and application name are needed to configure the Kafka input plugin. Namespace and Application define how the data is partitioned in Apica Ascent, see [here for more information](../log-management/logs-terminology.md).&#x20;
 
 ![Kafka Input App Extension](../.gitbook/assets/kafka\_pull.png)
 

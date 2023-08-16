@@ -1,10 +1,10 @@
 # Azure Databricks
 
-This guide take you through how you can forward your logs from an Azure Databircks cluster to LOGIQ. Before you proceed with this setup, ensure that you meet the following prerequisites.&#x20;
+This guide take you through how you can forward your logs from an Azure Databricks cluster to Apica Ascent. Before you proceed with this setup, ensure that you meet the following prerequisites.&#x20;
 
 * Private VNI
 * An Azure Databricks cluster in private VNI
-* LOGIQ endpoint
+* Apica Ascent endpoint
 
 {% hint style="info" %}
 **Note:** The Databricks cluster must be launched in your own private EMI failing which the default deployment of the Databricks cluster will be fully managed by Azure, the resource group will be locked, and SSH connections to the node will be disabled.&#x20;
@@ -14,7 +14,7 @@ For more information on deploying Azure Databricks in your own private EMI, refe
 
 ### Configuring your Databricks cluster to forward logs
 
-To configure your Azure Databricks cluster to forward logs to your LOGIQ endpoint, do the following.&#x20;
+To configure your Azure Databricks cluster to forward logs to your Apica Ascent endpoint, do the following.&#x20;
 
 * Navigate to the **Compute** section on your Azure portal.&#x20;
 * Click **Create Cluster**.
@@ -174,4 +174,4 @@ ssh ubuntu@machine-ip -p 2200 -i <private_key_file_path>
 systemctl restart td-agent-bit
 ```
 
-Now, when you log into your LOGIQ UI, you should see the logs from your Azure Databricks cluster being ingested. See the [Explore](../log-management/explore-logs.md) Section to view the logs.
+Now, when you log into your Apica Ascent UI, you should see the logs from your Azure Databricks cluster being ingested. See the [Explore](../log-management/explore-logs.md) Section to view the logs.

@@ -1,8 +1,8 @@
 # Snowflake
 
-LOGIQ helps you to connect your Snowflake for faster querying and visualization of your data.
+Apica Ascent helps you to connect your Snowflake for faster querying and visualization of your data.
 
-### Adding Snowflake to LOGIQ
+### Adding Snowflake to Apica Ascent
 
 The first step is to create a Snowflake data source and provide all details mentioned below
 

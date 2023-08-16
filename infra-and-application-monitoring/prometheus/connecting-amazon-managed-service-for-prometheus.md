@@ -1,6 +1,6 @@
 # Connecting Amazon Managed Service for Prometheus
 
-**LOGIQ** Supports **Amazon Managed Service for Prometheus** data source which is a Prometheus-compatible monitoring and alerting service that makes it easy to monitor containerized applications and infrastructure at scale.
+**Apica Ascent** Supports **Amazon Managed Service for Prometheus** data source which is a Prometheus-compatible monitoring and alerting service that makes it easy to monitor containerized applications and infrastructure at scale.
 
 With Amazon Managed Service for Prometheus, you can use the open-source Prometheus query language (**PromQL**) to monitor and alert on the performance of containerized workloads, without having to scale and operate the underlying infrastructure.
 

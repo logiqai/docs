@@ -1,6 +1,6 @@
 # Alerts
 
-LogiqAI provides Alerts feature to alert the Users upon the data if required condition is met.
+Apica Ascent provides Alerts feature to alert the Users upon the data if required condition is met.
 
 Alerts can be created in two ways.
 

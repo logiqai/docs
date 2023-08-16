@@ -8,19 +8,19 @@ OpenTelemetry is a collection of tools, APIs, and SDKs. Use it to instrument, ge
 
 Prometheus Remote Write Exporter can be used to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/)
 
-LOGIQ.AI implements a preometheus remote write backend so metric data from open telementry collectors can be sent to LOGIQ with a simple configuration as described below.
+Apica Ascent implements a prometheus remote write backend so metric data from open telementry collectors can be sent to Apica Ascent with a simple configuration as described below.
 
-Enable the _prometheusremorewrite_ exporter in your open telemetry configuration yaml
+Enable the _prometheusremotewrite_ exporter in your open telemetry configuration yaml
 
 ```
 exporters:
   prometheusremotewrite:
 ```
 
-Specify the LOGIQ.AI cluster endpoint to send the remote write data. LOGIQ.AI implements automatic retention tiering to object storage for all your opentelemetry metrics data giving you infinite retention and scale with zero storage overheads as your metrics needs grow.
+Specify the Apica Ascent cluster endpoint to send the remote write data. Apica Ascent implements automatic retention tiering to object storage for all your opentelemetry metrics data giving you infinite retention and scale with zero storage overheads as your metrics needs grow.
 
 ```
-endpoint: "https://<logiq-endpoint>/api/v1/receive"
+endpoint: "https://<apica-ascent-endpoint>/api/v1/receive"
 ```
 
 Here's a full configuration example below with TLS enabled.
@@ -32,7 +32,7 @@ if you are using OpenTelemetry on AWS, remove the "wal:" section below
 ```
 exporters:
   prometheusremotewrite:
-    endpoint: "https://<logiq-endpoint>/api/v1/receive"
+    endpoint: "https://<apica-ascent-endpoint>/api/v1/receive"
     wal: # Enabling the Write-Ahead-Log for the exporter.
       directory: ./prom_rw # The directory to store the WAL in
       buffer_size: 100 # Optional count of elements to be read from the WAL before truncating; default of 300
@@ -84,9 +84,9 @@ service:
 
 ### OpenTelemetry Logs and Traces
 
-LOGIQ.AI supports ingesting Logs and Traces using OpenTelementry agents and collectors. We also maintain compatibility with Jaeger agent and collectors for ingesting logs and traces. This provides broad support for anyone with existing Jaeger agents and collectors deployed as well as someone wanting to adopt the emerging OpenTelemetry standard.
+Apica Ascent supports ingesting Logs and Traces using OpenTelementry agents and collectors. We also maintain compatibility with Jaeger agent and collectors for ingesting logs and traces. This provides broad support for anyone with existing Jaeger agents and collectors deployed as well as someone wanting to adopt the emerging OpenTelemetry standard.
 
-See below for an example of configuring OpenTelemetry collector to push logs and traces to LOGIQ.AI
+See below for an example of configuring OpenTelemetry collector to push logs and traces to Apica Ascent
 
 ```
 receivers:
@@ -98,7 +98,7 @@ exporters:
   logging:
 
   jaeger:
-    endpoint: <logiq-endpoint>:14250
+    endpoint: <apica-ascent-endpoint>:14250
     tls:
       insecure: true
 
@@ -129,11 +129,11 @@ The Jar file can be found here - [https://github.com/open-telemetry/opentelemetr
 the Prometheus metrics options create a pull metric instance that should be scraped by an external Prometheus compatible instance
 {% endhint %}
 
-|                    JAVA\_OPTS |                    Value                   |                                        Notes                                        |
-| ----------------------------: | :----------------------------------------: | :---------------------------------------------------------------------------------: |
-|            otel.service\_name |               \<User defined>              | Give a service name to group your OpenTelemetry data traces under this service name |
+|                    JAVA\_OPTS |                   Value                    |                                        Notes                                        |
+| ----------------------------: |:------------------------------------------:| :---------------------------------------------------------------------------------: |
+|            otel.service\_name |              \<User defined>               | Give a service name to group your OpenTelemetry data traces under this service name |
 |          otel.traces.exporter |                   jaeger                   |                                                                                     |
-| otel.exporter.jaeger.endpoint |        http://\<LOGIQ ENDPOINT>14250       |                        LOGIQ.AI OpenTelemetry traces endpoint                       |
+| otel.exporter.jaeger.endpoint |    http://\<APICA ASCENT ENDPOINT>14250    |                        Apica Ascent OpenTelemetry traces endpoint                   |
 |                     javaagent | \<PATH TO JAR>/opentelemetry-javaagent.jar |                             OpenTelemetry agent Jar file                            |
 |         otel.metrics.exporter |                 prometheus                 |                                                                                     |
 | otel.exporter.prometheus.port |                                            |                                 Default port is 9464                                |

@@ -1,6 +1,6 @@
 ---
 description: >-
-  This document describes the heuristic used by LOGIQ for managing timestamps in
+  This document describes the heuristic used by Apica Ascent for managing timestamps in
   incoming log data
 ---
 
@@ -12,10 +12,10 @@ Incoming log data streams can have timestamps defined in the following ways
 
 1. Sending agent sends a timestamp
 2. Log data has its own timestamp
-3. Ingest layer for e.g. LOGIQ adds its own timestamp
+3. Ingest layer for e.g. Apica Ascent adds its own timestamp
 4. Log data has a non-standard timestamp format
 
-LOGIQ handles the timestamps in the following order
+Apica Ascent handles the timestamps in the following order
 
 1. Use the _sending agent_ timestamp
 2. Extract any timestamp in log data automatically that is non-ambiguous
@@ -23,7 +23,7 @@ LOGIQ handles the timestamps in the following order
 
 ## User-defined timestamp rules
 
-Users can specify timestamp extraction rules for log data using the LOGIQ data manipulation capabilities. Timestamps are handled by timestamp rules that are defined as follows
+Users can specify timestamp extraction rules for log data using the Apica Ascent data manipulation capabilities. Timestamps are handled by timestamp rules that are defined as follows
 
 ```
 - name: custom_timestamp

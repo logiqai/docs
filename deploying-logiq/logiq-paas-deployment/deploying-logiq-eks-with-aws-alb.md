@@ -1,8 +1,8 @@
-# Deploying Logiq EKS with AWS ALB
+# Deploying Apica Ascent EKS with AWS ALB
 
 ### Prerequisites
 
-You have a working EKS cluster with the ALB ingress controller for deploying LOGIQ. Please refer to the section on <mark style="color:blue;">enabling AWS ALB ingress controller</mark> in the PaaS Deployment document for more details.
+You have a working EKS cluster with the ALB ingress controller for deploying Apica Ascent. Please refer to the section on <mark style="color:blue;">enabling AWS ALB ingress controller</mark> in the PaaS Deployment document for more details.
 
 ### Configure you values.yaml to use NodePort services
 
@@ -13,7 +13,7 @@ kubernetes-ingress.ingress.controller.service.type: NodePort
 thanos.service.type: NodePort
 ```
 
-You can now deploy the LOGIQ Helm chart. AWS ALB should get provisioned and you should be able to see the UI and push data using http/https ingest. Most agents such as fluent-bit, vector, logstash provide http output support. Please refer to the section on [Integrations](broken-reference) on how to configure them to publish data to LOGIQ endpoint.
+You can now deploy the Apica Ascent Helm chart. AWS ALB should get provisioned and you should be able to see the UI and push data using http/https ingest. Most agents such as fluent-bit, vector, logstash provide http output support. Please refer to the section on [Integrations](broken-reference) on how to configure them to publish data to Apica Ascent endpoint.
 
 {% hint style="info" %}
 Chart version 3.0.5 or greater is required for ALB provisioning support
@@ -23,7 +23,7 @@ Chart version 3.0.5 or greater is required for ALB provisioning support
 
 #### Using the Global Accelerator
 
-If you have deployed the Logiq on private subnet, you may need to map global accelerator (under Integrated services) to access the public endpoints and DNS on top of it.&#x20;
+If you have deployed the Apica Ascent on private subnet, you may need to map global accelerator (under Integrated services) to access the public endpoints and DNS on top of it.&#x20;
 
 ![](<../../.gitbook/assets/image (34).png>)
 

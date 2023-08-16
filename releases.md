@@ -11,7 +11,7 @@
 ### Data convergence
 
 * Support for Apache DRUID connector
-* Optionally deploy Grafana with the LOGIQ stack
+* Optionally deploy Grafana with the Apica Ascent stack
 
 ### UI
 
@@ -63,7 +63,7 @@
 
 #### Deployment and Infrastructure
 
-* Separation of LOGIQ server into microservices for data ingestion, ML/UI and S3/Metadata management
+* Separation of Apica Ascent server into microservices for data ingestion, ML/UI and S3/Metadata management
 * Support for taints in HELM chart for more control over large-scale deployments e.g. schedule ingest pods on dedicated nodes etc.
 * Log tailing infrastructure using Redis switches to diskless replication/no persistence
 
@@ -74,7 +74,7 @@
 #### Log aggregation
 
 * Support for AWS Fargate, Firelens, [Fluent forward Protocol ](https://github.com/fluent/fluentd/wiki/Forward-Protocol-Specification-v1) 
-* LOGIQ Fluent-bit daemon-set for K8S clusters
+* Apica Ascent Fluent-bit daemon-set for K8S clusters
 * Data extraction via Grok patterns, compatible with Logstash Grok patterns using the [Grokky library](https://github.com/logrusorgru/grokky)
 
 #### Log analytics
@@ -84,19 +84,19 @@
 * Real-time extraction of log data facets using Grok expressions
 * 1-Click conversion of log data events to time series visualization  
 
-#### Logiqctl
+#### Apicactl
 
-* Logiqctl command-line toolkit
+* Apicactl command-line toolkit
 * Works with SAML users via API Key
 
 #### Monitoring
 
-* Prometheus alert manager integration into LOGIQ alerts for unified alerting across logs and metrics
-* Built-in Logiq dashboard for LOGIQ cluster performance and health monitoring 
+* Prometheus alert manager integration into Apica Ascent alerts for unified alerting across logs and metrics
+* Built-in Apica Ascent dashboard for Apica Ascent cluster performance and health monitoring 
 
-#### LOGIQ Data platform
+#### Apica Ascent Data platform
 
-* Connect numerous popular data sources into the LOGIQ platforms such as Postgres, MySql, Elasticsearch, Athena, MongoDB, Prometheus, and more. 
+* Connect numerous popular data sources into the Apica Ascent platforms such as Postgres, MySql, Elasticsearch, Athena, MongoDB, Prometheus, and more. 
 * JSON Data source for easily converting arbitrary JSON data into tables, widgets, and alerts
 
 #### Role-based access control
@@ -130,7 +130,7 @@
 
 ## 1.2.0 - 2020-04-28
 
-Official GA of LOGIQ's complete Observability platform with support for metrics and log analytics
+Official GA of Apica Ascent's complete Observability platform with support for metrics and log analytics
 
 ### Added
 
@@ -147,7 +147,7 @@ Official GA of LOGIQ's complete Observability platform with support for metrics 
 
 #### CLI
 
-* [logiqctl]() is now GA with support for log tailing, historical queries and search
+* [apicactl]() is now GA with support for log tailing, historical queries and search
 
 ## 1.1.0 - 2020-02-27
 
@@ -167,7 +167,7 @@ Official GA of LOGIQ's complete Observability platform with support for metrics 
 
 ## 1.0.0 - 2020-01-21
 
-Official GA of LOGIQ's Log Insights platform
+Official GA of Apica Ascent's Log Insights platform
 
 ### Added
 

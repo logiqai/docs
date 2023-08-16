@@ -1,10 +1,10 @@
 ---
-description: Setup MongoDB Exporter and send metrics to LOGIQ.AI endpoint
+description: Setup MongoDB Exporter and send metrics to Apica Ascent endpoint
 ---
 
 # MongoDB Exporter
 
-We will be using [percona/mongodb\_exporter](https://github.com/percona/mongodb\_exporter) to export the MongoDB metrics to LOGIQ.AI endpoint.\
+We will be using [percona/mongodb\_exporter](https://github.com/percona/mongodb\_exporter) to export the MongoDB metrics to Apica Ascent endpoint.\
 \
 You can also use other MongoDB exporters as well. ([Exporters List](https://prometheus.io/docs/instrumenting/exporters/))
 
@@ -57,7 +57,7 @@ After the script has executed successfully you will be able to see the metrics e
 
 \---
 
-Now we have the metrics being exposed at a endpoint, we can go ahead and scrape it using `prometheus` and send it to LOGIQ endpoint via. remote\_write.
+Now we have the metrics being exposed at a endpoint, we can go ahead and scrape it using `prometheus` and send it to Apica Ascent endpoint via. remote\_write.
 
 Locate the prometheus configuration file and add a job in `scrape_configs` for mongodb\_exporter like this:
 
@@ -90,4 +90,4 @@ Save the prometheus config file and restart/start the prometheus sytemd service 
 
 > `sudo systemctl restart prometheus` OR `sudo systemctl start prometheus`
 
-You will see the metrics populate at logiq engpoint in Query editor in some time.
+You will see the metrics populate at Apica Ascent endpoint in Query editor in some time.

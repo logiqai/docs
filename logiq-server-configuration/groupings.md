@@ -1,6 +1,6 @@
 # Groupings
 
-Incoming data can be tagged with user defined key value pairs for facilitating analytics. The key value pair is called a grouping in the LOGIQ platform. A destination may specify one or more groupings to be applied to the incoming data message.
+Incoming data can be tagged with user defined key value pairs for facilitating analytics. The key value pair is called a grouping in the Apica Ascent platform. A destination may specify one or more groupings to be applied to the incoming data message.
 
 ```text
 destinations:
@@ -18,7 +18,7 @@ destinations:
           value: Web
 ```
 
-The LOGIQ platform provides the below built-in groupings that are common. Additional groupings can be defined by the user when setting up the configuration file.
+The Apica Ascent platform provides the below built-in groupings that are common. Additional groupings can be defined by the user when setting up the configuration file.
 
 ```text
  groupings:
@@ -71,7 +71,7 @@ A grouping key can have one or more possible values. The values keyword enumerat
 
 ## description \[required\]
 
-A description for a grouping is a human readable text that explains the purpose of the grouping/classification being done.
+A description for a grouping is a human-readable text that explains the purpose of the grouping/classification being done.
 
 ## Cardinality
 

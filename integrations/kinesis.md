@@ -1,6 +1,6 @@
 # Kinesis
 
-LOGIQ.AI App extension for AWS Kinesis provides an easy way to pull data from Kinesis Streams
+Apica Ascent App extension for AWS Kinesis provides an easy way to pull data from Kinesis Streams
 
 Have the following information ready to configure your AS Kinesis Steams App extension
 

@@ -8,7 +8,7 @@ description: >-
 
 ## Create the JSON Data source
 
-The first step is to create the data source and provide `basic auth` credentials. Note that basic auth credentials are optional and you can provide a bearer token if that is your means of authenticating against the API&#x20;
+The first step is to create the data source and provide `basic auth` credentials. Note that basic auth credentials are optional, and you can provide a bearer token if that is your means of authenticating against the API&#x20;
 
 ![Creating a JSON data source](../../.gitbook/assets/json-0.png)
 
@@ -46,6 +46,6 @@ path: items
 fields: ["volumeInfo.authors","volumeInfo.title","volumeInfo.publisher","accessInfo.webReaderLink"]
 ```
 
-The resulting data from the above query is a nicely formatted table that can be searched in LOGIQ or made available as a widget in a dashboard
+The resulting data from the above query is a nicely formatted table that can be searched in Apica Ascent or made available as a widget in a dashboard
 
 ![](../../.gitbook/assets/json-2.png)

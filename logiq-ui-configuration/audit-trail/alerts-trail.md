@@ -1,6 +1,6 @@
 # Alerts Trail
 
-Logiq automatically logs all the alerts notifications that are happening in the logiq applications. This will be available on the alerts page.
+Apica Ascent automatically logs all the alerts notifications that are happening in the Apica Ascent applications. This will be available on the alerts page.
 
 ### Steps to View Alert History
 

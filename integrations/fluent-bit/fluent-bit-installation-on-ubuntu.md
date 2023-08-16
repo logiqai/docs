@@ -1,6 +1,6 @@
 # Fluent Bit installation on Ubuntu
 
-In order to forward Ubuntu logs to LOGIQ by leveraging Fluent Bit, do the following.
+In order to forward Ubuntu logs to Apica Ascent by leveraging Fluent Bit, do the following.
 
 1. Download the `td-agent-bit.sh` script from this [folder](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/linux/ubuntu).
 2. Make the script executable by running the following command.
@@ -108,7 +108,7 @@ The script execution carries out the following:
      
     ```
 
-You should now see your Ubuntu logs being ingested into the `Linux:Linux1` namespace on your LOGIQ UI.
+You should now see your Ubuntu logs being ingested into the `Linux:Linux1` namespace on your Apica Ascent UI.
 
 ![linux](https://user-images.githubusercontent.com/67860971/133257871-58663332-995c-4849-9638-8fe96826296a.png)
 
