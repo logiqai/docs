@@ -1,18 +1,18 @@
 ---
-description: This section describes how to use Log2Metrics in LOGIQ.
+description: This section describes how to use Log2Metrics in Apica Ascent.
 ---
 
 # Log2Metrics
 
-LOGIQ Log2Metrics is a powerful feature that helps you convert your log data into a real-time metric. Using Log2Metrics, you can visualize your log data, plot distributions, create a custom index, and create alerts for events.
+Apica Ascent Log2Metrics is a powerful feature that helps you convert your log data into a real-time metric. Using Log2Metrics, you can visualize your log data, plot distributions, create a custom index, and create alerts for events.
 
 ### Creating a Log2Metric
 
-You can create new metrics from a log line in either the **Logs** page or the **Search** page of your LOGIQ UI. To create a new metric, click the three dots on a log line that you want to create a metric for. Doing so opens the options menu, as shown in the following image. From the options menu, click **create log2metric**.&#x20;
+You can create new metrics from a log line in either the **Logs** page or the **Search** page of your Apica Ascent UI. To create a new metric, click the three dots on a log line that you want to create a metric for. Doing so opens the options menu, as shown in the following image. From the options menu, click **create log2metric**.&#x20;
 
 ![Log options menu](../.gitbook/assets/log\_menu\_drop\_down.png)
 
-You will now see the Log2Metric modal on the LOGIQ UI. To configure your new metric, fill out the fields in the Log2Metric modal appropriately.&#x20;
+You will now see the Log2Metric modal on the Apica Ascent UI. To configure your new metric, fill out the fields in the Log2Metric modal appropriately.&#x20;
 
 ![](../.gitbook/assets/log2metric\_dialog.png)
 
@@ -34,7 +34,7 @@ You can add more parameters to filter your logs by clicking on **+Add more param
 
 ![Add more prameters](../.gitbook/assets/add\_more\_params.png)
 
-The configuration depicted in the image above creates a Log2Metric named `ingress_status_codes__e1034e`. LOGIQ adds the suffix `__e1034` internally as a unique identifier for the Log2Metric. Once the Log2Metric is created, it adds its visualization to your dashboard. The following image depicts the visualization of the newly-created `ingress_status_codes__e1034e` Log2Metric.&#x20;
+The configuration depicted in the image above creates a Log2Metric named `ingress_status_codes__e1034e`. Apica Ascent adds the suffix `__e1034` internally as a unique identifier for the Log2Metric. Once the Log2Metric is created, it adds its visualization to your dashboard. The following image depicts the visualization of the newly-created `ingress_status_codes__e1034e` Log2Metric.&#x20;
 
 ![Visualization created by log2metrics](../.gitbook/assets/log2metric\_vis.png)
 

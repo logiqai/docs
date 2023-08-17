@@ -83,7 +83,7 @@ logiq-flash-ml-np NodePort 10.100.123.89 8081:32232/TCP,9998:31194/TCP,9999:3112
 
 ![](https://lh3.googleusercontent.com/ai7ig51CnmjxOPITELhvZ0ufkRpGPjSfHVj8MhNgjYnjInqwI7yfJyAg\_rGc2xbdrBuXmjkHDviLg-Sxh6I34fGyNTBTcvSxDt1xV79HUi1HaaoFQczV9z9euwUC7nIUAYHE8wxr)
 
-Logiq would have created auto scaling group for common and Ingest nodes. Associate the Ingest ASG with flash target group.
+Apica Ascent would have created auto-scaling group for common and Ingest nodes. Associate the Ingest ASG with flash target group.
 
 ![](https://lh3.googleusercontent.com/X4o\_29hFbuPqDFSPMxShLmRgfqYhzN5EbTWWT4za\_snOG3JJ9JEEmsiGMLDjStRh83qeleN8ZREv9z5HCIWGxdxAiGMTYXYKQ0tzAxNUbN0FGacLj6HFIokuIJ4jshL0mJTMoRPu)
 
@@ -156,7 +156,7 @@ Note: The rules should be in the same order as shown below
 
 ![](https://lh4.googleusercontent.com/X7Ih0K85bHasXm8uvJRA223ZUBQgIKrDTCoR-dstI48FT0qtJWtjL\_2LcC1CKbcqkTC15LTwsyPNYTBUVb8yyIU8RKHtdIhFRsreTzlROrXCLzPZt6kcE1-ZDAkPSXi9UpqCdN8o)
 
-If you have deployed the Logiq on private subnet, you may need to map global accelerator (under Integrated services) to access the public endpoints and DNS on top of it.&#x20;
+If you have deployed the Apica Ascent on private subnet, you may need to map global accelerator (under Integrated services) to access the public endpoints and DNS on top of it.&#x20;
 
 ![](<../.gitbook/assets/image (20) (1) (1) (1) (1) (1).png>)
 

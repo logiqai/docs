@@ -1,6 +1,6 @@
 # RSS
 
-LOGIQ helps you to connect your RSS for faster querying and visualization of your data.
+Apica Ascent helps you to connect your RSS for faster querying and visualization of your data.
 
 ### Adding RSS to LOGIQ
 

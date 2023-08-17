@@ -1,6 +1,6 @@
 # Docker Swarm logging
 
-This guide describes how you can set up log forwarding from your Docker Swarm environments to LOGIQ. To forward logs from Docker Swarm to LOGIQ, do the following.
+This guide describes how you can set up log forwarding from your Docker Swarm environments to Apica Ascent. To forward logs from Docker Swarm to Apica Ascent, do the following.
 
 ### Deploy fluent-bit container
 
@@ -16,7 +16,7 @@ Create the following files:
 
 #### fluent-bit.conf
 
-Update the LOGIQ `host` and `Authorization Header` in the file. The token can be obtained from LOGIQ UI as described [here](overview/generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui).
+Update the Apica Ascent `host` and `Authorization Header` in the file. The token can be obtained from Apica Ascent UI as described [here](overview/generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui).
 
 ```apacheconf
 [SERVICE]
@@ -41,7 +41,7 @@ Update the LOGIQ `host` and `Authorization Header` in the file. The token can be
 [OUTPUT]
     name     http
     match    *
-    host     <LOGIQ-endpoint>
+    host     <Apica-Ascent-endpoint>
     port     443
     URI      /v1/json_batch
     Format   json
@@ -87,7 +87,7 @@ x-logging: &default-logging
   driver: fluentd
 ```
 
-Update the services in docker-compose files to add logging configuration and environment variables. The `Namespace`and `AppName` set in the service definition defines how the logs from the service are indexed in LOGIQ.
+Update the services in docker-compose files to add logging configuration and environment variables. The `Namespace`and `AppName` set in the service definition defines how the logs from the service are indexed in Apica Ascent.
 
 ```yaml
         environment:
@@ -158,4 +158,4 @@ Run the following command to run the container.&#x20;
 docker stack deploy --compose-file logger-test.yaml logger-test
 ```
 
-Your Docker Swarm logs will now be ingested into LOGIQ.
+Your Docker Swarm logs will now be ingested into Apica Ascent.

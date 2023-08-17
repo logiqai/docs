@@ -2,7 +2,7 @@
 
 ## Options
 
-The options section in the LOGIQ configuration file is for changing default server parameters. Below are the commonly used options for typical deployments. Options can be either specified as quoted strings / non-quoted e.g. "2514" or 2514
+The options section in the Apica Ascent configuration file is for changing default server parameters. Below are the commonly used options for typical deployments. Options can be either specified as quoted strings / non-quoted e.g. "2514" or 2514
 
 ### ca \[optional\]
 
@@ -38,19 +38,19 @@ The syslog port where server listens for syslog connection. Default port is _**7
 
 ### cli\_port \[optional\]
 
-The port where the LOGIQ CLI is accessed. Default port is _**9998**_
+The port where the Apica CLI is accessed. Default port is _**9998**_
 
 ### cli\_user \[optional\]
 
-Login for LOGIQ CLI console
+Login for Apica CLI console
 
 ### cli\_password \[optional\]
 
-Password for LOGIQ CLI console
+Password for Apica CLI console
 
 ### glue\_iam\_service\_role \[optional\]
 
-ARN of the glue service role. See [here](../running-on-aws/aws-iam-resources.md#iam-service-role-for-glue) for more details. This only applies if you are trying to run LOGIQ in AWS.
+ARN of the glue service role. See [here](../running-on-aws/aws-iam-resources.md#iam-service-role-for-glue) for more details. This only applies if you are trying to run Apica Ascent in AWS.
 
 ## Example
 

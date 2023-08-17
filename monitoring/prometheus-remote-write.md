@@ -1,14 +1,14 @@
 # Prometheus Remote Write
 
-LOGIQ can collect Prometheus metrics from externally hosted Prometheus. LOGIQ uses the `remote_write` capabilities to help you do so.
+Apica Ascent can collect Prometheus metrics from externally hosted Prometheus. Apica Ascent uses the `remote_write` capabilities to help you do so.
 
 ### **Prometheus configuration**
 
-To send metrics from Prometheus to Logiq endpoint, use the configuration below.
+To send metrics from Prometheus to Apica Ascent endpoint, use the configuration below.
 
 ```
 remote_write:
-  - url: https://<Logiq-endpoint>/api/v1/receive
+  - url: https://<apica-ascent-endpoint>/api/v1/receive
     tls_config:
         ca_file: <file-name>
         cert_file: <file-name>
@@ -21,12 +21,12 @@ remote_write:
 
 ### **OpenTelemetry configuration**
 
-Prometheus Remote Write Exporter can be leveraged to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/), and these metrics can be visualized on LOGIQ.
+Prometheus Remote Write Exporter can be leveraged to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/), and these metrics can be visualized on Apica Ascent.
 
 ```
 exporters:
   prometheusremotewrite:
-    endpoint: "https://<logiq-endpoint>/api/v1/receive"
+    endpoint: "https://<apica-ascent-endpoint>/api/v1/receive"
     wal: # Enabling the Write-Ahead-Log for the exporter.
       directory: ./prom_rw # The directory to store the WAL in
       buffer_size: 100 # Optional count of elements to be read from the WAL before truncating; default of 300
@@ -67,11 +67,11 @@ VictoriaMetrics is a fast, cost-effective, and scalable monitoring solution and 
 Run the [<mark style="color:blue;"><mark style="color:purple;">**vmagent**<mark style="color:purple;"></mark> <mark style="color:blue;"></mark><mark style="color:blue;"></mark> ](https://docs.victoriametrics.com/vmagent.html#quick-start)as shown below and pass the below parameters
 
 {% hint style="info" %}
-&#x20;remoteWrite.tls.url=https://\<Logiq-endpoint>/api/v1/receive
+&#x20;remoteWrite.tls.url=https://\<apica-ascent-endpoint>/api/v1/receive
 
 remoteWrite.tlsInsecureSkipVerify
 {% endhint %}
 
 ```
-./vmagent-prod -promscrape.config=/etc/prometheus/prometheus.yml -remoteWrite.url=https://<Logiq-endpoint>/api/v1/receive -remoteWrite.tlsInsecureSkipVerify
+./vmagent-prod -promscrape.config=/etc/prometheus/prometheus.yml -remoteWrite.url=https://<apica-ascent-endpoint>/api/v1/receive -remoteWrite.tlsInsecureSkipVerify
 ```

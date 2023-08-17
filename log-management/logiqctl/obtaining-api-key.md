@@ -1,7 +1,7 @@
 # Obtaining API Key
 
-Login to the LOGIQ UI, click on the user profile section, and go to Edit Profile&#x20;
+Login to the Apica Ascent UI, click on the user profile section, and go to Edit Profile&#x20;
 
 ![](../../.gitbook/assets/api.png)
 
-The API token required for accessing logiqctl and logiq API is available under **API Key**
+The API token required for accessing apicactl and Apica Ascent API is available under **API Key**

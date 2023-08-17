@@ -1,5 +1,5 @@
 ---
-description: This page describes how Logiq Observability Platform Organizes the logs.
+description: This page describes how Apica Ascent Observability Platform Organizes the logs.
 ---
 
 # Terminology
@@ -26,5 +26,5 @@ There are multiple ways you can access the logs.&#x20;
 
 * The Logs page hierarchically arranges logs by Namespace, application and process. It lets you see the most recent logs for the process&#x20;
 * The Search page allows you to search through logs.
-* The `logiqctl` command line tool allows you to view logs in realtime.&#x20;
+* The `apicactl` command line tool allows you to view logs in realtime.&#x20;
 

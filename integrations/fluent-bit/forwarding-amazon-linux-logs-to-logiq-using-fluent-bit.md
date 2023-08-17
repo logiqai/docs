@@ -1,6 +1,6 @@
-# Forwarding Amazon-Linux logs to LOGIQ using Fluent Bit
+# Forwarding Amazon-Linux logs to Apica Ascent using Fluent Bit
 
-This guide takes you through how you can set up log forwarding from Linux systems hosted on AWS to LOGIQ using Fluent Bit. The guide leverages an install script which you can download from our GitHub repository.&#x20;
+This guide takes you through how you can set up log forwarding from Linux systems hosted on AWS to Apica Ascent using Fluent Bit. The guide leverages an installation script which you can download from our GitHub repository.&#x20;
 
 Before you proceed with this setup, be sure to download the `install.sh`  and `td-agent-bit.sh` scripts located here:
 
@@ -12,7 +12,7 @@ The `install.sh` script carries out the following functions:
 
 The `td-agent-bit.sh` script carries out the following functions:
 
-* Installs Fluent Bit on your Amazon-Linux systems which is used for forwarding logs to LOGIQ.
+* Installs Fluent Bit on your Amazon-Linux systems which is used for forwarding logs to Apica Ascent.
 
 ### Installing Fluent Bit
 
@@ -119,22 +119,22 @@ The script executes and installs Node Exporter
 
 
 
-You should now see your Amazon-Linux logs being ingested into the `Linux:Linux1` namespace on your LOGIQ UI.
+You should now see your Amazon-Linux logs being ingested into the `Linux:Linux1` namespace on your Apica Ascent UI.
 
 <img src="https://user-images.githubusercontent.com/67860971/133257871-58663332-995c-4849-9638-8fe96826296a.png" alt="linux" data-size="original">
 
-## Forwarding Amazon-Linux logs to LOGIQ using Fluent Bit
+## Forwarding Amazon-Linux logs to Apica Ascent using Fluent Bit
 
 The script `isntall.sh` included in this folder carries out the following functions:
 
 * Installs Node Exporter, which exposes various metrices from your Linux machine(CPU, RAM usage)
-* Installs Fluent Bit on your Amazon-linux systems which is used for forwarding logs to LOGIQ.
+* Installs Fluent Bit on your Amazon-linux systems which is used for forwarding logs to Apica Ascent.
 
 The script `td-agent-bit.sh` included in this folder carries out the following functions:
 
-* Installs Fluent Bit on your Amazon-linux systems which is used for forwarding logs to LOGIQ.
+* Installs Fluent Bit on your Amazon-linux systems which is used for forwarding logs to Apica Ascent.
 
-In order to install Fluent Bit to forward Linux logs, do the following (Follow the same instructions for installating Node-exporter and run install.sh).
+In order to install Fluent Bit to forward Linux logs, do the following (Follow the same instructions for installing Node-exporter and run install.sh).
 
 1. Download the `td-agent-bit.sh` script from this folder.
 2. Make the script executable by running the following command.
@@ -184,7 +184,7 @@ The script executes and carries out the following:
              )
     ```
 
-The script also places the `td-agent-bit.conf` file under the default Fluent Bit installation folder `/etc/td-agent-bit`. The script will configure `[OUTPUT]` section of the `td-agent-bit.conf` file based on your LOGIQ cluster, as shown below.
+The script also places the `td-agent-bit.conf` file under the default Fluent Bit installation folder `/etc/td-agent-bit`. The script will configure `[OUTPUT]` section of the `td-agent-bit.conf` file based on your Apica Ascent cluster, as shown below.
 
 ```
 [OUTPUT]
@@ -201,6 +201,6 @@ The script also places the `td-agent-bit.conf` file under the default Fluent Bit
     Header Authorization Bearer ${LOGIQ_TOKEN}
 ```
 
-You should now see your Amazon-Linux logs being ingested into the `Linux:Linux1` namespace on your LOGIQ UI.
+You should now see your Amazon-Linux logs being ingested into the `Linux:Linux1` namespace on your Apica Ascent UI.
 
 ![linux](https://user-images.githubusercontent.com/67860971/133257871-58663332-995c-4849-9638-8fe96826296a.png)

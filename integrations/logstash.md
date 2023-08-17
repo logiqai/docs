@@ -41,7 +41,7 @@ output {
 ```
 output {
    http {
-        url => "https://logiq-dns-or-ip/v1/json_batch"
+        url => "https://apica-ascent-dns-or-ip/v1/json_batch"
         headers => { "Authorization" => "Bearer <Auth token>" }
         http_method => "post"
         format => "json_batch"

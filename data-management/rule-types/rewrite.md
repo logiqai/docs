@@ -1,6 +1,6 @@
 # Rewrite
 
-Your incoming log data might include Personally Identifiable Information (PII) that can identify an individual, either on its own or in combination with other relevant data. You may need to redact or replace PII or other sensitive data to stay compliant with data security regulations or support your business use case. LOGIQ supports the creation and use of custom regular expressions that match patterns in your incoming data stream and mask or replace these matched patterns.
+Your incoming log data might include Personally Identifiable Information (PII) that can identify an individual, either on its own or in combination with other relevant data. You may need to redact or replace PII or other sensitive data to stay compliant with data security regulations or support your business use case. Apica Ascent supports the creation and use of custom regular expressions that match patterns in your incoming data stream and mask or replace these matched patterns.
 
 Select a log line user want to create a Rewrite rule, click on the ellipsis available on the logline  and click on the "create rule"
 
@@ -14,7 +14,7 @@ Like every other rule, Enter Name, Group, Parameters to filter (optional), and P
 
 ![](<../../.gitbook/assets/image (27) (1) (1).png>)
 
-LOGIQ uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.&#x20;
+Apica Ascent uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.&#x20;
 
 ### Example: Removing names and phone numbers from log data
 
@@ -26,7 +26,7 @@ In this example, assume that the following lines of data are from an incoming lo
 2021-08-30 01:34:55.003Z Tim White office phone number is 408121324
 ```
 
-You notice that the data you are ingesting includes names and respective US phone numbers that fall under PII. To mask these names and US phone numbers from incoming data, you can use LOGIQ to create the following regular expression to sample and match incoming data.
+You notice that the data you are ingesting includes names and respective US phone numbers that fall under PII. To mask these names and US phone numbers from incoming data, you can use Apica Ascent to create the following regular expression to sample and match incoming data.
 
 ```
 ^(?P<name>\w+\s+\w+)\s+(?P<p1>.*)phone number(?P<p2>.*)\s(?P<phone>\D*\d{3}\D*\d{3}\D*\d{4})\s*$  
@@ -65,7 +65,7 @@ It is crucial to be mindful of the context of the regular expression you create 
 
 ### Creating a PII masking rule via the UI
 
-You can create a custom rewrite rule to match and mask PII in your log data from the Rules section on your LOGIQ UI. To access create a new rule, click **Rules** > **Rule Packs** > **+ New Rule**
+You can create a custom rewrite rule to match and mask PII in your log data from the Rules section on your Apica Ascent UI. To access create a new rule, click **Rules** > **Rule Packs** > **+ New Rule**
 
 ![](<../../.gitbook/assets/image (35) (1).png>)
 
@@ -87,6 +87,6 @@ To configure your rewrite rule, do the following.&#x20;
 
 Your new rewrite rule is now created. Your new rule will apply to all incoming log data for the specified namespace, look for patterns within the log data that match the match expression, and rewrite log data as per the rewrite expression.&#x20;
 
-LOGIQ offers many inbuilt rules for obfuscating sensitive information like credit card numbers, SSN, phone numbers, etc...
+Apica Ascent offers many inbuilt rules for obfuscating sensitive information like credit card numbers, SSN, phone numbers, etc...
 
 ![](<../../.gitbook/assets/image (22) (1).png>)

@@ -2,7 +2,7 @@
 
 We are in the age of distributed computing, where you will be running everything as separate services. Debugging and doing a root cause analysis on such kind of application can be a difficult task.&#x20;
 
-Logiq.ai provides you with a topology view of all your namespaces and applications which will help you to do root cause analysis faster on any of your services. This will help you to find the errors and warnings in your services based specific time range.
+Apica Ascent provides you with a topology view of all your namespaces and applications which will help you to do root cause analysis faster on any of your services. This will help you to find the errors and warnings in your services based specific time range.
 
 ### Topology View
 
@@ -18,7 +18,7 @@ Here are the steps for accessing the topology view of your namespaces,
 
 Finding a root cause in a distributed environment is a tricky thing. We will not know what errors occurred in which application. This problem is solved by topology. Topology provides us the option to select a time range at a granular level which will help us to find the occurrence of that error. The application that has the errors/warnings at the given time will be indicated with the respective colors.
 
-It also runs a search query in logiq, which will help you fetch errors and warning messages which are logged at the selected time range.
+It also runs a search query in Apica Ascent, which will help you fetch errors and warning messages which are logged at the selected time range.
 
 In the above screenshot, we have errors in the alerts namespace. To find the errors for the application under the namespace, click on the `+` icon. It will display all the applications under that node.
 

@@ -38,5 +38,5 @@ Clicking on the configured alert will open up the respective alert page where it
 ![](<../../.gitbook/assets/image (36).png>)
 
 {% hint style="warning" %}
-LOGIQ includes alerts from it's Prometheus alert manager instance that is included with the LOGIQ install. NOTE that the editing of the Prometheus alert rules cannot be done via the UI and must use alert manager CRD's to change those alert rules.
+Apica Ascent includes alerts from its Prometheus alert manager instance that is included with the Apica Ascent install. NOTE that the editing of the Prometheus alert rules cannot be done via the UI and must use alert manager CRD's to change those alert rules.
 {% endhint %}

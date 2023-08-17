@@ -1,5 +1,5 @@
 ---
-description: Configuring Splunk Universal Forwarder to send data to LOGIQ
+description: Configuring Splunk Universal Forwarder to send data to Apica Ascent
 ---
 
 # Splunk Universal Forwarder
@@ -7,10 +7,10 @@ description: Configuring Splunk Universal Forwarder to send data to LOGIQ
 ### Splunk Raw mode
 
 {% hint style="info" %}
-Splunk universal forwarders support forwarding raw data as it is collected as well in Splunk's proprietary protocol S2S. LOGIQ.AI can directly ingest from Splunk UF in the raw mode that does not use proprietary S2S protocol.
+Splunk universal forwarders support forwarding raw data as it is collected as well in Splunk's proprietary protocol S2S. Apica Ascent can directly ingest from Splunk UF in the raw mode that does not use proprietary S2S protocol.
 {% endhint %}
 
-Splunk Universal Forwarder can be configured to send raw TCP data to LOGIQ. To enable forwarding to LOGIQ edit `$SPLUNK_HOME/etc/system/local/outputs.conf` file and enable TCP forwarding.
+Splunk Universal Forwarder can be configured to send raw TCP data to Apica Ascent. To enable forwarding to Apica Ascent edit `$SPLUNK_HOME/etc/system/local/outputs.conf` file and enable TCP forwarding.
 
 ```
 [tcpout]
@@ -26,10 +26,10 @@ negotiateProtocolLevel = 0
 
 ### Splunk Cooked mode
 
-LOGIQ.AI can ingest data from Splunk forwarders in cooked mode as well.  You can create an S2S Ingest app extension to directly ingest data from Splunk universal forwarder and Heavy forwarder in cooked mode.
+Apica Ascent can ingest data from Splunk forwarders in cooked mode as well.  You can create an S2S Ingest app extension to directly ingest data from Splunk universal forwarder and Heavy forwarder in cooked mode.
 
 {% hint style="success" %}
-Logs/Events/Metrics can be ingested into LOGIQ.AI using cooked mode
+Logs/Events/Metrics can be ingested into Apica Ascent using cooked mode
 {% endhint %}
 
 Go to "Explore" -> "App Extensions" and create your S2S Ingest app extension

@@ -4,7 +4,7 @@ description: This page describers E-Mail server configuration
 
 # E-Mail Configuration
 
-LOGIQ insights can be configured to send emails to notify alerts. It uses smtp mail and requires following information for configuration:
+Apica Ascent insights can be configured to send emails to notify alerts. It uses smtp mail and requires following information for configuration:
 
 1. Mail Server DNS/IP
 2. Mail service/relay port for SMTP e.g. 25 or 465/587 (TLS/SSL)
@@ -21,6 +21,6 @@ The E-mail configuration is a global configuration and is available only to the 
 The default sender e-mail in most cases will need to be a verified e-mail address from the Mail service/relay provider
 {% endhint %}
 
-The following attributes can be setup by LOGIQ admin on UI.
+The following attributes can be setup by Apica Ascent admin on UI.
 
-![Logiq Insights Email Setup ](../.gitbook/assets/Screen-Shot-2020-08-09-Mail-Server.png)
+![Apica Ascent Insights Email Setup ](../.gitbook/assets/Screen-Shot-2020-08-09-Mail-Server.png)

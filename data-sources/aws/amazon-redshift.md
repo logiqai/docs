@@ -1,12 +1,12 @@
 # Amazon Redshift
 
-LOGIQ helps you to connect to your Redshift Cluster to easily query your data and build dashboards to visualize data easily
+Apica Ascent helps you to connect to your Redshift Cluster to easily query your data and build dashboards to visualize data easily
 
 The first step is to create a Redshift Cluster, please navigate to get started with Amazon Redshift [https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html)
 
-### Adding Redshift to LOGIQ
+### Adding Redshift to Apica Ascent
 
-The second step is to create and add Redshift to LOGIQ and add fill out the below fields and save
+The second step is to create and add Redshift to Apica Ascent and add fill out the below fields and save
 
 * **Name**: Name the data source (e.g. Redshift)
 * **Host**: The full URL to your instance

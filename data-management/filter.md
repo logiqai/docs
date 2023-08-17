@@ -28,4 +28,4 @@ By using field filtering in combination with the Filter Rule, you can ensure tha
 
 Once you have created a Filter Rule and specified your filter criteria, all incoming log lines that match the criteria will be dropped before they are sent to storage or downstream systems. This can help to control the volume of data being stored and ensure that only relevant data is retained for further analysis.
 
-In addition to creating custom Filter Rules, LOGIQ also offers many inbuilt Filter Rules for various applications like Java, ingress, auditd, Kubernetes, and more. These pre-built rules can be easily accessed and configured to suit your specific needs, making it easy to filter out unnecessary data from your log streams.
+In addition to creating custom Filter Rules, Apica Ascent also offers many inbuilt Filter Rules for various applications like Java, ingress, auditd, Kubernetes, and more. These pre-built rules can be easily accessed and configured to suit your specific needs, making it easy to filter out unnecessary data from your log streams.

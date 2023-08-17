@@ -1,6 +1,6 @@
 # Connecting Prometheus
 
-**LOGIQ** also supports external **Prometheus** data sources. If you have any hosted Prometheus in cloud or on-premises, you can connect that in LOGIQ as a data source. you can use your existing queries in LOGIQ to build dashboards and create alerts.&#x20;
+**Apica Ascent** also supports external **Prometheus** data sources. If you have any hosted Prometheus in cloud or on-premises, you can connect that in Apica Ascent as a data source. you can use your existing queries in Apica Ascent to build dashboards and create alerts.&#x20;
 
 ### Create Prometheus Data Source
 

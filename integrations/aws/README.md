@@ -6,6 +6,6 @@ Amazon Web Services, Inc. is a subsidiary of Amazon that provides on-demand clou
 
 ## Integrations
 
-AWS provides a wide array of services that generate observability data via different software tools. LOGIQ.AI integrates all these tools into a single interface for easy consumption
+AWS provides a wide array of services that generate observability data via different software tools. Apica Ascent integrates all these tools into a single interface for easy consumption
 
-See the sub modules to this page for integrations for AWS enabled by LOGIQ.AI
+See the sub modules to this page for integrations for AWS enabled by Apica Ascent

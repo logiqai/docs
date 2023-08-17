@@ -1,6 +1,6 @@
 # Amazon CloudWatch ( YAML )
 
-LOGIQ connects to Amazon CloudWatch using the boto3 client with the help of the AWS CloudWatch data source making it easy for you to query CloudWatch metrics using its natural syntax, analyze, monitor, and create Visualization of data.
+Apica Ascent connects to Amazon CloudWatch using the boto3 client with the help of the AWS CloudWatch data source making it easy for you to query CloudWatch metrics using its natural syntax, analyze, monitor, and create Visualization of data.
 
 {% hint style="info" %}
 Before you query your CloudWatch data, you should set up authentication credentials. Credentials for your AWS account can be found in the IAM Console. You can create or use an existing user. Go to manage access keys and generate a new set of keys.
@@ -25,7 +25,7 @@ These instructions assume you are familiar with the CloudWatch ad-hoc query lang
 
 ### CloudWatch query designer wizard
 
-LOGIQ.AI includes a simple point-and-click wizard for creating CloudWatch queries. You can launch the query wizard by selecting the CloudWatch YAML data source and selecting the "Construct CloudWatch query" icon.
+Apica Ascent includes a simple point-and-click wizard for creating CloudWatch queries. You can launch the query wizard by selecting the CloudWatch YAML data source and selecting the "Construct CloudWatch query" icon.
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-08-29 at 10.32.49 AM.png" alt=""><figcaption><p>CloudWatch query wizard</p></figcaption></figure>
 

@@ -1,6 +1,6 @@
 # GCP PubSub
 
-LOGIQ.AI App extension for GCP PubSub provides an easy way to pull data from PubSub topics
+Apica Ascent App extension for GCP PubSub provides an easy way to pull data from PubSub topics
 
 Have the following information ready to configure your GCP PubSub App extension
 

@@ -1,6 +1,6 @@
-# Export Events to LOGIQ
+# Export Events to Apica Ascent
 
-Using the[ LOGIQ IO Connector](https://github.com/logiqai/logiq-io), We can easily stream our data to LOGIQ for further processing.&#x20;
+Using the[Apica Ascent IO Connector](https://github.com/logiqai/logiq-io), We can easily stream our data to Apica Ascent for further processing.&#x20;
 
 Let's look at this by going over the sample starter repository provided [here](https://github.com/logiqai/logiqio-apache-beam-starter).
 
@@ -49,13 +49,13 @@ public class Main {
 }
 </code></pre>
 
-As you can see in this, we have simulated a pipeline flow with sample log lines as our input which will then be pushed to LOGIQ.&#x20;
+As you can see in this, we have simulated a pipeline flow with sample log lines as our input which will then be pushed to Apica Ascent.&#x20;
 
 
 
 ### Transforming the Logs to LogiqEvent.
 
-We can not simply push the log lines to LOGIQ. Instead we first need to transform the log lines to LogiqEvent(s). Here is the `Transformer()` class that handles the transformations.
+We can not simply push the log lines to Apica Ascent. Instead, we first need to transform the log lines to LogiqEvent(s). Here is the `Transformer()` class that handles the transformations.
 
 ```java
 // Transformer.java
@@ -107,17 +107,17 @@ public class TransformEvent extends DoFn<String, LogiqEvent> {
 
 
 
-Once, we have successfully transformed the log lines to LogiqEvent(s), we can now use the LOGIQ-IO Connector to export these LogiqEvent(s) to our LOGIQ Instance.
+Once, we have successfully transformed the log lines to LogiqEvent(s), we can now use the LOGIQ-IO Connector to export these LogiqEvent(s) to our Apica Ascent Instance.
 
-### Writing to LOGIQ
+### Writing to Apica Ascent
 
 ```
 .apply(new LogiqIO.Write(local_endpoint, ingest_token))
 ```
 
-Specify the ingest endpoint and your ingest token. You can find the ingest token in your LOGIQ Settings.
+Specify the ingest endpoint and your ingest token. You can find the ingest token in your Apica Ascent Settings.
 
-Hooray, you should now be able to see logs flowing into LOGIQ from your Pipeline with `namespace="ns", host="test-env", appName="test-app" and clusterId as "test-cluster"`.
+Hooray, you should now be able to see logs flowing into Apica Ascent from your Pipeline with `namespace="ns", host="test-env", appName="test-app" and clusterId as "test-cluster"`.
 
 <figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 

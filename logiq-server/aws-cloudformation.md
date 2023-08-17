@@ -1,6 +1,6 @@
 ---
 description: >-
-  This page describes the AWS CloudFormation based deployment for the LOGIQ
+  This page describes the AWS CloudFormation based deployment for the Apica Ascent
   stack
 ---
 
@@ -8,9 +8,9 @@ description: >-
 
 ## Overview
 
-LOGIQ can be deployed on AWS in a single AMI instance in a 1-Click fashion using our CloudFormation template and the LOGIQ AMI from the Amazon Marketplace. Please read and agree [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
+Apica Ascent can be deployed on AWS in a single AMI instance in a 1-Click fashion using our CloudFormation template and the Apica Ascent AMI from the Amazon Marketplace. Please read and agree [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
 
-All the resources required to create and configure LOGIQ on AWS are taken care by the template. All you need to do is provide a few simple input parameters.
+All the resources required to create and configure Apica Ascent on AWS are taken care by the template. All you need to do is provide a few simple input parameters.
 
 The CloudFormation template can be found in the software subscription at the AWS marketplace
 
@@ -19,10 +19,10 @@ https://aws.amazon.com/marketplace/pp/B083ZMYQNV
 ```
 
 {% hint style="info" %}
-Please note that using the Marketplace AMI is not free and you will be charged per the marketplace published rates for LOGIQ
+Please note that using the Marketplace AMI is not free and you will be charged per the marketplace published rates for Apica Ascent
 {% endhint %}
 
-## LOGIQ UI credentials <a id="default-user-and-password"></a>
+## Apica Ascent UI credentials <a id="default-user-and-password"></a>
 
 {% hint style="warning" %}
 After the Cloud formation template is complete, it may take several minutes for the UI to be available on the AMI. 
@@ -30,7 +30,7 @@ After the Cloud formation template is complete, it may take several minutes for 
 The deployment exposes the UI on an http port by default. You can install an ELB to front the UI via https. This is the recommended production setup.
 {% endhint %}
 
-Once the LOGIQ instance is created, you can login to the instance using the below credentials
+Once the Apica Ascent instance is created, you can login to the instance using the below credentials
 
 **user**: _logiq@foo.com_
 

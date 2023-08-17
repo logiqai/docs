@@ -1,9 +1,9 @@
 # Rsyslogd
 
-Please see below how to configure Rsyslog to send to the LOGIQ server. Rsyslog can send data to LOGIQ using either TCP transport or RELP transport. The RELP module for Rsyslog is called `omrelp` and for the TCP forward is called `omfwd`
+Please see below how to configure Rsyslog to send to the Apica Ascent server. Rsyslog can send data to Apica Ascent using either TCP transport or RELP transport. The RELP module for Rsyslog is called `omrelp` and for the TCP forward is called `omfwd`
 
 {% hint style="warning" %}
-LOGIQ strongly recommends sending data using the RELP transport to ensure packets are not lost or dropped. RELP relies on acknowledgments from the receiver to make sure the packet is delivered. LOGIQ, for its part only sends the acknowledgments back once the data is written to the persistent store.
+Apica Ascent strongly recommends sending data using the RELP transport to ensure packets are not lost or dropped. RELP relies on acknowledgments from the receiver to make sure the packet is delivered. Apica Ascent, for its part only sends the acknowledgments back once the data is written to the persistent store.
 {% endhint %}
 
 ### Using omfwd
@@ -24,7 +24,7 @@ Update the syslog config in `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.co
 
 #### Installation rsyslog RELP modules
 
-rsyslog is installed by default in most modern OS's, rsyslog needs the omrelp module to send data to a RELP aware endpoint such as LOGIQ. To enable RELP install packages listed below
+rsyslog is installed by default in most modern OS's, rsyslog needs the omrelp module to send data to a RELP aware endpoint such as Apica Ascent. To enable RELP install packages listed below
 
 * rsyslog-relp, enables RELP protocol for rsyslog
 * rsyslog-gnutls, enables rsyslog to communicate over a secure socket

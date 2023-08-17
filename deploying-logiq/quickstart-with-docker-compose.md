@@ -1,6 +1,6 @@
 ---
 description: >-
-  This document describes the steps needed to bring up the LOGIQ observability
+  This document describes the steps needed to bring up the Apica Ascent observability
   stack using docker-compose for trial and demo use
 ---
 
@@ -17,7 +17,7 @@ Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before pr
 3. Data sources - 21 data source connectors
 4. Alerting
 5. Incident response - PagerDury, ServiceNow, Slack, Email
-6. logiqctl CLI connectivity
+6. apicactl CLI connectivity
 7. Dashboards and visualizations
 8. Filtering rules and rule packs
 9. User and group management
@@ -26,27 +26,27 @@ Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before pr
 
 ## Install Docker compose
 
-You can spin-up LOGIQ using `docker-compose`. Install guide for `docker-compose` can be found here - [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+You can spin-up Apica Ascent using `docker-compose`. Install guide for `docker-compose` can be found here - [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
 {% hint style="info" %}
-_**NOTE:** the docker-compose quick-start YAML files are intended for demo and trial use only. If you want to run a production deployment, LOGIQ uses Kubernetes with HELM to deploy the stack. Please contact us at : sales@logiq.ai_
+_**NOTE:** the docker-compose quick-start YAML files are intended for demo and trial use only. If you want to run a production deployment, Apica Ascent uses Kubernetes with HELM to deploy the stack. Please contact us at : sales@logiq.ai_
 {% endhint %}
 
-## Running LOGIQ
+## Running Apica Ascent
 
 {% hint style="info" %}
-**NOTE:** LOGIQ services use approximately 2GB of memory. Please have sufficient memory in your system before proceeding
+**NOTE:** Apica Ascent services use approximately 2GB of memory. Please have sufficient memory in your system before proceeding
 {% endhint %}
 
 The first step is to get the `docker-compose` YAML file from the URL below.
 
-### Download LOGIQ compose file
+### Download Apica Ascent compose file
 
 {% hint style="info" %}
 ⬇ Download the YAML at the URL - [https://logiqcf.s3.amazonaws.com/releases/docker-compose.quickstart.yml](https://logiqcf.s3.amazonaws.com/releases/docker-compose.quickstart.yml)
 {% endhint %}
 
-You are now ready to bring up the LOGIQ stack.
+You are now ready to bring up the Apica Ascent stack.
 
 ### Download container images
 
@@ -61,34 +61,34 @@ docker-compose -f docker-compose.quickstart.yml up -d
 ```
 
 {% hint style="info" %}
-**NOTE:** If you have been running previous versions of LOGIQ docker-compose, you should stop and remove the existing containers by running docker-compose -f docker-compose.quickstart.yml down and remove any older docker volume via docker-compose -f docker-compose.quickstart.yml rm && docker-compose -f docker-compose.quickstart.yml rm -v
+**NOTE:** If you have been running previous versions of Apica Ascent docker-compose, you should stop and remove the existing containers by running docker-compose -f docker-compose.quickstart.yml down and remove any older docker volume via docker-compose -f docker-compose.quickstart.yml rm && docker-compose -f docker-compose.quickstart.yml rm -v
 {% endhint %}
 
 ### Delete the stack
 
-If you are done with your evaluation and want to cleanup your environment, please run the following command to stop and delete the LOGIQ stack and free up the used system resources.
+If you are done with your evaluation and want to cleanup your environment, please run the following command to stop and delete the Apica Ascent stack and free up the used system resources.
 
 ```
 docker-compose -f docker-compose.quickstart.yml down -v
 ```
 
-## Test using LOGIQ UI
+## Test using Apica Ascent UI
 
-Once the LOGIQ server is up and running, the LOGIQ UI can be accessed as described above on <mark style="color:green;">**port 80**</mark> on the server docker-compose. You will be presented with a login screen as shown below.
+Once the Apica Ascent server is up and running, the Apica Ascent UI can be accessed as described above on <mark style="color:green;">**port 80**</mark> on the server docker-compose. You will be presented with a login screen as shown below.
 
 {% hint style="info" %}
 Use _flash-admin@foo.com_ / _flash-password_ to login
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Screen Shot 2022-03-19 at 8.11.14 AM.png" alt=""><figcaption><p>LOGIQ Login Page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2022-03-19 at 8.11.14 AM.png" alt=""><figcaption><p>Apica Ascent Login Page</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>LOGIQ Dashboards</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Apica Ascent Dashboards</p></figcaption></figure>
 
 ## Ingesting data
 
-For setting up data ingestion from your endpoints and applications into LOGIQ.AI, please refer to the [Integrations section](../integrations/overview/).
+For setting up data ingestion from your endpoints and applications into Apica Ascent, please refer to the [Integrations section](../integrations/overview/).
 
-**The quickstart compose file includes a test data tool** that will generate test log data and also has a couple of dashboards that show LOGIQ's APM capabilities.
+**The quickstart compose file includes a test data tool** that will generate test log data and also has a couple of dashboards that show Apica Ascent's APM capabilities.
 
 The test log data can be viewed under Explore page&#x20;
 
@@ -100,7 +100,7 @@ Click on any Procid and you will be taken to the Flows page with detailed logs a
 
 ## Distributed Tracing
 
-Logiq.ai provides application performance monitoring (APM) which can help end-to-end monitoring for microservices architectures, traces can be sent over 14250 (gRPC port). To view traces, navigate to **Trace** page under Explore.&#x20;
+Apica Ascent provides application performance monitoring (APM) which can help end-to-end monitoring for microservices architectures, traces can be sent over 14250 (gRPC port). To view traces, navigate to **Trace** page under Explore.&#x20;
 
 select the Service and a list of traces will appear on the right-hand side of the screen. The traces have titles that correspond to the **Operator** selector on the search form. The traces can be further analyzed by clicking on the Analyse icon which will pull up the entire logs for the corresponding trace-id.
 
@@ -116,7 +116,7 @@ To view the detailed trace, you can select a specific trace instance and check d
 
 ### Prometheus monitoring and alerting
 
-The LOGIQ quickstart file includes Prometheus and Alertmanager services. 2 APM Dashboards to monitor the quickstart environments are included.
+The Apica Ascent quickstart file includes Prometheus and Alertmanager services. 2 APM Dashboards to monitor the quickstart environments are included.
 
 {% hint style="info" %}
 **NOTE:** It may take up to 1 minute for the APM metrics to appear once initial setup. Please use the "Refresh" button at the top right section of the Dashboards to refresh.
@@ -128,7 +128,7 @@ The LOGIQ quickstart file includes Prometheus and Alertmanager services. 2 APM D
 
 ### Ports
 
-LOGIQ service exposes the below ports
+Apica Ascent service exposes the below ports
 
 * **7514** - Syslog / TCP - TLS
 * **514** - Syslog / TCP - Non TLS
@@ -136,7 +136,7 @@ LOGIQ service exposes the below ports
 * **20514** - RELP/Rsyslog / TCP - Non TLS
 * **9998** - Server administration web cli
 * **9999** - REST API
-* **8081** - gRPC ( needed for logiqctl CLI )
+* **8081** - gRPC ( needed for apicactl CLI )
 * **80** - http
 * **443** - https
 * **24224/24225** - FluentForward protocol port / TLS

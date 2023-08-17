@@ -1,12 +1,12 @@
 ---
-description: Monitoring spring boot applications using Logiq
+description: Monitoring spring boot applications using Apica Ascent
 ---
 
 # Spring Boot
 
 ### Spring Boot Actuator and Micrometer
 
-[Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready) is a sub-project of Spring Boot that adds several production-grade services to your application with little effort on your part. It exposes various operational information about the running application - health, metrics, audit entries, scheduled tasks, env settings, etc. You can query the data via several HTTP endpoints. In this guide, we discuss how to enable API and other metrics using Actuator and micrometer.&#x20;
+[Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready) is a subproject of Spring Boot that adds several production-grade services to your application with little effort on your part. It exposes various operational information about the running application - health, metrics, audit entries, scheduled tasks, env settings, etc. You can query the data via several HTTP endpoints. In this guide, we discuss how to enable API and other metrics using Actuator and micrometer.&#x20;
 
 [Micrometer](https://micrometer.io/) provides a simple facade over the instrumentation clients for the most popular monitoring systems, allowing you to instrument your JVM-based application code without vendor lock-in. Think SLF4J, but for metrics.
 
@@ -36,7 +36,7 @@ Next, in Spring Boot's `application.properties` file, add the following line.&#x
 management.endpoints.web.exposure.include=health,info,prometheus
 ```
 
-Restart the server and navigate to `http://localhost:<port>/actuator/` to verifiy if the Actuator endpoints are enabled.&#x20;
+Restart the server and navigate to `http://localhost:<port>/actuator/` to verify if the Actuator endpoints are enabled.&#x20;
 
 ![Actuator Endpoints](<../../.gitbook/assets/image (37).png>)
 
@@ -54,7 +54,7 @@ Restart the server, invoke your APIs a few times and navigate to `http://localho
 
 ![](<../../.gitbook/assets/image (57).png>)
 
-Once these metrics are available, you can use LOGIQ to visualize them and set up alerts for important events. The following image depicts an example of Spring Boot monitoring dashboard built by visualizing metrics ingested into LOGIQ via Prometheus.&#x20;
+Once these metrics are available, you can use Apica Ascent to visualize them and set up alerts for important events. The following image depicts an example of Spring Boot monitoring dashboard built by visualizing metrics ingested into Apica Ascent via Prometheus.&#x20;
 
 ![](../../.gitbook/assets/Spring-boot.png)
 

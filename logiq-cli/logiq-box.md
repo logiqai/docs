@@ -1,6 +1,6 @@
 ---
 description: >-
-  This page documents the logiq-box CLI for log tailing, command line queries on
+  This page documents the apicactl CLI for log tailing, command line queries on
   the ingested log data
 ---
 
@@ -9,26 +9,26 @@ description: >-
 ## Download
 
 ```text
-git clone https://github.com/logiqai/logiqbox
+git clone https://github.com/logiqai/logiqctl
 ```
 
 ## Help
 
 ```text
 NAME:
-   Logiq-box - Logiq CLI Tool
+   logiqctl - logiqctl CLI Tool
 
 USAGE:
-   logiqbox [global options] command [command options] [arguments...]
+   logiqctl [global options] command [command options] [arguments...]
 
 VERSION:
    1.0.0
 
 AUTHOR:
-   Logiq Inc
+  Apica AB 
 
 COMMANDS:
-     configure, c  Configure Logiq-box
+     configure, c  Configure logiqctl
      list, ls      List of applications that you can tail
      tail, t       tail sudo cron
      query, q      query "sudo cron" 2h

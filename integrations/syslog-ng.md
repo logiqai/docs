@@ -15,11 +15,11 @@ To install Syslog-ng on your system, please refer to the official git repo given
 
 ### Configuration of Syslog-ng
 
-LOGIQ supports data ingestion from Syslog-ng. The following instructions describe the steps for configuring log forwarding from Syslog-ng to LOGIQ by modifying the Syslog-ng configuration file.&#x20;
+Apica Ascent supports data ingestion from Syslog-ng. The following instructions describe the steps for configuring log forwarding from Syslog-ng to Apica Ascent by modifying the Syslog-ng configuration file.&#x20;
 
-**Syslog-ng** supports both TCP and UDP protocols, LOGIQ only supports ingestion of logs over TCP protocol to ensure packets are not lost or dropped. TCP relies on acknowledgments from the receiver to make sure the packet is delivered.
+**Syslog-ng** supports both TCP and UDP protocols, Apica Ascent only supports ingestion of logs over TCP protocol to ensure packets are not lost or dropped. TCP relies on acknowledgments from the receiver to make sure the packet is delivered.
 
-LOGIQ.AI hosts the syslog protocol at port **514.** The ports are configurable and can be changed if needed. Additonal port for TLS is available at **7514**
+Apica Ascent hosts the syslog protocol at port **514.** The ports are configurable and can be changed if needed. Additional port for TLS is available at **7514**
 
 ### **INPUT**
 
@@ -56,17 +56,17 @@ log {
 
 ### OUTPUT
 
-LOGIQ.AI supports multiple way to ingest data via standard interfaces. With syslog-ng you can use the built-in syslog, http output destinations to push data to LOGIQ.AI. We however recommend using LOGIQ.AI's python destination for syslog-ng driver as it provides most capabilities and control over pushing you data at scale.
+Apica Ascent supports multiple way to ingest data via standard interfaces. With syslog-ng you can use the built-in syslog, http output destinations to push data to Apica Ascent. We however recommend using Apica Ascent's python destination for syslog-ng driver as it provides most capabilities and control over pushing you data at scale.
 
-### Python syslog-ng destination for LOGIQ.AI
+### Python syslog-ng destination for Apica Ascent
 
-The syslog-ng python destination driver for LOGIQ.AI is avalable as a python package and can be installed via pip. To enable the python destination support, first install the python destination support for syslog-ng. Below is an example of how to do this on an ubuntu system.&#x20;
+The syslog-ng python destination driver for Apica Ascent is avalable as a python package and can be installed via pip. To enable the python destination support, first install the python destination support for syslog-ng. Below is an example of how to do this on an ubuntu system.&#x20;
 
 ```shell
 apt-get install syslog-ng-mod-python
 ```
 
-You can refer to the syslog-ng website for other operating systems. You can now proceed to install the LOGIQ.AI driver next. This assumes you have python3 installed. More details on the LOGIQ.AI driver can be found at [https://pypi.org/project/logiqaidstsyslogng/](https://pypi.org/project/logiqaidstsyslogng/)
+You can refer to the syslog-ng website for other operating systems. You can now proceed to install the Apica Ascent driver next. This assumes you have python3 installed. More details on the Apica Ascent driver can be found at [https://pypi.org/project/logiqaidstsyslogng/](https://pypi.org/project/logiqaidstsyslogng/)
 
 ```shell
 pip install --upgrade logiqaidstsyslogng
@@ -81,7 +81,7 @@ pip3 install --upgrade logiqaidstsyslogng
 ### Checking Python2/3 linkage for syslog-ng
 
 {% hint style="info" %}
-Note you may need to use pip3 vs pip to install depending on what the syslog-ng python linkage is. A quick way to test your python linkage is to create a dummy  syslong-ng confi file with a python destination. See below
+Note you may need to use pip3 vs pip to install depending on what the syslog-ng python linkage is. A quick way to test your python linkage is to create a dummy syslog-ng config file with a python destination. See below
 {% endhint %}
 
 ```
@@ -109,7 +109,7 @@ destination d_test {
 log { source(s_dummy); destination(d_test); };
 ```
 
-Run syslog-ng with the above dummy config and you should see the version of python that it loads
+Run syslog-ng with the above dummy config, and you should see the version of python that it loads
 
 ```shell
 #syslog-ng -f ./dummy-syslog-ng.conf --foreground
@@ -141,9 +141,9 @@ timeout = 5
 ```
 {% endcode %}
 
-#### Creating a syslog-ng destination for LOGIQ.AI
+#### Creating a syslog-ng destination for Apica Ascent
 
-You are now ready to update your syslog-ng conf to add a LOGIQ.AI python destination
+You are now ready to update your syslog-ng conf to add a Apica Ascent python destination
 
 {% code title="syslog-ng.conf" overflow="wrap" lineNumbers="true" %}
 ```
@@ -170,21 +170,21 @@ log { source(s_local); destination(d_logiq); };
 {% endcode %}
 
 {% hint style="info" %}
-LOGIQ.AI only works with RFC3339/ISO8601 time stamps so the python destination must add the ISODATE key which will be sent as timestamp.
+Apica Ascent only works with RFC3339/ISO8601 time stamps so the python destination must add the ISODATE key which will be sent as timestamp.
 
 The scope for value-pairs also needs to contain rfc5424 so we can pull out all the standard syslog fields such as host, application, pid, sdata etc.
 {% endhint %}
 
-The python destination provides some usefule options as described below
+The python destination provides some useful options as described below
 
 | Name          | Values                                                                          | Default | Notes                                                                                                       |
 | ------------- | ------------------------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
 | batch-timeout | e.g. 500 (milliseconds)                                                         | NA      | Refer to syslog-ng documentation. This allows for batching logs                                             |
 | batch-lines   | e.g. 400                                                                        | NA      | Refer to syslog-ng documentation. This limits the max batch size allowed before python plugin calls a flush |
 | class         | <pre data-overflow="wrap"><code>logiqaidstsyslogng.LogDestination
-</code></pre> | NA      | Specifies the LOGIQ.AI python driver class to load                                                          |
+</code></pre> | NA      | Specifies the Apica Ascent python driver class to load                                                          |
 
-The LOGIQ.AI driver provides various options as described below
+The Apica Ascent driver provides various options as described below
 
 | Option Name        | Values                         | Default | Notes                                                                                                   |
 | ------------------ | ------------------------------ | ------- | ------------------------------------------------------------------------------------------------------- |
@@ -197,9 +197,9 @@ The LOGIQ.AI driver provides various options as described below
 | application-key    | e.g. PROGRAM                   | Not set | Which key from log event maps to application                                                            |
 | cluster-key        | e.g. HOST                      | Not set | Which key from log event maps to cluster/group identifier                                               |
 
-### Organizing data in LOGIQ.AI
+### Organizing data in Apica Ascent
 
-Data in the LOGIQ.AI gets organized as flows. A flow consists of a Namespace, an application name and one or more subflows or ProcId's. This allows mapping most legacy and cloud native environments in LOGIQ.AI with minimal configuration
+Data in the Apica Ascent gets organized as flows. A flow consists of a Namespace, an application name and one or more subflows or ProcId's. This allows mapping most legacy and cloud native environments in Apica with minimal configuration
 
 {% hint style="info" %}
 Please set namespace, application and cluster\_id mappings in syslogn-ng.conf. If this is not configured, default mappings will be used.
@@ -213,7 +213,7 @@ Additional methods to push data via syslog-ng are documented below but are not r
 
 #### OUTPUT (**non-TLS)**
 
-The below configuration describes how logs are sent to LOGIQ over non-TLS protocol using **syslog()** driver
+The below configuration describes how logs are sent to Apica Ascent over non-TLS protocol using **syslog()** driver
 
 ```
 destination d_network {
@@ -231,7 +231,7 @@ log {
 
 #### OUTPUT (TLS)
 
-The below configuration forwards logs over TLS to LOGIQ over non-TLS protocol using **syslog()** driver
+The below configuration forwards logs over TLS to Apica Ascent over non-TLS protocol using **syslog()** driver
 
 ```
 destination d_syslog_tls {

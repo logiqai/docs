@@ -1,5 +1,5 @@
 ---
-description: Setup JMX Exporter and send metrics to LOGIQ.AI endpoint
+description: Setup JMX Exporter and send metrics to Apica Ascent endpoint
 ---
 
 # JMX Exporter
@@ -12,7 +12,7 @@ We will be using [JMX exporter](https://github.com/prometheus/jmx\_exporter) whi
 
 This tutorial will explain how to run JMX exporter as a Java agent.
 
-1. Head to the github website of [JMX exporter](https://github.com/prometheus/jmx\_exporter), and download the .jar file from the `Running the Java Agent` section.
+1. Head to the GitHub website of [JMX exporter](https://github.com/prometheus/jmx\_exporter), and download the .jar file from the `Running the Java Agent` section.
 2. Move this JAR file to the same location where your service JAR file is located.
 3. Make a minimal `config.yaml` file in the same directory:
 
@@ -33,7 +33,7 @@ java -javaagent:./jmx_prometheus_javaagent-0.17.2.jar=12345:config.yaml -jar you
 
 \---
 
-Now as we have the metrics exposed at a local endpoint, we can scrape them using prometheus and send it to LOGIQ endpoint via. remote\_write.
+Now as we have the metrics exposed at a local endpoint, we can scrape them using prometheus and send it to Apica Ascent endpoint via. remote\_write.
 
 Locate the prometheus configuration file and add a job in `scrape_configs` for java\_metrics like this:
 
@@ -62,9 +62,9 @@ scrape_configs:
         namespace: '<NAMESPACE>'
 ```
 
-Save the prometheus config file and restart/start the prometheus sytemd service by using these commands:
+Save the prometheus config file and restart/start the prometheus systemd service by using these commands:
 
 > `sudo systemctl restart prometheus` OR `sudo systemctl start prometheus`
 
-You will see the metrics populate at logiq engpoint in Query editor in some time.
+You will see the metrics populate at Apica Ascent endpoint in Query editor in some time.
 

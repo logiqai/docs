@@ -1,6 +1,6 @@
 ---
 description: >-
-  LOGIQ supports automatic detection of relevant events in your log stream.
+  Apica Ascent supports automatic detection of relevant events in your log stream.
   Events use a combination of built-in and user defined rules to give immediate
   insight into critical changes
 ---
@@ -13,4 +13,4 @@ Event Rules are grouped into Rule Packs. Click Rules Page in the left navigation
 
 ![](<../.gitbook/assets/image (2) (1).png>)
 
-It is easy to narrow down and search for events that you care about using search and filtering. Various types of rules available in LOGIQ are described in DATA MANAGEMENT section
+It is easy to narrow down and search for events that you care about using search and filtering. Various types of rules available in Apica Ascent are described in DATA MANAGEMENT section

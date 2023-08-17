@@ -1,8 +1,8 @@
 # MySQL Server (Amazon RDS)
 
-LOGIQ helps you to connect to **Amazon RDS for MySQL** data source which makes it easy for you to query MySql using its natural syntax, analyze, monitor, and create Visualization of data.
+Apica Ascent helps you to connect to **Amazon RDS for MySQL** data source which makes it easy for you to query MySql using its natural syntax, analyze, monitor, and create Visualization of data.
 
-All your queried results are cached, so you don't have to wait for the same result set every time, also LOGIQ helps you to visualize your data gathered from queries
+All your queried results are cached, so you don't have to wait for the same result set every time, also Apica Ascent helps you to visualize your data gathered from queries
 
 ### Adding MySQL Server for Amazon RDS
 

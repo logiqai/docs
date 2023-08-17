@@ -1,8 +1,8 @@
-# Deploying LOGIQ EKS on AWS using custom AMI
+# Deploying Apica Ascent EKS on AWS using custom AMI
 
 ## 1. Overview
 
-This guide will take you through deploying LOGIQ.AI on an EKS cluster with node groups using custom AMI on AWS using CloudFormation and HELM. The installation will create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with default encryption and bucket policies.&#x20;
+This guide will take you through deploying Apica Ascent on an EKS cluster with node groups using custom AMI on AWS using CloudFormation and HELM. The installation will create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with default encryption and bucket policies.&#x20;
 
 ## 2. EKS K8S compatibility
 
@@ -128,7 +128,7 @@ ebs-csi-node-fwwn2 3/3 Running 0 3h53m
 ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 ```
 
-### 5.4 Deploy LOGIQ.AI using HELM
+### 5.4 Deploy Apica Ascent using HELM
 
 **Step 1**: Download the values file below and customize it per the instructions below.&#x20;
 
@@ -138,7 +138,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 {% endtab %}
 {% endtabs %}
 
-**Step 2**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the LOGIQ stack on your EKS cluster.
+**Step 2**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the Apica Ascent stack on your EKS cluster.
 
 1. `awsServiceEndpoint`: https://s3.\<aws-region>.amazonaws.com
 2. `s3_bucket`: S3 bucket name
@@ -150,7 +150,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 kubectl create namespace logiq
 ```
 
-**Step 4:** Deploy LOGIQ.AI stack using helm and updated values file, see below for additional options to customize the deployment for enabling https and to use external Postgres database
+**Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customize the deployment for enabling https and to use external Postgres database
 
 ```bash
 helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq

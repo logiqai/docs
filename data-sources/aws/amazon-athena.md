@@ -8,7 +8,7 @@ To configure your Amazon Athena with the necessary permission, please navigate t
 
 ### Creating Athena Data Source <a href="#create-athena-data-source" id="create-athena-data-source"></a>
 
-After your Amazon Athena is configured, the next step is to create and add the Amazon Athena data source to your LOGIQ.
+After your Amazon Athena is configured, the next step is to create and add the Amazon Athena data source to your Apica Ascent.
 
 ![Selecting Athena from Data Source](../../.gitbook/assets/Athena-1.png)
 

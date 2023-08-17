@@ -1,8 +1,8 @@
 # MongoDB
 
-LOGIQ lets you connect to your MongoDB for seamless Querying of data
+Apica Ascent lets you connect to your MongoDB for seamless Querying of data
 
-### Adding MongoDB to LOGIQ
+### Adding MongoDB to Apica Ascent
 
 The first step is to create a MongoDB data source and provide all details such as the Name of the data source, Connection String, and the Database Name of your MongoDB. Optionally you can add Replica Set Name
 

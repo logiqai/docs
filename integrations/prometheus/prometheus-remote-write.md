@@ -1,17 +1,17 @@
 # Prometheus Remote Write
 
-LOGIQ can collect Prometheus metrics from externally hosted Prometheus. LOGIQ uses the `remote_write` capabilities to help you do so.
+Apica Ascent can collect Prometheus metrics from externally hosted Prometheus. Apica Ascent uses the `remote_write` capabilities to help you do so.
 
 ### **Prometheus configuration**
 
-To send metrics from Prometheus to LOGIQ endpoint, use the configuration below.&#x20;
+To send metrics from Prometheus to Apica Ascent endpoint, use the configuration below.&#x20;
 
 {% hint style="info" %}
 You may also want to add a relabel configuration section to make sure the metrics from your prometheus instance are prefixed for easier identification See Section below.
 {% endhint %}
 
 <pre><code><strong>remote_write:
-</strong>  - url: https://&#x3C;Logiq-endpoint>/api/v1/receive
+</strong>  - url: https://&#x3C;apica-ascent-endpoint>/api/v1/receive
     tls_config:
         insecure_skip_verify: true
         # Optional - ca_file: &#x3C;file-name>
@@ -32,7 +32,7 @@ The configuration for remote write in the Helm _**values.yaml**_ file differs sl
 ```
 server:
   remoteWrite:
-  - url: https://<Logiq-endpoint>/api/v1/receive
+  - url: https://<apica-ascent-endpoint>/api/v1/receive
     tls_config:
         insecure_skip_verify: true
         # Optional - ca_file: <file-name>
@@ -46,7 +46,7 @@ To ensure that your metrics are easily identifiable, replace _**\<prefix>**_ in 
 
 ```
   remote_write:
-  - url: https://<Logiq-endpoint>/api/v1/receive
+  - url: https://<apica-ascent-endpoint>/api/v1/receive
     tls_config:
         insecure_skip_verify: true
 
@@ -60,12 +60,12 @@ To ensure that your metrics are easily identifiable, replace _**\<prefix>**_ in 
 
 ### **OpenTelemetry configuration**
 
-The Prometheus Remote Write Exporter can be used to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/). By leveraging this capability, you can easily visualize these metrics on the LOGIQ platform, allowing you to gain valuable insights into the performance of your system.
+The Prometheus Remote Write Exporter can be used to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/). By leveraging this capability, you can easily visualize these metrics on the Apica Ascent platform, allowing you to gain valuable insights into the performance of your system.
 
 ```
 exporters:
   prometheusremotewrite:
-    endpoint: "https://<logiq-endpoint>/api/v1/receive"
+    endpoint: "https://<apica-ascent-endpoint>/api/v1/receive"
     wal: # Enabling the Write-Ahead-Log for the exporter.
       directory: ./prom_rw # The directory to store the WAL in
       buffer_size: 100 # Optional count of elements to be read from the WAL before truncating; default of 300
@@ -106,11 +106,11 @@ VictoriaMetrics is a fast, cost-effective, and scalable monitoring solution and 
 Run the [<mark style="color:blue;"><mark style="color:purple;">**vmagent**<mark style="color:purple;"></mark> ](https://docs.victoriametrics.com/vmagent.html#quick-start)as shown below and pass the below parameters
 
 {% hint style="info" %}
-&#x20;remoteWrite.tls.url=https://\<Logiq-endpoint>/api/v1/receive
+&#x20;remoteWrite.tls.url=https://\<apica-ascent-endpoint>/api/v1/receive
 
 remoteWrite.tlsInsecureSkipVerify
 {% endhint %}
 
 ```
-./vmagent-prod -promscrape.config=/etc/prometheus/prometheus.yml -remoteWrite.url=https://<Logiq-endpoint>/api/v1/receive -remoteWrite.tlsInsecureSkipVerify
+./vmagent-prod -promscrape.config=/etc/prometheus/prometheus.yml -remoteWrite.url=https://<apica-ascent-endpoint>/api/v1/receive -remoteWrite.tlsInsecureSkipVerify
 ```

@@ -1,6 +1,6 @@
 # Amazon Elasticsearch Service
 
-LOGIQ supports **Amazon Elasticsearch Service** as a Data Source which makes it easy for you to perform interactive log analytics, real-time application monitoring, a website search, and more. OpenSearch is an open-source, distributed search and analytics suite derived from Elasticsearch
+Apica Ascent supports **Amazon Elasticsearch Service** as a Data Source which makes it easy for you to perform interactive log analytics, real-time application monitoring, a website search, and more. OpenSearch is an open-source, distributed search and analytics suite derived from Elasticsearch
 
 Let's see how Amazon Elasticsearch Service works
 
@@ -8,7 +8,7 @@ Let's see how Amazon Elasticsearch Service works
 
 ### Creating and Adding Amazon Elastic Service Data Source
 
-The first step is to add Amazon Elasticsearch Service Data Source to your LOGIQ. Fill out the below fields while configuring the data source
+The first step is to add Amazon Elasticsearch Service Data Source to your Apica Ascent. Fill out the below fields while configuring the data source
 
 * **Name**: Name of the data source
 * **Endpoint**: The endpoint of the Amazon Elasticsearch Service instance

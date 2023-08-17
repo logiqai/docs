@@ -1,8 +1,8 @@
 ---
 description: >-
-  LOGIQ server can connect to the popular agents such as logstash, rsyslog,
+  Apica Ascent server can connect to the popular agents such as logstash, rsyslog,
   fluentd. You can also use the docker syslog driver to connect directly to
-  LOGIQ for your container applications
+  Apica Ascent for your container applications
 ---
 
 # Ingesting data
@@ -83,10 +83,10 @@ $logiqctl get httpingestkey
 
 ## Rsyslogd
 
-Please see below on how to configure Rsyslog to send to LOGIQ server. Rsyslog can send data to LOGIQ using either TCP transport or RELP transport. The RELP module for Rsyslog is called `omrelp` and for the TCP forward is called `omfwd`
+Please see below on how to configure Rsyslog to send to Apica Ascent server. Rsyslog can send data to Apica Ascent using either TCP transport or RELP transport. The RELP module for Rsyslog is called `omrelp` and for the TCP forward is called `omfwd`
 
 {% hint style="warning" %}
-LOGIQ strongly recommends sending data using the RELP transport to ensure packets are not lost or dropped. RELP relies on acknowledgements from the receiver to make sure packet is delivered. LOGIQ, for its part only sends the acknowledgements back once the data is written to persistent store.
+Apica Ascent strongly recommends sending data using the RELP transport to ensure packets are not lost or dropped. RELP relies on acknowledgements from the receiver to make sure packet is delivered. Apica Ascent, for its part only sends the acknowledgements back once the data is written to persistent store.
 {% endhint %}
 
 ### Using omfwd
@@ -107,7 +107,7 @@ Update the syslog config in `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.co
 
 #### Installation rsyslog RELP modules
 
-rsyslog is installed by default in most modern OS's, rsyslog needs the omrelp module to send data to a RELP aware endpoint such as LOGIQ. To enable RELP install packages listed below
+rsyslog is installed by default in most modern OS's, rsyslog needs the omrelp module to send data to a RELP aware endpoint such as Apica Ascent. To enable RELP install packages listed below
 
 * rsyslog-relp, enables RELP protocol for rsyslog
 * rsyslog-gnutls, enables rsyslog to communicate over a secure socket
@@ -196,16 +196,16 @@ action(type="omrelp"
 
 ## Fluentd K8S
 
-If you are running a K8S cluster, you can use fluentd to send data to the LOGIQ server. Please see below for instructions
+If you are running a K8S cluster, you can use fluentd to send data to the Apica Ascent server. Please see below for instructions
 
-### Managing multiple K8S clusters in a single LOGIQ instance
+### Managing multiple K8S clusters in a single Apica Ascent instance
 
-When deploying fluentd daemonset on K8S clusters, we recommend you use the fluentd daemon set container provided by LOGIQ. It is available at [https://hub.docker.com/repository/docker/logiqai/fluentd-remote-syslog](https://hub.docker.com/repository/docker/logiqai/fluentd-remote-syslog). It allows the administrator to pass a human readable `CLUSTER_ID` or cluster identifier with all the log data.
+When deploying fluentd daemonset on K8S clusters, we recommend you use the fluentd daemon set container provided by Apica Ascent. It is available at [https://hub.docker.com/repository/docker/logiqai/fluentd-remote-syslog](https://hub.docker.com/repository/docker/logiqai/fluentd-remote-syslog). It allows the administrator to pass a human-readable `CLUSTER_ID` or cluster identifier with all the log data.
 
 {% hint style="success" %}
-Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters.
+Providing a CLUSTER\_ID allows Apica Ascent to separate namespaces that may be conflicting in two separate K8S clusters.
 
-It is also easier for the administrator to use human readable names vs LOGIQ using uuid's etc that it detects from the incoming stream.
+It is also easier for the administrator to use human-readable names vs Apica Ascent using uuid's etc that it detects from the incoming stream.
 {% endhint %}
 
 ### Running the fluentd daemonset
@@ -236,7 +236,7 @@ drwxr-xr-x  7 user  staff   224 Oct 30 14:47 ..
 
 Edit the **`fluentd/secret.yaml`** to include your CA and Client pub/private keys in base64 encoded format
 
-Edit the **`fluentd/fluentd-logiq.yaml`** and add your LOGIQ cluster IP/DNS. Also configure your `CLUSTER_ID` \(e.g. RC, Prod, Dev-Test, QA\).
+Edit the **`fluentd/fluentd-logiq.yaml`** and add your Apica Ascent cluster IP/DNS. Also configure your `CLUSTER_ID` \(e.g. RC, Prod, Dev-Test, QA\).
 
 ```text
 ....
@@ -259,7 +259,7 @@ kubectl apply -f fluentd-logiq.yaml
 
 ### Non-TLS Mode
 
-Edit the**`fluentd/fluentd-logiq_non_tls.yaml`**and add your LOGIQ cluster IP/DNS. Also configure your `CLUSTER_ID` \(e.g. RC, Prod, Dev-Test, QA\)
+Edit the**`fluentd/fluentd-logiq_non_tls.yaml`**and add your Apica Ascent cluster IP/DNS. Also configure your `CLUSTER_ID` \(e.g. RC, Prod, Dev-Test, QA\)
 
 ```text
 ....
@@ -281,16 +281,16 @@ kubectl apply -f fluentd-logiq_non_tls.yaml
 
 ## Fluent-bit K8S
 
-If you are running a K8S cluster, you can use fluent-bit to send data to the LOGIQ server. Please see below for instructions
+If you are running a K8S cluster, you can use fluent-bit to send data to the Apica Ascent server. Please see below for instructions
 
-### Managing multiple K8S clusters in a single LOGIQ instance
+### Managing multiple K8S clusters in a single Apica Ascent instance
 
-LOGIQ has provided its own fluent-bit daemon for deploying on K8S clusters. It is available at [https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/](https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/). It allows the administrator to pass a human readable `CLUSTER_ID` or cluster identifier with all the log data.
+Apica Ascent has provided its own fluent-bit daemon for deploying on K8S clusters. It is available at [https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/](https://bitbucket.org/logiqcloud/client-integrations/src/master/fluent-bit/). It allows the administrator to pass a human readable `CLUSTER_ID` or cluster identifier with all the log data.
 
 {% hint style="success" %}
-Providing a CLUSTER\_ID allows LOGIQ to separate namespaces that may be conflicting in two separate K8S clusters.
+Providing a CLUSTER\_ID allows Apica Ascent to separate namespaces that may be conflicting in two separate K8S clusters.
 
-It is also easier for the administrator to use human readable names vs LOGIQ using uuid's etc that it detects from the incoming stream.
+It is also easier for the administrator to use human-readable names vs Apica Ascent using UUID's etc. that it detects from the incoming stream.
 {% endhint %}
 
 ### Running the fluent-bit daemonset
@@ -327,7 +327,7 @@ $ kubectl create -f fluent-bit-role-binding.yaml
 $ kubectl create -f fluent-bit-role.yaml
 ```
 
-#### Fluent Bit to LOGIQ
+#### Fluent Bit to Apica Ascent
 
 The next step is to create a ConfigMap that will be used by the Fluent Bit DaemonSet:
 
@@ -335,7 +335,7 @@ The next step is to create a ConfigMap that will be used by the Fluent Bit Daemo
 $ kubectl create -f fluent-bit-config-logiq-forward.yml
 ```
 
-Fluent Bit DaemonSet is ready to be used with LOGIQ on a regular Kubernetes Cluster, configure the following in deamonset fluent-bit-daemonset-logiq-forward.yml
+Fluent Bit DaemonSet is ready to be used with Apica Ascent on a regular Kubernetes Cluster, configure the following in deamonset fluent-bit-daemonset-logiq-forward.yml
 
 * name: LOGIQ\_HOST
 
@@ -357,15 +357,15 @@ $ kubectl create -f fluent-bit-daemonset-logiq-forward.yml
 
 ## Docker Syslog log driver
 
-Using the docker syslog driver to send logs to LOGIQ is quite simple. Details about the docker syslog driver can be found here [https://docs.docker.com/config/containers/logging/syslog/](https://docs.docker.com/config/containers/logging/syslog/)
+Using the docker syslog driver to send logs to Apica Ascent is quite simple. Details about the docker syslog driver can be found here [https://docs.docker.com/config/containers/logging/syslog/](https://docs.docker.com/config/containers/logging/syslog/)
 
-LOGIQ supports both TLS and non TLS syslog ports using TCP.
+Apica Ascent supports both TLS and non TLS syslog ports using TCP.
 
 ### Required values
 
 Following fields are required options to be passed to the logdriver
 
-* `tag` - User a human readable string for better readability otherwise the first 12 chars of the container id will be used
+* `tag` - User a human-readable string for better readability otherwise the first 12 chars of the container id will be used
 * `syslog-format=rfc3164`
 * `syslog-address`
 
@@ -378,7 +378,7 @@ Following fields are required options to be passed to the logdriver
 
 ### Using TCP and non TLS port
 
-Sending data from docker to LOGIQ using TCP and non TLS port can be done as below. In the example below, we are going to run a mysql container and have all logs go to LOGIQ server hosted at _logiqserver-devtest.example.com_
+Sending data from docker to Apica Ascent using TCP and non TLS port can be done as below. In the example below, we are going to run a mysql container and have all logs go to Apica Ascent server hosted at _logiqserver-devtest.example.com_
 
 ```text
 docker run --log-driver syslog \
@@ -388,7 +388,7 @@ docker run --log-driver syslog \
 
 ### Using TCP and TLS port
 
-When using to connect to LOGIQ TLS port in a secured setup, pass the client certificates to connect to the server
+When using to connect to Apica Ascent TLS port in a secured setup, pass the client certificates to connect to the server
 
 ```text
 docker run --log-driver syslog \
@@ -400,9 +400,9 @@ docker run --log-driver syslog \
 
 ## Fluentd configuration
 
-Fluentd `out-forward`  Buffered Output plugin forwards events to other fluentd nodes. Logiq has the capability to act as one of the fluentd nodes.
+Fluentd `out-forward`  Buffered Output plugin forwards events to other fluentd nodes. Apica Ascent has the capability to act as one of the fluentd nodes.
 
-The below code block defines the minimal changes to be added to fluentd configuration to start sending log events to flash. It is important to have the transformations while sending the data to Logiq. 
+The below code block defines the minimal changes to be added to fluentd configuration to start sending log events to flash. It is important to have the transformations while sending the data to Apica Ascent. 
 
 ```text
 <source>
@@ -467,7 +467,7 @@ The below code block defines the minimal changes to be added to fluentd configur
 
 ## Fluent-bit configuration
 
-_Forward_ is the protocol used by [Fluentd](http://www.fluentd.org) to route messages between peers. The **forward** output plugin allows to provide interoperability between compatible systems, Logiq being one.
+_Forward_ is the protocol used by [Fluentd](http://www.fluentd.org) to route messages between peers. The **forward** output plugin allows to provide interoperability between compatible systems, Apica Ascent being one.
 
 The below code block defines the minimal changes to be added to the fluent-bit configuration to start sending log events to flash.
 

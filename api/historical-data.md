@@ -1,6 +1,6 @@
 ---
 description: >-
-  This page describes the API for querying the data from LOGIQ Observability
+  This page describes the API for querying the data from Apica Ascent Observability
   stack
 ---
 

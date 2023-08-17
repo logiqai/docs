@@ -1,6 +1,6 @@
 # Credentials
 
-A credential gives access details to the S3 storage resource so LOGIQ can drain the logs to your S3 compatible persistent store.
+A credential gives access details to the S3 storage resource so Apica Ascent can drain the logs to your S3 compatible persistent store.
 
 A credential is referenced in the destination section. For e.g.
 
@@ -43,11 +43,11 @@ Every credential requires a unique name. It is referenced by this name in the co
 
 ## secret\_key \[required\]
 
-The _**"secret\_key"**_ keyword provides a secret or password that is part of the Access key used by the LOGIQ server to sign the request when it uses the S3 SDK to connect to an S3 compatible service.
+The _**"secret\_key"**_ keyword provides a secret or password that is part of the Access key used by the Apica Ascent server to sign the request when it uses the S3 SDK to connect to an S3 compatible service.
 
 ## access\_key \[required\]
 
-The _**"access\_key"**_ keyword provides an access or user identifier that is part of the Access key used by the LOGIQ server to sign the request when it used the S3 SDK to connect to an S3 compatible service.
+The _**"access\_key"**_ keyword provides an access or user identifier that is part of the Access key used by the Apica Ascent server to sign the request when it used the S3 SDK to connect to an S3 compatible service.
 
 
 

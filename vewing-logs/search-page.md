@@ -30,11 +30,11 @@ A successful search reveals a graph with a time-series view of logs, a table wit
 
 ### Filter data using Facets
 
-Use facets to narrow your search results. Logiq's intelligent parsing engine extracts facets at the time of data ingestion. By default selecting a facet only filters the data loaded in the browser. If the data is not available, click on the "apply" button to fetch more results.
+Use facets to narrow your search results. Apica Ascent's intelligent parsing engine extracts facets at the time of data ingestion. By default selecting a facet only filters the data loaded in the browser. If the data is not available, click on the "apply" button to fetch more results.
 
 ### View Log Detail
 
-Expand the caret available in each row to see the log in detail. 
+Expand the caret available in each row to see the login detail. 
 
 ![](../.gitbook/assets/flash-high-level-search-expand.png)
 
@@ -44,7 +44,7 @@ The dots available on each line will reveal additional options to export individ
 
 ### Context Logs
 
-When you’ve narrowed down your results to a single log line and now you want to see the logs around it. You can do that by clicking the context logs option. This brings up the logs modal and you can view the logs from the selected application and process. The log line of interest will be highlighted so that you can look around it.
+When you’ve narrowed down your results to a single log line, and now you want to see the surrounding logs. You can do that by clicking the context logs option. This brings up the logs modal and you can view the logs from the selected application and process. The log line of interest will be highlighted so that you can look around it.
 
 ![](../.gitbook/assets/flash-high-level-context-logs.png)
 

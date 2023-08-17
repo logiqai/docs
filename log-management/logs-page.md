@@ -6,7 +6,7 @@ description: >-
 
 # Explore Logs
 
-The Explore page lists all of the log streams generated across your IT environment that are being ingested into LOGIQ. The Explore page lists and categorizes logs based on Namespace, Application, ProcID, and when they were last updated. By default, logs are listed by the time they were ingested with the most recent applications appearing on the top. You can filter log streams by namespaces, applications, and ProcIDs. You can also filter them by custom time ranges.&#x20;
+The Explore page lists all the log streams generated across your IT environment that are being ingested into Apica Ascent. The Explore page lists and categorizes logs based on Namespace, Application, ProcID, and when they were last updated. By default, logs are listed by the time they were ingested with the most recent applications appearing on the top. You can filter log streams by namespaces, applications, and ProcIDs. You can also filter them by custom time ranges.&#x20;
 
 You can also click into a specific application or ProcID to view logs in more detail and to search through or identify patterns within your log data.&#x20;
 
@@ -43,7 +43,7 @@ The search happens at the namespace level, select the namespace and applications
 
 ### Filter data
 
-Use facets to narrow your search results. LOGIQ's intelligent parsing engine extracts facets at the time of data ingestion. Facets are available on the left side of search results. Select a facet and click on the "apply" button to fetch more results. Filtered results will be displayed in a separate tab.
+Use facets to narrow your search results. Apica Ascent's intelligent parsing engine extracts facets at the time of data ingestion. Facets are available on the left side of search results. Select a facet and click on the "apply" button to fetch more results. Filtered results will be displayed in a separate tab.
 
 ![](<../.gitbook/assets/image (29) (1) (1) (1) (1) (1).png>)
 

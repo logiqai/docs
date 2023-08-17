@@ -37,9 +37,9 @@ Steps to follow to access ALIVE UI,
 
 ALIVE functions are described in the figure below,
 
-<figure><img src="../.gitbook/assets/alive-anotomy-2023-05-05_17-59-26.jpg" alt=""><figcaption><p>ALIVE Anotomy</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/alive-anotomy-2023-05-05_17-59-26.jpg" alt=""><figcaption><p>ALIVE Anatomy</p></figcaption></figure>
 
-ALIVE Window- is divided into two sections; graph and work pad.
+ALIVE Window is divided into two sections; graph and work pad.
 
 At the top of the ALIVE window, the top portion is a graph of the time-series scatter plot of the explore log events mapped into scatter dots.  &#x20;
 

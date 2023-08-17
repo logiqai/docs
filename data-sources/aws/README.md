@@ -1,5 +1,5 @@
 ---
-description: LOGIQ.AI supports numerous services for AWS directly as Datasources.
+description: Apica Ascent supports numerous services for AWS directly as Datasources.
 ---
 
 # AWS

@@ -2,7 +2,7 @@
 description: Observability data collector agent
 ---
 
-# LOGIQ.ai Observability Data Collector Agent
+# Apica Ascent Observability Data Collector Agent
 
 Agent code and its installation tarball are released in the GitHub repository below
 

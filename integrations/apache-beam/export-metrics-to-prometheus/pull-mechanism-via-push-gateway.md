@@ -1,10 +1,10 @@
 # Pull Mechanism via Push-Gateway
 
-You can use the[ LOGIQ-IO Connector](https://github.com/logiqai/logiq-io) provided by Logiq via Github to push Apache Beam metrics to Push-Gateway.
+You can use the[LOGIQ-IO Connector](https://github.com/logiqai/logiq-io) provided by Apica Ascent via GitHub to push Apache Beam metrics to Push-Gateway.
 
 ## Setting up Push-Gateway via Docker (recommended)
 
-In order to setup push-gateway, just run the provided docker image.
+In order to set up push-gateway, just run the provided docker image.
 
 ```bash
 docker pull prom/pushgateway

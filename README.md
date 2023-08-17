@@ -1,28 +1,28 @@
 # Overview
 
-## LOGIQ.AI Full-stack Observability Data Fabric
+## Apica Ascent Full-stack Observability Data Fabric
 
-LOGIQ.AI is a full-stack observability data fabric that allows users to manage their entire observability data life-cycle: Collect, Store, Analyze, Transform, and Connect.
+Welcome to Apica Ascent, a powerful full-stack observability data fabric designed to streamline and optimize your entire observability data life-cycle: Collect, Store, Analyze, Transform, and Connect.
 
-![Observability data lifecycle](.gitbook/assets/Stages.png)
+![Observability Data Lifecycle](.gitbook/assets/Stages.png)
 
-The LOGIQ.AI data fabric unifies observability data into a single platform by bringing data life-cycle management for (M)etrics (E)vents (L)ogs (T)races or frequently referred to as MELT data. Root cause analysis depends on an integrated approach to MELT data. For e.g. if you see an API performance issue with response time through a latency metric, the ability to drill down to the api trace next, followed by logs for a span that may show the issue becomes critical in faster root cause. Having MELT data sit in separate systems is one of the main reasons why root cause is slow in most observability implementations. They are built as specialized silos that don't talk with each other. LOGIQ.AI is an integrated platform that provides a consistent view of all MELT data for faster root cause outcomes.
+The Apica Ascent data fabric consolidates observability data into a single platform, specifically focusing on (M)etrics, (E)vents, (L)ogs, and (T)races, commonly known as MELT data. This integrated approach to MELT data is crucial for efficient root cause analysis. For example, if you encounter an API performance issue represented by latency metrics, being able to drill down to the API trace and accompanying logs becomes critical for faster root cause identification. Unlike traditional observability implementations, where data sits in separate silos that don't communicate, Apica Ascent ensures a cohesive view of all MELT data, leading to faster root cause outcomes.
 
-![](.gitbook/assets/RCA.png)
+![Integrated Approach for Efficient Root Cause Analysis](.gitbook/assets/RCA.png)
 
-Because LOGIQ.AI supports the full collection of Log Data, it also includes a built-in security monitoring layer for a log-based HIDS (Host Intrusion Detection System) that is compatible with OSSEC, Atomic, and Wazuh agents. In addition, LOGIQ.AI integrates rules from the open source Sigma project for SIEM rules. This makes the LOGIQ.AI data fabric an ideal first-mile solution to consolidate MELT and security monitoring data for your enterprise environments.
+In addition to its observability capabilities, Apica Ascent also includes a built-in security monitoring layer, acting as a log-based Host Intrusion Detection System (HIDS). The platform is compatible with popular agents like OSSEC, Wazuh, and Atomic, and incorporates rules from the open-source Sigma project for Security Information and Event Management (SIEM) purposes. This makes Apica Ascent's data fabric a reliable first-mile solution for consolidating MELT and security monitoring data within your enterprise environments.
 
-![LOGIQ.AI Data Fabric](.gitbook/assets/LOGIQ-OVERVIEW.png)
+![Apica Ascent Data Fabric](.gitbook/assets/LOGIQ-OVERVIEW.png)
 
 ### Capabilities
 
-LOGIQ.AI brings a unified view for your enterprise with its full-stack approach to observability data life cycle management. An integrated approach means it is easier to root cause issues as all the capabilities work together in an integrated manner.
+Apica Ascent employs a unified view of your enterprise, utilizing a full-stack approach to observability data life cycle management. By seamlessly integrating various capabilities, Apica Ascent facilitates a smoother and more effective root cause analysis process.
 
 ![](<.gitbook/assets/LOGIQ-ALL (2).png>)
 
-### Communities
+### Communities and Compliance
 
-LOGIQ.AI is a SOC 2 Type II Compliance platform and a member of the CNCF.
+Apica Ascent takes pride in its commitment to security and compliance. The platform adheres to SOC 2 Type II Compliance standards and is an esteemed member of the Cloud Native Computing Foundation (CNCF).
 
 | ![](.gitbook/assets/SOC2.png) | ![](.gitbook/assets/cncf-featured.png) |
 | ----------------------------- | -------------------------------------- |

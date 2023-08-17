@@ -1,10 +1,10 @@
 # MySQL Server
 
-LOGIQ lets you connect to your MySQL easily and provides a rich Query editor to **Query your MySQL** using its natural syntax.
+Apica Ascent lets you connect to your MySQL easily and provides a rich Query editor to **Query your MySQL** using its natural syntax.
 
-All your queried results are cached, so you don't have to wait for the same result set every time, also LOGIQ helps you to visualize your data gathered from queries.
+All your queried results are cached, so you don't have to wait for the same result set every time, also Apica Ascent helps you to visualize your data gathered from queries.
 
-### Adding MySQL Server Data Source to LOGIQ
+### Adding MySQL Server Data Source to Apica Ascent
 
 The first step is to create a MySQL data source and provide all details mentioned below
 

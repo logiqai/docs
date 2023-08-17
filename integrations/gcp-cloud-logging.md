@@ -1,6 +1,6 @@
 # GCP Cloud Logging
 
-To set up log forwarding from GCP Cloud Logging to LOGIQ, you must:
+To set up log forwarding from GCP Cloud Logging to Apica Ascent, you must:
 
 * Create a user-managed service account
 * Create a Cloud Pub/Sub topic
@@ -23,7 +23,7 @@ The commands use [project name](https://cloud.google.com/storage/docs/projects#w
 {% endhint %}
 
 ```
-gcloud iam service-accounts create logstash --display-name="Logstash to Logiq"
+gcloud iam service-accounts create logstash --display-name="Logstash to Apica Ascent"
 ```
 
 Provide IAM permissions allowing the new service account to access Pub/Sub using the `pubsub.subscriber` role.
@@ -41,13 +41,13 @@ gcloud projects add-iam-policy-binding gcp-customer-1 \
 Create a Pub/Sub topic where Cloud Logging will send events to be picked up by Logstash using the following command.
 
 ```
-gcloud pubsub topics create logiq-topic
+gcloud pubsub topics create apica-ascent-topic
 ```
 
 Next, create a subscription by running the following command.
 
 ```
-gcloud pubsub subscriptions create logstash-sub --topic=logiq-topic \
+gcloud pubsub subscriptions create logstash-sub --topic=apica-ascent-topic \
  --topic-project=gcp-customer-1
 ```
 
@@ -57,7 +57,7 @@ Create a [log sink](https://cloud.google.com/logging/docs/routing/overview#sinks
 
 ```
 gcloud logging sinks create \
-logstash-sink pubsub.googleapis.com/projects/gcp-customer-1/topics/logiq-topic
+logstash-sink pubsub.googleapis.com/projects/gcp-customer-1/topics/apica-ascent-topic
 
 //Response
 Created [https://logging.googleapis.com/v2/projects/scalesec-dev/sinks/logstash-sink].
@@ -69,18 +69,18 @@ More information about sinks can be found at /logging/docs/export/
 The second part of the output is a reminder to verify that the service account used by Cloud Logging has permission to publish events to the Pub/Sub topic.&#x20;
 
 ```
-gcloud beta pubsub topics add-iam-policy-binding logiq-topic \
+gcloud beta pubsub topics add-iam-policy-binding apica-ascent-topic \
 --member serviceAccount:p245061149305-777814@gcp-sa-logging.iam.gserviceaccount.com \
 --role roles/pubsub.publisher
 ```
 
 ### Create a GCP PubSub App extension
 
-You can now launch the LOGIQ.AI GCP PubSub App extension and pull logs directly from the created topic and subscription. Please refer to the [<mark style="color:blue;">**documenation**</mark>](gcp-pubsub.md)  on how to do so.
+You can now launch the Apica Ascent GCP PubSub App extension and pull logs directly from the created topic and subscription. Please refer to the [<mark style="color:blue;">**documenation**</mark>](gcp-pubsub.md)  on how to do so.
 
 ### Create the Logstash VM (Deprecated) <a href="#create_the_logstash_vm" id="create_the_logstash_vm"></a>
 
-Create a VM to run `logstash` to pull logs from the Pub/Sub logging sink and send them to LOGIQ.AI:
+Create a VM to run `logstash` to pull logs from the Pub/Sub logging sink and send them to Apica Ascent:
 
 ```
 gcloud compute --project=gcp-customer-1 instances create logstash \
@@ -155,7 +155,7 @@ filter {
 }
 output {
  http {
-       url => "http://<logiq-endpoint>.logiq.ai/v1/json_batch"
+       url => "http://<apica-ascent-endpoint>.logiq.ai/v1/json_batch"
        headers => { "Authorization" => "Bearer <SECURE_INGEST_TOKEN>" }
        http_method => "post"
        format => "json_batch"
@@ -170,7 +170,7 @@ output {
 
 ### GKE Autopilot cluster (Deprecated)
 
-Autopilot is a new _mode of operation_ in Google Kubernetes Engine (GKE) that is designed to reduce the operational cost of managing clusters, optimize your clusters for production, and yield higher workload availability, use the below configuration on Logstash configuration to forward logs to Logiq.
+Autopilot is a new _mode of operation_ in Google Kubernetes Engine (GKE) that is designed to reduce the operational cost of managing clusters, optimize your clusters for production, and yield higher workload availability, use the below configuration on Logstash configuration to forward logs to Apica Ascent.
 
 ```
 input
@@ -258,9 +258,9 @@ output {
 The mappings for k8s\__node, k8s\_pod, k8s\_cluster can further be refined by mapping into the json logs from cloud logging. The above mapping is an example on how you can use flexible mappings to suite your needs._
 {% endhint %}
 
-You can obtain an ingest token from the LOGIQ UI as described [here](overview/generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
+You can obtain an ingest token from the Apica Ascent UI as described [here](overview/generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
 
-Your GCP Cloud Logging logs will now be forwarded to your LOGIQ instance. See the [Explore](../log-management/explore-logs.md) Section to view the logs.
+Your GCP Cloud Logging logs will now be forwarded to your Apica Ascent instance. See the [Explore](../log-management/explore-logs.md) Section to view the logs.
 
 ### Running logstash outside of GCE
 

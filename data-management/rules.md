@@ -1,8 +1,8 @@
 # Rules
 
-LOGIQ provides a set of Data Management Rules that help you manage your data. These rules are packaged into Rule Packs and are available on the Rules page.
+Apica Ascent provides a set of Data Management Rules that help you manage your data. These rules are packaged into Rule Packs and are available on the Rules page.
 
-Here are some of the Data Management Rules that LOGIQ supports:
+Here are some of the Data Management Rules that Apica Ascent supports:
 
 * [Filter Rules](https://docs.logiq.ai/data-management/filter)
 * [Extract Rules](https://docs.logiq.ai/data-management/extract)

@@ -1,12 +1,12 @@
 # Azure Event Hubs
 
-Azure Events Hubs is a big data streaming platform and event ingestion service capable of receiving and processing millions of events per second. You can integrate your LOGIQ instance into your event hubs to transform, analyze, and store data received by them.&#x20;
+Azure Events Hubs is a big data streaming platform and event ingestion service capable of receiving and processing millions of events per second. You can integrate your Apica Ascent instance into your event hubs to transform, analyze, and store data received by them.&#x20;
 
-Setting up data ingestion from your Azure Event Hubs into LOGIQ involves the following steps.&#x20;
+Setting up data ingestion from your Azure Event Hubs into Apica Ascent involves the following steps.&#x20;
 
 * Creating an Azure storage account.&#x20;
 * Creating an Event Hubs namespace and event hub
-* Configuring Logstash to forward logs to your LOGIQ instance
+* Configuring Logstash to forward logs to your Apica Ascent instance
 
 ### Creating an Azure storage account
 
@@ -45,7 +45,7 @@ An Event Hubs namespace provides a unique scoping container within which you can
 
 ### Configuring Logstash to forward logs&#x20;
 
-The final step is configuring Logstash to forward event logs from your Azure Event Hub to LOGIQ. Download and store the following`flattenJSON.rb` file. We will use this file while configuring Logstash.&#x20;
+The final step is configuring Logstash to forward event logs from your Azure Event Hub to Apica Ascent. Download and store the following`flattenJSON.rb` file. We will use this file while configuring Logstash.&#x20;
 
 {% file src="../.gitbook/assets/flattenJSON.rb" %}
 
@@ -105,7 +105,7 @@ output {
 ```
 
 | Field                      | Description                                                                |
-| -------------------------- | -------------------------------------------------------------------------- |
+|----------------------------| -------------------------------------------------------------------------- |
 | `<Path_to_flattenJSON.rb>` | Local file path where you saved the `flattenJSON.rb` file you downloaded.  |
-| `<LOGIQ_endpoint>`         | Your LOGIQ instance endpoint                                               |
-| `<LOGIQ_ingest_token>`     | Your LOGIQ ingest token                                                    |
+| `<APICA_endpoint>`         | Your Apica Ascent instance endpoint                                        |
+| `<APICA_ingest_token>`     | Your Apica Ascent ingest token                                             |

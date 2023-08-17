@@ -6,9 +6,9 @@ description: This section describes how to configure Role-based access controls 
 
 ## Overview
 
-LOGIQ, not only supports access to logs but also to additional data sources. LOGIQ's RBAC enforcement works by restricting access to the data source. This in turn translates to restricting user access to queries and dashboards created on those data sources.
+Apica Ascent, not only supports access to logs but also to additional data sources. Apica Ascent's RBAC enforcement works by restricting access to the data source. This in turn translates to restricting user access to queries and dashboards created on those data sources.
 
-In addition, LOGIQ's log collection model works by mapping incoming log data into [namespaces](logs-terminology.md#namespace). In LOGIQ, a [namespace](logs-terminology.md#namespace) is treated as a data source, thus allowing a uniform model for applying access restrictions.
+In addition, Apica Ascent's log collection model works by mapping incoming log data into [namespaces](logs-terminology.md#namespace). In Apica Ascent, a [namespace](logs-terminology.md#namespace) is treated as a data source, thus allowing a uniform model for applying access restrictions.
 
 ## Creating a namespace data source
 
@@ -28,7 +28,7 @@ The final step is to attach the namespace data source to a group. This restricts
 
 ## Managing access to namespaces from multiple clusters and hosts
 
-Namespaces in LOGIQ map to virtual hosts or namespaces in Kubernetes clusters. Resources such as ECS clusters can also be mapped to namespaces.
+Namespaces in Apica Ascent map to virtual hosts or namespaces in Kubernetes clusters. Resources such as ECS clusters can also be mapped to namespaces.
 
 Let us look at how this works in practice. In the example above, the access restrictions are applied to two namespaces `flash:advertise` and `prod-k8s:kube-system`
 
