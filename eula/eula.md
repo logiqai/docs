@@ -2,7 +2,7 @@
 
 IMPORTANT: USE OF THE Apica Ascent SOFTWARE CONSTITUTES ACCEPTANCE OF THIS AGREEMENT. IF YOU DO NOT AGREE TO THIS AGREEMENT, DO NOT USE THE SOFTWARE.
 
-This END USER LICENSE Agreement (the “Agreement”) is made effective by and among end-customer (“Customer”), and Apica AB with a place of business at Apica AB, HQ. Corporate HQ, Malmskillnadsgatan 32, 14th floor, 111 51, Stockholm, Sweden.
+This END USER LICENSE Agreement (the “Agreement”) is made effective by and among end-customer (“Customer”), and Apica AB with a place of business at Apica Inc., US HQ, 222 Pacific Coast Highway, 10th Floor, El Segundo, CA 90245.
 
 The parties agree as follows:
 
@@ -71,6 +71,6 @@ The parties agree as follows:
 
 7.2. _Relationship of the Parties_. No employees, consultants, contractors or agents of one party shall, as a result of this Agreement, be considered agents, employees, partners, franchisees or joint venturers of the other party, nor do they have any authority to bind the other party by contract or otherwise to any obligation. They will not represent to the contrary, either expressly or implicitly.
 
-7.3. _Choice of Law_: Jurisdiction and Venue. This Agreement will be governed by and interpreted in accordance with the laws of the State of Delaware without giving effect to its conflicts of law rules. Each of the Parties to this Agreement consents to the exclusive jurisdiction and venue of the state and federal courts located in Santa Clara County in the State of California.
+7.3. _Choice of Law_: Jurisdiction and Venue. This Agreement will be governed by and interpreted in accordance with the laws of the State of Delaware without giving effect to its conflicts of law rules. Each of the Parties to this Agreement consents to the exclusive jurisdiction and venue of the state and federal courts located in Los Angeles County in the State of California.
 
 7.4. _Assignment_. Neither party may assign or otherwise transfer any of its rights or obligations under this Agreement, without the prior written consent of the other party, except in the event of a merger, acquisition or sale of all or substantially all of its assets, except that neither party may assign or transfer this agreement to a direct competitor of the other party.

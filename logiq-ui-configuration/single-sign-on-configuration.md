@@ -49,7 +49,7 @@ This section describes the Okta configuration in detail. Users should assume the
 
 ![Create a New App](../.gitbook/assets/saml-4.png)
 
-On the next screen OKTA has fields for a few URLs:
+On the next screen, OKTA has fields for a few URLs:
 
 * Single Sign-On URL
 * Recipient URL
