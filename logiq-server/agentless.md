@@ -382,7 +382,7 @@ Sending data from docker to Apica Ascent using TCP and non TLS port can be done 
 
 ```text
 docker run --log-driver syslog \
---log-opt syslog-address=tcp://logiqserver-devtest.example.com:514 \
+--log-opt syslog-address=tcp://logiqserver-devtest.example.com:514 -e MYSQL_ROOT_PASSWORD=pass \
 --log-opt syslog-format=rfc3164 --log-opt tag=mysql --name mysql3 -d mysql
 ```
 
@@ -392,7 +392,7 @@ When using to connect to Apica Ascent TLS port in a secured setup, pass the clie
 
 ```text
 docker run --log-driver syslog \
---log-opt syslog-address=tcp://logiqserver-devtest.example.com:514 \
+--log-opt syslog-address=tcp://logiqserver-devtest.example.com:514  -e MYSQL_ROOT_PASSWORD=pass\
 --log-opt syslog-tls-cert=client.pem --log-opt syslog-tls-key=key.pem \
 --log-opt syslog-tls-ca-cert=ca.pem --log-opt syslog-format=rfc3164 \
 --log-opt tag=mysql --name mysql3 -d mysql
