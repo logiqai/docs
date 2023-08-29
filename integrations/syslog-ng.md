@@ -15,7 +15,7 @@ To install Syslog-ng on your system, please refer to the official git repo given
 
 ### Configuration of Syslog-ng
 
-Apica Ascent supports data ingestion from Syslog-ng. The following instructions describe the steps for configuring log forwarding from Syslog-ng to Apica Ascent by modifying the Syslog-ng configuration file.&#x20;
+Apica Ascent supports data ingestion from Syslog-ng. The following instructions describe the steps for configuring log forwarding from Syslog-ng to Apica Ascent by modifying the Syslog-ng configuration file.
 
 **Syslog-ng** supports both TCP and UDP protocols, Apica Ascent only supports ingestion of logs over TCP protocol to ensure packets are not lost or dropped. TCP relies on acknowledgments from the receiver to make sure the packet is delivered.
 
@@ -60,7 +60,7 @@ Apica Ascent supports multiple way to ingest data via standard interfaces. With 
 
 ### Python syslog-ng destination for Apica Ascent
 
-The syslog-ng python destination driver for Apica Ascent is avalable as a python package and can be installed via pip. To enable the python destination support, first install the python destination support for syslog-ng. Below is an example of how to do this on an ubuntu system.&#x20;
+The syslog-ng python destination driver for Apica Ascent is avalable as a python package and can be installed via pip. To enable the python destination support, first install the python destination support for syslog-ng. Below is an example of how to do this on an ubuntu system.
 
 ```shell
 apt-get install syslog-ng-mod-python
@@ -177,12 +177,13 @@ The scope for value-pairs also needs to contain rfc5424 so we can pull out all t
 
 The python destination provides some useful options as described below
 
-| Name          | Values                                                                          | Default | Notes                                                                                                       |
-| ------------- | ------------------------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
-| batch-timeout | e.g. 500 (milliseconds)                                                         | NA      | Refer to syslog-ng documentation. This allows for batching logs                                             |
-| batch-lines   | e.g. 400                                                                        | NA      | Refer to syslog-ng documentation. This limits the max batch size allowed before python plugin calls a flush |
+| Name          | Values                                                                          | Default                                                | Notes                                                                                                       |
+| ------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| batch-timeout | e.g. 500 (milliseconds)                                                         | NA                                                     | Refer to syslog-ng documentation. This allows for batching logs                                             |
+| batch-lines   | e.g. 400                                                                        | NA                                                     | Refer to syslog-ng documentation. This limits the max batch size allowed before python plugin calls a flush |
 | class         | <pre data-overflow="wrap"><code>logiqaidstsyslogng.LogDestination
-</code></pre> | NA      | Specifies the Apica Ascent python driver class to load                                                          |
+</code></pre> |                                                        |                                                                                                             |
+|               | NA                                                                              | Specifies the Apica Ascent python driver class to load |                                                                                                             |
 
 The Apica Ascent driver provides various options as described below
 
@@ -246,8 +247,6 @@ destination d_syslog_tls {
     );
 };
 ```
-
-
 
 #### Example (non-TLS)
 

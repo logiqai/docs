@@ -4,7 +4,7 @@ Apica Ascent can collect Prometheus metrics from externally hosted Prometheus. A
 
 ### **Prometheus configuration**
 
-To send metrics from Prometheus to Apica Ascent endpoint, use the configuration below.&#x20;
+To send metrics from Prometheus to Apica Ascent endpoint, use the configuration below.
 
 {% hint style="info" %}
 You may also want to add a relabel configuration section to make sure the metrics from your prometheus instance are prefixed for easier identification See Section below.
@@ -21,9 +21,9 @@ You may also want to add a relabel configuration section to make sure the metric
 
 #### Prometheus Remote Write in Helm Chart
 
-Prometheus helm&#x20;
+Prometheus helm
 
-Helm Chart for Prometheus document is found here:&#x20;
+Helm Chart for Prometheus document is found here:
 
 {% embed url="https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus" %}
 
@@ -95,18 +95,16 @@ service:
          exporters: [prometheusremotewrite]
 ```
 
-
-
 ### **VictoriaMetrics configuration**
 
 VictoriaMetrics is a fast, cost-effective, and scalable monitoring solution and time-series database. `vmagent` is an agent which helps you collect metrics from various sources and store them in [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) or any other Prometheus-compatible storage systems that support the `remote_write` protocol. VMagent has the ability to push metrics additionally to pulling them; push model is a traditional model of the client sending data to the server:
 
 ![](https://docs.victoriametrics.com/keyConcepts\_push\_model.png)
 
-Run the [<mark style="color:blue;"><mark style="color:purple;">**vmagent**<mark style="color:purple;"></mark> ](https://docs.victoriametrics.com/vmagent.html#quick-start)as shown below and pass the below parameters
+Run the [<mark style="color:purple;"><mark style="color:blue;">**vmagent**<mark style="color:blue;"></mark> ](https://docs.victoriametrics.com/vmagent.html#quick-start)as shown below and pass the below parameters
 
 {% hint style="info" %}
-&#x20;remoteWrite.tls.url=https://\<apica-ascent-endpoint>/api/v1/receive
+remoteWrite.tls.url=https://\<apica-ascent-endpoint>/api/v1/receive
 
 remoteWrite.tlsInsecureSkipVerify
 {% endhint %}

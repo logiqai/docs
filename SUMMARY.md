@@ -96,6 +96,7 @@
 * [Syslog-ng](integrations/syslog-ng.md)
 * [Splunk Universal Forwarder](integrations/splunk-universal-forwarder.md)
 * [Splunk Heavy Forwarder](integrations/splunk-heavy-forwarder.md)
+* [SNMP](integrations/snmp.md)
 
 ***
 
