@@ -1,6 +1,6 @@
 # Topology
 
-We are in the age of distributed computing, where you will be running everything as separate services. Debugging and doing a root cause analysis on such kind of application can be a difficult task.&#x20;
+We are in the age of distributed computing, where you will be running everything as separate services. Debugging and doing a root cause analysis on such kind of application can be a difficult task.
 
 Apica Ascent provides you with a topology view of all your namespaces and applications which will help you to do root cause analysis faster on any of your services. This will help you to find the errors and warnings in your services based specific time range.
 
@@ -22,9 +22,7 @@ It also runs a search query in Apica Ascent, which will help you fetch errors an
 
 In the above screenshot, we have errors in the alerts namespace. To find the errors for the application under the namespace, click on the `+` icon. It will display all the applications under that node.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 To run a search query for the errors, click on errors under the node with errors.
 
@@ -34,15 +32,13 @@ To run a search query for the errors, click on errors under the node with errors
 
 ### Organizing apps with Virtual Nodes
 
-To group all your namespaces under a specific group, we can use a virtual node in the topology. \
+To group all your namespaces under a specific group, we can use a virtual node in the topology.\
 \
 Here are the steps to create a virtual node,
 
 * Click on update topology
 * Under the virtual groups tab, click on add virtual group at the footer
 * Enter the virtual group name and press enter
-
-&#x20;
 
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
@@ -68,8 +64,6 @@ Here are the steps to create tags in the topology
 
 <figure><img src="../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
-
-
 ### Filtering Nodes
 
 Tags are used to filter nodes in the topology. By default, namespace and application names are created as tags.\
@@ -82,5 +76,4 @@ Here are the steps to filter nodes,
 <figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 Note:\
-When we add multiple tags for filtering, then `OR`  condition will be applied for combining those filters.
-
+When we add multiple tags for filtering, then `OR` condition will be applied for combining those filters.

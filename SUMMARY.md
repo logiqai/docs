@@ -97,6 +97,7 @@
 * [Splunk Universal Forwarder](integrations/splunk-universal-forwarder.md)
 * [Splunk Heavy Forwarder](integrations/splunk-heavy-forwarder.md)
 * [SNMP](integrations/snmp.md)
+* [Apica Synthetic Monitoring](integrations/apica-synthetic-monitoring.md)
 
 ***
 

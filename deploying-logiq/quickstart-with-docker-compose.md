@@ -1,7 +1,7 @@
 ---
 description: >-
-  This document describes the steps needed to bring up the Apica Ascent observability
-  stack using docker-compose for trial and demo use
+  This document describes the steps needed to bring up the Apica Ascent
+  observability stack using docker-compose for trial and demo use
 ---
 
 # Quickstart with Docker-Compose
@@ -82,7 +82,7 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 <figure><img src="../.gitbook/assets/Screen Shot 2022-03-19 at 8.11.14 AM.png" alt=""><figcaption><p>Apica Ascent Login Page</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Apica Ascent Dashboards</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Apica Ascent Dashboards</p></figcaption></figure>
 
 ## Ingesting data
 
@@ -90,7 +90,7 @@ For setting up data ingestion from your endpoints and applications into Apica As
 
 **The quickstart compose file includes a test data tool** that will generate test log data and also has a couple of dashboards that show Apica Ascent's APM capabilities.
 
-The test log data can be viewed under Explore page&#x20;
+The test log data can be viewed under Explore page
 
 <figure><img src="../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
 
@@ -100,7 +100,7 @@ Click on any Procid and you will be taken to the Flows page with detailed logs a
 
 ## Distributed Tracing
 
-Apica Ascent provides application performance monitoring (APM) which can help end-to-end monitoring for microservices architectures, traces can be sent over 14250 (gRPC port). To view traces, navigate to **Trace** page under Explore.&#x20;
+Apica Ascent provides application performance monitoring (APM) which can help end-to-end monitoring for microservices architectures, traces can be sent over 14250 (gRPC port). To view traces, navigate to **Trace** page under Explore.
 
 select the Service and a list of traces will appear on the right-hand side of the screen. The traces have titles that correspond to the **Operator** selector on the search form. The traces can be further analyzed by clicking on the Analyse icon which will pull up the entire logs for the corresponding trace-id.
 
@@ -143,4 +143,4 @@ Apica Ascent service exposes the below ports
 * **3000** - Grafana instance (optional), not available with quickstart
 * **14250** - gRPC(traces can be sent over gRPC)
 
-The ports used to bind are configurable via the server configuration file. See [Server options](broken-reference) for more details.
+The ports used to bind are configurable via the server configuration file. See [Server options](broken-reference/) for more details.
