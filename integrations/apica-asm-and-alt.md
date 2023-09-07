@@ -2,10 +2,11 @@
 description: Pull Check results from Apica's ASM
 ---
 
-# Apica Synthetic Monitoring
+# Apica ASM and ALT
 
-Apica Ascent supports pulling check results from Apica Synthetic Monitoring platform, you can pull the check results from Apica ASM and then do further processing on Apica Ascent. \
+The Apica Source Extension is a component designed to integrate with the Apica Synthetics and Load test platform. Its main purpose is to retrieve check results from the Apica platform and make them available for further processing or analysis within another system or tool.
 
+This checks can also be forwarded to further downstream destinations for further processing.
 
 ### Steps to create Apica ASM Source Extension
 
