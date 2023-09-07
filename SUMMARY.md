@@ -97,7 +97,7 @@
 * [Splunk Universal Forwarder](integrations/splunk-universal-forwarder.md)
 * [Splunk Heavy Forwarder](integrations/splunk-heavy-forwarder.md)
 * [SNMP](integrations/snmp.md)
-* [Apica ASM and ALT](integrations/apica-asm-and-alt.md)
+* [Apica ASM](integrations/apica-asm.md)
 
 ***
 
