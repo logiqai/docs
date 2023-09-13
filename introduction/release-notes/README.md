@@ -8,7 +8,7 @@ description: 'Latest release: v3.6'
 
 ## v3.6
 
-## 📅 Mon, Sept 11, 2023
+### 📅 Mon, Sept 11, 2023
 
 #### Welcome to the latest update of our product! We're excited to introduce several new features and improvements designed to enhance user experience.
 
