@@ -6,7 +6,7 @@ description: 'Latest release: v3.6'
 
 ### 🎉 LOGIQ.AI is now Apica 🎉
 
-### v3.6
+## v3.6
 
 #### 📅 Mon, Sept 11, 2023
 
