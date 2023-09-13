@@ -12,6 +12,8 @@ description: 'Latest release: v3.6'
 
 #### Welcome to the latest update of our product! We're excited to introduce several new features and improvements designed to enhance user experience.
 
+* **Enhanced Log Analysis with Generative AI like ChatGPT and Azure OpenAI Service**
+  * We're excited to introduce the **integration of Generative AI**, including **ChatGPT** and **Azure OpenAI Service**, into the Explore feature. Now, you can easily select logs and engage in dynamic conversations with Generative AI to gain in-depth insights into your log data. Ask questions, request explanations, and explore your logs to gain deeper insights into your log data, making log analysis more informative and versatile.
 * **ALIVE (Autonomous Log Interaction Visual Explorer)**: ALIVE is a powerful interactive visualization tool designed to empower users in identifying issues and patterns within their applications. This innovative tool offers a rich and insightful representation of unstructured logs. Key features includes:
   * **Autonomous Log Analysis**: ALIVE autonomously analyzes logs, saving users time and effort.
   * **Interactive Visualization**: Enjoy an interactive and engaging experience when exploring log data.
