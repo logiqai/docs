@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-This guide will take you through deploying Apica Ascent on an EKS cluster on AWS using CloudFormation and HELM. The installation will create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with default encryption and bucket policies.&#x20;
+This guide will take you through deploying Apica Ascent on an EKS cluster on AWS using CloudFormation and HELM. The installation will create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with default encryption and bucket policies.
 
 ## 2. EKS K8S compatibility
 
@@ -16,16 +16,16 @@ The Cloud formation template provisions the following resources
 
 1. S3 Bucket
 2. EKS Cluster
-3. EKS Node Pools&#x20;
+3. EKS Node Pools
 
 ### 3.1 IAM Role
 
 Create a role for EKS and EKS Node Pools with the below policies. Alternatively, this can be created using Cloud formation template [**https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiqiamrole.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiqiamrole.yaml)**,** details of created resources will be in the output section of Cloud formation, these details are used in section 5(step 4 and 5).
 
-* AmazonEKSWorkerNodePolicy&#x20;
-* AmazonEC2ContainerRegistryReadOnly&#x20;
-* AmazonEKS\_CNI\_Policy&#x20;
-* AmazonEKSClusterPolicy&#x20;
+* AmazonEKSWorkerNodePolicy
+* AmazonEC2ContainerRegistryReadOnly
+* AmazonEKS\_CNI\_Policy
+* AmazonEKSClusterPolicy
 * AmazonEKSServicePolicy
 
 Create the managed policies below and attach them to the above role, this will enable one to create **GP3** volumes in the cluster.
@@ -178,7 +178,7 @@ Create the managed policies below and attach them to the above role, this will e
 }
 ```
 
-In order for the IAM role to access the S3 bucket, create the policy below and attach it to the above IAM role&#x20;
+In order for the IAM role to access the S3 bucket, create the policy below and attach it to the above IAM role
 
 {% hint style="info" %}
 **Note:** Replace \<Your-bucket-name> with the name of the unique bucket name.
@@ -231,11 +231,11 @@ Without adding the trust relationship, roles cannot be attached to the EKS clust
 
 ## 4. Pre-requisites
 
-Before you begin, ensure you have the following prerequisites.&#x20;
+Before you begin, ensure you have the following prerequisites.
 
 1. You have permission on your AWS account to create an Elastic Kubernetes Service, S3 Bucket.
 2. Above mentioned roles are created
-3. The AWS CLI is installed and configured on your machine&#x20;
+3. The AWS CLI is installed and configured on your machine
 4. [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
 5. If you choose to use AWS RDS, then follow the guidelines below for your RDS
    * Note down your RDS instance DNS, username, and password handy.
@@ -247,38 +247,36 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 ### 5.1 Create EKS Cluster
 
-**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL: [ ](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiq-eks.yaml)[**https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster.yaml)&#x20;
+**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL:[**https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster.yaml)
 
-**Step 2**: On your AWS Console, navigate to CloudFormation and select **Create stack**.&#x20;
+**Step 2**: On your AWS Console, navigate to CloudFormation and select **Create stack**.
 
 **Step 3**: Provide the options as shown below
 
 * Under **Prerequisite - Prepare template**, select **Template is ready**.
 * Under **Specify template** > **Template source**, select **Amazon S3 URL -** Here you will specify the template URL from Step 1 above.
 
-![](../.gitbook/assets/0)
+![](../../.gitbook/assets/0)
 
 **Step 4**: To deploy the EKS cluster, we need to enter the **ARN** of the **IAM Role for EKS** that was created in **section 3.1.** We need a VPC with 2 subnets. Select them from the Network Configuration and Subnet configuration dropdown lists.
 
 {% hint style="info" %}
-**Important:** You **MUST** choose 2 different subnets from the same VPC.&#x20;
+**Important:** You **MUST** choose 2 different subnets from the same VPC.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
-The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
+The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.
 
 <table><thead><tr><th width="215.5557129983348">Node group</th><th width="275.2866694599267">Instance size (min recommended)</th><th>Nodes (HA)</th></tr></thead><tbody><tr><td><strong>ingest</strong></td><td>c5.xlarge (4 Core 8 GB RAM)</td><td>2</td></tr><tr><td><strong>common</strong></td><td>c5.2xlarge (8 Core 32 GB RAM)</td><td>2</td></tr><tr><td><strong>db</strong></td><td>c5.xlarge (4 Core 8 GB RAM)</td><td>2</td></tr></tbody></table>
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 **Step 5:** Provide the **S3 bucket name** from **section 3,** the Cloudformation will create the S3 bucket, S3 bucket name needs to be globally unique.
 
-![](<../.gitbook/assets/image (73).png>)
+![](<../../.gitbook/assets/image (73).png>)
 
 **Step 6**: Click **Next**, and follow the instructions on the screen to create the stack.
-
-
 
 ### 5.2 Verify EKS setup and tag subnets
 
@@ -332,11 +330,11 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 ### 5.4 Deploy Apica Ascent using HELM
 
-**Step 1**: Download the values file below and customize it per the instructions below.&#x20;
+**Step 1**: Download the values file below and customize it per the instructions below.
 
 {% tabs %}
 {% tab title="Values File For Helm" %}
-{% file src="../.gitbook/assets/values (1) (2).yaml" %}
+{% file src="../../.gitbook/assets/values (1) (2).yaml" %}
 {% endtab %}
 {% endtabs %}
 
@@ -383,12 +381,10 @@ helm upgrade --install logiq -n logiq \
 -f values.yaml logiq-repo/logiq
 ```
 
-&#x20;**Step 7:** After the installation is complete execute the below command to get the service endpoint
+**Step 7:** After the installation is complete execute the below command to get the service endpoint
 
 ```bash
 kubectl -n logiq get svc | grep LoadBalancer
 NAME                        TYPE           CLUSTER-IP       EXTERNAL-IP
 logiq-kubernetes-ingress     LoadBalancer <cluster_ip>    <Service end-point>
 ```
-
-&#x20;

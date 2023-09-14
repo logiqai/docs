@@ -143,4 +143,4 @@ Apica Ascent service exposes the below ports
 * **3000** - Grafana instance (optional), not available with quickstart
 * **14250** - gRPC(traces can be sent over gRPC)
 
-The ports used to bind are configurable via the server configuration file. See [Server options](broken-reference/) for more details.
+The ports used to bind are configurable via the server configuration file. See [Server options](../deploying-logiq/broken-reference/) for more details.

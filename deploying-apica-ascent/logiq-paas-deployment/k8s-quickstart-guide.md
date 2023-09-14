@@ -1,7 +1,7 @@
 ---
 description: >-
-  This page describes the Apica Ascent deployment on Kubernetes cluster using HELM 3
-  charts.
+  This page describes the Apica Ascent deployment on Kubernetes cluster using
+  HELM 3 charts.
 ---
 
 # Deploying Apica Ascent PaaS on Kubernetes
@@ -66,7 +66,7 @@ If you choose a different name for the namespace, please remember to use the sam
 
 ### 1.3 Prepare your Values YAML file
 
-Sample YAML files for small, medium, large cluster configurations can be downloaded at the following links.&#x20;
+Sample YAML files for small, medium, large cluster configurations can be downloaded at the following links.
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
@@ -89,7 +89,7 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq -f values.small.yaml
 ```
 
-Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-cluster) for sizing your Apica Ascent cluster as specified in these YAML file Latest image tags.
+Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-cluster)for sizing your Apica Ascent cluster as specified in these YAML file Latest image tags.
 
 ## 2. Install Apica Ascent
 
@@ -104,7 +104,7 @@ This will install Apica Ascent and expose the Apica Ascent services and UI on th
 The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. HELM chart can override the default admin settings as well. See section[ 3.7](k8s-quickstart-guide.md#3-7-customize-admin-account) on customizing the admin settings
 {% endhint %}
 
-![Apica Ascent Insights Login UI ](../../.gitbook/assets/landing.png)
+![Apica Ascent Insights Login UI](../../.gitbook/assets/landing.png)
 
 Apica Ascent server provides Ingest, log tailing, data indexing, query, and search capabilities.\
 Besides the web-based UI, Apica Ascent also offers [apicactl, Apica CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
@@ -128,7 +128,7 @@ The default login and password to use is `flash-admin@foo.com` and `flash-passwo
 {% endhint %}
 
 {% hint style="info" %}
-The `logiq.my-domain.com` also fronts all the Apica Ascent service ports as described in the [port details section](broken-reference).
+The `logiq.my-domain.com` also fronts all the Apica Ascent service ports as described in the [port details section](../../deploying-logiq/logiq-paas-deployment/broken-reference/).
 {% endhint %}
 
 | HELM Option                                              | Description                                                                                                                                                                                                  | Defaults   |
@@ -173,7 +173,7 @@ You will need to create the S3 bucket manually along with access and secret keys
 
 Once the bucket is created and access/secret is verified, provide the bucket name and access credentials in the step below.
 
-&#x20;Additionally, provide a valid amazon service endpoint for s3 else the config wll default to [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com)
+Additionally, provide a valid amazon service endpoint for s3 else the config wll default to [https://s3.us-east-1.amazonaws.com](https://s3.us-east-1.amazonaws.com)
 {% endhint %}
 
 ```bash
@@ -271,13 +271,13 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-| HELM Option                            | Description                                                                                                         | Default  |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | -------- |
+| HELM Option                            | Description                                                                                                                | Default  |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------- |
 | `global.chart.postgres`                | Deploy Postgres which is needed for Apica Ascent metadata. Set this to false if an external Postgres cluster is being used | true     |
-| `global.environment.postgres_host`     | Host IP/DNS for external Postgres                                                                                   | postgres |
-| `global.environment.postgres_user`     | Postgres admin user                                                                                                 | postgres |
-| `global.environment.postgres_password` | Postgres admin user password                                                                                        | postgres |
-| `global.environment.postgres_port`     | Host Port for external Postgres                                                                                     | 5432     |
+| `global.environment.postgres_host`     | Host IP/DNS for external Postgres                                                                                          | postgres |
+| `global.environment.postgres_user`     | Postgres admin user                                                                                                        | postgres |
+| `global.environment.postgres_password` | Postgres admin user password                                                                                               | postgres |
+| `global.environment.postgres_port`     | Host Port for external Postgres                                                                                            | 5432     |
 
 {% hint style="warning" %}
 While configuring RDS, create a new parameter group that sets autoVaccum to true or the value "1", associate this parameter group to your RDS instance.
@@ -289,7 +289,7 @@ Auto vacuum automates the execution of `VACUUM` and `ANALYZE` (to gather statist
 
 The deployment described above offers 30 days trial license. Send an e-mail to `license@logiq.ai` to obtain a professional license. After obtaining the license, use the apicactl tool to apply the license to the deployment. Please refer to `apicactl` details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai/). You will need API-token from Apica Ascent UI as shown below
 
-![Apica Ascent Insights Login Api-token ](../../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
+![Apica Ascent Insights Login Api-token](../../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
 
 ```bash
 Setup your Apica Ascent Cluster endpoint
@@ -315,8 +315,8 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-| HELM Option                         | Description                  | Default             |
-| ----------------------------------- | ---------------------------- | ------------------- |
+| HELM Option                         | Description                         | Default             |
+| ----------------------------------- | ----------------------------------- | ------------------- |
 | `global.environment.admin_name`     | Apica Ascent Administrator name     | flash-admin@foo.com |
 | `global.environment.admin_password` | Apica Ascent Administrator password | flash-password      |
 | `global.environment.admin_email`    | Apica Ascent Administrator e-mail   | flash-admin@foo.com |
@@ -344,7 +344,7 @@ helm install logiq --namespace logiq \
 
 ### 3.9 Configuring cluster id
 
-When deploying Apica Ascent, configure the cluster id to monitor your own Apica Ascent deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](broken-reference)
+When deploying Apica Ascent, configure the cluster id to monitor your own Apica Ascent deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](../../deploying-logiq/logiq-paas-deployment/broken-reference/)
 
 ```bash
 helm install logiq --namespace logiq \
@@ -352,19 +352,19 @@ helm install logiq --namespace logiq \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
-| HELM Option                    | Description                                                                                                                                  | Default |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| global.environment.cluster\_id | Cluster Id being used for the K8S cluster running Apica Ascent. See Section on [Managing multiple K8S](broken-reference) clusters for more details. | LOGIQ   |
+| HELM Option                    | Description                                                                                                                                                                                      | Default |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| global.environment.cluster\_id | Cluster Id being used for the K8S cluster running Apica Ascent. See Section on [Managing multiple K8S](../../deploying-logiq/logiq-paas-deployment/broken-reference/) clusters for more details. | LOGIQ   |
 
 ### 3.10 Sizing your Apica Ascent cluster
 
-When deploying Apica Ascent, size your infrastructure to provide appropriate VCPU and memory requirements. We recommend the following minimum size for small. medium and large cluster specification from [Section 1.3 ](k8s-quickstart-guide.md#1-3-prepare-your-values-YAML-file) values yaml files.
+When deploying Apica Ascent, size your infrastructure to provide appropriate VCPU and memory requirements. We recommend the following minimum size for small. medium and large cluster specification from [Section 1.3 ](k8s-quickstart-guide.md#1-3-prepare-your-values-YAML-file)values yaml files.
 
 | Apica Ascent Cluster | vCPU | Memory | NodeCount |
-| ------------- | ---- | ------ | --------- |
-| small         | 24   | 32 gb  | 3         |
-| medium        | 40   | 64 gb  | 5         |
-| large         | 64   | 128 gb | 8         |
+| -------------------- | ---- | ------ | --------- |
+| small                | 24   | 32 gb  | 3         |
+| medium               | 40   | 64 gb  | 5         |
+| large                | 64   | 128 gb | 8         |
 
 ### 3.11 NodePort/ClusterIP/LoadBalancer
 
@@ -437,7 +437,7 @@ The Grafana instance is exposed at port 3000 on the ingress controller. The depl
 
 ### 3.14 Configuring ALB Ingress on EKS <a href="#3.14-configuring-alb-on-eks" id="3.14-configuring-alb-on-eks"></a>
 
-Apica Ascent creates an Ingress resource in the namespace it is deployed.&#x20;
+Apica Ascent creates an Ingress resource in the namespace it is deployed.
 
 * Creating an OIDC provider for your EKS cluster - [https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.htm](https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html)
 * Please refer to the EKS configuration on how to automatically provision an ALB here - [https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)

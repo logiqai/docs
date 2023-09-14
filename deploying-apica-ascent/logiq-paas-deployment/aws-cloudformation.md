@@ -1,7 +1,7 @@
 ---
 description: >-
-  This page describes the AWS CloudFormation based deployment for the Apica Ascent
-  stack
+  This page describes the AWS CloudFormation based deployment for the Apica
+  Ascent stack
 ---
 
 # Deploying Apica Ascent PaaS on AWS
@@ -25,7 +25,7 @@ Please note that using the Marketplace AMI is not free and you will be charged p
 ## Apica Ascent UI credentials <a href="#default-user-and-password" id="default-user-and-password"></a>
 
 {% hint style="warning" %}
-After the Cloud formation template is complete, it may take several minutes for the UI to be available on the AMI.&#x20;
+After the Cloud formation template is complete, it may take several minutes for the UI to be available on the AMI.
 
 The deployment exposes the UI on an http port by default. You can install an ELB to front the UI via https. This is the recommended production setup.
 {% endhint %}
@@ -42,7 +42,7 @@ e.g. if CloudFormation stack is called Foo and bucket is called Bar the password
 
 {% embed url="https://www.youtube.com/watch?v=IDmJOF9y5Ac" %}
 
-Also see section on [AMI using CloudFormation](broken-reference) for more details.
+Also see section on [AMI using CloudFormation](../../deploying-logiq/logiq-paas-deployment/broken-reference/) for more details.
 
 ## Ingesting data
 

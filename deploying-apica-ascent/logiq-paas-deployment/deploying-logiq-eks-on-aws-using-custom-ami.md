@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-This guide will take you through deploying Apica Ascent on an EKS cluster with node groups using custom AMI on AWS using CloudFormation and HELM. The installation will create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with default encryption and bucket policies.&#x20;
+This guide will take you through deploying Apica Ascent on an EKS cluster with node groups using custom AMI on AWS using CloudFormation and HELM. The installation will create user roles and policies that are necessary to create a GP3 storage class and a private S3 bucket with default encryption and bucket policies.
 
 ## 2. EKS K8S compatibility
 
@@ -18,18 +18,16 @@ The Cloud formation template provisions the following resources
 2. Launch template with custom AMI
 3. IAM roles and S3 bucket policies
 4. EKS Cluster
-5. EKS Node Pools with custom AMI&#x20;
-
-
+5. EKS Node Pools with custom AMI
 
 ## 4. Pre-requisites
 
-Before you begin, ensure you have the following prerequisites.&#x20;
+Before you begin, ensure you have the following prerequisites.
 
 1. You have permission on your AWS account to create an Elastic Kubernetes Service, S3 Bucket.
-2. Pre baked Custom AMI to spin up for EKS managed node groups ( AWS recommended: [https://github.com/awslabs/amazon-eks-ami](https://github.com/awslabs/amazon-eks-ami))&#x20;
-3. KMS Key and appropriate key policy to allow Auto scaling group to access the KMS key ([https://aws.amazon.com/premiumsupport/knowledge-center/kms-launch-ec2-instance/](https://aws.amazon.com/premiumsupport/knowledge-center/kms-launch-ec2-instance/))&#x20;
-4. The AWS CLI is installed and configured on your machine&#x20;
+2. Pre baked Custom AMI to spin up for EKS managed node groups ( AWS recommended: [https://github.com/awslabs/amazon-eks-ami](https://github.com/awslabs/amazon-eks-ami))
+3. KMS Key and appropriate key policy to allow Auto scaling group to access the KMS key ([https://aws.amazon.com/premiumsupport/knowledge-center/kms-launch-ec2-instance/](https://aws.amazon.com/premiumsupport/knowledge-center/kms-launch-ec2-instance/))
+4. The AWS CLI is installed and configured on your machine
 5. [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
 6. If you choose to use AWS RDS, then follow the guidelines below for your RDS
    * Note down your RDS instance DNS, username, and password handy.
@@ -41,40 +39,40 @@ Before you begin, ensure you have the following prerequisites.&#x20;
 
 ### 5.1 Create EKS Cluster
 
-**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL: [ ](https://logiq-scripts.s3.ap-south-1.amazonaws.com/logiq-eks.yaml)
+**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL:
 
 [**https://logiq-scripts.s3.ap-south-1.amazonaws.com/aws-custom-ami.yaml**](https://logiq-scripts.s3.ap-south-1.amazonaws.com/aws-custom-ami.yaml)
 
-**Step 2**: On your AWS Console, navigate to CloudFormation and select **Create stack**.&#x20;
+**Step 2**: On your AWS Console, navigate to CloudFormation and select **Create stack**.
 
 **Step 3**: Provide the options as shown below
 
 * Under **Prerequisite - Prepare template**, select **Template is ready**.
 * Under **Specify template** > **Template source**, select **Amazon S3 URL -** Here you will specify the template URL from Step 1 above.
 
-![](<../.gitbook/assets/image (44).png>)
+![](<../../.gitbook/assets/image (44).png>)
 
 **Step 4**: To deploy the EKS cluster, we need to enter the **Custom AMI-ID** using which the **node groups of EKS** will be spun up. We need a VPC with 2 subnets. Select them from the Network Configuration and Subnet configuration dropdown lists. Also, provide the ssh-keys for the EKS node groups.
 
 {% hint style="info" %}
-**Important:** You **MUST** choose 2 different subnets from the same VPC.&#x20;
+**Important:** You **MUST** choose 2 different subnets from the same VPC.
 {% endhint %}
 
-![](<../.gitbook/assets/image (78).png>)
+![](<../../.gitbook/assets/image (78).png>)
 
-The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.&#x20;
+The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.
 
 <table><thead><tr><th width="216.5557129983348">Node group</th><th width="275.2866694599267">Instance size (min recommended)</th><th>Nodes (HA)</th></tr></thead><tbody><tr><td><strong>ingest</strong></td><td>c5.xlarge (4 Core 8 GB RAM)</td><td>2</td></tr><tr><td><strong>common</strong></td><td>c5.2xlarge (8 Core 32 GB RAM)</td><td>2</td></tr></tbody></table>
 
-![](<../.gitbook/assets/image (105).png>)
+![](<../../.gitbook/assets/image (105).png>)
 
 **Step 5:** Provide the **S3 bucket name** from **section 3,** the Cloudformation will create the S3 bucket, S3 bucket name needs to be globally unique.
 
-![](<../.gitbook/assets/image (73).png>)
+![](<../../.gitbook/assets/image (73).png>)
 
 **Step 6:** Provide the KMS key ARN
 
-![](<../.gitbook/assets/image (50).png>)
+![](<../../.gitbook/assets/image (50).png>)
 
 **Step 7**: Click **Next**, and follow the instructions on the screen to create the stack.
 
@@ -130,11 +128,11 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 ### 5.4 Deploy Apica Ascent using HELM
 
-**Step 1**: Download the values file below and customize it per the instructions below.&#x20;
+**Step 1**: Download the values file below and customize it per the instructions below.
 
 {% tabs %}
 {% tab title="Values File For Helm" %}
-{% file src="../.gitbook/assets/values (2).yaml" %}
+{% file src="../../.gitbook/assets/values (2).yaml" %}
 {% endtab %}
 {% endtabs %}
 
@@ -181,12 +179,10 @@ helm upgrade --install logiq -n logiq \
 -f values.yaml logiq-repo/logiq
 ```
 
-&#x20;**Step 7:** After the installation is complete execute the below command to get the service endpoint
+**Step 7:** After the installation is complete execute the below command to get the service endpoint
 
 ```bash
 kubectl -n logiq get svc | grep LoadBalancer
 NAME                        TYPE           CLUSTER-IP       EXTERNAL-IP
 logiq-kubernetes-ingress     LoadBalancer <cluster_ip>    <Service end-point>
 ```
-
-&#x20;
