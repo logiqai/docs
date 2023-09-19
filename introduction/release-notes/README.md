@@ -53,10 +53,6 @@ description: 'Latest release: v3.6'
 
 * **Optimized Search**
   * We've enhanced search performance by further optimizing the search query parallelism, ensuring quicker and more efficient results retrieval.
-* **Faster Search**
-  * In this release, we've enhanced the speed of our search functionality.
-* **Added Support for More than 10 Tabs in Search Page**
-  * Now, you can enjoy greater flexibility with our Search Page as we've added support for more than 10 tabs, allowing you to organize and manage your search tasks more effectively.
 * **Enhancement in Search feature by adding Regex for Extract.**
   * Get a holistic taxonomy of logs by automatically categorizing them based on their content, context and other characteristics. This capability provides users with a way to extract and classify logs automatically, improving the speed and accuracy of log-analysis. This saves time and effort by automating the process of field extraction, eliminating the need for users to manually identify and extract fields .
 
@@ -79,7 +75,6 @@ description: 'Latest release: v3.6'
 
 * **Increased gRPC Recovery Limits**
   * We've addressed an issue that could sometimes result in partial search results. By increasing the gRPC recovery limits, we've improved the reliability of search operations in our platform.
-* **Various Bug fixes, UI and Performance Improvements** ✨.
 
 ### We Value Your Feedback
 
