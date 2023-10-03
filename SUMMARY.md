@@ -11,19 +11,19 @@
 
 * [End User License Agreement](eula/eula.md)
 
-## Deploying Apica Ascent
+## Deploying Apica Data Fabric
 
-* [Quickstart with Docker-Compose](deploying-apica-ascent/quickstart-with-docker-compose.md)
-* [SaaS](deploying-apica-ascent/logiq-saas.md)
-* [PaaS deployment](deploying-apica-ascent/logiq-paas-deployment/README.md)
-  * [Deploying Apica Ascent PaaS on Kubernetes](deploying-apica-ascent/logiq-paas-deployment/k8s-quickstart-guide.md)
-  * [Deploying Apica Ascent PaaS on MicroK8s](deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-paas-on-microk8s.md)
-  * [Deploying Apica Ascent PaaS on AWS](deploying-apica-ascent/logiq-paas-deployment/aws-cloudformation.md)
-  * [Deploying Apica Ascent EKS on AWS using CloudFormation](deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-cloudformation.md)
-  * [Deploying Apica Ascent EKS on AWS using custom AMI](deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-custom-ami.md)
-  * [Deploying Apica Ascent EKS with AWS ALB](deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
-  * [Deploying Apica Ascent PaaS in Azure Kubernetes Service](deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
-    * [Azure Blob Storage Lifecycle Management](deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
+* [Quickstart with Docker-Compose](deploying-apica-data-fabric/quickstart-with-docker-compose.md)
+* [SaaS](deploying-apica-data-fabric/logiq-saas.md)
+* [PaaS deployment](deploying-apica-data-fabric/logiq-paas-deployment/README.md)
+  * [Deploying Apica Ascent PaaS on Kubernetes](deploying-apica-data-fabric/logiq-paas-deployment/k8s-quickstart-guide.md)
+  * [Deploying Apica Ascent PaaS on MicroK8s](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-paas-on-microk8s.md)
+  * [Deploying Apica Ascent PaaS on AWS](deploying-apica-data-fabric/logiq-paas-deployment/aws-cloudformation.md)
+  * [Deploying Apica Ascent EKS on AWS using CloudFormation](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-cloudformation.md)
+  * [Deploying Apica Ascent EKS on AWS using custom AMI](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-custom-ami.md)
+  * [Deploying Apica Ascent EKS with AWS ALB](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
+  * [Deploying Apica Ascent PaaS in Azure Kubernetes Service](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
+    * [Azure Blob Storage Lifecycle Management](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
 
 ## Dashboards
 
