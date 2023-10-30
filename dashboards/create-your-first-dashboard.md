@@ -6,7 +6,7 @@
 * Enter a name for the dashboard
 * Click on `Create`. You will be navigated to the dashboard
 
-## Add Wiget&#x20;
+## Add Widget&#x20;
 
 > On creating a new dashboard it will not have any widgets. Widgets are created on top of the queries. If you don't have any queries created, Please follow the documentation for [queries](../infra-and-application-monitoring/querying-data.md) to create one.
 
