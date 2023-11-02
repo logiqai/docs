@@ -13,11 +13,11 @@ Navigate to explore view, and click on the New Pipeline button to create a new p
 
 <figure><img src=".gitbook/assets/Screenshot from 2023-05-27 15-48-39.png" alt="" width="254"><figcaption></figcaption></figure>
 
-On click of the new pipeline button, a new dialog opens, select the desired date-time range, select the desired namespace, and click Create to create a new pipeline view.
+On click of the New Pipeline button, a new dialog opens, select the desired date-time range, select the desired namespace, and click Create to create a new pipeline view.
 
 <figure><img src=".gitbook/assets/Screenshot from 2023-05-27 15-46-20.png" alt=""><figcaption></figcaption></figure>
 
-On click of create button a new pipeline tab will get added with the pipeline view as shown bellow
+On click of Create button a new pipeline tab will get added with the pipeline view as shown below
 
 <figure><img src=".gitbook/assets/Screenshot from 2023-05-27 16-37-17.png" alt=""><figcaption></figcaption></figure>
 
@@ -32,27 +32,27 @@ On click of create button a new pipeline tab will get added with the pipeline vi
 **Time Range Slider**: Helps to select the time range between the selected date and time\
 **Zoom In/Out:** Tool to zoom in and zoom out the graph\
 **Side Bar**: Helps to make the following changes\
-&#x20;1\. Change the theme\
-&#x20;2\. Change the default title of the pipeline tab\
-&#x20;3\. Select a different date time range\
-&#x20;4\. Select a different namespace, can do multi-select\
-&#x20;5\. Shows the overall EPS and Valume savings.
+1\. Change the theme\
+2\. Change the default title of the pipeline tab\
+3\. Select a different date time range\
+4\. Select a different namespace, can do multi-select\
+5\. Shows the overall EPS and Valume savings.
 
 ### Add/Choose the existing rule(FILTER, EXTRACT, SIEM, TAG, REWRITE), for namespace and application.
 
-Click the + icon to create or choose the existing rule&#x20;
+Click the + icon to create or choose the existing rule
 
 <figure><img src=".gitbook/assets/Screenshot from 2023-05-27 22-24-40.png" alt="" width="54"><figcaption><p>Add/Choose existing rule</p></figcaption></figure>
 
-On click of add rule button, add rule dialog will show, with the options \
+On click of + icon, Add Rule dialog will show, with the options\
 1\. Choose Existing Rule\
 2\. Create New Rule
 
 <figure><img src=".gitbook/assets/Screenshot from 2023-05-27 22-27-04.png" alt=""><figcaption></figcaption></figure>
 
-Select the existing rule to choose an existing rule for the namespace application
+Select the Choose Existing Rule to choose an existing rule for the namespace and application
 
-Select create rule button to create new rules for the namespace and application
+Select Create New Rule button to create new rules for the namespace and application
 
 <figure><img src=".gitbook/assets/Screenshot from 2023-05-27 22-33-34.png" alt=""><figcaption><p>Choose Existing Rule</p></figcaption></figure>
 
@@ -64,11 +64,11 @@ The selected/created rule will be displayed under the respective group nodes
 
 ### Add Rule(Forwarder)
 
-Before adding the forwarder rule.  create a forwarder and map the forwarder in the data flow tab.
+Before adding the forwarder rule, create a forwarder and map the forwarder in the data flow tab.
 
 <figure><img src=".gitbook/assets/Screenshot from 2023-05-29 07-06-26.png" alt=""><figcaption><p>Map a forwarder</p></figcaption></figure>
 
-After adding the forwarder the new node will be added as bellow
+After adding the forwarder the new node will be added as below
 
 <figure><img src=".gitbook/assets/Screenshot from 2023-05-29 07-12-25.png" alt=""><figcaption><p>Pipeline with the forwarder</p></figcaption></figure>
 
@@ -94,4 +94,4 @@ To view rule details, click on the info icon which is present in the top right c
 
 <figure><img src=".gitbook/assets/Screenshot from 2023-05-29 09-10-14.png" alt=""><figcaption><p>Rule details</p></figcaption></figure>
 
-Activate/Deactivate: On checking/unchecking the Active check box, the rule will get activated/deactivated.&#x20;
+Activate/Deactivate: On checking/unchecking the Active check box, the rule will get activated/deactivated.
