@@ -4,7 +4,13 @@ description: This page describes how to access report results via API
 
 # Accessing Reports results via API
 
-Once the report is created, its results can be accessed via APIs. &#x20;
+## Finding Query ID Via UI
+
+Once the query is created in the UI editor interface, tested, and executed successfully.  The query ID can be looked at via the web URL address.
+
+<figure><img src="../../.gitbook/assets/query-id-2023-11-17_9-54-29.jpg" alt=""><figcaption><p><strong>Query ID</strong></p></figcaption></figure>
+
+The query can then be accessed via API's using the query ID.
 
 {% swagger baseUrl="/api/queries/:queryid" path="" method="get" summary="Get Query By Id" %}
 {% swagger-description %}
@@ -26,7 +32,7 @@ Id of the query
 {% endswagger-response %}
 {% endswagger %}
 
-Once the results id is extracted invoke the results API to get the results&#x20;
+The query result can be extracted via API via the query ID after the API query.
 
 {% swagger baseUrl="/api/query_results/:result_id" path="" method="get" summary="Get Results by result_id" %}
 {% swagger-description %}
@@ -89,7 +95,7 @@ Latest report result Id
 {% endswagger-response %}
 {% endswagger %}
 
-## Python Example
+## Python Example I
 
 ```python
 import requests
@@ -118,9 +124,49 @@ def post_query():
 post_query()
 ```
 
-{% hint style="info" %}
-[Refer here to get the API key ](broken-reference)
-{% endhint %}
+## Obtain API Key
+
+API key can be obtained via the UI. &#x20;
+
+<figure><img src="../../.gitbook/assets/API-key-2023-11-17_10-13-15.jpg" alt=""><figcaption><p><strong>Retrieve API Key</strong></p></figcaption></figure>
 
 
 
+
+
+## Python Example II
+
+Based on a similar method, this query API directly queries the internal Prometheus data using the Prometheus database access API _logiq\_proxy_.
+
+```python
+import requests
+import simplejson as json
+import time
+
+api_key = "<API_KEY>"
+uri_result = input("Enter Query Result URL: ")
+json_data = json.loads(input("Enter Query JSON Data: "))
+file_name = "output_" + str(time.time()) + ".json"
+
+def post_results_query():
+    headers = {'Authorization': api_key}
+    r = requests.post(uri_result, headers=headers, json=json_data, verify=False)
+    r.raise_for_status()
+    
+    with open(file_name, 'w') as output:
+        json.dump(r.json(), output, indent=3)
+    print("<QueryResults>")
+    print(json.dumps(r.json(), indent=3))
+    print("</QueryResults>")
+    print("JSON data saved in: " + file_name)
+
+post_results_query()
+
+#==========================================================
+# Example for the logiq_proxy
+# URL: 
+#  https://lqnnn.logiq.ai/api/logiq_proxy
+# Query Data: 
+#  {"query": "(round(sum by (exported_namespace,app,severity)(increase(logiq_namespace_app_message_count{exported_namespace=~\"logiq:awesj\"}[3600s]))))&start=1700209381&end=1700212981","type": "query"}
+#==========================================================
+```
