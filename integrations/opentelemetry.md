@@ -4,6 +4,10 @@
 
 OpenTelemetry is a collection of tools, APIs, and SDKs. Use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) to help analyze software’s performance and behavior.
 
+{% hint style="warning" %}
+Supported otel agents - v0.59.0 or earlier - [https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.59.0](https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.59.0)
+{% endhint %}
+
 ### OpenTelemetry Metrics
 
 Prometheus Remote Write Exporter can be used to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/)
@@ -153,7 +157,5 @@ docker run --name petclinic -d -p 8080:8080 -e LOGIQ_SERVER=mylogiqip.example.co
 {% hint style="warning" %}
 Make sure your Apica Ascent server is running and port 14250 is reachable
 {% endhint %}
-
-
 
 [^1]: TLS Enabled, Use http if TLS is not enabled.
