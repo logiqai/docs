@@ -5,7 +5,11 @@
 OpenTelemetry is a collection of tools, APIs, and SDKs. Use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) to help analyze software’s performance and behavior.
 
 {% hint style="warning" %}
-Supported otel agents - v0.59.0 or earlier - [https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.59.0](https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.59.0)
+Supported otel collector - v0.59.0 or earlier - [https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.59.0](https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.59.0)
+
+What about versions > v0.60.0 and above?&#x20;
+
+The Apica team is verifying support and we expect more recent versions to be supported in Q1 2024
 {% endhint %}
 
 ### OpenTelemetry Metrics
