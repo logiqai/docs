@@ -15,6 +15,7 @@
 
 * [Quickstart with Docker-Compose](deploying-apica-data-fabric/quickstart-with-docker-compose.md)
 * [SaaS](deploying-apica-data-fabric/logiq-saas.md)
+* [Deployment Architecture](deploying-apica-data-fabric/deployment-architecture.md)
 * [PaaS deployment](deploying-apica-data-fabric/logiq-paas-deployment/README.md)
   * [Deploying Apica Ascent PaaS on Kubernetes](deploying-apica-data-fabric/logiq-paas-deployment/k8s-quickstart-guide.md)
   * [Deploying Apica Ascent PaaS on MicroK8s](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-paas-on-microk8s.md)
