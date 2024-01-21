@@ -25,13 +25,19 @@ A production deployment of the Apica Data Fabric requires the following key comp
 
 The deployment of the Apica Data Fabric is driven via a HELM chart. The typical method of customizing the deployment is done via a values.yaml file as a parameter to the HELM software when installing the Apica Data Fabric HELM Chart.&#x20;
 
+***
+
 ## Reference Kubernetes Deployment Architecture
 
 <figure><img src="../.gitbook/assets/Architecture.drawio(1).png" alt=""><figcaption></figcaption></figure>
 
+***
+
 ## Reference AWS Deployment Architecture
 
 <figure><img src="../.gitbook/assets/Architecture-S3.drawio.png" alt=""><figcaption></figcaption></figure>
+
+***
 
 ## Reference Hybrid Deployment Architecture
 
