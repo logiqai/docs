@@ -4,7 +4,7 @@ description: >-
   deployment of the Apica Data Fabric.
 ---
 
-# Deployment Architecture
+# PaaS Deployment Architecture
 
 ## Requirements
 
@@ -17,6 +17,9 @@ A production deployment of the Apica Data Fabric requires the following key comp
    2. **An optional ingress controller** integrated with the Kubernetes cluster to front the data fabric services. If an ingress controller is unavailable, the services in the data fabric are deployed as NodePorts that must then be programmed in **an optional external ingress provider** e.g. F5 etc.
 2. **An object store** is where the data fabric stores its data at rest. An S3-compatible object store is required. If you are on Azure, you can take advantage of the native integration with the Azure Blob store which is not S3 compatible and needs bolt-on services.&#x20;
 3. **Access to an image repository** for docker images for the Apica Data Fabric.
+4. **A Postgres database** that stores all of the Apica Data Fabric configurations. If an external Postgres instance is not available, the deployment can be configured to deploy a Postgres instance along with the Apica Data Fabric software components.
+5. **A Redis in-memory cache**. If an external Redis instance is not available, the deployment can be configured to deploy a Redis instance along with the Apica Data Fabric software components.
+6. **Optional deployment of the K8S horizontal pod auto-scalar** to enable auto-scaling of Apica Data Fabric software components. If you do not use K8S HPA, not to worry, using standard scaling using `kubectl scale` is supported as well.
 
 ## Packaging
 
