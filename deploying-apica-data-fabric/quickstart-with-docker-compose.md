@@ -10,6 +10,10 @@ description: >-
 Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
 {% endhint %}
 
+{% hint style="danger" %}
+docker-compose based deployment should not be used for production envornments.&#x20;
+{% endhint %}
+
 ## Quickstart features
 
 1. Log aggregation, search, reporting, and live tailing
