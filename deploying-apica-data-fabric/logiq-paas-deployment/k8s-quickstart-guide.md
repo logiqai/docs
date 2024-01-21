@@ -104,7 +104,7 @@ This will install Apica Ascent and expose the Apica Ascent services and UI on th
 The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. HELM chart can override the default admin settings as well. See section[ 3.7](k8s-quickstart-guide.md#3-7-customize-admin-account) on customizing the admin settings
 {% endhint %}
 
-![Apica Ascent Insights Login UI](../../.gitbook/assets/landing.png)
+<figure><img src="../../.gitbook/assets/Screen Shot 2024-01-21 at 5.03.07 AM.png" alt=""><figcaption></figcaption></figure>
 
 Apica Ascent server provides Ingest, log tailing, data indexing, query, and search capabilities.\
 Besides the web-based UI, Apica Ascent also offers [apicactl, Apica CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
@@ -159,7 +159,7 @@ Depending on your requirements, you may want to host your storage in your own K8
 Please note that cloud providers may charge data transfer costs between regions. It is important that the Apica Ascent cluster be deployed in the same region where the S3 bucket is hosted
 {% endhint %}
 
-#### 3.2.1 Create an access/secret key pair for creating and managing your bucket <a href="#3-1-1" id="3-1-1"></a>
+#### 3.2.1 Create an access/secret key pair for creating and managing your bucket <a href="#id-3-1-1" id="id-3-1-1"></a>
 
 Go to AWS IAM console and create an access key and secret key that can be used to create your bucket and manage access to the bucket for writing and reading your log files
 
@@ -435,7 +435,7 @@ helm upgrade --install logiq --namespace logiq \
 
 The Grafana instance is exposed at port 3000 on the ingress controller. The deployed Grafana instance uses the same credentials as the Apica Ascent UI
 
-### 3.14 Configuring ALB Ingress on EKS <a href="#3.14-configuring-alb-on-eks" id="3.14-configuring-alb-on-eks"></a>
+### 3.14 Configuring ALB Ingress on EKS <a href="#id-3.14-configuring-alb-on-eks" id="id-3.14-configuring-alb-on-eks"></a>
 
 Apica Ascent creates an Ingress resource in the namespace it is deployed.
 
