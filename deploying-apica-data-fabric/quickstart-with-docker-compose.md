@@ -86,7 +86,7 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 <figure><img src="../.gitbook/assets/Screen Shot 2022-03-19 at 8.11.14 AM.png" alt=""><figcaption><p>Apica Ascent Login Page</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Apica Ascent Dashboards</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Apica Ascent Dashboards</p></figcaption></figure>
 
 ## Ingesting data
 

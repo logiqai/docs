@@ -2,7 +2,7 @@
 
 Amazon Web Services (AWS) Fargate is a serverless compute engine for containers that works on Amazon ECS and EKS. AWS FireLens is a log routing agent built for ECS containers and enables administrators to use task definition attributes to route logs to external log aggregators. AWS FireLens unifies data collection across the ECS cluster, and its pluggable architecture allows adding data sources, parsers, filters/buffering, and output plugins.
 
-### Configuring AWS FireLens to forward logs <a href="#1-configuring-aws-firelens-to-forward-logs" id="1-configuring-aws-firelens-to-forward-logs"></a>
+### Configuring AWS FireLens to forward logs <a href="#id-1-configuring-aws-firelens-to-forward-logs" id="id-1-configuring-aws-firelens-to-forward-logs"></a>
 
 Possibly the most significant advantage of AWS FireLens is that you can connect it to almost any service endpoint as long as data sinks can process general-purpose JSON over HTTP, FluentForward, or TCP protocols. FireLens transforms log outputs of ECS containers and generates the routing configuration needed for sending logs to the logging service.&#x20;
 
@@ -100,7 +100,7 @@ To set up log forwarding on AWS ECS, do the following.
 
 Your ECS container logs will now be forwarded to your LOGIQ instance and will be visible on the **Logs** page on the LOGIQ UI. The **Namespace** will be mapped to your ECS cluster name and the **Application** is mapped to the task definition name.&#x20;
 
-![](<../../../.gitbook/assets/image (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
 
 ### Creating a custom Fluent Bit image to include custom parsers
 
