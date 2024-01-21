@@ -29,13 +29,17 @@ The deployment of the Apica Data Fabric is driven via a HELM chart. The typical 
 
 ## Reference Kubernetes Deployment Architecture
 
-<figure><img src="../.gitbook/assets/Architecture.drawio(1).png" alt=""><figcaption></figcaption></figure>
+<div data-full-width="false">
+
+<figure><img src="../.gitbook/assets/Architecture.drawio(1).png" alt="" width="443"><figcaption></figcaption></figure>
+
+</div>
 
 ***
 
 ## Reference AWS Deployment Architecture
 
-<figure><img src="../.gitbook/assets/Architecture-S3.drawio.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Architecture-S3.drawio.png" alt="" width="443"><figcaption></figcaption></figure>
 
 ***
 
@@ -43,6 +47,6 @@ The deployment of the Apica Data Fabric is driven via a HELM chart. The typical 
 
 The reference deployment architecture shows a hybrid deployment strategy where the Apica stack is deployed in an on-prem Kubernetes cluster but the storage is hosted in AWS S3. There could be additional variants of this where services such as Postgres, Redis, and Container registry could be in the cloud as well.
 
-<figure><img src="../.gitbook/assets/ArchitectureHybrid.drawio.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/ArchitectureHybrid.drawio.png" alt="" width="443"><figcaption></figcaption></figure>
 
 &#x20;
