@@ -42,8 +42,6 @@ e.g. if CloudFormation stack is called Foo and bucket is called Bar the password
 
 {% embed url="https://www.youtube.com/watch?v=IDmJOF9y5Ac" %}
 
-Also see section on [AMI using CloudFormation](../../deploying-logiq/logiq-paas-deployment/broken-reference/) for more details.
-
 ## Ingesting data
 
 For setting up data ingestion from your endpoints and applications into Apica Ascent, please refer to the [Integrations section](../../integrations/overview/).
