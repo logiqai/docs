@@ -21,6 +21,7 @@
   * [Deploying Apica Ascent PaaS on MicroK8s](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-paas-on-microk8s.md)
   * [Deploying Apica Ascent PaaS on AWS](deploying-apica-data-fabric/logiq-paas-deployment/aws-cloudformation.md)
   * [Deploying Apica Ascent EKS on AWS using CloudFormation](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-cloudformation.md)
+  * [Deploying Apica Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using CloudFormation](deploying-apica-data-fabric/logiq-paas-deployment/deploying-apica-ascent-on-aws-eks-with-aurora-postgresql-and-elasticache-redis-using-cloudformation.md)
   * [Deploying Apica Ascent EKS on AWS using custom AMI](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-custom-ami.md)
   * [Deploying Apica Ascent EKS with AWS ALB](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
   * [Deploying Apica Ascent PaaS in Azure Kubernetes Service](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
