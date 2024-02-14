@@ -84,9 +84,9 @@ Once the Apica Ascent server is up and running, the Apica Ascent UI can be acces
 Use _flash-admin@foo.com_ / _flash-password_ to login
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Screen Shot 2022-03-19 at 8.11.14 AM.png" alt=""><figcaption><p>Apica Ascent Login Page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2024-02-14 at 10.55.14 AM.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Apica Ascent Dashboards</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2024-02-14 at 10.58.05 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## Ingesting data
 
@@ -96,11 +96,11 @@ For setting up data ingestion from your endpoints and applications into Apica As
 
 The test log data can be viewed under Explore page
 
-<figure><img src="../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2024-02-14 at 10.58.05 AM.png" alt=""><figcaption></figcaption></figure>
 
-Click on any Procid and you will be taken to the Flows page with detailed logs and a search view. You can search for any log pattern, searches can also be run using regex expressions along with conditional statements using Advanced search across a time period.
+Click on any Application and you will be taken to the Flows page with detailed logs and a search view. You can search for any log pattern, searches can also be run using regex expressions along with conditional statements using Advanced search across a time period.
 
-<figure><img src="../.gitbook/assets/image (2) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2024-02-14 at 11.00.00 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## Distributed Tracing
 
@@ -108,15 +108,15 @@ Apica Ascent provides application performance monitoring (APM) which can help en
 
 select the Service and a list of traces will appear on the right-hand side of the screen. The traces have titles that correspond to the **Operator** selector on the search form. The traces can be further analyzed by clicking on the Analyse icon which will pull up the entire logs for the corresponding trace-id.
 
-<figure><img src="../.gitbook/assets/image (3) (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2024-02-14 at 11.01.51 AM.png" alt=""><figcaption></figcaption></figure>
 
 Analyze icon displays all the logs for the respective trace-id in a given time range.
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2024-02-14 at 11.06.42 AM.png" alt=""><figcaption></figcaption></figure>
 
 To view the detailed trace, you can select a specific trace instance and check details like the time taken by each service, errors during execution, and logs.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2024-02-14 at 11.02.34 AM.png" alt=""><figcaption></figcaption></figure>
 
 ### Prometheus monitoring and alerting
 
@@ -126,7 +126,7 @@ The Apica Ascent quickstart file includes Prometheus and Alertmanager services. 
 **NOTE:** It may take up to 1 minute for the APM metrics to appear once initial setup. Please use the "Refresh" button at the top right section of the Dashboards to refresh.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Screen Shot 2022-03-19 at 11.40.31 AM (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screen Shot 2024-02-14 at 11.13.58 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## Firewall ports and URLs
 
