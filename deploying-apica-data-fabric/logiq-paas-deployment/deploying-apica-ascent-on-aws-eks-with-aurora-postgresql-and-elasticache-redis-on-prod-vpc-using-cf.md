@@ -69,7 +69,7 @@ Before you begin, ensure you have the following prerequisites.
 **Step 4**: To deploy the EKS cluster, we need to enter the **ARN** of the **IAM Role for EKS** that was created in **section 3.1.** We need a VPC with 2 Private subnets. Select them from the Network Configuration and Subnet configuration dropdown lists and they were created by the previous cloudformation template.
 
 {% hint style="info" %}
-**Important:** You **MUST** choose 2 different Private subnets from the same VPC.
+**Important:** You **MUST** choose 2 different Private subnets( connected to NAT Gateway)  from the same VPC.
 {% endhint %}
 
 [![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(1\)%20\(2\).png)](../../.gitbook/assets/image%20\(1\)%20\(2\).png)
