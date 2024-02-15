@@ -1,9 +1,3 @@
----
-description: >-
-  with VPC (Private and Public Subnets) and related things like Internet Gateway
-  and NAT Gateway
----
-
 # Deploying Apica Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using CloudFormation
 
 ### 1. Overview
