@@ -1,3 +1,9 @@
+---
+description: >-
+  with VPC (Private and Public Subnets) and related things like Internet Gateway
+  and NAT Gateway
+---
+
 # Deploying Apica Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using CloudFormation
 
 ### 1. Overview
@@ -163,6 +169,10 @@ kubectl create namespace logiq
 ```
 
 **Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customise the deployment for enabling https
+
+```
+helm repo add logiq-repo https://logiqai.github.io/helm-charts
+```
 
 ```
 helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq

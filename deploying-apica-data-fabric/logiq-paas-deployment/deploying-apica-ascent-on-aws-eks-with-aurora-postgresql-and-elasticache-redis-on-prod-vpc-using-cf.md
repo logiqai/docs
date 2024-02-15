@@ -171,7 +171,11 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 kubectl create namespace logiq
 ```
 
-**Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customise the deployment for enabling https
+**Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customise the deployment for enabling https.
+
+```
+helm repo add logiq-repo https://logiqai.github.io/helm-charts
+```
 
 ```
 helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq
