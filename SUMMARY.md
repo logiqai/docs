@@ -4,7 +4,7 @@
 
 * [Overview](README.md)
 * [User Interface](introduction/the-logiq-ui.md)
-* [Release Notes 🚀](introduction/release-notes/README.md)
+* [Release Notes](introduction/release-notes/README.md)
   * [Releases-old](introduction/release-notes/release-notes.md)
 
 ## EULA

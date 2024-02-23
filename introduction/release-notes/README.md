@@ -1,16 +1,12 @@
 ---
-description: 'Latest release: v3.6'
+description: 'Release: v3.6'
 ---
 
-# Release Notes 🚀
+# Release Notes
 
-## 🎉 LOGIQ.AI is now Apica 🎉
+## Release v3.6 (September 11, 2023)
 
-## v3.6
-
-### 📅 Mon, Sept 11, 2023
-
-#### Welcome to the latest update of our product! We're excited to introduce several new features and improvements designed to enhance user experience.
+### Welcome to Release v3.6. We're excited to introduce several new features and improvements designed to enhance user experience.
 
 * **Enhanced Log Analysis with Generative AI like ChatGPT and Azure OpenAI Service**
   * We're excited to introduce the **integration of Generative AI**, including **ChatGPT** and **Azure OpenAI Service**, into the Explore feature. Now, you can easily select logs and engage in dynamic conversations with Generative AI to gain in-depth insights into your log data. Ask questions, request explanations, and explore your logs to gain deeper insights into your log data, making log analysis more informative and versatile.
