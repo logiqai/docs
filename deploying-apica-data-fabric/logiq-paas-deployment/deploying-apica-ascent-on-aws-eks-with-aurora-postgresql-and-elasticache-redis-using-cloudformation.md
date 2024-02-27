@@ -144,7 +144,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 **Step 1**: Download the values file below and customise it per the instructions below.
 
-{% file src="../../.gitbook/assets/values (5).yaml" %}
+{% file src="../../.gitbook/assets/values.yaml" %}
 
 **Step 2**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the Apica Ascent stack on your EKS cluster.
 
@@ -155,6 +155,10 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 5. postgres\_host: \<Aurora endpoint>
 6. postgres\_user: <>
 7. postgres\_password: <>
+8. alert: "PrometheusDown"\
+   expr: absent(up{prometheus="\<namespace>/\<namespace>prometheus-prometheus"})
+
+
 
 **Step 3:** Create the logiq namespace in your EKS cluster
 
