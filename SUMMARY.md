@@ -195,6 +195,7 @@
 ## API
 
 * [Query API](api/historical-data.md)
+* [Use Apica API to ingest JSON data](api/use-apica-api-to-ingest-json-data.md)
 
 ## Administration <a href="#logiq-ui-configuration" id="logiq-ui-configuration"></a>
 
