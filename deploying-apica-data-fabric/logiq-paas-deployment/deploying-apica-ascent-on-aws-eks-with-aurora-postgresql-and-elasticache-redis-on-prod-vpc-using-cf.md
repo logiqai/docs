@@ -127,9 +127,7 @@ aws-ebs-csi-driver/aws-ebs-csi-driver
 
 Download this yaml file and run the commands mentioned below:
 
-{% file src="../../.gitbook/assets/gp3-sc.yaml" %}
-YAML file for gp3 storage class
-{% endfile %}
+{% embed url="https://logiq-scripts.s3.ap-south-1.amazonaws.com/gp3-sc.yaml" %}
 
 ```
 kubectl apply -f <path_for_gp3-sc.yaml>
@@ -155,7 +153,7 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 
 
-{% file src="../../.gitbook/assets/values.yaml" %}
+{% embed url="https://logiq-scripts.s3.ap-south-1.amazonaws.com/values.yaml" %}
 
 **Step 2**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the Apica Ascent stack on your EKS cluster.
 
