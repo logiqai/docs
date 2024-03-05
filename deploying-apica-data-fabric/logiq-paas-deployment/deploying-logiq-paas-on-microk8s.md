@@ -1,4 +1,4 @@
-# Deploying LOGIQ PaaS on MicroK8s
+# Deploying Apica Ascent PaaS on MicroK8s
 
 [MicroK8s](https://microk8s.io) is a lightweight, pure-upstream Kubernetes aiming to reduce entry barriers for K8s and cloud-native application development. It comes in a single package that installs a single-node (standalone) K8s cluster in under 60 seconds. The lightweight nature of Apica Ascent PaaS enables you to deploy Apica Ascent on lightweight, single-node clusters like MicroK8s.
 
@@ -21,7 +21,7 @@ The first step in this deployment is to install MicroK8s on your machine. To ins
 3.  Install MicroK8s using Snap by running the following command.
 
     ```
-    sudo snap install microk8s --classic --channel=1.21/stable
+    sudo snap install microk8s --classic --channel=1.28/stable
     ```
 4.  Join the group created by MicroK8s that enables uninterrupted usage of commands that require admin access by running the following command.
 
