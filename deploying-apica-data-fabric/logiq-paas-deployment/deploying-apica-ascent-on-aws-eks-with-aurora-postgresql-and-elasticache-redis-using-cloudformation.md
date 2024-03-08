@@ -167,7 +167,7 @@ helm repo add logiq-repo https://logiqai.github.io/helm-charts
 ```
 
 ```
-helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq
+helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/apica-ascent
 ```
 
 **Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
