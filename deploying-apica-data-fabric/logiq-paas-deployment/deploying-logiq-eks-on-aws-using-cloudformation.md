@@ -353,7 +353,7 @@ kubectl create namespace logiq
 **Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customize the deployment for enabling https and to use external Postgres database
 
 ```bash
-helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/logiq
+helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/apica-ascent
 ```
 
 **Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
