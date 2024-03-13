@@ -136,11 +136,17 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 #### 5.4 Deploy Apica Ascent using HELM
 
-**Step 1**: Download the values file below and customise it per the instructions below.
+**Step 1:** Create the logiq namespace in your EKS cluster
+
+```
+kubectl create namespace logiq
+```
+
+**Step 2**: Download the values file below and customise it per the instructions below.
 
 {% file src="../../.gitbook/assets/values.yaml" %}
 
-**Step 2**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the Apica Ascent stack on your EKS cluster.
+**Step 2**: Replace the following variables in the **values.yaml** and proceed to install the Apica Ascent stack on your EKS cluster.
 
 1. `awsServiceEndpoint`: https://s3.\\.amazonaws.com
 2. `s3_bucket`: S3 bucket name
@@ -153,12 +159,6 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
    expr: absent(up{prometheus="\<namespace>/\<namespace>prometheus-prometheus"})
 
 
-
-**Step 3:** Create the logiq namespace in your EKS cluster
-
-```
-kubectl create namespace logiq
-```
 
 **Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customise the deployment for enabling https
 
@@ -181,7 +181,7 @@ helm upgrade --install logiq -n logiq \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
--f values.yaml logiq-repo/logiq
+-f values.yaml logiq-repo/apica-ascent
 ```
 
 **Step 6:** Once the EKS cluster is created, add the VPC cidr in the Postgresql and Elasticache security group (create by first cloudformation template) inbound rules for port 5432 and 6379.\
