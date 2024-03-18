@@ -107,19 +107,7 @@ kube-system Active 4h57m
 
 **5.3 Enable GP3 storage class for EKS**
 
-**Step 1**: The Amazon Elastic Block Store Container Storage Interface (CSI) Driver provides a [CSI](https://github.com/container-storage-interface/spec/blob/master/spec.md) interface used by Container Orchestrator to manage the lifecycle of Amazon EBS volumes. To enable GP3 volumes for this stack, run the following commands.
-
-```
-helm repo add aws-ebs-csi-driver https://kubernetes-sigs.github.io/aws-ebs-csi-driver
-
-helm repo update
-
-helm upgrade --install aws-ebs-csi-driver \
---namespace kube-system \
-aws-ebs-csi-driver/aws-ebs-csi-driver
-```
-
-Download this yaml file and run the commands mentioned below:
+**Step 1**:Download this yaml file and run the commands mentioned below:
 
 {% embed url="https://logiq-scripts.s3.ap-south-1.amazonaws.com/gp3-sc.yaml" %}
 
