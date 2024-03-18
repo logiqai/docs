@@ -13,7 +13,7 @@ This guide will take you through deploying Apica Ascent on an AWS EKS cluster wi
 #### 2. EKS K8S compatibility
 
 {% hint style="info" %}
-**Note:** This deployment method using Helm is only supported on Kubernetes versions till **1.28**. Steps described in the document only work if the cluster is created using the given cloud formation template.
+**Note:** This deployment method using Helm is only supported on Kubernetes versions till **1.29**. Steps described in the document only work if the cluster is created using the given cloud formation template.
 
 Here we need to give the Production VPC and Private Subnets.&#x20;
 {% endhint %}
