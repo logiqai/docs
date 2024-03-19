@@ -330,22 +330,36 @@ kubectl create namespace logiq
 
 **Step 2**: Download the values file below and customize it per the instructions below.
 
-**Step 3**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the Apica Ascent stack on your EKS cluster.
+**Step 3**: Replace the following variables in the **values.yaml** and proceed to install the Apica Ascent stack on your EKS cluster.
 
-```
-```
+{% embed url="https://logiq-scripts.s3.ap-south-1.amazonaws.com/eks/values.yaml" %}
 
 1. `awsServiceEndpoint`: https://s3.\<aws-region>.amazonaws.com
 2. `s3_bucket`: S3 bucket name
 3. `s3_region`: \<s3 region>
+4.  alert: "PrometheusDown"
+
+    expr: absent(up{prometheus="\<namespace>/\<namespace>-prometheus-prometheus"})
 
 **Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customize the deployment for enabling https and to use external Postgres database
+
+```
+helm repo add logiq-repo https://logiqai.github.io/helm-charts
+```
 
 ```bash
 helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/apica-ascent
 ```
 
-**Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
+**Step 5:** Apply below command to get the Loadbalancer ip as a "EXTERNAL-IP" and browse. For UI login, you can find admin username and password in vaues.yaml.
+
+```bash
+kubectl -n logiq get svc | grep LoadBalancer
+NAME                        TYPE           CLUSTER-IP       EXTERNAL-IP
+logiq-kubernetes-ingress     LoadBalancer <cluster_ip>    <Service end-point>
+```
+
+**Step 6 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
 
 {% hint style="info" %}
 NOTE: Your DNS will need to be programmed separately to map the domain to the service endpoint for Apica Ascent. Please see Step 7 below on how to obtain the service endpoint.
@@ -359,7 +373,7 @@ helm upgrade --install logiq -n logiq \
 -f values.yaml logiq-repo/logiq
 ```
 
-**Step 6 (Optional):** If you choose to deploy using AWS RDS, provide the following options below to customize
+**Step 7 (Optional):** If you choose to deploy using AWS RDS, provide the following options below to customize
 
 ```bash
 helm upgrade --install logiq -n logiq \
@@ -368,12 +382,4 @@ helm upgrade --install logiq -n logiq \
 --set global.environment.postgres_password=<AWS RDS-password> \
 --set global.chart.postgres=false \
 -f values.yaml logiq-repo/logiq
-```
-
-**Step 7:** After the installation is complete execute the below command to get the service endpoint
-
-```bash
-kubectl -n logiq get svc | grep LoadBalancer
-NAME                        TYPE           CLUSTER-IP       EXTERNAL-IP
-logiq-kubernetes-ingress     LoadBalancer <cluster_ip>    <Service end-point>
 ```
