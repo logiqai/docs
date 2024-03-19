@@ -7,7 +7,7 @@ This guide will take you through deploying Apica Ascent on an EKS cluster on AWS
 ## 2. EKS K8S compatibility
 
 {% hint style="info" %}
-**Note:** This deployment method using Helm is only supported on Kubernetes versions **1.18**, **1.19**, and **1.20**. Steps described in the document only work if the cluster is created using the given cloud formation template
+**Note:** This deployment method using Helm is only supported on Kubernetes versions till **1.29**. Steps described in the document only work if the cluster is created using the given cloud formation template
 {% endhint %}
 
 ## 3. AWS Resources
@@ -261,7 +261,7 @@ Before you begin, ensure you have the following prerequisites.
 **Step 4**: To deploy the EKS cluster, we need to enter the **ARN** of the **IAM Role for EKS** that was created in **section 3.1.** We need a VPC with 2 subnets. Select them from the Network Configuration and Subnet configuration dropdown lists.
 
 {% hint style="info" %}
-**Important:** You **MUST** choose 2 different subnets from the same VPC.
+**Important:** You **MUST** choose 2 different subnets with NAT gateway from the same VPC.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
@@ -297,24 +297,16 @@ kube-public Active 4h57m
 kube-system Active 4h57m
 ```
 
-**Step 3:** [**Tag both subnets**](https://docs.aws.amazon.com/eks/latest/userguide/network\_reqs.html#vpc-subnet-tagging) used in EKS cloud formation as mentioned below. Replace the cluster name, region, and subnet-id.
-
-```
-aws ec2 create-tags --region <region> --resources <subnet-id> --tags Key="kubernetes.io/cluster/<cluster_name>",Value="shared"
-```
-
 ### 5.3 Enable GP3 storage class for EKS
 
-**Step 1**: The Amazon Elastic Block Store Container Storage Interface (CSI) Driver provides a [CSI](https://github.com/container-storage-interface/spec/blob/master/spec.md) interface used by Container Orchestrator to manage the lifecycle of Amazon EBS volumes. To enable GP3 volumes for this stack, run the following commands.
+**Step 1**:Download this yaml file and run the commands mentioned below:
+
+{% embed url="https://logiq-scripts.s3.ap-south-1.amazonaws.com/gp3-sc.yaml" %}
 
 ```
-helm repo add aws-ebs-csi-driver https://kubernetes-sigs.github.io/aws-ebs-csi-driver
+kubectl apply -f <path_for_gp3-sc.yaml>
 
-helm repo update
-
-helm upgrade --install aws-ebs-csi-driver \
---namespace kube-system \
-aws-ebs-csi-driver/aws-ebs-csi-driver
+kubectl delete sc gp2
 ```
 
 **Step 2**: Once the chart is installed, you should see pods similar to those shown below in your `kube-system` namespace.
@@ -330,25 +322,22 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 ### 5.4 Deploy Apica Ascent using HELM
 
-**Step 1**: Download the values file below and customize it per the instructions below.
-
-{% tabs %}
-{% tab title="Values File For Helm" %}
-{% file src="../../.gitbook/assets/values (1) (2).yaml" %}
-{% endtab %}
-{% endtabs %}
-
-**Step 2**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the Apica Ascent stack on your EKS cluster.
-
-1. `awsServiceEndpoint`: https://s3.\<aws-region>.amazonaws.com
-2. `s3_bucket`: S3 bucket name
-3. `s3_region`: \<s3 region>
-
 **Step 3:** Create the logiq namespace in your EKS cluster
 
 ```bash
 kubectl create namespace logiq
 ```
+
+**Step 2**: Download the values file below and customize it per the instructions below.
+
+**Step 3**: Replace the following variables in the **values.yaml** from step 1 above and proceed to install the Apica Ascent stack on your EKS cluster.
+
+```
+```
+
+1. `awsServiceEndpoint`: https://s3.\<aws-region>.amazonaws.com
+2. `s3_bucket`: S3 bucket name
+3. `s3_region`: \<s3 region>
 
 **Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customize the deployment for enabling https and to use external Postgres database
 
