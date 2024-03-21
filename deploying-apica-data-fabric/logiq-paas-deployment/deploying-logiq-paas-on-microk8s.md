@@ -95,7 +95,7 @@ To enable add-ons on your MicroK8s cluster, run the following commands in succes
               ```
        2.  To create a TLS secret in MicroK8s using `kubectl`, use the following command:
 
-           ```bash
+           ```
            microk8s kubectl create secret tls https --cert=cert.crt --key=cert.key
            ```
 
