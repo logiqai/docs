@@ -70,30 +70,52 @@ To enable add-ons on your MicroK8s cluster, run the following commands in succes
     ```
 4.  Enable ingress.
 
+    To enable the Ingress controller in MicroK8s, run the following command:
+
     ```
     microk8s enable ingress
     ```
 
-    To enable https on your cluster, create a secret with your keys and pass the secret with ingress.
+    1. Enable HTTPS
+       1. How to Create a Self-Signed Certificate using OpenSSL
+          1.  Create server private key
 
-    ```
-    image:
-      repository: k8s.gcr.io/ingress-nginx/controller
-      tag: "v1.2.0"
-    ```
+              ```
+              openssl genrsa -out cert.key 2048
+              ```
+          2.  Create certificate signing request (CSR)
 
-    ```
-    microk8s enable ingress:default-ssl-certificate=namespace/secret_name
-    ```
+              ```
+              openssl req -new -key cert.key -out cert.csr
+              ```
+          3.  Sign the certificate using the private key and CSR
+
+              ```
+              openssl x509 -req -days 3650 -in cert.csr -signkey cert.key -out cert.crt
+              ```
+       2.  To create a TLS secret in MicroK8s using `kubectl`, use the following command:
+
+           ```bash
+           microk8s kubectl create secret tls https --cert=cert.crt --key=cert.key
+           ```
+
+           This command creates a secret named "https" containing the TLS keys for use in your Kubernetes cluster. Ensure you have the `cert.crt` and `cert.key` files in your current directory or specify full paths.
+       3.  To enable Ingress on microk8s with a default SSL certificate, issue the following command:
+
+           ```
+           microk8s enable ingress:default-ssl-certificate=secret/https
+           ```
 5.  Enable private registry.
 
     ```
     microk8s enable registry
     ```
+
+
 6.  Copy over your MicroK8s configuration to your Kubernetes configuration with the following command.
 
     ```
-    microk8s.kubectl config view > $HOME/.kube/config
+    microk8s.kubectl config view --raw > $HOME/.kube/config
     ```
 
 ## Provisioning an IP address
