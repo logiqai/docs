@@ -332,7 +332,9 @@ kubectl create namespace logiq
 
 **Step 3**: Replace the following variables in the **values.yaml** and proceed to install the Apica Ascent stack on your EKS cluster.
 
-{% embed url="https://logiq-scripts.s3.ap-south-1.amazonaws.com/eks/values.yaml" %}
+
+
+{% file src="../../.gitbook/assets/values (7).yaml" %}
 
 1. `awsServiceEndpoint`: https://s3.\<aws-region>.amazonaws.com
 2. `s3_bucket`: S3 bucket name
