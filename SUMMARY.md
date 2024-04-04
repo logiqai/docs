@@ -156,9 +156,19 @@
 
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
-* [Log Pattern-Signature](logiq-events/log-pattern-signature.md)
-* [Autonomous Log Interactive Visual Explorer (ALIVE)](logiq-events/autonomous-log-interactive-visual-explorer-alive.md)
-* [Time Series (AI/ML)](logiq-events/time-series-ai-ml/README.md)
+* [Pattern-Signature (PS)](logiq-events/log-pattern-signature/README.md)
+  * [Log PS Explained](logiq-events/log-pattern-signature/log-ps-explained/README.md)
+    * [Unstructured Logs](logiq-events/log-pattern-signature/log-ps-explained/unstructured-logs.md)
+    * [Semi-structured JSON](logiq-events/log-pattern-signature/log-ps-explained/semi-structured-json.md)
+    * [Reduce Logs Based on PS](logiq-events/log-pattern-signature/log-ps-explained/reduce-logs-based-on-ps.md)
+    * [Log PS Use Cases](logiq-events/log-pattern-signature/log-ps-explained/log-ps-use-cases/README.md)
+      * [Log Outlier Isolation](logiq-events/log-pattern-signature/log-ps-explained/log-ps-use-cases/log-outlier-isolation.md)
+      * [Log Trending Analysis](logiq-events/log-pattern-signature/log-ps-explained/log-ps-use-cases/log-trending-analysis.md)
+      * [Log Compare](logiq-events/log-pattern-signature/log-ps-explained/log-ps-use-cases/log-compare.md)
+  * [Config PS](logiq-events/log-pattern-signature/config-ps/README.md)
+    * [Config JSON PS](logiq-events/log-pattern-signature/config-ps/config-json-ps.md)
+* [ALIVE Log Visualizer](logiq-events/autonomous-log-interactive-visual-explorer-alive.md)
+* [Time Series AI-ML](logiq-events/time-series-ai-ml/README.md)
   * [Anomaly Detection](logiq-events/time-series-ai-ml/anomaly-detection.md)
   * [Averaging](logiq-events/time-series-ai-ml/averaging.md)
   * [Standard Deviation(STD)](logiq-events/time-series-ai-ml/standard-deviation-std.md)
