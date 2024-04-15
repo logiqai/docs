@@ -7,7 +7,7 @@ You can forward Cloud watch logs to Apica Ascent using 2 methods.
 
 ## Apica Ascent CloudWatch exporter Lambda function
 
-You can export AWS CloudWatch logs to Apica Ascent using an AWS Lambada function. The AWS Lambda function acts as a trigger for a CloudWatch log stream.&#x20;
+You can export AWS CloudWatch logs to Apica Ascent using an AWS Lambada function. The AWS Lambda function acts as a trigger for a CloudWatch log stream.
 
 This guide explains the process for setting up an AWS Lambda function and configuring an AWS CloudWatch trigger to forward CloudWatch logs to Apica Ascent.
 
@@ -15,9 +15,9 @@ This guide explains the process for setting up an AWS Lambda function and config
 
 ### Creating a Lambda function
 
-Apica Ascent provides CloudFormation templates to create the Apica Ascent CloudWatch exporter Lambda function.&#x20;
+Apica Ascent provides CloudFormation templates to create the Apica Ascent CloudWatch exporter Lambda function.
 
-Depending on the type of logs you'd like to export, use the appropriate CloudFormation template from the following list.&#x20;
+Depending on the type of logs you'd like to export, use the appropriate CloudFormation template from the following list.
 
 #### Exporting Lambda Function logs
 
@@ -45,7 +45,7 @@ https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-flowlogs-e
 
 #### Exporting Cloudwatch logs from other services
 
-Use the following CloudFormation template to export cloudwatch logs.&#x20;
+Use the following CloudFormation template to export cloudwatch logs.
 
 ```
 https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-exporter.yaml
@@ -53,21 +53,19 @@ https://logiqcf.s3.amazonaws.com/cloudwatch-exporter/logiq-cloudwatch-exporter.y
 
 This CloudFormation stack creates a Lambda function and its necessary permissions. You must configure the following attributes.
 
-<table data-header-hidden><thead><tr><th width="275.3024830699774">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Description</td></tr><tr><td><code>APPNAME</code></td><td>Application name - a readable name for Apica Ascent to partition logs.</td></tr><tr><td><code>CLUSTERID</code></td><td>Cluster ID - a readable name for Apica Ascent to partition logs.</td></tr><tr><td><code>NAMESPACE</code></td><td>Namespace - a readable name for Apica Ascent to partition logs.</td></tr><tr><td><code>LOGIQHOST</code></td><td>IP address or hostname of the Apica Ascent server. (Without http or https)</td></tr><tr><td><code>INGESTTOKEN</code></td><td>JWT token to securely ingest logs. Refer <a href="../overview/generating-a-secure-ingest-token.md#generating-using-ui">here</a> to generate ingest token. </td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="275.3024830699774">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Parameter</td><td>Description</td></tr><tr><td><code>APPNAME</code></td><td>Application name - a readable name for Apica Ascent to partition logs.</td></tr><tr><td><code>CLUSTERID</code></td><td>Cluster ID - a readable name for Apica Ascent to partition logs.</td></tr><tr><td><code>NAMESPACE</code></td><td>Namespace - a readable name for Apica Ascent to partition logs.</td></tr><tr><td><code>LOGIQHOST</code></td><td>IP address or hostname of the Apica Ascent server. (Without http or https)</td></tr><tr><td><code>INGESTTOKEN</code></td><td>JWT token to securely ingest logs. Refer <a href="../overview/generating-a-secure-ingest-token.md#generating-using-ui">here</a> to generate ingest token.</td></tr></tbody></table>
 
 ## Configuring the CloudWatch trigger
 
-Once the CloudFormation stack is created, navigate to the AWS Lambda function (`logiq-cloudwatch-exporter`) and add a trigger.&#x20;
+Once the CloudFormation stack is created, navigate to the AWS Lambda function (`logiq-cloudwatch-exporter`) and add a trigger.
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (7) (1).png>)
 
-On the **Add trigger** page, select **CloudWatch**, and then select a CloudWatch Logs **Log Group**.&#x20;
+On the **Add trigger** page, select **CloudWatch**, and then select a CloudWatch Logs **Log Group**.
 
-![](<../../.gitbook/assets/image (8).png>)
+![](<../../.gitbook/assets/image (8) (2).png>)
 
 Once this configuration is complete, any new logs coming to the configured CloudWatch Log group will be streamed to the Apica Ascent cluster.
-
-
 
 ### Create the Logstash VM (or Docker) <a href="#create_the_logstash_vm" id="create_the_logstash_vm"></a>
 

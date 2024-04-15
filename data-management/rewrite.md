@@ -6,7 +6,7 @@ To create a Rewrite Rule, select a log line that contains the pattern you want t
 
 ![](<../.gitbook/assets/image (69).png>)
 
-In the modal that opens, select REWRITE and enter the details.&#x20;
+In the modal that opens, select REWRITE and enter the details.
 
 ![](<../.gitbook/assets/image (3) (1).png>)
 
@@ -14,7 +14,7 @@ Like every other rule, Enter Name, Group, Parameters to filter (optional), and P
 
 ![](<../.gitbook/assets/image (116).png>)
 
-Apica Ascent uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.&#x20;
+Apica Ascent uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.
 
 ### Example: Removing names and phone numbers from log data
 
@@ -45,7 +45,7 @@ The rewrite rule for replacing names and phone numbers in the above sample log d
 XXX-Name ${p1}phone number${p2} XXX-XXX-XXXX
 ```
 
-The rewrite rule replaces `$name` and `$phone` among these groups while retaining `$p1` and `$p2`, providing the log data with redacted PII as the output, as shown below.&#x20;
+The rewrite rule replaces `$name` and `$phone` among these groups while retaining `$p1` and `$p2`, providing the log data with redacted PII as the output, as shown below.
 
 ```
 2021-08-28 01:34:55.001Z XXX-Name phone number : xxx-xxx-xxxx
@@ -60,7 +60,7 @@ It is crucial to be mindful of the context of the regular expression you create 
 ```
 
 {% hint style="info" %}
-**Note**: For more information on RE2 search and replace syntax and best practices, do read the [RE2 documentation](https://qinwenfeng.com/re2r\_doc/#2\_replace\_a\_substring).&#x20;
+**Note**: For more information on RE2 search and replace syntax and best practices, do read the [RE2 documentation](https://qinwenfeng.com/re2r\_doc/#2\_replace\_a\_substring).
 {% endhint %}
 
 ### Creating a PII masking rule via the UI
@@ -69,24 +69,22 @@ You can create a custom rewrite rule to match and mask PII in your log data from
 
 ![](<../.gitbook/assets/image (128).png>)
 
-
-
-To configure your rewrite rule, do the following.&#x20;
+To configure your rewrite rule, do the following.
 
 1. Select **REWRITE** Option
-2. Provide a **Name** for your rule.&#x20;
-3. Select a **Group**.&#x20;
-4. Provide a **Description** of the rule.&#x20;
-5. Specify the **Namespace** to apply the rule.&#x20;
-6. Optionally, provide an **ApplicationMatch** to match the application where you'd like to use the rule.&#x20;
-7. Provide your **Match** and **Rewrite** expressions. &#x20;
+2. Provide a **Name** for your rule.
+3. Select a **Group**.
+4. Provide a **Description** of the rule.
+5. Specify the **Namespace** to apply the rule.
+6. Optionally, provide an **ApplicationMatch** to match the application where you'd like to use the rule.
+7. Provide your **Match** and **Rewrite** expressions.
 8. Optionally, Add more Parameters to filter data
-9. Click **Create Rule**.&#x20;
+9. Click **Create Rule**.
 
 ![](<../.gitbook/assets/image (22).png>)
 
-Your new rewrite rule is now created. Your new rule will apply to all incoming log data for the specified namespace, look for patterns within the log data that match the match expression, and rewrite log data as per the rewrite expression.&#x20;
+Your new rewrite rule is now created. Your new rule will apply to all incoming log data for the specified namespace, look for patterns within the log data that match the match expression, and rewrite log data as per the rewrite expression.
 
 Apica Ascent offers many inbuilt rules for obfuscating sensitive information like credit card numbers, SSN, phone numbers, etc...
 
-![](<../.gitbook/assets/image (15).png>)
+![](<../.gitbook/assets/image (15) (1).png>)

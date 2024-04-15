@@ -1,4 +1,4 @@
-# ECS prometheus metrics to Logiq
+# ECS prometheus metrics to Apica Ascent
 
 **AWS ECS** is an orchestration service for Docker containers, allowing you to easily manage and scale your applications with easy access to other AWS services, the below instructions outline how we can forward ECS container metrics to Logiq endpoint with help of Prometheus service discovery with the following steps.
 
@@ -195,5 +195,5 @@ scrape_configs:
 
 For any container to be scraped, add Dockerlabels below on  ECS task with the metrics path and endpoint.
 
-![](<../../../.gitbook/assets/image (18) (1).png>)
+![](<../../../.gitbook/assets/image (18) (1) (1).png>)
 

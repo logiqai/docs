@@ -8,7 +8,7 @@ Once you share a search result, Apica Ascent stores the search keywords, query, 
 
 To share a search result, do the following:
 
-1. Once you've created a search worth saving and sharing, click the **Share search results** icon in the toolbar. &#x20;
+1. Once you've created a search worth saving and sharing, click the **Share search results** icon in the toolbar.
 2. **Name** your search.
 3. Toggle the **Share** button to generate a shareable URL.
 4. Copy and store the generated URL for future use.
@@ -20,14 +20,11 @@ To share a search result, do the following:
 You can now share this URL in any way you please. Those who access this URL will be able to view and sort through the search results you shared.
 
 {% hint style="info" %}
-**Note:** URLs generated for sharing search results will expire after 30 days.&#x20;
+**Note:** URLs generated for sharing search results will expire after 30 days.
 {% endhint %}
 
 ### Accessing Shared Searches
 
-Apica Ascent saves shared searches for quick access in the search bar under **Favorites**. You can access **Favorites** by clicking the **Show Favorites** button in the search bar.&#x20;
+Apica Ascent saves shared searches for quick access in the search bar under **Favorites**. You can access **Favorites** by clicking the **Show Favorites** button in the search bar.
 
-![](<../.gitbook/assets/image (11).png>)
-
-
-
+![](<../.gitbook/assets/image (11) (1).png>)
