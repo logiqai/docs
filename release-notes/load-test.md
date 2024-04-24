@@ -50,4 +50,4 @@ After the fix, the dialog box will automatically close after uploading ZebraTest
 
 
 Read previous release notes, go to: \
-[https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/870023169/Release+Notes](https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/870023169/Release+Notes)
+[Apica Knowledge Base](https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/870023169/Release+Notes)
