@@ -12,6 +12,7 @@
 
 * [Data Fabric](release-notes/release-notes/README.md)
   * [Releases-old](release-notes/release-notes/release-notes.md)
+* [Synthetic Monitoring](release-notes/synthetic-monitoring.md)
 * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
 * [Advanced Scripting Engine](release-notes/zebra-tester.md)
 * [Loadtesting](release-notes/load-test.md)
