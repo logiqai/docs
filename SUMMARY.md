@@ -10,6 +10,7 @@
 
 ## Release Notes
 
+* [Ascent 2.1.0](release-notes/ascent-2.1.0.md)
 * [Data Fabric](release-notes/release-notes/README.md)
   * [Releases-old](release-notes/release-notes/release-notes.md)
 * [Synthetic Monitoring](release-notes/synthetic-monitoring.md)
