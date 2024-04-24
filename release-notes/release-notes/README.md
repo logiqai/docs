@@ -1,8 +1,109 @@
 ---
-description: 'Data Fabric Release: v3.6'
+description: 'Data Fabric Release: v3.7'
 ---
 
-# Ascent
+# Data Fabric
+
+## Release v3.7.1 (March 11, 2024)
+
+**Bug Fixes:**&#x20;
+
+ALIVE Graph and Summary Fixes: Corrected issues where the "select-all" function wasn't applying across all pages in the ALIVE graph and the pattern index and y-axis didn't match in the summary table.&#x20;
+
+ALIVE Page Navigation: The "psid log select-all" operation now correctly spans across all pages instead of just the current one.&#x20;
+
+Browser Compatibility: Resolved a bug where the Check analysis view was breaking specifically in old Firefox browsers.&#x20;
+
+UI and Display Fixes: Made improvements to various UI elements such as ensuring subject time intervals adhere strictly to different function screens and fixing issues with long horizontal content on the ALIVE summary page.&#x20;
+
+Query and Data Handling: Handled edge cases where errors in results could lead to spans having no data.&#x20;
+
+Performance and Functionality: Made improvements to several areas such as handling ingest ratelimiters more effectively, reducing open connections errors, and enhancing byte buffer pool performance.&#x20;
+
+**Enhancements:**&#x20;
+
+Dashboard Widget: Improved the overflow behavior for Alive Filter tags on the dashboard page for better visibility and usability.&#x20;
+
+User Experience: Enhanced the Add widget dialog by fixing issues related to selecting visualization types and restricting multiple API calls while using the "Add tag" feature.&#x20;
+
+**Other Improvements:**&#x20;
+
+Performance Optimization: Made improvements to several backend processes, including moving from ReadAll to io.Copy for better performance and memory benefits.&#x20;
+
+License Management: Fixed issues with licenses not syncing correctly and removed unknown fields from license display.&#x20;
+
+Code Maintenance: Made updates to code repositories for better version parity and improved rules page images display.&#x20;
+
+We're continuously working to enhance your experience with Apica Ascent Development, and we hope you find these updates valuable. If you have any questions or feedback, please don't hesitate to reach out to us. Thank you for choosing Apica!&#x20;
+
+
+
+***
+
+
+
+## Release v3.7 (February 11, 2023)
+
+Welcome to the latest update of our product! We are excited to introduce several new features and improvements designed to enhance user experiences.
+
+**Refined User Interface:**&#x20;
+
+* Introduced a refined User Interface across the app, enhancing user experience on the following pages:&#x20;
+  * Search&#x20;
+  * Data explorer&#x20;
+  * Topology&#x20;
+  * Pipeline&#x20;
+  * Dashboards&#x20;
+  * Query/Report editor&#x20;
+* Implemented dynamic quick date-time selection for granular control, empowering users to specify any date range they desire, not limited to predefined time ranges.&#x20;
+
+**Infrastructure with Honeycomb View:**&#x20;
+
+* This view offers users a bird's-eye view of all flow statuses on a single page.&#x20;
+* Users can customize group-by options like namespace, application, and severity to analyze the flow status of the entire stack.&#x20;
+* Flexible time range selection allows users to analyze their stack effectively.&#x20;
+
+**Counter Widget in Explore Page**&#x20;
+
+Added a new counter widget on the Explore page, enabling users to monitor ingested Trace volume across selected time ranges.&#x20;
+
+**Query Snippets**&#x20;
+
+Added Query Snippet templates, allowing users to create and insert query snippets from the settings page into the query editor using keyboard triggers/shortcuts.&#x20;
+
+**ASM Plus**&#x20;
+
+ASM Plus is a new offering enabling users to analyze their ASM synthetic check data in OpenTelemetry(OTel) format. Features include viewing check data as an Opentelemetry trace, page-level check execution details in a timeseries graph, check aggregator view with dynamic pivot table visualization, and check analysis view offering various visualizations like Waterfall chart, Flame graph, and Graph view.&#x20;
+
+* View checks data as a Opentelemetry trace in ASM plus.&#x20;
+* Check execution details (page level) view in a timeseries graph. Users can select different check attributes to analyze the check execution data.&#x20;
+* Check aggregator view &#x20;
+  * Provide a dynamic pivot table for visualizing the check data in different formats like Tabular, line chart, bar graph, etc. We have also added a feature where users can export their pivot table data in an excel format for further analysis.&#x20;
+  * Provides a timeseries graph for various kinds of service names.&#x20;
+* Check analysis view provides an option to view the check results data in the following visualizations:&#x20;
+  * Waterfall chart&#x20;
+  * Flamegraph
+  * Graph view
+
+**New Forwarder for ServiceNow ITOM Event Management Connectors API:**&#x20;
+
+* Added a new forwarder to facilitate integration with ServiceNow ITOM Event Management Connectors API.&#x20;
+
+**New Query Parameter Type - Duration List:**&#x20;
+
+* Introduced a new Query parameter type called Duration list, enabling users to create a dropdown of relative time durations in templatized queries.&#x20;
+
+**Improved Dashboard Widgets Visualization:**&#x20;
+
+* Enhanced dashboard widgets visualization by smoothing the data for better presentation.
+
+Thank you for choosing our product! We hope you enjoy these new features and improvements. Should you have any questions or feedback, please do not hesitate to contact us.
+
+
+
+
+
+***
 
 ## Release v3.6 (September 11, 2023)
 
