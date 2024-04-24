@@ -13,7 +13,7 @@
 * [Data Fabric](release-notes/release-notes/README.md)
   * [Releases-old](release-notes/release-notes/release-notes.md)
 * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
-* [Zebra Tester](release-notes/zebra-tester.md)
+* [Advanced Scripting Engine](release-notes/advanced-scripting-engine.md)
 * [Load Test](release-notes/load-test.md)
 
 ## EULA
