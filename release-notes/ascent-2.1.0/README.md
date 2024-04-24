@@ -1,8 +1,16 @@
 # Ascent 2.1.0
 
+
+
+Discover the latest advancements and improvements of the Apica Ascent platform. This is your go-to destination for updates on platform enhancements and new features. Explore what's new to optimize your observability and data management strategies.
+
+
+
+***
+
 ## Data Fabric&#x20;
 
-## Release v3.7 (February 11, 2023)
+### Release v3.7 (February 11, 2023)
 
 Welcome to the latest update of our product! We are excited to introduce several new features and improvements designed to enhance user experiences.
 
@@ -61,7 +69,7 @@ Thank you for choosing our product! We hope you enjoy these new features and imp
 
 
 
-## Data Fabric Release v3.7.1 (March 11, 2024)
+### Data Fabric Release v3.7.1 (March 11, 2024)
 
 **Bug Fixes:**&#x20;
 
@@ -95,17 +103,13 @@ We're continuously working to enhance your experience with Apica Ascent Developm
 
 
 
-
-
 ***
-
-
 
 ## Synthetic Monitoring <a href="#title-text" id="title-text"></a>
 
-## ASM 13.24 Public Release Notes (2024-04-12) <a href="#title-text" id="title-text"></a>
+### ASM 13.24 Public Release Notes (2024-04-12) <a href="#title-text" id="title-text"></a>
 
-## User Story Enhancements <a href="#user-story-enhancements" id="user-story-enhancements"></a>
+#### User Story Enhancements <a href="#user-story-enhancements" id="user-story-enhancements"></a>
 
 * Updated the [Compound Check](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2187264091) type to run on the latest infrastructure
 * Added a new supported Selenium IDE command, [setLocation](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2135393876/Comparing+Selenium+IDE+Scripts+to+ASM+Scenarios#setLocation)
@@ -114,13 +118,13 @@ We're continuously working to enhance your experience with Apica Ascent Developm
 
 for a complete list of supported Selenium IDE commands. Now, all of the commands listed in that article are available in the ASM Edit/Debug Scenarios page
 
-## Tasks <a href="#tasks" id="tasks"></a>
+#### Tasks <a href="#tasks" id="tasks"></a>
 
 * ASM users now have the option to disable automatic page breaks when creating Browser checks:
 
 <figure><img src="../../.gitbook/assets/ASM1.png" alt="" width="375"><figcaption></figcaption></figure>
 
-## Bug Fixes <a href="#bug-fixes" id="bug-fixes"></a>
+#### Bug Fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
 * Fixed an issue in which checks were not correctly saved when an incorrect inclusion/exclusion period was used and the user was not notified of a reason. After the fix, users will be notified explicitly if their inclusion/exclusion period is incorrect.
 * Fixed an issue which prevented custom DNS from being used on the latest infrastructure
@@ -140,9 +144,7 @@ for a complete list of supported Selenium IDE commands. Now, all of the commands
 * Fixed an issue with Ad Hoc report generation for certain users
 * Fixed issues which prevented Command checks from being created or fetched via the ASM API.
 
-
-
-## Epic <a href="#epic" id="epic"></a>
+#### Epic <a href="#epic" id="epic"></a>
 
 * Disabled the option to select "Firefox" on browser checks
 * Disabled location information in the API for deprecated checks
@@ -172,14 +174,14 @@ Read previous Release Notes, go to:\
 
 ## Synthetic Monitoring On Premise
 
-## On Premise ASM Patch 13H.4 Public Release Notes (2024-04-19) <a href="#title-text" id="title-text"></a>
+### On Premise ASM Patch 13H.4 Public Release Notes (2024-04-19) <a href="#title-text" id="title-text"></a>
 
-## User Story Enhancements <a href="#user-story-enhancements" id="user-story-enhancements"></a>
+#### User Story Enhancements <a href="#user-story-enhancements" id="user-story-enhancements"></a>
 
 * Added the ability to add/edit “Accepted Codes”, “Port Number” and all “Secure Protocol Versions” for URLv1 checks via the ASM API. API documentation was updated to reflect the new functionality.
 * Added SNI (Server Name Indication) support for URLv1 checks
 
-## Bug Fixes <a href="#bug-fixes" id="bug-fixes"></a>
+#### Bug Fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
 * Fixed an issue which prevented Power Users with limited check editing permissions from saving checks after performing edits.\
 
@@ -187,15 +189,11 @@ Read previous Release Notes, go to:\
 Read previous Release Notes, go to:\
 [Knowledge Base](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
 
-
-
 ***
-
-
 
 ## Advanced Scripting Engine
 
-## Major Release V7.5-B (Installation Kit dated April 17, 2024)
+### Major Release V7.5-B (Installation Kit dated April 17, 2024)
 
 ZebraTester 7.5-B release contains the following new features.
 
@@ -228,7 +226,7 @@ In addition, Zebra Tester V7.5-B release contains the following bug fixes / impr
 
 ## IRONdb
 
-## Release Version 1.2.0
+### Release Version 1.2.0
 
 **NOTE: This release bumps the metric index version from 4 to 5. Upon restart, new indexes will be built and the old ones will be deleted. This process will use a significant amount of memory while the indexes are being rebuilt. It will also cause the first post-update boot to take longer than usual.**
 
