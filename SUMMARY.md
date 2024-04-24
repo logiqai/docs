@@ -4,11 +4,15 @@
 
 * [Data Fabric Overview](README.md)
   * [User Interface](introduction/readme/the-logiq-ui.md)
-  * [Release Notes](introduction/readme/release-notes/README.md)
-    * [Releases-old](introduction/readme/release-notes/release-notes.md)
 * [Synthetic Monitoring Overview](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview)
 * [Loadtesting Overview](https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/5538148/Overview+of+the+Apica+Load+Test+Solution)
 * [Advanced Scripting Engine Overview](https://apica-kb.atlassian.net/wiki/spaces/DAZT/pages/5674203/What+is+ZebraTester)
+
+## Release Notes
+
+* [Data Fabric](release-notes/release-notes/README.md)
+  * [Releases-old](release-notes/release-notes/release-notes.md)
+* [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
 
 ## EULA
 
