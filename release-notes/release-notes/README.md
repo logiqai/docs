@@ -1,8 +1,8 @@
 ---
-description: 'Release: v3.6'
+description: 'Data Fabric Release: v3.6'
 ---
 
-# Release Notes
+# Ascent
 
 ## Release v3.6 (September 11, 2023)
 
