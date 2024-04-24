@@ -15,7 +15,7 @@ for a complete list of supported Selenium IDE commands. Now, all of the commands
 
 * ASM users now have the option to disable automatic page breaks when creating Browser checks:
 
-<figure><img src="../.gitbook/assets/ASM1.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ASM1.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Bug Fixes <a href="#bug-fixes" id="bug-fixes"></a>
 
@@ -26,12 +26,12 @@ for a complete list of supported Selenium IDE commands. Now, all of the commands
 * Fixed the following API call: [https://api-wpm.apicasystem.com/v3/Help/Route/GET-checks-proxysniffer-checkId-results-resultId-errorlog](https://api-wpm.apicasystem.com/v3/Help/Route/GET-checks-proxysniffer-checkId-results-resultId-errorlog) which was returning a 500 server error previously.
 * Fixed an issue with certain checks which prevented Request & Response Headers from showing correctly within the Check Details page:
 
-<figure><img src="../.gitbook/assets/ASM2.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ASM2.png" alt="" width="375"><figcaption></figcaption></figure>
 
 * Fixed an issue which prevented API calls from returning correct responses when a new user’s time zone was not set
 * Fixed an issue which prevented spaces in between the “accepted codes” field for a URLv2 check:
 
-<figure><img src="../.gitbook/assets/ASM3.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ASM3.png" alt="" width="375"><figcaption></figcaption></figure>
 
 * Updated API documentation for URL, URLv2 checks to include acceptable "secureProtocolVersion" values
 * Fixed an issue with Ad Hoc report generation for certain users

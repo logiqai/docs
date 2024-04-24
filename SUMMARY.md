@@ -10,14 +10,14 @@
 
 ## Release Notes
 
-* [Ascent 2.1.0](release-notes/ascent-2.1.0.md)
-* [Data Fabric](release-notes/release-notes/README.md)
-  * [Releases-old](release-notes/release-notes/release-notes.md)
-* [Synthetic Monitoring](release-notes/synthetic-monitoring.md)
+* [Ascent 2.1.0](release-notes/ascent-2.1.0/README.md)
+  * [Data Fabric](release-notes/ascent-2.1.0/release-notes/README.md)
+    * [Releases-old](release-notes/ascent-2.1.0/release-notes/release-notes.md)
+  * [Synthetic Monitoring](release-notes/ascent-2.1.0/synthetic-monitoring.md)
+  * [Advanced Scripting Engine](release-notes/ascent-2.1.0/advanced-scripting-engine.md)
+  * [IRONdb](release-notes/ascent-2.1.0/irondb.md)
 * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
-* [Advanced Scripting Engine](release-notes/zebra-tester.md)
 * [Loadtesting](release-notes/load-test.md)
-* [IRONdb](release-notes/irondb.md)
 
 ## EULA
 
