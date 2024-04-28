@@ -255,7 +255,9 @@ FOR APICA ONLY: [https://apicasystems.atlassian.net/wiki/spaces/PS/pages/3703013
     ```
 * [ ] Download the following file:
 
-{% embed url="https://logiq-scripts.s3.ap-south-1.amazonaws.com/values.yaml" %}
+{% embed url="https://logiq-scripts.s3.ap-south-1.amazonaws.com/Prodvpc/values.yaml" %}
+values.yaml for the helmchart
+{% endembed %}
 
 * [ ] Open the file in a text editor and replace the following values:
   * [ ] awsServiceEndpoint:
