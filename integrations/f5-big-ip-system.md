@@ -56,14 +56,14 @@ An optional setting to the above is not to verify the TLS using the optional +se
 
 ```
 
-F5 Big-Ip logs can also be shipped to remote Apica Ascent using the syslog port.
+F5 Big-Ip logs can also be shipped to remote Apica Ascent using the secure syslog port - 7514. If an insecure port is needed for trial, please let the Apica team know.
 
 ```
 ## Activate or goto TMO shell (tmsh)
 % tmsh
 
 ## modify /sys syslog remote-servers add { <name> { host <IP address or FQDN> remote-port <port> }}
-% modify /sys syslog remote-servers add { mysyslog { host 192.68.1.40 remote-port 514 }}
+% modify /sys syslog remote-servers add { mysyslog { host 192.68.1.40 remote-port 7514 }}
 
 ## save configuration
 % save /sys config
