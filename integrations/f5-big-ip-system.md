@@ -47,6 +47,8 @@ The telemetry streaming configuration base for Apica Ascent follows,
 }
 ```
 
+The passphrase is the ingestion API key obtained from the Apica Ascent platform. To retrieve it, refer to the following link:  [https://docs.apica.io/integrations/overview/generating-a-secure-ingest-token](https://docs.apica.io/integrations/overview/generating-a-secure-ingest-token). &#x20;
+
 An optional setting to the above is not to verify the TLS using the optional +setting, _allowSelfSignedCert=true,_
 
 ```
