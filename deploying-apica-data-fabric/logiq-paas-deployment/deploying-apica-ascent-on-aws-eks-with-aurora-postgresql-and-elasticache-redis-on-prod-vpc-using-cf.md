@@ -10,6 +10,7 @@ description: >-
 
 Before proceeding, ensure the following prerequisites are met:
 
+* [ ] **Reference Video:** [**https://www.youtube.com/watch?v=3Yw7TfeojDQ**](https://www.youtube.com/watch?v=3Yw7TfeojDQ)
 * [ ] **Helm 3** is installed on your machine. For installation instructions, visit [Helm Installation Guide](https://helm.sh/docs/intro/install/).
 * [ ] **AWS CLI** is installed and configured on your machine. For installation instructions, [visit AWS CLI Installation Guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 * [ ] You have permissions on your AWS account to create resources including **Elastic Kubernetes Service (EKS)**, **S3 Bucket**, **Aurora PostgreSQL**, and **ElastiCache.**
