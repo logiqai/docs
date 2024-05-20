@@ -4,12 +4,13 @@ description: >-
   ElastiCache Redis on production VPC using Cloudformation
 ---
 
-# Apica Ascent on AWS EKS(Private Endpoint)with Aurora PostgreSQL and ElastiCache Redis on prod VPC.
+# Apica Ascent on AWS EKS(Private Endpoint)with Aurora PostgreSQL and ElastiCache Redis on prod VPC
 
 ## Prerequisites&#x20;
 
 Before proceeding, ensure the following prerequisites are met:
 
+* **Reference Video:** [**https://www.youtube.com/watch?v=3Yw7TfeojDQ**](https://www.youtube.com/watch?v=3Yw7TfeojDQ)&#x20;
 * **Helm 3** is installed on your machine. For installation instructions.
 * **AWS CLI** is installed and configured on your machine.
 * You have permissions on your AWS account to create resources including **Elastic Kubernetes Service (EKS)**, **S3 Bucket**, **Aurora PostgreSQL**, and **ElastiCache.**
