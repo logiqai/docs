@@ -59,7 +59,7 @@ Before you begin, ensure you have the following prerequisites.
 * Under **Prerequisite - Prepare template**, select **Template is ready**.
 * Under **Specify template** > **Template source**, select **Amazon S3 URL -** Here you will specify the template URL from Step 1 above.
 
-[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/0)](../../.gitbook/assets/0)
+[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/0)](../../../.gitbook/assets/0)
 
 **Step 4**: To deploy the EKS cluster, we need to enter the **ARN** of the **IAM Role for EKS** that was created in **section 3.1.** We need a VPC with 2 Private subnets. Select them from the Network Configuration and Subnet configuration dropdown lists and they were created by the previous cloudformation template.
 
@@ -67,17 +67,17 @@ Before you begin, ensure you have the following prerequisites.
 **Important:** You **MUST** choose 2 different Private subnets from the same VPC.
 {% endhint %}
 
-[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(1\)%20\(2\).png)](../../.gitbook/assets/image%20\(1\)%20\(2\).png)
+[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(1\)%20\(2\).png)](../../../.gitbook/assets/image%20\(1\)%20\(2\).png)
 
 The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.
 
 <table><thead><tr><th width="215.5557129983348">Node group</th><th width="275.2866694599267">Instance size (min recommended)</th><th>Nodes (HA)</th></tr></thead><tbody><tr><td><strong>ingest</strong></td><td>c5.xlarge (4 Core 8 GB RAM)</td><td>2</td></tr><tr><td><strong>common</strong></td><td>c5.2xlarge (8 Core 32 GB RAM)</td><td>2</td></tr><tr><td><strong>db</strong></td><td>c5.xlarge (4 Core 8 GB RAM)</td><td>2</td></tr></tbody></table>
 
-[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(3\).png)](../../.gitbook/assets/image%20\(3\).png)
+[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(3\).png)](../../../.gitbook/assets/image%20\(3\).png)
 
 **Step 5:** Provide the **S3 bucket name** from **section 3,** the Cloudformation will create the S3 bucket, S3 bucket name needs to be globally unique.
 
-[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(73\).png)](../../.gitbook/assets/image%20\(73\).png)
+[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(73\).png)](../../../.gitbook/assets/image%20\(73\).png)
 
 **Step 6**: Click **Next**, and follow the instructions on the screen to create the stack.
 
@@ -116,7 +116,7 @@ aws-ebs-csi-driver/aws-ebs-csi-driver
 
 Download this yaml file and run the commands mentioned below:
 
-{% file src="../../.gitbook/assets/gp3-sc.yaml" %}
+{% file src="../../../.gitbook/assets/gp3-sc.yaml" %}
 
 ```
 kubectl apply -f <path_for_gp3-sc.yaml>
@@ -146,7 +146,7 @@ kubectl create namespace logiq
 
 **Step 2**: Download the values file below and customise it per the instructions below.
 
-{% file src="../../.gitbook/assets/values.yaml" %}
+{% file src="../../../.gitbook/assets/values.yaml" %}
 
 **Step 2**: Replace the following variables in the **values.yaml** and proceed to install the Apica Ascent stack on your EKS cluster.
 

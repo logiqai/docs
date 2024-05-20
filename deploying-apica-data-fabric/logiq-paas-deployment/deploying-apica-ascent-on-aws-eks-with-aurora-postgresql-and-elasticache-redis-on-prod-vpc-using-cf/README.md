@@ -44,19 +44,19 @@ The Cloudformation template provisions the following resources:
 
 *   [ ] Once logged in to the AWS GUI, with the search bar on your top left, search for **"CloudFormation"** and select the **CloudFormation** Service
 
-    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 *   [ ] On your top right, click **"Create Stack"** and select **"With new resources (standard)"**
 
-    <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 * [ ] **Step 1: Create stack**
   *   On the following page (step 1 of Stack creation) select **"Template is ready"** and **"Amazon S3 URL"**. In the **"Amazon S3 URL"** textfield, enter [https://logiq-scripts.s3.ap-south-1.amazonaws.com/apicamultiset.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/apicamultiset.yaml)
 
-      <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
   * Click **"Next"**
 * [ ] **Step 2: Specify stack details**
   *   [ ] Enter a stack name&#x20;
 
-      <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Stack name can include letters (A–Z and a–z), numbers (0–9) and dashes (-).</p></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Stack name can include letters (A–Z and a–z), numbers (0–9) and dashes (-).</p></figcaption></figure>
   * [ ] Enter an IAM role name for Logiq-EKS **(Save this value for later)**
     * _This will create the IAM role_
   * [ ] Enter an S3 bucket name **(Save this value for later)**
@@ -68,28 +68,28 @@ The Cloudformation template provisions the following resources:
   * [ ] Enter a database name for the Postgresql database
     *   _Start with small letter_
 
-        <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
   * [ ] Provide a **Virtual Private Cloud (VPC) ID**
     *   You can find this by searching for **"VPC"** on the top left search bar, select the **VPC** service, click the **VPCs** resource and select your **region**. Locate your **VPC** and copy the **VPC ID**.&#x20;
 
-        <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
   * [ ] Enter two (2) **Private** **Subnets**.
     *   From where you left of extracting your **VPC ID**, on the left hand side menu, select **Private Subnets** and copy the two **Subnet ID**s you intend you use
 
-        <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-        <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
   * [ ] Click "Next"
 * [ ] **Step 3: Configure stack options**
   * Nothing required here, navigate to the bottom of the page and click "Next"
 * [ ] **Step 4: Review and create**
   *   You can review your configurations, acknowledge the capabilities and click "Submit"
 
-      <figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 > Deployment might take a while. Please wait until the stack status shows **"CREATE\_COMPLETE"** before proceeding.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 **If the stack for some reason would fail, make sure to check the stack events (select your stack, and click on "Events") to understand the error. In order to fix your error, delete the stack and re-do the above.**
@@ -108,37 +108,37 @@ After successfully deploying the initial CloudFormation stack, follow these step
 * [ ] From the previous steps, you can click on "Stacks" or with the search bar on your top left, search for **"CloudFormation"** and select the **CloudFormation** Service
 *   [ ] On your top right, click **"Create Stack"** and select **"With new resources (standard)"**
 
-    <figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 * [ ] **Step 1: Create stack**
   *   [ ] On the following page (step 1 of Stack creation) select **"Template is ready"** and **"Amazon S3 URL"**. In the **"Amazon S3 URL"** textfield, enter [https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster-multiset.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster-multiset.yaml)&#x20;
 
-      <figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
   * [ ] Click "Next"
 * [ ] **Step 2: Specify stack details**
   *   [ ] Enter a stack name (Whatever you want to call the cluster)
 
-      <figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
   * [ ] Enter a name for the EKS cluster (Save this value)
   *   [ ] Enter the ARN value of the IAM role you created in the previous CloudFormation deployment (Navigate to the previous stack and check outputs tab to find the value for the key LogiqEKSClusterRole)&#x20;
 
-      <figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
-      <figure><img src="../../.gitbook/assets/image (136).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (136).png" alt=""><figcaption></figcaption></figure>
   * [ ] Select a VPC id in the dropdown (This guide assumes you’ve created these previously)
   *   [ ] Select two VPC Private subnets with NAT GATEWAY Attatched for the above VPC from each dropdown.
 
-      <figure><img src="../../.gitbook/assets/image (137).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (137).png" alt=""><figcaption></figcaption></figure>
   * [ ] Enter "2" in the fields for “Ingest Worker Node count” and “Common Worker Node count”
   *   [ ] Enter the S3 bucket name you used in the previous CloudFormation deploy in “S3 bucket for Logiq”
 
-      <figure><img src="../../.gitbook/assets/image (138).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (138).png" alt=""><figcaption></figcaption></figure>
   * [ ] Click "Next"
 * [ ] **Step 3: Configure stack options**
   * [ ] Nothing required here, navigate to the bottom of the page and click "Next"
 * [ ] **Step 4: Review and create**
   *   [ ] You can review your configurations, acknowledge the capabilities and click "Submit"
 
-      <figure><img src="../../.gitbook/assets/image (139).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (139).png" alt=""><figcaption></figcaption></figure>
 
 > Deployment might take a while. Please wait until the stack status shows **"CREATE\_COMPLETE"** before proceeding.
 
@@ -294,7 +294,7 @@ values.yaml for the helmchart
 
         *   [ ] You can find this value from the output tab of the first CloudFormation deploy
 
-            <figure><img src="../../.gitbook/assets/image (140).png" alt=""><figcaption></figcaption></figure>
+            <figure><img src="../../../.gitbook/assets/image (140).png" alt=""><figcaption></figcaption></figure>
   * [ ] postgres\_host:
     *   [ ] Replace `<>` with your AuroraEndpoint endpoint. For example, if your generated endpoint is `apicadatafabricenvironment-aurorapostgresql-0vqryrig2lwe.cluster-cbyqzzm9ayg8.eu-north-1.rds.amazonaws.com`, you would update the configuration as follows:
 
@@ -304,7 +304,7 @@ values.yaml for the helmchart
 
         *   [ ] You can find this value from the output tab of the first CloudFormation deploy
 
-            <figure><img src="../../.gitbook/assets/image (141).png" alt=""><figcaption></figcaption></figure>
+            <figure><img src="../../../.gitbook/assets/image (141).png" alt=""><figcaption></figcaption></figure>
   * [ ] postgres\_user:
     *   [ ] Replace `<>` with the master username you created during the first CloudFormation deployment:&#x20;
 
@@ -432,19 +432,19 @@ As the EKS Cluster has been created, we can now set up the access rules for our 
 
 *   [ ] From the 1st stack, we need to find the `SecurityGroups` which was created&#x20;
 
-    <figure><img src="../../.gitbook/assets/image (142).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (142).png" alt=""><figcaption></figcaption></figure>
 * [ ] Navigate to either `EC2` or `VPC` by using the search bar, and then look for `Secutiry Groups` on the left hand side menu
 *   [ ] Search for your security group using the `ID` extracted from the 1st stack and click on the `ID`
 
-    <figure><img src="../../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
 *   [ ] Click on "Edit inbound rules"&#x20;
 
-    <figure><img src="../../.gitbook/assets/image (144).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (144).png" alt=""><figcaption></figcaption></figure>
 * [ ] Now we need to set up 2 rules
   * [ ] `TCP` on Port `6379` and source is your `VPC CIDR`
   *   [ ] `Postgresql (TCP)` on Port `5432` and source is your `VPC CIDR`
 
-      <figure><img src="../../.gitbook/assets/image (145).png" alt=""><figcaption><p>Your VPC CIDR can be found by navigating to <code>VPC</code>, select your region in the <code>VPCs</code> dropdown and on the VPC list you have a column called <code>IPv4 CIDR</code>, copy your <code>CIDR</code> and use it as a source.</p></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (145).png" alt=""><figcaption><p>Your VPC CIDR can be found by navigating to <code>VPC</code>, select your region in the <code>VPCs</code> dropdown and on the VPC list you have a column called <code>IPv4 CIDR</code>, copy your <code>CIDR</code> and use it as a source.</p></figcaption></figure>
 * [ ] Click "Save Rules"&#x20;
 
 ## Enabling HTTPS on your instance (optional)
