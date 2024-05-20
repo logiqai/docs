@@ -72,8 +72,8 @@ The Cloudformation template provisions the following resources:
     *   You can find this by searching for **"VPC"** on the top left search bar, select the **VPC** service, click the **VPCs** resource and select your **region**. Locate your **VPC** and copy the **VPC ID**.&#x20;
 
         <figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
-  * [ ] Enter two (2) **Subnets**.
-    *   From where you left of extracting your **VPC ID**, on the left hand side menu, select **Subnets** and copy the two **Subnet ID**s you intend you use
+  * [ ] Enter two (2) **Private** **Subnets**.
+    *   From where you left of extracting your **VPC ID**, on the left hand side menu, select **Private Subnets** and copy the two **Subnet ID**s you intend you use
 
         <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
@@ -124,7 +124,7 @@ After successfully deploying the initial CloudFormation stack, follow these step
 
       <figure><img src="../../.gitbook/assets/image (136).png" alt=""><figcaption></figcaption></figure>
   * [ ] Select a VPC id in the dropdown (This guide assumes you’ve created these previously)
-  *   [ ] Select two VPC subnets for the above VPC from each dropdown.
+  *   [ ] Select two VPC Private subnets with NAT GATEWAY Attatched for the above VPC from each dropdown.
 
       <figure><img src="../../.gitbook/assets/image (137).png" alt=""><figcaption></figcaption></figure>
   * [ ] Enter "2" in the fields for “Ingest Worker Node count” and “Common Worker Node count”
