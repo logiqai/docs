@@ -1,10 +1,8 @@
----
-description: 'Reference Video: https://www.youtube.com/watch?v=3Yw7TfeojDQ'
----
-
 # Deploying Apica Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using CloudFormation
 
 ### 1. Overview
+
+Link to Video: [https://www.youtube.com/watch?v=3Yw7TfeojDQ](https://www.youtube.com/watch?v=3Yw7TfeojDQ)
 
 This guide will take you through deploying Apica Ascent on an AWS EKS cluster with Aurora PostgreSQL and ElastiCache Redis using CloudFormation and HELM. The installation will create user roles and policies that are necessary to create a GP3 storage class, a private S3 bucket, Aurora PostgreSQL and Elasticache with default encryption and bucket policies.
 
