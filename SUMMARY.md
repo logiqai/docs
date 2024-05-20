@@ -34,6 +34,7 @@
   * [Deploying Apica Ascent PaaS on AWS](deploying-apica-data-fabric/logiq-paas-deployment/aws-cloudformation.md)
   * [Deploying Apica Ascent EKS on AWS using CloudFormation](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-cloudformation.md)
   * [Deploying Apica Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using CloudFormation](deploying-apica-data-fabric/logiq-paas-deployment/deploying-apica-ascent-on-aws-eks-with-aurora-postgresql-and-elasticache-redis-using-cloudformation.md)
+  * [Apica Ascent on AWS EKS(Private Endpoint)with Aurora PostgreSQL and ElastiCache Redis on prod VPC.](deploying-apica-data-fabric/logiq-paas-deployment/apica-ascent-on-aws-eks-private-endpoint-with-aurora-postgresql-and-elasticache-redis-on-prod-vpc..md)
   * [Deploying Apica Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis on prod VPC using CF](deploying-apica-data-fabric/logiq-paas-deployment/deploying-apica-ascent-on-aws-eks-with-aurora-postgresql-and-elasticache-redis-on-prod-vpc-using-cf.md)
   * [Deploying Apica Ascent EKS on AWS using custom AMI](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-custom-ami.md)
   * [Deploying Apica Ascent EKS with AWS ALB](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
