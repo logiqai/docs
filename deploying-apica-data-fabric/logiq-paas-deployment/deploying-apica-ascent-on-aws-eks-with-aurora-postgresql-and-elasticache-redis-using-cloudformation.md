@@ -1,3 +1,7 @@
+---
+description: 'Reference Video: https://www.youtube.com/watch?v=3Yw7TfeojDQ'
+---
+
 # Deploying Apica Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using CloudFormation
 
 ### 1. Overview
