@@ -164,7 +164,8 @@ Deployment might take a while. Please wait until the stack status shows **"CREAT
 
 1. Create a [bastion host](https://aws.amazon.com/solutions/implementations/linux-bastion/) in the public subnet of your VPC with a key pair. Launch this host with user data that installs kubectl and aws CLI tools you need.
 2. Access the bastion host via SSH from your workstation to ensure it works as expected.
-3. Check that the security group attached to your EKS control plane can receive 443 traffic from the public subnet. You can create a rule for this if one doesn't exist. This will enable communication between the bastion host in the public subnet and the cluster in the private subnets.
+3. Check that the security group attached to your EKS control plane can receive 443 traffic from the public subnet. You can create a rule by adding port HTTPS (443) and giving the Security group id of bastion host in EKS security group. \
+   This will enable communication between the bastion host in the public subnet and the cluster in the private subnets.
 4. Access the bastion host and then use it to communicate with the cluster just as you would with your personal machine.
 5. Update your kubeconfig using below command.
 
