@@ -10,7 +10,7 @@ description: >-
 
 Before proceeding, ensure the following prerequisites are met:
 
-* **Helm 3** is installed on your machine. For installation instructions.
+* [Helm 3 ](https://helm.sh/docs/intro/install/)is installed on your machine.
 * **AWS CLI** is installed and configured on your machine.
 * You have permissions on your AWS account to create resources including **Elastic Kubernetes Service (EKS)**, **S3 Bucket**, **Aurora PostgreSQL**, and **ElastiCache.**
 * You have configured an AWS **Virtual Private Cloud** (VPC) and two (2) Private **subnets**.&#x20;
