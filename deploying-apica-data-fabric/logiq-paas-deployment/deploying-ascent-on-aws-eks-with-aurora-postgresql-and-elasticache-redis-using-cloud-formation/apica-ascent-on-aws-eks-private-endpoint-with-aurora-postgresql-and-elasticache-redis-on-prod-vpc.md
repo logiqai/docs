@@ -401,10 +401,11 @@ Under the `EXTERNAL-IP` column you will find a URL similar to below:
 
 ```
 NAME                        TYPE           CLUSTER-IP       EXTERNAL-IP
-logiq-kubernetes-ingress     LoadBalancer <cluster_ip>    a874cbfee1cc94ea18228asd231da444-2051223870.eu-north-1.elb.amazonaws.com
+logiq-kubernetes-ingress     LoadBalancer <cluster_ip>    internal-a9205bedc8dd94d27bbd10eb799b8651-238631451.us-east-1.elb.amazonaws.com
 ```
 
-Use this in your browser to access the Ascent UI
+**Create windows server with same vpc and create a rule for RDP in security group of windows server.**\
+**RDP into that and access the application with "EXTERNAL-IP"**
 
 Login credentials is as defined in your `values.yaml` file
 
