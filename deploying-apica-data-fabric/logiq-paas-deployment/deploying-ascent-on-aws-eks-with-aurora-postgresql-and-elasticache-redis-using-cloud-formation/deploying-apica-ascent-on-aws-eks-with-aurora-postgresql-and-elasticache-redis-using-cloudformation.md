@@ -1,3 +1,7 @@
+---
+description: This creates its own VPC,Subnets and NAT gateways.
+---
+
 # Deploying Apica Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using CloudFormation
 
 ### 1. Overview
@@ -50,7 +54,7 @@ Before you begin, ensure you have the following prerequisites.
 
 #### 5.1 Create EKS Cluster
 
-**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL: [https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster-singleset.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster-singleset.yaml)
+**Step 1:** To prepare for the deployment, first obtain the Cloudformation template that will be used at the URL: [https://logiq-scripts.s3.ap-south-1.amazonaws.com/Apica/EKSCluster-singleset.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/Apica/EKSCluster-singleset.yaml)
 
 **Step 2**: On your AWS Console, navigate to CloudFormation and select **Create stack**.
 
@@ -71,7 +75,10 @@ Before you begin, ensure you have the following prerequisites.
 
 The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.
 
-<table><thead><tr><th width="215.5557129983348">Node group</th><th width="275.2866694599267">Instance size (min recommended)</th><th>Nodes (HA)</th></tr></thead><tbody><tr><td><strong>ingest</strong></td><td>c5.xlarge (4 Core 8 GB RAM)</td><td>2</td></tr><tr><td><strong>common</strong></td><td>c5.2xlarge (8 Core 32 GB RAM)</td><td>2</td></tr><tr><td><strong>db</strong></td><td>c5.xlarge (4 Core 8 GB RAM)</td><td>2</td></tr></tbody></table>
+| Node group | Instance size (min recommended) | Nodes (HA) |
+| ---------- | ------------------------------- | ---------- |
+| **ingest** | c5.xlarge (4 Core 8 GB RAM)     | 2          |
+| **common** | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
 
 [![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(3\).png)](../../../.gitbook/assets/image%20\(3\).png)
 
@@ -102,19 +109,7 @@ kube-system Active 4h57m
 
 #### 5.3 Enable GP3 storage class for EKS
 
-**Step 1**: The Amazon Elastic Block Store Container Storage Interface (CSI) Driver provides a [CSI](https://github.com/container-storage-interface/spec/blob/master/spec.md) interface used by Container Orchestrator to manage the lifecycle of Amazon EBS volumes. To enable GP3 volumes for this stack, run the following commands.
-
-```
-helm repo add aws-ebs-csi-driver https://kubernetes-sigs.github.io/aws-ebs-csi-driver
-
-helm repo update
-
-helm upgrade --install aws-ebs-csi-driver \
---namespace kube-system \
-aws-ebs-csi-driver/aws-ebs-csi-driver
-```
-
-Download this yaml file and run the commands mentioned below:
+**Step 1**: Download this yaml file and run the commands mentioned below:
 
 {% file src="../../../.gitbook/assets/gp3-sc.yaml" %}
 
