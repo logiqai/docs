@@ -4,7 +4,7 @@ description: >-
   on production VPC using Cloudformation
 ---
 
-# Deploying Apica Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis on prod VPC using CF
+# Deploying Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using Cloud Formation
 
 ## Prerequisites&#x20;
 
@@ -254,10 +254,10 @@ FOR APICA ONLY: [https://apicasystems.atlassian.net/wiki/spaces/PS/pages/3703013
     ```
     kubectl create namespace logiq
     ```
-* [ ] Download the following file:
+* [ ] Download the following file
 
-{% embed url="https://logiq-scripts.s3.ap-south-1.amazonaws.com/Prodvpc/values.yaml" %}
-values.yaml for the helmchart
+{% embed url="https://logiq-scripts.s3.ap-south-1.amazonaws.com/Prod/values.yaml" %}
+values.yaml
 {% endembed %}
 
 * [ ] Open the file in a text editor and replace the following values:
