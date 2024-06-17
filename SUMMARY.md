@@ -50,6 +50,12 @@
 * [Using Pre-defined Dashboards](dashboards/using-pre-defined-dashboards.md)
 * [Import Grafana Dashboards](dashboards/import-grafana-dashboards.md)
 
+## Data Explorer
+
+* [Overview](data-explorer/overview.md)
+* [Query Builder](data-explorer/query-builder.md)
+* [Widget](data-explorer/widget.md)
+
 ## COMMAND LINE INTERFACE
 
 * [apicactl Documentation](https://logiqctl.logiq.ai/)
