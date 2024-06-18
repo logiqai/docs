@@ -1,6 +1,6 @@
 # Ascent 2.3.0
 
-
+Discover the latest advancements and improvements of the Apica Ascent platform. This is your go-to destination for updates on platform enhancements and new features. Explore what's new to optimize your observability and data management strategies.
 
 #### **Synthetic Monitoring (ASM 13.26.0) - SaaS**
 
