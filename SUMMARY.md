@@ -122,6 +122,10 @@
 * [SNMP](integrations/snmp.md)
 * [Apica ASM](integrations/apica-asm.md)
 
+## Fleet
+
+* [Fleet](fleet/fleet.md)
+
 ***
 
 * [Apica Ascent Observability Data Collector Agent](logiq.ai-observability-data-collector-agent.md)
@@ -134,6 +138,7 @@
 * [Filter](data-management/filter.md)
 * [Rewrite](data-management/rewrite.md)
 * [SIEM and TAG](data-management/siem-and-tag.md)
+* [Code](data-management/code.md)
 * [Forward](data-management/forward.md)
 * [Rename Attributes](data-management/rename-attributes.md)
 * [Timestamp handling](data-management/timestamp-handling.md)
@@ -234,7 +239,3 @@
 * [Audit Trail](logiq-ui-configuration/audit-trail/README.md)
   * [Events Trail](logiq-ui-configuration/audit-trail/events-trail.md)
   * [Alerts Trail](logiq-ui-configuration/audit-trail/alerts-trail.md)
-
-## Group 1
-
-* [Fleet](group-1/fleet.md)
