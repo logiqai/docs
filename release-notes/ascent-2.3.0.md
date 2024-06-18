@@ -15,7 +15,7 @@ Discover the latest advancements and improvements of the Apica Ascent platform. 
 
 * Screenshots for Browser checks were not working in new tabs or windows created by the check. This is fixed as part of the above feature that include control of created tabs and windows by the target site.
 
-#### **ADF v3.10**
+#### **ADF v3.8**
 
 **Features**
 
