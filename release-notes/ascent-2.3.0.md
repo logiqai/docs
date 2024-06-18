@@ -21,18 +21,17 @@ Discover the latest advancements and improvements of the Apica Ascent platform. 
 
 * **Data Explorer** adds a new way to create queries, dashboards, and widgets directly from a browsable inventory of available metrics and events. With just a few clicks, a query builder is guiding the simple creation of dashboards and widgets.\
   Please read further on this substation set of features in our product documentation:\
-  [https://docs.apica.io/data-explorer/overview](https://docs.apica.io/data-explorer/overview)\
-
+  [https://docs.apica.io/data-explorer/overview](https://docs.apica.io/data-explorer/overview)
 * **Code Rule** is a new rule type that is introduced with this release, where user can add JavaScript code to enhance the logs. With the help of Code Block, add Code Rule to improve your pipelines. Code Rules takes in a JavaScript function that gets integrated with your pipeline.\
   Please read further on this in the product documentation:\
-  [https://docs.apica.io/data-management/code](https://docs.apica.io/data-management/code)\
-
+  [https://docs.apica.io/data-management/code](https://docs.apica.io/data-management/code)
 * **Fleet** 🚢 is the ultimate solution for making the collection of observability data responsive to changes in your environment using your pre-existing observability agents.\
   With Fleet, you can collect more data when you need it and less when you don’t. And the best part? Almost all observability agents can be managed through configuration files describing how to collect, enrich, and send data.\
   Fleet aims to simplify this process through an agent manager. The Fleet Agent Manager functions as a sidecar utility that checks for new configuration files and triggers the appropriate restart/reload functionality of the supported agent. The Agent Manager is kept intentionally simple, with the goal that it only needs to be installed once and updated infrequently.\
   Please read further on this in the product documentation:\
-  [https://docs.apica.io/fleet/fleet](https://docs.apica.io/fleet/fleet)\
-
+  [https://docs.apica.io/fleet/fleet](https://docs.apica.io/fleet/fleet)
+* **JS Code Forwarder** is a robust batch processing tool designed to efficiently handle and forward batches of events. It supports forwarding arrays of event objects to a specified endpoint, and includes built-in functions for recording metrics, making HTTP requests, and logging.\
+  [https://logflow-docs.logiq.ai/forwarding-to-monitoring-tools/js-code-forwarding](https://logflow-docs.logiq.ai/forwarding-to-monitoring-tools/js-code-forwarding)
 * **AWS XRay Forwarder**. This allows users to send trace data to AWS XRay.
 * Alert page search. Ability to search across all existing Alerts by use of central search bar within Alert list view.\
 
