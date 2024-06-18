@@ -264,7 +264,7 @@ Before you begin, ensure you have the following prerequisites.
 **Important:** You **MUST** choose 2 different subnets with NAT gateway from the same VPC.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.
 

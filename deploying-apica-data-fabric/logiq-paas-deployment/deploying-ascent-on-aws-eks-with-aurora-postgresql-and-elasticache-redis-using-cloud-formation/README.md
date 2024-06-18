@@ -44,7 +44,7 @@ The Cloudformation template provisions the following resources:
 
 *   [ ] Once logged in to the AWS GUI, with the search bar on your top left, search for **"CloudFormation"** and select the **CloudFormation** Service
 
-    <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 *   [ ] On your top right, click **"Create Stack"** and select **"With new resources (standard)"**
 
     <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
