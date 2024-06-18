@@ -56,6 +56,7 @@
 * [Overview](data-explorer/overview.md)
 * [Query Builder](data-explorer/query-builder.md)
 * [Widget](data-explorer/widget.md)
+* [Create a Dashboard](data-explorer/create-a-dashboard.md)
 
 ## COMMAND LINE INTERFACE
 
