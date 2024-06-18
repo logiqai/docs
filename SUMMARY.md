@@ -139,7 +139,7 @@
 * [Filter](data-management/filter.md)
 * [Rewrite](data-management/rewrite.md)
 * [SIEM and TAG](data-management/siem-and-tag.md)
-* [Code](data-management/code.md)
+* [CODE RULE:](data-management/code-rule.md)
 * [Forward](data-management/forward.md)
 * [Rename Attributes](data-management/rename-attributes.md)
 * [Timestamp handling](data-management/timestamp-handling.md)
