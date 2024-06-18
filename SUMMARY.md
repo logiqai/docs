@@ -18,6 +18,7 @@
   * [IRONdb](release-notes/ascent-2.1.0/irondb.md)
 * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
 * [Ascent 2.2.0](release-notes/load-test.md)
+* [Ascent 2.3.0](release-notes/ascent-2.3.0.md)
 
 ## EULA
 
