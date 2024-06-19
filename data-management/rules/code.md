@@ -4,7 +4,7 @@ description: >-
   JavaScript code to enhance the logs.
 ---
 
-# CODE RULE:
+# CODE
 
 With the help of Code Block, add Code Rule to improve your pipelines. Code Rules takes in a JavaScript function that gets integrated with your pipeline.&#x20;
 
@@ -21,7 +21,7 @@ With the help of Code Block, add Code Rule to improve your pipelines. Code Rules
 
 Code Blocks is enriched with JavaScript code completion and syntax highlighting. Easily add or update your JS code by typing or importing a code file.&#x20;
 
-<figure><img src="../.gitbook/assets/Screenshot from 2024-06-19 00-05-33.png" alt=""><figcaption><p>CODE RULE</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot from 2024-06-19 00-05-33.png" alt=""><figcaption><p>CODE RULE</p></figcaption></figure>
 
 The Code Rule empowers users to create and execute custom scripts or rules for processing incoming logs. This flexibility allows for highly tailored log processing logic to be implemented, beyond what can be achieved with predefined rewrite or extraction rules. Users can leverage their programming skills to manipulate log data in sophisticated ways, enabling tasks such as complex data transformations, enrichment, filtering, or integration with external systems. This Rule offers advanced customization options for handling diverse log processing requirements.
 
@@ -40,7 +40,7 @@ For example, it can replace credit card numbers, social security numbers, or any
 
 Rewrite Code rule has an optional code field. Clicking on the toggle Code field, you can add or remove your code from your rule. Clicking on the import button you can import the code file whose contents are immediately hydrated in the Code Block.
 
-<figure><img src="../.gitbook/assets/Screenshot from 2024-06-19 00-08-18.png" alt=""><figcaption><p>REWRITE RULE</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot from 2024-06-19 00-08-18.png" alt=""><figcaption><p>REWRITE RULE</p></figcaption></figure>
 
 
 
@@ -52,7 +52,7 @@ The Extract Rule parses and extracts specific labels or fields from unstructured
 
 Like REWRITE RULE, you can add an optional code field to your rule by clicking the toggle code button.
 
-<figure><img src="../.gitbook/assets/Screenshot from 2024-06-19 00-08-31.png" alt=""><figcaption><p>EXTRACT RULE</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot from 2024-06-19 00-08-31.png" alt=""><figcaption><p>EXTRACT RULE</p></figcaption></figure>
 
 **View CODE:**
 
@@ -60,7 +60,7 @@ In the Rules section, an option is available for viewing your code. You can filt
 
 Please be informed that the code block is set to read-only mode. To modify the code, please proceed with the standard edit-rule procedure.&#x20;
 
-<figure><img src="../.gitbook/assets/Screenshot from 2024-06-19 00-15-48.png" alt=""><figcaption><p>View CODE</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot from 2024-06-19 00-15-48.png" alt=""><figcaption><p>View CODE</p></figcaption></figure>
 
 
 
@@ -72,4 +72,4 @@ For example, users can define JavaScript functions to scan incoming logs, identi
 
 
 
-<figure><img src="../.gitbook/assets/Screenshot from 2024-06-19 00-17-37.png" alt=""><figcaption><p>JS CODE FORWARDER</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot from 2024-06-19 00-17-37.png" alt=""><figcaption><p>JS CODE FORWARDER</p></figcaption></figure>

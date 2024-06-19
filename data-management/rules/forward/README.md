@@ -1,4 +1,4 @@
-# Forward
+# FORWARD
 
 Forward rules are applied when the logs are routed to downstream destinations. In a nutshell, these are similar to Filter rules, but filter rules are applied when Apica Ascent receives the data. Forward rules are useful in case organizations want to retain all the generated logs in InstaStore but want to selectively forward the data to other destinations by ensuring total compliance.
 
@@ -6,12 +6,12 @@ Multiple forward rules can be configured for a log stream. The data get forwarde
 
 Select a log line to create a forward rule, click on the ellipsis available on the logline and click on the "create rule".
 
-![](<../.gitbook/assets/image (69).png>)
+![](<../../../.gitbook/assets/image (69).png>)
 
 In the modal that opens, select FORWARD and enter the details. In this case, logs only get forwarded if the given condition is satisfied.
 
-![](<../.gitbook/assets/image (16) (1).png>)
+![](<../../../.gitbook/assets/image (16) (1).png>)
 
 Optionally toggle "Forward Labels" and select the fields that need to be forwarded. In this case, if the condition is satisfied, only the selected fields get forwarded.
 
-![](<../.gitbook/assets/image (42).png>)
+![](<../../../.gitbook/assets/image (42).png>)

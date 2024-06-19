@@ -123,26 +123,23 @@
 * [Splunk Heavy Forwarder](integrations/splunk-heavy-forwarder.md)
 * [SNMP](integrations/snmp.md)
 * [Apica ASM](integrations/apica-asm.md)
+* [Apica Ascent Observability Data Collector Agent](integrations/logiq.ai-observability-data-collector-agent.md)
 
 ## Fleet
 
 * [Fleet](fleet/fleet.md)
 
-***
-
-* [Apica Ascent Observability Data Collector Agent](logiq.ai-observability-data-collector-agent.md)
-
 ## DATA MANAGEMENT
 
 * [Overview](data-management/overview.md)
-* [Rules](data-management/rules.md)
-* [Extract](data-management/extract.md)
-* [Filter](data-management/filter.md)
-* [Rewrite](data-management/rewrite.md)
-* [SIEM and TAG](data-management/siem-and-tag.md)
-* [CODE RULE:](data-management/code-rule.md)
-* [Forward](data-management/forward.md)
-* [Rename Attributes](data-management/rename-attributes.md)
+* [Rules](data-management/rules/README.md)
+  * [FILTER](data-management/rules/filter.md)
+  * [EXTRACT](data-management/rules/extract.md)
+  * [SIEM and TAG](data-management/rules/siem-and-tag.md)
+  * [REWRITE](data-management/rules/rewrite.md)
+  * [CODE](data-management/rules/code.md)
+  * [FORWARD](data-management/rules/forward/README.md)
+    * [Rename Attributes](data-management/rules/forward/rename-attributes.md)
 * [Timestamp handling](data-management/timestamp-handling.md)
 * [Large log/events/metrics/traces](data-management/large-log-events-metrics-traces.md)
 

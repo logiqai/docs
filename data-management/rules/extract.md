@@ -1,4 +1,4 @@
-# Extract
+# EXTRACT
 
 Apica Ascent provides pre-built rules to parse the fields of ingested log events. However, you can customize these rules to meet your specific needs. Here's how:
 
@@ -8,17 +8,17 @@ Apica Ascent provides pre-built rules to parse the fields of ingested log events
 
 From here, you can define the fields that you want to extract and configure the rule to match your specific use case.
 
-![](<../.gitbook/assets/image (69).png>)
+![](<../../.gitbook/assets/image (69).png>)
 
 In the modal that opens after clicking "Create Rule," select "Extract" as the type of rule you want to create. Then, enter the details for your extract rule.
 
-![](<../.gitbook/assets/image (3) (1).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 Like every other rule, when creating an Extract Rule, you will need to enter a name for the rule, specify the group it belongs to. Additionally, you will need to specify a regex pattern of re2 flavour that the rule should match against in order to extract the desired fields from your log data. Once you have provided all the necessary details, save your rule to create the Extract Rule.
 
-![](<../.gitbook/assets/image (116).png>)
+![](<../../.gitbook/assets/image (116).png>)
 
-Apica Ascent uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.&#x20;
+Apica Ascent uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.
 
 ```
 (?P<server_ip>\S+) (?P<method>\S+) (?P<uri>\S+) (?P<uri_query>\S+) (?P<server_port>\d+) (?P<username>\S+) (?P<client_ip>\S+) (?P<user_agent>\S+) (?P<referer>\S+) (?P<status>\S+) (?P<substatus>\S+) (?P<win32_status>\S+) (?P<time_taken>\S+)

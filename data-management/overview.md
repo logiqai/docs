@@ -1,6 +1,6 @@
 # Overview
 
-Apica Ascent automatically parses various log formats. Custom rules can be applied to the incoming log streams which are discussed in the [Rules](rules.md) Section.
+Apica Ascent automatically parses various log formats. Custom rules can be applied to the incoming log streams which are discussed in the [Rules](rules/) Section.
 
 #### Embedded JSON
 
@@ -15,7 +15,7 @@ Apica Ascent extracts `user`, `type`, and `is_active` fields from the above line
 
 #### Key-Value Pairs
 
-Apart from identifying formatted JSON, Apica Ascent also checks for any key-value pairs in the incoming data and makes that available in the structured data.&#x20;
+Apart from identifying formatted JSON, Apica Ascent also checks for any key-value pairs in the incoming data and makes that available in the structured data.
 
 ```
 // Unstructured log line with key-value pairs.

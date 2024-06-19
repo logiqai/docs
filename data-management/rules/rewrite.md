@@ -1,18 +1,18 @@
-# Rewrite
+# REWRITE
 
 If your incoming log data contains Personally Identifiable Information (PII) or other sensitive data, you may need to redact or replace that data to comply with data security regulations or meet your business needs. With Apica Ascent, you can create custom Rewrite Rules using regular expressions to match patterns in your incoming data stream and mask or replace these patterns.
 
 To create a Rewrite Rule, select a log line that contains the pattern you want to mask or replace. Click on the ellipsis available on the logline and click on "Create Rule".
 
-![](<../.gitbook/assets/image (69).png>)
+![](<../../.gitbook/assets/image (69).png>)
 
 In the modal that opens, select REWRITE and enter the details.
 
-![](<../.gitbook/assets/image (3) (1).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 Like every other rule, Enter Name, Group, Parameters to filter (optional), and Pattern.
 
-![](<../.gitbook/assets/image (116).png>)
+![](<../../.gitbook/assets/image (116).png>)
 
 Apica Ascent uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.
 
@@ -67,7 +67,7 @@ It is crucial to be mindful of the context of the regular expression you create 
 
 You can create a custom rewrite rule to match and mask PII in your log data from the Rules section on your Apica Ascent UI. To access create a new rule, click **Rules** > **Rule Packs** > **+ New Rule**
 
-![](<../.gitbook/assets/image (128).png>)
+![](<../../.gitbook/assets/image (128).png>)
 
 To configure your rewrite rule, do the following.
 
@@ -81,10 +81,10 @@ To configure your rewrite rule, do the following.
 8. Optionally, Add more Parameters to filter data
 9. Click **Create Rule**.
 
-![](<../.gitbook/assets/image (22).png>)
+![](<../../.gitbook/assets/image (22).png>)
 
 Your new rewrite rule is now created. Your new rule will apply to all incoming log data for the specified namespace, look for patterns within the log data that match the match expression, and rewrite log data as per the rewrite expression.
 
 Apica Ascent offers many inbuilt rules for obfuscating sensitive information like credit card numbers, SSN, phone numbers, etc...
 
-![](<../.gitbook/assets/image (15) (1).png>)
+![](<../../.gitbook/assets/image (15) (1).png>)

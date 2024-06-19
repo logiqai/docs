@@ -18,7 +18,7 @@ You should use this feature if:
 * You want to **increase cost savings**
 * You want to **decrease the payload size** being forwarded
 * You want to rename the labels to **maintain a set standard across teams**
-* You want to rename the attributes to **enhance the readability**&#x20;
+* You want to rename the attributes to **enhance the readability**
 
 To rename the log attributes you can head to the `Create Rule` page.
 
@@ -32,12 +32,12 @@ To rename the log attributes you can head to the `Create Rule` page.
 
 {% hint style="warning" %}
 **NOTE:**\
-You should make sure that multiple rules are not active on a similar namespace, otherwise, both rules will be applied which will result in duplicate data being forwarded.&#x20;
+You should make sure that multiple rules are not active on a similar namespace, otherwise, both rules will be applied which will result in duplicate data being forwarded.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Screenshot from 2023-01-02 18-27-48.png" alt=""><figcaption><p>Create Rule Page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot from 2023-01-02 18-27-48.png" alt=""><figcaption><p>Create Rule Page</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Screenshot from 2023-01-02 19-00-52.png" alt=""><figcaption><p>Forward Labels and Rename Labels</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot from 2023-01-02 19-00-52.png" alt=""><figcaption><p>Forward Labels and Rename Labels</p></figcaption></figure>
 
 ## Editing Renamed Labels
 
@@ -47,18 +47,18 @@ To edit the renamed labels you should go to "Active Rules" page.
 * You will get the "Edit Rule" option from the three dots at the end of the row.
 * Clicking on the Edit Rule will open a modal which has a table with all the old label names and the corresponding new label names.
 * You can edit any of the fields, you can add new labels which have to be renamed, you can even delete a mapping.
-* After clicking "Update" button, this forward rule will be updated and the changes will be reflected across the Apica Ascent system.&#x20;
+* After clicking "Update" button, this forward rule will be updated and the changes will be reflected across the Apica Ascent system.
 
-<figure><img src="../.gitbook/assets/Screenshot from 2023-01-02 19-22-44 (1).png" alt=""><figcaption><p>Forward Rule in Active Rules</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot from 2023-01-02 19-22-44 (1).png" alt=""><figcaption><p>Forward Rule in Active Rules</p></figcaption></figure>
 
-> You will be able to see the `Renamed Labels` in red tags. Each tag shows the old label name and the new labels name in the format <mark style="background-color:red;">LABEL➤RENAMED\_LABEL</mark>.&#x20;
+> You will be able to see the `Renamed Labels` in red tags. Each tag shows the old label name and the new labels name in the format <mark style="background-color:red;">LABEL➤RENAMED\_LABEL</mark>.
 
-<figure><img src="../.gitbook/assets/Screenshot from 2023-01-02 19-23-12.png" alt=""><figcaption><p>Edit Rule page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot from 2023-01-02 19-23-12.png" alt=""><figcaption><p>Edit Rule page</p></figcaption></figure>
 
-> You will be able to:&#x20;
+> You will be able to:
 >
 > * edit a existing label name and renamed label
-> * delete a renamed label mapping&#x20;
+> * delete a renamed label mapping
 > * add new labels to rename
 
-After [mapping forwarder to namespace](https://logflow-docs.logiq.ai/flow-management/mapping-applications), this rule will start working and all the logs which are being forwarded will have the renamed attributes instead of the default attributes.&#x20;
+After [mapping forwarder to namespace](https://logflow-docs.logiq.ai/flow-management/mapping-applications), this rule will start working and all the logs which are being forwarded will have the renamed attributes instead of the default attributes.
