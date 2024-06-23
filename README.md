@@ -1,4 +1,10 @@
-# Data Fabric Overview
+# Welcome to Apica Docs
+
+#### Getting started with Apica Docs - use the quick links below:
+
+
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Deploying Apica Ascent</strong></td><td></td><td></td><td><a href="deploying-apica-data-fabric/logiq-paas-deployment/">logiq-paas-deployment</a></td></tr><tr><td><strong>Adding Data Sources</strong></td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Release Notes</strong></td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Data Explorer</strong></td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Dashboards</strong></td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Synthetic Monitoring</strong></td><td></td><td></td><td><a href="release-notes/ascent-2.1.0/synthetic-monitoring.md">synthetic-monitoring.md</a></td></tr></tbody></table>
 
 ## Apica Ascent Data Fabric
 
