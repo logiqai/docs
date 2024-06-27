@@ -41,6 +41,7 @@
   * [Deploying Apica Ascent EKS with AWS ALB](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
   * [Deploying Apica Ascent PaaS in Azure Kubernetes Service](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
     * [Azure Blob Storage Lifecycle Management](deploying-apica-data-fabric/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
+* [Data Ingest Ports](deploying-apica-data-fabric/data-ingest-ports.md)
 
 ## Dashboards
 
