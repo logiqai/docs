@@ -142,7 +142,8 @@
   * [CODE](data-management/rules/code.md)
   * [FORWARD](data-management/rules/forward/README.md)
     * [Rename Attributes](data-management/rules/forward/rename-attributes.md)
-* [Timestamp handling](data-management/timestamp-handling.md)
+* [Timestamp handling](data-management/timestamp-handling/README.md)
+  * [Timestamp bookmark](data-management/timestamp-handling/timestamp-bookmark.md)
 * [Large log/events/metrics/traces](data-management/large-log-events-metrics-traces.md)
 
 ## Infra & Application Monitoring
