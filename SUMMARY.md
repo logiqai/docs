@@ -119,6 +119,7 @@
   * [MongoDB Exporter](integrations/prometheus/mongodb-exporter.md)
   * [JMX Exporter](integrations/prometheus/jmx-exporter.md)
 * [Rsyslogd](integrations/rsyslogd.md)
+* [Syslog](integrations/syslog.md)
 * [Syslog-ng](integrations/syslog-ng.md)
 * [Splunk Universal Forwarder](integrations/splunk-universal-forwarder.md)
 * [Splunk Heavy Forwarder](integrations/splunk-heavy-forwarder.md)
