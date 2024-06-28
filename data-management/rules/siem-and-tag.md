@@ -6,6 +6,6 @@ This is useful for identifying the interesting events that may occur in logs in 
 
 Apica Ascent has hundreds of inbuilt SIEM rules which can be accessed on the "Rules" page.
 
-![Various Rule Packs](<../../.gitbook/assets/image (120).png>)
+![Various Rule Packs](<../../.gitbook/assets/Rule-packs.png>)
 
 ![A sample Log2Metrics dashboard that tracks Security Incidents and status codes](<../../.gitbook/assets/image (39).png>)
