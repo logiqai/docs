@@ -19,7 +19,7 @@ Navigate **Explore > Fleet** will show the agent list that are configured and ma
 
 When there are no configured agents.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>No agents</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption><p>No agents</p></figcaption></figure>
 
 **Configured Agent List:**
 

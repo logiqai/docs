@@ -197,6 +197,7 @@
   * [Averaging](logiq-events/time-series-ai-ml/averaging.md)
   * [Standard Deviation(STD)](logiq-events/time-series-ai-ml/standard-deviation-std.md)
   * [Forecasting](logiq-events/time-series-ai-ml/forecasting.md)
+  * [AI-ML on PromQL Query Data Set](logiq-events/time-series-ai-ml/ai-ml-on-promql-query-data-set.md)
 * [Alerts](logiq-events/alerts.md)
 * [Alerts (Simple/Anomaly)](logiq-events/alerts-simple-anomaly.md)
 * [Alerts On Logs](logiq-events/alerts-1.md)

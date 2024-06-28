@@ -17,4 +17,4 @@ The baselining configuration dialog box appears on the right side of the query p
 
 ![](../../.gitbook/assets/basic3.png)
 
-![](../../.gitbook/assets/basic2-edited.png)
+![Time-series ML Control Panel](../../.gitbook/assets/basic2-edited.png)
