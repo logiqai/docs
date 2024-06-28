@@ -35,9 +35,9 @@ To rename the log attributes you can head to the `Create Rule` page.
 You should make sure that multiple rules are not active on a similar namespace, otherwise, both rules will be applied which will result in duplicate data being forwarded.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Screenshot from 2023-01-02 18-27-48.png" alt=""><figcaption><p>Create Rule Page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/create-rule-forward-template.png" alt=""><figcaption><p>Create Rule Page</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Screenshot from 2023-01-02 19-00-52.png" alt=""><figcaption><p>Forward Labels and Rename Labels</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/forward-rename-labels.png" alt=""><figcaption><p>Forward Labels and Rename Labels</p></figcaption></figure>
 
 ## Editing Renamed Labels
 
@@ -49,11 +49,11 @@ To edit the renamed labels you should go to "Active Rules" page.
 * You can edit any of the fields, you can add new labels which have to be renamed, you can even delete a mapping.
 * After clicking "Update" button, this forward rule will be updated and the changes will be reflected across the Apica Ascent system.
 
-<figure><img src="../../../.gitbook/assets/Screenshot from 2023-01-02 19-22-44 (1).png" alt=""><figcaption><p>Forward Rule in Active Rules</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/rule-list-labels.png" alt=""><figcaption><p>Forward Rule in Active Rules</p></figcaption></figure>
 
 > You will be able to see the `Renamed Labels` in red tags. Each tag shows the old label name and the new labels name in the format <mark style="background-color:red;">LABEL➤RENAMED\_LABEL</mark>.
 
-<figure><img src="../../../.gitbook/assets/Screenshot from 2023-01-02 19-23-12.png" alt=""><figcaption><p>Edit Rule page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/forward-edit-rule.png" alt=""><figcaption><p>Edit Rule page</p></figcaption></figure>
 
 > You will be able to:
 >
