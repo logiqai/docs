@@ -38,7 +38,7 @@ On click of Create button a new pipeline tab will get added with the pipeline vi
 4\. Select a different namespace, can do multi-select\
 5\. Shows the overall EPS and Valume savings.
 
-### Add/Choose the existing rule(FILTER, EXTRACT, SIEM, TAG, REWRITE), for namespace and application.
+### Add/Choose the existing rule(FILTER, EXTRACT, SIEM, TAG, REWRITE, Code), for namespace and application.
 
 Click the + icon to create or choose the existing rule
 
