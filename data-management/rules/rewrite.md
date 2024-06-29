@@ -16,6 +16,8 @@ Like every other rule, Enter Name, Group, Parameters to filter (optional), and P
 
 Apica Ascent uses [re2 Regular expressions](https://github.com/google/re2/wiki/Syntax) for creating pattern expression, A sample expression for extracting ingress logs are mentioned below.
 
+Rewrite Rule also lets you give a piece of JavaScript code to access the log as an 'Event' object in its scope. Read Code Rule for more details.
+
 ### Example: Removing names and phone numbers from log data
 
 In this example, assume that the following lines of data are from an incoming log data stream.
