@@ -6,7 +6,7 @@ The following guide takes you through deploying Apica Ascent PaaS on MicroK8s.
 
 ## Installing MicroK8s
 
-The first step in this deployment is to install MicroK8s on your machine. To install MicroK8s, do the following.
+The first step in this deployment is to install MicroK8s on your machine. The following instructions pertain to Debian-based Linux systems. To install MicroK8s on such systems, do the following.
 
 1.  Update package lists by running the following command.
 
