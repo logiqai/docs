@@ -18,11 +18,11 @@ ALIVE (patent pending and patented) is introduced to elevate log analysis throug
 
 Example ALIVE screenshot,
 
-<figure><img src="../../.gitbook/assets/gitbook-alive-example1-2023-04-25_18-53-30.jpg" alt=""><figcaption><p>Example ALIVE Screen Shot</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/gitbook-alive-example1-2023-04-25_18-53-30.jpg" alt=""><figcaption><p>Example ALIVE Screen Shot</p></figcaption></figure>
 
 ## ALIVE Setup and Quick Start
 
-The first step is to enable log pattern generation capability for the desired namespace and application log stream. The process to enable log pattern generation is described [here](../log-pattern-signature/#ps\_stream\_enable).
+The first step is to enable log pattern generation capability for the desired namespace and application log stream. The process to enable log pattern generation is described [here](log-pattern-signature/#ps\_stream\_enable).
 
 After enabling the log pattern-signature generator, one should see the incoming logs in the ALIVE visual logs arrangement.
 
@@ -37,7 +37,7 @@ Steps to follow to access ALIVE UI,
 
 ALIVE functions are described in the figure below,
 
-<figure><img src="../../.gitbook/assets/alive-anotomy-2023-05-05_17-59-26.jpg" alt=""><figcaption><p>ALIVE Anatomy</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/alive-anotomy-2023-05-05_17-59-26.jpg" alt=""><figcaption><p>ALIVE Anatomy</p></figcaption></figure>
 
 ALIVE Window is divided into two sections; graph and work pad.
 
@@ -59,16 +59,16 @@ Linux Syslog is known for being difficult to analysis to its non-standard, unstr
 
 An example conventional text viewer is used to displaying endless lines of logs below,
 
-<figure><img src="../../.gitbook/assets/alive-ex0-2023-05-09_23-06-42.jpg" alt=""><figcaption><p>Subject Logs for Investigation</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/alive-ex0-2023-05-09_23-06-42.jpg" alt=""><figcaption><p>Subject Logs for Investigation</p></figcaption></figure>
 
 Using ALIVE to view the above logs, one can immediately spot a logging pattern anomaly that appeared in the middle of the time period.
 
-<figure><img src="../../.gitbook/assets/alive-ex1-2023-04-21_9-51-02.jpg" alt=""><figcaption><p>ALIVE Showing Logging Anomaly</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/alive-ex1-2023-04-21_9-51-02.jpg" alt=""><figcaption><p>ALIVE Showing Logging Anomaly</p></figcaption></figure>
 
 Further, drill down into the log display using the ALIVE visual interactive features.
 
-<figure><img src="../../.gitbook/assets/alive-ex2-2023-04-21_9-51-34.jpg" alt=""><figcaption><p>Zoom-in into the Anomalous Region</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/alive-ex2-2023-04-21_9-51-34.jpg" alt=""><figcaption><p>Zoom-in into the Anomalous Region</p></figcaption></figure>
 
 An additional action that the user can do is to collect and examine all the relevant logs in the work-pad display areas. Notice that the anomalous logs show that the external source is port-scanning the device as it is trying to _ssh_ into the device using guessed parameters.
 
-<figure><img src="../../.gitbook/assets/alive-ex3-2023-04-21_10-15-17.jpg" alt=""><figcaption><p>Log Investigation</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/alive-ex3-2023-04-21_10-15-17.jpg" alt=""><figcaption><p>Log Investigation</p></figcaption></figure>
