@@ -21,12 +21,6 @@
   * [IRONdb](release-notes/ascent-2.1.0/irondb.md)
 * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
 
-## EULA
-
-* [End User License Agreement](eula/eula.md)
-
-## Deploying Apica Data Fabric
-
 ***
 
 * [Deploying Apica Ascent](deploying-apica-ascent/README.md)
