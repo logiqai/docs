@@ -27,6 +27,7 @@
 
 ## Deploying Apica Data Fabric
 
+* [DEPLOYING APICA ASCENT](deploying-apica-data-fabric/deploying-apica-ascent.md)
 * [Quickstart with Docker-Compose](deploying-apica-data-fabric/quickstart-with-docker-compose.md)
 * [SaaS](deploying-apica-data-fabric/logiq-saas.md)
 * [PaaS Deployment Architecture](deploying-apica-data-fabric/paas-deployment-architecture.md)
