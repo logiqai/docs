@@ -24,7 +24,7 @@ Apica Ascent uses [re2 Regular expressions](https://github.com/google/re2/wiki/S
 (?P<server_ip>\S+) (?P<method>\S+) (?P<uri>\S+) (?P<uri_query>\S+) (?P<server_port>\d+) (?P<username>\S+) (?P<client_ip>\S+) (?P<user_agent>\S+) (?P<referer>\S+) (?P<status>\S+) (?P<substatus>\S+) (?P<win32_status>\S+) (?P<time_taken>\S+)
 ```
 
-Extract Rule also allows you to give a piece of JavaScript code that can access the Log with the 'Event' object in its scope. Read Code Rule for more details.
+Extract Rule also lets you give a piece of JavaScript code to access the log as an 'Event' object in its scope. Read Code Rule for more details.
 
 Once you have created an Extract Rule, all incoming log lines that match the specified criteria will be evaluated, and the fields will be extracted if available.
 
