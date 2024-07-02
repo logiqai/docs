@@ -1,7 +1,3 @@
----
-coverY: 0
----
-
 # Welcome to Apica Docs!
 
 ### Getting Started
