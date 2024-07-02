@@ -29,7 +29,7 @@
 
 ***
 
-* [DEPLOYING APICA ASCENT](deploying-apica-ascent/README.md)
+* [Deploying Apica Ascent](deploying-apica-ascent/README.md)
   * [Quickstart with Docker-Compose](deploying-apica-ascent/quickstart-with-docker-compose.md)
   * [SaaS](deploying-apica-ascent/logiq-saas.md)
   * [PaaS Deployment Architecture](deploying-apica-ascent/paas-deployment-architecture.md)
