@@ -2,7 +2,7 @@
 
 ## Introduction
 
-* [Welcome to Apica Docs](README.md)
+* [Welcome to Apica Docs!](README.md)
   * [User Interface](introduction/readme/the-logiq-ui.md)
 * [Apica Ascent Overview](introduction/apica-ascent-overview.md)
 * [Synthetic Monitoring Overview](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview)
