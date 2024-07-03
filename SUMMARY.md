@@ -43,12 +43,12 @@
 * [Using Pre-defined Dashboards](dashboards/using-pre-defined-dashboards.md)
 * [Import Grafana Dashboards](dashboards/import-grafana-dashboards.md)
 
-## Data Explorer
+***
 
-* [Overview](data-explorer/overview.md)
-* [Query Builder](data-explorer/query-builder.md)
-* [Widget](data-explorer/widget.md)
-* [Create a Dashboard](data-explorer/create-a-dashboard.md)
+* [Data Explorer Overview](overview/README.md)
+  * [Query Builder](overview/query-builder.md)
+  * [Widget](overview/widget.md)
+  * [Create a Dashboard](overview/create-a-dashboard.md)
 
 ## COMMAND LINE INTERFACE
 
