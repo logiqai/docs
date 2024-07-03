@@ -19,10 +19,10 @@ Apica Ascent currently integrates with over 150+ data sources via support for po
 * [Prometheus](../data-source-details/prometheus/)
 * [Docker Syslog log driver](../data-source-details/docker-syslog-log-driver.md)
 * [Docker swarm logging](../data-source-details/docker-swarm-logging.md)
-* [Elasticsearch](../../data-sources-1/time-series-databases/elasticsearch-data-source.md)
+* [Elasticsearch](../../data-sources/time-series-databases/elasticsearch-data-source.md)
 * [GCP Cloud logging](../data-source-details/gcp-cloud-logging.md)
 * [IIS Logging](../data-source-details/fluent-bit/iis-logs-on-windows.md)
-* [JSON endpoints](../../data-sources-1/api/json-data-source.md)
+* [JSON endpoints](../../data-sources/api/json-data-source.md)
 * [MQTT](../data-source-details/mqtt.md)
 
 You can also ingest logs from endpoint devices running:

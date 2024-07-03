@@ -44,4 +44,4 @@ e.g. if CloudFormation stack is called Foo and bucket is called Bar the password
 
 ## Ingesting data
 
-For setting up data ingestion from your endpoints and applications into Apica Ascent, please refer to the [Integrations section](../../../data-sources/overview/).
+For setting up data ingestion from your endpoints and applications into Apica Ascent, please refer to the [Integrations section](../../../integrations/overview/).

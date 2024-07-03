@@ -90,7 +90,7 @@ Use _flash-admin@foo.com_ / _flash-password_ to login
 
 ## Ingesting data
 
-For setting up data ingestion from your endpoints and applications into Apica Ascent, please refer to the [Integrations section](../../data-sources/overview/).
+For setting up data ingestion from your endpoints and applications into Apica Ascent, please refer to the [Integrations section](../../integrations/overview/).
 
 **The quickstart compose file includes a test data tool** that will generate test log data and also has a couple of dashboards that show Apica Ascent's APM capabilities.
 
