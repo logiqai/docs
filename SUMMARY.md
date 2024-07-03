@@ -1,11 +1,17 @@
 # Table of contents
 
 * [Welcome to Apica Docs!](README.md)
-  * [Ascent Overview](readme/ascent-overview.md)
-  * [Ascent User Interface](readme/the-logiq-ui.md)
+
+## PRODUCT OVERVIEW
+
+* [Ascent Overview](product-overview/ascent-overview.md)
+* [Ascent User Interface](product-overview/the-logiq-ui.md)
 * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview)
 * [Loadtesting](https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/5538148/Overview+of+the+Apica+Load+Test+Solution)
 * [Advanced Scripting Engine](https://apica-kb.atlassian.net/wiki/spaces/DAZT/pages/5674203/What+is+ZebraTester)
+
+***
+
 * [Release Notes](release-notes/README.md)
   * [Ascent 2.3.0](release-notes/ascent-2.3.0.md)
   * [Ascent 2.2.0](release-notes/load-test.md)

@@ -35,7 +35,7 @@ You'll now have access to and can interact with the Apica Ascent UI.
 
 Now that you have access to the Apica Ascent UI, you can go ahead and:
 
-* [ ] [Get acquainted with the Apica Ascent UI](../readme/the-logiq-ui.md)
+* [ ] [Get acquainted with the Apica Ascent UI](../product-overview/the-logiq-ui.md)
 * [ ] [Configure your data sources](../integrations/overview/)
 * [ ] [Configure Apica Ascent to send alerts to your email server](../logiq-ui-configuration/email-configuration-setup.md)
 * [ ] [Add and configure alert destinations like email, Slack, and PagerDuty](../integrations/alert-destinations.md)
