@@ -8,7 +8,7 @@
 
 ### Data Management and Analytics
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td>Getting Started</td><td></td><td></td></tr><tr><td>Flow Management</td><td></td><td></td></tr><tr><td>Data Sources</td><td></td><td></td></tr><tr><td>Data Forwarding</td><td></td><td></td></tr><tr><td>Splunk Forwarding</td><td></td><td></td></tr><tr><td>Object-Store Forwarding</td><td></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><a href="data-management/overview.md">Getting Started</a></td><td></td><td></td></tr><tr><td><a href="broken-reference">Flow Management</a></td><td></td><td></td></tr><tr><td><a href="broken-reference">Data Sources</a></td><td></td><td></td></tr><tr><td>Data Forwarding</td><td></td><td></td></tr><tr><td>Splunk Forwarding</td><td></td><td></td></tr><tr><td>Object-Store Forwarding</td><td></td><td></td></tr></tbody></table>
 
 ### Monitoring and Performance
 
