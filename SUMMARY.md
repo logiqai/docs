@@ -7,6 +7,8 @@
 * [Ascent Overview](product-overview/ascent-overview.md)
 * [Ascent User Interface](product-overview/the-logiq-ui.md)
 * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview)
+* [Synthetic Monitoring (Need to Import)](product-overview/synthetic-monitoring-need-to-import/README.md)
+  * [Synthetic Monitoring Overview](product-overview/synthetic-monitoring-need-to-import/synthetic-monitoring-overview.md)
 * [Loadtesting](https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/5538148/Overview+of+the+Apica+Load+Test+Solution)
 * [Advanced Scripting Engine](https://apica-kb.atlassian.net/wiki/spaces/DAZT/pages/5674203/What+is+ZebraTester)
 
@@ -169,6 +171,7 @@
 
 ## LOG MANAGEMENT
 
+* [Log Management Overview](log-management/log-management-overview.md)
 * [Terminology](log-management/logs-terminology.md)
 * [Explore Logs](log-management/explore-logs.md)
 * [Apica Ascent Search Cheat Sheet](log-management/search-cheat-sheet.md)
