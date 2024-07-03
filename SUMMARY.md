@@ -247,6 +247,19 @@
 
 ## TBD
 
+## Flow Management (need to import)
+
+* [Flow Management Overview](flow-management-need-to-import/flow-management-overview.md)
+* [Forwarders](flow-management-need-to-import/forwarders.md)
+* [Mapping Applications](flow-management-need-to-import/mapping-applications.md)
+* [Data Transformation](flow-management-need-to-import/data-transformation.md)
+
+## Object Store Forwarding (need to import)
+
+* [Object Store Forwarding Overview](object-store-forwarding-need-to-import/object-store-forwarding-overview.md)
+* [S3 Compatible](object-store-forwarding-need-to-import/s3-compatible.md)
+* [Azure BLOB Storage](object-store-forwarding-need-to-import/azure-blob-storage.md)
+
 ## SPLUNK FORWARDING - (need to import)
 
 * [Splunk Forwarding Overview](splunk-forwarding-need-to-import/splunk-forwarding-overview.md)
