@@ -12,22 +12,22 @@
 
 ## GETTING STARTED
 
-* [Deploying Apica Ascent](getting-started/deploying-apica-ascent/README.md)
-  * [Quickstart with Docker-Compose](getting-started/deploying-apica-ascent/quickstart-with-docker-compose.md)
-  * [SaaS](getting-started/deploying-apica-ascent/logiq-saas.md)
-  * [PaaS Deployment Architecture](getting-started/deploying-apica-ascent/paas-deployment-architecture.md)
-  * [PaaS deployment](getting-started/deploying-apica-ascent/logiq-paas-deployment/README.md)
-    * [Deploying Apica Ascent PaaS on Kubernetes](getting-started/deploying-apica-ascent/logiq-paas-deployment/k8s-quickstart-guide.md)
-    * [Deploying Apica Ascent PaaS on MicroK8s](getting-started/deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-paas-on-microk8s.md)
-    * [Deploying Apica Ascent PaaS on AWS](getting-started/deploying-apica-ascent/logiq-paas-deployment/aws-cloudformation.md)
-    * [Deploying Apica Ascent EKS on AWS using CloudFormation](getting-started/deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-cloudformation.md)
-    * [Deploying Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using Cloud Formation](getting-started/deploying-apica-ascent/logiq-paas-deployment/deploying-ascent-on-aws-eks-with-aurora-postgresql-and-elasticache-redis-using-cloud-formation/README.md)
-      * [Deploying Apica Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using CloudFormation](getting-started/deploying-apica-ascent/logiq-paas-deployment/deploying-ascent-on-aws-eks-with-aurora-postgresql-and-elasticache-redis-using-cloud-formation/deploying-apica-ascent-on-aws-eks-with-aurora-postgresql-and-elasticache-redis-using-cloudformation.md)
-      * [Apica Ascent on AWS EKS (Private Endpoint) with Aurora PostgreSQL and ElastiCache Redis on prod VPC](getting-started/deploying-apica-ascent/logiq-paas-deployment/deploying-ascent-on-aws-eks-with-aurora-postgresql-and-elasticache-redis-using-cloud-formation/apica-ascent-on-aws-eks-private-endpoint-with-aurora-postgresql-and-elasticache-redis-on-prod-vpc.md)
-    * [Deploying Apica Ascent EKS on AWS using custom AMI](getting-started/deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-custom-ami.md)
-    * [Deploying Apica Ascent EKS with AWS ALB](getting-started/deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
-    * [Deploying Apica Ascent PaaS in Azure Kubernetes Service](getting-started/deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
-      * [Azure Blob Storage Lifecycle Management](getting-started/deploying-apica-ascent/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
+* [Ascent Deployment Overview](getting-started/ascent-deployment-overview.md)
+* [Quickstart with Docker-Compose](getting-started/quickstart-with-docker-compose.md)
+* [Cloud - SaaS Deployment](getting-started/logiq-saas.md)
+* [On-Premise PaaS Deployment Architecture](getting-started/paas-deployment-architecture.md)
+* [On-Premise PaaS deployment](getting-started/logiq-paas-deployment/README.md)
+  * [Deploying Apica Ascent PaaS on Kubernetes](getting-started/logiq-paas-deployment/k8s-quickstart-guide.md)
+  * [Deploying Apica Ascent PaaS on MicroK8s](getting-started/logiq-paas-deployment/deploying-logiq-paas-on-microk8s.md)
+  * [Deploying Apica Ascent PaaS on AWS](getting-started/logiq-paas-deployment/aws-cloudformation.md)
+  * [Deploying Apica Ascent EKS on AWS using CloudFormation](getting-started/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-cloudformation.md)
+  * [Deploying Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using Cloud Formation](getting-started/logiq-paas-deployment/deploying-ascent-on-aws-eks-with-aurora-postgresql-and-elasticache-redis-using-cloud-formation/README.md)
+    * [Deploying Apica Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using CloudFormation](getting-started/logiq-paas-deployment/deploying-ascent-on-aws-eks-with-aurora-postgresql-and-elasticache-redis-using-cloud-formation/deploying-apica-ascent-on-aws-eks-with-aurora-postgresql-and-elasticache-redis-using-cloudformation.md)
+    * [Apica Ascent on AWS EKS (Private Endpoint) with Aurora PostgreSQL and ElastiCache Redis on prod VPC](getting-started/logiq-paas-deployment/deploying-ascent-on-aws-eks-with-aurora-postgresql-and-elasticache-redis-using-cloud-formation/apica-ascent-on-aws-eks-private-endpoint-with-aurora-postgresql-and-elasticache-redis-on-prod-vpc.md)
+  * [Deploying Apica Ascent EKS on AWS using custom AMI](getting-started/logiq-paas-deployment/deploying-logiq-eks-on-aws-using-custom-ami.md)
+  * [Deploying Apica Ascent EKS with AWS ALB](getting-started/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
+  * [Deploying Apica Ascent PaaS in Azure Kubernetes Service](getting-started/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
+    * [Azure Blob Storage Lifecycle Management](getting-started/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
 
 ## DATA SOURCES&#x20;
 
