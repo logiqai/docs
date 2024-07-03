@@ -7,8 +7,8 @@
 * [Ascent Overview](product-overview/ascent-overview.md)
 * [Ascent User Interface](product-overview/the-logiq-ui.md)
 * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview)
-* [Synthetic Monitoring (Need to Import)](product-overview/synthetic-monitoring-need-to-import/README.md)
-  * [Synthetic Monitoring Overview](product-overview/synthetic-monitoring-need-to-import/synthetic-monitoring-overview.md)
+* [Synthetic Monitoring Overview - (Need to Import)](product-overview/synthetic-monitoring-overview-need-to-import/README.md)
+  * [Synthetic Monitoring Overview](product-overview/synthetic-monitoring-overview-need-to-import/synthetic-monitoring-overview.md)
 * [Loadtesting](https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/5538148/Overview+of+the+Apica+Load+Test+Solution)
 * [Advanced Scripting Engine](https://apica-kb.atlassian.net/wiki/spaces/DAZT/pages/5674203/What+is+ZebraTester)
 
@@ -244,18 +244,18 @@
 
 ## TBD
 
+## Architecture - (need to import)
+
+* [Never Block, Never Drop](architecture-need-to-import/never-block-never-drop.md)
+* [InstaStore](architecture-need-to-import/instastore.md)
+* [Deployment](architecture-need-to-import/deployment.md)
+
 ## Flow Management (need to import)
 
 * [Flow Management Overview](flow-management-need-to-import/flow-management-overview.md)
 * [Forwarders](flow-management-need-to-import/forwarders.md)
 * [Mapping Applications](flow-management-need-to-import/mapping-applications.md)
 * [Data Transformation](flow-management-need-to-import/data-transformation.md)
-
-## Object Store Forwarding (need to import)
-
-* [Object Store Forwarding Overview](object-store-forwarding-need-to-import/object-store-forwarding-overview.md)
-* [S3 Compatible](object-store-forwarding-need-to-import/s3-compatible.md)
-* [Azure BLOB Storage](object-store-forwarding-need-to-import/azure-blob-storage.md)
 
 ## SPLUNK FORWARDING - (need to import)
 
@@ -271,3 +271,9 @@
 * [AWS Kinesis](data-forwarding-need-to-import/aws-kinesis.md)
 * [Azure Eventhub](data-forwarding-need-to-import/azure-eventhub.md)
 * [Google Pub/Sub](data-forwarding-need-to-import/google-pub-sub.md)
+
+## Object Store Forwarding (need to import)
+
+* [Object Store Forwarding Overview](object-store-forwarding-need-to-import/object-store-forwarding-overview.md)
+* [S3 Compatible](object-store-forwarding-need-to-import/s3-compatible.md)
+* [Azure BLOB Storage](object-store-forwarding-need-to-import/azure-blob-storage.md)
