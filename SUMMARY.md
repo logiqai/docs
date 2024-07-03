@@ -246,3 +246,7 @@
   * [Alerts Trail](logiq-ui-configuration/audit-trail/alerts-trail.md)
 
 ## TBD
+
+## DATA FORWARDING
+
+* [Data Forwarding Overview](data-forwarding/data-forwarding-overview.md)
