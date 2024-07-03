@@ -1,28 +1,21 @@
 # Table of contents
 
-## Introduction
-
 * [Welcome to Apica Docs!](README.md)
-  * [Apica Ascent Overview](introduction/readme/apica-ascent-overview.md)
-  * [User Interface](introduction/readme/the-logiq-ui.md)
-* [Synthetic Monitoring Overview](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview)
-* [Loadtesting Overview](https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/5538148/Overview+of+the+Apica+Load+Test+Solution)
-* [Advanced Scripting Engine Overview](https://apica-kb.atlassian.net/wiki/spaces/DAZT/pages/5674203/What+is+ZebraTester)
-
-## Release Notes
-
-* [Ascent 2.3.0](release-notes/ascent-2.3.0.md)
-* [Ascent 2.2.0](release-notes/load-test.md)
-* [Ascent 2.1.0](release-notes/ascent-2.1.0/README.md)
-  * [Data Fabric](release-notes/ascent-2.1.0/release-notes/README.md)
-    * [Releases-old](release-notes/ascent-2.1.0/release-notes/release-notes.md)
-  * [Synthetic Monitoring](release-notes/ascent-2.1.0/synthetic-monitoring.md)
-  * [Advanced Scripting Engine](release-notes/ascent-2.1.0/advanced-scripting-engine.md)
-  * [IRONdb](release-notes/ascent-2.1.0/irondb.md)
-* [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
-
-***
-
+  * [Apica Ascent Overview](readme/apica-ascent-overview.md)
+  * [User Interface](readme/the-logiq-ui.md)
+* [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview)
+* [Loadtesting](https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/5538148/Overview+of+the+Apica+Load+Test+Solution)
+* [Advanced Scripting Engine](https://apica-kb.atlassian.net/wiki/spaces/DAZT/pages/5674203/What+is+ZebraTester)
+* [Release Notes](release-notes/README.md)
+  * [Ascent 2.3.0](release-notes/ascent-2.3.0.md)
+  * [Ascent 2.2.0](release-notes/load-test.md)
+  * [Ascent 2.1.0](release-notes/ascent-2.1.0/README.md)
+    * [Data Fabric](release-notes/ascent-2.1.0/release-notes/README.md)
+      * [Releases-old](release-notes/ascent-2.1.0/release-notes/release-notes.md)
+    * [Synthetic Monitoring](release-notes/ascent-2.1.0/synthetic-monitoring.md)
+    * [Advanced Scripting Engine](release-notes/ascent-2.1.0/advanced-scripting-engine.md)
+    * [IRONdb](release-notes/ascent-2.1.0/irondb.md)
+  * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
 * [Deploying Apica Ascent](deploying-apica-ascent/README.md)
   * [Quickstart with Docker-Compose](deploying-apica-ascent/quickstart-with-docker-compose.md)
   * [SaaS](deploying-apica-ascent/logiq-saas.md)
