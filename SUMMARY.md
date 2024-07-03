@@ -247,17 +247,17 @@
 
 ## TBD
 
-## SPLUNK FORWARDING
+## SPLUNK FORWARDING - (need to import)
 
-* [Splunk Forwarding Overview](splunk-forwarding/splunk-forwarding-overview.md)
-* [Apica UF Proxy App Extension](splunk-forwarding/apica-uf-proxy-app-extension.md)
-* [Metric Indexes](splunk-forwarding/metric-indexes.md)
-* [Non-metric indexes](splunk-forwarding/non-metric-indexes.md)
-* [Syslog Forwarding](splunk-forwarding/syslog-forwarding.md)
+* [Splunk Forwarding Overview](splunk-forwarding-need-to-import/splunk-forwarding-overview.md)
+* [Apica UF Proxy App Extension](splunk-forwarding-need-to-import/apica-uf-proxy-app-extension.md)
+* [Metric Indexes](splunk-forwarding-need-to-import/metric-indexes.md)
+* [Non-metric indexes](splunk-forwarding-need-to-import/non-metric-indexes.md)
+* [Syslog Forwarding](splunk-forwarding-need-to-import/syslog-forwarding.md)
 
 ## DATA FORWARDING - (need to import)
 
-* [Data Forwarding Overview](data-forwarding-need-to-import/data-forwarding-overview.md)
+* [Data Forwarding Overview](data-forwarding/data-forwarding-overview.md)
 * [AWS Kinesis](data-forwarding-need-to-import/aws-kinesis.md)
 * [Azure Eventhub](data-forwarding-need-to-import/azure-eventhub.md)
 * [Google Pub/Sub](data-forwarding-need-to-import/google-pub-sub.md)
