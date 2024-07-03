@@ -61,62 +61,62 @@
 * [Integrations Overview](integrations/overview/README.md)
   * [Generating a secure ingest token](integrations/overview/generating-a-secure-ingest-token.md)
   * [Data Ingest Ports](integrations/overview/data-ingest-ports.md)
-* [Data Source Details](integrations/data-source-details/README.md)
-  * [Apache Beam](integrations/data-source-details/apache-beam/README.md)
-    * [Export Metrics to Prometheus](integrations/data-source-details/apache-beam/export-metrics-to-prometheus/README.md)
-      * [Pull Mechanism via Push-Gateway](integrations/data-source-details/apache-beam/export-metrics-to-prometheus/pull-mechanism-via-push-gateway.md)
-    * [Export Events to Apica Ascent](integrations/data-source-details/apache-beam/export-events-to-logiq.md)
-  * [Apica ASM](integrations/data-source-details/apica-asm.md)
-  * [Apica Ascent Observability Data Collector Agent](integrations/data-source-details/logiq.ai-observability-data-collector-agent.md)
-  * [AWS](integrations/data-source-details/aws/README.md)
-    * [AWS CloudWatch](integrations/data-source-details/aws/aws-cloudwatch-exporter.md)
-    * [AWS ECS](integrations/data-source-details/aws/aws-ecs/README.md)
-      * [Forwarding AWS ECS logs to Apica Ascent using AWS FireLens](integrations/data-source-details/aws/aws-ecs/forwarding-aws-ecs-logs-to-logiq-using-aws-firelens.md)
-      * [ECS prometheus metrics to Apica Ascent](integrations/data-source-details/aws/aws-ecs/ecs-prometheus-metrics-to-logiq.md)
-    * [AWS S3](integrations/data-source-details/aws/aws-s3.md)
-  * [Azure Databricks](integrations/data-source-details/azure-databricks.md)
-  * [Azure Eventhub](integrations/data-source-details/azure-eventhub.md)
-  * [Azure Event Hubs](integrations/data-source-details/azure-event-hubs.md)
-  * [Docker Compose](integrations/data-source-details/docker-compose.md)
-  * [Docker Swarm logging](integrations/data-source-details/docker-swarm-logging.md)
-  * [Docker Syslog log driver](integrations/data-source-details/docker-syslog-log-driver.md)
-  * [F5 Big-Ip System](integrations/data-source-details/f5-big-ip-system.md)
-  * [Filebeat](integrations/data-source-details/filebeat.md)
-  * [Fluent Bit](integrations/data-source-details/fluent-bit/README.md)
-    * [Forwarding Amazon-Linux logs to Apica Ascent using Fluent Bit](integrations/data-source-details/fluent-bit/forwarding-amazon-linux-logs-to-logiq-using-fluent-bit.md)
-    * [Fluent Bit installation on Ubuntu](integrations/data-source-details/fluent-bit/fluent-bit-installation-on-ubuntu.md)
-    * [Enabling IoT(MQTT) Input (PAAS)](integrations/data-source-details/fluent-bit/enabling-iot-mqtt-input-paas.md)
-    * [IIS Logs on Windows](integrations/data-source-details/fluent-bit/iis-logs-on-windows.md)
-  * [Fluentd](integrations/data-source-details/fluentd.md)
-  * [FortiNet Firewalls](integrations/data-source-details/fortinet-firewalls.md)
-  * [GCP PubSub](integrations/data-source-details/gcp-pubsub.md)
-  * [GCP Cloud Logging](integrations/data-source-details/gcp-cloud-logging.md)
-  * [IBM QRadar](integrations/data-source-details/ibm-qradar.md)
-  * [Incident management](integrations/data-source-details/alert-destinations.md)
-  * [Jaeger](integrations/data-source-details/jaeger.md)
-  * [Kafka](integrations/data-source-details/kafka.md)
-  * [Kinesis](integrations/data-source-details/kinesis.md)
-  * [Kubernetes](integrations/data-source-details/kubernetes.md)
-  * [Logstash](integrations/data-source-details/logstash.md)
-  * [MQTT](integrations/data-source-details/mqtt.md)
-  * [Network Packets](integrations/data-source-details/network-packets.md)
-  * [OpenTelemetry](integrations/data-source-details/opentelemetry.md)
-  * [Object store (S3 Compatible)](integrations/data-source-details/object-store-s3-compatible.md)
-  * [OSSEC Variants (OSSEC/WAZUH/ATOMIC)](integrations/data-source-details/ossec-variants-ossec-wazuh-atomic/README.md)
-    * [Apica Ascent-OSSEC Agent for Windows](integrations/data-source-details/ossec-variants-ossec-wazuh-atomic/logiq-ossec-agent-for-windows.md)
-  * [Palo Alto Firewall](integrations/data-source-details/palo-alto-firewall.md)
-  * [Prometheus](integrations/data-source-details/prometheus/README.md)
-    * [Spring Boot](integrations/data-source-details/prometheus/spring-boot.md)
-    * [Prometheus on Windows](integrations/data-source-details/prometheus/prometheus-on-windows.md)
-    * [Prometheus Remote Write](integrations/data-source-details/prometheus/prometheus-remote-write.md)
-    * [MongoDB Exporter](integrations/data-source-details/prometheus/mongodb-exporter.md)
-    * [JMX Exporter](integrations/data-source-details/prometheus/jmx-exporter.md)
-  * [Rsyslogd](integrations/data-source-details/rsyslogd.md)
-  * [Syslog](integrations/data-source-details/syslog.md)
-  * [Syslog-ng](integrations/data-source-details/syslog-ng.md)
-  * [Splunk Universal Forwarder](integrations/data-source-details/splunk-universal-forwarder.md)
-  * [Splunk Heavy Forwarder](integrations/data-source-details/splunk-heavy-forwarder.md)
-  * [SNMP](integrations/data-source-details/snmp.md)
+* [List of Data Sources](integrations/list-of-data-sources/README.md)
+  * [Apache Beam](integrations/list-of-data-sources/apache-beam/README.md)
+    * [Export Metrics to Prometheus](integrations/list-of-data-sources/apache-beam/export-metrics-to-prometheus/README.md)
+      * [Pull Mechanism via Push-Gateway](integrations/list-of-data-sources/apache-beam/export-metrics-to-prometheus/pull-mechanism-via-push-gateway.md)
+    * [Export Events to Apica Ascent](integrations/list-of-data-sources/apache-beam/export-events-to-logiq.md)
+  * [Apica ASM](integrations/list-of-data-sources/apica-asm.md)
+  * [Apica Ascent Observability Data Collector Agent](integrations/list-of-data-sources/logiq.ai-observability-data-collector-agent.md)
+  * [AWS](integrations/list-of-data-sources/aws/README.md)
+    * [AWS CloudWatch](integrations/list-of-data-sources/aws/aws-cloudwatch-exporter.md)
+    * [AWS ECS](integrations/list-of-data-sources/aws/aws-ecs/README.md)
+      * [Forwarding AWS ECS logs to Apica Ascent using AWS FireLens](integrations/list-of-data-sources/aws/aws-ecs/forwarding-aws-ecs-logs-to-logiq-using-aws-firelens.md)
+      * [ECS prometheus metrics to Apica Ascent](integrations/list-of-data-sources/aws/aws-ecs/ecs-prometheus-metrics-to-logiq.md)
+    * [AWS S3](integrations/list-of-data-sources/aws/aws-s3.md)
+  * [Azure Databricks](integrations/list-of-data-sources/azure-databricks.md)
+  * [Azure Eventhub](integrations/list-of-data-sources/azure-eventhub.md)
+  * [Azure Event Hubs](integrations/list-of-data-sources/azure-event-hubs.md)
+  * [Docker Compose](integrations/list-of-data-sources/docker-compose.md)
+  * [Docker Swarm logging](integrations/list-of-data-sources/docker-swarm-logging.md)
+  * [Docker Syslog log driver](integrations/list-of-data-sources/docker-syslog-log-driver.md)
+  * [F5 Big-Ip System](integrations/list-of-data-sources/f5-big-ip-system.md)
+  * [Filebeat](integrations/list-of-data-sources/filebeat.md)
+  * [Fluent Bit](integrations/list-of-data-sources/fluent-bit/README.md)
+    * [Forwarding Amazon-Linux logs to Apica Ascent using Fluent Bit](integrations/list-of-data-sources/fluent-bit/forwarding-amazon-linux-logs-to-logiq-using-fluent-bit.md)
+    * [Fluent Bit installation on Ubuntu](integrations/list-of-data-sources/fluent-bit/fluent-bit-installation-on-ubuntu.md)
+    * [Enabling IoT(MQTT) Input (PAAS)](integrations/list-of-data-sources/fluent-bit/enabling-iot-mqtt-input-paas.md)
+    * [IIS Logs on Windows](integrations/list-of-data-sources/fluent-bit/iis-logs-on-windows.md)
+  * [Fluentd](integrations/list-of-data-sources/fluentd.md)
+  * [FortiNet Firewalls](integrations/list-of-data-sources/fortinet-firewalls.md)
+  * [GCP PubSub](integrations/list-of-data-sources/gcp-pubsub.md)
+  * [GCP Cloud Logging](integrations/list-of-data-sources/gcp-cloud-logging.md)
+  * [IBM QRadar](integrations/list-of-data-sources/ibm-qradar.md)
+  * [Incident management](integrations/list-of-data-sources/alert-destinations.md)
+  * [Jaeger](integrations/list-of-data-sources/jaeger.md)
+  * [Kafka](integrations/list-of-data-sources/kafka.md)
+  * [Kinesis](integrations/list-of-data-sources/kinesis.md)
+  * [Kubernetes](integrations/list-of-data-sources/kubernetes.md)
+  * [Logstash](integrations/list-of-data-sources/logstash.md)
+  * [MQTT](integrations/list-of-data-sources/mqtt.md)
+  * [Network Packets](integrations/list-of-data-sources/network-packets.md)
+  * [OpenTelemetry](integrations/list-of-data-sources/opentelemetry.md)
+  * [Object store (S3 Compatible)](integrations/list-of-data-sources/object-store-s3-compatible.md)
+  * [OSSEC Variants (OSSEC/WAZUH/ATOMIC)](integrations/list-of-data-sources/ossec-variants-ossec-wazuh-atomic/README.md)
+    * [Apica Ascent-OSSEC Agent for Windows](integrations/list-of-data-sources/ossec-variants-ossec-wazuh-atomic/logiq-ossec-agent-for-windows.md)
+  * [Palo Alto Firewall](integrations/list-of-data-sources/palo-alto-firewall.md)
+  * [Prometheus](integrations/list-of-data-sources/prometheus/README.md)
+    * [Spring Boot](integrations/list-of-data-sources/prometheus/spring-boot.md)
+    * [Prometheus on Windows](integrations/list-of-data-sources/prometheus/prometheus-on-windows.md)
+    * [Prometheus Remote Write](integrations/list-of-data-sources/prometheus/prometheus-remote-write.md)
+    * [MongoDB Exporter](integrations/list-of-data-sources/prometheus/mongodb-exporter.md)
+    * [JMX Exporter](integrations/list-of-data-sources/prometheus/jmx-exporter.md)
+  * [Rsyslogd](integrations/list-of-data-sources/rsyslogd.md)
+  * [Syslog](integrations/list-of-data-sources/syslog.md)
+  * [Syslog-ng](integrations/list-of-data-sources/syslog-ng.md)
+  * [Splunk Universal Forwarder](integrations/list-of-data-sources/splunk-universal-forwarder.md)
+  * [Splunk Heavy Forwarder](integrations/list-of-data-sources/splunk-heavy-forwarder.md)
+  * [SNMP](integrations/list-of-data-sources/snmp.md)
 
 ## Dashboards
 
@@ -127,28 +127,13 @@
 * [Using Pre-defined Dashboards](dashboards/using-pre-defined-dashboards.md)
 * [Import Grafana Dashboards](dashboards/import-grafana-dashboards.md)
 
-***
-
-* [Data Explorer Overview](overview/README.md)
-  * [Query Builder](overview/query-builder.md)
-  * [Widget](overview/widget.md)
-  * [Create a Dashboard](overview/create-a-dashboard.md)
-
-## COMMAND LINE INTERFACE
-
-* [apicactl Documentation](https://logiqctl.logiq.ai/)
-
-## Logflow
-
-* [Logflow Documentation](https://logflow-docs.logiq.ai/)
-
-## FLEET MANAGEMENT
-
-* [Fleet Management Overview](fleet-management/fleet.md)
-
 ## DATA MANAGEMENT
 
 * [Data Management Overview](data-management/overview.md)
+* [Data Explorer Overview](data-management/overview-1/README.md)
+  * [Query Builder](data-management/overview-1/query-builder.md)
+  * [Widget](data-management/overview-1/widget.md)
+  * [Create a Dashboard](data-management/overview-1/create-a-dashboard.md)
 * [Rules](data-management/rules/README.md)
   * [FILTER](data-management/rules/filter.md)
   * [EXTRACT](data-management/rules/extract.md)
@@ -161,9 +146,22 @@
   * [Timestamp bookmark](data-management/timestamp-handling/timestamp-bookmark.md)
 * [Large log/events/metrics/traces](data-management/large-log-events-metrics-traces.md)
 
+## COMMAND LINE INTERFACE
+
+* [apicactl Documentation](https://logiqctl.logiq.ai/)
+
+## Flow
+
+* [Flow Documentation](https://logflow-docs.logiq.ai/)
+* [Data Flow Pipelines](flow/data-flow-pipelines.md)
+
+## FLEET MANAGEMENT
+
+* [Fleet Management Overview](fleet-management/fleet.md)
+
 ## Infra & Application Monitoring
 
-* [Overview](infra-and-application-monitoring/prometheus/README.md)
+* [Monitoring Overview](infra-and-application-monitoring/prometheus/README.md)
   * [Connecting Prometheus](infra-and-application-monitoring/prometheus/connecting-prometheus.md)
   * [Connecting Amazon Managed Service for Prometheus](infra-and-application-monitoring/prometheus/connecting-amazon-managed-service-for-prometheus.md)
 * [Writing queries](infra-and-application-monitoring/querying-data.md)
@@ -183,18 +181,20 @@
 * [Configuring RBAC](log-management/configuring-rbac.md)
 * [Topology](log-management/topology.md)
 
-***
-
-* [Data Flow Pipelines](data-flow-pipelines.md)
-
 ## Distributed Tracing
 
-* [Overview](distributed-tracing/overview.md)
+* [Distributed Tracing Overview](distributed-tracing/overview.md)
 * [Traces](distributed-tracing/traces.md)
 * [Logs](distributed-tracing/logs.md)
 
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
+* [Time Series AI-ML](logiq-events/time-series-ai-ml/README.md)
+  * [Anomaly Detection](logiq-events/time-series-ai-ml/anomaly-detection.md)
+  * [Averaging](logiq-events/time-series-ai-ml/averaging.md)
+  * [Standard Deviation(STD)](logiq-events/time-series-ai-ml/standard-deviation-std.md)
+  * [Forecasting](logiq-events/time-series-ai-ml/forecasting.md)
+  * [AI-ML on PromQL Query Data Set](logiq-events/time-series-ai-ml/ai-ml-on-promql-query-data-set.md)
 * [Pattern-Signature (PS)](logiq-events/log-pattern-signature/README.md)
   * [Log PS Explained](logiq-events/log-pattern-signature/log-ps-explained/README.md)
     * [Unstructured Logs](logiq-events/log-pattern-signature/log-ps-explained/unstructured-logs.md)
@@ -208,12 +208,6 @@
   * [Config PS](logiq-events/log-pattern-signature/config-ps/README.md)
     * [Config JSON PS](logiq-events/log-pattern-signature/config-ps/config-json-ps.md)
 * [ALIVE Log Visualizer](logiq-events/autonomous-log-interactive-visual-explorer-alive.md)
-* [Time Series AI-ML](logiq-events/time-series-ai-ml/README.md)
-  * [Anomaly Detection](logiq-events/time-series-ai-ml/anomaly-detection.md)
-  * [Averaging](logiq-events/time-series-ai-ml/averaging.md)
-  * [Standard Deviation(STD)](logiq-events/time-series-ai-ml/standard-deviation-std.md)
-  * [Forecasting](logiq-events/time-series-ai-ml/forecasting.md)
-  * [AI-ML on PromQL Query Data Set](logiq-events/time-series-ai-ml/ai-ml-on-promql-query-data-set.md)
 * [Alerts](logiq-events/alerts.md)
 * [Alerts (Simple/Anomaly)](logiq-events/alerts-simple-anomaly.md)
 * [Alerts On Logs](logiq-events/alerts-1.md)
