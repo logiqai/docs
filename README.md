@@ -8,7 +8,7 @@
 
 ### Data Management and Analytics
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><a href="overview/"><strong>Data Management Overview</strong></a></td><td></td><td></td></tr><tr><td><a href="broken-reference"><strong>Flow Management</strong></a></td><td></td><td></td></tr><tr><td><a href="broken-reference"><strong>Data Sources</strong></a></td><td></td><td></td></tr><tr><td>Data Forwarding</td><td></td><td></td></tr><tr><td>Splunk Forwarding</td><td></td><td></td></tr><tr><td>Object-Store Forwarding</td><td></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><a href="overview/"><strong>Data Management Overview</strong></a></td><td></td><td></td></tr><tr><td><a href="broken-reference"><strong>Flow Management</strong></a></td><td></td><td></td></tr><tr><td><a href="broken-reference"><strong>Data Sources</strong></a></td><td></td><td></td></tr><tr><td><a href="data-forwarding-need-to-import/data-forwarding-overview.md"><strong>Data Forwarding</strong></a></td><td></td><td></td></tr><tr><td>Splunk Forwarding</td><td></td><td></td></tr><tr><td>Object-Store Forwarding</td><td></td><td></td></tr></tbody></table>
 
 ### Monitoring and Performance
 
