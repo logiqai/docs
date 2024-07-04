@@ -1,5 +1,5 @@
 ---
-description: All the docs for setting up, configuring, and optimizing the Apica platform!
+description: All the docs for setting up, configuring, and optimizing the Apica platform
 ---
 
 # Welcome to Apica Docs!
