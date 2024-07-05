@@ -4,6 +4,13 @@
 
 The following guide takes you through deploying Apica Ascent PaaS on MicroK8s.
 
+## Prerequisites
+
+Ubuntu OS x64
+16 vCPU
+32GB RAM
+500GB disk space on the root partition
+
 ## Installing MicroK8s
 
 The first step in this deployment is to install MicroK8s on your machine. The following instructions pertain to Debian-based Linux systems. To install MicroK8s on such systems, do the following.
@@ -28,18 +35,21 @@ The first step in this deployment is to install MicroK8s on your machine. The fo
     ```
     sudo usermod -a -G microk8s $USER
     ```
-5. **Create the .kube directory**
-6.  Add your current user to the group to gain access to the `.kube` caching directory by running the following command.
+5. Create the .kube directory.
+   ```
+   mkdir ~/.kube
+   ```
+7.  Add your current user to the group to gain access to the `.kube` caching directory by running the following command.
 
     ```
     sudo chown -f -R $USER ~/.kube
     ```
-7.  Generate your MicroK8s configuration and merge it with your Kubernetes configuration by running the following command.
+8.  Generate your MicroK8s configuration and merge it with your Kubernetes configuration by running the following command.
 
     ```
     sudo microk8s config > ~/.kube/config
     ```
-8.  Check whether MicroK8s is up and running with the following command.
+9.  Check whether MicroK8s is up and running with the following command.
 
     ```
     sudo microk8s status
@@ -58,6 +68,11 @@ To enable add-ons on your MicroK8s cluster, run the following commands in succes
     ```
     microk8s enable helm3
     ```
+    If you get a message telling you have insufficient permissions, a few of the commands above which tried to interpolate your current user into the command with the $USER       variable did not work. You can easily fix it by adding your user to the microk8s group by specifying the name of the user explicitly:
+    ```
+    sudo usermod -a -G microk8s ubuntu
+    sudo chown -R ubuntu ~/.kube
+    ```
 2.  Enable a default storage class that allocates storage from a host directory.
 
     ```
@@ -75,44 +90,35 @@ To enable add-ons on your MicroK8s cluster, run the following commands in succes
     ```
     microk8s enable ingress
     ```
-
-    1. Enable HTTPS
-       1. How to Create a Self-Signed Certificate using OpenSSL
-          1.  Create server private key
-
+5. Enable HTTPS
+       How to Create a Self-Signed Certificate using OpenSSL:
+          5a.  Create server private key
               ```
               openssl genrsa -out cert.key 2048
               ```
-          2.  Create certificate signing request (CSR)
-
+          5b.  Create certificate signing request (CSR)
               ```
               openssl req -new -key cert.key -out cert.csr
               ```
-          3.  Sign the certificate using the private key and CSR
-
+          5c.  Sign the certificate using the private key and CSR
               ```
               openssl x509 -req -days 3650 -in cert.csr -signkey cert.key -out cert.crt
               ```
-       2.  To create a TLS secret in MicroK8s using `kubectl`, use the following command:
-
+       To create a TLS secret in MicroK8s using `kubectl`, use the following command:
            ```
            microk8s kubectl create secret tls https --cert=cert.crt --key=cert.key
            ```
-
            This command creates a secret named "https" containing the TLS keys for use in your Kubernetes cluster. Ensure you have the `cert.crt` and `cert.key` files in your current directory or specify full paths.
-       3.  To enable Ingress on microk8s with a default SSL certificate, issue the following command:
-
+   
+       To enable Ingress on microk8s with a default SSL certificate, issue the following command:
            ```
            microk8s enable ingress:default-ssl-certificate=secret/https
            ```
-5.  Enable private registry.
-
+6.  Enable private registry.
     ```
     microk8s enable registry
     ```
-
-
-6.  Copy over your MicroK8s configuration to your Kubernetes configuration with the following command.
+7.  Copy over your MicroK8s configuration to your Kubernetes configuration with the following command.
 
     ```
     microk8s.kubectl config view --raw > $HOME/.kube/config
@@ -120,7 +126,11 @@ To enable add-ons on your MicroK8s cluster, run the following commands in succes
 
 ## Provisioning an IP address
 
-In this step, we'll provision an endpoint or an IP address where we access Apica Ascent PaaS after deploying it on MicroK8s. You can skip this step if its your local implementation. For this, we'll leverage [MetalLB](https://metallb.universe.tf) which is a load-balancer implementation that uses standard routing protocols for bare metal Kubernetes clusters.
+{% hint style="info" %}
+**Note:** This step is optional and will depend on your individual access needs - for instance, if you need to access the PaaS instance from a certain IP. You can skip this step if you are installing the app locally.
+{% endhint %}
+
+In this step, we'll provision an endpoint or an IP address where we access Apica Ascent PaaS after deploying it on MicroK8s. For this, we'll leverage [MetalLB](https://metallb.universe.tf) which is a load-balancer implementation that uses standard routing protocols for bare metal Kubernetes clusters.
 
 {% hint style="info" %}
 **Note:** Since MetalLB is available as an add-on for MicroK8s, you can also run these steps while enabling add-ons for your MicroK8s cluster.
@@ -166,7 +176,11 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
     ```
     microk8s kubectl create namespace logiq
     ```
-4.  Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your Apica Ascent PaaS deployment
+4.  Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your Apica Ascent PaaS deployment. If you need to download the file to your own machine, edit, and then transfer to a remote linux server, use this command:
+```
+scp -i /path/to/private_key.pem /path/to/local/file username@remote_host:/path/to/remote/directory
+```
+Make sure you have the necessary permissions to copy a file to the specified folder on the Linux machine.
 
     > Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://github.com/logiqai/logiq-installation/blob/main/values/values.yaml) instead. run the following command.
     >
@@ -195,13 +209,13 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
     > ```
     > storageClass: microk8s-hostpath
     > ```
-5.  Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
+6.  Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
     ```
     microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
     ```
 
-Apica Ascent PaaS is now installed in your MicroK8s environment.
+If you see a large wall of text listing configuration values, the installation was successful - Ascent PaaS is now installed in your MicroK8s environment!
 
 ## Accessing Apica Ascent PaaS
 
@@ -235,3 +249,38 @@ Your Apica Ascent PaaS UI is now available in your web browser. You can log into
 {% hint style="info" %}
 **Note:** You can change the default login credentials after you've logged into the UI.
 {% endhint %}
+
+## Troubleshooting
+
+### Kubernetes cluster is unreachable
+
+If you see an error message indicating the Kubernetes cluser is unreachable, the Microk8s service has stopped - simply restart it.
+Error text:
+```
+Error: INSTALLATION FAILED: Kubernetes cluster unreachable: Get "https://127.0.0.1:16443/version": dial tcp 127.0.0.1:16443: connect: connection refused
+helm.go:84: [debug] Get "https://127.0.0.1:16443/version": dial tcp 127.0.0.1:16443: connect: connection refused
+...
+```
+Solution:
+```
+ubuntu@ip-172-31-31-72:~$ microk8s status
+microk8s is not running. Use microk8s inspect for a deeper inspection.
+ubuntu@ip-172-31-31-72:~$ microk8s start
+```
+
+### Restarting the Ascent installation after a failed installation
+
+If the Ascent installation using the supplied .yaml file fails, you must first remove the name in use. 
+Error text:
+```
+Error: INSTALLATION FAILED: cannot re-use a name that is still in use
+helm.go:84: [debug] cannot re-use a name that is still in use
+helm.sh/helm/v3/pkg/action.(*Install).availableName
+...
+```
+Solution:
+```
+ubuntu@ip-172-31-31-72:~$ microk8s helm3 uninstall logiq -n logiq 
+release "logiq" uninstalled
+ubuntu@ip-172-31-31-72:~$ microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/apica-ascent -f values.microk8s.yaml --debug --timeout 10m
+```
