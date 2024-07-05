@@ -38,6 +38,6 @@ Now that you have access to the Apica Ascent UI, you can go ahead and:
 * [ ] [Get acquainted with the Apica Ascent UI](../product-overview/the-logiq-ui.md)
 * [ ] [Configure your data sources](../integrations/overview/)
 * [ ] [Configure Apica Ascent to send alerts to your email server](../logiq-ui-configuration/email-configuration-setup.md)
-* [ ] [Add and configure alert destinations like email, Slack, and PagerDuty](../integrations/list-of-data-sources/alert-destinations.md)
+* [ ] [Add and configure alert destinations like email, Slack, and PagerDuty](../integrations/list-of-integrations/alert-destinations.md)
 * [ ] [Configure SSO using SAML](../logiq-ui-configuration/single-sign-on-configuration.md)
 * [ ] [Configure RBAC](../log-management/configuring-rbac.md)

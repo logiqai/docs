@@ -8,26 +8,26 @@ Ingest lets you connect with and securely ingest data from popular log forwardin
 
 Apica Ascent currently integrates with over 150+ data sources via support for popular open source agents and open protocols. See below for links on how to enable specific integrations.
 
-* [Logstash](../list-of-data-sources/logstash.md)
-* [Filebeat](../list-of-data-sources/filebeat.md)
-* [Fluent Bit](../list-of-data-sources/fluent-bit/)
-* [Fluentd](../list-of-data-sources/fluentd.md)
-* [Rsyslogd](../list-of-data-sources/rsyslogd.md)
-* [AWS CloudWatch](../list-of-data-sources/aws/aws-cloudwatch-exporter.md)
-* [Palo Alto Firewall](../list-of-data-sources/palo-alto-firewall.md)
-* [Azure Event Hubs](../list-of-data-sources/azure/azure-event-hubs.md)
-* [Prometheus](../list-of-data-sources/prometheus/)
-* [Docker Syslog log driver](../list-of-data-sources/docker-syslog-log-driver.md)
-* [Docker swarm logging](../list-of-data-sources/docker-swarm-logging.md)
+* [Logstash](../list-of-integrations/logstash.md)
+* [Filebeat](../list-of-integrations/filebeat.md)
+* [Fluent Bit](../list-of-integrations/fluent-bit/)
+* [Fluentd](../list-of-integrations/fluentd.md)
+* [Rsyslogd](../list-of-integrations/rsyslogd.md)
+* [AWS CloudWatch](../list-of-integrations/aws/aws-cloudwatch-exporter.md)
+* [Palo Alto Firewall](../list-of-integrations/palo-alto-firewall.md)
+* [Azure Event Hubs](../list-of-integrations/azure/azure-event-hubs.md)
+* [Prometheus](../list-of-integrations/prometheus/)
+* [Docker Syslog log driver](../list-of-integrations/docker-syslog-log-driver.md)
+* [Docker swarm logging](../list-of-integrations/docker-swarm-logging.md)
 * [Elasticsearch](../../data-sources/time-series-databases/elasticsearch-data-source.md)
-* [GCP Cloud logging](../list-of-data-sources/gcp-cloud-logging.md)
-* [IIS Logging](../list-of-data-sources/fluent-bit/iis-logs-on-windows.md)
+* [GCP Cloud logging](../list-of-integrations/gcp-cloud-logging.md)
+* [IIS Logging](../list-of-integrations/fluent-bit/iis-logs-on-windows.md)
 * [JSON endpoints](../../data-sources/api/json-data-source.md)
-* [MQTT](../list-of-data-sources/mqtt.md)
+* [MQTT](../list-of-integrations/mqtt.md)
 
 You can also ingest logs from endpoint devices running:
 
-* [Windows](../list-of-data-sources/fluent-bit/#fluent-bit-for-windows)
+* [Windows](../list-of-integrations/fluent-bit/#fluent-bit-for-windows)
 * [macOS](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/macos)
 * [Linux](https://github.com/logiqai/logiq-installation/tree/main/fluent-bit/linux)
 

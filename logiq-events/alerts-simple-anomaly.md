@@ -18,7 +18,7 @@
 #### Fields
 
 * **Name**: A name for the alert, which should be alphanumeric.
-* **Destination**: This is a user-specified selection where the alerts will be delivered. Only [user-defined alert destinations](../integrations/list-of-data-sources/alert-destinations.md) will be available for selection. Users can configure alert destinations in the Alert Destinations Section
+* **Destination**: This is a user-specified selection where the alerts will be delivered. Only [user-defined alert destinations](../integrations/list-of-integrations/alert-destinations.md) will be available for selection. Users can configure alert destinations in the Alert Destinations Section
 * **Operation**: One of the comparators: `>,` `>=,` `<,` `<=,` `==,` `!=,` `=~,` `!~`
 * **Reference:** Set the threshold value for the alert condition**.**
 * **Rearm**: How frequently will you receive notifications when your query meets the alert criteria and does not change?  It must be a valid number of seconds (minimum 300 seconds).
