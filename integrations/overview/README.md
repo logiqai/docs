@@ -15,7 +15,7 @@ Apica Ascent currently integrates with over 150+ data sources via support for po
 * [Rsyslogd](../list-of-data-sources/rsyslogd.md)
 * [AWS CloudWatch](../list-of-data-sources/aws/aws-cloudwatch-exporter.md)
 * [Palo Alto Firewall](../list-of-data-sources/palo-alto-firewall.md)
-* [Azure Event Hubs](../list-of-data-sources/azure-event-hubs.md)
+* [Azure Event Hubs](../list-of-data-sources/azure/azure-event-hubs.md)
 * [Prometheus](../list-of-data-sources/prometheus/)
 * [Docker Syslog log driver](../list-of-data-sources/docker-syslog-log-driver.md)
 * [Docker swarm logging](../list-of-data-sources/docker-swarm-logging.md)

@@ -9,10 +9,10 @@ Have the following information ready to configure your Azure Eventhub App extens
 
 <div>
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-04 at 2.36.35 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screen Shot 2023-01-04 at 2.36.35 PM.png" alt=""><figcaption></figcaption></figure>
 
  
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-04 at 2.38.30 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screen Shot 2023-01-04 at 2.38.30 PM.png" alt=""><figcaption></figcaption></figure>
 
 </div>
