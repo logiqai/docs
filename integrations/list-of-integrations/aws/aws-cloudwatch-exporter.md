@@ -19,6 +19,20 @@ Apica Ascent provides CloudFormation templates to create the Apica Ascent CloudW
 
 Depending on the type of logs you'd like to export, use the appropriate CloudFormation template from the following list.
 
+#### Python version dependency
+
+{% hint style="info" %}
+AWS may choose to deprecate versions of python and you may have to edit the CloudFormation YAML template to refer to the most recent version of python that is not deprecated by AWS.
+{% endhint %}
+
+#### HTTP vs HTTPS handling
+
+{% hint style="info" %}
+If your environment is configured as HTTP vs HTTPS, please make sure to edit the CloudFormation YAML file and change the connection handling function call as follows:
+
+edit Lambda definition to use `urllib3.HTTPConnectionPool` vs `urllib3.HTTPSConnectionPool`
+{% endhint %}
+
 #### Exporting Lambda Function logs
 
 Use the following CloudFormation template to export AWS Lambda function logs to Apica Ascent.
@@ -68,6 +82,8 @@ On the **Add trigger** page, select **CloudWatch**, and then select a CloudWatch
 Once this configuration is complete, any new logs coming to the configured CloudWatch Log group will be streamed to the Apica Ascent cluster.
 
 ### Create the Logstash VM (or Docker) <a href="#create_the_logstash_vm" id="create_the_logstash_vm"></a>
+
+Cloudwatch logs can also be pulled using agents such as logstash. If your team is familiar and has logstash in place, follow the instructions below to configure logstash to pull logs from CloudWatch.
 
 Install Logstash on Ubuntu virtual machine as shown below.
 
