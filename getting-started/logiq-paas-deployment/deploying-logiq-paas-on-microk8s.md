@@ -131,16 +131,21 @@ How to Create a Self-Signed Certificate using OpenSSL:
     ```
     microk8s enable ingress:default-ssl-certificate=secret/https
     ```
-*   Enable private registry.
 
+6.  Enable private registry.
+
+    {% code fullWidth="false" %}
     ```
     microk8s enable registry
     ```
-*   Copy over your MicroK8s configuration to your Kubernetes configuration with the following command.
+    {% endcode %}
+7.  Copy over your MicroK8s configuration to your Kubernetes configuration with the following command.
 
+    {% code fullWidth="false" %}
     ```
     microk8s.kubectl config view --raw > $HOME/.kube/config
     ```
+    {% endcode %}
 
 ## Provisioning an IP address
 
