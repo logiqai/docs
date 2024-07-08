@@ -236,11 +236,11 @@ Make sure you have the necessary permissions to copy a file to the specified fol
 > storageClass: microk8s-hostpath
 > ```
 
-1.  Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
+6. Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
-    ```
-    microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
-    ```
+```
+microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
+```
 
 If you see a large wall of text listing configuration values, the installation was successful - Ascent PaaS is now installed in your MicroK8s environment!
 
