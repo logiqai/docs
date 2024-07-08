@@ -144,7 +144,11 @@ How to Create a Self-Signed Certificate using OpenSSL:
 
 ## Provisioning an IP address
 
-In this step, we'll provision an endpoint or an IP address where we access Apica Ascent PaaS after deploying it on MicroK8s. You can skip this step if its your local implementation. For this, we'll leverage [MetalLB](https://metallb.universe.tf) which is a load-balancer implementation that uses standard routing protocols for bare metal Kubernetes clusters.
+{% hint style="info" %}
+**Note:** This step is optional and will depend on your individual access needs - for instance, if you need to access the PaaS instance from a certain IP. You can skip this step if you are installing the app locally - in that case, you can access the UI after installation via the machine's public IP address.
+{% endhint %}
+
+In this step, we'll provision an endpoint or an IP address where we access Apica Ascent PaaS after deploying it on MicroK8s. For this, we'll leverage [MetalLB](https://metallb.universe.tf/) which is a load-balancer implementation that uses standard routing protocols for bare metal Kubernetes clusters.
 
 {% hint style="info" %}
 **Note:** Since MetalLB is available as an add-on for MicroK8s, you can also run these steps while enabling add-ons for your MicroK8s cluster.
