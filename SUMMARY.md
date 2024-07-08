@@ -225,6 +225,7 @@
 ## RELEASE NOTES
 
 * [Release Notes](release-notes/release-notes/README.md)
+  * [Ascent 2.4.0](release-notes/release-notes/ascent-2.4.0.md)
   * [Ascent 2.3.0](release-notes/release-notes/ascent-2.3.0.md)
   * [Ascent 2.2.0](release-notes/release-notes/load-test.md)
   * [Ascent 2.1.0](release-notes/release-notes/ascent-2.1.0/README.md)
