@@ -6,9 +6,9 @@ The following guide takes you through deploying Apica Ascent PaaS on MicroK8s.
 
 ## Prerequisites
 
-Ubuntu OS x64
-16 vCPU
-32GB RAM
+Ubuntu OS x64\
+16 vCPU\
+32GB RAM\
 500GB disk space on the root partition
 
 ## Installing MicroK8s
