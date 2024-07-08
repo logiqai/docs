@@ -4,6 +4,16 @@
 
 The following guide takes you through deploying Apica Ascent PaaS on MicroK8s.
 
+## Prerequisites
+
+Ubuntu OS x64
+
+16 vCPU
+
+32GB RAM
+
+500GB disk space on the root partition
+
 ## Installing MicroK8s
 
 The first step in this deployment is to install MicroK8s on your machine. The following instructions pertain to Debian-based Linux systems. To install MicroK8s on such systems, do the following.
@@ -25,10 +35,13 @@ The first step in this deployment is to install MicroK8s on your machine. The fo
     ```
 4.  Join the group created by MicroK8s that enables uninterrupted usage of commands that require admin access by running the following command.
 
+    <pre><code><strong>sudo usermod -a -G microk8s $USER
+    </strong></code></pre>
+5.  Create the .kube directory
+
     ```
-    sudo usermod -a -G microk8s $USER
+    mkdir ~/.kube
     ```
-5. **Create the .kube directory**
 6.  Add your current user to the group to gain access to the `.kube` caching directory by running the following command.
 
     ```
@@ -53,66 +66,77 @@ Now that we have MicroK8s up and running, let’s set up your cluster and enable
 
 To enable add-ons on your MicroK8s cluster, run the following commands in succession.
 
-1.  Enable Helm 3.
+1. Enable Helm 3.
+
+```
+microk8s enable helm3
+```
+
+If you get a message telling you have insufficient permissions, a few of the commands above which tried to interpolate your current user into the command with the $USER variable did not work. You can easily fix it by adding your user to the microk8s group by specifying the name of the user explicitly:
+
+```
+sudo usermod -a -G microk8s ubuntu
+sudo chown -R ubuntu ~/.kube
+```
+
+2. Enable a default storage class that allocates storage from a host directory.
+
+```
+microk8s enable storage
+```
+
+3. Enable CoreDNS.
+
+```
+microk8s enable dns
+```
+
+4. Enable ingress.
+
+To enable the Ingress controller in MicroK8s, run the following command:
+
+```
+microk8s enable ingress
+```
+
+5. Enable HTTPS
+
+How to Create a Self-Signed Certificate using OpenSSL:
+
+*   Create server private key
 
     ```
-    microk8s enable helm3
+    openssl genrsa -out cert.key 2048
     ```
-2.  Enable a default storage class that allocates storage from a host directory.
-
-    ```
-    microk8s enable storage
-    ```
-3.  Enable CoreDNS.
+*   Create certificate signing request (CSR)
 
     ```
-    microk8s enable dns
+    openssl req -new -key cert.key -out cert.csr
     ```
-4.  Enable ingress.
-
-    To enable the Ingress controller in MicroK8s, run the following command:
+*   Sign the certificate using the private key and CSR
 
     ```
-    microk8s enable ingress
+    openssl x509 -req -days 3650 -in cert.csr -signkey cert.key -out cert.crt
+    ```
+*   To create a TLS secret in MicroK8s using `kubectl`, use the following command:
+
+    ```
+    microk8s kubectl create secret tls https --cert=cert.crt --key=cert.key
     ```
 
-    1. Enable HTTPS
-       1. How to Create a Self-Signed Certificate using OpenSSL
-          1.  Create server private key
+    \
+    This command creates a secret named "https" containing the TLS keys for use in your Kubernetes cluster. Ensure you have the `cert.crt` and `cert.key` files in your current directory or specify full paths.
+*   To enable Ingress on microk8s with a default SSL certificate, issue the following command:
 
-              ```
-              openssl genrsa -out cert.key 2048
-              ```
-          2.  Create certificate signing request (CSR)
-
-              ```
-              openssl req -new -key cert.key -out cert.csr
-              ```
-          3.  Sign the certificate using the private key and CSR
-
-              ```
-              openssl x509 -req -days 3650 -in cert.csr -signkey cert.key -out cert.crt
-              ```
-       2.  To create a TLS secret in MicroK8s using `kubectl`, use the following command:
-
-           ```
-           microk8s kubectl create secret tls https --cert=cert.crt --key=cert.key
-           ```
-
-           This command creates a secret named "https" containing the TLS keys for use in your Kubernetes cluster. Ensure you have the `cert.crt` and `cert.key` files in your current directory or specify full paths.
-       3.  To enable Ingress on microk8s with a default SSL certificate, issue the following command:
-
-           ```
-           microk8s enable ingress:default-ssl-certificate=secret/https
-           ```
-5.  Enable private registry.
+    ```
+    microk8s enable ingress:default-ssl-certificate=secret/https
+    ```
+*   Enable private registry.
 
     ```
     microk8s enable registry
     ```
-
-
-6.  Copy over your MicroK8s configuration to your Kubernetes configuration with the following command.
+*   Copy over your MicroK8s configuration to your Kubernetes configuration with the following command.
 
     ```
     microk8s.kubectl config view --raw > $HOME/.kube/config
@@ -163,45 +187,54 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
     ```
 3.  Create a namespace on MicroK8s on which to install Apica Ascent PaaS.
 
+    {% code fullWidth="true" %}
     ```
     microk8s kubectl create namespace logiq
     ```
-4.  Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your Apica Ascent PaaS deployment
+    {% endcode %}
+4. Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your Apica Ascent PaaS deployment. If you need to download the file to your own machine, edit, and then transfer to a remote linux server, use this command:
 
-    > Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://github.com/logiqai/logiq-installation/blob/main/values/values.yaml) instead. run the following command.
-    >
-    > ```
-    > microk8s enable metallb
-    > Enabling MetalLB
-    > Enter each IP address range delimited by comma (e.g.  '10.64.140.43-10.64.140.49,192.168.0.105-192.168.0.111'): 192.168.1.27-192.168.1.27
-    > ```
-    >
-    > In the values file, add the below fields global-> environment section with your own values.
-    >
-    > ```
-    > s3_bucket: <your-s3-bucket>
-    > AWS_ACCESS_KEY_ID: <your-aws-access-key-id>
-    > AWS_SECRET_ACCESS_KEY: <your-aws-secret-access-key-id>
-    > ```
-    >
-    > In the global -> chart section, change S3gateway to false.
-    >
-    > ```
-    > s3gateway: false
-    > ```
-    >
-    > In the global -> persistence section, change storageClass as below.
-    >
-    > ```
-    > storageClass: microk8s-hostpath
-    > ```
-5.  Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
+```
+scp -i /path/to/private_key.pem /path/to/local/file username@remote_host:/path/to/remote/directory
+```
+
+Make sure you have the necessary permissions to copy a file to the specified folder on the Linux machine.
+
+> Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://github.com/logiqai/logiq-installation/blob/main/values/values.yaml) instead. run the following command.
+>
+> ```
+> microk8s enable metallb
+> Enabling MetalLB
+> Enter each IP address range delimited by comma (e.g.  '10.64.140.43-10.64.140.49,192.168.0.105-192.168.0.111'): 192.168.1.27-192.168.1.27
+> ```
+>
+> In the values file, add the below fields global-> environment section with your own values.
+>
+> ```
+> s3_bucket: <your-s3-bucket>
+> AWS_ACCESS_KEY_ID: <your-aws-access-key-id>
+> AWS_SECRET_ACCESS_KEY: <your-aws-secret-access-key-id>
+> ```
+>
+> In the global -> chart section, change S3gateway to false.
+>
+> ```
+> s3gateway: false
+> ```
+>
+> In the global -> persistence section, change storageClass as below.
+>
+> ```
+> storageClass: microk8s-hostpath
+> ```
+
+1.  Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
     ```
     microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
     ```
 
-Apica Ascent PaaS is now installed in your MicroK8s environment.
+If you see a large wall of text listing configuration values, the installation was successful - Ascent PaaS is now installed in your MicroK8s environment!
 
 ## Accessing Apica Ascent PaaS
 
