@@ -4,7 +4,7 @@ Discover the latest advancements and improvements of the Apica Ascent platform. 
 \
 
 
-**Synthetic Monitoring (ASM 13.26.0) - SaaS**
+### **Synthetic Monitoring (ASM 13.26.0) - SaaS**
 
 **Features**
 
@@ -30,7 +30,7 @@ Discover the latest advancements and improvements of the Apica Ascent platform. 
 
 &#x20;
 
-**Synthetic Monitoring (ASM 13H.5) - OnPrem**
+### **Synthetic Monitoring (ASM 13H.5) - OnPrem**
 
 **Features**
 
@@ -39,12 +39,12 @@ Discover the latest advancements and improvements of the Apica Ascent platform. 
 
 &#x20;
 
-**Apica Data Fabric (ADF v3.9)**
+### **Apica Data Fabric (ADF v3.9)**
 
 **Features**
 
 * **Dark Mode:** A new dark mode option is now available, providing a dark-themed interface for users who prefer it.
-* **apicactl:** Introduced a new command-line tool in Apica Github for API management.
+* [**apicactl**](https://github.com/ApicaSystem/apicactl)**:** Introduced a new command-line tool in Apica Github for API management.
 * **Bookmark date range:** Users can now bookmark specific date ranges for quick access and reference.
 * **Data Explorer API endpoint:** A new API endpoint has been added to support data explorer for Boomi OEM.
 * **Tabs are now scrollable:** Improved usability by making the Tabs scrollable, ensuring better navigation and access.
