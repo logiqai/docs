@@ -187,16 +187,15 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
     ```
 3.  Create a namespace on MicroK8s on which to install Apica Ascent PaaS.
 
+    <pre data-full-width="true"><code><strong>microk8s kubectl create namespace logiq
+    </strong></code></pre>
+4.  Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your Apica Ascent PaaS deployment. If you need to download the file to your own machine, edit, and then transfer to a remote linux server, use this command:
+
     {% code fullWidth="true" %}
     ```
-    microk8s kubectl create namespace logiq
+    scp -i /path/to/private_key.pem /path/to/local/file username@remote_host:/path/to/remote/directory
     ```
     {% endcode %}
-4. Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your Apica Ascent PaaS deployment. If you need to download the file to your own machine, edit, and then transfer to a remote linux server, use this command:
-
-```
-scp -i /path/to/private_key.pem /path/to/local/file username@remote_host:/path/to/remote/directory
-```
 
 Make sure you have the necessary permissions to copy a file to the specified folder on the Linux machine.
 
