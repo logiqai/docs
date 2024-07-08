@@ -118,19 +118,20 @@ How to Create a Self-Signed Certificate using OpenSSL:
     ```
     openssl x509 -req -days 3650 -in cert.csr -signkey cert.key -out cert.crt
     ```
-*   To create a TLS secret in MicroK8s using `kubectl`, use the following command:
 
-    ```
-    microk8s kubectl create secret tls https --cert=cert.crt --key=cert.key
-    ```
+To create a TLS secret in MicroK8s using `kubectl`, use the following command:
 
-    \
-    This command creates a secret named "https" containing the TLS keys for use in your Kubernetes cluster. Ensure you have the `cert.crt` and `cert.key` files in your current directory or specify full paths.
-*   To enable Ingress on microk8s with a default SSL certificate, issue the following command:
+```
+microk8s kubectl create secret tls https --cert=cert.crt --key=cert.key
+```
 
-    ```
-    microk8s enable ingress:default-ssl-certificate=secret/https
-    ```
+This command creates a secret named "https" containing the TLS keys for use in your Kubernetes cluster. Ensure you have the `cert.crt` and `cert.key` files in your current directory or specify full paths.
+
+To enable Ingress on microk8s with a default SSL certificate, issue the following command:
+
+```
+microk8s enable ingress:default-ssl-certificate=secret/https
+```
 
 6.  Enable private registry.
 
