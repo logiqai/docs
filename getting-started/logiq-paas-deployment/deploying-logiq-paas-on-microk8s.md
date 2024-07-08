@@ -205,6 +205,10 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
     scp -i /path/to/private_key.pem /path/to/local/file username@remote_host:/path/to/remote/directory
     ```
     {% endcode %}
+5.  Create a namespace on MicroK8s on which to install Apica Ascent PaaS.
+
+    <pre data-full-width="true"><code><strong>microk8s kubectl create namespace logiq
+    </strong></code></pre>
 
 Make sure you have the necessary permissions to copy a file to the specified folder on the Linux machine.
 
@@ -236,11 +240,10 @@ Make sure you have the necessary permissions to copy a file to the specified fol
 > storageClass: microk8s-hostpath
 > ```
 
-6. Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
+5.  Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
-```
-microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
-```
+    <pre data-full-width="true"><code><strong>microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
+    </strong></code></pre>
 
 If you see a large wall of text listing configuration values, the installation was successful - Ascent PaaS is now installed in your MicroK8s environment!
 
