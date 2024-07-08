@@ -283,3 +283,42 @@ Your Apica Ascent PaaS UI is now available in your web browser. You can log into
 {% hint style="info" %}
 **Note:** You can change the default login credentials after you've logged into the UI.
 {% endhint %}
+
+### Troubleshooting
+
+#### Kubernetes cluster is unreachable
+
+If you see an error message indicating the Kubernetes cluser is unreachable, the Microk8s service has stopped - simply restart it. Error text:
+
+```
+Error: INSTALLATION FAILED: Kubernetes cluster unreachable: Get "https://127.0.0.1:16443/version": dial tcp 127.0.0.1:16443: connect: connection refused
+helm.go:84: [debug] Get "https://127.0.0.1:16443/version": dial tcp 127.0.0.1:16443: connect: connection refused
+...
+```
+
+Solution:
+
+```
+ubuntu@ip-172-31-31-72:~$ microk8s status
+microk8s is not running. Use microk8s inspect for a deeper inspection.
+ubuntu@ip-172-31-31-72:~$ microk8s start
+```
+
+#### Restarting the Ascent installation after a failed installation
+
+If the Ascent installation using the supplied .yaml file fails, you must first remove the name in use. Error text:
+
+```
+Error: INSTALLATION FAILED: cannot re-use a name that is still in use
+helm.go:84: [debug] cannot re-use a name that is still in use
+helm.sh/helm/v3/pkg/action.(*Install).availableName
+...
+```
+
+Solution:
+
+```
+ubuntu@ip-172-31-31-72:~$ microk8s helm3 uninstall logiq -n logiq 
+release "logiq" uninstalled
+ubuntu@ip-172-31-31-72:~$ microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/apica-ascent -f values.microk8s.yaml --debug --timeout 10m
+```
