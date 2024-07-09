@@ -1,2 +1,0 @@
-# Google Pub/Sub
-

@@ -1,2 +1,0 @@
-# Azure BLOB Storage
-

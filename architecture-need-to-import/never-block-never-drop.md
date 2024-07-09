@@ -1,2 +1,0 @@
-# Never Block, Never Drop
-
