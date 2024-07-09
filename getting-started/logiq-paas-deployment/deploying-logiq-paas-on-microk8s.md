@@ -94,7 +94,11 @@ To enable the Ingress controller in MicroK8s, run the following command:
 microk8s enable ingress
 ```
 
-5. Enable HTTPS
+5. Enable HTTPS (optional)
+
+{% hint style="info" %}
+This step is optional; you can still access the site using HTTP if you don't install an SSL certificate on the host.
+{% endhint %}
 
 How to Create a Self-Signed Certificate using OpenSSL:
 
@@ -143,7 +147,7 @@ microk8s enable ingress:default-ssl-certificate=secret/https
     ```
     {% endcode %}
 
-## Provisioning an IP address
+## Provisioning an IP address (optional)
 
 {% hint style="info" %}
 **Note:** This step is optional and will depend on your individual access needs - for instance, if you need to access the PaaS instance from a certain IP. You can skip this step if you are installing the app locally - in that case, you can access the UI after installation via the machine's public IP address.
@@ -248,7 +252,9 @@ If you see a large wall of text listing configuration values, the installation w
 
 ## Accessing Apica Ascent PaaS
 
-Now that Apica Ascent PaaS is installed on your MicroK8s cluster, you can visit the Apica Ascent PaaS UI by accessing the MetalLB endpoint we defined in the pre-install steps. To access the Apica Ascent PaaS UI, do the following:
+Now that Apica Ascent PaaS is installed on your MicroK8s cluster, you can visit the Apica Ascent PaaS UI by either accessing the MetalLB endpoint we defined in the pre-install steps (if you installed/configured MetalLB), or by accessing the public IP address of the instance over HTTP(S) (if you aren't utilizing MetalLB).&#x20;
+
+If you are load balancing the hosting across multiple IPs using MetalLB, do the following to access the Apica Ascent PaaS UI:
 
 1.  Inspect the pods in your MicroK8s cluster in the `logiq` namespace by running the following command.
 
@@ -270,7 +276,9 @@ Now that Apica Ascent PaaS is installed on your MicroK8s cluster, you can visit 
     ```
 3. Using a web browser of your choice, access the IP address shown by the load balancer service above. For example, `http://192.168.1.27:80`.
 
-Your Apica Ascent PaaS UI is now available in your web browser. You can log into Apica Ascent PaaS using the following default credentials.
+If you aren't utilizing MetalLB, you can access the Ascent UI simply by accessing the public IP or hostname of your machine over HTTP(S); you can utilize HTTPS by following the "enabling HTTPS" step in the "Enabling Add-Ons" section above.
+
+You can log into Apica Ascent PaaS using the following default credentials.
 
 * **Username**: `flash-admin@foo.com`
 * **Password**: `flash-password`
