@@ -32,7 +32,7 @@ The first step in this deployment is to install MicroK8s on your machine. The fo
 
     <pre><code><strong>sudo usermod -a -G microk8s $USER
     </strong></code></pre>
-5.  Create the .kube directory
+5.  Create the .kube directory.
 
     ```
     mkdir ~/.kube
