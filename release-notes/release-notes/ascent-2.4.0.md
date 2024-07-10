@@ -41,15 +41,19 @@ Discover the latest advancements and improvements of the Apica Ascent platform. 
 
 ### **Apica Data Fabric (ADF v3.9)**
 
-**Features**
+#### **Features**
 
 * **Dark Mode:** A new dark mode option is now available, providing a dark-themed interface for users who prefer it.
+* **Code Rule Preview:** Users can preview and compare the data after the code rule is applied.
 * [**apicactl**](https://github.com/ApicaSystem/apicactl)**:** Introduced a new command-line tool in Apica Github for API management.
 * **Bookmark date range:** Users can now bookmark specific date ranges for quick access and reference.
 * **Data Explorer API endpoint:** A new API endpoint has been added to support data explorer for Boomi OEM.
 * **Tabs are now scrollable:** Improved usability by making the Tabs scrollable, ensuring better navigation and access.
+* **Pipeline tab inside search view:** This enhances the search view and the user can see the pipeline of the selected flow.
+* **Pipeline application filter:** While creating a new pipeline, users can filter which application to show in the pipeline view.
+* Enhanced the **Fleet agent manager** installation.
 
-**Bug Fixes**
+#### **Bug Fixes**
 
 * **Inconsistent time range when moving from ALIVE to Facet Search page:** Fixed the issue where the time range was inconsistent when moving from the ALIVE to the Facet Search page.
 * **Orphan tab from ALIVE:** Resolved the issue of orphan tabs appearing from ALIVE.
