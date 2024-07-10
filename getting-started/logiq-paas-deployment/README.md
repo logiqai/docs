@@ -1,4 +1,4 @@
-# PaaS deployment
+# On-Premise PaaS deployment
 
 ## Before you begin
 
@@ -31,9 +31,11 @@ Running this command displays a list of the available Helm charts along with the
 ```
 $ helm repo update
 $ helm search repo logiq-repo
-NAME                CHART VERSION    APP VERSION            DESCRIPTION
-logiq-repo/logiq      v3.0.9          v3.5.9.1        Apica Ascent Observability HELM chart for Kubernetes
 ```
+
+| NAME             | CHART VERSION | APP VERSION | DESCRIPTION                                          |
+| ---------------- | ------------- | ----------- | ---------------------------------------------------- |
+| logiq-repo/logiq | v3.0.9        | v3.9.2      | Apica Ascent Observability HELM chart for Kubernetes |
 
 If you've already added Apica Ascent's Helm repository in the past, you can update the repository by running the following command.
 
@@ -63,15 +65,15 @@ To give you a head start with configuring your Apica Ascent deployment, we've pr
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../../../.gitbook/assets/values.small (1).yaml" %}
+{% file src="../../.gitbook/assets/values.small (1).yaml" %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../../../.gitbook/assets/values.medium (2).yaml" %}
+{% file src="../../.gitbook/assets/values.medium (2).yaml" %}
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../../../.gitbook/assets/values.large (3).yaml" %}
+{% file src="../../.gitbook/assets/values.large (3).yaml" %}
 {% endtab %}
 {% endtabs %}
 
@@ -307,7 +309,7 @@ The following table describes the Helm options that are passed with the command 
 
 The Apica Ascent PaaS Community Edition gives you access to Enterprise Edition features but with lesser daily log ingest rates and ingest worker processes. If you feel the need to up your daily ingest rates and make the most out of Apica Ascent by extending its use to the rest of your team with SSO and RBAC, you can upgrade to the Apica Ascent PaaS Enterprise Edition.
 
-You can get yourself an Enterprise Edition license by contacting us via [license@logiq.ai](mailto:%20license@logiq.ai). Once you receive your new license, you can apply it to your Apica Ascent deployment using Apica Ascent's CLI, [`apicactl`](../../../deploying-logiq/logiq-paas-deployment/broken-reference/).
+You can get yourself an Enterprise Edition license by contacting us via [license@logiq.ai](mailto:%20license@logiq.ai). Once you receive your new license, you can apply it to your Apica Ascent deployment using Apica Ascent's CLI, [`apicactl`](../../deploying-logiq/logiq-paas-deployment/broken-reference/).
 
 To use `logiqctl`, generate an API token from the Apica Ascent UI, as shown in the following image.
 
@@ -379,9 +381,9 @@ helm install logiq --namespace logiq \
 
 The following table describes the Helm options passed with the command above.
 
-| HELM Option                     | Description                                                                                                                                                                                 | Default |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `global.environment.cluster_id` | The cluster ID being used for the K8s cluster running LOGIQ. For more information, read [Managing multiple K8S](../../../deploying-logiq/logiq-paas-deployment/broken-reference/) clusters. | `LOGIQ` |
+| HELM Option                     | Description                                                                                                                                                                              | Default |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `global.environment.cluster_id` | The cluster ID being used for the K8s cluster running LOGIQ. For more information, read [Managing multiple K8S](../../deploying-logiq/logiq-paas-deployment/broken-reference/) clusters. | `LOGIQ` |
 
 ### Sizing your Apica Ascent cluster
 
