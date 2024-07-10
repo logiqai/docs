@@ -25,12 +25,29 @@ Code Blocks is enriched with JavaScript code completion and syntax highlighting.
 
 The Code Rule empowers users to create and execute custom scripts or rules for processing incoming logs. This flexibility allows for highly tailored log processing logic to be implemented, beyond what can be achieved with predefined rewrite or extraction rules. Users can leverage their programming skills to manipulate log data in sophisticated ways, enabling tasks such as complex data transformations, enrichment, filtering, or integration with external systems. This Rule offers advanced customization options for handling diverse log processing requirements.
 
+### Built-in Variables and Functions <a href="#built-in-variables-and-functions" id="built-in-variables-and-functions"></a>
 
+In the code environment, the following built-in variables and functions are available:
 
-Added the code block support for the following two code rules.&#x20;
+**Functions**
 
-* REWRITE RULE&#x20;
-* EXTRACT RULE&#x20;
+* `fetchSync(url, cfg)`: Makes a synchronous HTTP request to the specified endpoint.
+  * **Arguments**:
+    * `url`: The URL of the target endpoint.
+    * `cfg`: Configuration object containing the method, headers, and body of the request.
+  * **Returns**: The response from the target endpoint.
+* `console.log(message)`: Logs messages to the console.
+  * **Arguments**: `message` (string) - The message to log.
+
+**Variables**
+
+* **`Event`**: The incoming event to be processd by the CODE rule.
+
+{% hint style="info" %}
+While the CODE rule is a special rule type, you can also use Javascript code as part of other rule types such as REWRITE and EXTRACT Rules for more complex rewrite/data extraction workflows. The available Built-in variables and functions are the same for these rule types as well.
+{% endhint %}
+
+### Code block support for REWRITE and EXTRACT rules.&#x20;
 
 **REWRITE RULE:**
 
@@ -62,14 +79,10 @@ Please be informed that the code block is set to read-only mode. To modify the c
 
 <figure><img src="../../.gitbook/assets/Screenshot from 2024-06-19 00-15-48.png" alt=""><figcaption><p>View CODE</p></figcaption></figure>
 
+### Testing code rule output
 
-
-**JS CODE FORWARDER:**
-
-This forwarder, equipped with JavaScript execution capabilities, revolutionizes log shipping by allowing users to dynamically process transported logs in real-time with custom JavaScript functions. &#x20;
-
-For example, users can define JavaScript functions to scan incoming logs, identify specific patterns or anomalies, and automatically trigger actions, like filing tickets in response to detected issues. This seamless integration of JavaScript-based log processing directly within the forwarder streamlines the log management workflow, enabling organizations to swiftly and efficiently respond to critical events or conditions detected within their log data, thereby enhancing operational efficiency and proactive incident management.&#x20;
+The built-in Preview functionality allows a user to test a code rule before making it permanent. Slick on the Preview button to launch the code transformation preview window
 
 
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-06-19 00-17-37.png" alt=""><figcaption><p>JS CODE FORWARDER</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-07-10 at 4.42.43 PM.png" alt=""><figcaption></figcaption></figure>
