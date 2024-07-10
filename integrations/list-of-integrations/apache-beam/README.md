@@ -10,6 +10,10 @@ Apica Ascent provides integrations to let you integrate Apica Ascent with Apache
 
 
 
-{% embed url="https://docs.apica.io/integrations/list-of-integrations/apache-beam/export-metrics-to-prometheus" %}
+{% content-ref url="export-metrics-to-prometheus/" %}
+[export-metrics-to-prometheus](export-metrics-to-prometheus/)
+{% endcontent-ref %}
 
-{% embed url="https://docs.apica.io/integrations/list-of-integrations/apache-beam/export-events-to-logiq" %}
+{% content-ref url="export-events-to-logiq.md" %}
+[export-events-to-logiq.md](export-events-to-logiq.md)
+{% endcontent-ref %}
