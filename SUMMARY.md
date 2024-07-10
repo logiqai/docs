@@ -137,6 +137,8 @@
   * [Query Builder](data-management/overview-1/query-builder.md)
   * [Widget](data-management/overview-1/widget.md)
   * [Create a Dashboard](data-management/overview-1/create-a-dashboard.md)
+  * [Alerts](data-management/overview-1/alerts.md)
+  * [JSON Import](data-management/overview-1/json-import.md)
 * [Rules](data-management/rules/README.md)
   * [FILTER](data-management/rules/filter.md)
   * [EXTRACT](data-management/rules/extract.md)

@@ -8,7 +8,7 @@ irate(node_cpu_seconds_total{job="node",mode="user"}[5m])&step=2m&duration=12h
 
 The query represents a multi-variate data set and is visualized by the line chart.  There are 7 time-series data sets specified with the data key "instance".  The group-by operator was used for displaying all 7 data sets.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (184).png" alt=""><figcaption></figcaption></figure>
 
 The current Apica Data Fabric (ADF) AI-ML operator supports only one data set.  To use the AI-ML on the data, the user needs to filter the data into one data set.  The process can be done with the promQL select operator,
 

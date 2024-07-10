@@ -5,7 +5,7 @@ description: >-
   observability agents.
 ---
 
-# Fleet
+# Fleet Management Overview
 
 With Fleet, you can collect more data when you need it and less when you don’t. And the best part? Almost all observability agents can be managed through configuration files describing how to collect, enrich and send data.&#x20;
 
@@ -19,7 +19,7 @@ Navigate **Explore > Fleet** will show the agent list that are configured and ma
 
 When there are no configured agents.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption><p>No agents</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (2) (1).png" alt=""><figcaption><p>No agents</p></figcaption></figure>
 
 **Configured Agent List:**
 
