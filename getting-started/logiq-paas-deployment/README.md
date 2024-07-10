@@ -48,10 +48,10 @@ helm repo update
 Create a namespace where we'll deploy Apica Ascent PaaS by running the following command.
 
 ```
-kubectl create namespace Apica Ascent
+kubectl create namespace apica-ascent
 ```
 
-Running the command shown above creates a namespace named `logiq`. You can also name your namespace differently by replacing `logiq` with the name of your choice in the command above. In case you do, remember to use the same namespace for the rest of the instructions listed in this guide.
+Running the command shown above creates a namespace named `apica-ascent`. You can also name your namespace differently by replacing `apica-ascent` with the name of your choice in the command above. In case you do, remember to use the same namespace for the rest of the instructions listed in this guide.
 
 {% hint style="danger" %}
 **Important:** Ensure that the name of the namespace is not more than 15 characters in length.
@@ -80,7 +80,7 @@ To give you a head start with configuring your Apica Ascent deployment, we've pr
 You can pass the `values.yaml` file with the `helm install` command using the `-f` flag, as shown in the following example.
 
 ```
-helm install logiq --namespace logiq --set global.persistence.storageClass=<storage_class_name> logiq-repo/logiq -f values.small.yaml
+helm install apica-ascent --namespace apica-ascent --set global.persistence.storageClass=<storage_class_name> logiq-repo/logiq -f values.small.yaml
 ```
 
 ### Read and accept the EULA
@@ -102,7 +102,7 @@ The following table lists the latest version tags for all Apica Ascent component
 Now that your environment is ready, you can proceed with installing Apica Ascent PaaS in it. To install Apica Ascent PaaS, run the following command.
 
 ```
-helm install logiq --namespace logiq --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
+helm install apica-ascent --namespace apica-ascent --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
 
 Running the above command installs Apica Ascent PaaS and exposes its services and UI on the ingress' IP address. Accessing the ingress' IP address in a web browser of your choice takes you to the Apica Ascent PaaS login screen, as shown in the following image.
@@ -141,7 +141,7 @@ You can customise your Apica Ascent PaaS deployment either before or after you d
 You can enable HTTPS and assign a custom domain in the ingress for your Apica Ascent UI while installing Apica Ascent in your environment by running the following command.
 
 ```
-helm install logiq --namespace logiq \
+helm install apica-ascent --namespace apica-ascent \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
@@ -164,7 +164,7 @@ After you run the command, you should then update your DNS server to point to th
 You can pass your own ingress secret while installing the Helm chart by running the following command.
 
 ```
-helm install logiq --namespace logiq \
+helm install apica-ascent --namespace apica-ascent \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
@@ -191,7 +191,7 @@ Go to your AWS IAM console and create an access key and secret key using which y
 The S3 gateway acts as a caching gateway and helps reduce API costs. Deploy the Apica Ascent Helm chart in gateway mode by running the following command. Ensure you pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and name your S3 bucket uniquely.
 
 ```
-helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
+helm install apica-ascent --namespace apica-ascent --set global.domain=logiq.my-domain.com \
 --set global.environment.s3_bucket=<bucket_name> \
 --set global.environment.awsServiceEndpoint=https://s3.<region>.amazonaws.com \
 --set global.environment.s3_region=<region> \
@@ -234,7 +234,7 @@ data:
 Once you've filled out this template, be sure to save the secrets file and name it appropriately, such as `logiq-certs.yaml`. You can now install the Apica Ascent Helm chart, along with the certificates using the following command.
 
 ```
-helm install logiq --namespace logiq --set global.domain=logiq.my-domain.com \
+helm install apica-ascent --namespace apica-ascent --set global.domain=logiq.my-domain.com \
 --set logiq-flash.secrets_name=logiq-certs \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
@@ -271,9 +271,9 @@ The following table details the Kubernetes `StorageClass` names and their defaul
 You can update the storage class name for your Apica Ascent deployment by running the following command.
 
 ```
-helm upgrade --namespace logiq \
+helm upgrade --namespace apica-ascent \
 --set global.persistence.storageClass=<storage class name> \
-logiq logiq-repo/logiq
+apica-ascent logiq-repo/logiq
 ```
 
 ### Using an external AWS RDS Postgres database instance
@@ -281,7 +281,7 @@ logiq logiq-repo/logiq
 To use an external AWS RDS Postgres database for your Apica Ascent deployment, run the following command.
 
 ```
-helm install logiq --namespace logiq \
+helm install apica-ascent --namespace apica-ascent \
 --set global.chart.postgres=false \
 --set global.environment.postgres_host=<postgres-host-ip/dns> \
 --set global.environment.postgres_user=<username> \
@@ -317,7 +317,7 @@ Once you've [configured `logiqctl`](https://docs.logiq.ai/vewing-logs/logiqctl/c
 
 ```
 # Set cluster end point
-> logiqctl config set-cluster your-logiq-cluster.com
+> logiqctl config set-cluster your-ascent-cluster.com
 
 # Set the API Key
 > logiqctl config set-token r0q7EyIxNgVjAqLoIeDioJAWEhAR6wK4Y5XpPb3A
@@ -331,7 +331,7 @@ Once you've [configured `logiqctl`](https://docs.logiq.ai/vewing-logs/logiqctl/c
 Apica Ascent enables you to set your own admin credentials to log into your Apica Ascent cluster instead of using the default credentials. You can set your admin credentials while deploying Apica Ascent by running the following command.
 
 ```
-helm install logiq --namespace logiq \
+helm install apica-ascent --namespace apica-ascent \
 --set global.environment.admin_name="LOGIQ Administrator" \
 --set global.environment.admin_password="admin_password" \
 --set global.environment.admin_email="admin@example.com" \
@@ -351,7 +351,7 @@ The following table describes the Helm options passed with the command above.
 You can specify an external Redis instance to be used with your Apica Ascent deployment by specifying the Redis host in the installation command, as shown below.
 
 ```
-helm install logiq --namespace logiq \
+helm install apica-ascent --namespace apica-ascent \
 --set global.chart.redis=false \
 --set global.environment.redis_host=<redis-host-ip/dns> \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
@@ -374,7 +374,7 @@ The following table describes the Helm options that can be passed with the comma
 You can configure a cluster ID for your Apica Ascent instance at the time of deployment by passing the `cluster_id` of your choice while running the following install command. This helps you identify your Apica Ascent cluster in case you'd like to monitor it.
 
 ```
-helm install logiq --namespace logiq \
+helm install apica-ascent --namespace apica-ascent \
 --set global.environment.cluster_id=<cluster id> \
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
@@ -415,7 +415,7 @@ kubernetes-ingress:
 For example, if you are deploying Apica Ascent on a bare-metal server and want an external load balancer to front Apica Ascent, configure all services as `NodePort` and pass the service types in the installation command, as shown in the following example.
 
 ```bash
-helm install logiq -n logiq -f values.yaml \
+helm install apica-ascent -n logiq -f values.yaml \
 --set flash-coffee.service.type=NodePort \
 --set logiq-flash.service.type=NodePort \
 --set kubernetes-ingress.controller.service.type=NodePort \
@@ -451,7 +451,7 @@ globals:
 The Apica Ascent stack bundles Grafana as part of the deployment as an optional component. You can enable Grafana in your Apica Ascent cluster by running the following command.
 
 ```bash
-helm upgrade --install logiq --namespace logiq \
+helm upgrade --install apica-ascent --namespace apica-ascent \
 --set global.chart.grafana=true \ 
 --set global.persistence.storageClass=<storage class name> logiq-repo/logiq
 ```
