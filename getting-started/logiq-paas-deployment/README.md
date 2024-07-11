@@ -82,17 +82,6 @@ You can pass the `values.yaml` file with the `helm install` command using the `-
 ```
 helm install apica-ascent --namespace apica-ascent --set global.persistence.storageClass=<storage_class_name> apica-repo/apica-ascent -f values.small.yaml
 ```
-
-### Latest Apica Ascent component versions
-
-The following table lists the latest version tags for all Apica Ascent components.
-
-| Image              | Version |
-| ------------------ | ------- |
-| `logiq-flash`      | v3.0    |
-| `coffee`           | v3.0    |
-| `logiq` Helm chart | v3.0.1  |
-
 ## Install Apica Ascent PaaS
 
 Now that your environment is ready, you can proceed with installing Apica Ascent PaaS in it. To install Apica Ascent PaaS, run the following command.
