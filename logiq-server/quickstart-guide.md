@@ -6,10 +6,6 @@ description: >-
 
 # Quickstart guide
 
-{% hint style="warning" %}
-Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
-{% endhint %}
-
 ## Install Docker compose
 
 You can spin-up Apica Ascent using `docker-compose`. Install guide for `docker-compose` can be found here - [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
