@@ -8,10 +8,10 @@ description: This page documents command-line usage for the Query command
 
 ```text
 NAME:
-   logiqctl query - query "sudo cron" 2h
+   apicactl query - query "sudo cron" 2h
 
 USAGE:
-   logiqctl query command [command options] [application names, relative time]
+   apicactl query command [command options] [application names, relative time]
 
 COMMANDS:
    next, n  query n
@@ -34,7 +34,7 @@ Historical log data can be queries using apicactl. Filters allow the user to spe
 For e.g. to query all postgres logs within the last 1 hr, one would pass the application names and the start time for the query
 
 ```text
-$logiqctl q postgres --st 1h
+$apicactl q postgres --st 1h
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|Error: Database is uninitialized and superuser password is not specified.
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|
@@ -52,7 +52,7 @@ Enter `n` or `next' to continue.
 The query output formatting can be controlled with the `--output` option. Three values are allowed - `raw`, `column` and `json`
 
 ```text
-$logiqctl q postgres --st 1h --output json
+$apicactl q postgres --st 1h --output json
 ```
 
 The above command returns the data with each row of data formatted as JSON.

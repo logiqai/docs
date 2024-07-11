@@ -293,16 +293,16 @@ The deployment described above offers 30 days trial license. Send an e-mail to `
 
 ```bash
 Setup your Apica Ascent Cluster endpoint
-- logiqctl config set-cluster logiq.my-domain.com
+- apicactl config set-cluster logiq.my-domain.com
 
 Sets a Apica Ascent UI api token
-- logiqctl config set-token api_token
+- apicactl config set-token api_token
 
 Upload your Apica Ascent deployment license
-- logiqctl license set -f=license.jws
+- apicactl license set -f=license.jws
 
 View License information
- - logiqctl license get
+ - apicactl license get
 ```
 
 ### 3.7 Customize Admin account

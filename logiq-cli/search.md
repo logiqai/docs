@@ -3,12 +3,12 @@
 ## Help
 
 ```bash
-#./logiqctl s -h
+#./apicactl s -h
 NAME:
-   logiqctl search - search sudo
+   apicactl search - search sudo
 
 USAGE:
-   logiqctl search command [command options] [search_term, relative time]
+   apicactl search command [command options] [search_term, relative time]
 
 COMMANDS:
    next, n  query n
@@ -26,7 +26,7 @@ OPTIONS:
 ## Providing a search term
 
 ```bash
-#./logiqctl s superuser
+#./apicactl s superuser
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|       superuser. For example, "-e POSTGRES_PASSWORD=password" on "docker run".
 2020-03-17T03:52:36Z        |error |docker-desktop|1518|postgres|system daemon|Error: Database is uninitialized and superuser password is not specified.
 Enter `n` or `next' to continue.

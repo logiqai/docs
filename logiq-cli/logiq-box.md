@@ -9,17 +9,17 @@ description: >-
 ## Download
 
 ```text
-git clone https://github.com/logiqai/logiqctl
+git clone https://github.com/ApicaSystem/apicactl
 ```
 
 ## Help
 
 ```text
 NAME:
-   logiqctl - logiqctl CLI Tool
+   apicactl - apicactl CLI Tool
 
 USAGE:
-   logiqctl [global options] command [command options] [arguments...]
+   apicactl [global options] command [command options] [arguments...]
 
 VERSION:
    1.0.0
@@ -28,7 +28,7 @@ AUTHOR:
   Apica AB 
 
 COMMANDS:
-     configure, c  Configure logiqctl
+     configure, c  Configure apicactl
      list, ls      List of applications that you can tail
      tail, t       tail sudo cron
      query, q      query "sudo cron" 2h

@@ -8,10 +8,10 @@ description: This page documents command-line usage for the Tail command
 
 ```text
 NAME:
-   logiqctl tail - tail logs filtered by namespace, application, labels or process / pod name
+   apicactl tail - tail logs filtered by namespace, application, labels or process / pod name
 
 USAGE:
-   logiqctl tail [command options] [-apps application names and/or -namespaces K8S namespace names and/or -labels K8S labels - procs process id / pod name]
+   apicactl tail [command options] [-apps application names and/or -namespaces K8S namespace names and/or -labels K8S labels - procs process id / pod name]
 
 OPTIONS:
    --namespaces              Namespace from which we tail the data (default: false)
@@ -27,7 +27,7 @@ OPTIONS:
 The query output formatting can be controlled with the `--output` option. Three values are allowed - `raw`, `column` and `json`
 
 ```text
-$logiqctl tail --output json
+$apicactl tail --output json
 ```
 
 The above command returns the data with each row of data formatted as JSON.
@@ -39,7 +39,7 @@ _**apicactl**_ tailing allows a user to narrow down the logs to a smaller set of
 Tailing does not return historical data. For historical data, please see the [Query](query.md) section
 
 ```text
-#./logiqctl tail --apps redis
+#./apicactl tail --apps redis
 Crunching data for you...
 timestamp|severity_string|hostname|source_ip|proc_id|app_name|facility_string|message
 2019-12-12T23:57:31Z             |info  |docker-desktop|10.0.1.22|1405 |redis|system daemon|1:C 12 Dec 2019 23:57:31.618 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
@@ -55,7 +55,7 @@ timestamp|severity_string|hostname|source_ip|proc_id|app_name|facility_string|me
 ## Tail logs for namespaces
 
 ```text
-#./logiqctl tail --namespaces redis
+#./apicactl tail --namespaces redis
 Crunching data for you...
 timestamp|severity_string|hostname|source_ip|proc_id|app_name|facility_string|message
 2019-12-12T23:57:31Z             |info  |docker-desktop|10.0.1.22|1405 |redis|system daemon|1:C 12 Dec 2019 23:57:31.618 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
@@ -73,7 +73,7 @@ timestamp|severity_string|hostname|source_ip|proc_id|app_name|facility_string|me
 If you are pushing data from a Kubernetes environment , you can tail logs by kubernetes label match. This applies to all resources that have the label applied
 
 ```text
-#./logiqctl tail --labels app:redis
+#./apicactl tail --labels app:redis
 Crunching data for you...
 timestamp|severity_string|hostname|source_ip|proc_id|app_name|facility_string|message
 2019-12-12T23:57:31Z             |info  |docker-desktop|10.0.1.22|1405 |redis|system daemon|1:C 12 Dec 2019 23:57:31.618 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo

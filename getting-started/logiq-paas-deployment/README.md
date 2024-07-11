@@ -296,19 +296,19 @@ The Apica Ascent PaaS Community Edition gives you access to Enterprise Edition f
 
 You can get yourself an Enterprise Edition license by contacting us via [license@logiq.ai](mailto:%20license@logiq.ai). Once you receive your new license, you can apply it to your Apica Ascent deployment using Apica Ascent's CLI, [`apicactl`](../../deploying-logiq/logiq-paas-deployment/broken-reference/).
 
-To use `logiqctl`, generate an API token from the Apica Ascent UI, as shown in the following image.
+To use `apicactl`, generate an API token from the Apica Ascent UI, as shown in the following image.
 
-Once you've [configured `logiqctl`](https://docs.logiq.ai/vewing-logs/logiqctl/configuring-logiqctl) with your API token and Apica Ascent cluster endpoint, run the following commands to update your license.
+Once you've [configured `apicactl`](https://docs.logiq.ai/vewing-logs/apicactl/configuring-apicactl) with your API token and Apica Ascent cluster endpoint, run the following commands to update your license.
 
 ```
 # Set cluster end point
-> logiqctl config set-cluster your-ascent-cluster.com
+> apicactl config set-cluster your-ascent-cluster.com
 
 # Set the API Key
-> logiqctl config set-token r0q7EyIxNgVjAqLoIeDioJAWEhAR6wK4Y5XpPb3A
+> apicactl config set-token r0q7EyIxNgVjAqLoIeDioJAWEhAR6wK4Y5XpPb3A
 
 # Set the default namespace 
-> logiqctl config set-context ngnix
+> apicactl config set-context ngnix
 ```
 
 ### Customising the admin account
