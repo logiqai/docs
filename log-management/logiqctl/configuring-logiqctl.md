@@ -6,24 +6,24 @@ description: This page covers installation and configuration of apicactl
 
 ## Installation
 
-The simplest way to try `apicactl` is to download a pre-built binary from the [release](https://github.com/logiqai/logiqctl/releases) page. You can also build the binaries directly from source. Instructions are available [here](https://github.com/logiqai/logiqctl#how-to-build-from-source).
+The simplest way to try `apicactl` is to download a pre-built binary from the [release](https://github.com/ApicaSystem/apicactl/releases) page. You can also build the binaries directly from source. Instructions are available [here](https://github.com/ApicaSystem/apicactl?#building-apicactl-from-source).
 
 ### Configuring `apicactl`&#x20;
 
-`apicactl` requires a running Apica Ascent cluster and an api key. See how to get the API key [here](obtaining-api-key.md). After obtaining the API key, run the below commands to configure the logiqctl.
+`apicactl` requires a running Apica Ascent cluster and an api key. See how to get the API key [here](obtaining-api-key.md). After obtaining the API key, run the below commands to configure the apicactl.
 
 ```
 # Set cluster end point
-> logiqctl config set-cluster your-logiq-cluster.com
+> apicactl config set-cluster your-ascent-cluster.com
 
 # Set the API Key
-> logiqctl config set-token r0q7EyIxNgVjAqLoIeDioJAWEhAR6wK4Y5XpPb3A
+> apicactl config set-token r0q7EyIxNgVjAqLoIeDioJAWEhAR6wK4Y5XpPb3A
 
 # Set the default namespace 
-> logiqctl config set-context ngnix
+> apicactl config set-context ngnix
 ```
 
-The default namespace settings can be overridden by passing `-n` flag. Basic operations are covered below, for more detailed documentation refer to the [user guide](https://logiqctl.logiq.ai/) for `apicactl`.&#x20;
+The default namespace settings can be overridden by passing `-n` flag. Basic operations are covered below, for more detailed documentation refer to the [user guide](https://github.com/ApicaSystem/apicactl?#apicactl) for `apicactl`.&#x20;
 
 ### `apicactl` logs
 

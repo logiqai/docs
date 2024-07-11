@@ -7,12 +7,12 @@ description: This page documents command-line usage for the list command
 ## Help
 
 ```bash
-#./logiqctl ls -h
+#./apicactl ls -h
 NAME:
-   logiqctl list - List of applications that you can tail
+   apicactl list - List of applications that you can tail
 
 USAGE:
-   logiqctl list [command options] [arguments...]
+   apicactl list [command options] [arguments...]
 
 OPTIONS:
    --namespaces  -namespaces (default: false)
@@ -24,7 +24,7 @@ OPTIONS:
 _**apicactl**_ CLI provides the ls command to show the list of applications from which logs have been ingested. In the below example we see 3 different applications have sent log data from two namespaces
 
 ```bash
-#./logiqctl ls
+#./apicactl ls
 Host             | Namespace       | Application     | ProcId
 pool-1-5d4f3e6a-8nln | wordpress       | mysql_wordpress | wordpress-
 pool-1-d498bffb-njv1 | wordpress       | mysql           | mysql-5d9f966696-slmft
@@ -36,7 +36,7 @@ pool-1-7d00dbc2-mfl6 | redis           | redis           | redis-5d9f966696-slmf
 Using thee --namespaces filter, one can restrict the application listing for one or more namespaces only
 
 ```bash
-#./logiqctl ls --namespaces kube-logging
+#./apicactl ls --namespaces kube-logging
 Host             | Namespace       | Application      | ProcId
 pool-1-d498bffb-njv1 | kube-logging     | fluentd          | fluentd-7z2jv
 pool-1-7d00dbc2-mfl6 | kube-logging     | fluentd          | fluentd-kdztz

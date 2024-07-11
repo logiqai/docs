@@ -133,10 +133,10 @@ ebs-csi-node-ksv8z 3/3 Running 0 3h53m
 
 #### 5.4 Deploy Apica Ascent using HELM
 
-**Step 1:** Create the logiq namespace in your EKS cluster
+**Step 1:** Create the apica-ascent namespace in your EKS cluster
 
 ```
-kubectl create namespace logiq
+kubectl create namespace apica-ascent
 ```
 
 **Step 2**: Download the values file below and customise it per the instructions below.
@@ -160,25 +160,25 @@ kubectl create namespace logiq
 **Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customise the deployment for enabling https
 
 ```
-helm repo add logiq-repo https://logiqai.github.io/helm-charts
+helm repo add apica-repo https://logiqai.github.io/helm-charts
 ```
 
 ```
-helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/apica-ascent
+helm upgrade --install apica-ascent -n apica-ascent -f values.yaml apica-repo/apica-ascent
 ```
 
-**Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
+**Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"ascent.my-domain.com"** with the https domain where this cluster will be available.
 
 {% hint style="info" %}
 **NOTE:** Your DNS will need to be programmed separately to map the domain to the service endpoint for Apica Ascent. Please see Step 7 below on how to obtain the service endpoint.&#x20;
 {% endhint %}
 
 ```
-helm upgrade --install logiq -n logiq \
---set global.domain=logiq.my-domain.com \
+helm upgrade --install apica-ascent -n apica-ascent \
+--set global.domain=ascent.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
--f values.yaml logiq-repo/apica-ascent
+-f values.yaml apica-repo/apica-ascent
 ```
 
 **Step 6:** Once the EKS cluster is created, add the VPC cidr in the Postgresql and Elasticache security group (create by first cloudformation template) inbound rules for port 5432 and 6379.\
@@ -186,7 +186,7 @@ helm upgrade --install logiq -n logiq \
 **Step 7:** After the installation is complete execute the below command to get the service endpoint
 
 ```
-kubectl -n logiq get svc | grep LoadBalancer
+kubectl -n apica-ascent get svc | grep LoadBalancer
 NAME                        TYPE           CLUSTER-IP       EXTERNAL-IP
 logiq-kubernetes-ingress     LoadBalancer <cluster_ip>    <Service end-point>
 ```

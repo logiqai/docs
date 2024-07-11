@@ -6,10 +6,6 @@ description: >-
 
 # Quickstart with Docker-Compose
 
-{% hint style="warning" %}
-Please read and agree with the [EULA](https://docs.logiq.ai/eula/eula) before proceeding.
-{% endhint %}
-
 {% hint style="danger" %}
 docker-compose based deployment should not be used for production envornments.&#x20;
 {% endhint %}

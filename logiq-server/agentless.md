@@ -75,10 +75,10 @@ filter {
 }
 ```
 
-You can generate the Bearer token using [`logiqctl`](https://logiqctl.logiq.ai)\`\`
+You can generate the Bearer token using [`apicactl`](https://github.com/ApicaSystem/apicactl)\`\`
 
 ```text
-$logiqctl get httpingestkey
+$apicactl get httpingestkey
 ```
 
 ## Rsyslogd

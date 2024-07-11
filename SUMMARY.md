@@ -143,7 +143,7 @@
 
 ## COMMAND LINE INTERFACE
 
-* [apicactl Documentation](https://logiqctl.logiq.ai/)
+* [apicactl Documentation](https://github.com/ApicaSystem/apicactl)
 
 ## Flow
 
