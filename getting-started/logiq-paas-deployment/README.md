@@ -317,7 +317,7 @@ Apica Ascent enables you to set your own admin credentials to log into your Apic
 
 ```
 helm install apica-ascent --namespace apica-ascent \
---set global.environment.admin_name="LOGIQ Administrator" \
+--set global.environment.admin_name="Ascent Administrator" \
 --set global.environment.admin_password="admin_password" \
 --set global.environment.admin_email="admin@example.com" \
 --set global.persistence.storageClass=<storage class name> apica-repo/apica-ascent
@@ -368,7 +368,7 @@ The following table describes the Helm options passed with the command above.
 
 | HELM Option                     | Description                                                                                                                                                                              | Default |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `global.environment.cluster_id` | The cluster ID being used for the K8s cluster running LOGIQ. For more information, read [Managing multiple K8S](../../deploying-logiq/logiq-paas-deployment/broken-reference/) clusters. | `LOGIQ` |
+| `global.environment.cluster_id` | The cluster ID being used for the K8s cluster running Apica Ascent. For more information, read [Managing multiple K8S](../../deploying-logiq/logiq-paas-deployment/broken-reference/) clusters. | `Apica Ascent` |
 
 ### Sizing your Apica Ascent cluster
 

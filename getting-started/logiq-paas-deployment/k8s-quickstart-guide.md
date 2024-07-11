@@ -34,7 +34,7 @@ You can now run `helm search repo apica-repo` to see the available helm charts
 ```bash
 $ helm search repo apica-repo
 NAME                CHART VERSION     APP VERSION              DESCRIPTION
-apica-repo/apica-ascent      v3.0.9           v3.5.9.1        LOGIQ Observability HELM chart for Kubernetes
+apica-repo/apica-ascent      v3.0.9           v3.5.9.1        Apica Ascent Observability HELM chart for Kubernetes
 ```
 
 #### 1.1.1 Update your HELM chart
@@ -45,7 +45,7 @@ If you already added Apica Ascent's HELM repository in the past, you can get upd
 $ helm repo update
 $ helm search repo apica-repo
 NAME                CHART VERSION    APP VERSION          DESCRIPTION
-apica-repo/apica-ascent       v3.0.9         v3.5.9.1    LOGIQ Observability HELM chart for Kubernetes
+apica-repo/apica-ascent       v3.0.9         v3.5.9.1    Apica Ascent Observability HELM chart for Kubernetes
 ```
 
 ### 1.2 Create namespace where Apica Ascent will be deployed
@@ -309,7 +309,7 @@ View License information
 
 ```bash
 helm install apica-ascent --namespace apica-ascent \
---set global.environment.admin_name="LOGIQ Administrator" \
+--set global.environment.admin_name="Ascent Administrator" \
 --set global.environment.admin_password="admin_password" \
 --set global.environment.admin_email="admin@example.com" \
 --set global.persistence.storageClass=<storage class name> apica-repo/apica-ascent
@@ -354,7 +354,7 @@ helm install apica-ascent --namespace apica-ascent \
 
 | HELM Option                    | Description                                                                                                                                                                                         | Default |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| global.environment.cluster\_id | Cluster Id being used for the K8S cluster running Apica Ascent. See Section on [Managing multiple K8S](../../../deploying-logiq/logiq-paas-deployment/broken-reference/) clusters for more details. | LOGIQ   |
+| global.environment.cluster\_id | Cluster Id being used for the K8S cluster running Apica Ascent. See Section on [Managing multiple K8S](../../../deploying-logiq/logiq-paas-deployment/broken-reference/) clusters for more details. | Apica AscentQ   |
 
 ### 3.10 Sizing your Apica Ascent cluster
 
