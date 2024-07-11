@@ -137,7 +137,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
 1. Add the Apica Ascent PaaS Helm chart to your Helm repository by running the following command.
 
    ```text
-   helm repo add logiq-repo https://logiqai.github.io/helm-charts
+   helm repo add apica-repo https://logiqai.github.io/helm-charts
    ```
 
 2. Update your Helm repository by running the following command.
@@ -185,7 +185,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
 5. Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
    ```text
-   helm install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/logiq -f  values.microk8s.yaml  --debug --timeout 10m
+   helm install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
    ```
 
 LOGIQ PaaS is now installed in your MicroK8s environment.

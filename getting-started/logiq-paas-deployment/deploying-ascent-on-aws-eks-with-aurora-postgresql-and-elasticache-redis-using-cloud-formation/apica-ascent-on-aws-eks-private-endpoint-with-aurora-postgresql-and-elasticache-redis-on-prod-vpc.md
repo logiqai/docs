@@ -364,18 +364,18 @@ kubectl get namespace
 *   [ ] Execute the following command:
 
     ```
-    helm repo add logiq-repo https://logiqai.github.io/helm-charts
+    helm repo add apica-repo https://logiqai.github.io/helm-charts
     ```
 
     *   [ ] Expected output:
 
         ```
-        "logiq-repo" has been added to your repositories
+        "apica-repo" has been added to your repositories
         ```
 *   [ ] Ensure that the path to your `values.yaml` file is correctly set, or run the commands from the directory that contains the file. Use the following command to deploy:
 
     ```shell
-    helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/apica-ascent
+    helm upgrade --install logiq -n logiq -f values.yaml apica-repo/apica-ascent
     ```
 
     *   [ ] Expected output:
@@ -444,7 +444,7 @@ helm upgrade --install logiq -n logiq \
 --set global.domain=apica.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
--f values.yaml logiq-repo/apica-ascent
+-f values.yaml apica-repo/apica-ascent
 ```
 
 ### Use your own certificate
@@ -463,5 +463,5 @@ helm upgrade --install logiq -n logiq \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.secret=$secretName \
--f values.yaml logiq-repo/apica-ascent
+-f values.yaml apica-repo/apica-ascent
 ```

@@ -187,7 +187,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
 1.  Add the Apica Ascent PaaS Helm chart to your Helm repository by running the following command.
 
     ```
-    microk8s helm3 repo add logiq-repo https://logiqai.github.io/helm-charts
+    microk8s helm3 repo add apica-repo https://logiqai.github.io/helm-charts
     ```
 2.  Update your Helm repository by running the following command.
 
@@ -244,7 +244,7 @@ Make sure you have the necessary permissions to copy a file to the specified fol
 
     {% code fullWidth="true" %}
     ```
-    microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
+    microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
     ```
     {% endcode %}
 
@@ -323,5 +323,5 @@ Solution:
 ```
 ubuntu@ip-172-31-31-72:~$ microk8s helm3 uninstall logiq -n logiq 
 release "logiq" uninstalled
-ubuntu@ip-172-31-31-72:~$ microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath logiq-repo/apica-ascent -f values.microk8s.yaml --debug --timeout 10m
+ubuntu@ip-172-31-31-72:~$ microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f values.microk8s.yaml --debug --timeout 10m
 ```

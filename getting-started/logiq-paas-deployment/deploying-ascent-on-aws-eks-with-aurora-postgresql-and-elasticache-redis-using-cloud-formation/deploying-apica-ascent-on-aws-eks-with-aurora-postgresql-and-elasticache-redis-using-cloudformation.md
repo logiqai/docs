@@ -160,11 +160,11 @@ kubectl create namespace logiq
 **Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customise the deployment for enabling https
 
 ```
-helm repo add logiq-repo https://logiqai.github.io/helm-charts
+helm repo add apica-repo https://logiqai.github.io/helm-charts
 ```
 
 ```
-helm upgrade --install logiq -n logiq -f values.yaml logiq-repo/apica-ascent
+helm upgrade --install logiq -n logiq -f values.yaml apica-repo/apica-ascent
 ```
 
 **Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
@@ -178,7 +178,7 @@ helm upgrade --install logiq -n logiq \
 --set global.domain=logiq.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
--f values.yaml logiq-repo/apica-ascent
+-f values.yaml apica-repo/apica-ascent
 ```
 
 **Step 6:** Once the EKS cluster is created, add the VPC cidr in the Postgresql and Elasticache security group (create by first cloudformation template) inbound rules for port 5432 and 6379.\
