@@ -89,7 +89,7 @@ helm install apica-ascent --namespace apica-ascent \
 --set global.persistence.storageClass=<storage class name> apica-repo/apica-ascent -f values.small.yaml
 ```
 
-Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-LOGIQ-cluster)for sizing your Apica Ascent cluster as specified in these YAML file Latest image tags.
+Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-apica-ascent-cluster)for sizing your Apica Ascent cluster as specified in these YAML file Latest image tags.
 
 ## 2. Install Apica Ascent
 
@@ -386,7 +386,7 @@ kubernetes-ingress:
 For e.g. if you are running on bare-metal and want an external LB to front Apica Ascent, configure all services as `NodePort`
 
 ```bash
-helm install logiq -n logiq -f values.yaml \
+helm install apica-ascent -n apica-ascent -f values.yaml \
 --set flash-coffee.service.type=NodePort \
 --set logiq-flash.service.type=NodePort \
 --set kubernetes-ingress.controller.service.type=NodePort \

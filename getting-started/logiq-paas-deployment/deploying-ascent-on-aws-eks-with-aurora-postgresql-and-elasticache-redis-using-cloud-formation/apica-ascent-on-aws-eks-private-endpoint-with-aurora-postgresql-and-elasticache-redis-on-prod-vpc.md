@@ -234,7 +234,7 @@ kubectl get namespace
 *   [ ] Execute the following command:
 
     ```
-    kubectl create namespace logiq
+    kubectl create namespace apica-ascent
     ```
 * [ ] Download the following file:
 
@@ -348,9 +348,9 @@ kubectl get namespace
   * [ ] Namespace
     * [ ] Search the file for "namespace" and replace `<namespace>/<namespace>` with the following:
       * ```
-        expr: absent(up{prometheus="logiq/logiq-prometheus-prometheus"})
+        expr: absent(up{prometheus="apica-ascent/logiq-prometheus-prometheus"})
         sidecarsService: logiq-prometheus-prometheus-thanos
-        sidecarsNamespace: logiq
+        sidecarsNamespace: apica-ascent
         ```
   *   [ ] To modify the administrator username and password, replace the existing details with your desired credentials.
 
@@ -375,15 +375,15 @@ kubectl get namespace
 *   [ ] Ensure that the path to your `values.yaml` file is correctly set, or run the commands from the directory that contains the file. Use the following command to deploy:
 
     ```shell
-    helm upgrade --install logiq -n logiq -f values.yaml apica-repo/apica-ascent
+    helm upgrade --install apica-ascent -n apica-ascent -f values.yaml apica-repo/apica-ascent
     ```
 
     *   [ ] Expected output:
 
         ```
-        NAME: logiq
+        NAME: apica-ascent
         LAST DEPLOYED: Tue Mar 26 15:38:48 2024
-        NAMESPACE: logiq
+        NAMESPACE: apica-ascent
         STATUS: deployed
         REVISION: 1
         TEST SUITE: None
@@ -394,7 +394,7 @@ kubectl get namespace
 To get the default Service Endpoint, execute the below command:
 
 ```
-kubectl get svc -n logiq | grep LoadBalancer
+kubectl get svc -n apica-ascent | grep LoadBalancer
 ```
 
 Under the `EXTERNAL-IP` column you will find a URL similar to below:
@@ -440,7 +440,7 @@ To enable https using self-signed certificates, please add additional options to
 In the example below, replace `apica.my-domain.com` with the https domain where this cluster will be available.
 
 ```
-helm upgrade --install logiq -n logiq \
+helm upgrade --install apica-ascent -n apica-ascent \
 --set global.domain=apica.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
@@ -458,7 +458,7 @@ kubectl create secret tls https --cert=myCert.crt --key=myKey.key
 In order to include your own secret, please execute the below command and replace `$secretName` with your secret to enable HTTPS and replace `apica.my-domain.com` with the https domain where this cluster will be available.
 
 ```
-helm upgrade --install logiq -n logiq \
+helm upgrade --install apica-ascent -n apica-ascent \
 --set global.domain=apica.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \

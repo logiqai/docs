@@ -196,7 +196,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
     ```
 3.  Create a namespace on MicroK8s on which to install Apica Ascent PaaS.
 
-    <pre data-full-width="true"><code><strong>microk8s kubectl create namespace logiq
+    <pre data-full-width="true"><code><strong>microk8s kubectl create namespace apica-ascent
     </strong></code></pre>
 4.  Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your Apica Ascent PaaS deployment. If you need to download the file to your own machine, edit, and then transfer to a remote linux server, use this command:
 
@@ -207,7 +207,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
     {% endcode %}
 5.  Create a namespace on MicroK8s on which to install Apica Ascent PaaS.
 
-    <pre data-full-width="true"><code><strong>microk8s kubectl create namespace logiq
+    <pre data-full-width="true"><code><strong>microk8s kubectl create namespace apica-ascent
     </strong></code></pre>
 
 Make sure you have the necessary permissions to copy a file to the specified folder on the Linux machine.
@@ -244,7 +244,7 @@ Make sure you have the necessary permissions to copy a file to the specified fol
 
     {% code fullWidth="true" %}
     ```
-    microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
+    microk8s helm3 install apica-ascent -n apica-ascent --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
     ```
     {% endcode %}
 
@@ -256,15 +256,15 @@ Now that Apica Ascent PaaS is installed on your MicroK8s cluster, you can visit 
 
 If you are load balancing the hosting across multiple IPs using MetalLB, do the following to access the Apica Ascent PaaS UI:
 
-1.  Inspect the pods in your MicroK8s cluster in the `logiq` namespace by running the following command.
+1.  Inspect the pods in your MicroK8s cluster in the `apica-ascent` namespace by running the following command.
 
     ```
-    microk8s kubectl get pod -n logiq
+    microk8s kubectl get pod -n apica-ascent
     ```
 2.  Find the exact MetalLB endpoint that's serving the Apica Ascent PaaS UI by running the following command.
 
     ```
-    microk8s kubectl get service -n logiq |grep -i loadbalancer
+    microk8s kubectl get service -n apica-ascent |grep -i loadbalancer
     ```
 
     The above command should give you an output similar to the following.
@@ -321,7 +321,7 @@ helm.sh/helm/v3/pkg/action.(*Install).availableName
 Solution:
 
 ```
-ubuntu@ip-172-31-31-72:~$ microk8s helm3 uninstall logiq -n logiq 
-release "logiq" uninstalled
-ubuntu@ip-172-31-31-72:~$ microk8s helm3 install logiq -n logiq --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f values.microk8s.yaml --debug --timeout 10m
+ubuntu@ip-172-31-31-72:~$ microk8s helm3 uninstall apica-ascent -n apica-ascent
+release "apica-asent" uninstalled
+ubuntu@ip-172-31-31-72:~$ microk8s helm3 install apica-ascent -n apica-ascent --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f values.microk8s.yaml --debug --timeout 10m
 ```

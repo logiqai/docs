@@ -1,15 +1,15 @@
 # Deploying Apica Ascent PaaS in Azure Kubernetes Service
 
-The following guide takes you through deploying LOGIQ PaaS in an Azure Kubernetes Service cluster. The deployment involves the following steps:
+The following guide takes you through deploying Apica Ascent PaaS in an Azure Kubernetes Service cluster. The deployment involves the following steps:
 
 * [<mark style="color:blue;">Creating an Azure Kubernetes Service cluster</mark>](./#creating-an-azure-kubernetes-cluster)
 * [<mark style="color:blue;">Configuring the node pool</mark>](./#configuring-the-node-pool)
 * [<mark style="color:blue;">Connecting to the cluster</mark>](./#connecting-with-your-aks-cluster)
 * [<mark style="color:blue;">Creating the MinIO blob storage gateway</mark>](./#creating-the-minio-blob-storage-gateway-for-s3-compatibility)
-* [Deploying LOGIQ PaaS](./#deploying-logiq-paas)
+* [Deploying Apica Ascent PaaS](./#deploying-apica-ascent-paas)
 
 {% hint style="warning" %}
-If you have an AKS cluster that is appropriately sized for deploying LOGIQ and handling your data ingestion rate, you can skip the AKS cluster creation step. However, you must label the nodes as specified in the [<mark style="color:blue;">Node pool configuration</mark>](./#node-pool-configuration) table failing which the pods in the cluster will not land in any of the nodes.&#x20;
+If you have an AKS cluster that is appropriately sized for deploying Apica Ascent and handling your data ingestion rate, you can skip the AKS cluster creation step. However, you must label the nodes as specified in the [<mark style="color:blue;">Node pool configuration</mark>](./#node-pool-configuration) table failing which the pods in the cluster will not land in any of the nodes.&#x20;
 {% endhint %}
 
 ## Creating an Azure Kubernetes Cluster
@@ -108,7 +108,7 @@ Verify that the storage class has been created by running the following command.
 kubectl get sc ultra-disk-sc
 ```
 
-## Deploying LOGIQ PaaS
+## Deploying Apica Ascent PaaS
 
 Download the `values.yaml` file from [this location](https://logiq-scripts.s3.ap-south-1.amazonaws.com/values.yaml) and replace the following variables in the file.
 
@@ -121,9 +121,9 @@ storageClass: ultra-disk-sc
 creatStorageClass: true
 ```
 
-Next, follow the instructions on LOGIQ’s [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide) to spin up the LOGIQ stack on this AKS cluster. &#x20;
+Next, follow the instructions on Apica Ascent’s [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide) to spin up the Apica Ascent stack on this AKS cluster. &#x20;
 
-Once you've successfully deployed LOGIQ, you can (optionally) disable monitoring AKS with container insights on your cluster by running the following command.&#x20;
+Once you've successfully deployed Apica Ascent, you can (optionally) disable monitoring AKS with container insights on your cluster by running the following command.&#x20;
 
 ```
 az aks disable-addons -a monitoring -n <aks cluster name> -g <resource group>
