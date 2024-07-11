@@ -154,7 +154,7 @@ kubectl create namespace logiq
 helm upgrade --install logiq -n logiq -f values.yaml apica-repo/apica-ascent
 ```
 
-**Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"logiq.my-domain.com"** with the https domain where this cluster will be available.
+**Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"ascent.my-domain.com"** with the https domain where this cluster will be available.
 
 {% hint style="info" %}
 NOTE: Your DNS will need to be programmed separately to map the domain to the service endpoint for logiq. Please see Step 7 below on how to obtain the service endpoint.
@@ -162,7 +162,7 @@ NOTE: Your DNS will need to be programmed separately to map the domain to the se
 
 ```bash
 helm upgrade --install logiq -n logiq \
---set global.domain=logiq.my-domain.com \
+--set global.domain=ascent.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
 -f values.yaml apica-repo/apica-ascent

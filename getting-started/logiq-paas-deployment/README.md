@@ -127,7 +127,7 @@ You can enable HTTPS and assign a custom domain in the ingress for your Apica As
 
 ```
 helm install apica-ascent --namespace apica-ascent \
---set global.domain=logiq.my-domain.com \
+--set global.domain=ascent.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
 --set global.persistence.storageClass=<storage class name> apica-repo/apica-ascent
@@ -142,7 +142,7 @@ The following table describes all of the Helm options passed in the command abov
 | `kubernetes-ingress.controller.defaultTLSSecret.enabled` | Specifies if a default certificate is enabled for the ingress gateway                                                                                                                        | false      |
 | `kubernetes-ingress.controller.defaultTLSSecret.secret`  | Specifies the name of a TLS secret for the ingress gateway. If this is not specified, a secret is automatically generated of option `kubernetes-ingress.controller.defaultTLSSecret.enabled` |            |
 
-After you run the command, you should then update your DNS server to point to the ingress controller service's IP. Once you've done this, you can access your Apica Ascent UI at the domain `https://logiq.my-domain.com` that you set in the ingress controller service.
+After you run the command, you should then update your DNS server to point to the ingress controller service's IP. Once you've done this, you can access your Apica Ascent UI at the domain `https://ascent.my-domain.com` that you set in the ingress controller service.
 
 #### Passing an ingress secret
 
@@ -150,7 +150,7 @@ You can pass your own ingress secret while installing the Helm chart by running 
 
 ```
 helm install apica-ascent --namespace apica-ascent \
---set global.domain=logiq.my-domain.com \
+--set global.domain=ascent.my-domain.com \
 --set ingress.tlsEnabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.enabled=true \
 --set kubernetes-ingress.controller.defaultTLSSecret.secret=<secret_name> \
@@ -176,7 +176,7 @@ Go to your AWS IAM console and create an access key and secret key using which y
 The S3 gateway acts as a caching gateway and helps reduce API costs. Deploy the Apica Ascent Helm chart in gateway mode by running the following command. Ensure you pass your `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` and name your S3 bucket uniquely.
 
 ```
-helm install apica-ascent --namespace apica-ascent --set global.domain=logiq.my-domain.com \
+helm install apica-ascent --namespace apica-ascent --set global.domain=ascent.my-domain.com \
 --set global.environment.s3_bucket=<bucket_name> \
 --set global.environment.awsServiceEndpoint=https://s3.<region>.amazonaws.com \
 --set global.environment.s3_region=<region> \
@@ -219,7 +219,7 @@ data:
 Once you've filled out this template, be sure to save the secrets file and name it appropriately, such as `logiq-certs.yaml`. You can now install the Apica Ascent Helm chart, along with the certificates using the following command.
 
 ```
-helm install apica-ascent --namespace apica-ascent --set global.domain=logiq.my-domain.com \
+helm install apica-ascent --namespace apica-ascent --set global.domain=ascent.my-domain.com \
 --set logiq-flash.secrets_name=logiq-certs \
 --set global.persistence.storageClass=<storage class name> apica-repo/apica-ascent
 ```
@@ -294,11 +294,11 @@ The following table describes the Helm options that are passed with the command 
 
 The Apica Ascent PaaS Community Edition gives you access to Enterprise Edition features but with lesser daily log ingest rates and ingest worker processes. If you feel the need to up your daily ingest rates and make the most out of Apica Ascent by extending its use to the rest of your team with SSO and RBAC, you can upgrade to the Apica Ascent PaaS Enterprise Edition.
 
-You can get yourself an Enterprise Edition license by contacting us via [license@logiq.ai](mailto:%20license@logiq.ai). Once you receive your new license, you can apply it to your Apica Ascent deployment using Apica Ascent's CLI, [`apicactl`](../../deploying-logiq/logiq-paas-deployment/broken-reference/).
+You can get yourself an Enterprise Edition license by contacting us via [support@apica.io](mailto:support@apica.io). Once you receive your new license, you can apply it to your Apica Ascent deployment using Apica Ascent's CLI, [`apicactl`](https://github.com/ApicaSystem/apicactl?#quickstart).
 
 To use `apicactl`, generate an API token from the Apica Ascent UI, as shown in the following image.
 
-Once you've [configured `apicactl`](https://docs.logiq.ai/vewing-logs/apicactl/configuring-apicactl) with your API token and Apica Ascent cluster endpoint, run the following commands to update your license.
+Once you've [configured `apicactl`](https://github.com/ApicaSystem/apicactl?#quickstart) with your API token and Apica Ascent cluster endpoint, run the following commands to update your license.
 
 ```
 # Set cluster end point
@@ -400,7 +400,7 @@ kubernetes-ingress:
 For example, if you are deploying Apica Ascent on a bare-metal server and want an external load balancer to front Apica Ascent, configure all services as `NodePort` and pass the service types in the installation command, as shown in the following example.
 
 ```bash
-helm install apica-ascent -n logiq -f values.yaml \
+helm install apica-ascent -n apica-ascent -f values.yaml \
 --set flash-coffee.service.type=NodePort \
 --set logiq-flash.service.type=NodePort \
 --set kubernetes-ingress.controller.service.type=NodePort \
