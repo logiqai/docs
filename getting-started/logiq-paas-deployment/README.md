@@ -101,7 +101,7 @@ If you haven't changed any of the admin settings in the `values.yaml` file you u
 **Note:** You can change the default login credentials after you've logged into the UI.
 {% endhint %}
 
-Your Apica Ascent PaaS instance is now deployed and ready for use. Your Apica Ascent instance enables you to ingest and tail logs, index and query log data, and search capabilities. Along with the Apica Ascent UI, you can also access these features via Apica Ascent's CLI, [apicactl](https://docs.logiq.ai/logiq-cli).
+Your Apica Ascent PaaS instance is now deployed and ready for use. Your Apica Ascent instance enables you to ingest and tail logs, index and query log data, and search capabilities. Along with the Apica Ascent UI, you can also access these features via Apica Ascent's CLI, [apicactl](https://github.com/ApicaSystem/apicactl).
 
 ## Customising your Apica Ascent deployment
 

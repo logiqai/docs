@@ -1,6 +1,6 @@
 # Generating a secure ingest token
 
-Apica Ascent uses an ingest token to secure the ingestion of log data from your data sources into your Apica Ascent deployment. You can generate a secure ingest token using the Apica Ascent UI and the command-line tool, [apicactl](https://logiqctl.logiq.ai/).&#x20;
+Apica Ascent uses an ingest token to secure the ingestion of log data from your data sources into your Apica Ascent deployment. You can generate a secure ingest token using the Apica Ascent UI and the command-line tool, [apicactl](https://github.com/ApicaSystem/apicactl).&#x20;
 
 ### Obtaining an ingest token using UI
 
@@ -14,7 +14,7 @@ To begin, click on the username on the navbar, and then click "**Edit Profile**"
 
 To generate a secure ingest token, do the following.&#x20;
 
-1. [Install](https://logiqctl.logiq.ai/#quickstart) and [configure](https://logiqctl.logiq.ai/#configuring-logiqctl) `apicactl`, if you haven't already.&#x20;
+1. [Install](https://github.com/ApicaSystem/apicactl?#quickstart) and [configure](https://github.com/ApicaSystem/apicactl?#configuring-apicactl) `apicactl`, if you haven't already.&#x20;
 2.  Run the following command to generate a secure ingest token:
 
     ```bash

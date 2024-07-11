@@ -107,7 +107,7 @@ The default login and password to use is `flash-admin@foo.com` and `flash-passwo
 <figure><img src="../../../.gitbook/assets/Screen Shot 2024-01-21 at 5.03.07 AM.png" alt=""><figcaption></figcaption></figure>
 
 Apica Ascent server provides Ingest, log tailing, data indexing, query, and search capabilities.\
-Besides the web-based UI, Apica Ascent also offers [apicactl, Apica CLI](https://docs.logiq.ai/logiq-cli) for accessing the above features.
+Besides the web-based UI, Apica Ascent also offers [apicactl, Apica CLI](https://github.com/ApicaSystem/apicactl) for accessing the above features.
 
 ## 3 Customizing the deployment
 
@@ -287,7 +287,7 @@ Auto vacuum automates the execution of `VACUUM` and `ANALYZE` (to gather statist
 
 ### 3.6 Upload Apica Ascent professional license
 
-The deployment described above offers 30 days trial license. Send an e-mail to `license@logiq.ai` to obtain a professional license. After obtaining the license, use the apicactl tool to apply the license to the deployment. Please refer to `apicactl` details at [https://logiqctl.logiq.ai/](https://logiqctl.logiq.ai/). You will need API-token from Apica Ascent UI as shown below
+The deployment described above offers 30 days trial license. Send an e-mail to `license@logiq.ai` to obtain a professional license. After obtaining the license, use the apicactl tool to apply the license to the deployment. Please refer to `apicactl` details at [https://github.com/ApicaSystem/apicactl](https://github.com/ApicaSystem/apicactl). You will need API-token from Apica Ascent UI as shown below
 
 ![Apica Ascent Insights Login Api-token](../../../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
 
