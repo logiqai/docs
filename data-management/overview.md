@@ -1,6 +1,6 @@
-# Overview
+# Data Management Overview
 
-Apica Ascent automatically parses various log formats. Custom rules can be applied to the incoming log streams which are discussed in the [Rules](rules/) Section.
+Apica Ascent automatically parses various log formats. Custom rules can be applied to the incoming log streams which are discussed in the [Rules](../flow/rules/) Section.
 
 #### Embedded JSON
 

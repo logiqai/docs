@@ -31,7 +31,7 @@
   * [Deploying Apica Ascent PaaS in Azure Kubernetes Service](getting-started/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
     * [Azure Blob Storage Lifecycle Management](getting-started/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
 
-## DATA SOURCES&#x20;
+## DATA SOURCES
 
 * [Data Source Overview](data-sources/overview.md)
 * [API](data-sources/api/README.md)
@@ -139,14 +139,6 @@
   * [Create a Dashboard](data-management/overview-1/create-a-dashboard.md)
   * [Alerts](data-management/overview-1/alerts.md)
   * [JSON Import](data-management/overview-1/json-import.md)
-* [Rules](data-management/rules/README.md)
-  * [FILTER](data-management/rules/filter.md)
-  * [EXTRACT](data-management/rules/extract.md)
-  * [SIEM and TAG](data-management/rules/siem-and-tag.md)
-  * [REWRITE](data-management/rules/rewrite.md)
-  * [CODE](data-management/rules/code.md)
-  * [FORWARD](data-management/rules/forward/README.md)
-    * [Rename Attributes](data-management/rules/forward/rename-attributes.md)
 * [Timestamp handling](data-management/timestamp-handling/README.md)
   * [Timestamp bookmark](data-management/timestamp-handling/timestamp-bookmark.md)
 * [Large log/events/metrics/traces](data-management/large-log-events-metrics-traces.md)
@@ -159,6 +151,14 @@
 
 * [Flow Documentation](https://logflow-docs.logiq.ai/)
 * [Data Flow Pipelines](flow/data-flow-pipelines.md)
+* [Rules](flow/rules/README.md)
+  * [FILTER](flow/rules/filter.md)
+  * [EXTRACT](flow/rules/extract.md)
+  * [SIEM and TAG](flow/rules/siem-and-tag.md)
+  * [REWRITE](flow/rules/rewrite.md)
+  * [CODE](flow/rules/code.md)
+  * [FORWARD](flow/rules/forward/README.md)
+    * [Rename Attributes](flow/rules/forward/rename-attributes.md)
 
 ## FLEET MANAGEMENT
 

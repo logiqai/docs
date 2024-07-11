@@ -95,3 +95,11 @@ To view rule details, click on the info icon which is present in the top right c
 <figure><img src="../.gitbook/assets/Screenshot from 2023-05-29 09-10-14.png" alt=""><figcaption><p>Rule details</p></figcaption></figure>
 
 Activate/Deactivate: On checking/unchecking the Active check box, the rule will get activated/deactivated.
+
+Now while creating the pipeline itself we can select the application required in the pipeline.
+
+<figure><img src="../.gitbook/assets/Screenshot from 2024-07-11 14-13-24.png" alt=""><figcaption></figcaption></figure>
+
+Now, there is no need to create an additional pipeline tab or manage your existing pipeline alongside other tabs in the explore section to view an application's pipeline. A new pipeline tab is added within the search section of an application with which the pipeline relevant to that particular application can be easily visualized.
+
+<figure><img src="../.gitbook/assets/Screenshot from 2024-07-11 12-42-08.png" alt=""><figcaption></figcaption></figure>

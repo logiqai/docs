@@ -25,3 +25,7 @@ To view the currently active rules, navigate to the "Active Rules" menu. Here yo
 <figure><img src="../../.gitbook/assets/Screen Shot 2024-06-27 at 6.14.19 PM.png" alt=""><figcaption></figcaption></figure>
 
 To modify a rule, use the ellipsis button available on each rule to access the available actions. To deactivate a rule, simply uncheck the checkbox associated with the rule.
+
+You can test code updates directly within the app with the preview button. Simply provide a code snippet to update the log object, and instantly visualize the differences with our intuitive JSON compare view. Highlighted lines indicate changes, making it easy to review modifications at a glance. This feature not only streamlines the testing process but also empowers you to confidently manage updates to your log object.
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2024-07-10 16-12-54.png" alt=""><figcaption></figcaption></figure>
