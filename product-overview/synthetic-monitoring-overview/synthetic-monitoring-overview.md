@@ -1,2 +1,0 @@
-# Synthetic Monitoring Overview
-
