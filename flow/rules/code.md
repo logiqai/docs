@@ -81,8 +81,10 @@ Please be informed that the code block is set to read-only mode. To modify the c
 
 ### Testing code rule output
 
-The built-in Preview functionality allows a user to test a code rule before making it permanent. Slick on the Preview button to launch the code transformation preview window
-
-
+The built-in Preview functionality allows a user to test a code rule before making it permanent. Click on the Preview button to launch the code transformation preview window
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-07-10 at 4.42.43 PM.png" alt=""><figcaption></figcaption></figure>
+
+You can test code updates directly within the app with the preview button. Simply provide a code snippet to update the log object, and instantly visualize the differences with our intuitive JSON compare view. Highlighted lines indicate changes, making it easy to review modifications at a glance. This feature not only streamlines the testing process but also empowers you to confidently manage updates to your log object.
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2024-07-10 16-12-54.png" alt=""><figcaption><p>Collapsible JSON Compare View</p></figcaption></figure>
