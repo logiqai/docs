@@ -6,7 +6,7 @@ description: >-
 
 # Deploying Ascent on AWS EKS with Aurora PostgreSQL and ElastiCache Redis using Cloud Formation
 
-## Prerequisites&#x20;
+## Prerequisites
 
 Before proceeding, ensure the following prerequisites are met:
 
@@ -21,7 +21,7 @@ Before proceeding, ensure the following prerequisites are met:
 {% hint style="info" %}
 **Note:** This deployment method using Helm is only supported on Kubernetes versions till **1.28**. Steps described in the document only work if the cluster is created using the given cloud formation template.
 
-Here we need to give the Production VPC and Private Subnets.&#x20;
+Here we need to give the Production VPC and Private Subnets.
 {% endhint %}
 
 ## AWS Resources
@@ -54,9 +54,9 @@ The Cloudformation template provisions the following resources:
       <figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
   * Click **"Next"**
 * [ ] **Step 2: Specify stack details**
-  *   [ ] Enter a stack name&#x20;
+  *   [ ] Enter a stack name
 
-      <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Stack name can include letters (A–Z and a–z), numbers (0–9) and dashes (-).</p></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Stack name can include letters (A–Z and a–z), numbers (0–9) and dashes (-).</p></figcaption></figure>
   * [ ] Enter an IAM role name for Logiq-EKS **(Save this value for later)**
     * _This will create the IAM role_
   * [ ] Enter an S3 bucket name **(Save this value for later)**
@@ -68,17 +68,17 @@ The Cloudformation template provisions the following resources:
   * [ ] Enter a database name for the Postgresql database
     *   _Start with small letter_
 
-        <figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
   * [ ] Provide a **Virtual Private Cloud (VPC) ID**
-    *   You can find this by searching for **"VPC"** on the top left search bar, select the **VPC** service, click the **VPCs** resource and select your **region**. Locate your **VPC** and copy the **VPC ID**.&#x20;
+    *   You can find this by searching for **"VPC"** on the top left search bar, select the **VPC** service, click the **VPCs** resource and select your **region**. Locate your **VPC** and copy the **VPC ID**.
 
-        <figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
   * [ ] Enter two (2) **Private** **Subnets**.
     *   From where you left of extracting your **VPC ID**, on the left hand side menu, select **Private Subnets** and copy the two **Subnet ID**s you intend you use
 
-        <figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
-        <figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
   * [ ] Click "Next"
 * [ ] **Step 3: Configure stack options**
   * Nothing required here, navigate to the bottom of the page and click "Next"
@@ -110,7 +110,7 @@ After successfully deploying the initial CloudFormation stack, follow these step
 
     <figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 * [ ] **Step 1: Create stack**
-  *   [ ] On the following page (step 1 of Stack creation) select **"Template is ready"** and **"Amazon S3 URL"**. In the **"Amazon S3 URL"** textfield, enter [https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster-multiset.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster-multiset.yaml)&#x20;
+  *   [ ] On the following page (step 1 of Stack creation) select **"Template is ready"** and **"Amazon S3 URL"**. In the **"Amazon S3 URL"** textfield, enter [https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster-multiset.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster-multiset.yaml)
 
       <figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
   * [ ] Click "Next"
@@ -119,7 +119,7 @@ After successfully deploying the initial CloudFormation stack, follow these step
 
       <figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
   * [ ] Enter a name for the EKS cluster (Save this value)
-  *   [ ] Enter the ARN value of the IAM role you created in the previous CloudFormation deployment (Navigate to the previous stack and check outputs tab to find the value for the key LogiqEKSClusterRole)&#x20;
+  *   [ ] Enter the ARN value of the IAM role you created in the previous CloudFormation deployment (Navigate to the previous stack and check outputs tab to find the value for the key LogiqEKSClusterRole)
 
       <figure><img src="../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
@@ -145,7 +145,7 @@ After successfully deploying the initial CloudFormation stack, follow these step
 ## AWS CLI commands
 
 {% hint style="info" %}
-**Note:** Once the stack is fully provisioned, authenticate AWS CLI. If you have not downloaded AWS Cli and set it up yet you can do so here: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)&#x20;
+**Note:** Once the stack is fully provisioned, authenticate AWS CLI. If you have not downloaded AWS Cli and set it up yet you can do so here: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 FOR APICA ONLY: [https://apicasystems.atlassian.net/wiki/spaces/PS/pages/3703013481/Configure+AWS+CLI+to+use+MFA](https://apicasystems.atlassian.net/wiki/spaces/PS/pages/3703013481/Configure+AWS+CLI+to+use+MFA)
 {% endhint %}
@@ -186,7 +186,7 @@ FOR APICA ONLY: [https://apicasystems.atlassian.net/wiki/spaces/PS/pages/3703013
 {% embed url="https://logiq-scripts.s3.ap-south-1.amazonaws.com/gp3-sc.yaml" fullWidth="false" %}
 
 * [ ] Change directory to where you downloaded the file with your terminal (using the command cd)
-  *   [ ] Example:&#x20;
+  *   [ ] Example:
 
       ```
       cd /Users/myUser/Downloads
@@ -306,13 +306,13 @@ values.yaml
 
             <figure><img src="../../../.gitbook/assets/image (141).png" alt=""><figcaption></figcaption></figure>
   * [ ] postgres\_user:
-    *   [ ] Replace `<>` with the master username you created during the first CloudFormation deployment:&#x20;
+    *   [ ] Replace `<>` with the master username you created during the first CloudFormation deployment:
 
         ```yaml
         postgres_user: "apicauser"
         ```
   * [ ] postgres\_password:
-    *   [ ] Replace `<>` with the password for the user you created during the first CloudFormation deployment:&#x20;
+    *   [ ] Replace `<>` with the password for the user you created during the first CloudFormation deployment:
 
         ```yaml
         postgres_password: "myPassword123!!"
@@ -330,7 +330,7 @@ values.yaml
             cat ~/.aws/credentials
             ```
   * [ ] AWS\_ACCESS\_KEY\_ID
-    *   [ ] Replace `<>` with your AWS CLI access key id.&#x20;
+    *   [ ] Replace `<>` with your AWS CLI access key id.
 
         ```yaml
         AWS_ACCESS_KEY_ID: "myAwsAccessKeyID"
@@ -342,7 +342,7 @@ values.yaml
             cat ~/.aws/credentials
             ```
   * [ ] s3\_secret
-    *   [ ] Replace `<>` with your AWS CLI **secret** access key id.&#x20;
+    *   [ ] Replace `<>` with your AWS CLI **secret** access key id.
 
         ```yaml
         s3_secret: "myAwsSecretAccessKeyID"
@@ -353,8 +353,8 @@ values.yaml
             ```shell
             cat ~/.aws/credentials
             ```
-  * [ ] AWS\_SECRET\_ACCESS\_KEY&#x20;
-    *   [ ] Replace `<>` with your AWS CLI **secret** access key id.&#x20;
+  * [ ] AWS\_SECRET\_ACCESS\_KEY
+    *   [ ] Replace `<>` with your AWS CLI **secret** access key id.
 
         ```yaml
         s3_secret: "myAwsSecretAccessKeyID"
@@ -430,14 +430,14 @@ Login credentials is as defined in your `values.yaml` file
 
 As the EKS Cluster has been created, we can now set up the access rules for our VPC.
 
-*   [ ] From the 1st stack, we need to find the `SecurityGroups` which was created&#x20;
+*   [ ] From the 1st stack, we need to find the `SecurityGroups` which was created
 
     <figure><img src="../../../.gitbook/assets/image (142).png" alt=""><figcaption></figcaption></figure>
 * [ ] Navigate to either `EC2` or `VPC` by using the search bar, and then look for `Secutiry Groups` on the left hand side menu
 *   [ ] Search for your security group using the `ID` extracted from the 1st stack and click on the `ID`
 
     <figure><img src="../../../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
-*   [ ] Click on "Edit inbound rules"&#x20;
+*   [ ] Click on "Edit inbound rules"
 
     <figure><img src="../../../.gitbook/assets/image (144).png" alt=""><figcaption></figcaption></figure>
 * [ ] Now we need to set up 2 rules
@@ -445,13 +445,13 @@ As the EKS Cluster has been created, we can now set up the access rules for our 
   *   [ ] `Postgresql (TCP)` on Port `5432` and source is your `VPC CIDR`
 
       <figure><img src="../../../.gitbook/assets/image (145).png" alt=""><figcaption><p>Your VPC CIDR can be found by navigating to <code>VPC</code>, select your region in the <code>VPCs</code> dropdown and on the VPC list you have a column called <code>IPv4 CIDR</code>, copy your <code>CIDR</code> and use it as a source.</p></figcaption></figure>
-* [ ] Click "Save Rules"&#x20;
+* [ ] Click "Save Rules"
 
 ## Enabling HTTPS on your instance (optional)
 
 ### Use auto-generated self-signed certificate
 
-To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller.&#x20;
+To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller.
 
 In the example below, replace `apica.my-domain.com` with the https domain where this cluster will be available.
 

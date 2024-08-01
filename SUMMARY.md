@@ -185,6 +185,13 @@
 * [Configuring RBAC](log-management/configuring-rbac.md)
 * [Topology](log-management/topology.md)
 
+***
+
+* [CHECK MANAGEMENT](check-management/README.md)
+  * [Check Management Overview](check-management/check-management-overview.md)
+  * [Map View](check-management/map-view.md)
+  * [List View](check-management/list-view.md)
+
 ## Distributed Tracing
 
 * [Distributed Tracing Overview](distributed-tracing/overview.md)
