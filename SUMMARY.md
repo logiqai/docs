@@ -206,6 +206,7 @@
   * [Standard Deviation(STD)](logiq-events/time-series-ai-ml/standard-deviation-std.md)
   * [Forecasting](logiq-events/time-series-ai-ml/forecasting.md)
   * [AI-ML on PromQL Query Data Set](logiq-events/time-series-ai-ml/ai-ml-on-promql-query-data-set.md)
+  * [Statistical Data Description](logiq-events/time-series-ai-ml/statistical-data-description.md)
 * [Pattern-Signature (PS)](logiq-events/log-pattern-signature/README.md)
   * [Log PS Explained](logiq-events/log-pattern-signature/log-ps-explained/README.md)
     * [Unstructured Logs](logiq-events/log-pattern-signature/log-ps-explained/unstructured-logs.md)
