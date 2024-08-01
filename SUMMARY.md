@@ -61,6 +61,7 @@
 * [Integrations Overview](integrations/overview/README.md)
   * [Generating a secure ingest token](integrations/overview/generating-a-secure-ingest-token.md)
   * [Data Ingest Ports](integrations/overview/data-ingest-ports.md)
+* [Page](integrations/page.md)
 * [List of Integrations](integrations/list-of-integrations/README.md)
   * [Apache Beam](integrations/list-of-integrations/apache-beam/README.md)
     * [Export Metrics to Prometheus](integrations/list-of-integrations/apache-beam/export-metrics-to-prometheus/README.md)
@@ -118,6 +119,7 @@
   * [Splunk Universal Forwarder](integrations/list-of-integrations/splunk-universal-forwarder.md)
   * [Splunk Heavy Forwarder](integrations/list-of-integrations/splunk-heavy-forwarder.md)
   * [SNMP](integrations/list-of-integrations/snmp.md)
+  * [Splunk Forwarding Proxy](integrations/list-of-integrations/splunk-forwarding-proxy.md)
 
 ## Dashboards
 
