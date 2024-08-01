@@ -1,17 +1,27 @@
-# Pattern Compare
+# ALIVE Log Compare
 
-Pattern Compare Feature in ALIVE
+## ALIVE Log Compare Introduction
 
-The **Pattern Compare** feature in ALIVE enhances log analysis capabilities by allowing users to compare log patterns across different time periods. This feature is particularly useful for:
+Log events are massive and difficult to comprehend due to their machine/human-like information nature. Yet they contain helpful information that needs to be harvested to get the process going. This process includes maintaining smooth operation flow, debugging complex modern distributed systems, security overlooks, tracking changes, etc. It is highly desirable to discern anomalies out of the log events.
 
-* Tracking changes
-* Understanding trends in log data over time
+One simple heuristic technique for discerning anomalies is to compare the subject with a known golden sample, which yields outliers. Nevertheless, comparing event logs is not a trivial task. &#x20;
 
-Key features&#x20;
+The ALIVE Log Compare utilizes Apica Ascent's log analysis underlying feature pattern-signature and compares log pattern signatures across different time ranges. This feature is powerful and handy for separating needles from haystacks. &#x20;
+
+Some of the key features
+
+* Simple to use
+* Large working set and capable of looking over a large volume of log events
+* Isolate subtle and apparent differences
+* Tracking log event changes
+
+### Example Direction Key Steps
 
 Timestamp Selection: Users initiate the pattern compare feature by selecting specific timestamps of interest within the ALIVE interface.
 
-Compare Log Display: Upon selecting timestamps, users can activate the "Compare Log" feature. This feature visually juxtaposes log patterns from different time periods, facilitating quick identification of variations or anomalies.
+Compare Log Display: Upon selecting timestamps, users can activate the "Compare Log" feature. This feature visually juxtaposes log patterns from different periods, facilitating quick identification of variations or anomalies.
+
+### Direction Example
 
 #### To compare patterns in the ALIVE tab, follow these steps:
 
@@ -20,7 +30,7 @@ Compare Log Display: Upon selecting timestamps, users can activate the "Compare 
 <figure><img src="../../../../.gitbook/assets/Screenshot from 2024-07-02 00-08-10.png" alt=""><figcaption><p>COMPARE Tab</p></figcaption></figure>
 
 2. Select the COMPARE tab from the left side pane. You will see two charts, both of which are set to the global time range by default.
-3. To compare the charts, adjust the time range for chart B using the datetime picker. Select the desired time range to observe and analyse the patterns side by side.
+3. To compare the charts, adjust the time range for chart B using the date-time picker. Select the desired time range to observe and analyze the patterns side by side.
 
 <figure><img src="../../../../.gitbook/assets/Screenshot from 2024-07-02 00-10-11.png" alt=""><figcaption><p>Selecting Timerange for Comparing pattern.</p></figcaption></figure>
 
@@ -32,11 +42,11 @@ Compare Log Display: Upon selecting timestamps, users can activate the "Compare 
 
 <figure><img src="../../../../.gitbook/assets/Screenshot from 2024-07-02 00-16-00.png" alt=""><figcaption><p>Comparing pattern side by side on different timerange.</p></figcaption></figure>
 
-5. Once pattern is loaded, you can compare the logs corresponding to the selected time range. Navigate to the left side pane and select the LOG COMPARE tab to analyze the logs associated with the generated pattern.
+5. Once the pattern is loaded, you can compare the logs corresponding to the selected time range. Navigate to the left side pane and select the LOG COMPARE tab to analyze the logs associated with the generated pattern.
 
 <figure><img src="../../../../.gitbook/assets/Screenshot from 2024-07-02 00-17-20.png" alt=""><figcaption><p>Comparing logs side by side.</p></figcaption></figure>
 
-#### Benefits
+### Key Benefits
 
 * **Efficiency**: Reduces the time required to manually sift through logs by visually presenting pattern changes.
 * **Accuracy**: Enhances the detection of anomalies or unusual patterns that may indicate security breaches, performance issues, or operational changes.

@@ -1,6 +1,6 @@
-# Log Compare
+# Simple Log Compare
 
-#### Log Comparison Analysis
+#### Simple Log Comparison Analysis
 
 Apica Ascent provides a robust platform for comparing logs from two different periods or different log partition spaces such as different namespaces or applications. See the figure below where the PS comparison is made for the different time intervals of 12 hours.
 
