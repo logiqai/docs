@@ -158,6 +158,7 @@
   * [CODE](flow/rules/code.md)
   * [FORWARD](flow/rules/forward/README.md)
     * [Rename Attributes](flow/rules/forward/rename-attributes.md)
+  * [STREAM](flow/rules/stream.md)
 
 ## FLEET MANAGEMENT
 
