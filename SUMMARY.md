@@ -232,6 +232,8 @@
 
 * [Query API](api/historical-data.md)
 * [Use Apica API to ingest JSON data](api/use-apica-api-to-ingest-json-data.md)
+* [Native support for OTEL Logs](api/native-support-for-otel-logs.md)
+* [Native support for OTEL Traces](api/native-support-for-otel-traces.md)
 
 ## RELEASE NOTES
 
