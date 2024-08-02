@@ -61,7 +61,6 @@
 * [Integrations Overview](integrations/overview/README.md)
   * [Generating a secure ingest token](integrations/overview/generating-a-secure-ingest-token.md)
   * [Data Ingest Ports](integrations/overview/data-ingest-ports.md)
-* [Page](integrations/page.md)
 * [List of Integrations](integrations/list-of-integrations/README.md)
   * [Apache Beam](integrations/list-of-integrations/apache-beam/README.md)
     * [Export Metrics to Prometheus](integrations/list-of-integrations/apache-beam/export-metrics-to-prometheus/README.md)
