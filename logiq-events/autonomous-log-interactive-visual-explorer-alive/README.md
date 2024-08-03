@@ -4,7 +4,7 @@ description: ALIVE stands for Log Interactive Visual Explorer
 
 # ALIVE Log Visualization
 
-## provides methods for interactively drilling down into log detailsAutonomous Log Interactive Visual Explorer (ALIVE) Introduction
+## ALIVE (Log Interactive Visual Explorer) Introduction
 
 Computer logs have been around since the beginning of computers. However, its usage is still maintained at the time it was introduced, where the user manually sifts through logs in text form using the user speculating log text patterns for hints. The process of deriving answers from logs is painful. Hence, companies have chosen the name to describe the process - Splunk, which took the name of describing the process of cave-exploring-like activity; tedious, long-time, and painful. Sumo Logic company took the name and described the process as the Sumo wrestling-like approach; hard, laborious, and fast effort-draining.
 
@@ -14,7 +14,7 @@ ALIVE (patent pending and patented) is introduced to elevate log analysis throug
 
 * The ALIVE platform is explicitly created to visualize a large set of logs, and it's big-data friendly.
 * The user can easily spot log anomalies in its unique visual log record arrangement.
-* ALIVE provide methods for one to drill down into log details interactively, and the user no longer obeys the line-by-line text editor rule to access logs.
+* ALIVE provides methods for interactively drilling down into log details, and the user no longer obeys the line-by-line text editor rule to access logs.
 
 Example ALIVE screenshot,
 
