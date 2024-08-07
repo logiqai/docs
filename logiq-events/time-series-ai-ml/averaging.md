@@ -15,7 +15,7 @@ The averaging feature adds a moving average of the target value column to the da
 
 1. Create a new visualization or open an already existing visualization in edit mode.
 2. Select the chart type as a line for better visualization.
-3. Select the time column as the X column and the value column as the Y column. Add the moving average columns i.e; columns with the prefix MA, into the Y column multi-selection box. A graph similar to the following picture must be rendered.
+3. Select the time column as the X column and the value column as the Y column. Add the moving average columns i.e. columns with the prefix MA, into the Y column multi-selection box. A graph similar to the following picture must be rendered.
 
 
 
