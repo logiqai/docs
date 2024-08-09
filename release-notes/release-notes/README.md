@@ -2,7 +2,6 @@
 
 Release Notes for recent software and platform updates across all products:
 
-* Apica Ascent (Data Fabric) (ADF)
 * [Ascent 2.5.0](https://docs.apica.io/release-notes/release-notes/ascent-2.5.0)
 * [Ascent 2.4.0](https://docs.apica.io/release-notes/release-notes/ascent-2.4.0)
 * [Ascent 2.3.0](ascent-2.3.0.md)
