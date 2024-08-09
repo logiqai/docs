@@ -103,6 +103,7 @@
   * [Network Packets](integrations/list-of-integrations/network-packets.md)
   * [OpenTelemetry](integrations/list-of-integrations/opentelemetry.md)
   * [Object store (S3 Compatible)](integrations/list-of-integrations/object-store-s3-compatible.md)
+  * [Oracle OCI Infrastructure Audit/Logs](integrations/list-of-integrations/oracle-oci-infrastructure-audit-logs.md)
   * [OSSEC Variants (OSSEC/WAZUH/ATOMIC)](integrations/list-of-integrations/ossec-variants-ossec-wazuh-atomic/README.md)
     * [Apica Ascent-OSSEC Agent for Windows](integrations/list-of-integrations/ossec-variants-ossec-wazuh-atomic/logiq-ossec-agent-for-windows.md)
   * [Palo Alto Firewall](integrations/list-of-integrations/palo-alto-firewall.md)
@@ -241,6 +242,7 @@
 ## RELEASE NOTES
 
 * [Release Notes](release-notes/release-notes/README.md)
+  * [Ascent 2.5.0](release-notes/release-notes/ascent-2.5.0.md)
   * [Ascent 2.4.0](release-notes/release-notes/ascent-2.4.0.md)
   * [Ascent 2.3.0](release-notes/release-notes/ascent-2.3.0.md)
   * [Ascent 2.2.0](release-notes/release-notes/load-test.md)
