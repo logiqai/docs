@@ -9,7 +9,7 @@ Support for OTEL traces is added under the `/v1/json_batch` endpoint as `/v1/jso
 **Example OTEL Collector Configuration**
 
 ```yaml
-yamlCopy codeexporters:
+codeexporters:
   otlphttp:
     traces_endpoint: https://apicainstance.url/v1/json_batch/otlptraces
     encoding: json

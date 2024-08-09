@@ -9,7 +9,7 @@ Support for OTEL logs is added under the `/v1/json_batch` endpoint as `/v1/json_
 **Example OTEL Collector Configuration**
 
 ```yaml
-yamlCopy codeexporters:
+codeexporters:
   otlphttp:
     logs_endpoint: https://apicainstance.url/v1/json_batch/otlplogs?namespace=foobar2
     encoding: json
