@@ -22,8 +22,6 @@
 
 ***
 
-&#x20;
-
 ***
 
 ## **Apica Data Fabric (ADF)**
