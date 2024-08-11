@@ -4,6 +4,8 @@
 
 **Overview**
 
+[OpenTelemetry](https://opentelemetry.io/) is becoming the standard for observability. OpenTelemetry is vendor-agnostic, and the 2nd most active community on GitHub after Kubernetes.\
+\
 Support for OTEL logs is added under the `/v1/json_batch` endpoint as `/v1/json_batch/otlplogs`.
 
 **Example OTEL Collector Configuration**
