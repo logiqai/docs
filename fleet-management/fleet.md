@@ -19,7 +19,7 @@ Navigate **Explore > Fleet** will show the agent list that are configured and ma
 
 When there are no configured agents.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (2) (1).png" alt=""><figcaption><p>No agents</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fleet_no_agents.png" alt=""><figcaption><p>No agents</p></figcaption></figure>
 
 **Configured Agent List:**
 
@@ -67,7 +67,7 @@ The fleet platform comes with many agent types already set up, the ability to ad
 
 Some agent types such as the following come with the fleet enhanced low-code configuration building tool along with configuration uploads to help you build complex configuration files with ease.&#x20;
 
-<figure><img src="../.gitbook/assets/Screenshot from 2024-06-18 21-09-57.png" alt=""><figcaption><p>Agent types</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/fleet_agent_types.png" alt=""><figcaption><p>Agent types</p></figcaption></figure>
 
 **Configurations:**
 
@@ -87,7 +87,7 @@ You can upload a local file or paste the configuration in the code block. Fill i
 
 <figure><img src="../.gitbook/assets/Screenshot from 2024-06-18 21-14-24.png" alt=""><figcaption><p>Create configuration</p></figcaption></figure>
 
-**Update Configuration:**
+#### **Update Configuration:**
 
 To update select any configuration that you want to update, the update configurations popup will show. You can update the configuration and click on the Update button. &#x20;
 
@@ -95,3 +95,18 @@ To update select any configuration that you want to update, the update configura
 
 <figure><img src="../.gitbook/assets/Screenshot from 2024-06-18 21-16-12.png" alt=""><figcaption><p>Update configuration</p></figcaption></figure>
 
+#### Install an Agent using Agent Manager:
+
+To install Fleet agent-manager on a host, click the blue "Install Agent Manager" button in the upper-left corner of the Agents tab. This will display the Install Agent Manager popup.
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Select the Platform and Agent Type for the agent that you are installing.
+
+Add any custom agent data attributes that are needed for this agent. Custom agent data can be referenced in Fleet configuration templates, and are used to contain agent specific information.
+
+Click the Proceed button to generate the installation instructions README file, and a platform-specific installation script.
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+The install instructions and installation script can be downloaded. And, the installation script can be run on the host where agent-manager is to be installed, following the provided instructions.
