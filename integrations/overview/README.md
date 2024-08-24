@@ -1,3 +1,7 @@
+---
+icon: plug
+---
+
 # Integrations Overview
 
 Apica Ascent comes with a number of integration options for ingest and incident management.

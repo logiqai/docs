@@ -1,3 +1,7 @@
+---
+icon: cloud
+---
+
 # Cloud - SaaS Deployment
 
 [https://www.apica.io/get-started-apica](https://www.apica.io/get-started-apica)Apica Ascent SaaS enables you to converge all of your IT data from disparate sources, manage your logs, and monitor, analyse, and troubleshoot your IT environment in real-time at infinite scale - without the need to manage or scale the underlying infrastructure or storage.

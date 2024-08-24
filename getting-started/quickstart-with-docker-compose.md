@@ -2,12 +2,13 @@
 description: >-
   This document describes the steps needed to bring up the Apica Ascent
   observability stack using docker-compose for trial and demo use
+icon: docker
 ---
 
 # Quickstart with Docker-Compose
 
 {% hint style="danger" %}
-docker-compose based deployment should not be used for production envornments.&#x20;
+docker-compose based deployment should not be used for production envornments.
 {% endhint %}
 
 ## Quickstart features
@@ -125,7 +126,5 @@ The Apica Ascent quickstart file includes Prometheus and Alertmanager services. 
 <figure><img src="../.gitbook/assets/Screen Shot 2024-02-14 at 11.13.58 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## Firewall ports and URLs
-
-
 
 Please refer to the [ports list ](../integrations/overview/data-ingest-ports.md)supported by Apica.

@@ -1,3 +1,7 @@
+---
+icon: server
+---
+
 # On-Premise PaaS deployment
 
 ## Before you begin
@@ -33,9 +37,9 @@ $ helm repo update
 $ helm search repo apica-repo
 ```
 
-| NAME             | CHART VERSION | APP VERSION | DESCRIPTION                                          |
-| ---------------- | ------------- | ----------- | ---------------------------------------------------- |
-| apica-repo/apica-ascent | <version> | <version> | Apica Ascent Data Fabric HELM chart for Kubernetes |
+| NAME                    | CHART VERSION | APP VERSION | DESCRIPTION                                        |
+| ----------------------- | ------------- | ----------- | -------------------------------------------------- |
+| apica-repo/apica-ascent |               |             | Apica Ascent Data Fabric HELM chart for Kubernetes |
 
 If you've already added Apica Ascent's Helm repository in the past, you can update the repository by running the following command.
 
@@ -82,6 +86,7 @@ You can pass the `values.yaml` file with the `helm install` command using the `-
 ```
 helm install apica-ascent --namespace apica-ascent --set global.persistence.storageClass=<storage_class_name> apica-repo/apica-ascent -f values.small.yaml
 ```
+
 ## Install Apica Ascent PaaS
 
 Now that your environment is ready, you can proceed with installing Apica Ascent PaaS in it. To install Apica Ascent PaaS, run the following command.
@@ -366,8 +371,8 @@ helm install apica-ascent --namespace apica-ascent \
 
 The following table describes the Helm options passed with the command above.
 
-| HELM Option                     | Description                                                                                                                                                                              | Default |
-| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| HELM Option                     | Description                                                                                                                                                                                     | Default        |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | `global.environment.cluster_id` | The cluster ID being used for the K8s cluster running Apica Ascent. For more information, read [Managing multiple K8S](../../deploying-logiq/logiq-paas-deployment/broken-reference/) clusters. | `Apica Ascent` |
 
 ### Sizing your Apica Ascent cluster

@@ -1,10 +1,14 @@
-# User Interface
+---
+icon: browsers
+---
+
+# Ascent User Interface
 
 The Apica Ascent UI is your window to your IT data, logs, and metrics - ingested from all of your data sources and converged onto a single layer. The Apica Ascent UI enables you to perform a wide range of operations – from simple uptime monitoring and error troubleshooting to capacity planning, real-time forensics, performance studies, and many more.
 
 You can access the Apica Ascent UI by logging into your Apica Ascent instance URL using your account credentials.
 
-![](<../../.gitbook/assets/windows-monitoring.png>)
+![](../.gitbook/assets/windows-monitoring.png)
 
 The navigation bar at the right side of the UI allows you to access your:
 
@@ -24,17 +28,17 @@ A dashboard is a collection of visualizations and queries that you've created ag
 
 The **Dashboards** page on the Apica Ascent UI lists all the dashboards you've created within Apica Ascent. Dashboards that you've favorited are marked with a yellow star icon and are also listed under the **Dashboards** dropdown menu for quick access in the navigation bar. The following images depict dashboards that you can create using Apica Ascent.
 
-![Dashboards Page shows list of dashboards.](<../../.gitbook/assets/dashboard-list.png>)
+![Dashboards Page shows list of dashboards.](../.gitbook/assets/dashboard-list.png)
 
-![A typical monitoring dashboard on Apica Ascent](<../../.gitbook/assets/security-monitoring.png>)
+![A typical monitoring dashboard on Apica Ascent](../.gitbook/assets/security-monitoring.png)
 
-![Another example of a Apica Ascent dashboard](<../../.gitbook/assets/aws-cloudtrail.png>)
+![Another example of a Apica Ascent dashboard](../.gitbook/assets/aws-cloudtrail.png)
 
 ## **Queries**
 
 Apica Ascent enables you to write custom queries to analyze log data, display metrics and events, view and customize events and alerts, and create custom dashboards. The **Queries** page lists all of the queries you've created on Apica Ascent. You can mark some of them as favorites or archive the ones, not in use. Your favorite queries also appear in the drop-down menu of the **Queries** tab for quick access.
 
-![](<../../.gitbook/assets/queries-list.png>)
+![](../.gitbook/assets/queries-list.png)
 
 ## **Alerts**
 
@@ -42,7 +46,7 @@ Apica Ascent enables you to set alerts against events, data, or metrics of inter
 
 The following image depicts a typical **Alerts** page on the Apica Ascent UI.
 
-![](<../../.gitbook/assets/alerts-list.png>)
+![](../.gitbook/assets/alerts-list.png)
 
 ## Explore
 
@@ -52,7 +56,7 @@ You can also click into a specific application or ProcID to view logs in more de
 
 The following image depicts a typical Explore page on the Apica Ascent UI.
 
-![The Explore Page](<../../.gitbook/assets/explore-list.png>)
+![The Explore Page](../.gitbook/assets/explore-list.png)
 
 ## Events
 

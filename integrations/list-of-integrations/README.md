@@ -1,2 +1,6 @@
-# Data Source Details
+---
+icon: plug
+---
+
+# List of Integrations
 

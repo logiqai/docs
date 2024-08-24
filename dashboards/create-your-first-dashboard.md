@@ -1,3 +1,7 @@
+---
+icon: grid-horizontal
+---
+
 # Create Your First Dashboard
 
 ## Create Dashboard
