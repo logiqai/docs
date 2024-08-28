@@ -16,7 +16,7 @@ The Apica team is verifying support and we expect more recent versions to be sup
 
 Prometheus Remote Write Exporter can be used to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/)
 
-Apica Ascent implements a prometheus remote write backend so metric data from open telemetry collectors can be sent to Apica Ascent with a simple configuration as described below.
+Apica Ascent implements a Prometheus remote write backend so metric data from open telemetry collectors can be sent to Apica Ascent with a simple configuration as described below.
 
 Enable the _prometheusremorewrite_ exporter in your open telemetry configuration yaml
 
@@ -146,7 +146,7 @@ the Prometheus metrics options create a pull metric instance that should be scra
 When using TLS please ensure you have the CA cert of the Apica Ascent environment installed in the JVM Cert store. Instructions can be found here - [https://connect2id.com/blog/importing-ca-root-cert-into-jvm-trust-store](https://connect2id.com/blog/importing-ca-root-cert-into-jvm-trust-store)
 {% endhint %}
 
-![](<../../.gitbook/assets/Screen Shot 2022-08-02 at 6.29.42 PM.png>)
+![](<../../.gitbook/assets/Screenshot 2024-08-19 at 3.25.53 AM.png>)
 
 ### Example Petclinic app with open telemetry integration
 
