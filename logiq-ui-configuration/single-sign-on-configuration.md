@@ -8,7 +8,7 @@ Apica Ascent can be set up for user login using Single Sign-On (SSO) with SAML b
 
 ## Enabling SAML
 
-Login with your admin credentials. Click on `Settings` menu. Enable _"SAML configuration"_ checkbox. \
+Login with your admin credentials. Click on `Settings` menu. Enable _"SAML configuration"_ checkbox.\
 Add SAML **Metadata URL, Entity ID, NameID Format.**
 
 Check below for specific [steps for your Identity provider](single-sign-on-configuration.md#idp-configuration)
@@ -22,18 +22,18 @@ If user-groups are configured on the IDP side, create the identical user groups 
 \
 This concludes the Apica Ascent side configuration.
 
-Logout as Apica Ascent admin. On the login screen, the "SAML Login" Button should be available to login with the user's SSO credentials.  By clicking the button browser is redirected to the IDP screen where the user can log in using its  IDP credentials.
+Logout as Apica Ascent admin. On the login screen, the "SAML Login" Button should be available to login with the user's SSO credentials. By clicking the button browser is redirected to the IDP screen where the user can log in using its IDP credentials.
 
-![](../.gitbook/assets/saml-3.png)
+![](../.gitbook/assets/screencapture-lq8311-logiq-ai-login-2024-08-27-16\_29\_35.png)
 
 ## IDP configuration
 
-This document provides detailed information to configure OKTA and Google as Identity providers. For other identity providers, please refer to identity providers' documentation. In your IDP application, provide the SAML Assertion Consumer Service (ACS) URL for your Apica Ascent environment and attribute mappings&#x20;
+This document provides detailed information to configure OKTA and Google as Identity providers. For other identity providers, please refer to identity providers' documentation. In your IDP application, provide the SAML Assertion Consumer Service (ACS) URL for your Apica Ascent environment and attribute mappings
 
 The following attributes are required. The Apica Ascent mappings for each of the attributes are in brackets. Please use the correct attribute name otherwise Apica Ascent will not be able to recognize the SAML assertion
 
 * First name (FirstName) and Last name (LastName)
-* Group name  (ApicaAscentGroups)
+* Group name (ApicaAscentGroups)
 
 Use following SAML Assertion Consumer Service (ACS) URL
 
@@ -53,7 +53,7 @@ On the next screen, OKTA has fields for a few URLs:
 
 * Single Sign-On URL
 * Recipient URL
-* Destination URL&#x20;
+* Destination URL
 * Audience Restriction
 
 Use your Apica Ascent endpoint url in following format:\
@@ -80,8 +80,8 @@ The `default` group in Apica Ascent has access to all data sources. It is highly
 \
 **Configure Attribute statements:**
 
-| **Group Name**  | **Name Format** | **Value**        |
-| --------------- | --------------- | ---------------- |
+| **Group Name**        | **Name Format** | **Value**        |
+| --------------------- | --------------- | ---------------- |
 | **ApicaAscentGroups** | Basic           | Equals: NonAdmin |
 
 ![](../.gitbook/assets/saml-6.png)
@@ -94,11 +94,7 @@ Here choose the **SHA-2** certificate and click on the **Actions** button and ch
 
 ![](../.gitbook/assets/saml-8.png)
 
-
-
-This will open a new tab. Here take note of the following information. This is **needed to configure Apica Ascent.**&#x20;
-
-
+This will open a new tab. Here take note of the following information. This is **needed to configure Apica Ascent.**
 
 1. **SAML Metadata URL**: "Identity Provider Metadata" URL depicted below in blue can be copied as a SAML metadata URL or the whole contents of the page can be stored somewhere on the cloud and the path to that file can be used as SAML metadata URL
 
@@ -118,8 +114,6 @@ Navigate back to the app and edit "**Audience Restriction**" and set it with the
 
 If already not there, create users and user groups such as`NonAdmin` in this example. Users and user groups can also be brought in with inbound federation with ADFS or other identity providers.\
 Assign the users to the Application or group such as `NonAdmin` in this example to the Application. This concludes the IDP side configuration.
-
-
 
 ### Google GSuite Configuration
 
@@ -147,7 +141,7 @@ Enter the service provider details
 
 <figure><img src="../.gitbook/assets/Screen Shot 2022-11-01 at 3.33.08 PM.png" alt=""><figcaption><p>SAML Configuration for gsuite</p></figcaption></figure>
 
-In the attributes section, either map a "Google Directory attributes" or Group membership to `ApicaAscentGroups`.&#x20;
+In the attributes section, either map a "Google Directory attributes" or Group membership to `ApicaAscentGroups`.
 
 <figure><img src="../.gitbook/assets/Screen Shot 2022-11-01 at 3.35.55 PM.png" alt=""><figcaption><p>Configure SAML Attribute for Apica Ascent Groups</p></figcaption></figure>
 
@@ -155,15 +149,8 @@ SAML app by default is disabled in Google, enable it and wait for a few minutes 
 
 ![](<../.gitbook/assets/image (87).png>)
 
-Next head over to the Apica Ascent SAML configuration screen in the settings. Select "SAML Enabled", and fill in the details.&#x20;
+Next head over to the Apica Ascent SAML configuration screen in the settings. Select "SAML Enabled", and fill in the details.
 
 ![](<../.gitbook/assets/image (71).png>)
 
-Now you are ready to use SAML login, Logout, and log back in using the SAML Login option.&#x20;
-
-
-
-{% embed url="https://www.youtube.com/watch?v=pTVHkxcp4mg" %}
-Apica Ascent with Google as SAML2.0 IDP Configuration
-{% endembed %}
-
+Now you are ready to use SAML Login, Logout, and log back in using the SAML Login option.
