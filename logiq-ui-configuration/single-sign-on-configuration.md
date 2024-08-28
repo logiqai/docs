@@ -13,11 +13,11 @@ Add SAML **Metadata URL, Entity ID, NameID Format.**
 
 Check below for specific [steps for your Identity provider](single-sign-on-configuration.md#idp-configuration)
 
-![Apica Ascent (Service Provider) configuration](../.gitbook/assets/saml-1.png)
+![Apica Ascent (Service Provider) configuration](../.gitbook/assets/screencapture-lq8311-logiq-ai-settings-general-2024-08-27-16\_28\_55.png)
 
 If user-groups are configured on the IDP side, create the identical user groups in Apica Ascent. This can be done by clicking on the "_Settings"_ menu and going to the Groups tab. This example shows creating the "NonAdmin" user group.
 
-![](../.gitbook/assets/saml-2.png)
+![](../.gitbook/assets/screencapture-lq8311-logiq-ai-groups-2024-08-27-16\_29\_19.png)
 
 \
 This concludes the Apica Ascent side configuration.
