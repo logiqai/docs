@@ -20,7 +20,8 @@
 * **Scatter Chart Support**: Data Explorer now supports scatter chart visualizations.
 * **Dark Theme**: Improved dark themes for multiple screens, including Logs & Insights, Dashboards, Topology, and Pipelines.
 * **Dashboard Import in Data Explorer Format**: Frontend changes implemented to import dashboards in Data Explorer format.
-* **Check Analytics Integration**: Enhanced check analytics by integrating it with a reports page.
+* **Check Analytics Reports Integration**: Enhanced check analytics by integrating it with reporting.
+* **FPR Checks Consolidated Metrics:** Added ability to enrich check data at time of ingest using a new domain-specific language (DSL).
 
 #### **Improvements** <a href="#improvements" id="improvements"></a>
 
