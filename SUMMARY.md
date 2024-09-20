@@ -191,9 +191,9 @@
 ***
 
 * [CHECK MANAGEMENT](check-management/README.md)
-  * [Check Management Overview](check-management/check-management-overview.md)
   * [Map View](check-management/map-view.md)
   * [List View](check-management/list-view.md)
+  * [Check Management Overview](check-management/check-management-overview.md)
 
 ## Distributed Tracing
 
@@ -262,5 +262,3 @@
 * [Audit Trail](logiq-ui-configuration/audit-trail/README.md)
   * [Events Trail](logiq-ui-configuration/audit-trail/events-trail.md)
   * [Alerts Trail](logiq-ui-configuration/audit-trail/alerts-trail.md)
-
-## TBD

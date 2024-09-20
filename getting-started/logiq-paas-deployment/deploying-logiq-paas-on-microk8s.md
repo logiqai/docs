@@ -128,24 +128,25 @@ This command creates a secret named "https" containing the TLS keys for use in y
 
 To enable Ingress on microk8s with a default SSL certificate, issue the following command:
 
-```
+```sh
 microk8s enable ingress:default-ssl-certificate=secret/https
 ```
 
-6.  Enable private registry.
+6. Enable private registry.
 
-    {% code fullWidth="false" %}
-    ```
-    microk8s enable registry
-    ```
-    {% endcode %}
-7.  Copy over your MicroK8s configuration to your Kubernetes configuration with the following command.
+{% code fullWidth="false" %}
+```sh
+microk8s enable registry
+```
+{% endcode %}
 
-    {% code fullWidth="false" %}
-    ```
-    microk8s.kubectl config view --raw > $HOME/.kube/config
-    ```
-    {% endcode %}
+7. Copy over your MicroK8s configuration to your Kubernetes configuration with the following command.
+
+{% code fullWidth="false" %}
+```shell
+microk8s.kubectl config view --raw > $HOME/.kube/config
+```
+{% endcode %}
 
 ## Provisioning an IP address (optional)
 
@@ -163,14 +164,14 @@ To provision an IP address, do the following:
 
 1.  Check your local machine's IP address by running the `ifconfig` command, as shown below.
 
-    ```
+    ```sh
      ifconfig:
      wlp60s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
      inet 192.168.1.27 netmask 255.255.255.0 broadcast 192.168.1.255
     ```
 2.  Enable MetalLB by running the following command.
 
-    ```
+    ```sh
      microk8s enable metallb
      Enabling MetalLB
      Enter each IP address range delimited by comma (e.g.     '10.64.140.43-10.64.140.49,192.168.0.105-192.168.0.111'): 192.168.1.27-192.168.1.27
@@ -198,16 +199,17 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
 
     <pre data-full-width="true"><code><strong>microk8s kubectl create namespace apica-ascent
     </strong></code></pre>
-4.  Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your Apica Ascent PaaS deployment. If you need to download the file to your own machine, edit, and then transfer to a remote linux server, use this command:
+4. Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your Apica Ascent PaaS deployment. If you need to download the file to your own machine, edit, and then transfer to a remote linux server, use this command:
 
-    {% code fullWidth="true" %}
-    ```
-    scp -i /path/to/private_key.pem /path/to/local/file username@remote_host:/path/to/remote/directory
-    ```
-    {% endcode %}
+{% code overflow="wrap" fullWidth="false" %}
+```sh
+scp -i /path/to/private_key.pem /path/to/local/file username@remote_host:/path/to/remote/directory
+```
+{% endcode %}
+
 5.  Create a namespace on MicroK8s on which to install Apica Ascent PaaS.
 
-    <pre data-full-width="true"><code><strong>microk8s kubectl create namespace apica-ascent
+    <pre class="language-bash" data-full-width="true"><code class="lang-bash"><strong>microk8s kubectl create namespace apica-ascent
     </strong></code></pre>
 
 Make sure you have the necessary permissions to copy a file to the specified folder on the Linux machine.
@@ -240,19 +242,19 @@ Make sure you have the necessary permissions to copy a file to the specified fol
 > storageClass: microk8s-hostpath
 > ```
 
-6.  Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
+6. Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
-    {% code fullWidth="true" %}
-    ```
-    microk8s helm3 install apica-ascent -n apica-ascent --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
-    ```
-    {% endcode %}
+{% code overflow="wrap" fullWidth="false" %}
+```bash
+microk8s helm3 install apica-ascent -n apica-ascent --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
+```
+{% endcode %}
 
 If you see a large wall of text listing configuration values, the installation was successful - Ascent PaaS is now installed in your MicroK8s environment!
 
 ## Accessing Apica Ascent PaaS
 
-Now that Apica Ascent PaaS is installed on your MicroK8s cluster, you can visit the Apica Ascent PaaS UI by either accessing the MetalLB endpoint we defined in the pre-install steps (if you installed/configured MetalLB), or by accessing the public IP address of the instance over HTTP(S) (if you aren't utilizing MetalLB).&#x20;
+Now that Apica Ascent PaaS is installed on your MicroK8s cluster, you can visit the Apica Ascent PaaS UI by either accessing the MetalLB endpoint we defined in the pre-install steps (if you installed/configured MetalLB), or by accessing the public IP address of the instance over HTTP(S) (if you aren't utilizing MetalLB).
 
 If you are load balancing the hosting across multiple IPs using MetalLB, do the following to access the Apica Ascent PaaS UI:
 
