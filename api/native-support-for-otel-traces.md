@@ -31,7 +31,7 @@ codeexporters:
 **Optional Fields**
 
 * **compression**: Can be set to `gzip` for trace compression.
-* **headers**: Headers for the HTTP request. It is recommended to use this in production setups.
+* **headers**: Headers for the HTTP request. It is recommended that this be used in production setups.
 * **tls**: TLS configuration. It is recommended to enable TLS in production setups.
 
 **Authentication**

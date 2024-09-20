@@ -1,4 +1,4 @@
-# ALIVE: Summary
+# ALIVE Pattern Signature Summary
 
 #### Highlighting Data in Pattern Bar Graphs
 
@@ -8,7 +8,7 @@ This feature enables users to highlight specific data points in pattern bar grap
 
 <figure><img src="../../.gitbook/assets/image (186).png" alt=""><figcaption><p>Toggle button to highlight data on graph.</p></figcaption></figure>
 
-To use this feature, just toggle the switch. This will highlight the data in the table and clearly mark the corresponding bars on the graph.
+To use this feature, just toggle the switch. This will highlight the data in the table and mark the corresponding bars on the graph.
 
 <figure><img src="../../.gitbook/assets/image (188).png" alt=""><figcaption><p>Page 1 data highlighted in the pattern graph</p></figcaption></figure>
 
