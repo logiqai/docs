@@ -26,13 +26,15 @@
 * **Selection Condition**:  One of the options `is Any, All, or None`.  Select "All" to alert only if all rows meet the condition. Select "Any" to alert if at least one row meets the condition.
 * **Time Column **<mark style="background-color:purple;">**( optional )**</mark>: Select the time column if the data has a time column.
 * **Track Duration **<mark style="background-color:purple;">**( enabled only if Time Column is provided )**</mark>:  Provide time in minutes to track the data in the given amount of minutes. If given "5m", it tracks the latest 5 minutes of data.
+* **Alert Severity**: Select the severity level for the alert. Options include:
+  * **Emergency**: Critical issues that require immediate attention.
+  * **Critical**: Important issues that need timely attention but are less urgent than emergencies.
+  * **Info**: Informational alerts that provide updates or notifications without immediate action needed.
 
 5. Once you have filled in the necessary fields, click "Save" to save and activate it to start monitoring your query results.
 
-<figure><img src="../.gitbook/assets/alert config.png" alt=""><figcaption><p>Simple Alert Configuration</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (199).png" alt=""><figcaption><p>Simple Alert Configuration</p></figcaption></figure>
 
-
-
-The above picture is an example of an alert configuration that tracks the last 5 minutes of the column "value" and is triggered when any row of the data is greater than the value 1.5. If the time column is not selected entire dataset is tracked instead of the given track duration.
+The above picture is an example of an alert configuration that tracks the last 5 minutes of the column "value" and is triggered when any row of the data is greater than the value 1.5. If the time column is not selected then last 15 min dataset is tracked.
 
 By following these steps and configuring the necessary fields, you can create and customize alerts to monitor your query results and detect potential issues before they become larger problems.
