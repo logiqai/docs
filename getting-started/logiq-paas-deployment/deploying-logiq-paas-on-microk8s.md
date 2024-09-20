@@ -5,8 +5,8 @@
 ## Prerequisites
 
 * Ubuntu OS x64
-* 16 vCPU
-* 32GB RAM
+* 32 vCPU
+* 64GB RAM
 * 500GB disk space on the root partition
 
 ## Installing MicroK8s
