@@ -15,7 +15,7 @@ The first step in this deployment is to install MicroK8s on your machine. The fo
 
 1.  Update package lists by running the following command.
 
-    ```
+    ```bash
     sudo apt-get -y update
     ```
 2.  Install `core` using Snap by running the following command.
@@ -25,31 +25,31 @@ The first step in this deployment is to install MicroK8s on your machine. The fo
     ```
 3.  Install MicroK8s using Snap by running the following command.
 
-    ```
+    ```bash
     sudo snap install microk8s --classic --channel=1.28/stable
     ```
 4.  Join the group created by MicroK8s that enables uninterrupted usage of commands that require admin access by running the following command.
 
-    <pre><code><strong>sudo usermod -a -G microk8s $USER
+    <pre class="language-bash"><code class="lang-bash"><strong>sudo usermod -a -G microk8s $USER
     </strong></code></pre>
 5.  Create the .kube directory.
 
-    ```
+    ```bash
     mkdir ~/.kube
     ```
 6.  Add your current user to the group to gain access to the `.kube` caching directory by running the following command.
 
-    ```
+    ```bash
     sudo chown -f -R $USER ~/.kube
     ```
 7.  Generate your MicroK8s configuration and merge it with your Kubernetes configuration by running the following command.
 
-    ```
+    ```bash
     sudo microk8s config > ~/.kube/config
     ```
 8.  Check whether MicroK8s is up and running with the following command.
 
-    ```
+    ```bash
     sudo microk8s status
     ```
 
@@ -63,26 +63,26 @@ To enable add-ons on your MicroK8s cluster, run the following commands in succes
 
 1. Enable Helm 3.
 
-```
+```bash
 microk8s enable helm3
 ```
 
 If you get a message telling you have insufficient permissions, a few of the commands above which tried to interpolate your current user into the command with the $USER variable did not work. You can easily fix it by adding your user to the microk8s group by specifying the name of the user explicitly:
 
-```
+```bash
 sudo usermod -a -G microk8s ubuntu
 sudo chown -R ubuntu ~/.kube
 ```
 
 2. Enable a default storage class that allocates storage from a host directory.
 
-```
+```bash
 microk8s enable storage
 ```
 
 3. Enable CoreDNS.
 
-```
+```bash
 microk8s enable dns
 ```
 
@@ -90,7 +90,7 @@ microk8s enable dns
 
 To enable the Ingress controller in MicroK8s, run the following command:
 
-```
+```bash
 microk8s enable ingress
 ```
 
@@ -104,23 +104,23 @@ How to Create a Self-Signed Certificate using OpenSSL:
 
 *   Create server private key
 
-    ```
+    ```bash
     openssl genrsa -out cert.key 2048
     ```
 *   Create certificate signing request (CSR)
 
-    ```
+    ```bash
     openssl req -new -key cert.key -out cert.csr
     ```
 *   Sign the certificate using the private key and CSR
 
-    ```
+    ```bash
     openssl x509 -req -days 3650 -in cert.csr -signkey cert.key -out cert.crt
     ```
 
 To create a TLS secret in MicroK8s using `kubectl`, use the following command:
 
-```
+```bash
 microk8s kubectl create secret tls https --cert=cert.crt --key=cert.key
 ```
 
