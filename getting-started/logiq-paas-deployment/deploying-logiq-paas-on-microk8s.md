@@ -26,7 +26,7 @@ The first step in this deployment is to install MicroK8s on your machine. The fo
 3.  Install MicroK8s using Snap by running the following command.
 
     ```bash
-    sudo snap install microk8s --classic --channel=1.28/stable
+    sudo snap install microk8s --classic --channel=1.21/stable
     ```
 4.  Join the group created by MicroK8s that enables uninterrupted usage of commands that require admin access by running the following command.
 
