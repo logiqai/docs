@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-* Ubuntu OS x64 - 22.04 LTS
+* Ubuntu OS x64 - 20.04.6 LTS
 * 32 vCPU
 * 64GB RAM
 * 500GB disk space on the root partition
