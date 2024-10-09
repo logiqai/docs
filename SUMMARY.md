@@ -231,6 +231,7 @@
 * [Alerts (Simple/Anomaly)](logiq-events/alerts-simple-anomaly.md)
 * [Alerts On Logs](logiq-events/alerts-1.md)
 * [Rule Packs](logiq-events/rule-packs.md)
+* [AI-powered Search](logiq-events/ai-powered-search.md)
 
 ## API
 
