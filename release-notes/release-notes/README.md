@@ -2,6 +2,7 @@
 
 Release Notes for recent software and platform updates across all products:
 
+* [Ascent 2.7.0](https://docs.apica.io/release-notes/release-notes/ascent-2.7.0)
 * [Ascent 2.6.0](https://docs.apica.io/release-notes/release-notes/ascent-2.6.0)
 * [Ascent 2.5.0](https://docs.apica.io/release-notes/release-notes/ascent-2.5.0)
 * [Ascent 2.4.0](https://docs.apica.io/release-notes/release-notes/ascent-2.4.0)
