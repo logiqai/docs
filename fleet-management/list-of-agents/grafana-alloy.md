@@ -2,7 +2,7 @@
 description: Manage a fleet of Grafana Alloy instances at scale with Apica Fleet.
 ---
 
-# Grafana Alloy Installation
+# Grafana Alloy
 
 The following points will tell you how to install an Alloy agent on a Linux machine:
 

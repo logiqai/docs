@@ -164,10 +164,10 @@
 
 ## FLEET MANAGEMENT
 
-* [Fleet Management Overview](fleet-management/fleet.md)
+* [Fleet Management Overview](fleet-management/fleet/README.md)
 * [List of Agents](fleet-management/list-of-agents/README.md)
   * [Datadog Agent](fleet-management/list-of-agents/datadog-agent.md)
-  * [Grafana Alloy Installation](fleet-management/list-of-agents/grafana-alloy-installation.md)
+  * [Grafana Alloy](fleet-management/list-of-agents/grafana-alloy.md)
 
 ## Infra & Application Monitoring
 
