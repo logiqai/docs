@@ -110,3 +110,13 @@ Click the Proceed button to generate the installation instructions README file, 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 The install instructions and installation script can be downloaded. And, the installation script can be run on the host where agent-manager is to be installed, following the provided instructions.
+
+
+
+**Fleet Agent Status Metric:**
+
+There is new status metric to track the status of fleet agents which can be accessed by the name "logiq\_agent\_liveness" from the query page.&#x20;
+
+Following is the meaning of each status:&#x20;
+
+<table data-full-width="false"><thead><tr><th width="119" align="center">Sl. No.</th><th width="344" align="center">Agent Status</th><th align="center">Metric Value</th></tr></thead><tbody><tr><td align="center">1.</td><td align="center">Active, Running, Maintenance</td><td align="center">0</td></tr><tr><td align="center">2.</td><td align="center">Disconnected</td><td align="center">1</td></tr><tr><td align="center">3.</td><td align="center">Inactive, Stopped, Stopping</td><td align="center">-1</td></tr><tr><td align="center">4.</td><td align="center">Error</td><td align="center">2</td></tr></tbody></table>
