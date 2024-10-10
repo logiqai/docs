@@ -139,6 +139,7 @@
   * [Create a Dashboard](data-management/overview-1/create-a-dashboard.md)
   * [Alerts](data-management/overview-1/alerts.md)
   * [JSON Import](data-management/overview-1/json-import.md)
+  * [Creating Json Schema](data-management/overview-1/creating-json-schema.md)
 * [Timestamp handling](data-management/timestamp-handling/README.md)
   * [Timestamp bookmark](data-management/timestamp-handling/timestamp-bookmark.md)
 * [Large log/events/metrics/traces](data-management/large-log-events-metrics-traces.md)
