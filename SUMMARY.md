@@ -164,10 +164,15 @@
 
 ## FLEET MANAGEMENT
 
-* [Fleet Management Overview](fleet-management/fleet/README.md)
+* [Overview](fleet-management/overview.md)
+* [Agents](fleet-management/agents.md)
+* [Configurations](fleet-management/configurations.md)
+* [Packages](fleet-management/packages.md)
 * [List of Agents](fleet-management/list-of-agents/README.md)
   * [Datadog Agent](fleet-management/list-of-agents/datadog-agent.md)
   * [Grafana Alloy](fleet-management/list-of-agents/grafana-alloy.md)
+  * [OpenTelemetry Collector](fleet-management/list-of-agents/opentelemetry-collector.md)
+  * [OpenTelemetry Kubernetes](fleet-management/list-of-agents/opentelemetry-kubernetes.md)
 
 ## Infra & Application Monitoring
 
