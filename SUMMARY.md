@@ -164,8 +164,9 @@
 
 ## FLEET MANAGEMENT
 
-* [Fleet Management Overview](fleet-management/fleet/README.md)
-  * [Datadog Agent Installation](fleet-management/fleet/datadog-agent-installation.md)
+* [Fleet Management Overview](fleet-management/fleet.md)
+* [List of Agents](fleet-management/list-of-agents/README.md)
+  * [Datadog Agent](fleet-management/list-of-agents/datadog-agent.md)
 
 ## Infra & Application Monitoring
 
