@@ -168,6 +168,8 @@
 * [Agents](fleet-management/agents.md)
 * [Configurations](fleet-management/configurations.md)
 * [Packages](fleet-management/packages.md)
+* [Fleet Repository Management](fleet-management/fleet-repository-management.md)
+* [Advance Search](fleet-management/advance-search.md)
 * [List of Agents](fleet-management/list-of-agents/README.md)
   * [Datadog Agent](fleet-management/list-of-agents/datadog-agent.md)
   * [Grafana Alloy](fleet-management/list-of-agents/grafana-alloy.md)
