@@ -1,6 +1,47 @@
 # Ascent 2.7.0
 
-### **ADF** <a href="#adf" id="adf"></a>
+### **ASM** <a href="#adf" id="adf"></a>
+
+**New Features & Enhancements:**
+
+1. **ASM Private Location Management:**
+   * Introduced the ability for Customer Administrators to **Add, Edit, and Delete** private locations and private repositories, giving more control over location and data management.
+   * Added a **"Private Locations"** section in the UI, allowing easy navigation and management of these locations.
+   * Implemented endpoints to **Enable/Disable Private Locations**, retrieve lists of private locations and repositories, and associate repositories with specific private locations.
+   * Included a **Timezone selection** feature for URL V2 endpoints, enhancing configuration flexibility for global deployments.
+   * New options for managing **Private Agents** with functionalities such as Adding, Editing, and Deleting agents, as well as Reissuing Certificates for enhanced security.
+2. **Check Management Enhancements:**
+   * Integrated **ZebraTester** within Check Management, improving performance testing capabilities.
+   * Enhanced the **Check Analytics** screen for a smoother experience, including a redesigned Schedule and Severity Handling screen supporting Dark Theme.
+3. **Improved API & Documentation:**
+   * **Refined API Endpoints**: Added support for handling advanced configuration for missing checks, private agent solutions, and new fields in the SSL Certificate Expiration Check.
+   * **Documentation Improvements**: Updated ASM API documentation to include better descriptions, missing fields, and request/response formats for enhanced usability.
+4. **Canary Release Support:**
+   * Extended Deployment APIs to support **Canary Releases**, ensuring more robust testing and rollouts.
+5. **Performance Optimization:**
+   * Implemented pre-fetching of access groups to reduce database calls and improve the performance of core endpoints.
+   * Optimized **Sampling Interval** for tables based on time duration to reduce load times.
+6. **Agent Status Monitoring:**
+   * Added visual indicators for the **Enable/Disable Status** of private locations, improving overall monitoring and management.
+
+**Bug Fixes:**
+
+1. **Check Management:**
+   * Fixed inconsistencies in the **Check Results Graph** to ensure linear representation of data on the X-axis.
+   * Addressed issues with **timestamp formatting** when clicked from different parts of the graph, which led to parsing errors.
+2. **Fleet Management:**
+   * Corrected the behavior of agent ID and customer GUIDs during initial state setup.
+   * Resolved problems causing memory issues in multi-cluster environments.
+3. **UI & Visual Fixes:**
+   * Eliminated scroll issues when hovering over charts.
+   * Adjusted the **Date Picker** to revert to its previous version for consistency and usability.
+4. **Multi-Cluster Stability:**
+   * Fixed degradation issues occurring when one of the single tenants in a multi-cluster environment was down.
+   * Ensured smoother data loading and resolved UI lock-up issues when handling larger datasets.
+5. **Certificate Management:**
+   * Added validation checks and improved error handling for operations like adding, editing, and deleting SSL certificates and repositories.
+
+### **Ascent** <a href="#adf" id="adf"></a>
 
 #### **New Features & Enhancements** <a href="#new-features-and-enhancements" id="new-features-and-enhancements"></a>
 
