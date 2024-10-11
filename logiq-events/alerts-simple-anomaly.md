@@ -33,7 +33,7 @@
 
 5. Once you have filled in the necessary fields, click "Save" to save and activate it to start monitoring your query results.
 
-<figure><img src="../.gitbook/assets/image (199).png" alt=""><figcaption><p>Simple Alert Configuration</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (199) (1).png" alt=""><figcaption><p>Simple Alert Configuration</p></figcaption></figure>
 
 The above picture is an example of an alert configuration that tracks the last 5 minutes of the column "value" and is triggered when any row of the data is greater than the value 1.5. If the time column is not selected then last 15 min dataset is tracked.
 

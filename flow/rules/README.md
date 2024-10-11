@@ -2,6 +2,8 @@
 
 Apica Ascent provides a set of Data Management Rules that help you manage your data. These rules are packaged into Rule Packs and are available on the Rules page.
 
+It is easy to write custom rules in the system to accomplish a variety of data transformation tasks such as filtering, dropping data, changing attribute names, assembing data frames for forwarding among others.&#x20;
+
 Here are some of the Data Management Rules that Apica Ascent supports:
 
 * [Filter Rules](https://docs.logiq.ai/data-management/filter)
