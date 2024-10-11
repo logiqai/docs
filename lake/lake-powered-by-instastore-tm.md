@@ -16,7 +16,9 @@ Apica's approach to solve this fundamental problem was to make any object store 
 
 InstaStore was the culmination of over 2 years of research and development in a garage style engineering sprint, though done on Zoom and Google Meet sessions due to COVID-19.
 
-![](https://logflow-docs.logiq.ai/\~gitbook/image?url=https%3A%2F%2F3717450363-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F8WGNQCWSTnL2NgouIRTq%252Fuploads%252F9O4y1mOyYbKqPYP6Z4W4%252Finstastore-replay.png%3Falt%3Dmedia%26token%3D2642f13e-a2d6-4b7f-bbcf-0f475ff580ff\&width=768\&dpr=4\&quality=100\&sign=32af2edc\&sv=1)![](https://logflow-docs.logiq.ai/\~gitbook/image?url=https%3A%2F%2F3717450363-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F8WGNQCWSTnL2NgouIRTq%252Fuploads%252FSuFEgWDkszQRDiuPhr4p%252FInstaStore-1.png%3Falt%3Dmedia%26token%3D7257c22f-3419-4651-98b4-00f1c2cdb0dd\&width=768\&dpr=4\&quality=100\&sign=64f45580\&sv=1)
+<figure><img src="https://logflow-docs.logiq.ai/~gitbook/image?url=https%3A%2F%2F3717450363-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F8WGNQCWSTnL2NgouIRTq%252Fuploads%252F9O4y1mOyYbKqPYP6Z4W4%252Finstastore-replay.png%3Falt%3Dmedia%26token%3D2642f13e-a2d6-4b7f-bbcf-0f475ff580ff&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=32af2edc&#x26;sv=1" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (238).png" alt=""><figcaption></figcaption></figure>
 
 ## Benefits of Instastore
 
