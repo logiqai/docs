@@ -151,9 +151,6 @@
 ## Flow
 
 * [Overview](flow/overview.md)
-* [List of Forwarders](flow/list-of-forwarders/README.md)
-  * [Mapping Applications](flow/list-of-forwarders/mapping-applications.md)
-* [Flow Documentation](https://logflow-docs.logiq.ai/)
 * [Data Flow Pipelines](flow/data-flow-pipelines.md)
 * [Rules](flow/rules/README.md)
   * [FILTER](flow/rules/filter.md)
@@ -164,6 +161,8 @@
   * [FORWARD](flow/rules/forward/README.md)
     * [Rename Attributes](flow/rules/forward/rename-attributes.md)
   * [STREAM](flow/rules/stream.md)
+* [List of Forwarders](flow/list-of-forwarders/README.md)
+  * [Mapping Applications](flow/list-of-forwarders/mapping-applications.md)
 * [Splunk Forwarding](flow/splunk-forwarding/README.md)
   * [Apica UF Proxy App Extension](flow/splunk-forwarding/apica-uf-proxy-app-extension/README.md)
     * [Standalone Instance](flow/splunk-forwarding/apica-uf-proxy-app-extension/standalone-instance.md)

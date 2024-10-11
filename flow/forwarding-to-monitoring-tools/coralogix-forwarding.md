@@ -14,6 +14,6 @@
 * Provide `Private Key` for ingesting logs
 * Click `Create` button
 
-![](https://logflow-docs.logiq.ai/\~gitbook/image?url=https%3A%2F%2F3717450363-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F8WGNQCWSTnL2NgouIRTq%252Fuploads%252FHTwDtgSXfCWQozguTwcs%252Fimage.png%3Falt%3Dmedia%26token%3D611490f2-9ddb-4ece-bcbc-7cc7d091053f\&width=300\&dpr=4\&quality=100\&sign=3d763319\&sv=1)
+<figure><img src="https://logflow-docs.logiq.ai/~gitbook/image?url=https%3A%2F%2F3717450363-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F8WGNQCWSTnL2NgouIRTq%252Fuploads%252FHTwDtgSXfCWQozguTwcs%252Fimage.png%3Falt%3Dmedia%26token%3D611490f2-9ddb-4ece-bcbc-7cc7d091053f&#x26;width=300&#x26;dpr=4&#x26;quality=100&#x26;sign=3d763319&#x26;sv=1" alt=""><figcaption></figcaption></figure>
 
 After the creation of forwarder, it can be mapped to any namespace and application which sends logs to coralogix platform.
