@@ -306,7 +306,6 @@
   * [Events Trail](logiq-ui-configuration/audit-trail/events-trail.md)
   * [Alerts Trail](logiq-ui-configuration/audit-trail/alerts-trail.md)
 
-***
+## LAKE
 
-* [Untitled](undefined.md)
-* [Untitled](undefined-1.md)
+* [Lake: Powered by Instastore™](lake/lake-powered-by-instastore-tm.md)
