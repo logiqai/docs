@@ -16,6 +16,12 @@ OpenTelemetry Collectors can now be configured to use the standard ingest endpoi
 2. Logs - /v1/logs
 3. Metrics - /v1/metrics
 
+**Telemetry Pipelines**
+
+1. New forwarders added for Oracle Cloud
+   * OCI Buckets
+   * OCI Observability & Monitoring - Logs
+
 **Freemium Support**
 
 Experience Apica Ascent with the Freemium release. The Freemium is a **FREE FOREVER** release which includes all the capabilities of the Apica Ascent Intelligent Data Management Platform available as a convenient SaaS offering
