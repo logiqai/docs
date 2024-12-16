@@ -9,6 +9,13 @@ This release introduces a host of updates to enhance user experience, streamline
 
 #### **New Features and Enhancements**
 
+**OpenTelemetry**
+
+OpenTelemetry Collectors can now be configured to use the standard ingest endpoints when pushing data to Apica Ascent
+1. Traces - /v1/traces
+2. Logs - /v1/logs
+3. Metrics - /v1/metrics
+
 **Freemium Support**
 
 Experience Apica Ascent with the Freemium release. The Freemium is a **FREE FOREVER** release which includes all the capabilities of the Apica Ascent Intelligent Data Management Platform available as a convenient SaaS offering
