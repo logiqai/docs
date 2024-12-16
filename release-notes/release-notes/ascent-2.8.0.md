@@ -9,6 +9,18 @@ This release introduces a host of updates to enhance user experience, streamline
 
 #### **New Features and Enhancements**
 
+**Freemium Support**
+
+Experience Apica Ascent with the Freemium release. The Freemium is a **FREE FOREVER** release which includes all the capabilities of the Apica Ascent Intelligent Data Management Platform available as a convenient SaaS offering
+1. Fleet Management
+2. Telemetry Pipelines with support for platforms such as **Splunk**, **Elasticsearch**, **Kafka**, **Datadog** among others
+3. Digital Experience Monitoring (Synthetic Monitoring for URL, Ping, Port and SSL Checks)
+4. Log Management
+5. Distributed Tracing
+6. Infrastructure Monitoring
+7. Enterprise ready with features such as SAML based SSO
+8. ITOM integration with platforms such as **PagerDuty**, **ServiceNow**, and **OpsGenie**
+
 **Fleet Updates**
 
 1. **Agent Management**:\
