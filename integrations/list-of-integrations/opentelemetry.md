@@ -4,15 +4,29 @@
 
 OpenTelemetry is a collection of tools, APIs, and SDKs. Use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) to help analyze software’s performance and behavior.
 
-{% hint style="warning" %}
-Supported otel collector - v0.59.0 or earlier - [https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.59.0](https://github.com/open-telemetry/opentelemetry-collector/releases/tag/v0.59.0)
-
-What about versions > v0.60.0 and above?&#x20;
-
-The Apica team is verifying support and we expect more recent versions to be supported in Q1 2024
+{% hint style="danger" %}
+We recommend using the OpenTelemetry HTTP exporter to send logs, metrics and traces to Apica Ascent. We also support Prometheus exporter.
 {% endhint %}
 
-### OpenTelemetry Metrics
+### OTLP Http exporter
+
+```yaml
+otlphttp:
+    endpoint: https://<your apica endpoint>
+    encoding: json
+    compression: gzip
+    headers:
+      Authorization: "Bearer <token string goes here>"
+    tls:
+      insecure: false
+      insecure_skip_verify: true
+```
+
+{% hint style="info" %}
+Encoding type must be JSON for logs and traces. We currently only support protobuf encoding for metrics. When using metrics\_endpoint with proto encoding, remove the compression setting.
+{% endhint %}
+
+### Prometheus remote write exporter
 
 Prometheus Remote Write Exporter can be used to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/)
 
@@ -20,7 +34,7 @@ Apica Ascent implements a Prometheus remote write backend so metric data from op
 
 Enable the _prometheusremorewrite_ exporter in your open telemetry configuration yaml
 
-```
+```yaml
 exporters:
   prometheusremotewrite:
 ```
@@ -28,7 +42,14 @@ exporters:
 Specify the Apica Ascent cluster endpoint to send the remote write data. Apica Ascent implements automatic retention tiering to object storage for all your opentelemetry metrics data giving you infinite retention and scale with zero storage overheads as your metrics needs grow.
 
 ```
-endpoint: "https://<apica-ascent-endpoint>/api/v1/receive"
+endpoint: "https://<apica-ascent-endpoint>/v1/receive/prometheus"
+```
+
+The endpoint is authenticated and requires bearer token to be sent as part of the request
+
+```yaml
+headers:
+  Authorization: "Bearer <token string goes here"  
 ```
 
 Here's a full configuration example below with TLS enabled.
@@ -37,10 +58,12 @@ Here's a full configuration example below with TLS enabled.
 if you are using OpenTelemetry on AWS, remove the "wal:" section below
 {% endhint %}
 
-```
+```yaml
 exporters:
   prometheusremotewrite:
-    endpoint: "https://<apica-ascent-endpoint>/api/v1/receive"
+    endpoint: "https://<apica-ascent-endpoint>/v1/receive/prometheus"
+    headers:
+      Authorization: "Bearer <token string goes here>"
     wal: # Enabling the Write-Ahead-Log for the exporter.
       directory: ./prom_rw # The directory to store the WAL in
       buffer_size: 100 # Optional count of elements to be read from the WAL before truncating; default of 300
@@ -90,41 +113,6 @@ service:
          receivers: [prometheus]          
 ```
 
-### OpenTelemetry Logs and Traces
-
-Apica Ascent supports ingesting Logs and Traces using OpenTelementry agents and collectors. We also maintain compatibility with Jaeger agent and collectors for ingesting logs and traces. This provides broad support for anyone with existing Jaeger agents and collectors deployed as well as someone wanting to adopt the emerging OpenTelemetry standard.
-
-See below for an example of configuring OpenTelemetry collector to push logs and traces to Apica Ascent
-
-```
-receivers:
-  otlp:
-    protocols:
-      grpc:
-
-exporters:
-  logging:
-
-  jaeger:
-    endpoint: <apica-ascent-endpoint>:14250
-    tls:
-      insecure: true
-
-processors:
-  batch:
-
-extensions:
-  health_check:
-
-service:
-  extensions: [health_check]
-  pipelines:
-    traces:
-      receivers: [otlp]
-      processors: [batch]
-      exporters: [logging, jaeger]
-```
-
 ### Language Integrations
 
 #### Java
@@ -137,9 +125,9 @@ The Jar file can be found here - [https://github.com/open-telemetry/opentelemetr
 the Prometheus metrics options create a pull metric instance that should be scraped by an external Prometheus compatible instance
 {% endhint %}
 
-<table><thead><tr><th width="273.3437417078941" align="right">JAVA_OPTS</th><th align="center">Value</th><th align="center">Notes</th></tr></thead><tbody><tr><td align="right">otel.service_name</td><td align="center">&#x3C;User defined></td><td align="center">Give a service name to group your OpenTelemetry data traces under this service name</td></tr><tr><td align="right">otel.traces.exporter</td><td align="center">jaeger</td><td align="center"></td></tr><tr><td align="right">otel.exporter.jaeger.endpoint</td><td align="center">http://&#x3C;Apica Ascent ENDPOINT>:14250</td><td align="center">Apica Ascent OpenTelemetry traces endpoint</td></tr><tr><td align="right"></td><td align="center">https://&#x3C;Apica Ascent ENDPOINT>:14250</td><td align="center">TLS must be enabled on the collector port on the Apica Ascent server</td></tr><tr><td align="right">javaagent</td><td align="center">&#x3C;PATH TO JAR>/opentelemetry-javaagent.jar</td><td align="center">OpenTelemetry agent Jar file</td></tr><tr><td align="right">otel.metrics.exporter</td><td align="center">prometheus</td><td align="center"></td></tr><tr><td align="right">otel.exporter.prometheus.port</td><td align="center"></td><td align="center">Default port is 9464</td></tr><tr><td align="right">otel.exporter.prometheus.host</td><td align="center"></td><td align="center">Default is 0.0.0.0</td></tr></tbody></table>
+<table><thead><tr><th width="273.3437417078941" align="right">JAVA_OPTS</th><th align="center">Value</th><th align="center">Notes</th></tr></thead><tbody><tr><td align="right">otel.service_name</td><td align="center">&#x3C;User defined></td><td align="center">Give a service name to group your OpenTelemetry data traces under this service name</td></tr><tr><td align="right">otel.traces.exporter</td><td align="center">otlp</td><td align="center"></td></tr><tr><td align="right">otel.exporter.otlp.endpoint</td><td align="center">https://&#x3C;Apica Ascent ENDPOINT></td><td align="center">Apica Ascent OpenTelemetry endpoint</td></tr><tr><td align="right">javaagent</td><td align="center">&#x3C;PATH TO JAR>/opentelemetry-javaagent.jar</td><td align="center">OpenTelemetry agent Jar file</td></tr><tr><td align="right">otel.metrics.exporter</td><td align="center">prometheus</td><td align="center"></td></tr><tr><td align="right">otel.exporter.prometheus.port</td><td align="center"></td><td align="center">Default port is 9464</td></tr><tr><td align="right">otel.exporter.prometheus.host</td><td align="center"></td><td align="center">Default is 0.0.0.0</td></tr></tbody></table>
 
-<pre class="language-shell" data-overflow="wrap" data-line-numbers><code class="lang-shell">$> java -javaagent:opentelemetry-javaagent.jar -Dotel.exporter.otlp.certificate=./ca.crt -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=<a data-footnote-ref href="#user-content-fn-1">https</a>://$APICA_ASCENT_SERVER:14250 -Dotel.metrics.exporter=none -Dotel.service-name=java-petclinic-sample-app -Dotel.exporter.logging.prefix -jar -Djava.util.logging.config.file=logging.properties target/spring-petclinic-2.7.0-SNAPSHOT.jar --server.port=8080
+<pre class="language-shell" data-overflow="wrap" data-line-numbers><code class="lang-shell">$> java -javaagent:opentelemetry-javaagent.jar -Dotel.exporter.otlp.certificate=./ca.crt -Dotel.traces.exporter=otlp -Dotel.exporter.otlp.endpoint=<a data-footnote-ref href="#user-content-fn-1">https</a>://$APICA_ASCENT_SERVER -Dotel.metrics.exporter=none -Dotel.service-name=java-petclinic-sample-app -Dotel.exporter.logging.prefix -jar -Djava.util.logging.config.file=logging.properties target/spring-petclinic-2.7.0-SNAPSHOT.jar --server.port=8080
 </code></pre>
 
 {% hint style="info" %}
