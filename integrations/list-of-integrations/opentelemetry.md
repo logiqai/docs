@@ -146,8 +146,4 @@ docker run --name petclinic -d -p 8080:8080 -e LOGIQ_SERVER=mylogiqip.example.co
 ```
 {% endcode %}
 
-{% hint style="warning" %}
-Make sure your Apica Ascent server is running and port 14250 is reachable
-{% endhint %}
-
 [^1]: TLS Enabled, Use http if TLS is not enabled.
