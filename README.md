@@ -14,5 +14,5 @@ description: All the docs for setting up, configuring, and optimizing the Apica 
 
 ### Monitoring and Performance
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><a href="infra-and-application-monitoring/prometheus/"><strong>Monitoring Overview</strong></a></td><td></td><td></td></tr><tr><td><a href="log-management/log-management-overview.md"><strong>Log Management</strong></a></td><td></td><td></td></tr><tr><td><a href="distributed-tracing/overview.md"><strong>Distributed Tracing</strong></a></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><a href="infra-and-application-monitoring/prometheus/"><strong>Monitoring Overview</strong></a></td><td></td><td></td></tr><tr><td><a href="log-management/log-management-overview.md"><strong>Log Management</strong></a></td><td></td><td></td></tr><tr><td><a href="distributed-tracing/overview.md"><strong>Distributed Tracing</strong></a></td><td></td><td></td></tr><tr><td><a href="https://app.gitbook.com/o/-LmzGjHypGkPBzYc0fF0/s/-LmzGprckLqwd5v6bs6m/~/changes/1296/boomi-rto-quick-start-guide">Boomi RTO Quick Start Guide</a></td><td></td><td></td></tr></tbody></table>
 
