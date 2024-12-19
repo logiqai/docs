@@ -15,7 +15,7 @@ To share a search result, do the following:
 
 ![](<../.gitbook/assets/image (99).png>)
 
-![](<../.gitbook/assets/image (54).png>)
+![](<../.gitbook/assets/image (54) (1).png>)
 
 You can now share this URL in any way you please. Those who access this URL will be able to view and sort through the search results you shared.
 
@@ -27,4 +27,4 @@ You can now share this URL in any way you please. Those who access this URL will
 
 Apica Ascent saves shared searches for quick access in the search bar under **Favorites**. You can access **Favorites** by clicking the **Show Favorites** button in the search bar.
 
-![](<../.gitbook/assets/image (11) (1) (1).png>)
+![](<../.gitbook/assets/image (11) (1) (1) (1).png>)

@@ -13,18 +13,18 @@ Add SAML **Metadata URL, Entity ID, NameID Format.**
 
 Check below for specific [steps for your Identity provider](single-sign-on-configuration.md#idp-configuration)
 
-![Apica Ascent (Service Provider) configuration](../.gitbook/assets/screencapture-lq8311-logiq-ai-settings-general-2024-08-27-16\_28\_55.png)
+![Apica Ascent (Service Provider) configuration](../.gitbook/assets/screencapture-lq8311-logiq-ai-settings-general-2024-08-27-16_28_55.png)
 
 If user-groups are configured on the IDP side, create the identical user groups in Apica Ascent. This can be done by clicking on the "_Settings"_ menu and going to the Groups tab. This example shows creating the "NonAdmin" user group.
 
-![](../.gitbook/assets/screencapture-lq8311-logiq-ai-groups-2024-08-27-16\_29\_19.png)
+![](../.gitbook/assets/screencapture-lq8311-logiq-ai-groups-2024-08-27-16_29_19.png)
 
 \
 This concludes the Apica Ascent side configuration.
 
 Logout as Apica Ascent admin. On the login screen, the "SAML Login" Button should be available to login with the user's SSO credentials. By clicking the button browser is redirected to the IDP screen where the user can log in using its IDP credentials.
 
-![](../.gitbook/assets/screencapture-lq8311-logiq-ai-login-2024-08-27-16\_29\_35.png)
+![](../.gitbook/assets/screencapture-lq8311-logiq-ai-login-2024-08-27-16_29_35.png)
 
 ## IDP configuration
 
@@ -127,7 +127,7 @@ Click on "Add custom SAML app"
 
 Fill in the "App details"
 
-![](<../.gitbook/assets/image (65).png>)
+![](<../.gitbook/assets/image (65) (1).png>)
 
 Download the Idp Metadata file and host the file in a publicly accessible location like AWS S3.
 

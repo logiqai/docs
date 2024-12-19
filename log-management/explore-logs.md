@@ -27,19 +27,19 @@ On the Search Tab, you can:
 * Create a Report
 * Export data
 
-![Search Tab](<../.gitbook/assets/image (41).png>)
+![Search Tab](<../.gitbook/assets/image (41) (1).png>)
 
 Clicking on the individual log line reveals a detailed log view with additional attributes.
 
-![](<../.gitbook/assets/image (63).png>)
+![](<../.gitbook/assets/image (63) (1).png>)
 
 The dots available on the individual log line and the detailed view will reveal additional options. These options are discussed in the detail in the **Data Management** section.
 
 ### Searching Logs
 
-The search happens at the namespace level, select the namespace and applications, and enter the search term to get started. Use the Advanced Search modal to create complex search expressions. Click on the lens<img src="../.gitbook/assets/image (46).png" alt="" data-size="line">icon to open the Advanced Search modal.
+The search happens at the namespace level, select the namespace and applications, and enter the search term to get started. Use the Advanced Search modal to create complex search expressions. Click on the lens<img src="../.gitbook/assets/image (46) (1).png" alt="" data-size="line">icon to open the Advanced Search modal.
 
-![Advanced Search](<../.gitbook/assets/image (32).png>)
+![Advanced Search](<../.gitbook/assets/image (32) (1).png>)
 
 ### Filter data
 

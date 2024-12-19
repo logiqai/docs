@@ -38,7 +38,7 @@ management.endpoints.web.exposure.include=health,info,prometheus
 
 Restart the server and navigate to `http://localhost:<port>/actuator/` to verify if the Actuator endpoints are enabled.
 
-![Actuator Endpoints](<../../../.gitbook/assets/image (37).png>)
+![Actuator Endpoints](<../../../.gitbook/assets/image (37) (1).png>)
 
 Navigate to `http://localhost:<port>/actuator/prometheus` and verify if your Prometheus metrics are being displayed.
 
@@ -46,13 +46,13 @@ Navigate to `http://localhost:<port>/actuator/prometheus` and verify if your Pro
 
 ### Enable API Timings
 
-Micrometer comes with a [timed annotation](https://micrometer.io/docs/concepts#\_the\_timed\_annotation). Annotate Spring Controller methods with the`@Timed`annotation, as shown below.
+Micrometer comes with a [timed annotation](https://micrometer.io/docs/concepts#_the_timed_annotation). Annotate Spring Controller methods with the`@Timed`annotation, as shown below.
 
 ![](<../../../.gitbook/assets/image (109).png>)
 
 Restart the server, invoke your APIs a few times and navigate to `http://localhost:<port>/actuator/prometheus`. You will now see the API stats being displayed along with other metrics.
 
-![](<../../../.gitbook/assets/image (57).png>)
+![](<../../../.gitbook/assets/image (57) (1).png>)
 
 Once these metrics are available, you can use Apica Ascent to visualize them and set up alerts for important events. The following image depicts an example of Spring Boot monitoring dashboard built by visualizing metrics ingested into Apica Ascent via Prometheus.
 
