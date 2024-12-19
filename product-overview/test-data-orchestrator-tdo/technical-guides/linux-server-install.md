@@ -34,11 +34,11 @@ Next, you will need to edit files using the vi command (_vi_ _filename_ to enter
 
 ·       Save file after editing.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>start.sh before editing</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (5).png" alt=""><figcaption><p>start.sh before editing</p></figcaption></figure>
 
 ·       Edit run.sh – remove the first five lines.  The file should now start with the line ‘ echo "killing " $(jps -mlV | grep PropertiesLauncher) ‘.  Save file after editing.
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>run.sh before editing</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (5).png" alt=""><figcaption><p>run.sh before editing</p></figcaption></figure>
 
 ·       Run: _cd engine_   to change to the appdir/engine subdirectory.
 

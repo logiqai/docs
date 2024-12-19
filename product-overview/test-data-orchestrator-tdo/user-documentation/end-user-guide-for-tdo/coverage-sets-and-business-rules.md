@@ -22,7 +22,7 @@ The lock prevents another user from selecting this coverage set while you are us
 
 &#x20;&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Coverage set selection screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (18) (2).png" alt=""><figcaption><p>Coverage set selection screen</p></figcaption></figure>
 
 &#x20;To remove a lock you have placed, hover to the right of the coverage set.  You will see an icon that looks like a blue key with a line through it.  Click on that icon to remove the lock.  Only someone who is authorized to remove the lock will see this icon.
 

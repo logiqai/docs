@@ -28,7 +28,7 @@ On the login screen, enter your user and password and click the LOGIN button.
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Orson TDO Login Screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (14) (2).png" alt=""><figcaption><p>Orson TDO Login Screen</p></figcaption></figure>
 
 ### &#x20;Working With the Menu
 
@@ -36,7 +36,7 @@ On the login screen, enter your user and password and click the LOGIN button.
 
 You will see the initial splash screen.  The menu is accessed by clicking on the three stacked horizontal bars (‘burger menu’) in the upper left hand corner.
 
-<figure><img src="../../../../.gitbook/assets/image (15).png" alt=""><figcaption><p>Orson TDO Initial Splash Screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (15) (2).png" alt=""><figcaption><p>Orson TDO Initial Splash Screen</p></figcaption></figure>
 
 &#x20;
 
@@ -58,7 +58,7 @@ Click on ‘Projects’ under the Project section of the menu to open the Projec
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Main Menu</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (16) (2).png" alt=""><figcaption><p>Main Menu</p></figcaption></figure>
 
 &#x20;
 
@@ -70,7 +70,7 @@ If you don’t see the project name you believe you should have access to, pleas
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Project selection screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (17) (2).png" alt=""><figcaption><p>Project selection screen</p></figcaption></figure>
 
 &#x20;
 

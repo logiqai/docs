@@ -40,7 +40,7 @@ Right-click the windows icon in your taskbar and select ‘Terminal’.
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Windows Terminal selection</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (2).png" alt=""><figcaption><p>Windows Terminal selection</p></figcaption></figure>
 
 &#x20;
 
@@ -56,13 +56,13 @@ java -jar orson-data-extractor.jar -gui  \<Enter>
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption><p>TDX start command</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (3).png" alt=""><figcaption><p>TDX start command</p></figcaption></figure>
 
 This will open the TDX application.
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>TDX Application</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (2).png" alt=""><figcaption><p>TDX Application</p></figcaption></figure>
 
 &#x20;
 

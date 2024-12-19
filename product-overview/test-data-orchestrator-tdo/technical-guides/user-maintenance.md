@@ -30,7 +30,7 @@ To navigate to the User Maintenance screen, on the menu navigate down to the ‘
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>User Maintenance Screen (Admin view)</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (4).png" alt=""><figcaption><p>User Maintenance Screen (Admin view)</p></figcaption></figure>
 
 &#x20;
 
@@ -38,7 +38,7 @@ To create a new user, click the “+” sign in the bottom right corner of the s
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Create User Screen</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (3).png" alt=""><figcaption><p>Create User Screen</p></figcaption></figure>
 
 &#x20;
 
@@ -78,7 +78,7 @@ Navigate to the user you want to delete, and click the checkbox to the left of t
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Deleting a User</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p>Deleting a User</p></figcaption></figure>
 
 &#x20;
 
@@ -86,7 +86,7 @@ Click on the trash can icon to delete the user you have selected.  A warning box
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Confirmation message pop-up</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (4).png" alt=""><figcaption><p>Confirmation message pop-up</p></figcaption></figure>
 
 &#x20;
 
@@ -112,7 +112,7 @@ If you are a User changing your own password, your User Maintenance screen will 
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>User Maintenance Screen (User view)</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (2).png" alt=""><figcaption><p>User Maintenance Screen (User view)</p></figcaption></figure>
 
 &#x20;
 
@@ -120,7 +120,7 @@ You will only see your ID on this screen, and you will only see the pencil icon 
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>Edit User Screen</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (3).png" alt=""><figcaption><p>Edit User Screen</p></figcaption></figure>
 
 ### Updating project access
 
@@ -140,7 +140,7 @@ To update project access, navigate to the ‘User Maintenance + LDAP’ section 
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>Project Access Screen</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (3).png" alt=""><figcaption><p>Project Access Screen</p></figcaption></figure>
 
 &#x20;
 

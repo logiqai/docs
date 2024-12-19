@@ -300,6 +300,14 @@
 * [Rule Packs](logiq-events/rule-packs.md)
 * [AI-powered Search](logiq-events/ai-powered-search.md)
 
+***
+
+* [BOOMI RTO QUICK START GUIDE](boomi-rto-quick-start-guide/README.md)
+  * [Overview](boomi-rto-quick-start-guide/overview.md)
+  * [Dashboarding](boomi-rto-quick-start-guide/dashboarding.md)
+  * [Alerting on Metrics](boomi-rto-quick-start-guide/alerting-on-metrics.md)
+  * [Alerting on Logs](boomi-rto-quick-start-guide/alerting-on-logs.md)
+
 ## API
 
 * [Query API](api/historical-data.md)

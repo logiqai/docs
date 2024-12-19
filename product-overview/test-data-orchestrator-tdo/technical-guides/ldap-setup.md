@@ -42,7 +42,7 @@ The screen looks like this:
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption><p>LDAP Setup Window</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (2).png" alt=""><figcaption><p>LDAP Setup Window</p></figcaption></figure>
 
 &#x20;
 
