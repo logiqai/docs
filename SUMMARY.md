@@ -146,7 +146,8 @@
   * [Splunk Heavy Forwarder](integrations/list-of-integrations/splunk-heavy-forwarder.md)
   * [SNMP](integrations/list-of-integrations/snmp.md)
   * [Splunk Forwarding Proxy](integrations/list-of-integrations/splunk-forwarding-proxy.md)
-  * [Vault](integrations/list-of-integrations/vault.md)
+  * [Vault](integrations/list-of-integrations/vault/README.md)
+    * [Metrics configuration](integrations/list-of-integrations/vault/metrics-configuration.md)
 
 ## Dashboards
 
