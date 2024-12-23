@@ -2,8 +2,6 @@
 
 ## Configuring Vault for Dev Mode and Audit Log Ingestion into Apica Ascent in OCI.
 
-###
-
 {% embed url="https://github.com/ApicaSystem/ApicaHub/tree/b263b6febab876f358aa05b7ec47b23dca0cac3f/integrations/vault/logs" %}
 Configuration files
 {% endembed %}
