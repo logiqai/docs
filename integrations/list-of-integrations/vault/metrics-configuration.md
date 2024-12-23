@@ -1,7 +1,5 @@
 # Metrics configuration
 
-##
-
 {% embed url="https://github.com/ApicaSystem/ApicaHub/tree/b263b6febab876f358aa05b7ec47b23dca0cac3f/integrations/vault/metrics" %}
 Configuration files
 {% endembed %}
