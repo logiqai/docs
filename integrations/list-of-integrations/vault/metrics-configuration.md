@@ -1,8 +1,10 @@
 # Metrics configuration
 
-{% file src="../../../.gitbook/assets/vault_metrics.zip" %}
-The zip file contains the vault metrics configs for otel
-{% endfile %}
+##
+
+{% embed url="https://github.com/ApicaSystem/ApicaHub/tree/b263b6febab876f358aa05b7ec47b23dca0cac3f/integrations/vault/metrics" %}
+Configuration files
+{% endembed %}
 
 ## Ingest Vault Metrics Configuration with OpenTelemetry (Otel) and Apica Ascent
 

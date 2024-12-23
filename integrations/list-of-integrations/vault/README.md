@@ -2,9 +2,11 @@
 
 ## Configuring Vault for Dev Mode and Audit Log Ingestion into Apica Ascent in OCI.
 
-{% file src="../../.gitbook/assets/vault_logs.zip" %}
-This zip file includes yaml files for this configuration
-{% endfile %}
+###
+
+{% embed url="https://github.com/ApicaSystem/ApicaHub/tree/b263b6febab876f358aa05b7ec47b23dca0cac3f/integrations/vault/logs" %}
+Configuration files
+{% endembed %}
 
 ### Step 1: Create a Namespace for Vault
 
