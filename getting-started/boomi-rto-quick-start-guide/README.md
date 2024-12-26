@@ -1,4 +1,5 @@
 ---
+icon: ring
 layout:
   title:
     visible: true
@@ -12,5 +13,5 @@ layout:
     visible: true
 ---
 
-# BOOMI RTO QUICK START GUIDE
+# Boomi RTO Quick Start Guide
 

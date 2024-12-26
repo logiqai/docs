@@ -54,6 +54,11 @@
   * [Deploying Apica Ascent EKS with AWS ALB](getting-started/logiq-paas-deployment/deploying-logiq-eks-with-aws-alb.md)
   * [Deploying Apica Ascent PaaS in Azure Kubernetes Service](getting-started/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
     * [Azure Blob Storage Lifecycle Management](getting-started/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
+* [Boomi RTO Quick Start Guide](getting-started/boomi-rto-quick-start-guide/README.md)
+  * [Overview](getting-started/boomi-rto-quick-start-guide/overview.md)
+  * [Dashboarding](getting-started/boomi-rto-quick-start-guide/dashboarding.md)
+  * [Alerting on Metrics](getting-started/boomi-rto-quick-start-guide/alerting-on-metrics.md)
+  * [Alerting on Logs](getting-started/boomi-rto-quick-start-guide/alerting-on-logs.md)
 
 ## DATA SOURCES
 
@@ -301,14 +306,6 @@
 * [Alerts On Logs](logiq-events/alerts-1.md)
 * [Rule Packs](logiq-events/rule-packs.md)
 * [AI-powered Search](logiq-events/ai-powered-search.md)
-
-***
-
-* [BOOMI RTO QUICK START GUIDE](boomi-rto-quick-start-guide/README.md)
-  * [Overview](boomi-rto-quick-start-guide/overview.md)
-  * [Dashboarding](boomi-rto-quick-start-guide/dashboarding.md)
-  * [Alerting on Metrics](boomi-rto-quick-start-guide/alerting-on-metrics.md)
-  * [Alerting on Logs](boomi-rto-quick-start-guide/alerting-on-logs.md)
 
 ## API
 
