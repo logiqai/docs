@@ -55,10 +55,9 @@
   * [Deploying Apica Ascent PaaS in Azure Kubernetes Service](getting-started/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
     * [Azure Blob Storage Lifecycle Management](getting-started/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
 * [Boomi RTO Quick Start Guide](getting-started/boomi-rto-quick-start-guide/README.md)
-  * [Overview](getting-started/boomi-rto-quick-start-guide/overview.md)
-  * [Dashboarding](getting-started/boomi-rto-quick-start-guide/dashboarding.md)
-  * [Alerting on Metrics](getting-started/boomi-rto-quick-start-guide/alerting-on-metrics.md)
-  * [Alerting on Logs](getting-started/boomi-rto-quick-start-guide/alerting-on-logs.md)
+  * [RTO Dashboarding](getting-started/boomi-rto-quick-start-guide/rto-dashboarding.md)
+  * [Alerting on RTO Metrics](getting-started/boomi-rto-quick-start-guide/alerting-on-rto-metrics.md)
+  * [Alerting on RTO Logs](getting-started/boomi-rto-quick-start-guide/alerting-on-rto-logs.md)
 
 ## DATA SOURCES
 
