@@ -102,7 +102,7 @@ It is recommended that you use Chrome to run TDO.  If your organization does not
 
 ·       Placement of Installation Packages – it is suggested that the TDO and Mongo packages be placed just below the application directory.
 
-·       iptables – enable port forwarding from 80/443 to 8080/8443. Instructions are found at[https://app.gitbook.com/o/-LmzGjHypGkPBzYc0fF0/s/vu0ZexrMB2Aau7bhSXs2/technical-guides/ip-forwarding-instructions-linux](broken-reference) .
+·       iptables – enable port forwarding from 80/443 to 8080/8443. Instructions are found at [https://docs.apica.io/product-overview/test-data-orchestrator-tdo/technical-guides/ip-forwarding-instructions-linux](https://docs.apica.io/product-overview/test-data-orchestrator-tdo/technical-guides/ip-forwarding-instructions-linux).
 
 #### &#x20;On Windows:
 
