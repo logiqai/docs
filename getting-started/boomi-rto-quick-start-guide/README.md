@@ -52,8 +52,8 @@ Monitor critical Boomi metrics such as CPU utilization, process failures, and JV
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Out of the box alerts on metrics AND Logs (Multiple Head Nodes, Container Version Mismatch, etc)</p></figcaption></figure>
 
-Additional RTO content links:
+**Additional RTO content links:**
 
-* Creating RTO dashboards
-* Alerting on RTO metrics
-* Alerting on RTO logs
+* [Creating RTO dashboards](rto-dashboarding.md)
+* [Alerting on RTO metrics](alerting-on-rto-metrics.md)
+* [Alerting on RTO logs](alerting-on-rto-logs.md)
