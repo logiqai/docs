@@ -157,7 +157,7 @@
 
 * [Dashboards & Visualizations](dashboards/overview.md)
 * [Create Your First Dashboard](dashboards/create-your-first-dashboard.md)
-* [Building auto-refreshing Dashboard](dashboards/building-auto-refreshing-dashboard.md)
+* [Build an auto-refreshing Dashboard](dashboards/building-auto-refreshing-dashboard.md)
 * [Adding widgets to the Dashboard](dashboards/adding-widgets-to-the-dashboard.md)
 * [Using Pre-defined Dashboards](dashboards/using-pre-defined-dashboards.md)
 * [Import Grafana Dashboards](dashboards/import-grafana-dashboards.md)
