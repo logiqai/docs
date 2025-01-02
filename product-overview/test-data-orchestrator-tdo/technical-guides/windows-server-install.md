@@ -8,13 +8,9 @@ You can install TDO on-premises on a fixed server, on your internal cloud, or on
 
 Before beginning the installation, follow the hardware and software requirements guide to make sure that you have the right configuration and software needed for your selected operating system.
 
-&#x20;
-
 ### TDO Installation Packages&#x20;
 
 **Download software**
-
-&#x20;
 
 The software can be downloaded from the following location:
 
@@ -24,9 +20,9 @@ Ignite: [https://storeage.googleapis.com/ci-pub/ignite.zip](https://storeage.goo
 
 TDX: [https://storage.googleapis.com/data\_extractor/orson-data-extractor.jar](https://storage.googleapis.com/data_extractor/orson-data-extractor.jar)
 
-**Preparation**
 
-&#x20;
+
+**Preparation**
 
 Read the installation instructions before beginning installation.
 
@@ -84,15 +80,9 @@ The files to be modified are:
 
 Go to the appdir/Ignite/bin folder and right-click on ‘ignite.cmd’.  Select OPEN to run the file.  This will open a new command window.  Wait for Ignite to start (about 15 seconds).
 
-&#x20;
-
 Navigate back to appdir.  Right-click on start.cmd and select OPEN.  this will open two command windows, for the engine and api.  Wait for both windows to open.
 
-&#x20;
-
 In appdir, right click on stop.cmd and select OPEN.  This should cause the engine and api command windows to close.
-
-&#x20;
 
 Once both windows are closed, run start.cmd again.  Once the engine and api windows are open and running, you are ready to begin working with TDO.
 
@@ -104,15 +94,13 @@ You will first need to set up an admin ID to allow initial testing and user main
 
 To create the initial ID, open a new tab in Chrome and go to http://\<IP\_of\_your\_server>:8080/ui/public/signup.
 
-For example, you would enter: [http://35.214.52.73:8080/ui/public/signup](http://35.214.52.73:8080/ui/public/signup).
+For example, you would enter: [http://52.175.86.43:8080/ui/public/signup](http://35.214.52.73:8080/ui/public/signup).
 
-&#x20;If you have https enabled, then this would be forwarded to port 8443 instead of 8080, and it would look like this: :[https://35.214.52.73:443/ui/public/signup](https://35.214.52.73/ui/public/signup).
+&#x20;If you have https enabled, then this would be forwarded to port 8443 instead of 8080, and it would look like this: :[https://](https://35.214.52.73/ui/public/signup)[52.175.86.43](http://35.214.52.73:8080/ui/public/signup)[:443/ui/public/signup](https://35.214.52.73/ui/public/signup).
 
 &#x20;If you are running TDO on a remote desktop/virtual server and accessing it from that same server, your url would look like this:  [http://localhost:8080/ui/public/signup](http://localhost:8080/public/signup).
 
-If you are running TDO on a remote desktop/virtual server and accessing it from your desktop, you would use the server name instead of the IP address and your url would look like this: [http://csc2cxn00004025.apica.com:8080/ui/public/signup](http://csc2cxn00004025.apica.com:8080/ui/public/signup) .
-
-&#x20;
+If you are running TDO on a remote desktop/virtual server and accessing it from your desktop, you would use the server name instead of the IP address and your url would look like this: [http://abc2xyz00004025.apica.com:8080/ui/public/signup](http://csc2cxn00004025.apica.com:8080/ui/public/signup) .
 
 &#x20;
 
@@ -123,8 +111,6 @@ If you are running TDO on a remote desktop/virtual server and accessing it from 
 ·       Once you have logged in, you can create new users in the User Management section of the tool.  See the ‘User Maintenance’ section of this on-line manual for detailed instructions.
 
 ·       While TDO can be set up with LDAP authentication, it cannot be done until at least one project is created.  We do not recommend LDAP setup during a Proof of Concept/Proof of Technology evaluation as this process requires coordination with your network, AD, and/or security teams and can take several weeks to complete.
-
-### &#x20;
 
 ### Upgrade Instructions
 
@@ -142,33 +128,19 @@ Before beginning the upgrade, stop TDO by running the stop.cmd script in the app
 
 **File properties**
 
-&#x20;
-
 You will need to modify properties the same files as during the initial install.  Follow the instructions for this in the initial installation section
 
 &#x20;
 
 **Starting the application**
 
-&#x20;
-
 You will not need to restart Ignite if you did not stop it as part of the uprade.  To restart Ignite,  go to the appdir/Ignite/bin folder and right-click on ‘ignite.cmd’.  Select OPEN to run the file.  This will open a new command window.  Wait for Ignite to start (about 15 seconds).
-
-&#x20;
 
 Navigate back to appdir.  Right-click on start.cmd and select OPEN.  this will open two command windows, for the engine and api.  Wait for both windows to open.
 
-&#x20;
-
 In appdir, right click on stop.cmd and select OPEN.  This should cause the engine and api command windows to close.
 
-&#x20;
-
-Once both windows are closed, run start.cmd again.  Once the engine and api windows are open and running, you are ready to begin working with TDO.
-
-&#x20;
-
-&#x20;&#x20;
+Once both windows are closed, run start.cmd again.  Once the engine and api windows are open and running, you are ready to begin working with TDO. &#x20;
 
 ### Browser Information
 
