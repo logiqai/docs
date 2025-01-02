@@ -22,7 +22,7 @@ TDO:  [https://storage.googleapis.com/ci-pub/tdo-repo.zip](https://storage.googl
 
 Ignite: [https://storeage.googleapis.com/ci-pub/ignite.zip](https://storeage.googleapis.com/ci-pub/ignite.zip)
 
-TDX:&#x20;
+TDX: [https://storage.googleapis.com/data\_extractor/orson-data-extractor.jar](https://storage.googleapis.com/data_extractor/orson-data-extractor.jar)
 
 **Preparation**
 
