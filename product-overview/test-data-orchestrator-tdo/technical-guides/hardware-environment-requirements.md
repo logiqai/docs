@@ -34,6 +34,8 @@ Interactions
 
 ### Hardware:
 
+#### Windows / Linux / Unix
+
 ·       16 vCPUs (x86\_64/amd64)
 
 ·       32 GB of RAM
@@ -44,9 +46,19 @@ Interactions
 
 ·       A static IP address
 
-&#x20;
+#### &#x20;AWS
 
-### Operating System:
+* Proof of Concept: EC2 - t3 - large
+* Pilot: EC2 - t4g - xlarge
+
+#### Azure
+
+* B series
+* 16GB RAM
+* 2 - 3 VCPU
+* 100 - 200 GB SSD
+
+### Operating System
 
 #### Linux:
 
@@ -102,7 +114,7 @@ It is recommended that you use Chrome to run TDO.  If your organization does not
 
 ·       Placement of Installation Packages – it is suggested that the TDO and Mongo packages be placed just below the application directory.
 
-·       iptables – enable port forwarding from 80/443 to 8080/8443. Instructions are found at [https://docs.apica.io/product-overview/test-data-orchestrator-tdo/technical-guides/ip-forwarding-instructions-linux](https://docs.apica.io/product-overview/test-data-orchestrator-tdo/technical-guides/ip-forwarding-instructions-linux).
+·       iptables – enable port forwarding from 80/443 to 8080/8443. Instructions are found at [https://docs.apica.io/product-overview/test-data-orchestrator-tdo/technical-guides/ip-forwarding-instructions-linux](https://docs.apica.io/product-overview/test-data-orchestrator-tdo/technical-guides/ip-forwarding-instructions-linux) .
 
 #### &#x20;On Windows:
 
