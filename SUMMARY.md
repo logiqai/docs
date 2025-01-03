@@ -38,9 +38,10 @@
 
 ## GETTING STARTED
 
+* [Getting Started with Ascent](getting-started/logiq-saas/README.md)
+  * [Getting Started with Metrics](getting-started/logiq-saas/getting-started-with-metrics.md)
 * [Ascent Deployment Overview](getting-started/ascent-deployment-overview.md)
 * [Quickstart with Docker-Compose](getting-started/quickstart-with-docker-compose.md)
-* [Cloud - SaaS Deployment](getting-started/logiq-saas.md)
 * [On-Premise PaaS deployment](getting-started/logiq-paas-deployment/README.md)
   * [On-Premise PaaS Deployment Architecture](getting-started/logiq-paas-deployment/paas-deployment-architecture.md)
   * [Deploying Apica Ascent PaaS on Kubernetes](getting-started/logiq-paas-deployment/k8s-quickstart-guide.md)

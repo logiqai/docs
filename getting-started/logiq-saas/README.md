@@ -2,9 +2,9 @@
 icon: cloud
 ---
 
-# Cloud - SaaS Deployment
+# Getting Started with Ascent
 
-[https://www.apica.io/get-started-apica](https://www.apica.io/get-started-apica)Apica Ascent SaaS enables you to converge all of your IT data from disparate sources, manage your logs, and monitor, analyse, and troubleshoot your IT environment in real-time at infinite scale - without the need to manage or scale the underlying infrastructure or storage.
+Apica Ascent SaaS enables you to converge all of your IT data from disparate sources, manage your logs, and monitor, analyse, and troubleshoot your IT environment in real-time at infinite scale - without the need to manage or scale the underlying infrastructure or storage. THIS GUIDE ASSUMES THAT YOU HAVE SIGNED UP FOR APICA ASCENT. IF YOU ARE NOT A REGISTERED USER, PLEASE FOLLOW THE STEPS BELOW.
 
 ## Signing up for Apica Ascent SaaS
 
@@ -23,7 +23,7 @@ If you haven't signed up for Apica Ascent SaaS, do the following.
 
 This completes the sign-up process. We'll send your Apica Ascent account credentials to your registered email shortly after you sign up.
 
-## Accessing your Apica Ascent SaaS instance
+## GETTING STARTED - Logging into Apica Ascent SaaS
 
 To access your Apica Ascent SaaS instance, do the following.
 
@@ -33,15 +33,15 @@ To access your Apica Ascent SaaS instance, do the following.
 
 You'll now have access to and can interact with the Apica Ascent UI.
 
-<figure><img src="../.gitbook/assets/Screen Shot 2024-01-21 at 5.03.07 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screen Shot 2024-01-21 at 5.03.07 AM.png" alt=""><figcaption></figcaption></figure>
 
 ## What's next?
 
 Now that you have access to the Apica Ascent UI, you can go ahead and:
 
-* [ ] [Get acquainted with the Apica Ascent UI](../product-overview/the-logiq-ui.md)
-* [ ] [Configure your data sources](../integrations/overview/)
-* [ ] [Configure Apica Ascent to send alerts to your email server](../logiq-ui-configuration/email-configuration-setup.md)
-* [ ] [Add and configure alert destinations like email, Slack, and PagerDuty](../integrations/list-of-integrations/alert-destinations.md)
-* [ ] [Configure SSO using SAML](../logiq-ui-configuration/single-sign-on-configuration.md)
-* [ ] [Configure RBAC](../log-management/configuring-rbac.md)
+* [ ] [Get acquainted with the Apica Ascent UI](../../product-overview/the-logiq-ui.md)
+* [ ] [Configure your data sources](../../integrations/overview/)
+* [ ] [Configure Apica Ascent to send alerts to your email server](../../logiq-ui-configuration/email-configuration-setup.md)
+* [ ] [Add and configure alert destinations like email, Slack, and PagerDuty](../../integrations/list-of-integrations/alert-destinations.md)
+* [ ] [Configure SSO using SAML](../../logiq-ui-configuration/single-sign-on-configuration.md)
+* [ ] [Configure RBAC](../../log-management/configuring-rbac.md)
