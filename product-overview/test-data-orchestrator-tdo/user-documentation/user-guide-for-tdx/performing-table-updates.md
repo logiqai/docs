@@ -28,9 +28,7 @@ In TDX, select a table from the DB Tables section.  It can be on either the avai
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (62).png" alt=""><figcaption><p>Selecting a table to update</p></figcaption></figure>
-
-&#x20;
+<figure><img src="../../../../.gitbook/assets/update page.png" alt=""><figcaption><p>Selecting a table to update</p></figcaption></figure>
 
 A dialog box ‘Update \<database\_name>.\<table\_name> using Data Block’ will pop up.  (See screen print below for examples of all entries.)
 
@@ -46,12 +44,10 @@ Click the checkbox for the primary key.  (Note that you can update a field ident
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (63).png" alt=""><figcaption><p>Table update window - sample entries</p></figcaption></figure>
-
-&#x20;
+<figure><img src="../../../../.gitbook/assets/table info.png" alt=""><figcaption><p>Table update window - sample entries</p></figcaption></figure>
 
 Click ‘OK’ to process the update, or ‘Cancel’ to exit out of the window without updating.  When the update is complete, the update window will close, and a message will pop up.  If an error occurs, an error message will populate to inform you of the error.
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (64).png" alt=""><figcaption><p>Table update completed message</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/update complete.png" alt=""><figcaption><p>Table update completed message</p></figcaption></figure>
