@@ -37,7 +37,12 @@ You'll now have access to and can interact with the Apica Ascent UI.
 
 ## What's next?
 
-Now that you have access to the Apica Ascent UI, you can go ahead and:
+Now that you have access to the Apica Ascent UI, you can go start ingesting Metrics and Logs:
+
+* [Getting Started with Metrics](getting-started-with-metrics.md)
+* [Getting Started with Logs](getting-started-with-logs.md)
+
+Here are helpful links to other "Getting Started" technical guides:
 
 * [ ] [Get acquainted with the Apica Ascent UI](../../product-overview/the-logiq-ui.md)
 * [ ] [Configure your data sources](../../integrations/overview/)
