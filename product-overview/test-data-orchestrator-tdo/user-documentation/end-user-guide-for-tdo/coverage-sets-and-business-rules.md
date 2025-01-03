@@ -154,7 +154,7 @@ Click on this box to generate the Coverage Matrix.  You will get a message telli
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Create Coverage Matrix dialog box</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption><p>Coverage Matrix dialog box</p></figcaption></figure>
 
 In this case, our three Business Rules will generate 37 tests with unique combinations of determining attributes.  Click ‘OK’ to generate the matrix.  If you want to go back and edit the rules to increase or decrease the number of unique combinations, click ‘Cancel’.
 
