@@ -7,3 +7,9 @@ TDO calculates exactly what you need to test, and then generates everything you 
 TDO puts the data in DevOps and enables Continuous Delivery by automating the slowest activities in the testing lifecycle. By shrink-wrapping test data and test preparation Agile teams can now fit robust testing in-Sprint, instead of accumulating Testing Debt – making Testing truly Continuous, and completing automation of the Delivery Pipeline.&#x20;
 
 TDO is provided as an On-Premises software subscription.
+
+Documentation is divided into three (3) areas:
+
+* [Technical Guides](technical-guides/)
+* [User Documentation](user-documentation/)
+* [Release Notes](release-notes.md)
