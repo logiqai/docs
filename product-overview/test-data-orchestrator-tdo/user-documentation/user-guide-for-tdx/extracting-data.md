@@ -24,9 +24,11 @@ Before we start working with tables it is important to understand that when you 
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (48).png" alt=""><figcaption><p>Table search by key word</p></figcaption></figure>
+&#x20;
 
-&#x20;Now you can select the list of fields you want to include in your extract.  Note that you don’t need to include all the fields in the selected tables but only those fields you need to populate the output data file(s) in TDO.  Use the right (>) and left (<) arrows to select/remove the fields from the right-hand side of the window.
+<figure><img src="../../../../.gitbook/assets/tables.png" alt=""><figcaption><p>Table Search by Key Word</p></figcaption></figure>
+
+Now you can select the list of fields you want to include in your extract.  Note that you don’t need to include all the fields in the selected tables but only those fields you need to populate the output data file(s) in TDO.  Use the right (>) and left (<) arrows to select/remove the fields from the right-hand side of the window.
 
 &#x20;This is how the list should look after fields are selected:
 
@@ -96,9 +98,7 @@ Once all these items are filled in, your screen will look similar to this:
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (53).png" alt=""><figcaption><p>Completed data extract profile</p></figcaption></figure>
-
-&#x20;
+<figure><img src="../../../../.gitbook/assets/full profile.png" alt=""><figcaption><p>Completed Data Extract Profile</p></figcaption></figure>
 
 Before extracting, it is recommended that you save this profile so that you can reload it when needed.
 
@@ -136,11 +136,9 @@ o   Go back into TDO and check your business rules to make sure that the data is
 
 o   In TDX, look at your rules.  If necessary, remove the bad rule and create a new one.
 
-&#x20;
+&#x20;&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (56).png" alt=""><figcaption><p>Extract expected vs. actual</p></figcaption></figure>
-
-&#x20;
+<figure><img src="../../../../.gitbook/assets/out.png" alt=""><figcaption><p>Extract : Expected vs. Actual</p></figcaption></figure>
 
 You will also notice that at the bottom of the log, the datablock name (that you defined) is shown as uploaded to TDO, and the url for the selected TDO instance is also shown.
 
