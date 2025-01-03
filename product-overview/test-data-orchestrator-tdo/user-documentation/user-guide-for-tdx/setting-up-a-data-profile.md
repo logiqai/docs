@@ -24,9 +24,9 @@ ID has access to in the left side of the ‘DB Tables’ section when the connec
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (42).png" alt=""><figcaption><p>Database connection </p></figcaption></figure>
-
 &#x20;
+
+<figure><img src="../../../../.gitbook/assets/db connect.png" alt=""><figcaption><p>Database connection</p></figcaption></figure>
 
 ### Saving a Profile
 
@@ -68,9 +68,9 @@ Click on your profile name to select it and click ‘Open’.
 
 TDX will prompt you to enter the User ID and password for the database.
 
-<figure><img src="../../../../.gitbook/assets/image (44).png" alt=""><figcaption><p>Open profile dialog</p></figcaption></figure>
-
 &#x20;
+
+<figure><img src="../../../../.gitbook/assets/conn3.png" alt=""><figcaption><p>Opem Profile Dialog</p></figcaption></figure>
 
 ### Setting up an Extract Profile
 
@@ -90,7 +90,7 @@ Here is an example of the coverage matrix retrieval URL:
 
 &#x20;
 
-[http://35.214.71.106:8080/core/1.0/API/project/payments\_demo/1.0/datablocks/payments\_coverage/1.0/](http://35.214.71.106:8080/core/1.0/API/project/payments_demo/1.0/datablocks/payments_coverage/1.0/)
+[http://52.512.68.75:8080/core/1.0/API/project/payments\_demo/1.0/datablocks/payments\_coverage/1.0/](http://35.214.71.106:8080/core/1.0/API/project/payments_demo/1.0/datablocks/payments_coverage/1.0/)
 
 &#x20;
 
