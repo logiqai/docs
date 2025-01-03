@@ -41,6 +41,7 @@
 * [Getting Started with Ascent](getting-started/logiq-saas/README.md)
   * [Getting Started with Metrics](getting-started/logiq-saas/getting-started-with-metrics.md)
   * [Getting Started with Logs](getting-started/logiq-saas/getting-started-with-logs.md)
+  * [Getting Started - Metrics](getting-started/logiq-saas/getting-started-metrics.md)
 * [Ascent Deployment Overview](getting-started/ascent-deployment-overview.md)
 * [Quickstart with Docker-Compose](getting-started/quickstart-with-docker-compose.md)
 * [On-Premise PaaS deployment](getting-started/logiq-paas-deployment/README.md)
