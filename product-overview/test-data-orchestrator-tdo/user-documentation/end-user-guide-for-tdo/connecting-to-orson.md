@@ -14,13 +14,13 @@ The URL for accessing TDO will look like one of these examples:
 
 &#x20;
 
-[http://35.214.52.73:8080/ui/public/login](http://35.214.52.73:8080/ui/public/login)  (using server IP address)
+http:// 52.314.86.41:8080/ui/public/login (using server IP address)&#x20;
 
-[https://35.214.52.73:443/ui/public/login](https://35.214.52.73/ui/public/login)  (with https enabled)
+https:// 52.314.86.41:443/ui/public/login  (with https enabled)
 
-[http://localhost:8080/ui/public/login](http://localhost:8080/ui/public/login)   (using a remote desktop for using TDO)
+http://localhost:8080/ui/public/login   (using a remote desktop for using TDO)
 
-[http://csc2cxn00004025.apica.com:8080/ui/public/login](http://csc2cxn00004025.apica.com:8080/ui/public/login) (where TDO is installed on a VM)
+http://abcxyz00004025.apica.com:8080/ui/public/login (where TDO is installed on a VM)
 
 &#x20;
 
