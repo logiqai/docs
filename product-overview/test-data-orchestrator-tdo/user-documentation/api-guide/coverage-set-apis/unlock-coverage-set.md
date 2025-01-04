@@ -4,7 +4,7 @@ Once you are finished working in a coverage set, you should release the lock so 
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (38).png" alt=""><figcaption><p>Unlock coverage set API call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (73).png" alt=""><figcaption><p>Unlock coverage set API call</p></figcaption></figure>
 
 &#x20;
 
@@ -38,7 +38,7 @@ The return message will show the lock attributes removed from the coverage set (
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (39).png" alt=""><figcaption><p>Return message showing lock removed</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (74).png" alt=""><figcaption><p>Return message showing lock removed</p></figcaption></figure>
 
 &#x20;
 
@@ -46,4 +46,4 @@ When viewed in TDO, the ‘locked by’ column is now blank for this coverage se
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (40).png" alt=""><figcaption><p>TDO screen showing lock removed</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (75).png" alt=""><figcaption><p>TDO screen showing lock removed</p></figcaption></figure>

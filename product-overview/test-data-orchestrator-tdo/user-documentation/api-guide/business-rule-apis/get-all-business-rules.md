@@ -4,7 +4,7 @@ This API returns details on all rules within a single coverage set.  It is sent 
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (55).png" alt=""><figcaption><p>URL for Get All Rules call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (90).png" alt=""><figcaption><p>URL for Get All Rules call</p></figcaption></figure>
 
 &#x20;The body of the call looks like the body of the ‘Get Rule Details’ call.
 
@@ -42,10 +42,10 @@ This API returns details on all rules within a single coverage set.  It is sent 
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (56).png" alt=""><figcaption><p>Results for Get All Rules</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (91).png" alt=""><figcaption><p>Results for Get All Rules</p></figcaption></figure>
 
 This coverage set now contains three rules; the information on all three is included above.  In TDO, the three rules are also shown.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (57).png" alt=""><figcaption><p>Rules in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (92).png" alt=""><figcaption><p>Rules in TDO</p></figcaption></figure>

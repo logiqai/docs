@@ -4,7 +4,7 @@ This call will delete the coverage set from the project.  The header is the same
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (41).png" alt=""><figcaption><p>Delete coverage set API </p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (76).png" alt=""><figcaption><p>Delete coverage set API </p></figcaption></figure>
 
 &#x20;The body is the same as the simple body API calls; just credentials and project information.
 
@@ -36,7 +36,7 @@ This API will delete the ‘api\_demo\_coverage 1.0’ coverage set.  The return
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (42).png" alt=""><figcaption><p>Delete coverage set return message</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (77).png" alt=""><figcaption><p>Delete coverage set return message</p></figcaption></figure>
 
 &#x20;
 
@@ -44,6 +44,6 @@ In TDO, the coverage set main page now shows that ‘api\_demo\_coverage 1.0’ 
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (43).png" alt=""><figcaption><p>TDO coverage set listing showing target set removed</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (78).png" alt=""><figcaption><p>TDO coverage set listing showing target set removed</p></figcaption></figure>
 
 Remember only users with administrator credentials can delete objects in TDO.

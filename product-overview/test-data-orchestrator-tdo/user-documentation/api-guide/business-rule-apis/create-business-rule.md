@@ -12,7 +12,7 @@ The call for creating the business rule is a POST call.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (44).png" alt=""><figcaption><p>Create business rule API</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (79).png" alt=""><figcaption><p>Create business rule API</p></figcaption></figure>
 
 &#x20;
 
@@ -76,13 +76,13 @@ When the rule is created, the return message shows the rule ID as well as the co
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (45).png" alt=""><figcaption><p>Return message business rule created</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (80).png" alt=""><figcaption><p>Return message business rule created</p></figcaption></figure>
 
 Looking at the business rules in this coverage set in TDO, you can see that the rule was set.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Simple business rule contents in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (81).png" alt=""><figcaption><p>Simple business rule contents in TDO</p></figcaption></figure>
 
 &#x20;
 
@@ -94,7 +94,7 @@ For this call, we will use the coverage set ‘api\_demo\_coverage 1.1’.  This
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Coverage set contents in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (82).png" alt=""><figcaption><p>Coverage set contents in TDO</p></figcaption></figure>
 
 &#x20;
 
@@ -156,11 +156,11 @@ The response to this call will show all of the attributes you defined in the bod
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (48).png" alt=""><figcaption><p>Return message for complex rule creation</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (83).png" alt=""><figcaption><p>Return message for complex rule creation</p></figcaption></figure>
 
 &#x20;The business rule now shows in TDO.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (49).png" alt=""><figcaption><p>Complex business rule after creation</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (84).png" alt=""><figcaption><p>Complex business rule after creation</p></figcaption></figure>
 

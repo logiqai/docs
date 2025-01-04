@@ -35,4 +35,4 @@ By default the ALB will be configured to used port 80
 
 If you want to route traffic on https(port:443), ensure your listener rules are configured on port 443. As a prerequisite, your global accelerator should have all the certificates configured for this to work. Please refer to the AWS documentation on <mark style="color:blue;">how to configure HTTPS -</mark> [<mark style="color:blue;">https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html</mark>](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html)
 
-![](<../../.gitbook/assets/image (86).png>)
+![](<../../.gitbook/assets/image (86) (1).png>)

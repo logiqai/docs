@@ -4,7 +4,7 @@ This call is used to obtain details on a single coverage set.  This call is sent
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (32).png" alt=""><figcaption><p>Call to get single coverage set details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Call to get single coverage set details</p></figcaption></figure>
 
 &#x20;&#x20;
 
@@ -38,4 +38,4 @@ The return message contains details only for the requested coverage set.
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Return message showing details on a single coverage set</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (68).png" alt=""><figcaption><p>Return message showing details on a single coverage set</p></figcaption></figure>

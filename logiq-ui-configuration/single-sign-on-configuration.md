@@ -119,11 +119,11 @@ Assign the users to the Application or group such as `NonAdmin` in this example 
 
 Navigate to Admin Console and go to the "Web and mobile apps" section
 
-![](<../.gitbook/assets/image (101).png>)
+![](<../.gitbook/assets/image (101) (1).png>)
 
 Click on "Add custom SAML app"
 
-![](<../.gitbook/assets/image (88).png>)
+![](<../.gitbook/assets/image (88) (1).png>)
 
 Fill in the "App details"
 
@@ -147,7 +147,7 @@ In the attributes section, either map a "Google Directory attributes" or Group m
 
 SAML app by default is disabled in Google, enable it and wait for a few minutes and try logging in.
 
-![](<../.gitbook/assets/image (87).png>)
+![](<../.gitbook/assets/image (87) (1).png>)
 
 Next head over to the Apica Ascent SAML configuration screen in the settings. Select "SAML Enabled", and fill in the details.
 

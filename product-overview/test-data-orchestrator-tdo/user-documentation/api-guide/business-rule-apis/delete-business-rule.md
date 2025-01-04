@@ -42,10 +42,10 @@ For this call, we are sending the ID for the third rule in the ‘Get All Detail
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (58).png" alt=""><figcaption><p>Results of delete rule API</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (93).png" alt=""><figcaption><p>Results of delete rule API</p></figcaption></figure>
 
 &#x20; Viewing the business rules in TDO after this call is sent, you can see that the third business rule is no longer present.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (59).png" alt=""><figcaption><p>Rule deleted from TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (94).png" alt=""><figcaption><p>Rule deleted from TDO</p></figcaption></figure>

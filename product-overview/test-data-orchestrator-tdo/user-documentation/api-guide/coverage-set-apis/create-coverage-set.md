@@ -4,7 +4,7 @@ The first action to take on coverage sets is to create a new coverage set.  This
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Create coverage set API call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (56).png" alt=""><figcaption><p>Create coverage set API call</p></figcaption></figure>
 
 &#x20;
 
@@ -56,7 +56,7 @@ When this is run, a successful return message will show the return code (200) as
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Create coverage set return message</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (57).png" alt=""><figcaption><p>Create coverage set return message</p></figcaption></figure>
 
 &#x20;&#x20;
 
@@ -64,4 +64,4 @@ When the coverage set is viewed in the TDO UI, you can see the determining attri
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Coverage set contents in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (58).png" alt=""><figcaption><p>Coverage set contents in TDO</p></figcaption></figure>

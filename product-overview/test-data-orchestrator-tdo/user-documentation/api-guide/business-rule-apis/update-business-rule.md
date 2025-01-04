@@ -4,7 +4,7 @@ This is a PATCH call as opposed to a POST call.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (50).png" alt=""><figcaption><p>Update business rule API call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (85).png" alt=""><figcaption><p>Update business rule API call</p></figcaption></figure>
 
 &#x20;&#x20;
 
@@ -68,7 +68,7 @@ The return message shows the values that were sent.
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (51).png" alt=""><figcaption><p>Update business rule return message</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (86).png" alt=""><figcaption><p>Update business rule return message</p></figcaption></figure>
 
 &#x20;
 
@@ -76,4 +76,4 @@ In TDO the rule now reflects the new values for ‘has\_online’ and ‘currenc
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (52).png" alt=""><figcaption><p>Updated business rule in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (87).png" alt=""><figcaption><p>Updated business rule in TDO</p></figcaption></figure>

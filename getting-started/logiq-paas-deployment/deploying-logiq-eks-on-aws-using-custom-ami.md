@@ -58,17 +58,17 @@ Before you begin, ensure you have the following prerequisites.
 **Important:** You **MUST** choose 2 different subnets from the same VPC.
 {% endhint %}
 
-![](<../../.gitbook/assets/image (78).png>)
+![](<../../.gitbook/assets/image (78) (1).png>)
 
 The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.
 
 <table><thead><tr><th width="216.5557129983348">Node group</th><th width="275.2866694599267">Instance size (min recommended)</th><th>Nodes (HA)</th></tr></thead><tbody><tr><td><strong>ingest</strong></td><td>c5.xlarge (4 Core 8 GB RAM)</td><td>2</td></tr><tr><td><strong>common</strong></td><td>c5.2xlarge (8 Core 32 GB RAM)</td><td>2</td></tr></tbody></table>
 
-![](<../../.gitbook/assets/image (105).png>)
+![](<../../.gitbook/assets/image (105) (1).png>)
 
 **Step 5:** Provide the **S3 bucket name** from **section 3,** the Cloudformation will create the S3 bucket, S3 bucket name needs to be globally unique.
 
-![](<../../.gitbook/assets/image (73).png>)
+![](<../../.gitbook/assets/image (73) (1).png>)
 
 **Step 6:** Provide the KMS key ARN
 

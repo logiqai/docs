@@ -13,7 +13,7 @@ To share a search result, do the following:
 3. Toggle the **Share** button to generate a shareable URL.
 4. Copy and store the generated URL for future use.
 
-![](<../.gitbook/assets/image (99).png>)
+![](<../.gitbook/assets/image (99) (1).png>)
 
 ![](<../.gitbook/assets/image (54) (1).png>)
 

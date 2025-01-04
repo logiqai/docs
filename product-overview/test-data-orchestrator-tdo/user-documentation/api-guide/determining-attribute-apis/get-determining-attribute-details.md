@@ -14,7 +14,7 @@ For returning details on all determining attributes, the API call is defined as 
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (13).png" alt=""><figcaption><p>URL for determining attribute details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (48).png" alt=""><figcaption><p>URL for determining attribute details</p></figcaption></figure>
 
 &#x20;
 
@@ -48,7 +48,7 @@ The response in Postman shows the details for all determining attributes in this
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Return messge with all attribute details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (49).png" alt=""><figcaption><p>Return messge with all attribute details</p></figcaption></figure>
 
 &#x20;
 
@@ -60,7 +60,7 @@ We will use the first determining attribute (‘has\_app’) for the single dete
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (15).png" alt=""><figcaption><p>URL for single determining attribute details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (50).png" alt=""><figcaption><p>URL for single determining attribute details</p></figcaption></figure>
 
 &#x20;
 
@@ -94,4 +94,4 @@ And here you can see that the return message only has the details on the determi
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Return message with single attribute details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (51).png" alt=""><figcaption><p>Return message with single attribute details</p></figcaption></figure>

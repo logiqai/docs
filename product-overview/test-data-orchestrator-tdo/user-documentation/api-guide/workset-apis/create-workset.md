@@ -4,7 +4,7 @@ This is sent as a POST call.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (60).png" alt=""><figcaption><p>Create workset API</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (95).png" alt=""><figcaption><p>Create workset API</p></figcaption></figure>
 
 &#x20;The body of the call to create a workset with two data views is shown below. Note that the ‘data views’ section of the entity portion of the body is an array and needs to follow JSON formatting rules for an entity.
 
@@ -114,7 +114,7 @@ The return message shows the status of the call as well as the details of the wo
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (61).png" alt=""><figcaption><p>Create workset return message (successful)</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (96).png" alt=""><figcaption><p>Create workset return message (successful)</p></figcaption></figure>
 
 &#x20;
 
@@ -122,4 +122,4 @@ The created workset can now be viewed in the worksets page of TDO.  When you ent
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (62).png" alt=""><figcaption><p>New workset shown in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (97).png" alt=""><figcaption><p>New workset shown in TDO</p></figcaption></figure>

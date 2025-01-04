@@ -6,7 +6,7 @@ Note that the header is slightly different (it includes the command ‘lock’ i
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Lock coverage set call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (69).png" alt=""><figcaption><p>Lock coverage set call</p></figcaption></figure>
 
 &#x20;&#x20;
 
@@ -40,7 +40,7 @@ The return message contains all of the details.  Highlighted below is the sectio
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (35).png" alt=""><figcaption><p>Lock coverage set return message - successfu;</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (70).png" alt=""><figcaption><p>Lock coverage set return message - successfu;</p></figcaption></figure>
 
 &#x20;
 
@@ -48,7 +48,7 @@ In TDO, the lock can be seen on the main coverage set page; the ID of the user w
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (36).png" alt=""><figcaption><p>Coverage set lock shown in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (71).png" alt=""><figcaption><p>Coverage set lock shown in TDO</p></figcaption></figure>
 
 &#x20;
 
@@ -56,4 +56,4 @@ If you try to place a lock, and the coverage set is already locked by a differen
 
 
 
-<figure><img src="../../../../../.gitbook/assets/image (37).png" alt=""><figcaption><p>Error message - coverage set already locked</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (72).png" alt=""><figcaption><p>Error message - coverage set already locked</p></figcaption></figure>

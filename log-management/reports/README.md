@@ -63,7 +63,7 @@ Following aggregation operators are available.
 
 Saved reports can be accessed from the Queries Page. If the query is running, this page will show the progress.&#x20;
 
-![](<../../.gitbook/assets/image (95).png>)
+![](<../../.gitbook/assets/image (95) (1).png>)
 
 Click on any report to view the results. Click on the toggle to enable periodic refresh.
 

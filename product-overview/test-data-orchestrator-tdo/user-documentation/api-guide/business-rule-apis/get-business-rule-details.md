@@ -4,7 +4,7 @@ This API gets details on a single business rule in a coverage set.  It is sent a
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (53).png" alt=""><figcaption><p>Get business rule details call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (88).png" alt=""><figcaption><p>Get business rule details call</p></figcaption></figure>
 
 &#x20;
 
@@ -46,4 +46,4 @@ The return message on this API gives all details on the specified rule, includin
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (54).png" alt=""><figcaption><p>Return message showing business rule details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (89).png" alt=""><figcaption><p>Return message showing business rule details</p></figcaption></figure>

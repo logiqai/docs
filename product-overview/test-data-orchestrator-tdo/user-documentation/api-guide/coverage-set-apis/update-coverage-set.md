@@ -8,7 +8,7 @@ This API is sent as a ‘PATCH’ to update an existing coverage set.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Update coverage set call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (59).png" alt=""><figcaption><p>Update coverage set call</p></figcaption></figure>
 
 &#x20;&#x20;
 
@@ -68,13 +68,13 @@ When this is run, the successful return message will show all attributes in the 
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Successful return message</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (60).png" alt=""><figcaption><p>Successful return message</p></figcaption></figure>
 
 This shows the updated coverage set in TDO.  Note that the updated set is now version 1.1 (the original version still exists with 4 attributes) and contains all six attributes sent in the API. TDO increments the version upwards automatically, so the user should not manually update or increment versions.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Updated coverage set contents</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (61).png" alt=""><figcaption><p>Updated coverage set contents</p></figcaption></figure>
 
 &#x20;
 
@@ -132,13 +132,13 @@ The return message will show the updated contents, as well as the new ID for the
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Updated coverage set with 'balance' attribute removed</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (62).png" alt=""><figcaption><p>Updated coverage set with 'balance' attribute removed</p></figcaption></figure>
 
 When viewing version 1.2 in the TDO UI, the ‘balance’ determining attribute is now removed.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (28).png" alt=""><figcaption><p>Updated coverage set contents in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (63).png" alt=""><figcaption><p>Updated coverage set contents in TDO</p></figcaption></figure>
 
 &#x20;
 
@@ -146,4 +146,4 @@ All three versions of the coverage set remain in TDO and can be selected and use
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Updated coverage set list</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (64).png" alt=""><figcaption><p>Updated coverage set list</p></figcaption></figure>

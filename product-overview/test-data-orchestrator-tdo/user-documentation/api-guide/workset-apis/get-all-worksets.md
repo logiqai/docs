@@ -4,7 +4,7 @@ This call returns a list of all of the worksets in any given project.  It is POS
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (66).png" alt=""><figcaption><p>Get all worksets API call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (101).png" alt=""><figcaption><p>Get all worksets API call</p></figcaption></figure>
 
 &#x20;The body for this call is very simple, containing only the user credentials and the project name.
 
@@ -36,4 +36,4 @@ When run, the return message shows all of the worksets in this project.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Return message (successful) showing all worksets</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (102).png" alt=""><figcaption><p>Return message (successful) showing all worksets</p></figcaption></figure>

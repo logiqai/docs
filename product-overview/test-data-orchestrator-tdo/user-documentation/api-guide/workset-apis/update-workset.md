@@ -4,7 +4,7 @@ This API is used to update worksets, either by changing the datablock underlying
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (63).png" alt=""><figcaption><p>Update workset API call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (98).png" alt=""><figcaption><p>Update workset API call</p></figcaption></figure>
 
 &#x20;There is one difference between the body of the ‘create’ and ‘update’ calls.  The first is that the initial part of the ‘entity’ section \[defines the workset name, the primary data view, and underlying coverage set] is replaced by a single line, ‘id’, that contains the TDO id for the workset being upated.  This id can be found in the return message of the create, get all, and get details APIs.
 
@@ -110,10 +110,10 @@ The return message contains the information on what was sent to TDO, including t
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (64).png" alt=""><figcaption><p>Update workset return message (successful)</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (99).png" alt=""><figcaption><p>Update workset return message (successful)</p></figcaption></figure>
 
 Looking at the workset in TDO, we can see the changes that were made to the workset.  The version has incremented to 1.1, the file for ‘cust\_data\_view’ has changed, and the ‘clh\_view’ has been added to the workset.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (65).png" alt=""><figcaption><p>Updated workset showing changes in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (100).png" alt=""><figcaption><p>Updated workset showing changes in TDO</p></figcaption></figure>

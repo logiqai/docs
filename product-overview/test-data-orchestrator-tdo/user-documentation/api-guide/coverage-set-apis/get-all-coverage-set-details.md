@@ -4,7 +4,7 @@ This call is also sent as ‘POST’.  It will return information on all coverag
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (30).png" alt=""><figcaption><p>Get all coverage sets call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (65).png" alt=""><figcaption><p>Get all coverage sets call</p></figcaption></figure>
 
 &#x20;&#x20;
 
@@ -40,4 +40,4 @@ The return message contains the details for all coverage sets in this project (t
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Return message with details on all coverage sets</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (66).png" alt=""><figcaption><p>Return message with details on all coverage sets</p></figcaption></figure>
