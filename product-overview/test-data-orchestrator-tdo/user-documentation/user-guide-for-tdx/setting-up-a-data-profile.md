@@ -48,7 +48,7 @@ Saved profiles make loading work easier, as you do not need to remember the data
 
 Note that TDX does not save the User ID or password in the profile; you will need to provide this each time you load a profile.
 
-<figure><img src="../../../../.gitbook/assets/image (43).png" alt=""><figcaption><p>File dialog box</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (43) (2).png" alt=""><figcaption><p>File dialog box</p></figcaption></figure>
 
 &#x20;
 
@@ -116,7 +116,7 @@ To confirm that the connection to the coverage matrix is established, look in th
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (45).png" alt=""><figcaption><p>Coverage matrix attributes populated in drow-down box</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (45) (3).png" alt=""><figcaption><p>Coverage matrix attributes populated in drow-down box</p></figcaption></figure>
 
 
 
@@ -128,4 +128,4 @@ On the bottom row, enter the project name, project version, and data block name 
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Identifying target project, version, and data block name</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (46) (2).png" alt=""><figcaption><p>Identifying target project, version, and data block name</p></figcaption></figure>

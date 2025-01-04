@@ -16,7 +16,7 @@ Before we start working with tables it is important to understand that when you 
 
 &#x20;To remove a table from the selection list, click the ‘<’ button.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Selecting database tables</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (47) (2).png" alt=""><figcaption><p>Selecting database tables</p></figcaption></figure>
 
 &#x20;You can also search for a table name, in the field above the list of tables, start to type the name of the table (or a word in the table name).  This list of tables displayed will be reduced to only those that match what you have typed in.
 
@@ -34,7 +34,7 @@ Now you can select the list of fields you want to include in your extract.  Note
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (49).png" alt=""><figcaption><p>Field selection block</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (49) (2).png" alt=""><figcaption><p>Field selection block</p></figcaption></figure>
 
 &#x20;Note that tables and fields will only show in one list – available (left) or selected (right).
 
@@ -58,7 +58,7 @@ Available operators are = (equal), <> (not equal), > (greater than), < (less tha
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (50).png" alt=""><figcaption><p>Matching fields to criteria - selecting the field</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (50) (2).png" alt=""><figcaption><p>Matching fields to criteria - selecting the field</p></figcaption></figure>
 
 &#x20;
 
@@ -66,7 +66,7 @@ You can add one or more rules.  You must use at least one rule but are not requi
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (51).png" alt=""><figcaption><p>Sample rules for data extract</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (51) (2).png" alt=""><figcaption><p>Sample rules for data extract</p></figcaption></figure>
 
 &#x20;
 
@@ -80,7 +80,7 @@ If you are extracting from two or more tables, TDX needs to know how those table
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (52).png" alt=""><figcaption><p>Example of table join criteria</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (52) (2).png" alt=""><figcaption><p>Example of table join criteria</p></figcaption></figure>
 
 &#x20;
 
@@ -108,7 +108,7 @@ When you are ready to extract, click the ‘Extract Data’ button.  A progress 
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (54).png" alt=""><figcaption><p>Extract complete message</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (54) (2).png" alt=""><figcaption><p>Extract complete message</p></figcaption></figure>
 
 &#x20;&#x20;
 
@@ -116,7 +116,7 @@ Before going to TDO to view use the extracted data, you can view the run data in
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (55).png" alt=""><figcaption><p>Generated SQL query in terminal window</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (55) (2).png" alt=""><figcaption><p>Generated SQL query in terminal window</p></figcaption></figure>
 
 This shows the generated SQL query that was executed.
 

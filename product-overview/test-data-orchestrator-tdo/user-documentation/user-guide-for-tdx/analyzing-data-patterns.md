@@ -20,7 +20,7 @@ If only one field is selected for profiling, you will only see ‘Create profili
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (57).png" alt=""><figcaption><p>Data profiling pop-up</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (57) (2).png" alt=""><figcaption><p>Data profiling pop-up</p></figcaption></figure>
 
 &#x20;
 
@@ -32,7 +32,7 @@ You can remove an attribute from the profile by removing the blue check on the l
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (58).png" alt=""><figcaption><p>Profiling conditions window</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (58) (2).png" alt=""><figcaption><p>Profiling conditions window</p></figcaption></figure>
 
 The ‘Range’ column will populate with NA for non-numerical fields and will have ‘Range’ for numerical fields.  Click on ‘Range’ in that column to define the range.
 
@@ -42,7 +42,7 @@ The ‘Range setup’ window will open.  You can automatically generate a range 
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (59).png" alt=""><figcaption><p>Range setup - auto generated</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (59) (2).png" alt=""><figcaption><p>Range setup - auto generated</p></figcaption></figure>
 
 &#x20;
 
@@ -62,7 +62,7 @@ Note that you must define a range for each numerical field before beginning the 
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (60).png" alt=""><figcaption><p>Range setup - manually defined or loaded from saved profile</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (60) (2).png" alt=""><figcaption><p>Range setup - manually defined or loaded from saved profile</p></figcaption></figure>
 
 &#x20;
 
@@ -98,7 +98,7 @@ If you select saving as a JSON file, you can navigate to the file in file explor
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (61).png" alt=""><figcaption><p>JSON profile output</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (61) (3).png" alt=""><figcaption><p>JSON profile output</p></figcaption></figure>
 
 &#x20;
 

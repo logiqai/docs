@@ -12,7 +12,7 @@ TDO features a microservices event driven architecture.
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (65).png" alt=""><figcaption><p>TDO Architecture</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (65) (2).png" alt=""><figcaption><p>TDO Architecture</p></figcaption></figure>
 
 &#x20;
 

@@ -60,7 +60,7 @@ You will need to modify properties for several files.  To modify the properties,
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption><p>Properties Wwindow</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (18) (2).png" alt=""><figcaption><p>Properties Wwindow</p></figcaption></figure>
 
 &#x20;
 

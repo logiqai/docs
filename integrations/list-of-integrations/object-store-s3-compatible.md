@@ -28,4 +28,4 @@ By default, the s3 compat ingest plugin will pull all your files under the prefi
 
 S3 Compat will push all your files to a separate bucket before deleting them from the source bucket. To configure a bucket for taking a backup, you should provide the name of the bucket in the **destination bucket** form field in the input plugin modal. The files will be stored with the structure used in the source bucket.\\
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Taking backup logs in a separate bucket</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67) (1).png" alt=""><figcaption><p>Taking backup logs in a separate bucket</p></figcaption></figure>

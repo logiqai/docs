@@ -22,13 +22,13 @@ The lock prevents another user from selecting this coverage set while you are us
 
 &#x20;&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (18) (2).png" alt=""><figcaption><p>Coverage set selection screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (18) (2) (1).png" alt=""><figcaption><p>Coverage set selection screen</p></figcaption></figure>
 
 &#x20;To remove a lock you have placed, hover to the right of the coverage set.  You will see an icon that looks like a blue key with a line through it.  Click on that icon to remove the lock.  Only someone who is authorized to remove the lock will see this icon.
 
 &#x20;&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (19).png" alt=""><figcaption><p>Coverage set lock</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (19) (2).png" alt=""><figcaption><p>Coverage set lock</p></figcaption></figure>
 
 ### &#x20;Creating a New Business Rule       &#x20;
 
@@ -36,7 +36,7 @@ Click on ‘Business Rules’ in the Coverage Engine section of the menu to disp
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Business Rules main screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (20) (2).png" alt=""><figcaption><p>Business Rules main screen</p></figcaption></figure>
 
 &#x20;
 
@@ -48,7 +48,7 @@ To add a new rule, click on the blue plus (‘+’) sign in the lower right corn
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (21).png" alt=""><figcaption><p>Create Business Rule window</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (21) (2).png" alt=""><figcaption><p>Create Business Rule window</p></figcaption></figure>
 
 
 
@@ -68,7 +68,7 @@ On the left-hand side of the window is the list of determining attributes that h
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Example of attribute values</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (22) (2).png" alt=""><figcaption><p>Example of attribute values</p></figcaption></figure>
 
 &#x20;
 
@@ -88,7 +88,7 @@ In the picture below, the values for ‘customer\_type’, ‘account\_type’, 
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Business Rule in progress</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (23) (2).png" alt=""><figcaption><p>Business Rule in progress</p></figcaption></figure>
 
 &#x20;
 
@@ -96,13 +96,13 @@ Once you have finished assigning at least one value to each attribute, scroll to
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Set / Cancel buttons</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (24) (2).png" alt=""><figcaption><p>Set / Cancel buttons</p></figcaption></figure>
 
 &#x20;This is the Business Rule page with the new rule that was just created.
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (25).png" alt=""><figcaption><p>New Business Rule added</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (25) (2).png" alt=""><figcaption><p>New Business Rule added</p></figcaption></figure>
 
 ### &#x20;Editing a Business Rule
 
@@ -110,7 +110,7 @@ Hover your mouse to the right of the business rule you want to edit and a blue p
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Create Business Rule screen in Edit mode</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (26) (2).png" alt=""><figcaption><p>Create Business Rule screen in Edit mode</p></figcaption></figure>
 
 &#x20;
 
@@ -134,7 +134,7 @@ Click on ‘SET’ to save your changes.
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Saving edited business rule</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (27) (2).png" alt=""><figcaption><p>Saving edited business rule</p></figcaption></figure>
 
 &#x20;
 
@@ -146,7 +146,7 @@ The next step is to generate the Coverage Matrix.  This is a list of all the uni
 
 In the upper right corner of the Business Rules screen there is a blue box with a white grid.
 
-<figure><img src="../../../../.gitbook/assets/image (28).png" alt=""><figcaption><p>Create Coverage Matrix grid location</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (28) (2).png" alt=""><figcaption><p>Create Coverage Matrix grid location</p></figcaption></figure>
 
 &#x20;
 
@@ -154,7 +154,7 @@ Click on this box to generate the Coverage Matrix.  You will get a message telli
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption><p>Coverage Matrix dialog box</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (71).png" alt=""><figcaption><p>Coverage Matrix dialog box</p></figcaption></figure>
 
 In this case, our three Business Rules will generate 37 tests with unique combinations of determining attributes.  Click ‘OK’ to generate the matrix.  If you want to go back and edit the rules to increase or decrease the number of unique combinations, click ‘Cancel’.
 
@@ -168,4 +168,4 @@ In the ‘Coverage Engine’ section of the menu, click on Coverage Matrix to se
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (30).png" alt=""><figcaption><p>View Coverage Matrix screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (30) (2).png" alt=""><figcaption><p>View Coverage Matrix screen</p></figcaption></figure>

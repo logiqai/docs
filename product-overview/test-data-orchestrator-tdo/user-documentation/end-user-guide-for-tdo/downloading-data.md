@@ -12,7 +12,7 @@ The API call is found on the Assembled Data screen in the URL column. Copy this 
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (37).png" alt=""><figcaption><p>Data dowload URL copied to new browser tab</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (37) (2).png" alt=""><figcaption><p>Data dowload URL copied to new browser tab</p></figcaption></figure>
 
 &#x20;
 
@@ -20,7 +20,7 @@ Once Chrome notifies you that the file is downloaded, you can open it to view th
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (38).png" alt=""><figcaption><p>Downloaded data available</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (38) (2).png" alt=""><figcaption><p>Downloaded data available</p></figcaption></figure>
 
 &#x20;
 

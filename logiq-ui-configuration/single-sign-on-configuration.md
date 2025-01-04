@@ -151,6 +151,6 @@ SAML app by default is disabled in Google, enable it and wait for a few minutes 
 
 Next head over to the Apica Ascent SAML configuration screen in the settings. Select "SAML Enabled", and fill in the details.
 
-![](<../.gitbook/assets/image (71).png>)
+![](<../.gitbook/assets/image (71) (1).png>)
 
 Now you are ready to use SAML Login, Logout, and log back in using the SAML Login option.

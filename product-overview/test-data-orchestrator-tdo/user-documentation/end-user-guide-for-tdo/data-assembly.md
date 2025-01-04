@@ -14,7 +14,7 @@ You will notice that the ‘Locked by’ column will not populate when you selec
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Select Work Set screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (31) (2).png" alt=""><figcaption><p>Select Work Set screen</p></figcaption></figure>
 
 &#x20;
 
@@ -32,13 +32,13 @@ Note that TDO has the option to allow data to be uniquely used or to be reused; 
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (32).png" alt=""><figcaption><p>Assignment Rules page and data assembly button location</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (32) (2).png" alt=""><figcaption><p>Assignment Rules page and data assembly button location</p></figcaption></figure>
 
 &#x20;Click on the grid in the lower right box  and the Set Lock Timeout dialog box will open.  This is pre-populated with 15 minutes; you can change this to be shorter or longer as needed.
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Lock Timeout dialog box</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (33) (2).png" alt=""><figcaption><p>Lock Timeout dialog box</p></figcaption></figure>
 
 &#x20;
 
@@ -50,7 +50,7 @@ The ‘Set Lock Timeout’ dialog box will close and a data assembly progress ba
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Data Assembly progress bar</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (34) (2).png" alt=""><figcaption><p>Data Assembly progress bar</p></figcaption></figure>
 
 &#x20;
 
@@ -66,7 +66,7 @@ The Assembled Data screen will display.  This will show one file for each step i
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (35).png" alt=""><figcaption><p>Assembled Data screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (35) (2).png" alt=""><figcaption><p>Assembled Data screen</p></figcaption></figure>
 
 &#x20;
 
@@ -74,7 +74,7 @@ To view the data, hover to the right of the row you want to view and click on th
 
 &#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (36).png" alt=""><figcaption><p>Assembled Data content screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (36) (2).png" alt=""><figcaption><p>Assembled Data content screen</p></figcaption></figure>
 
 &#x20;
 
