@@ -16,13 +16,13 @@ To sign up for Apica Ascent SaaS, follow these steps:
 
 This completes the sign-up process. We'll send your Apica Ascent account credentials to your registered email shortly after you sign up.
 
-## GETTING STARTED - Logging into Apica Ascent SaaS
+## Logging into Apica Ascent SaaS
 
 To access your Apica Ascent SaaS instance, do the following:
 
 1. Using your favorite web browser, navigate to your Apica Ascent SaaS instance URL. Your instance URL is listed in the onboarding email we send you post sign up and will resemble `https://<unique name>.apica.io/`.
 2. Enter the login credentials shared in the onboarding email.
-3. Click **Log In**.
+3. Click **Login**.
 
 You'll now have access to and can interact with the Apica Ascent UI.
 
