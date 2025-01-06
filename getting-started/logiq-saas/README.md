@@ -4,30 +4,25 @@ icon: cloud
 
 # Getting Started with Ascent
 
-Apica Ascent SaaS enables you to converge all of your IT data from disparate sources, manage your logs, and monitor, analyse, and troubleshoot your IT environment in real-time at infinite scale - without the need to manage or scale the underlying infrastructure or storage. THIS GUIDE ASSUMES THAT YOU HAVE SIGNED UP FOR APICA ASCENT. IF YOU ARE NOT A REGISTERED USER, PLEASE FOLLOW THE STEPS BELOW.
+Apica Ascent SaaS enables you to converge all of your IT data from disparate sources, manage your telemetry data, and monitor and troubleshoot your operational data in real-time. The following guide assumes that you have signed up for Apica Ascent in the cloud. **If you are not yet a registered user, please follow the steps below**.
 
 ## Signing up for Apica Ascent SaaS
 
-If you haven't signed up for Apica Ascent SaaS, do the following.
+To sign up for Apica Ascent SaaS, follow these steps:
 
-1. Head to the [Apica Ascent SaaS sign-up](https://www.apica.io/get-started-apica) page.
+1. Go to the [Apica Ascent SaaS sign-up page](https://www.apica.io/freemium/).
 2. Provide your **Name** and business **Email Address**.
-3. Select a Business or Enterprise plan that suits your need.\
-   \
-   **Note:** Regardless of the plan you select, you'd still get access to a 14-day free trial of the plan you select. Post the free trial period, if you choose not to purchase a plan, you'd still have access to the data you ingested for a period of one week. \\
-4. Read through the terms of the license agreement and select the checkbox if you accept the terms.
-5. Click **Register**.
-6. Provide your payment information and click **Subscribe**.\
-   \
-   **Note:** Your payment method will not be charged until the end of the 14-day trial period. You can cancel your subscription at any point during the trial period. We'll also check in with you to see if you'd like to proceed with the payment before the trial ends.
+3. Add your Company and Country details. You will receive a confirmation email to validate your contact information.
+4. Once complete, you will be provided with a FREE ACCOUNT to begin using Apica Ascent.\
+
 
 This completes the sign-up process. We'll send your Apica Ascent account credentials to your registered email shortly after you sign up.
 
 ## GETTING STARTED - Logging into Apica Ascent SaaS
 
-To access your Apica Ascent SaaS instance, do the following.
+To access your Apica Ascent SaaS instance, do the following:
 
-1. Using your favourite web browser, navigate to your Apica Ascent SaaS instance URL. Your instance URL is listed in the onboarding email we send you post sign up and will resemble `https://<your-company>.apica.io/`.
+1. Using your favorite web browser, navigate to your Apica Ascent SaaS instance URL. Your instance URL is listed in the onboarding email we send you post sign up and will resemble `https://<unique name>.apica.io/`.
 2. Enter the login credentials shared in the onboarding email.
 3. Click **Log In**.
 
