@@ -11,10 +11,8 @@ Apica Ascent SaaS enables you to converge all of your IT data from disparate sou
 To sign up for Apica Ascent SaaS, follow these steps:
 
 1. Go to the [Apica Ascent SaaS sign-up page](https://www.apica.io/freemium/).
-2. Provide your **Name** and business **Email Address**.
-3. Add your Company and Country details. You will receive a confirmation email to validate your contact information.
-4. Once complete, you will be provided with a FREE ACCOUNT to begin using Apica Ascent.\
-
+2. Provide your **Name**, your business **Email Address**, and **Company** and **Country** details.
+3. Click **Submit** and you will receive a confirmation email to validate your contact information.
 
 This completes the sign-up process. We'll send your Apica Ascent account credentials to your registered email shortly after you sign up.
 
