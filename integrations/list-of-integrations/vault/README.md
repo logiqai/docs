@@ -1,44 +1,45 @@
+---
+description: >-
+  This document helps to configure the vault service in development mode and
+  ingest audit logs into Ascent using fluentBit.
+---
+
 # Vault
 
-## Configuring Vault for Dev Mode and Audit Log Ingestion into Apica Ascent in OCI.
+## Configuring Vault in dev mode and ingest the audit logs into Apica Ascent - OCI.
 
 {% embed url="https://github.com/ApicaSystem/ApicaHub/tree/b263b6febab876f358aa05b7ec47b23dca0cac3f/integrations/vault/logs" %}
-Configuration files
+Download and place the configuration files in the working directory where you plan to set up and deploy Vault. Ensure the files are accessible and correctly formatted to avoid errors during deployment.
 {% endembed %}
 
 ### Step 1: Create a Namespace for Vault
 
-Create a namespace named `vault`:
+Create a namespace to isolate Vault resources.
 
 ```bash
 kubectl create namespace vault
 kubectl get namespace
 ```
 
-### Step 2: Create a Persistent Volume Claim (PVC) with AccessMode `ReadWriteOnce`
+### Step 2: Create a persistent volume vlaim (PVC) with access mode `ReadWriteOnce`
 
-Apply the PVC configuration for the Vault namespace:
+The persistent volume claim (PVC) is required to stores logs data, and fluentBit reads the logs data from this pvc and ingest it to Ascent.
+
+Create the new PVC under vault namespace.
 
 ```bash
 kubectl apply -f vault-pvc.yaml -n vault
 kubectl get pvc -n vault
 ```
 
-#### Common Error:
-
-If you encounter the following error:
-
-```plaintext
-failed to provision volume with StorageClass "oci-bv": rpc error: code = InvalidArgument desc = invalid volume capabilities requested. Only SINGLE_NODE_WRITER is supported ('accessModes.ReadWriteOnce' on Kubernetes)
-```
-
-You can proceed to update the Persistent Volume (PV) later to `ReadWriteMany` mode after the pods are in the running state.
-
 ### Step 3: Install Vault in Dev Mode and Verify the Installation
 
-Install Vault in dev mode with Helm and enable the UI:
+The following commands installs the hashicorp vault in development mode.
 
 ```bash
+helm repo add hashicorp https://helm.releases.hashicorp.com
+helm repo update
+
 helm upgrade --install vault hashicorp/vault \
        --set='server.dev.enabled=true' \
        --set='ui.enabled=true' \
@@ -48,14 +49,18 @@ helm upgrade --install vault hashicorp/vault \
 kubectl get all -n vault
 ```
 
-Verify the pods are in the running state, then edit the PV to change the access mode:
+Verify the pods are in the running state, update the PVC access mode.
+
+### Step 4: Update the PVC access mode to ReadWriteMany
+
+Updating a PersistentVolumeClaim (PVC) to use the ReadWriteMany (RWX) access mode is necessary when multiple pods need simultaneous access to the same data. In this case, Vault pods write logs to the shared volume, while Fluent Bit reads these logs and ingests them into Apica Ascent
 
 ```bash
 kubectl get pv -n vault
 kubectl edit pv/<replace PV name> -n vault
 ```
 
-Update the access mode from `ReadWriteOnce` to `ReadWriteMany` and save the configuration:
+Change the access mode from `ReadWriteOnce` to `ReadWriteMany` and save the updated configuration.
 
 ```yaml
 spec:
@@ -65,7 +70,7 @@ spec:
 
 ### Step 4: Enable Audit Logs from the CLI
 
-Access the Vault pod and enable audit logs:
+
 
 ```bash
 kubectl exec -it pod/vault-0 -n vault -- sh
