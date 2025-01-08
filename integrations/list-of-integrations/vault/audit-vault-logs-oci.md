@@ -34,7 +34,7 @@ kubectl apply -f vault-pvc.yaml -n vault
 kubectl get pvc -n vault
 ```
 
-### Step 3: Install Vault in Dev Mode
+### Step 3: Install Vault in Dev Mode and Verify the Installation
 
 Add the HashiCorp Helm Repository and Update Local Repository Cache
 
