@@ -203,6 +203,7 @@
   * [Splunk Forwarding Proxy](integrations/list-of-integrations/splunk-forwarding-proxy.md)
   * [Vault](integrations/list-of-integrations/vault/README.md)
     * [Metrics configuration](integrations/list-of-integrations/vault/metrics-configuration.md)
+    * [Audit Vault Logs](integrations/list-of-integrations/vault/audit-vault-logs.md)
 
 ## Dashboards
 
