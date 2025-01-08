@@ -202,8 +202,9 @@
   * [SNMP](integrations/list-of-integrations/snmp.md)
   * [Splunk Forwarding Proxy](integrations/list-of-integrations/splunk-forwarding-proxy.md)
   * [Vault](integrations/list-of-integrations/vault/README.md)
-    * [Metrics configuration](integrations/list-of-integrations/vault/metrics-configuration.md)
-    * [Audit Vault Logs](integrations/list-of-integrations/vault/audit-vault-logs.md)
+    * [Audit Vault Logs - AWS](integrations/list-of-integrations/vault/audit-vault-logs-aws.md)
+    * [Audit Vault Logs - OCI](integrations/list-of-integrations/vault/audit-vault-logs-oci.md)
+    * [Audit Vault Metrics](integrations/list-of-integrations/vault/audit-vault-metrics.md)
 
 ## Dashboards
 

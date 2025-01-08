@@ -1,4 +1,8 @@
-# Metrics configuration
+---
+description: Configuring Vault Metrics for Integration with Ascent
+---
+
+# Audit Vault Metrics
 
 {% embed url="https://github.com/ApicaSystem/ApicaHub/tree/b263b6febab876f358aa05b7ec47b23dca0cac3f/integrations/vault/metrics" %}
 Configuration files
@@ -87,7 +91,7 @@ kubectl logs pod/<pod-name> -notel | grep 'Name'
 
 ***
 
-#### Update the existing OpenTelemetry Collector configuration.
+#### Steps to update the existing OpenTelemetry Collector configuration.
 
 Edit the OpenTelemetryCollector resource:
 
