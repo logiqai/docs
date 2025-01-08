@@ -68,9 +68,7 @@ spec:
   - ReadWriteMany
 ```
 
-### Step 4: Enable Audit Logs from the CLI
-
-
+### Step 5: Enable Audit Logs from the CLI
 
 ```bash
 kubectl exec -it pod/vault-0 -n vault -- sh
@@ -80,7 +78,7 @@ vault audit enable file file_path=/vault/logs/vault-audit.log log_format=json
 vault audit list
 ```
 
-### Step 5: Install Fluent Bit and Add Helm Repository
+### Step 6: Install Fluent Bit and Add Helm Repository
 
 Add the Fluent Bit Helm repository and update it:
 
@@ -89,7 +87,7 @@ helm repo add fluent https://fluent.github.io/helm-charts
 helm repo update
 ```
 
-### Step 6: Create a ConfigMap for Fluent Bit
+### Step 7: Create a ConfigMap for Fluent Bit
 
 Apply the ConfigMap for Fluent Bit configuration.
 
@@ -106,7 +104,7 @@ kubectl get configmap -n vault
 kubectl apply -f fb-deployment.yaml -n vault
 ```
 
-### Step 7: Generate Logs and Verify Fluent Bit Output
+### Step 8: Generate Logs and Verify Fluent Bit Output
 
 Generate some logs by logging into the Vault UI and creating secrets.
 
@@ -118,7 +116,7 @@ kubectl logs pod/<pod name> -n vault
 
 You should see the recent audit log content.
 
-### Step 8: Verify Logs in Apica Ascent
+### Step 9: Verify Logs in Apica Ascent
 
 1. Log in to Apica Ascent.
 2. Navigate to **Logs & Insights**.
