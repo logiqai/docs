@@ -56,8 +56,8 @@ Verify the pods are in the running state, update the PVC access mode.
 Updating a PersistentVolumeClaim (PVC) to use the ReadWriteMany (RWX) access mode is necessary when multiple pods need simultaneous access to the same data. In this case, Vault pods write logs to the shared volume, while Fluent Bit reads these logs and ingests them into Apica Ascent
 
 ```bash
-kubectl get pv -n vault
-kubectl edit pv/<replace PV name> -n vault
+kubectl get pvc -n vault
+kubectl edit pvc/<replace PV name> -n vault
 ```
 
 Change the access mode from `ReadWriteOnce` to `ReadWriteMany` and save the updated configuration.
