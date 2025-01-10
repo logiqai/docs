@@ -224,18 +224,21 @@
   * [Connecting Amazon Managed Service for Prometheus](infra-and-application-monitoring/prometheus/connecting-amazon-managed-service-for-prometheus.md)
   * [Windows Redis Monitoring](observe/prometheus/windows-redis-monitoring.md)
 * [Writing queries](infra-and-application-monitoring/querying-data.md)
+* [Query API](observe/historical-data.md)
+* [Use Apica API to ingest JSON data](observe/use-apica-api-to-ingest-json-data.md)
 * [Log Management](log-management/log-management-overview.md)
   * [Terminology](log-management/logs-terminology.md)
   * [Explore Logs](log-management/explore-logs.md)
+  * [Topology](log-management/topology.md)
   * [Apica Ascent Search Cheat Sheet](log-management/search-cheat-sheet.md)
   * [Share Search Results](log-management/share-search-results.md)
   * [Severity Metrics](log-management/severity-metrics.md)
   * [Log2Metrics](log-management/metrics-and-custom-indices.md)
+  * [Native support for OTEL Logs](observe/log-management-overview/native-support-for-otel-logs.md)
   * [Reports](log-management/reports/README.md)
     * [Accessing Reports results via API](log-management/reports/accessing-api-results-via-api.md)
   * [Role-Based Access Control (RBAC)](log-management/role-based-access-control.md)
   * [Configuring RBAC](log-management/configuring-rbac.md)
-  * [Topology](log-management/topology.md)
 * [Check Management](observe/check-management/README.md)
   * [Map View](observe/check-management/map-view.md)
   * [List View](observe/check-management/list-view.md)
@@ -243,6 +246,7 @@
 * [Distributed Tracing](observe/overview/README.md)
   * [Traces](observe/overview/traces.md)
   * [Logs](observe/overview/logs.md)
+  * [Native support for OTEL Traces](observe/overview/native-support-for-otel-traces.md)
 
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
@@ -275,13 +279,6 @@
 * [Alerts On Logs](logiq-events/alerts-1.md)
 * [Rule Packs](logiq-events/rule-packs.md)
 * [AI-powered Search](logiq-events/ai-powered-search.md)
-
-## API
-
-* [Query API](api/historical-data.md)
-* [Use Apica API to ingest JSON data](api/use-apica-api-to-ingest-json-data.md)
-* [Native support for OTEL Logs](api/native-support-for-otel-logs.md)
-* [Native support for OTEL Traces](api/native-support-for-otel-traces.md)
 
 ## PLATFORM DOCS
 
