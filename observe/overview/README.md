@@ -4,7 +4,7 @@ Distributed tracing is a technique used to profile and debug distributed systems
 
 Apica Ascent implements protocol endpoints to ingest directly from both Jaeger agent and OpenTelemetry collector while streaming and indexing the data to any object store. This makes the Apica Ascent implementation infinitely scalable for large volumes for trace data.
 
-![](../../.gitbook/assets/mermaid-diagram-2022-07-13-210425.png)
+<figure><img src="../../.gitbook/assets/disttracing.jpg" alt=""><figcaption></figcaption></figure>
 
 ### OpenTelemetry
 
