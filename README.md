@@ -10,9 +10,9 @@ description: All the docs for setting up, configuring, and optimizing the Apica 
 
 ### Data Management and Analytics
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><a href="data-management/overview.md"><strong>Data Management</strong></a></td><td></td><td></td></tr><tr><td><a href="flow/data-flow-pipelines.md"><strong>Flow Management</strong></a></td><td></td><td></td></tr><tr><td><a href="flow/forwarding-to-monitoring-tools/datadog-forwarding.md"><strong>Data Forwarding</strong></a></td><td></td><td></td></tr><tr><td><a href="flow/splunk-forwarding/"><strong>Splunk Forwarding</strong></a></td><td></td><td></td></tr><tr><td><a href="fleet-management/overview.md"><strong>Fleet Management</strong></a></td><td></td><td></td></tr><tr><td><a href="logiq-events/time-series-ai-ml/"><strong>Time-Series AI/ML</strong></a></td><td></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><a href="data-management/overview.md"><strong>Data Management</strong></a></td><td></td><td></td></tr><tr><td><a href="flow/data-flow-pipelines.md"><mark style="color:blue;"><strong>Telemetry Pipeline</strong></mark></a></td><td></td><td></td></tr><tr><td><a href="flow/forwarding-to-monitoring-tools/datadog-forwarding.md"><strong>Data Forwarding</strong></a></td><td></td><td></td></tr><tr><td><a href="flow/splunk-forwarding/"><strong>Splunk Forwarding</strong></a></td><td></td><td></td></tr><tr><td><a href="fleet-management/overview.md"><strong>Fleet Management</strong></a></td><td></td><td></td></tr><tr><td><a href="logiq-events/time-series-ai-ml/"><strong>Time-Series AI/ML</strong></a></td><td></td><td></td></tr></tbody></table>
 
-### Monitoring and Performance
+### Observability
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden></th><th data-hidden></th></tr></thead><tbody><tr><td><a href="infra-and-application-monitoring/prometheus/"><strong>Monitoring Overview</strong></a></td><td></td><td></td></tr><tr><td><a href="log-management/log-management-overview.md"><strong>Log Management</strong></a></td><td></td><td></td></tr><tr><td><a href="distributed-tracing/overview.md"><strong>Distributed Tracing</strong></a></td><td></td><td></td></tr></tbody></table>
 
