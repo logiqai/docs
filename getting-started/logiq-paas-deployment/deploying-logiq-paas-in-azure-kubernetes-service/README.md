@@ -9,7 +9,7 @@ The following guide takes you through deploying Apica Ascent PaaS in an Azure Ku
 * [Deploying Apica Ascent PaaS](./#deploying-apica-ascent-paas)
 
 {% hint style="warning" %}
-If you have an AKS cluster that is appropriately sized for deploying Apica Ascent and handling your data ingestion rate, you can skip the AKS cluster creation step. However, you must label the nodes as specified in the [<mark style="color:blue;">Node pool configuration</mark>](./#node-pool-configuration) table failing which the pods in the cluster will not land in any of the nodes.&#x20;
+If you have an AKS cluster that is appropriately sized for deploying Apica Ascent and handling your data ingestion rate, you can skip the AKS cluster creation step. However, you must label the nodes as specified in the [<mark style="color:blue;">Node pool configuration</mark>](./#node-pool-configuration) table failing which the pods in the cluster will not land in any of the nodes.
 {% endhint %}
 
 ## Creating an Azure Kubernetes Cluster
@@ -67,9 +67,7 @@ az aks nodepool add --cluster-name logiqai --name hauler --resource-group azure-
 az aks nodepool add --cluster-name logiqai --name db --resource-group azure-test --zones 1 --labels logiq.ai/node=db --node-vm-size standard_f4s_v2 --node-count 1 --enable-ultra-ssd
 ```
 
-
-
-![](<../../../../.gitbook/assets/image (130).png>)
+![](<../../../.gitbook/assets/image (130).png>)
 
 ## Connecting with your AKS cluster
 
@@ -81,11 +79,9 @@ kubectl get node
 
 ## Creating the MinIO blob storage gateway for S3 compatibility
 
-Follow the instructions on [MinIO’s site](https://az.minio.io/index.html#deploy-minio-6) to create an Azure blog storage account. Once you login, click the “**+**” button on the right hand corner of the screen to create a bucket named `logiq`. Note down this bucket name since we'd be using it in later steps.&#x20;
+Follow the instructions on [MinIO’s site](https://az.minio.io/index.html#deploy-minio-6) to create an Azure blob storage account. Once you login, click the “**+**” button on the right hand corner of the screen to create a bucket named `logiq`. Note down this bucket name since we'd be using it in later steps.
 
-![](https://lh5.googleusercontent.com/TOZYU86wNeRjxOZ9QmDu9jZHSleUQoZTqtRYFgQldthGDhmdNTOzMwyRlj6OUXB9KYPDeNNNe-007GbbedzFrc7-FlZK5X5zfGYQXhOdVAB5lDaMiMPo9VMt7XpeUzt16UXWrNrM)
-
-Create an [Azure ultra disk](https://azure.microsoft.com/en-us/services/storage/blobs/) storage class using the YAML configuration provided below.&#x20;
+Create an [Azure ultra disk](https://azure.microsoft.com/en-us/services/storage/blobs/) storage class using the YAML configuration provided below.
 
 ```
 kind: StorageClass
@@ -102,7 +98,7 @@ diskIopsReadWrite: "3000" # minimum value: 2 IOPS/GiB
 diskMbpsReadWrite: "125" # minimum value: 0.032/GiB
 ```
 
-Verify that the storage class has been created by running the following command.&#x20;
+Verify that the storage class has been created by running the following command.
 
 ```
 kubectl get sc ultra-disk-sc
@@ -121,11 +117,10 @@ storageClass: ultra-disk-sc
 creatStorageClass: true
 ```
 
-Next, follow the instructions on Apica Ascent’s [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide) to spin up the Apica Ascent stack on this AKS cluster. &#x20;
+Next, follow the instructions on Apica Ascent’s [Quickstart guide](https://docs.logiq.ai/deploying-logiq/k8s-quickstart-guide) to spin up the Apica Ascent stack on this AKS cluster.
 
-Once you've successfully deployed Apica Ascent, you can (optionally) disable monitoring AKS with container insights on your cluster by running the following command.&#x20;
+Once you've successfully deployed Apica Ascent, you can (optionally) disable monitoring AKS with container insights on your cluster by running the following command.
 
 ```
 az aks disable-addons -a monitoring -n <aks cluster name> -g <resource group>
 ```
-
