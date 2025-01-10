@@ -99,9 +99,9 @@ service:
 
 VictoriaMetrics is a fast, cost-effective, and scalable monitoring solution and time-series database. `vmagent` is an agent which helps you collect metrics from various sources and store them in [VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) or any other Prometheus-compatible storage systems that support the `remote_write` protocol. VMagent has the ability to push metrics additionally to pulling them; push model is a traditional model of the client sending data to the server:
 
-![](https://docs.victoriametrics.com/keyConcepts\_push\_model.png)
+![](https://docs.victoriametrics.com/keyconcepts/push_model.webp)
 
-Run the [<mark style="color:purple;"><mark style="color:blue;">**vmagent**<mark style="color:blue;"></mark> ](https://docs.victoriametrics.com/vmagent.html#quick-start)as shown below and pass the below parameters
+Run the [<mark style="color:purple;">**vmagent**</mark> ](https://docs.victoriametrics.com/vmagent.html#quick-start)as shown below and pass the below parameters
 
 {% hint style="info" %}
 remoteWrite.tls.url=https://\<apica-ascent-endpoint>/api/v1/receive
