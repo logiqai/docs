@@ -7,7 +7,7 @@ To set up log forwarding from GCP Cloud Logging to Apica Ascent, you must:
 * Create a log sink and subscribe it to the Pub/Sub topic
 * Create a VM for Logstash
 
-The examples in this document use the `gcloud` command-line interface. Google Cloud APIs must be enabled through the [Services and APIs page](https://console.cloud.google.com/apis/dashboard?\_ga=2.18765881.1654975943.1641548418-621078828.1639568318) in the console before they can be used with `gcloud`. To perform the steps in this tutorial, enable the following APIs:
+The examples in this document use the `gcloud` command-line interface. Google Cloud APIs must be enabled through the [Services and APIs page](https://console.cloud.google.com/apis/dashboard?_ga=2.18765881.1654975943.1641548418-621078828.1639568318) in the console before they can be used with `gcloud`. To perform the steps in this tutorial, enable the following APIs:
 
 * Compute Engine
 * Pub/Sub
@@ -19,7 +19,7 @@ The examples in this document use the `gcloud` command-line interface. Google Cl
 Activate and login to the Cloud Shell. Create a service account to attach to the VM
 
 {% hint style="info" %}
-The commands use [project name](https://cloud.google.com/storage/docs/projects#what\_is\_a\_project) `gcp-customer-1.`Replace it with a valid project name from the target account.
+The commands use [project name](https://cloud.google.com/storage/docs/projects#what_is_a_project) `gcp-customer-1.`Replace it with a valid project name from the target account.
 {% endhint %}
 
 ```
@@ -260,7 +260,7 @@ The mappings for k8s\__node, k8s\_pod, k8s\_cluster can further be refined by ma
 
 You can obtain an ingest token from the Apica Ascent UI as described [here](../overview/generating-a-secure-ingest-token.md#obtaining-an-ingest-token-using-ui). You can customize the `namespace` and `cluster_id` in the Logstash configuration based on your needs.
 
-Your GCP Cloud Logging logs will now be forwarded to your Apica Ascent instance. See the [Explore](../../log-management/explore-logs.md) Section to view the logs.
+Your GCP Cloud Logging logs will now be forwarded to your Apica Ascent instance. See the [Explore](../../observe/log-management-overview/explore-logs.md) Section to view the logs.
 
 ### Running logstash outside of GCE
 

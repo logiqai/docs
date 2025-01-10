@@ -217,28 +217,25 @@
   * [OpenTelemetry Collector](fleet-management/list-of-agents/opentelemetry-collector.md)
   * [OpenTelemetry Kubernetes](fleet-management/list-of-agents/opentelemetry-kubernetes.md)
 
-## Infra & Application Monitoring
+## OBSERVE
 
-* [Monitoring Overview](infra-and-application-monitoring/prometheus/README.md)
-  * [Connecting Prometheus](infra-and-application-monitoring/prometheus/connecting-prometheus.md)
-  * [Connecting Amazon Managed Service for Prometheus](infra-and-application-monitoring/prometheus/connecting-amazon-managed-service-for-prometheus.md)
-* [Writing queries](infra-and-application-monitoring/querying-data.md)
-* [Windows Redis Monitoring](infra-and-application-monitoring/windows-redis-monitoring.md)
-
-## LOG MANAGEMENT
-
-* [Log Management Overview](log-management/log-management-overview.md)
-* [Terminology](log-management/logs-terminology.md)
-* [Explore Logs](log-management/explore-logs.md)
-* [Apica Ascent Search Cheat Sheet](log-management/search-cheat-sheet.md)
-* [Share Search Results](log-management/share-search-results.md)
-* [Severity Metrics](log-management/severity-metrics.md)
-* [Log2Metrics](log-management/metrics-and-custom-indices.md)
-* [Reports](log-management/reports/README.md)
-  * [Accessing Reports results via API](log-management/reports/accessing-api-results-via-api.md)
-* [Role-Based Access Control (RBAC)](log-management/role-based-access-control.md)
-* [Configuring RBAC](log-management/configuring-rbac.md)
-* [Topology](log-management/topology.md)
+* [Monitoring Overview](observe/prometheus/README.md)
+  * [Connecting Prometheus](observe/prometheus/connecting-prometheus.md)
+  * [Connecting Amazon Managed Service for Prometheus](observe/prometheus/connecting-amazon-managed-service-for-prometheus.md)
+* [Writing queries](observe/querying-data.md)
+* [Windows Redis Monitoring](observe/windows-redis-monitoring.md)
+* [Log Management](observe/log-management-overview/README.md)
+  * [Terminology](observe/log-management-overview/logs-terminology.md)
+  * [Explore Logs](observe/log-management-overview/explore-logs.md)
+  * [Apica Ascent Search Cheat Sheet](observe/log-management-overview/search-cheat-sheet.md)
+  * [Share Search Results](observe/log-management-overview/share-search-results.md)
+  * [Severity Metrics](observe/log-management-overview/severity-metrics.md)
+  * [Log2Metrics](observe/log-management-overview/metrics-and-custom-indices.md)
+  * [Reports](observe/log-management-overview/reports/README.md)
+    * [Accessing Reports results via API](observe/log-management-overview/reports/accessing-api-results-via-api.md)
+  * [Role-Based Access Control (RBAC)](observe/log-management-overview/role-based-access-control.md)
+  * [Configuring RBAC](observe/log-management-overview/configuring-rbac.md)
+  * [Topology](observe/log-management-overview/topology.md)
 
 ***
 

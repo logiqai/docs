@@ -4,7 +4,7 @@ Apica Ascent can run streaming analytics from one or more Kafka topics. Both pus
 
 ## PUSH Method: Pushing data using logstash
 
-![Push data to Kafka](../../.gitbook/assets/kafka\_push.png)
+![Push data to Kafka](../../.gitbook/assets/kafka_push.png)
 
 Logstash instances deployed in the customer network can read data from Kafka and push it to Apica Ascent. Use the below configuration to read from Kafka.
 
@@ -52,9 +52,9 @@ filter {
 
 Apica Ascent can pull data using Kafka Input Plugins. This method requires the Kafka endpoint to be reachable from Apica Ascent network.
 
-Kafka endpoint, Topic name, namespace, and application name are needed to configure the Kafka input plugin. Namespace and Application define how the data is partitioned in Apica Ascent, see [here for more information](../../log-management/logs-terminology.md).
+Kafka endpoint, Topic name, namespace, and application name are needed to configure the Kafka input plugin. Namespace and Application define how the data is partitioned in Apica Ascent, see [here for more information](../../observe/log-management-overview/logs-terminology.md).
 
-![Kafka Input App Extension](../../.gitbook/assets/kafka\_pull.png)
+![Kafka Input App Extension](../../.gitbook/assets/kafka_pull.png)
 
 {% hint style="info" %}
 Multiple Pull extensions can be created and running simultaneously

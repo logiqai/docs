@@ -8,20 +8,24 @@ description: This page describes how to access report results via API
 
 Once the query is created in the UI editor interface, tested, and executed successfully.  The query ID can be looked at via the web URL address.
 
-<figure><img src="../../.gitbook/assets/query-id-2023-11-17_9-54-29.jpg" alt=""><figcaption><p><strong>Query ID</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/query-id-2023-11-17_9-54-29.jpg" alt=""><figcaption><p><strong>Query ID</strong></p></figcaption></figure>
 
 The query can then be accessed via API's using the query ID.
 
-{% swagger baseUrl="/api/queries/:queryid" path="" method="get" summary="Get Query By Id" %}
-{% swagger-description %}
+## Get Query By Id
+
+<mark style="color:blue;">`GET`</mark> `/api/queries/:queryid`
+
 Use this API to access the latest report result id
-{% endswagger-description %}
 
-{% swagger-parameter in="path" name="queryid" type="number" %}
-Id of the query
-{% endswagger-parameter %}
+#### Path Parameters
 
-{% swagger-response status="200" description="" %}
+| Name    | Type   | Description     |
+| ------- | ------ | --------------- |
+| queryid | number | Id of the query |
+
+{% tabs %}
+{% tab title="200 " %}
 ```
 {
     '...' : '...",
@@ -29,21 +33,25 @@ Id of the query
     '...' : '...",
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 The query result can be extracted via API via the query ID after the API query.
 
-{% swagger baseUrl="/api/query_results/:result_id" path="" method="get" summary="Get Results by result_id" %}
-{% swagger-description %}
+## Get Results by result\_id
+
+<mark style="color:blue;">`GET`</mark> `/api/query_results/:result_id`
+
 Access the latest report results
-{% endswagger-description %}
 
-{% swagger-parameter in="path" name="result_id" type="number" %}
-Latest report result Id
-{% endswagger-parameter %}
+#### Path Parameters
 
-{% swagger-response status="200" description="" %}
+| Name       | Type   | Description             |
+| ---------- | ------ | ----------------------- |
+| result\_id | number | Latest report result Id |
+
+{% tabs %}
+{% tab title="200 " %}
 ```
 {
    "query_result": {
@@ -92,8 +100,8 @@ Latest report result Id
    }
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ## Python Example I
 
@@ -128,7 +136,7 @@ post_query()
 
 API key can be obtained via the UI. &#x20;
 
-<figure><img src="../../.gitbook/assets/API-key-2023-11-17_10-13-15.jpg" alt=""><figcaption><p><strong>Retrieve API Key</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/API-key-2023-11-17_10-13-15.jpg" alt=""><figcaption><p><strong>Retrieve API Key</strong></p></figcaption></figure>
 
 
 

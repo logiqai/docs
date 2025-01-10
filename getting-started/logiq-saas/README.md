@@ -42,4 +42,4 @@ Here are helpful links to other "Getting Started" technical guides:
 * [ ] [Configure Apica Ascent to send alerts to your email server](../../logiq-ui-configuration/email-configuration-setup.md)
 * [ ] [Add and configure alert destinations like email, Slack, and PagerDuty](../../integrations/list-of-integrations/alert-destinations.md)
 * [ ] [Configure SSO using SAML](../../logiq-ui-configuration/single-sign-on-configuration.md)
-* [ ] [Configure RBAC](../../log-management/configuring-rbac.md)
+* [ ] [Configure RBAC](../../observe/log-management-overview/configuring-rbac.md)

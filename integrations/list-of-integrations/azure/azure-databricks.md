@@ -174,4 +174,4 @@ ssh ubuntu@machine-ip -p 2200 -i <private_key_file_path>
 systemctl restart td-agent-bit
 ```
 
-Now, when you log into your Apica Ascent UI, you should see the logs from your Azure Databricks cluster being ingested. See the [Explore](../../../log-management/explore-logs.md) Section to view the logs.
+Now, when you log into your Apica Ascent UI, you should see the logs from your Azure Databricks cluster being ingested. See the [Explore](../../../observe/log-management-overview/explore-logs.md) Section to view the logs.
