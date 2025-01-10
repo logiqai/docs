@@ -199,6 +199,10 @@
 * [Forwarding to Data Warehouse](flow/forwarding-to-data-warehouse/README.md)
   * [GCP Bigquery](flow/forwarding-to-data-warehouse/gcp-bigquery.md)
 
+## LAKE
+
+* [Lake: Powered by Instastore™](lake/lake-powered-by-instastore-tm.md)
+
 ## FLEET MANAGEMENT
 
 * [Overview](fleet-management/overview.md)
@@ -396,7 +400,3 @@
 * [Audit Trail](logiq-ui-configuration/audit-trail/README.md)
   * [Events Trail](logiq-ui-configuration/audit-trail/events-trail.md)
   * [Alerts Trail](logiq-ui-configuration/audit-trail/alerts-trail.md)
-
-## LAKE
-
-* [Lake: Powered by Instastore™](lake/lake-powered-by-instastore-tm.md)
