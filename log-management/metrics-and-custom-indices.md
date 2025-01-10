@@ -10,11 +10,11 @@ Apica Ascent Log2Metrics is a powerful feature that helps you convert your log d
 
 You can create new metrics from a log line in either the **Logs** page or the **Search** page of your Apica Ascent UI. To create a new metric, click the three dots on a log line that you want to create a metric for. Doing so opens the options menu, as shown in the following image. From the options menu, click **create log2metric**.
 
-![Log options menu](../../.gitbook/assets/log_menu_drop_down.png)
+![Log options menu](../.gitbook/assets/log_menu_drop_down.png)
 
 You will now see the Log2Metric modal on the Apica Ascent UI. To configure your new metric, fill out the fields in the Log2Metric modal appropriately.
 
-![](../../.gitbook/assets/log2metric_dialog.png)
+![](../.gitbook/assets/log2metric_dialog.png)
 
 The following table describes each of the fields in the Log2Metric modal.
 
@@ -32,11 +32,11 @@ The following table describes each of the fields in the Log2Metric modal.
 
 You can add more parameters to filter your logs by clicking on **+Add more parameters**, as shown in the following image.
 
-![Add more prameters](../../.gitbook/assets/add_more_params.png)
+![Add more prameters](../.gitbook/assets/add_more_params.png)
 
 The configuration depicted in the image above creates a Log2Metric named `ingress_status_codes__e1034e`. Apica Ascent adds the suffix `__e1034` internally as a unique identifier for the Log2Metric. Once the Log2Metric is created, it adds its visualization to your dashboard. The following image depicts the visualization of the newly-created `ingress_status_codes__e1034e` Log2Metric.
 
-![Visualization created by log2metrics](../../.gitbook/assets/log2metric_vis.png)
+![Visualization created by log2metrics](../.gitbook/assets/log2metric_vis.png)
 
 ### Analyze log2metric
 
@@ -44,7 +44,7 @@ Log2metrics helps to analyze the log for the specified time series.
 
 Clicking the `Analyse` button will open the popup with values that can be choose to verify the logs as shown below. Choose the values that you want to analyze within the logs and click `Apply` button, it will navigate to the search view and the corresponding logs will be loaded to verify.
 
-![Analyze Log2Metrics](../../.gitbook/assets/analyze_log2metrics.png)
+![Analyze Log2Metrics](../.gitbook/assets/analyze_log2metrics.png)
 
 ### Custom Indices
 

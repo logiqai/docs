@@ -12,19 +12,19 @@ Reporting feature comes in handy when required to periodically search and aggreg
 
 * From the logline, click on "create batch report"
 
-![](<../../../.gitbook/assets/image (55) (1).png>)
+![](<../../.gitbook/assets/image (55) (1).png>)
 
 * From the favourite searches
 
-![](../../../.gitbook/assets/report.png)
+![](../../.gitbook/assets/report.png)
 
 * From the create dropdown
 
-![](<../../../.gitbook/assets/create (1).png>)
+![](<../../.gitbook/assets/create (1).png>)
 
 Onclick of any of the above options opens the. "Create Reports" modal.
 
-![](../../../.gitbook/assets/report_1.png)
+![](../../.gitbook/assets/report_1.png)
 
 ### Group By
 
@@ -63,15 +63,15 @@ Following aggregation operators are available.
 
 Saved reports can be accessed from the Queries Page. If the query is running, this page will show the progress.&#x20;
 
-![](<../../../.gitbook/assets/image (95) (1).png>)
+![](<../../.gitbook/assets/image (95) (1).png>)
 
 Click on any report to view the results. Click on the toggle to enable periodic refresh.
 
-![Reports View](../../../.gitbook/assets/report-detail.png)
+![Reports View](../../.gitbook/assets/report-detail.png)
 
 ### Visualizations
 
 The results can be used to create visualizations. Click "New Visualization" to start visualizing the results.&#x20;
 
-![An example scatter plot](../../../.gitbook/assets/newplot\(3\).png)
+![An example scatter plot](../../.gitbook/assets/newplot\(3\).png)
 

@@ -52,7 +52,7 @@ filter {
 
 Apica Ascent can pull data using Kafka Input Plugins. This method requires the Kafka endpoint to be reachable from Apica Ascent network.
 
-Kafka endpoint, Topic name, namespace, and application name are needed to configure the Kafka input plugin. Namespace and Application define how the data is partitioned in Apica Ascent, see [here for more information](../../observe/log-management-overview/logs-terminology.md).
+Kafka endpoint, Topic name, namespace, and application name are needed to configure the Kafka input plugin. Namespace and Application define how the data is partitioned in Apica Ascent, see [here for more information](../../log-management/logs-terminology.md).
 
 ![Kafka Input App Extension](../../.gitbook/assets/kafka_pull.png)
 

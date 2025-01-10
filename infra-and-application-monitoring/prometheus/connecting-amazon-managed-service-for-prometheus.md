@@ -6,21 +6,17 @@ With Amazon Managed Service for Prometheus, you can use the open-source Promethe
 
 The service is integrated with Amazon Elastic Kubernetes Service (Amazon EKS), Amazon Elastic Container Service (Amazon ECS), and AWS Distro for OpenTelemetry.
 
-
-
 Now let us see how it works in brief with the help of an Image
 
 ![Working method of Amazon managed service for Prometheus](../../.gitbook/assets/AMP.png)
 
+### Create the Amazon Managed Service for Prometheus (AMP) Data Source
 
-
-### Create the Amazon Managed Service for Prometheus (AMP)  Data Source
-
-Head over to the _Data Sources_ in settings. Settings can be accessed by clicking on the user name on the left navigation bar. The first step is to create the data source by clicking **Amazon Managed Service for Prometheus.**&#x20;
+Head over to the _Data Sources_ in settings. Settings can be accessed by clicking on the user name on the left navigation bar. The first step is to create the data source by clicking **Amazon Managed Service for Prometheus.**
 
 ![Selecting the AMP data source](../../.gitbook/assets/AMP-1.png)
 
-Provide all  the details and Save.
+Provide all the details and Save.
 
 ![Adding the AMP data source](../../.gitbook/assets/AMP-2.png)
 

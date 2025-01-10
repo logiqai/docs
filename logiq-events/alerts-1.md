@@ -4,7 +4,7 @@ Alerts can be configured from log data from the Search Page. if we want to get a
 
 ![](<../.gitbook/assets/image (117).png>)
 
-On clicking the <img src="../.gitbook/assets/Screen Shot 2020-08-11 at 5.34.40 PM.png" alt="" data-size="original">on the log line, user can open the log2Metric event rule editor. Refer to [Metrics And Custom Indices](../observe/log-management-overview/metrics-and-custom-indices.md) section on how to configure log2Metrics. Alert Configuration is available on the third section of log2Metrics modal.
+On clicking the <img src="../.gitbook/assets/Screen Shot 2020-08-11 at 5.34.40 PM.png" alt="" data-size="original">on the log line, user can open the log2Metric event rule editor. Refer to [Metrics And Custom Indices](../log-management/metrics-and-custom-indices.md) section on how to configure log2Metrics. Alert Configuration is available on the third section of log2Metrics modal.
 
 ### Creating an alertable event
 

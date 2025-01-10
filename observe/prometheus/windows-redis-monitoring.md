@@ -7,11 +7,11 @@ This script will help you setup Redis Exporter as a service on a 64-bit Windows 
 * **PROMETHEUS\_CONFIG\_PATH**: the path to the Prometheus configuration file.
 * **NSSM\_PATH**: the path of nssm.exe
 
-Before running the PowerShell script, make sure you have `NSSM` and `Prometheus` installed.&#x20;
+Before running the PowerShell script, make sure you have `NSSM` and `Prometheus` installed.
 
 To run the PowerShell script, open an administrator PowerShell and run the following command:
 
-{% file src="../.gitbook/assets/redis-exporter-installer.ps1" %}
+{% file src="../../.gitbook/assets/redis-exporter-installer.ps1" %}
 Powershell Script to install Redis Exporter
 {% endfile %}
 
@@ -68,6 +68,3 @@ Restart the prometheus service using these 2 commands:
 > $promServiceName = (Get-Service | Where-Object {$_.Name -like "prom*"}).Name
 > nssm.exe restart $promServiceName
 ```
-
-
-

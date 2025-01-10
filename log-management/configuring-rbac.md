@@ -14,17 +14,17 @@ In addition, Apica Ascent's log collection model works by mapping incoming log d
 
 Namespace restrictions are managed by the namespace data source. Only the admin users have privileges to access and modify data sources.
 
-![](../../.gitbook/assets/2022-07-04_14-33.png)
+![](../.gitbook/assets/2022-07-04_14-33.png)
 
 In the data source configuration, provide the data source settings by listing out the namespaces that are part of the data source definition. Provide a name for the data sources and then Save your configuration. In the example below, we are creating a NonAdmin-Namespace data source that has access restrictions to two namespaces `flash:advertise` and `prod-k8s:kube-system`
 
-![](<../../.gitbook/assets/Screenshot from 2022-07-04 16-32-57.png>)
+![](<../.gitbook/assets/Screenshot from 2022-07-04 16-32-57.png>)
 
 ## Assigning Namespace data sources to users
 
 The final step is to attach the namespace data source to a group. This restricts all users in the group to the namespaces defined in the data source.
 
-![](<../../.gitbook/assets/Screenshot from 2022-07-04 14-30-56.png>)
+![](<../.gitbook/assets/Screenshot from 2022-07-04 14-30-56.png>)
 
 ## Managing access to namespaces from multiple clusters and hosts
 

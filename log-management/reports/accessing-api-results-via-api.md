@@ -8,7 +8,7 @@ description: This page describes how to access report results via API
 
 Once the query is created in the UI editor interface, tested, and executed successfully.  The query ID can be looked at via the web URL address.
 
-<figure><img src="../../../.gitbook/assets/query-id-2023-11-17_9-54-29.jpg" alt=""><figcaption><p><strong>Query ID</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/query-id-2023-11-17_9-54-29.jpg" alt=""><figcaption><p><strong>Query ID</strong></p></figcaption></figure>
 
 The query can then be accessed via API's using the query ID.
 
@@ -136,7 +136,7 @@ post_query()
 
 API key can be obtained via the UI. &#x20;
 
-<figure><img src="../../../.gitbook/assets/API-key-2023-11-17_10-13-15.jpg" alt=""><figcaption><p><strong>Retrieve API Key</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/API-key-2023-11-17_10-13-15.jpg" alt=""><figcaption><p><strong>Retrieve API Key</strong></p></figcaption></figure>
 
 
 
