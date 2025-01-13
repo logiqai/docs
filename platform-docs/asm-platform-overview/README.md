@@ -14,11 +14,11 @@ Clicking on the ASM image to the left of the Overview menu item will always brin
 
 ### Dashboard
 
-See [Dashboards](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2132246613) for more information.
+See [Dashboards](dashboards.md) for more information.
 
 ### Apica Panels
 
-The “Apica Panels” menu item allows users to view their configured Apica Panels instances. Apica Panels is a feature which allows users to integrate Apica data into Grafana dashboards for easier viewing; see [Using the Apica Panels Dashboards](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2133754653) for a complete overview of the feature. The “Apica Panels” menu item contains two sub-items: “Panels” and “About”.
+The “Apica Panels” menu item allows users to view their configured Apica Panels instances. Apica Panels is a feature which allows users to integrate Apica data into Grafana dashboards for easier viewing; see <mark style="color:blue;">**Using the Apica Panels Dashboards**</mark> for a complete overview of the feature. The “Apica Panels” menu item contains two sub-items: “Panels” and “About”.
 
 #### Panels
 
@@ -42,7 +42,7 @@ The **Tools** section provides access to a number of different system features, 
 
 With the **Impersonate** tool you can view Synthetic Monitoring from a different user's perspective. This feature can be very useful for troubleshooting or assisting your users with any problem they may encounter.
 
-| Item          | Description                                |
+| **Item**      | **Description**                            |
 | ------------- | ------------------------------------------ |
 | Filter        | Search for user accounts by name.          |
 | Customer      | Customer the user account belongs to.      |
@@ -82,17 +82,17 @@ The user context is switched back to the original one.
 
 The **Maintenance** view lets you modify or delete result records for individual checks and recalculate any associated consolidation records. The table shows a list of previous maintenance tasks and information about them:
 
-| Button          | Description                          |
+| **Button**      | **Description**                      |
 | --------------- | ------------------------------------ |
 | Show entries    | Number of rows to display per page.  |
 | Refresh History | Reload and update the table display. |
 
-| Column  | Description                                        |
-| ------- | -------------------------------------------------- |
-| Created | Timestamp for when the task was created.           |
-| Action  | Action(s) performed by the task.                   |
-| Status  | The task status (`running`/`success`/`cancelled`). |
-| Records | Number of items affected by the task.              |
+| **Column** | **Description**                                    |
+| ---------- | -------------------------------------------------- |
+| Created    | Timestamp for when the task was created.           |
+| Action     | Action(s) performed by the task.                   |
+| Status     | The task status (`running`/`success`/`cancelled`). |
+| Records    | Number of items affected by the task.              |
 
 ### Maintenance Tasks
 
@@ -102,7 +102,7 @@ Maintenance tasks can be created by selecting relevant checks and applying the a
 
 The **apply action** section lets you select what action to apply to the selected checks and queue the task for processing.
 
-| Option            | Description                                      |
+| **Option**        | **Description**                                  |
 | ----------------- | ------------------------------------------------ |
 | Update            | Change the Check Result Status to this severity. |
 | Set Value to NULL | Exclude the check from all calculations.         |
@@ -114,11 +114,11 @@ Press **Process Selected Records** to remove the results.
 
 The **selectors** allow you to pick which checks to include in the task.
 
-| Item            | Description                                                |
+| **Item**        | **Description**                                            |
 | --------------- | ---------------------------------------------------------- |
 | Type            | List of check types.                                       |
 | Checks          | List of checks of the selected type.                       |
-|                 | Check result [Colors](broken-reference) to include.        |
+|                 | Check result Colors to include.                            |
 | From            | Start date and time for the period.                        |
 | To              | End date and time for the period.                          |
 | Refresh         | Reload and update the table display according to settings. |
@@ -143,7 +143,7 @@ To create a maintenance task:
 
 A database task is placed in a queue for execution. It will run as soon as possible.
 
-When queued, the maintenance task is visible in the [Task](broken-reference) table.
+When queued, the maintenance task is visible in the Task table.
 
 ### Table
 
@@ -151,13 +151,13 @@ The **table** shows the result of applying the selectors.
 
 **NOTE:** The action in the task will apply to all selected checks. Make sure you have selected the correct checks before clicking the button.
 
-| Column   | Description                                                        |
-| -------- | ------------------------------------------------------------------ |
-| Severity | Check result status severity.                                      |
-| Time     | Timestamp for the check run.                                       |
-| Value    | Duration                                                           |
-| Message  | The result message. (Clicking this will show the browser results). |
-| Attempts | Number of attempts for the check run.                              |
+| **Column** | **Description**                                                    |
+| ---------- | ------------------------------------------------------------------ |
+| Severity   | Check result status severity.                                      |
+| Time       | Timestamp for the check run.                                       |
+| Value      | Duration                                                           |
+| Message    | The result message. (Clicking this will show the browser results). |
+| Attempts   | Number of attempts for the check run.                              |
 
 ### Journal
 
@@ -169,7 +169,7 @@ The journal can be filtered by a number of parameters.
 
 | **Item**     | **Description**                                            |
 | ------------ | ---------------------------------------------------------- |
-| Severity     | Event [Severity](broken-reference) to include.             |
+| Severity     | Event Severity to include.                                 |
 | From         | Start date and time for the period.                        |
 | To           | End date and time for the period.                          |
 |  Message     | Event description.                                         |
@@ -177,7 +177,7 @@ The journal can be filtered by a number of parameters.
 |  User        | Involved user, if any.                                     |
 |  IP-Address  | The associated IP address for the event, if any.           |
 |  Source      | Originating location.                                      |
-|  Category    | [Event Categories](broken-reference).                      |
+|  Category    | Event categories.                                          |
 |  Check       | Involved check, if any.                                    |
 | Apply Filter | Reload and update the table display according to settings. |
 
@@ -187,37 +187,37 @@ The **Entries** table shows the result of applying the selectors.
 
 | **Column**  | **Description**                                  |
 | ----------- | ------------------------------------------------ |
-| Severity    | Event [Severity](broken-reference).              |
+| Severity    | Event Severity.                                  |
 |  Timestamp  | Date and time when the event occurred.           |
 |  Message    | Event description.                               |
 |  Customer   | Customer account.                                |
 |  User       | Involved user, if any.                           |
 |  IP-Address | The associated IP address for the event, if any. |
 |  Source     | Originating location.                            |
-|  Category   | [Event Categories](broken-reference).            |
+|  Category   | Event categories.                                |
 |  Check      | Involved check, if any.                          |
 
 ### Traceroute
 
-The Traceroute tool allows you to easily run a [Traceroute](broken-reference) from any of our Apica [Locations](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Locations%20Locations\&linkCreation=true\&fromPageId=2134049566) to any URL or IP address you choose.
+The Traceroute tool allows you to easily run a <mark style="color:blue;">**Traceroute**</mark> from any of our Apica <mark style="color:blue;">**Locations**</mark> to any URL or IP address you choose.
 
 ### Introduction
 
-The purpose of running a traceroute is to get an indication of which way traffic takes between a source and a destination. Traceroute sends test [Packet](broken-reference) with [TTL](broken-reference) values starting at 1. The resulting [ICMP](https://apica-kb.atlassian.net/wiki/spaces/GLOS/pages/4632057/Icmp) `Time Exceeded` messages are used to discover any devices (called "hops") forwarding the packets to the destination. For each hop, the response time is recorded to indicate transmission speed. Any detected failures or packet losses on the way are also the recorder and displayed to give an idea of the transmission quality.
+The purpose of running a traceroute is to get an indication of which way traffic takes between a source and a destination. Traceroute sends test Packet with TTL values starting at 1. The resulting <mark style="color:blue;">**ICMP Time Exceeded**</mark> messages are used to discover any devices (called "hops") forwarding the packets to the destination. For each hop, the response time is recorded to indicate transmission speed. Any detected failures or packet losses on the way are also the recorder and displayed to give an idea of the transmission quality.
 
 ### Configuration
 
 The Traceroute tool configuration is fairly simple.
 
-| Item        | Description                                                                                                                                                                                                |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Host        | Target destination.                                                                                                                                                                                        |
-| Location    | Apica [Locations Locations](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Locations%20Locations\&linkCreation=true\&fromPageId=2134049608) to use as starting point. |
-| **Execute** | Perform traceroute.                                                                                                                                                                                        |
+| **Item**    | **Description**                           |
+| ----------- | ----------------------------------------- |
+| Host        | Target destination.                       |
+| Location    | Apica Locations to use as starting point. |
+| **Execute** | Perform traceroute.                       |
 
-These Tracroute settings are used by default and are not configurable:
+These <mark style="color:blue;">**Traceroute**</mark> settings are used by default and are not configurable:
 
-| Option                  | Value      |   |
+| **Option**              | **Value**  |   |
 | ----------------------- | ---------- | - |
 |  Maximum number of hops |  30        |   |
 | Wait timeout per hop    | 5 seconds  |   |
@@ -233,7 +233,7 @@ Hostname and IP address, the upper limit on hops to try, and size of the test pa
 
 On each subsequent row, information about each hop is shown:
 
-Hop Number, hostname and/or IP address for the hop, and ther response times for each of the three test packets.
+Hop Number, hostname and/or IP address for the hop, and the response times for each of the three test packets.
 
 ### Messages
 
@@ -241,7 +241,7 @@ The **Messages** view lets you configure system messages to display to Synthetic
 
 **View**
 
-| Item                  | Description                                 |
+| **Item**              | **Description**                             |
 | --------------------- | ------------------------------------------- |
 | Importance            | Message importance (and display color).     |
 | Message               | Message to display                          |
@@ -252,7 +252,7 @@ The **Messages** view lets you configure system messages to display to Synthetic
 
 **Configuration**
 
-| Item                  | Description                                 |
+| **Item**              | **Description**                             |
 | --------------------- | ------------------------------------------- |
 | Message               | Message to display                          |
 | Message is From       | Sender to display                           |
@@ -269,12 +269,12 @@ The **Messages** view lets you configure system messages to display to Synthetic
 
 The message can contain some formatting. You format the text by putting the text within .
 
-| Formatting       | Tag                                | Preview                       |
-| ---------------- | ---------------------------------- | ----------------------------- |
-| Link:            | `[link="linkurl"]Link Text[/link]` | [Link Text](broken-reference) |
-| Bold:            | \[`b]Bold Text[/b]`                | **Bold Text**                 |
-| Italic:          | `[i]Italic Text[/i]`               | **Italic Text**               |
-| Bold and Italic: | `[ib]Italic and Bold Text[/ib]`    | \***Italic and Bold Text**\*  |
+| Formatting       | Tag                                | Preview                      |
+| ---------------- | ---------------------------------- | ---------------------------- |
+| Link:            | `[link="linkurl"]Link Text[/link]` | **Link Text**                |
+| Bold:            | \[`b]Bold Text[/b]`                | **Bold Text**                |
+| Italic:          | `[i]Italic Text[/i]`               | **Italic Text**              |
+| Bold and Italic: | `[ib]Italic and Bold Text[/ib]`    | \***Italic and Bold Text**\* |
 
 ### Create Message
 
@@ -288,7 +288,7 @@ The **Add New Messages** dialog is shown
 
 **Configuration**
 
-| Item                  | Description                                 |
+| **Item**              | **Description**                             |
 | --------------------- | ------------------------------------------- |
 | Message               | Message to display                          |
 | Message is From       | Sender to display                           |
@@ -305,12 +305,12 @@ The **Add New Messages** dialog is shown
 
 The message can contain some formatting. You format the text by putting the text within .
 
-| Formatting       | Tag                                                                                                                                                                  | Preview                                                                              |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Link:            | `link="linkurl"Link Text[/link]`                                                                                                                                     | [Link Text](https://apica-kb.atlassian.net/wiki/spaces/AM/pages/2134049652/Messages) |
-| Bold:            | `[b]Bold Text[/b]`                                                                                                                                                   | **Bold Text**                                                                        |
-| Italic:          | `[i]Italic Text[/i]`                                                                                                                                                 | _Italic Text_                                                                        |
-| Bold and Italic: | `[ib]Italic and Bold Text`[/ib](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=%2Fib\&linkCreation=true\&fromPageId=2134049680) | \***Italic and Bold Text**\*                                                         |
+| Formatting       | Tag                              | Preview                      |
+| ---------------- | -------------------------------- | ---------------------------- |
+| Link:            | `link="linkurl"Link Text[/link]` | Link Text                    |
+| Bold:            | `[b]Bold Text[/b]`               | **Bold Text**                |
+| Italic:          | `[i]Italic Text[/i]`             | _Italic Text_                |
+| Bold and Italic: | `[ib]Italic and Bold Text /ib`   | \***Italic and Bold Text**\* |
 
 ### Filter Checks
 
@@ -428,7 +428,7 @@ In the second step, you provide
 
 * integration information,
 * metric settings,
-* [Locations - Introduction](broken-reference), and
+* Locations, and
 * other integration-specific settings.
 
 \##
@@ -441,7 +441,7 @@ In the third step you can configure
 
 * how often the check is to run,
 * set threshold values for check notifications, and
-* add it to one or more [Monitor Groups](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Monitor%20Groups\&linkCreation=true\&fromPageId=2134868148).
+* add it to one or more <mark style="color:blue;">**Monitor Groups**</mark>.
 
 \##
 
@@ -459,16 +459,16 @@ To the right of the navigation bar, there is a color coded status summary of all
 
 The numbers in the colored boxes indicate the number of checks with that status.
 
-#### [Colors](http://confluence.teamsinspace.com:8090/display/ASMDOCS/Colors)
+#### Colors
 
 Check Status is represented by four colors:
 
-| Color                                    | Description |
-| ---------------------------------------- | ----------- |
-|  Green                                   | Information |
-| Yellow                                   | Warning     |
-| Orange                                   | Error       |
-| Red                                      | Fatal       |
+| **Color**                                | **Description** |
+| ---------------------------------------- | --------------- |
+|  Green                                   | Information     |
+| Yellow                                   | Warning         |
+| Orange                                   | Error           |
+| Red                                      | Fatal           |
 
 The colors are used in any context where the check status is displayed.
 
