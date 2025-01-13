@@ -7,6 +7,24 @@
 * [Ascent Overview](product-overview/ascent-overview.md)
 * [Ascent User Interface](product-overview/the-logiq-ui.md)
 
+## RELEASE NOTES
+
+* [Release Notes](release-notes/release-notes/README.md)
+  * [Ascent 2.8.0](release-notes/release-notes/ascent-2.8.0.md)
+  * [Ascent 2.7.0](release-notes/release-notes/ascent-2.7.0.md)
+  * [Ascent 2.6.0](release-notes/release-notes/ascent-2.6.0.md)
+  * [Ascent 2.5.0](release-notes/release-notes/ascent-2.5.0.md)
+  * [Ascent 2.4.0](release-notes/release-notes/ascent-2.4.0.md)
+  * [Ascent 2.3.0](release-notes/release-notes/ascent-2.3.0.md)
+  * [Ascent 2.2.0](release-notes/release-notes/load-test.md)
+  * [Ascent 2.1.0](release-notes/release-notes/ascent-2.1.0/README.md)
+    * [Data Fabric](release-notes/release-notes/ascent-2.1.0/release-notes/README.md)
+      * [Releases-old](release-notes/release-notes/ascent-2.1.0/release-notes/release-notes.md)
+    * [Synthetic Monitoring](release-notes/release-notes/ascent-2.1.0/synthetic-monitoring.md)
+    * [Advanced Scripting Engine](release-notes/release-notes/ascent-2.1.0/advanced-scripting-engine.md)
+    * [IRONdb](release-notes/release-notes/ascent-2.1.0/irondb.md)
+  * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
+
 ## GETTING STARTED
 
 * [Getting Started with Ascent](getting-started/logiq-saas/README.md)
@@ -362,24 +380,6 @@
         * [Data Assembly Summary](platform-docs/test-data-orchestrator-tdo/user-documentation/api-guide/reporting-apis/data-assembly-summary.md)
     * [Workflow Guide](platform-docs/test-data-orchestrator-tdo/user-documentation/workflow-guide.md)
   * [Release Notes](platform-docs/test-data-orchestrator-tdo/release-notes.md)
-
-## RELEASE NOTES
-
-* [Release Notes](release-notes/release-notes/README.md)
-  * [Ascent 2.8.0](release-notes/release-notes/ascent-2.8.0.md)
-  * [Ascent 2.7.0](release-notes/release-notes/ascent-2.7.0.md)
-  * [Ascent 2.6.0](release-notes/release-notes/ascent-2.6.0.md)
-  * [Ascent 2.5.0](release-notes/release-notes/ascent-2.5.0.md)
-  * [Ascent 2.4.0](release-notes/release-notes/ascent-2.4.0.md)
-  * [Ascent 2.3.0](release-notes/release-notes/ascent-2.3.0.md)
-  * [Ascent 2.2.0](release-notes/release-notes/load-test.md)
-  * [Ascent 2.1.0](release-notes/release-notes/ascent-2.1.0/README.md)
-    * [Data Fabric](release-notes/release-notes/ascent-2.1.0/release-notes/README.md)
-      * [Releases-old](release-notes/release-notes/ascent-2.1.0/release-notes/release-notes.md)
-    * [Synthetic Monitoring](release-notes/release-notes/ascent-2.1.0/synthetic-monitoring.md)
-    * [Advanced Scripting Engine](release-notes/release-notes/ascent-2.1.0/advanced-scripting-engine.md)
-    * [IRONdb](release-notes/release-notes/ascent-2.1.0/irondb.md)
-  * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
 
 ## Administration <a href="#logiq-ui-configuration" id="logiq-ui-configuration"></a>
 
