@@ -263,7 +263,7 @@
   * [Check Management Overview](observe/check-management/check-management-overview.md)
 * [Distributed Tracing](observe/overview/README.md)
   * [Traces](observe/overview/traces.md)
-  * [Logs](observe/overview/logs.md)
+  * [Spans](observe/overview/logs.md)
   * [Native support for OTEL Traces](observe/overview/native-support-for-otel-traces.md)
 
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
