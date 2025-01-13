@@ -300,11 +300,12 @@
 
 ## PLATFORM DOCS
 
-* [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview)
-* [ASM Platform Overview](platform-docs/asm-platform-overview/README.md)
-  * [Dashboards](platform-docs/asm-platform-overview/dashboards.md)
-* [Loadtesting](https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/5538148/Overview+of+the+Apica+Load+Test+Solution)
-* [Advanced Scripting Engine](https://apica-kb.atlassian.net/wiki/spaces/DAZT/pages/5674203/What+is+ZebraTester)
+* [Synthetic Monitoring (ASM)](platform-docs/synthetic-monitoring-asm/README.md)
+  * [Dashboards](platform-docs/synthetic-monitoring-asm/dashboards.md)
+  * [Link to ASM Knowledge Base](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview)
+  * [Link to ZT Knowledge Base](https://apica-kb.atlassian.net/wiki/spaces/DAZT/pages/5674203/What+is+ZebraTester)
+* [Load Testing (ALT)](platform-docs/load-testing-alt/README.md)
+  * [Link to ALT Knowledge Base](https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/5538148/Overview+of+the+Apica+Load+Test+Solution)
 * [Test Data Orchestrator (TDO)](platform-docs/test-data-orchestrator-tdo/README.md)
   * [Technical Guides](platform-docs/test-data-orchestrator-tdo/technical-guides/README.md)
     * [Hardware / Environment Requirements](platform-docs/test-data-orchestrator-tdo/technical-guides/hardware-environment-requirements.md)
