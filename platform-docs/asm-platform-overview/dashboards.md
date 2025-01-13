@@ -2,7 +2,7 @@
 
 The **Dashboard** provides a collected view of all your defined checks for the account. It is the main panel which you see when you log in to the ASM platform. It is also accessible by pressing the “Overview” dropdown in the ASM top menu bar and selecting “Dashboard”.
 
-The dashboard provides a high level overview of every check you are [authorized to view](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2159149140/Manage+Checks#Edit-Users).
+The dashboard provides a high level overview of every check you are <mark style="color:blue;">**authorized to view**</mark>.
 
 ### Main Options
 
@@ -14,7 +14,7 @@ Filter: You can type in the main Filter field to filter your checks by name.
 
 **Status Colors:**
 
-Status Colors: Enables [Monitor Groups](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Monitor%20Groups\&linkCreation=true\&fromPageId=2133757565) to change to the color of the highest alert severity it contains.&#x20;
+Status Colors: Enables <mark style="color:blue;">**Monitor Groups**</mark> to change to the color of the highest alert severity it contains.&#x20;
 
 **Auto-Refresh:**
 
@@ -37,7 +37,7 @@ For each check a number of data points are shown.
 * Check Type:
 * Target URL for the check:
 
-Click on the name of the check or the response time to view details about a check. This will add [Details Bookmarks Access & Bookmarks](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/4631502/Details+Check+Access+Bookmarks) at the top of the window and take you to the [Understanding the "Result Details" View](broken-reference) view.
+Click on the name of the check or the response time to view details about a check. This will add <mark style="color:blue;">**Details Bookmarks Access & Bookmarks**</mark> at the top of the window and take you to the <mark style="color:blue;">**Understanding the "Result Details" View**</mark> view.
 
 * Latest response time and when the check was run:
 * Check history over the last 24 hours:
@@ -53,14 +53,14 @@ At the group level is a summary for the contained subgroups.
 
 The top bar for the group contains a number of buttons to change the view frame.
 
-| Icon | Name              | Description                                                                                                                                                         |
-| ---- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  /   | Expand / Collapse | Shows or hides more details for the group/subgroup.                                                                                                                 |
-|      | List View         | Switches the frame to [Views](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Views\&linkCreation=true\&fromPageId=2133757474). |
-|      | Split View        | Switches the frame to [Views](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Views\&linkCreation=true\&fromPageId=2133757474). |
-|      | Grid View         | Switches the frame to [Views](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Views\&linkCreation=true\&fromPageId=2133757474). |
-|      | Check Status      | Displays a summary of statuses for checks in the group.                                                                                                             |
-|      | Move Frame        | Button to [Move Group Frame](broken-reference) the frame in the dashboard.                                                                                          |
+| **Icon** | **Name**          | **Description**                                         |
+| -------- | ----------------- | ------------------------------------------------------- |
+|  /       | Expand / Collapse | Shows or hides more details for the group/subgroup.     |
+|          | List View         | Switches the frame to Views.                            |
+|          | Split View        | Switches the frame to Views.                            |
+|          | Grid View         | Switches the frame to Views.                            |
+|          | Check Status      | Displays a summary of statuses for checks in the group. |
+|          | Move Frame        | Button to move the frame in the dashboard.              |
 
 **Subgroups**
 
@@ -113,7 +113,7 @@ The mode buttons in the top hand right corner of each frame lets you define the 
 
 **Collapsed Group**
 
-In collapsed mode, only the header bar is shown for the [Monitor Groups](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Monitor%20Groups\&linkCreation=true\&fromPageId=2133757650):
+In collapsed mode, only the header bar is shown for the <mark style="color:blue;">**Monitor Groups**</mark>:
 
 **Expanded Group**
 
@@ -143,11 +143,11 @@ The **Grid** view shows all the checks in the group in a grid.
 
 ### Operations View
 
-The **Operations** view shows all [checks as a grid](broken-reference) and arranges them in order of alert severity.
+The **Operations** view shows all <mark style="color:blue;">**checks as a grid**</mark> and arranges them in order of alert severity.
 
 **Menu**
 
-The **Operations** view shows all [Manage Alerts](broken-reference) in order of decreasing [Severity](broken-reference).
+The **Operations** view shows all <mark style="color:blue;">**Manage Alerts**</mark> in order of decreasing <mark style="color:blue;">**Severity**</mark>.
 
 Fatal alerts are at the top left, followed by Errors, Warnings, and Information.&#x20;
 
@@ -163,4 +163,4 @@ To view details about a check:
 
 * Click the desired item in the grid
 
-This will add an [Access & Bookmarks](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Access%20%26%20Bookmarks\&linkCreation=true\&fromPageId=2133754121) at the top of the window and take you to the [Check Details](broken-reference) view.
+This will add an <mark style="color:blue;">**Access & Bookmarks**</mark> at the top of the window and take you to the <mark style="color:blue;">**Check Details**</mark> view.
