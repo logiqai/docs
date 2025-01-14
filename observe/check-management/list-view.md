@@ -1,5 +1,5 @@
 # List View
 
-<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+Checks can also be viewed in detail in list view. The list view enables quick management and editing of checks, along with the ability to setup proper alerting.
 
-Checks can also be viewed in detail in list view.
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
