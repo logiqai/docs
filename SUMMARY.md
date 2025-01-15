@@ -265,6 +265,8 @@
   * [Traces](observe/overview/traces.md)
   * [Spans](observe/overview/logs.md)
   * [Native support for OTEL Traces](observe/overview/native-support-for-otel-traces.md)
+  * [Windows .NET Application Tracing](observe/overview/windows-.net-application-tracing.md)
+  * [Linux+Java Application Tracing](observe/overview/linux+java-application-tracing.md)
 
 ## AUTONOMOUS INSIGHTS <a href="#logiq-events" id="logiq-events"></a>
 
