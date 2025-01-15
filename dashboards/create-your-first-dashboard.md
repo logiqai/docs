@@ -12,7 +12,7 @@ icon: grid-horizontal
 
 ## Add Widget&#x20;
 
-> On creating a new dashboard it will not have any widgets. Widgets are created on top of the queries. If you don't have any queries created, Please follow the documentation for [queries](../infra-and-application-monitoring/querying-data.md) to create one.
+> On creating a new dashboard it will not have any widgets. Widgets are created on top of the queries. If you don't have any queries created, Please follow the documentation for [queries](../observe/prometheus/querying-data.md) to create one.
 
 * Click `Add Widget` button at the bottom of the page
 * Select a query that you want to visualize

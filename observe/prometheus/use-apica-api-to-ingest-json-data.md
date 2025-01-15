@@ -86,7 +86,7 @@ _Namespace & Application is generated automatically based on your request. If ei
 
 Using Json Example 1, this is how the results look like in your environment
 
-<figure><img src="../.gitbook/assets/image (135).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (135).png" alt=""><figcaption></figcaption></figure>
 
 **Response**
 
