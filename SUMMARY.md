@@ -228,12 +228,14 @@
 * [Configurations](fleet-management/configurations.md)
 * [Packages](fleet-management/packages.md)
 * [Fleet Repository Management](fleet-management/fleet-repository-management.md)
-* [Advance Search](fleet-management/advance-search.md)
+* [Advanced Search](fleet-management/advanced-search.md)
 * [List of Agents](fleet-management/list-of-agents/README.md)
   * [Datadog Agent](fleet-management/list-of-agents/datadog-agent.md)
+  * [Fluent-bit Agent](fleet-management/list-of-agents/opentelemetry-collector.md)
   * [Grafana Alloy](fleet-management/list-of-agents/grafana-alloy.md)
-  * [OpenTelemetry Collector](fleet-management/list-of-agents/opentelemetry-collector.md)
+  * [OpenTelemetry Collector](fleet-management/list-of-agents/opentelemetry-collector-1.md)
   * [OpenTelemetry Kubernetes](fleet-management/list-of-agents/opentelemetry-kubernetes.md)
+  * [Prometheus Agent](fleet-management/list-of-agents/opentelemetry-collector-2.md)
 
 ## OBSERVE
 

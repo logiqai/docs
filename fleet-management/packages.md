@@ -10,4 +10,4 @@ Agent packages available through Fleet are configured within the Fleet Repositor
 
 **Packages List:**
 
-<figure><img src="../.gitbook/assets/image (207).png" alt=""><figcaption><p>Packages List</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-01-15 at 14-34-23 Fleet.png" alt=""><figcaption><p>Packages List</p></figcaption></figure>

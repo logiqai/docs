@@ -14,32 +14,26 @@ This shows agents registered with Fleet. Filter the agents by name, host name, v
 
 **Agent Details:**&#x20;
 
-Select any configured agents, then agent detail's view will show. Which has details and configuration files. The detail's view contains the description, tags, versions, agent created date and updated date. &#x20;
+Select any configured agents, then agent detail's view will show. Which has details and configuration files. The detail's view contains the description, tags, versions, agent created date and updated date.  This view also displays the current health and status information about the agent, and a short tail of the agent log output.
 
-<figure><img src="../.gitbook/assets/Screenshot from 2024-06-18 20-58-12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-01-15 at 14-10-33 Fleet.png" alt=""><figcaption><p>Agent Details</p></figcaption></figure>
 
-**Configuration files:**
+**Configuration Files:**
 
-Select the configuration flies tab to view current active configuration that is assigned for the agent.
+Select the configuration flies tab to view current active configuration that is assigned for the agent. This view displays any active configurations assignments, and can review past, inactive assignments.
 
-<figure><img src="../.gitbook/assets/image (215).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-01-15 at 14-12-56 Fleet.png" alt=""><figcaption><p>Configuration Files</p></figcaption></figure>
 
-**Agent Status:**
+**Assign Configuration:**
 
-Select the Status button to view the agent status, which shows logs/errors of the selected agent.
+Click on the **Assign Configuration** button to manually assign a configuration configuration to the agent. Choose the configuration, from the drop-down list of available configurations for the agent type and platform, and assign it to the agent, then the Fleet agent-manager will apply this configuration and restart the agent.&#x20;
 
-<figure><img src="../.gitbook/assets/Screenshot from 2024-06-18 21-00-31.png" alt=""><figcaption><p>Agent status</p></figcaption></figure>
+Click the **Refresh** button to update the status of the view.&#x20;
 
-**Configuration History:**
+<figure><img src="../.gitbook/assets/Screenshot 2025-01-15 at 14-21-55 Fleet.png" alt=""><figcaption><p>Assign Configuration</p></figcaption></figure>
 
-Click on the **Agent Assignment History** to view the assigned configurations for the agent.
+#### Package Assignment:
 
-<figure><img src="../.gitbook/assets/Screenshot from 2024-06-18 21-06-14.png" alt=""><figcaption><p>Agent Assignment History</p></figcaption></figure>
+Select the package assignment tab to review any packages assigned and installed for the agent.
 
-**Assign configuration:**
-
-Click on **Manually Assign Configuration** to assign configuration based on the selected agent type. Choose the configuration and assign it to the agent, then the agent manager will assign this configuration and restart the agent.&#x20;
-
-Choose “Refresh” icon to view status of the assigned configuration.&#x20;
-
-<figure><img src="../.gitbook/assets/Screenshot from 2024-06-18 21-07-58 (1).png" alt=""><figcaption><p>Assign Configuration</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-01-15 at 14-25-01 Fleet.png" alt=""><figcaption><p>Package Assignment</p></figcaption></figure>

@@ -8,13 +8,13 @@ Fleet makes it easy to manage your agent configurations all in one place. With F
 
 You can also manage configurations using a git repository, and Fleet can import all of your configurations from that repository. Updating configurations and deploying them to assigned agents can be as simple as a git push.
 
-**Configurations list:**
+**Configurations:**
 
-Users can filter the configuration by name and agent types.
+Users can filter the contents of the Configurations tab by name and agent types.
 
-Select any configuration to view content and update. To delete configuration, choose Actions and select the Delete option.&#x20;
+Select any configuration to view its content or update them. To delete a configuration, choose Actions and select the Delete option.&#x20;
 
-<figure><img src="../.gitbook/assets/image (208).png" alt=""><figcaption><p>Configurations List</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-01-15 at 14-28-41 Fleet.png" alt=""><figcaption><p>Configurations List</p></figcaption></figure>
 
 **Create new configuration:**
 

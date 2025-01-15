@@ -18,7 +18,7 @@ Navigate **Explore > Fleet** will show the agent list that are configured and ma
 
 The fleet platform comes with many agent types already set up, the ability to add custom agent types, and assign configurations to them all from the intuitive fleet UI.&#x20;
 
-<figure><img src="../.gitbook/assets/image (213).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-01-15 at 14-07-00 Fleet.png" alt=""><figcaption></figcaption></figure>
 
 **Fleet Agent Status Metric:**
 
