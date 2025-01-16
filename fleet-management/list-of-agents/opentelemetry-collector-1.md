@@ -21,3 +21,21 @@ description: Instructions for installing OpenTelemetry Collector agents using Fl
 
 * The Download All button can be used to download these files
 * Install the Fleet agent-manager as instructed in the README instructions
+
+#### Check agent-manager status:
+
+To check the status of agent-manager, and the running agents on a Linux host:
+
+```
+$ sudo systemctl status agent-manager-otelcol
+```
+
+To get agent-manager logs on a Linux host:
+
+```
+$ sudo journalctl -n 100 -f -u agent-manager-otelcol
+```
+
+To check the status of agent-manager, and the running agents on a Windows host, use the **Windows Services** app, and locate the service named **agent-manager-otelcol**.
+
+To get agent-manager logs on a Windows host, use the **Windows Event Viewer** app. The logs from agent-manager will be located in the **Windows Logs > Application** logs.

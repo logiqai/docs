@@ -24,3 +24,16 @@ To do so, execute the following command in the directory where the install.sh fi
 $ chmod +x ./install.sh
 {% endhint %}
 
+#### Check agent-manager status:
+
+To check the status of agent-manager, and the running agents on a Linux host:
+
+```
+$ sudo systemctl status agent-manager-grafana-alloy
+```
+
+To get agent-manager logs on a Linux host:
+
+```
+$ sudo journalctl -n 100 -f -u agent-manager-grafana-alloy
+```
