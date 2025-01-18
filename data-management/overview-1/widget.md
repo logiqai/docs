@@ -30,15 +30,34 @@ Using the query builder user can make changes to the underlying query.
 
 You can zoom into a certain section of the data in the graph by dragging the slider on the bottom of the widget. This can help in the case if large datasets are loaded in the widget for visualization.
 
+## Configurations
+
+### Configuring the Widget
+
+You can configure the widgets based on your needs:
+
+* **Chart Type**: Choose from Line, Bar, Area, Scatter, Counter, Disk, Gauge, Table, Honeycomb, Stat, Status, DenseStatus, Date/Time, and Size charts.
+* **X-axis Selection**: Customize which data reflects on the x-axis.
+* **Y-axis Selection**: Plot multiple data points on the y-axis for deeper insights.
+* **Group By Function**: Select multiple columns to group data effectively for the widget display.
+* **Standard Calculations**: Use standard metrics like min, max, avg, count, sum, p50, p90, p95, p99.
+* **Custom Colors**: Define unique colors for each y-axis element.
+
+<figure><img src="../../.gitbook/assets/image (240).png" alt=""><figcaption></figcaption></figure>
+
 ## More Options
 
 User also has other options in the widget:
 
-* `Refresh` -> Refreshes the data that's coming from the underlying query.
+
+
 * `Download as image` -> Downloads the graph as an image.
 * `Add alert` -> Allows user to create an alert on top of the underlying query.
 * `Download as CSV file` -> Allows users to download the underlying data in CSV format.
 * `Download as TSV file` -> Allows users to download the underlying data in TSV format.
 * `Download as Excel file` -> Allows users to download the underlying data in Excel format.
 * `View Query` -> Opens underlying query in the query editor, for advanced visualisation and data analysis.
+*   View raw data -> Pops up a Modal  where user can see the data in the table view.&#x20;
+
+    <figure><img src="../../.gitbook/assets/image (248).png" alt=""><figcaption></figcaption></figure>
 

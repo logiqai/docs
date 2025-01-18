@@ -72,7 +72,62 @@ These guidelines ensure consistency and clarity across all widgets, allowing for
 
 
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-10 13-26-53.png" alt=""><figcaption></figcaption></figure>
+```json
+"tabs": [
+    {
+        "key": "Key name",
+        "order": "1",
+        "queriesList": [
+            {
+                "chart_type": "gauge",
+                "data_source_name": "datasource name",
+                "name": "widget name",
+                "options": {
+                    "description": "widget description",
+                    "order": 1,
+                    "zone": {   
+                        "alert": 60,
+                        "danger": 80
+                    },
+                    "plot": {
+                        "errorColumn": "",
+                        "groupBy": "",
+                        "x": "Timestamp",
+                        "xLabel": "Timestamp",
+                        "y": ["value"],
+                        "yLabel": "value"
+                    },
+                    "upperLimit": ""
+                },
+                "query": "replace with query",
+                "schema": "schema name" // Schema name associated with the query 
+            },
+            {
+                    "chart_type": "line",
+                    "data_source_name": "datasource",
+                    "name": "Widget name",
+                    "options": {
+                        "description": "",
+                        "order": 2,
+                        "plot": {
+                            "errorColumn": "",
+                            "groupBy": "",
+                            "x": "timestamp",
+                            "xLabel": "Timestamp",
+                            "y": [
+                                "value"
+                            ],
+                            "yLabel": "value"
+                        },
+                        "upperLimit": ""
+                    },
+                    "query": "node_textfile_scrape_error{instance=~'.*'}&duration=1h&step=5m",
+                    "schema": "node_textfile_scrape_error"
+                }
+        ]
+    }
+]
+```
 
 
 
@@ -99,5 +154,34 @@ The `header` section serves as the global filter configuration for the dashboard
 * These dropdowns can also be made interdependent by using the same key name inside the query.&#x20;
 * Ensure interdependency in `dropdowns` queries when needed.
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-10-10 13-22-00.png" alt=""><figcaption></figcaption></figure>
 
+
+```json
+"header": {
+    "dateTimeRange": true,
+    "dropdowns": [
+        {
+            "ostype": {
+                "query": "sum by (hostname) (target_info{runtime=~'.*'})", 
+                // runtime label defined in the query matches the key of the second 
+                // filter , thus making these filters interdependent
+                "name": "Atom Selection",
+                "data_source_name": "Apica Monitoring",
+                "options": {
+                    "replace_label": "runtime"
+                }
+            }
+        },
+        {
+            "runtime": {
+                "query": "sum by (runtime) (target_info{ostype=~'linux|windows'})",
+                "name": "Runtime selection",
+                "data_source_name": "Apica Monitoring",
+                "options": {
+                    "replace_label": "runtime"
+                }
+            }
+        }
+    ]
+}
+```
