@@ -187,7 +187,7 @@
   * [Data Explorer Dashboard](data-management/overview-1/data-explorer-dashboard/README.md)
     * [Create a Dashboard](data-management/overview-1/data-explorer-dashboard/create-a-dashboard.md)
     * [Editing Dashboard](data-management/overview-1/data-explorer-dashboard/editing-dashboard/README.md)
-      * [Dahboard level filter](data-management/overview-1/data-explorer-dashboard/editing-dashboard/dahboard-level-filter.md)
+      * [Dashboard level filters](data-management/overview-1/data-explorer-dashboard/editing-dashboard/dashboard-level-filters.md)
 * [Timestamp handling](data-management/timestamp-handling/README.md)
   * [Timestamp bookmark](data-management/timestamp-handling/timestamp-bookmark.md)
 * [Large log/events/metrics/traces](data-management/large-log-events-metrics-traces.md)

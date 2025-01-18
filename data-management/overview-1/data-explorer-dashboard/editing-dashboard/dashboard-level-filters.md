@@ -1,8 +1,8 @@
-# Dahboard level filter
+# Dashboard level filters
 
-Filters play a crucial role in data visualization by allowing you to interactively refine the scope of data displayed based on specific selections or criteria. When you apply a filter, it acts like a spotlight, highlighting only the relevant data points and excluding the rest. This capability ensures that your visualizations are not cluttered and remain focused on the aspects that are most relevant to your current analysis or reporting needs.
+Filters play a crucial role in data visualization by allowing you to interactively refine the scope of data displayed based on specific selections or criteria. When you apply a filter, it acts like a spotlight, highlighting only the relevant data points and excluding the rest. This capability ensures that your visualizations are not cluttered and remain focused on the most relevant aspects to your current analysis or reporting needs.
 
-This targeted approach not only enhances your ability to uncover meaningful patterns and trends but also facilitates more effective communication of insights, as the visualizations are tailored  your  requirements.
+This targeted approach enhances your ability to uncover meaningful patterns and trends and facilitates more effective communication of insights, as the visualizations are tailored to your  requirements.
 
 
 
