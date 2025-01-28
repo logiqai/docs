@@ -13,7 +13,7 @@ On clicking the <img src="../.gitbook/assets/Screen Shot 2020-08-11 at 5.34.40 P
 #### Fields
 
 * **Name**: A name for the alert, should be alphanumeric.
-* **Destination**: This is a user-specified selection where the alerts will be delivered. Only [user-defined alert destinations](../integrations/list-of-integrations/alert-destinations.md) will be available for selection. User can configure alert destinations in the Alert Destinations Section
+* **Destination**: This is a user-specified selection where the alerts will be delivered. Only [user-defined alert destinations](../integrations/list-of-integrations/alert-destinations/) will be available for selection. User can configure alert destinations in the Alert Destinations Section
 * **Operation**: One of the comparators: `>` `>=` `<` `<=` `==` `!=` `=~` `!~`
 * **Occurrences**: number of times the event must occur, must be a valid number.
 * **Period**: time over which the event occurred, e.g, `5m`, `10m`, `1h`, `1d`, `1w`. Period should be greater than `5m` (`300s`) and should be greater than or equal to Refresh schedule.

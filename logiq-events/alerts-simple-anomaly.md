@@ -18,7 +18,7 @@
 #### Fields
 
 * **Name**: A name for the alert, which should be alphanumeric.
-* **Destination**: This is a user-specified selection where the alerts will be delivered. Only [user-defined alert destinations](../integrations/list-of-integrations/alert-destinations.md) will be available for selection. Users can configure alert destinations in the Alert Destinations Section
+* **Destination**: This is a user-specified selection where the alerts will be delivered. Only [user-defined alert destinations](../integrations/list-of-integrations/alert-destinations/) will be available for selection. Users can configure alert destinations in the Alert Destinations Section
 * **Operation**: One of the cooperators: `>,` `>=,` `<,` `<=,` `==,` `!=,` `=~,` `!~`
 * **Threshold:** Set the threshold value for the alert conditio&#x6E;**.**
 *   **Rearm**:
