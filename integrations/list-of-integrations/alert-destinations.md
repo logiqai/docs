@@ -68,7 +68,7 @@ Email destination is created by clicking the save button.
     }
     ```
 
-Utilize a Webhook tester such as [https://webhook.site/](https://webhook.site/) or similar to test desired results.
+Utilize a Webhook tester such as [https://webhook.site/](https://webhook.site/) or similar to test for desired results.
 
 ### Slack <a href="#slack" id="slack"></a>
 
