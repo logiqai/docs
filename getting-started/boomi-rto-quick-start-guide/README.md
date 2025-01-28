@@ -38,13 +38,13 @@ Track key performance metrics across Boomi Atoms, Molecules, and Clouds, includi
 
 Capture and analyze logs from Atom workers, web servers, and containers, enabling quick issue identification and efficient troubleshooting.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Container, Web Server, Molecule, and Execution logs collected out of the box</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Container, Web Server, Molecule, and Execution logs collected out of the box</p></figcaption></figure>
 
 #### 3. **Custom Dashboards**
 
 Pre-built customizable dashboards to visualize critical performance metrics, helping engineers prioritize and resolve issues quickly.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>One of the pre-built dashboards. Includes Compute, Storage, Memory, Network, JVM, Atom Metrics</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>One of the pre-built dashboards. Includes Compute, Storage, Memory, Network, JVM, Atom Metrics</p></figcaption></figure>
 
 #### 4. Pre-Configured Alerts
 

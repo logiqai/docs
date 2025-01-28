@@ -115,7 +115,7 @@
   * [GCP PubSub](integrations/list-of-integrations/gcp-pubsub.md)
   * [GCP Cloud Logging](integrations/list-of-integrations/gcp-cloud-logging.md)
   * [IBM QRadar](integrations/list-of-integrations/ibm-qradar.md)
-  * [Incident management](integrations/list-of-integrations/alert-destinations.md)
+  * [Incident Management](integrations/list-of-integrations/alert-destinations.md)
   * [Jaeger](integrations/list-of-integrations/jaeger.md)
   * [Kafka](integrations/list-of-integrations/kafka.md)
   * [Kinesis](integrations/list-of-integrations/kinesis.md)

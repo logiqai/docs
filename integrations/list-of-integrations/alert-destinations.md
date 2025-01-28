@@ -4,7 +4,7 @@ description: >-
   reliability into your production operations.
 ---
 
-# Incident management
+# Incident Management
 
 When an alert triggers, Apica Ascent Insights sends alert details to its designated alert destinations. Apica Ascent Insights supports the following types of alert destinations.
 
@@ -40,6 +40,35 @@ It’s required to [configure the e-mail](../../logiq-ui-configuration/email-con
 Email destination is created by clicking the save button.
 
 ![Email Alert Destination](<../../.gitbook/assets/Screenshot from 2022-07-04 16-46-00.png>)
+
+### Generic Webhook <a href="#slack" id="slack"></a>
+
+1. Define the Webhook name, Example "Critical MS Teams Webhook"
+2. Set the Webhook URL where the payload will be sent.
+3. Username and password are automatically filled in.
+
+<figure><img src="../../.gitbook/assets/image.png" alt="" width="388"><figcaption></figcaption></figure>
+
+4.  Configure the Field Mapper to extract and rename fields in the payload for better useability. (Optional)
+
+    ```
+    {
+      "alert_id": "alert.id",
+      "name": "alert.name",
+      "severity": "alert.severity"
+    }
+    ```
+5.  Configure the Payload Mapper to define the structure and content of the outgoing payload sent to the Webhook. (Optional)&#x20;
+
+    ```
+    {
+      "alert_id": "{{ alert_id }}",
+      "name": "{{ alert_name }}",
+      "severity": "{{ alert_severity }}"
+    }
+    ```
+
+Utilize a Webhook tester such as [https://webhook.site/](https://webhook.site/) or similar to test desired results.
 
 ### Slack <a href="#slack" id="slack"></a>
 
@@ -91,7 +120,7 @@ The API Key must be created with **Read** and **Create and Update** permissions 
 
 You are now ready to add the OpsGenie integration in Apica Ascent under alert destinations. Provide a name for the integration and the **OpsGenie API key**. You are now ready to receive incident notifications from Apica Ascent.
 
-![OpsGenie Alert destination](../../.gitbook/assets/2022-07-04\_17-07.png)
+![OpsGenie Alert destination](../../.gitbook/assets/2022-07-04_17-07.png)
 
 #### OpsGenie alerts view for Apica Ascent alerts
 
