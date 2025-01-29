@@ -77,6 +77,8 @@
   * [Prometheus Compatible](data-sources/time-series-databases/prometheus-compatible.md)
   * [Elasticsearch](data-sources/time-series-databases/elasticsearch-data-source.md)
   * [InfluxDB](data-sources/time-series-databases/influxdb.md)
+* [Ascent Synthetics](data-sources/ascent-synthetics/README.md)
+  * [Checks](data-sources/ascent-synthetics/checks.md)
 
 ## INTEGRATIONS
 
