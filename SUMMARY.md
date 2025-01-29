@@ -129,6 +129,7 @@
   * [Oracle OCI Infrastructure Audit/Logs](integrations/list-of-integrations/oracle-oci-infrastructure-audit-logs.md)
   * [OSSEC Variants (OSSEC/WAZUH/ATOMIC)](integrations/list-of-integrations/ossec-variants-ossec-wazuh-atomic/README.md)
     * [Apica Ascent-OSSEC Agent for Windows](integrations/list-of-integrations/ossec-variants-ossec-wazuh-atomic/logiq-ossec-agent-for-windows.md)
+  * [OpenShift](integrations/list-of-integrations/openshift.md)
   * [Palo Alto Firewall](integrations/list-of-integrations/palo-alto-firewall.md)
   * [Prometheus](integrations/list-of-integrations/prometheus/README.md)
     * [Spring Boot](integrations/list-of-integrations/prometheus/spring-boot.md)
@@ -147,7 +148,6 @@
     * [Audit Vault Logs - AWS](integrations/list-of-integrations/vault/audit-vault-logs-aws.md)
     * [Audit Vault Logs - OCI](integrations/list-of-integrations/vault/audit-vault-logs-oci.md)
     * [Audit Vault Metrics](integrations/list-of-integrations/vault/audit-vault-metrics.md)
-* [OpenShift](integrations/openshift.md)
 
 ## Dashboards
 
