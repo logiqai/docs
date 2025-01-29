@@ -161,7 +161,7 @@ Install the Helm chart for Apica:
 
 Use the `helm install` command to deploy a Helm chart. Replace the placeholders with your actual values
 
-{% embed url="https://raw.githubusercontent.com/ApicaSystem/ApicaHub/refs/heads/master/integrations/OpenShift/openshift-values.yaml" %}
+{% embed url="https://github.com/ApicaSystem/ApicaHub/blob/master/integrations/OpenShift/openshift-values.yaml" %}
 you can change the values in this file values.yaml
 {% endembed %}
 
