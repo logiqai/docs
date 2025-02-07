@@ -78,12 +78,12 @@ The first step in this deployment is to install MicroK8s on your machine. The fo
 7.  Generate your MicroK8s configuration and merge it with your Kubernetes configuration by running the following command.
 
     ```bash
-    sudo microk8s config > ~/.kube/config
+    microk8s config > ~/.kube/config
     ```
 8.  Check whether MicroK8s is up and running with the following command.
 
     ```bash
-    sudo microk8s status
+    microk8s status
     ```
 
 MicroK8s is now installed on your machine.
@@ -103,8 +103,8 @@ microk8s enable helm3
 If you get a message telling you have insufficient permissions, a few of the commands above which tried to interpolate your current user into the command with the $USER variable did not work. You can easily fix it by adding your user to the microk8s group by specifying the name of the user explicitly:
 
 ```bash
-sudo usermod -a -G microk8s ubuntu
-sudo chown -R ubuntu ~/.kube
+sudo usermod -a -G microk8s ec2-user
+sudo chown -R ec2-user ~/.kube
 ```
 
 2. Enable a default storage class that allocates storage from a host directory.
@@ -240,11 +240,6 @@ scp -i /path/to/private_key.pem /path/to/local/file username@remote_host:/path/t
 ```
 {% endcode %}
 
-5.  Create a namespace on MicroK8s on which to install Apica Ascent PaaS.
-
-    <pre class="language-bash" data-full-width="true"><code class="lang-bash"><strong>microk8s kubectl create namespace apica-ascent
-    </strong></code></pre>
-
 Make sure you have the necessary permissions to copy a file to the specified folder on the Linux machine.
 
 > Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://github.com/logiqai/logiq-installation/blob/main/values/values.yaml) instead. run the following command.
@@ -275,11 +270,11 @@ Make sure you have the necessary permissions to copy a file to the specified fol
 > storageClass: microk8s-hostpath
 > ```
 
-6. Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
+5. Install Apica Ascent PaaS using Helm with the storage class set to `microk8s-hostpath` with the following command.
 
 {% code overflow="wrap" fullWidth="false" %}
 ```bash
-microk8s helm3 install apica-ascent -n apica-ascent --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f  values.microk8s.yaml  --debug --timeout 10m
+microk8s helm3 install apica-ascent -n apica-ascent --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f  values.microk8s.yaml  --debug
 ```
 {% endcode %}
 
@@ -305,7 +300,7 @@ If you are load balancing the hosting across multiple IPs using MetalLB, do the 
     The above command should give you an output similar to the following.
 
     ```
-    logiq-kubernetes-ingress  LoadBalancer   10.152.183.45  192.168.1.27
+    apica-ascent-kubernetes-ingress LoadBalancer   10.152.183.45  192.168.1.27
 
     80:30537/TCP,20514:30222/TCP,24224:30909/TCP,24225:31991/TCP,2514:30800/TCP,3000:32680/TCP,514:32450/    TCP,7514:30267/TCP,8081:30984/TCP,9998:31425/TCP     18m
     ```
