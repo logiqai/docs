@@ -4,23 +4,23 @@ icon: binoculars
 
 # Ascent Overview
 
-## Apica Ascent Data Fabric
+## Welcome to Apica Ascent
 
-Welcome to Apica Ascent, a powerful full-stack observability data fabric designed to streamline and optimize your entire observability data life-cycle: Collect, Store, Analyze, Transform, and Connect.
+Apica Ascent is a powerful full-stack Telemetry Data Management and Observability platform designed to streamline and optimize your entire data life-cycle: **Collect**, **Control**, **Store**, and **Observe**.
 
-![Observability Data Lifecycle](../.gitbook/assets/Stages.png)
+### Observability Data Lifecycle
 
-The Apica Ascent data fabric consolidates observability data into a single platform, specifically focusing on (M)etrics, (E)vents, (L)ogs, and (T)races, commonly known as MELT data. This integrated approach to MELT data is crucial for efficient root cause analysis. For example, if you encounter an API performance issue represented by latency metrics, being able to drill down to the API trace and accompanying logs becomes critical for faster root cause identification. Unlike traditional observability implementations, where data sits in separate silos that don't communicate, Apica Ascent ensures a cohesive view of all MELT data, leading to faster root cause outcomes.
+The **Apica Ascent platform** consolidates observability data into a single platform, focusing on **(M)etrics, (E)vents, (L)ogs, and (T)races**, commonly known as **MELT** data. This integrated approach to MELT data is crucial for efficient root cause analysis. For example, if you encounter an API performance issue represented by latency metrics, being able to drill down to the API trace and accompanying logs becomes critical for faster root cause identification. Unlike traditional observability implementations, where data sits in separate silos that don't communicate, Apica Ascent ensures a cohesive view of all MELT data, leading to faster root cause outcomes.
 
-In addition to its observability capabilities, Apica Ascent also includes a built-in security monitoring layer, acting as a log-based Host Intrusion Detection System (HIDS). The platform is compatible with popular agents like OSSEC, Wazuh, and Atomic, and incorporates rules from the open-source Sigma project for Security Information and Event Management (SIEM) purposes. This makes Apica Ascent's data fabric a reliable first-mile solution for consolidating MELT and security monitoring data within your enterprise environments.
+This makes the **Ascent platform** a reliable first-mile solution for consolidating **MELT** data within your enterprise environments. Experience a seamless, fully integrated observability solution that enhances performance and efficiency across your infrastructure.
 
-<figure><img src="../.gitbook/assets/ApicaUnification.png" alt="Apica Unifies data Silo&#x27;s"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Capabilities
 
 Apica Ascent employs a unified view of your enterprise, utilizing a full-stack approach to observability data life cycle management. By seamlessly integrating various capabilities, Apica Ascent facilitates a smoother and more effective root cause analysis process.
 
-<figure><img src="../.gitbook/assets/ApicaCapabilities.png" alt=""><figcaption></figcaption></figure>
+<div data-full-width="true"><figure><img src="../.gitbook/assets/product framework.png" alt=""><figcaption></figcaption></figure></div>
 
 ### Communities and Compliance
 
