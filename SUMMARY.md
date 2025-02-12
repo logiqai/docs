@@ -52,6 +52,8 @@
   * [RTO Dashboarding](getting-started/boomi-rto-quick-start-guide/rto-dashboarding.md)
   * [Alerting on RTO Metrics](getting-started/boomi-rto-quick-start-guide/alerting-on-rto-metrics.md)
   * [Alerting on RTO Logs](getting-started/boomi-rto-quick-start-guide/alerting-on-rto-logs.md)
+* [OpenTelemetry Overview](getting-started/opentelemetry-overview/README.md)
+  * [Why Implement OpenTelemetry?](getting-started/opentelemetry-overview/why-implement-opentelemetry.md)
 
 ## DATA SOURCES
 
