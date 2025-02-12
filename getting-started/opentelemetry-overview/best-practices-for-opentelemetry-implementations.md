@@ -8,6 +8,11 @@
 
 **Continuous improvement and governance:** Standardization should not be a one-time effort. Organizations should regularly review and refine their observability practices to adapt to evolving business needs, new technologies, and OpenTelemetry updates.
 
+Links for using OpenTelemetry with Apica Ascent:
+
+* [Getting Started with OpenTelemetry](../logiq-saas/getting-started-with-metrics.md)
+* [OpenTelemetry Integration for Ascent](../../integrations/list-of-integrations/opentelemetry.md)
+
 ### Creating an Internal Instrumentation Policy <a href="#toc189582884" id="toc189582884"></a>
 
 **Defining clear guidelines for telemetry data collection:** Organizations should document best practices for collecting, processing, and exporting telemetry data. This includes specifying which types of data (traces, metrics, logs) should be collected for different applications and environments.
