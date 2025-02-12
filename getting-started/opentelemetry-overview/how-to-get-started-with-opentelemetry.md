@@ -10,6 +10,11 @@ description: SETTING UP THE OPENTELEMETRY COLLECTOR
 
 **Deployment considerations:** Choosing between an agent-based or sidecar deployment model affects resource utilization and scalability. OpenTelemetry provides flexible deployment options that integrate directly into microservices, Kubernetes clusters, and traditional monolithic applications.
 
+Links for using OpenTelemetry with Apica Ascent:
+
+* [Getting Started with OpenTelemetry](../logiq-saas/getting-started-with-metrics.md)
+* [OpenTelemetry Integration for Ascent](../../integrations/list-of-integrations/opentelemetry.md)
+
 ## OTEL SDKs: SPRING BOOT OPENTELEMETRY AND MORE
 
 **Language-specific SDKs:** OpenTelemetry provides official SDKs for multiple programming languages, including Java, Python, JavaScript, Go, .NET, and more. Choosing the correct SDK ensures seamless instrumentation of applications to capture relevant telemetry data without requiring excessive code modifications.
