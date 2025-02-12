@@ -38,6 +38,12 @@ Introducing Apica Ascent Freemium—a FREE FOREVER version of our Intelligent Da
 * No storage costs or credit card requirements.
 * Built-in AI-driven insights to enhance troubleshooting and decision-making.
 
+**Browser Compatibility**
+
+{% hint style="info" %}
+The freemium release is qualified for Chrome up to version 131. Newer browser versions are not yet fully supported.
+{% endhint %}
+
 Apica Ascent Freemium is available immediately. Sign up now at [https://www.apica.io/freemium](https://www.apica.io/freemium) and start transforming your data management experience today.
 
 
