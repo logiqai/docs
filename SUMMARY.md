@@ -54,6 +54,9 @@
   * [Alerting on RTO Logs](getting-started/boomi-rto-quick-start-guide/alerting-on-rto-logs.md)
 * [OpenTelemetry Overview](getting-started/opentelemetry-overview/README.md)
   * [Why Implement OpenTelemetry?](getting-started/opentelemetry-overview/why-implement-opentelemetry.md)
+  * [Common Use Cases for OpenTelemetry](getting-started/opentelemetry-overview/common-use-cases-for-opentelemetry.md)
+  * [How to Get Started with OpenTelemetry](getting-started/opentelemetry-overview/how-to-get-started-with-opentelemetry.md)
+  * [Best Practices for OpenTelemetry Implementations](getting-started/opentelemetry-overview/best-practices-for-opentelemetry-implementations.md)
 
 ## DATA SOURCES
 
