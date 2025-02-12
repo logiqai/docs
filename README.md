@@ -1,5 +1,5 @@
 ---
-description: All the docs for setting up, configuring, and optimizing the Apica platform
+description: All the details to fully configure, enable and optimize the Ascent platform.
 ---
 
 # Welcome to Apica Docs!
