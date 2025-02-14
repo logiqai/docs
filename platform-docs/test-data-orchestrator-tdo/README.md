@@ -12,4 +12,4 @@ Documentation is divided into three (3) areas:
 
 * [Technical Guides](technical-guides/)
 * [User Documentation](user-documentation/)
-* [Release Notes](release-notes.md)
+* [Release Notes](release-notes/)
