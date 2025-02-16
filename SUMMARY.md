@@ -87,6 +87,8 @@
   * [InfluxDB](data-sources/time-series-databases/influxdb.md)
 * [Ascent Synthetics](data-sources/ascent-synthetics/README.md)
   * [Checks](data-sources/ascent-synthetics/checks.md)
+* [Ascent Logs](data-sources/ascent-logs/README.md)
+  * [Logs](data-sources/ascent-logs/logs.md)
 
 ## INTEGRATIONS
 
