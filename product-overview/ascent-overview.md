@@ -14,7 +14,7 @@ The **Apica Ascent platform** consolidates observability data into a single plat
 
 This makes the **Ascent platform** a reliable first-mile solution for consolidating **MELT** data within your enterprise environments. Experience a seamless, fully integrated observability solution that enhances performance and efficiency across your infrastructure.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (274).png" alt=""><figcaption></figcaption></figure>
 
 ### Capabilities
 

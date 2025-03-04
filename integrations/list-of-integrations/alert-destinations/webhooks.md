@@ -4,7 +4,7 @@
 2. Set the Webhook URL where the payload will be sent.
 3. Username and password are automatically filled in.
 
-<figure><img src="../../../.gitbook/assets/image (274) (1).png" alt="" width="388"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (274) (1) (1).png" alt="" width="388"><figcaption></figcaption></figure>
 
 1.  Configure the Field Mapper to extract and rename fields in the payload for better useability. (Optional)
 

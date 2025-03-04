@@ -18,13 +18,19 @@ Clicking on the ASM image to the left of the Overview menu item will always brin
 
 ### Overview
 
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+<div align="left"><figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="144"><figcaption></figcaption></figure></div>
+
 ### Dashboard
 
-See [Dashboards](broken-reference) for more information.
+See [Dashboards](../explore-the-platform/dashboards.md) for more information.
 
 ### Apica Panels
 
 The “Apica Panels” menu item allows users to view their configured Apica Panels instances. Apica Panels is a feature which allows users to integrate Apica data into Grafana dashboards for easier viewing; see <mark style="color:blue;">**Using the Apica Panels Dashboards**</mark> for a complete overview of the feature. The “Apica Panels” menu item contains two sub-items: “Panels” and “About”.
+
+<div align="left"><figure><img src="../../../.gitbook/assets/image (2).png" alt="" width="287"><figcaption></figcaption></figure></div>
 
 #### Panels
 
@@ -32,7 +38,7 @@ Clicking the “Panels” link will bring you to the Panels page, on which you c
 
 The default Panels version available in the ASM SaaS portal is called “Apica Panels (v2)”. There are two major versions of Apica Panels; one version is based on Grafana version 4, and the other (Panels v2) is based on Grafana version 8. Apica Panels (v1) is only available to customers who had ASM Panels enabled before the major version change and have a need to maintain their older dashboards.
 
-If you do not see “Apica Panels (v1)” on your dashboard, it means you do not have legacy Apica Panels configured on your account. Proceed with using only Panels v2 panels.
+<div align="left"><figure><img src="../../../.gitbook/assets/image (299).png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 #### About (Apica Panels)
 

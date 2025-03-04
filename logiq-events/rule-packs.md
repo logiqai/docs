@@ -11,6 +11,6 @@ Event Rules are grouped into Rule Packs. Click Rules Page in the left navigation
 
 ![](<../.gitbook/assets/image (62) (1).png>)
 
-![](<../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 It is easy to narrow down and search for events that you care about using search and filtering. Various types of rules available in Apica Ascent are described in DATA MANAGEMENT section
