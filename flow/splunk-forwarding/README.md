@@ -28,13 +28,13 @@ Selecting the _"Forwarding Proxy"_ app gives you the configured proxies as well 
 \
 
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>List of configured Splunk Forwarding Proxies</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>List of configured Splunk Forwarding Proxies</p></figcaption></figure>
 
 You can expand on the proxy to see its settings. The "hec\_token" can be used to setup the forwarder.
 
 \
 
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Proxy Settings</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Proxy Settings</p></figcaption></figure>

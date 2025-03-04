@@ -436,7 +436,6 @@
   * [ALT Basics](platform-docs/load-testing-overview/alt-basics.md)
   * [Explore the ALT Platform](platform-docs/load-testing-overview/explore-the-alt-platform/README.md)
     * [Page 1](platform-docs/load-testing-overview/explore-the-alt-platform/page-1.md)
-  * [Link to ALT Knowledge Base](https://apica-kb.atlassian.net/wiki/spaces/ALTDOCS/pages/5538148/Overview+of+the+Apica+Load+Test+Solution)
 * [Test Data Orchestrator (TDO)](platform-docs/test-data-orchestrator-tdo/README.md)
   * [Technical Guides](platform-docs/test-data-orchestrator-tdo/technical-guides/README.md)
     * [Hardware / Environment Requirements](platform-docs/test-data-orchestrator-tdo/technical-guides/hardware-environment-requirements.md)

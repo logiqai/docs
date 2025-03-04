@@ -4,17 +4,17 @@
 
 1.  Navigate to **Integrations** > **Alert** **Destinations** and click on **“New Alert Destination”**
 
-    <figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
     &#x20;
 2.  Select your type of Alert Destination (This example will use an email recipient)
 
-    <figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
     &#x20;
 3. Enter a name and email address for the recipient. Subject Template can be customized as required. Currently, alert\_name and state are the supported placeholders.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 C[lick **“Create”** to save your Alert Destination](#user-content-fn-1)[^1].
 
@@ -23,7 +23,7 @@ C[lick **“Create”** to save your Alert Destination](#user-content-fn-1)[^1].
 1. Navigate to **Explore** > **Check Analytics** and find your check
 2.  Under the more options (kebab menu) select **New Alert**
 
-    <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
     &#x20;
 3. Configure the alert
