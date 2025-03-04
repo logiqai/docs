@@ -1,4 +1,4 @@
-# ASM Platform Overview
+# Synthetic Monitoring Overview
 
 ### ASM Portal
 
@@ -14,7 +14,7 @@ Clicking on the ASM image to the left of the Overview menu item will always brin
 
 ### Dashboard
 
-See [Dashboards](dashboards.md) for more information.
+See [Dashboards](explore-the-platform/dashboards.md) for more information.
 
 ### Apica Panels
 

@@ -342,8 +342,11 @@
 
 ## PLATFORM DOCS
 
-* [Synthetic Monitoring (ASM)](platform-docs/synthetic-monitoring-asm/README.md)
-  * [Dashboards](platform-docs/synthetic-monitoring-asm/dashboards.md)
+* [Synthetic Monitoring Overview](platform-docs/synthetic-monitoring-overview/README.md)
+  * [Getting Started with ASM](platform-docs/synthetic-monitoring-overview/getting-started-with-asm.md)
+  * [Configurations](platform-docs/synthetic-monitoring-overview/configurations.md)
+  * [Explore the Platform](platform-docs/synthetic-monitoring-overview/explore-the-platform/README.md)
+    * [Dashboards](platform-docs/synthetic-monitoring-overview/explore-the-platform/dashboards.md)
   * [Link to ASM Knowledge Base](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview)
   * [Link to ZT Knowledge Base](https://apica-kb.atlassian.net/wiki/spaces/DAZT/pages/5674203/What+is+ZebraTester)
 * [Load Testing (ALT)](platform-docs/load-testing-alt/README.md)
