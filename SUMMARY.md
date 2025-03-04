@@ -433,7 +433,7 @@
 * [ZebraTester Scripting](platform-docs/zebratester-scripting.md)
 * [Load Testing Overview](platform-docs/load-testing-alt/README.md)
   * [Getting Started with ALT](platform-docs/load-testing-overview/getting-started-with-alt.md)
-  * [ALT Basics](platform-docs/load-testing-overview/alt-basics.md)
+  * [Creating / Running a Single Load Test](platform-docs/load-testing-overview/creating-running-a-single-load-test.md)
   * [Explore the ALT Platform](platform-docs/load-testing-overview/explore-the-alt-platform/README.md)
     * [Page 1](platform-docs/load-testing-overview/explore-the-alt-platform/page-1.md)
 * [Test Data Orchestrator (TDO)](platform-docs/test-data-orchestrator-tdo/README.md)
