@@ -1,12 +1,18 @@
 # Getting Started with ASM
 
-### ASM Portal
+### Apica Synthetic Monitoring (ASM) Portal
 
 The following video serves as an excellent reference for users who are new to the ASM portal.
+
+{% file src="../../../.gitbook/assets/Intro to ASM.webm" %}
+Intro to ASM Video
+{% endfile %}
 
 ### ASM Portal Navigation
 
 Below is an overview of the ASM platform navigation. It allows users to easily find all of the features offered within ASM. This article provides an overview of the different pages which can be accessed from the top navigation bar.
+
+<figure><img src="../../../.gitbook/assets/image (298).png" alt=""><figcaption></figcaption></figure>
 
 Clicking on the ASM image to the left of the Overview menu item will always bring you back to the main Dashboard.
 
