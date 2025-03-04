@@ -1,6 +1,6 @@
 # Explore the Platform
 
-This section will help you understand the ASM platform from a UI perspective:
+This section will help you understand the ASM platform from a UI perspective.
 
 * API Details
 * Navigation
@@ -9,4 +9,5 @@ This section will help you understand the ASM platform from a UI perspective:
 * Reports
 * Dashboards
 * Check Types
-* Monitoring Use Cases
+* Monitoring
+* Use Cases

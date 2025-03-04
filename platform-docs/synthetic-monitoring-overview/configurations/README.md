@@ -1,0 +1,27 @@
+# Configurations
+
+This section includes technical details for users who are interested in a more complex implementation of ASM and who are seeking lower-level technical details about the platform.
+
+* [Configuring Checks](broken-reference)
+  * [Understanding Check Results](broken-reference)
+    * [Understanding Browser Check Results](broken-reference)
+    * [Understanding ZebraTester Check Results](broken-reference)
+  * [Understanding Check Details](broken-reference)
+  * [Editing Checks](broken-reference)
+    * [Editing Browser Checks](broken-reference)
+    * [Editing ZebraTester Checks](broken-reference)
+  * [Using Regular Expressions Within the ASM Platform](broken-reference)
+  * [Understanding the Edit Scenario Page](broken-reference)
+  * [Comparing Selenium IDE Scripts to ASM Scenarios](broken-reference)
+  * [Configuring Apica DNS Check Types](broken-reference)
+  * [Implementing Tags Effectively Within ASM](broken-reference)
+  * [Storing and Retrieving Information Using the ASM Dictionary](broken-reference)
+* [Configuring Users](broken-reference)
+  * [Configuring SSO Within ASM](broken-reference)
+* [Configuring Alerts](broken-reference)
+  * [Configuring Webhook Alerts](broken-reference)
+    * OpsGenie (Webhook Integration)
+    * ServiceNow (Webhook Integration)
+    * Splunk (Webhook Integration)
+    * Custom Target (Webhook Integration)
+    * Slack (Webhook Integration)
