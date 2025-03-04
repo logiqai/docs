@@ -28,7 +28,7 @@ See [Dashboards](../explore-the-platform/dashboards.md) for more information.
 
 ### Apica Panels
 
-The “Apica Panels” menu item allows users to view their configured Apica Panels instances. Apica Panels is a feature which allows users to integrate Apica data into Grafana dashboards for easier viewing; see <mark style="color:blue;">**Using the Apica Panels Dashboards**</mark> for a complete overview of the feature. The “Apica Panels” menu item contains two sub-items: “Panels” and “About”.
+The “Apica Panels” menu item allows users to view their configured Apica Panels instances. Apica Panels is a feature which allows users to integrate Apica data into Grafana dashboards for easier viewing. The “Apica Panels” menu item contains two sub-items: “Panels” and “About”.
 
 <div align="left"><figure><img src="../../../.gitbook/assets/image (2).png" alt="" width="287"><figcaption></figcaption></figure></div>
 
@@ -38,7 +38,7 @@ Clicking the “Panels” link will bring you to the Panels page, on which you c
 
 The default Panels version available in the ASM SaaS portal is called “Apica Panels (v2)”. There are two major versions of Apica Panels; one version is based on Grafana version 4, and the other (Panels v2) is based on Grafana version 8. Apica Panels (v1) is only available to customers who had ASM Panels enabled before the major version change and have a need to maintain their older dashboards.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (299).png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (299).png" alt="" width="563"><figcaption></figcaption></figure></div>
 
 #### About (Apica Panels)
 
@@ -48,11 +48,13 @@ Clicking on the “About” sub-menu item will bring you to the “About” page
 
 The **Tools** section provides access to a number of different system features, such as Impersonate, API settings, Maintenance, Journal, Trace Route, and Messages.
 
-**Menu**
+<figure><img src="../../../.gitbook/assets/image (300).png" alt=""><figcaption></figcaption></figure>
 
 ### Impersonate
 
 With the **Impersonate** tool you can view Synthetic Monitoring from a different user's perspective. This feature can be very useful for troubleshooting or assisting your users with any problem they may encounter.
+
+<figure><img src="../../../.gitbook/assets/image (301).png" alt=""><figcaption></figcaption></figure>
 
 | **Item**      | **Description**                            |
 | ------------- | ------------------------------------------ |
@@ -94,6 +96,8 @@ The user context is switched back to the original one.
 
 The **Maintenance** view lets you modify or delete result records for individual checks and recalculate any associated consolidation records. The table shows a list of previous maintenance tasks and information about them:
 
+<figure><img src="../../../.gitbook/assets/image (302).png" alt=""><figcaption></figcaption></figure>
+
 | **Button**      | **Description**                      |
 | --------------- | ------------------------------------ |
 | Show entries    | Number of rows to display per page.  |
@@ -109,6 +113,8 @@ The **Maintenance** view lets you modify or delete result records for individual
 ### Maintenance Tasks
 
 Maintenance tasks can be created by selecting relevant checks and applying the appropriate action.
+
+<figure><img src="../../../.gitbook/assets/image (303).png" alt=""><figcaption></figcaption></figure>
 
 ### Apply Action
 
@@ -241,11 +247,11 @@ The results of the traceroute run is shown in the results frame.
 
 The first line shows information about the traceroute configuration:
 
-Hostname and IP address, the upper limit on hops to try, and size of the test packets.
+* Hostname and IP address, the upper limit on hops to try, and size of the test packets.
 
 On each subsequent row, information about each hop is shown:
 
-Hop Number, hostname and/or IP address for the hop, and the response times for each of the three test packets.
+* Hop Number, hostname and/or IP address for the hop, and the response times for each of the three test packets.
 
 ### Messages
 
