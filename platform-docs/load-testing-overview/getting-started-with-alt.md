@@ -4,7 +4,7 @@
 
 * Login at [https://loadtest.apicasystem.com/](https://loadtest.apicasystem.com/)
 
-<div align="left"><figure><img src="../../.gitbook/assets/image.png" alt="" width="563"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption></figcaption></figure></div>
 
 * The ALT Portal Menu
   * **Projects**: A **project** is a named organization of load testing efforts that a Project Manager would want to assemble: Files, Test Instances (Tags, Number of Users, Start Date), People involved (technically and administratively) and who will get the results, Start-Completed Dates, Status, Business Unit, Test Category, Target Group, Environment (e.g. Production, Test, Development, Internal/External, Host Provider, etc), Application, Infrastructure, and Apica-related information will be recorded here.

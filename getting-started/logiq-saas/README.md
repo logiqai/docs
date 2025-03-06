@@ -33,7 +33,7 @@ You'll now have access to and can interact with the Apica Ascent UI.
 Now that you have access to the Apica Ascent UI, you can go start ingesting Metrics and Logs:
 
 * [Getting Started with Metrics](getting-started-with-metrics.md)
-* [Getting Started with Logs](getting-started-with-logs.md)
+* [Getting Started with Logs](getting-started-with-logs/)
 
 Here are helpful links to other "Getting Started" technical guides:
 
