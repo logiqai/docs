@@ -1,12 +1,10 @@
 ---
 description: >-
-  A guide on how to collect logs using OpenTelemetry from installation to
-  ingestion
+  A guide on how to collect logs using OpenTelemetry on Linux from installation
+  to ingestion
 ---
 
 # OpenTelemetry
-
-
 
 ## Install otelcol-contrib
 
