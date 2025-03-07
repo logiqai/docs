@@ -32,7 +32,7 @@ Apica Grafana Plugin&#x20;
 
 • Added support for page metrics which allows users to see response time for specific pages instead of the entire scenario metrics
 
-Bugs&#x20;
+**Bug Fixes**
 
 • Fixed the bug where invalid "acceptedCodes" were being accepted for URL checks in POST /checks/url-v2 API
 
@@ -52,9 +52,9 @@ Check Management&#x20;
 
 Private Location and Agent Management&#x20;
 
-• Introduced full self service (Add, Edit, Delete, Reissue Certificate) of new check-type agnostic Private agents which can be grouped into Private locations&#x20;
+• Introduced full self-service (Add, Edit, Delete, Reissue Certificate) of new check-type agnostic Private agents which can be grouped into Private locations&#x20;
 
-• Introduced the ability to Add, Edit, Delete, Enable and Disable Private locations and associate Private repositories, giving more control over location and check execution.&#x20;
+• Introduced the ability to Add, Edit, Delete, Enable, and Disable Private locations and associate Private repositories, giving more control over location and check execution.&#x20;
 
 • Added a "Private Locations" section in the UI, allowing easy navigation and management of these locations.
 
@@ -74,7 +74,7 @@ Bugs&#x20;
 
 **New Features and Enhancements**
 
-**Fleet**
+### Fleet
 
 * **Fleet Agent Limits**: Enforced license-based agent limits.&#x20;
 * **Telemetry Enhancements**: Added telemetry support for Fleet agents.
@@ -95,9 +95,6 @@ Bugs&#x20;
 * **Dashboard Optimization**: Reduced load times for Data Explorer dashboards and preserved widget data across tabs.
 * **RCA Workbench**: Introduced diagnostics and debugging features based on DE widgets.
 * **Dashboard Validation**: Added validation for Data Explorer dashboard creation.
-
-
-
 * **React Page Migration**: Login, Setup, Signup, Reset, and Forgot Password pages migrated to React (TSX), reducing tech debt.
 * **Ascent Invitation Feature**: Implemented invitation feature for new users via Casdoor.
 * **Casdoor Sync**: Synced Casdoor users and groups with the Ascent database.
@@ -109,7 +106,7 @@ Bugs&#x20;
 
 ***
 
-**Bug Fixes**
+**Ascent Bug Fixes**
 
 * **GCP PubSub Plugin**: File loading issue resolved.
 * **ResizeObserver Compatibility**: Fixed compatibility with the latest Chrome version.
