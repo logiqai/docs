@@ -6,7 +6,7 @@ Observability isn’t just about collecting logs, metrics, and traces—it’s a
 
 Apica’s Ascent Platform, built on Kubernetes, solves these challenges by providing infinite scalability, AI-driven optimization, and seamless multi-cloud support. With a unified data store, OpenTelemetry-native architecture, and intelligent workload management, Apica delivers unparalleled observability performance while reducing operational complexity and costs.
 
-[**More on Kubernetes Integration**](../integrations/list-of-integrations/kubernetes.md)
+[**More on Ascent Kubernetes Integration**](../integrations/list-of-integrations/kubernetes.md)
 
 ### InstaStore™: Kubernetes-Powered Unified Telemetry Data Lake
 
