@@ -10,6 +10,8 @@ The digital landscape is evolving at an unprecedented pace. Enterprises are migr
 
 This is where next-generation observability platforms, like Apica’s Ascent Platform, come in. Built on Kubernetes and OpenTelemetry, Apica delivers a scalable, AI-powered, cloud-native observability solution designed to handle billions of logs, metrics, and traces in real time.
 
+[**More information on Kubernetes with OpenTelemetry**](https://opentelemetry.io/docs/platforms/kubernetes/)
+
 ### Why Traditional Monitoring is Failing in Cloud-Native Environments
 
 In the past, traditional monitoring tools were sufficient for monolithic applications deployed on static infrastructure. However, modern applications are distributed, dynamic, and ephemeral.
