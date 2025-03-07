@@ -7,6 +7,12 @@
 * [Ascent Overview](product-overview/ascent-overview.md)
 * [Ascent User Interface](product-overview/the-logiq-ui.md)
 
+***
+
+* [Ascent with Kubernetes](ascent-with-kubernetes/README.md)
+  * [Kubernetes is a Game-Changer](ascent-with-kubernetes/kubernetes-is-a-game-changer.md)
+  * [Ascent: Built on Kubernetes](ascent-with-kubernetes/ascent-built-on-kubernetes.md)
+
 ## RELEASE NOTES
 
 * [Release Notes](release-notes/release-notes/README.md)
