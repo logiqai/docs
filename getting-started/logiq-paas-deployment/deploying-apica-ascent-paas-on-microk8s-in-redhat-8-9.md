@@ -28,7 +28,7 @@ The first step in this deployment is to install MicroK8s on your machine. The fo
     ```
 
     ```bash
-    #follow the article for installation of [microk8s](https://snapcraft.io/install/microk8s/rhel)
+    #follow the article for installation of [microk8s] (https://snapcraft.io/install/microk8s/rhel)
     #The EPEL repository can be added to RHEL 9 with the following command:
 
     sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
@@ -40,7 +40,7 @@ The first step in this deployment is to install MicroK8s on your machine. The fo
     sudo dnf upgrade
     ```
 
-    once you added these repl repos to server we need to run the below commands
+    Once you added these repl repos to server we need to run the below commands - Note: If you are running RHEL On-Premises with Red Hat CDN (Connected Environment) where subscription management is handled automatically:
 
     ```bash
     sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
