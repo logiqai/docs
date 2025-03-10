@@ -42,15 +42,22 @@ The first step in this deployment is to install MicroK8s on your machine. The fo
 
     Once you added these repl repos to server we need to run the below commands - Note: If you are running RHEL On-Premises with Red Hat CDN (Connected Environment) where subscription management is handled automatically:
 
-    ```bash
-    sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
+    <pre class="language-bash"><code class="lang-bash">sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
     sudo yum -y update
+
+    <strong>If you are using RHEL in Disconnected or Air-Gapped Environments
+    </strong>like cloud environments AWS, Azure, and Google Cloud then you need to
+    run below commands in order to pull RHEL updates via RHUI:
+
+    sudo yum-config-manager --enable codeready-builder-for-rhel-8-rhui-rpms
+    sudo yum-config-manager --enable rhel-8-supplementary-rhui-rpms
 
     #enable snapd for installation
     sudo yum install snapd
+
     sudo systemctl enable --now snapd.socket
     sudo ln -s /var/lib/snapd/snap /snap
-    ```
+    </code></pre>
 2.  Install `core` using Snap by running the following command.
 
     ```
