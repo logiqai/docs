@@ -310,6 +310,7 @@
     * [Accessing Reports results via API](log-management/reports/accessing-api-results-via-api.md)
   * [Role-Based Access Control (RBAC)](log-management/role-based-access-control.md)
   * [Configuring RBAC](log-management/configuring-rbac.md)
+* [AI and LLM Observability](observe/ai-and-llm-observability.md)
 * [Synthetic Check Monitoring](observe/check-management/README.md)
   * [Map View](observe/check-management/map-view.md)
   * [List View](observe/check-management/list-view.md)
