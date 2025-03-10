@@ -55,7 +55,7 @@
   * [Deploying Apica Ascent PaaS in Azure Kubernetes Service](getting-started/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/README.md)
     * [Azure Blob Storage Lifecycle Management](getting-started/logiq-paas-deployment/deploying-logiq-paas-in-azure-kubernetes-service/azure-blob-storage-lifecycle-management.md)
   * [Deploying Apica Ascent with OpenShift](getting-started/logiq-paas-deployment/deploying-apica-ascent-with-openshift.md)
-  * [Deploying Apica Ascent PaaS on MicroK8s in Redhat 8/9](getting-started/logiq-paas-deployment/deploying-apica-ascent-paas-on-microk8s-in-redhat-8-9.md)
+  * [Deploying Apica Ascent PaaS on MicroK8s in Red Hat v8 / v9](getting-started/logiq-paas-deployment/deploying-apica-ascent-paas-on-microk8s-in-red-hat-v8-v9.md)
 * [Boomi RTO Quick Start Guide](getting-started/boomi-rto-quick-start-guide/README.md)
   * [RTO Dashboarding](getting-started/boomi-rto-quick-start-guide/rto-dashboarding.md)
   * [Alerting on RTO Metrics](getting-started/boomi-rto-quick-start-guide/alerting-on-rto-metrics.md)
