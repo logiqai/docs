@@ -312,6 +312,7 @@
   * [Configuring RBAC](log-management/configuring-rbac.md)
 * [AI and LLM Observability](observe/ai-and-llm-observability/README.md)
   * [AI Agent Deployment Strategies](observe/ai-and-llm-observability/ai-agent-deployment-strategies.md)
+  * [Deployment Model](observe/ai-and-llm-observability/deployment-model.md)
 * [Synthetic Check Monitoring](observe/check-management/README.md)
   * [Map View](observe/check-management/map-view.md)
   * [List View](observe/check-management/list-view.md)
