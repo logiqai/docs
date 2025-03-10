@@ -6,7 +6,7 @@ To begin, click on any of the icons within the “Real Browser Checks” section
 
 
 
-Fill in the name of the check and a brief description if desired. Then add any [Tags](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2133688408/Using+Tags+to+Organize+Checks) you wish to associate with the checks.
+Fill in the name of the check and a brief description if desired. Then add any Tags you wish to associate with the checks.
 
 ## Step 2: URL, Scenario, and Location <a href="#creatinganewrealbrowsercheck-step2-url-scenario-andlocation" id="creatinganewrealbrowsercheck-step2-url-scenario-andlocation"></a>
 
@@ -51,9 +51,9 @@ In the third step, you can define how often the check is to run, basic reporting
 
 **Groups**
 
-| **Item**       | **Description**                                                                                                                       | **Comment** |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| Monitor Groups | [Monitor Groups](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Monitor%20Groups) for the check. |             |
+| **Item**       | **Description**               | **Comment** |
+| -------------- | ----------------------------- | ----------- |
+| Monitor Groups | Monitor Groups for the check. |             |
 
 ## Step 4: Confirm & Create <a href="#creatinganewrealbrowsercheck-step4-confirm-and-create" id="creatinganewrealbrowsercheck-step4-confirm-and-create"></a>
 

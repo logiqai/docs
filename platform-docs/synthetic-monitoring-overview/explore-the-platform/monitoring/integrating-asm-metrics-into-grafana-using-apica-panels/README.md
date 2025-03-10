@@ -22,7 +22,7 @@ Synthetic Monitoring is provided as a custom **Data Source** for use with Grafan
 
 
 
-#### [Data Source](http://confluence.teamsinspace.com:8090/display/ASMDOCS/Feature+Data+Source) <a href="#integratingasmmetricsintografanausingapicapanels-datasource.1" id="integratingasmmetricsintografanausingapicapanels-datasource.1"></a>
+#### Data Source <a href="#integratingasmmetricsintografanausingapicapanels-datasource.1" id="integratingasmmetricsintografanausingapicapanels-datasource.1"></a>
 
 A **Data Source** is exactly that - a source of data. They provide the metrics you use to create your dashboards and panels.
 
@@ -58,7 +58,7 @@ The **Panel Widgets** allow you to populate your Grafana dashboards with data vi
 
 ## Panel Widgets <a href="#integratingasmmetricsintografanausingapicapanels-panelwidgets.1" id="integratingasmmetricsintografanausingapicapanels-panelwidgets.1"></a>
 
-A Grafana **Panel** is a widget used in [dashboards](http://confluence.teamsinspace.com:8090/display/ASMDOCS/Dashboard) to display metrics from a particular [Data Source](http://confluence.teamsinspace.com:8090/display/ASMDOCS/Feature+Data+Source).
+A Grafana **Panel** is a widget used in dashboards to display metrics from a particular Data Source.
 
 ### Creation <a href="#integratingasmmetricsintografanausingapicapanels-creation.1" id="integratingasmmetricsintografanausingapicapanels-creation.1"></a>
 
@@ -175,12 +175,12 @@ To create a panel widget link:
 * Select the **Link** tab
 * Select options as desired:
 
-| Item                       | Description                                                                                                                                                      | Comment                  |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| Current Time Range         | Time [Time Range](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Time%20Range\&linkCreation=true\&fromPageId=2133756975).   |                          |
-| Template Variables         | Templating [Templates](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Templates\&linkCreation=true\&fromPageId=2133756975). |                          |
-| Theme                      | Display [UI Theme](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=UI%20Theme\&linkCreation=true\&fromPageId=2133756975).    | `current`/`dark`/`light` |
-| Direct Link Rendered Image | Creates a static image of the current status and provides a link and opens it in a separate window.                                                              |                          |
+| Item                       | Description                                                                                         | Comment                  |
+| -------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------ |
+| Current Time Range         | Time Time Range.                                                                                    |                          |
+| Template Variables         | Templating Templates.                                                                               |                          |
+| Theme                      | Display UI Theme.                                                                                   | `current`/`dark`/`light` |
+| Direct Link Rendered Image | Creates a static image of the current status and provides a link and opens it in a separate window. |                          |
 
 **Note:** Make sure that any changes you made to the panel widget has been saved before creating the link.
 

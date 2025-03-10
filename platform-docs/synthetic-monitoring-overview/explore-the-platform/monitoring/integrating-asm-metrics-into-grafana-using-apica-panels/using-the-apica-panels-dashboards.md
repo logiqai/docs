@@ -755,11 +755,11 @@ With **Dashboard links**, you can share a dashboard through a direct link. The l
 
 
 
-| Item               | Description                                                                                                                                                      | Comment                  |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| Current Time Range | Time Time Range.                                                                                                                                                 |                          |
-| Template Variables | Templating [Templates](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Templates\&linkCreation=true\&fromPageId=2133755841). |                          |
-| Theme              | Display UI Theme.                                                                                                                                                | `current`/`dark`/`light` |
+| Item               | Description           | Comment                  |
+| ------------------ | --------------------- | ------------------------ |
+| Current Time Range | Time Time Range.      |                          |
+| Template Variables | Templating Templates. |                          |
+| Theme              | Display UI Theme.     | `current`/`dark`/`light` |
 
 **Note:** Make sure that any changes you made to the dashboard has been saved before creating the link.
 
@@ -904,7 +904,7 @@ In **shared/multiple** mode, the crosshair is shown on multiple widgets and tool
 
 **Configuration**
 
-The default behavior can be changed from the [Settings General](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Settings%20General\&linkCreation=true\&fromPageId=2133755966).
+The default behavior can be changed from the Settings General.
 
 You can also toogle between behaviors by pressing `ctrl-o`/`command-o`.
 
@@ -926,20 +926,20 @@ The external link for a dashboard looks something like this:
 
 `https://wpm.apicasystem.com/Account/Login?returnUrl=`{returnUrl}`&authToken=`{authToken}`&onAuth=setApic aDashboardToken`
 
-| Part                                        | Description                                                                                                                                                                    |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `https://wpm.apicasystem.com/Account/Login` | Base access URL.                                                                                                                                                               |
-| `?returnUrl=`                               | The returnUrl property name.                                                                                                                                                   |
-| {returnUrl}                                 | [URL encoded](http://confluence.teamsinspace.com:8090/display/ASMDOCS/URL+Encoding) link to the Panel.                                                                         |
-| `&authToken=`                               | The authToken property name.                                                                                                                                                   |
-| {authToken}                                 | [Base64](http://confluence.teamsinspace.com:8090/display/ASMDOCS/Base64) and [url](http://confluence.teamsinspace.com:8090/display/ASMDOCS/URL+Encoding) encoded access token. |
-| `&onAuth=setApicaDashboardToken`            | Instructions to server to use the token.                                                                                                                                       |
+| Part                                        | Description                              |
+| ------------------------------------------- | ---------------------------------------- |
+| `https://wpm.apicasystem.com/Account/Login` | Base access URL.                         |
+| `?returnUrl=`                               | The returnUrl property name.             |
+| {returnUrl}                                 | URL encoded link to the Panel.           |
+| `&authToken=`                               | The authToken property name.             |
+| {authToken}                                 | Base64 and url encoded access token.     |
+| `&onAuth=setApicaDashboardToken`            | Instructions to server to use the token. |
 
 Replace the {strings} with the values relevant for your panel.
 
 **Dashboard URL - returnURL**
 
-The returnURL string is a [URL encoded](http://confluence.teamsinspace.com:8090/display/ASMDOCS/URL+Encoding) link to the Panel.
+The returnURL string is a URL encoded link to the Panel.
 
 | String                                                     | URL Encoding                                                                |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -947,9 +947,9 @@ The returnURL string is a [URL encoded](http://confluence.teamsinspace.com:8090/
 
 **Access Token - authToken**
 
-&#x20;**Note:** For security purposes, the user **must** be a dedicated read-only user [created](http://confluence.teamsinspace.com:8090/display/ASMDOCS/Users+Users) specifically for this purpose. Make sure that the use has **no** [**user role**](http://confluence.teamsinspace.com:8090/display/ASMDOCS/Users+Config+Roles) assigned to it.
+&#x20;**Note:** For security purposes, the user **must** be a dedicated read-only user created specifically for this purpose. Make sure that the use has **no user role** assigned to it.
 
-The authToken string is a [base64](http://confluence.teamsinspace.com:8090/display/ASMDOCS/Base64) **and** [url](http://confluence.teamsinspace.com:8090/display/ASMDOCS/URL+Encoding) encoded string containing your login and password:
+The authToken string is a base64 **and** url encoded string containing your login and password:
 
 | Login             | Password   | String                    | Base64                            | URL encoded                      |
 | ----------------- | ---------- | ------------------------- | --------------------------------- | -------------------------------- |
@@ -958,7 +958,7 @@ The authToken string is a [base64](http://confluence.teamsinspace.com:8090/displ
 
 &#x20;**Note:** the string must include the `:` colon separator.
 
-&#x20;**Note:** This is **not** the [API](http://confluence.teamsinspace.com:8090/display/ASMDOCS/Api) _auth\_ticket_ , but a base64 encoding of a string consisting of your _login_ and _password_.
+&#x20;**Note:** This is **not** the API _auth\_ticket_ , but a base64 encoding of a string consisting of your _login_ and _password_.
 
 ## Grafana Setup <a href="#usingtheapicapanelsdashboards-grafanasetup" id="usingtheapicapanelsdashboards-grafanasetup"></a>
 
@@ -977,7 +977,7 @@ The **Link** tab in the **Share** dialog is shown:
 
 
 
-* Select link [Share Link Grafana Link](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Share%20Link%20Grafana%20Link\&linkCreation=true\&fromPageId=2133756074) as desired:
+* Select link Share Link Grafana Link as desired:
 * Time range
 * Variables
 * Theme
@@ -1010,7 +1010,7 @@ You can select different **UI Themes** for display purposes.
 
 **Overview**
 
-The theme can either be a user profile setting and affect the entire interface, or as an option for the display [Share Link Grafana Link](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Share%20Link%20Grafana%20Link\&linkCreation=true\&fromPageId=2133757185), for example in Kiosk Mode mode.
+The theme can either be a user profile setting and affect the entire interface, or as an option for the display Share Link Grafana Link, for example in Kiosk Mode mode.
 
 ## Theme Link <a href="#usingtheapicapanelsdashboards-themelink" id="usingtheapicapanelsdashboards-themelink"></a>
 
@@ -1080,11 +1080,11 @@ In the **Preferences** section, you can configure various interface settings for
 
 
 
-| Item           | Description                                                                                                                                                                                                   | Comment                                           |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| UI Theme       | UI [UI Theme](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=UI%20Theme\&linkCreation=true\&fromPageId=2133756289) to use for the account.                               |                                                   |
-| Home Dashboard | Primary [Apica Panels Dashboards](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Apica%20Panels%20Dashboards\&linkCreation=true\&fromPageId=2133756289) for the account. | The list can be populated by Starring dashboards. |
-| Timezone       | Timezone to use in dashboards.                                                                                                                                                                                |                                                   |
+| Item           | Description                                      | Comment                                           |
+| -------------- | ------------------------------------------------ | ------------------------------------------------- |
+| UI Theme       | UI UI Theme to use for the account.              |                                                   |
+| Home Dashboard | Primary Apica Panels Dashboards for the account. | The list can be populated by Starring dashboards. |
+| Timezone       | Timezone to use in dashboards.                   |                                                   |
 
 ## Starring <a href="#usingtheapicapanelsdashboards-starring" id="usingtheapicapanelsdashboards-starring"></a>
 

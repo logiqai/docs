@@ -20,7 +20,7 @@ Clicking on the ASM image to the left of the Overview menu item will always brin
 
 <figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (1) (1) (1) (2).png" alt="" width="144"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (1) (1) (1) (2) (1).png" alt="" width="144"><figcaption></figcaption></figure></div>
 
 ### Dashboard
 

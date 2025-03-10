@@ -2,21 +2,21 @@
 
 When Apica Panels is enabled for your account, you will see a number of custom dashboards which can be customized as needed to fulfill your business needs. These links take you directly to the GitHub Dashboards documentation for the Grafana Plugin:
 
-* [Dashboards](https://apicasystem.github.io/apica-grafana/#dashboards)
+* Dashboards
 * **Tag Level Dashboards**
-  * [Apica Tags SLA](https://apicasystem.github.io/apica-grafana/#apica-tags-sla)
-  * [Apica Drill Down Checks Aggregate with Tags](https://apicasystem.github.io/apica-grafana/#apica-drill-down-checks-aggregate-with-tags)
-  * [Apica Check Summary](https://apicasystem.github.io/apica-grafana/#apica-check-summary)
-  * [Apica Tags Geo Map](https://apicasystem.github.io/apica-grafana/#apica-tags-geo-map)
-  * [Apica Check Summary Status with Tags](https://apicasystem.github.io/apica-grafana/#apica-check-summary-status-with-tags)
-  * [Apica Tags Events Insight](https://apicasystem.github.io/apica-grafana/#apica-tags-events-insight)
+  * Apica Tags SLA
+  * Apica Drill Down Checks Aggregate with Tags
+  * Apica Check Summary
+  * Apica Tags Geo Map
+  * Apica Check Summary Status with Tags
+  * Apica Tags Events Insight
 * **Group Level Dashboards**
-  * [Apica Groups SLA](https://apicasystem.github.io/apica-grafana/#apica-groups-sla)
-  * [Apica GeoMap Groups](https://apicasystem.github.io/apica-grafana/#apica-geomap-groups)
+  * Apica Groups SLA
+  * Apica GeoMap Groups
 * **Account Level Dashboards**
-  * [Apica Account Events Insight](https://apicasystem.github.io/apica-grafana/#apica-account-events-insight)
-  * [Apica Checks Summary Table](https://apicasystem.github.io/apica-grafana/#apica-checks-summary-table)
-* [Sample Business Dashboard](https://apicasystem.github.io/apica-grafana/#sample-business-dashboard)
+  * Apica Account Events Insight
+  * Apica Checks Summary Table
+* Sample Business Dashboard
 * You can also refer to the Readme for further details on using Template Variables, Ad Hoc filter, Query Editor options, and more:
 
 

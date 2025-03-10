@@ -69,7 +69,7 @@ Step 5: Create/Generate the report
 
 ***
 
-### My [Subscriptions](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/4633248/Subscriptions) <a href="#reports-mysubscriptions" id="reports-mysubscriptions"></a>
+### My Subscriptions <a href="#reports-mysubscriptions" id="reports-mysubscriptions"></a>
 
 “You currently have no subscriptions.” will be listed until you have created a new Subscription report. After that, you will see all your subscriptions listed here.
 
@@ -284,16 +284,16 @@ Each subscription is displayed as a section on the page.
 
 
 
-| **Item**                      | **Description**                                                                                                                                                                                                |   |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
-|  Title E.g. “General Summary” | The type of report (e.g. General Summary, Excel Summary, Performance Summary). Below is a thumbnail image of the report.                                                                                       |   |
-|  All Checks or {N} Check(s)   | The included checks.                                                                                                                                                                                           |   |
-|  Report Name                  | The identifier for the report.                                                                                                                                                                                 |   |
-|  Enabled                      | Turn subscription on or off.                                                                                                                                                                                   |   |
-|  Email User                   | Send a report to the user/report creator.                                                                                                                                                                      |   |
-|  Email Customer               | Send report to the **Reporting Email** address configured in [Account](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Account\&linkCreation=true\&fromPageId=2134049046). |   |
-|  Additional Recipients        | Email addresses to extra recipients.                                                                                                                                                                           |   |
-|  Interval                     | Table showing at which interval(s) the report is generated and sent.                                                                                                                                           |   |
+| **Item**                      | **Description**                                                                                                          |   |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------ | - |
+|  Title E.g. “General Summary” | The type of report (e.g. General Summary, Excel Summary, Performance Summary). Below is a thumbnail image of the report. |   |
+|  All Checks or {N} Check(s)   | The included checks.                                                                                                     |   |
+|  Report Name                  | The identifier for the report.                                                                                           |   |
+|  Enabled                      | Turn subscription on or off.                                                                                             |   |
+|  Email User                   | Send a report to the user/report creator.                                                                                |   |
+|  Email Customer               | Send report to the **Reporting Email** address configured in Account.                                                    |   |
+|  Additional Recipients        | Email addresses to extra recipients.                                                                                     |   |
+|  Interval                     | Table showing at which interval(s) the report is generated and sent.                                                     |   |
 
 **Email**
 

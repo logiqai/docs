@@ -1,6 +1,6 @@
 # API Details
 
-For complete ASM API documentation, follow [this link](https://api-asm1.apica.io/v3/Help).
+For complete ASM API documentation, follow this link.
 
 Supporting documentation will be referenced in the content below.
 

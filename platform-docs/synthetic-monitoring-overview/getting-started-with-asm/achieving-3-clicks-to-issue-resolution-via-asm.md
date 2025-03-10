@@ -1,14 +1,10 @@
 # Achieving 3 Clicks to Issue Resolution via ASM
 
-*
-
-&#x20;           &#x20;
-
 ## A quick UI and visual intro to the ASM Portal. <a href="#achieving3clickstoissueresolutionviaasm-aquickuiandvisualintrototheasmportal" id="achieving3clickstoissueresolutionviaasm-aquickuiandvisualintrototheasmportal"></a>
 
 This table will provide a brief overview of using Apica Synthetic Monitoring in the portal.
 
-
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 What you see above is the home dashboard of ASM.
 

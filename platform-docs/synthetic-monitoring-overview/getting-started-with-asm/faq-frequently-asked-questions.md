@@ -4,7 +4,7 @@ The following are some commonly asked questions regarding the overall use of the
 
 **Q: Does Apica have a password policy that I must follow when implementing a password?**
 
-A: Yes. See [https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview#Apica-Password-and-Login-Policy](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview#Apica-Password-and-Login-Policy) for more information.
+A: Yes. See https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2177269761/ASM+Platform+Overview#Apica-Password-and-Login-Policy for more information.
 
 **Q: How do I setup checks that can perform REST?**
 
@@ -12,7 +12,7 @@ A possible workaround we looked at is running the REST call on chrome and using 
 
 **Q: Can warnings and errors also affect my SLA?**
 
-Only Errors and Fatals affect SLA percentage. Use this link: [SLA Calculations](http://confluence.teamsinspace.com:8090/display/ASMDOCS/Sla+SLA)
+Only Errors and Fatals affect SLA percentage. Use this link: SLA Calculations
 
 **Q: How do I upload ZT checks in ASM?**
 
@@ -28,7 +28,7 @@ The details and statistic differs for each type of check. (PRX checks - 7d, FPR 
 
 **Q: Is there a list of IP's that need to be whitelisted?**
 
-You can find a complete list of all Apica Synthetic Monitoring (ASM) IP's here: [ASM Public Agent IP addresses](http://confluence.teamsinspace.com:8090/display/ASMDOCS/Agent+IP+Networks)
+You can find a complete list of all Apica Synthetic Monitoring (ASM) IP's here: ASM Public Agent IP addresses
 
 **Q: Why should I use Severity Mapping instead of Blocking URLs?**
 

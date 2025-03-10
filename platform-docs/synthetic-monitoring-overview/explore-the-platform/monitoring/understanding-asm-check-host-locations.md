@@ -44,7 +44,7 @@ The secondary location will reside in the same geographical region and have the 
 
 Use the following lists for whitelisting purposes to ensure Apica public locations are accessible from within your network.
 
-* [Complete List of Apica Agent IP Addresses (HTML)](https://s3.eu-central-1.amazonaws.com/apica-ip-addresses/asm-agent-ips.html)
-* [Complete List of Apica Agent IP Addresses (JSON)](https://apica-ip-addresses.s3.eu-central-1.amazonaws.com/asm-agent-ips.json)
+* Complete List of Apica Agent IP Addresses (HTML)
+* Complete List of Apica Agent IP Addresses (JSON)
 
 If you are granting an Apica resource access to your application, they will be accessing your network from the IP ranges `194.213.118.0/24` and `194.213.119.0/24`. As such, please allow access to the application or server in question from those IP ranges.

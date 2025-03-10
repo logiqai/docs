@@ -4,7 +4,7 @@ The **Dashboard** provides a collected view of all your defined checks for the a
 
 
 
-The dashboard provides a high level overview of every check you are [authorized to view](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2159149140/Manage+Checks#Edit-Users).
+The dashboard provides a high level overview of every check you are authorized to view.
 
 ## Main Options <a href="#dashboards-mainoptions" id="dashboards-mainoptions"></a>
 
@@ -18,7 +18,7 @@ Filter: You can type in the main Filter field to filter your checks by name.
 
 **Status Colors:**
 
-Status Colors: Enables [Monitor Groups](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Monitor%20Groups\&linkCreation=true\&fromPageId=2133757565) to change to the color of the highest alert severity it contains.&#x20;
+Status Colors: Enables Monitor Groups to change to the color of the highest alert severity it contains.&#x20;
 
 
 
@@ -58,7 +58,7 @@ For each check a number of data points are shown.
 
 
 
-Click on the name of the check or the response time to view details about a check. This will add [Details Bookmarks Access & Bookmarks](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/4631502/Details+Check+Access+Bookmarks) at the top of the window and take you to the [Understanding the "Result Details" View](broken-reference) view.
+Click on the name of the check or the response time to view details about a check. This will add Details Bookmarks Access & Bookmarks at the top of the window and take you to the [Understanding the "Result Details" View](broken-reference) view.
 
 * Latest response time and when the check was run:
 
@@ -84,14 +84,14 @@ At the group level is a summary for the contained subgroups.
 
 The top bar for the group contains a number of buttons to change the view frame.
 
-| Icon | Name              | Description                                                                                                                                                         |
-| ---- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  /   | Expand / Collapse | Shows or hides more details for the group/subgroup.                                                                                                                 |
-|      | List View         | Switches the frame to [Views](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Views\&linkCreation=true\&fromPageId=2133757474). |
-|      | Split View        | Switches the frame to [Views](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Views\&linkCreation=true\&fromPageId=2133757474). |
-|      | Grid View         | Switches the frame to [Views](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Views\&linkCreation=true\&fromPageId=2133757474). |
-|      | Check Status      | Displays a summary of statuses for checks in the group.                                                                                                             |
-|      | Move Frame        | Button to [Move Group Frame](broken-reference) the frame in the dashboard.                                                                                          |
+| Icon | Name              | Description                                                                |
+| ---- | ----------------- | -------------------------------------------------------------------------- |
+|  /   | Expand / Collapse | Shows or hides more details for the group/subgroup.                        |
+|      | List View         | Switches the frame to Views.                                               |
+|      | Split View        | Switches the frame to Views.                                               |
+|      | Grid View         | Switches the frame to Views.                                               |
+|      | Check Status      | Displays a summary of statuses for checks in the group.                    |
+|      | Move Frame        | Button to [Move Group Frame](broken-reference) the frame in the dashboard. |
 
 **Subgroups**
 
@@ -152,7 +152,7 @@ The mode buttons in the top hand right corner of each frame lets you define the 
 
 **Collapsed Group**
 
-In collapsed mode, only the header bar is shown for the [Monitor Groups](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Monitor%20Groups\&linkCreation=true\&fromPageId=2133757650):
+In collapsed mode, only the header bar is shown for the Monitor Groups:
 
 
 
@@ -200,13 +200,13 @@ The **Grid** view shows all the checks in the group in a grid.
 
 ## Operations View <a href="#dashboards-operationsview" id="dashboards-operationsview"></a>
 
-The **Operations** view shows all [checks as a grid](broken-reference) and arranges them in order of alert severity.
+The **Operations** view shows all checks as a grid and arranges them in order of alert severity.
 
 **Menu**
 
 
 
-The **Operations** view shows all [Manage Alerts](broken-reference) in order of decreasing [Severity](broken-reference).
+The **Operations** view shows all Manage Alerts in order of decreasing Severity.
 
 
 
@@ -228,5 +228,5 @@ To view details about a check:
 
 * Click the desired item in the grid
 
-This will add an [Access & Bookmarks](https://apica-kb.atlassian.net/wiki/pages/createpage.action?spaceKey=ASMDOCS\&title=Access%20%26%20Bookmarks\&linkCreation=true\&fromPageId=2133754121) at the top of the window and take you to the [Check Details](broken-reference) view.
+This will add an Access & Bookmarks at the top of the window and take you to the Check Details view.
 

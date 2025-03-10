@@ -46,13 +46,13 @@ The  **Chart Menu** button provides access to additional actions for the chart, 
 
 
 
-| Menu Choice                | Download Format                                                                            |
-| -------------------------- | ------------------------------------------------------------------------------------------ |
-|  Print Chart               | Print from the system print dialog.                                                        |
-|  Download PNG image        | [Portable Network Graphics](http://www.libpng.org/pub/png/).                               |
-|  Download JPEG image       | [Joint Photographic Experts Group](https://jpeg.org/)                                      |
-|  Download PDF document     | [Portable Document Format](https://acrobat.adobe.com/us/en/why-adobe/about-adobe-pdf.html) |
-|  Download SVG vector image | [Scalable Vector Graphics](https://www.w3.org/Graphics/SVG/)                               |
+| Menu Choice                | Download Format                     |
+| -------------------------- | ----------------------------------- |
+|  Print Chart               | Print from the system print dialog. |
+|  Download PNG image        | Portable Network Graphics.          |
+|  Download JPEG image       | Joint Photographic Experts Group    |
+|  Download PDF document     | Portable Document Format            |
+|  Download SVG vector image | Scalable Vector Graphics            |
 
 Files are downloaded immediately and are available in your default download folder.
 

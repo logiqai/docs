@@ -71,6 +71,6 @@ By monitoring the response times from your CDN Origins and global traffic served
 
 Akamai CDN Services is the leading Content Delivery Network platform for security, DNS, and media.
 
-#### [Verizon Digital Media Services (VDMS)](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/4631602/Verizon+Digital+Media+Services+VDMS)  <a href="#integrations-verizondigitalmediaservices-vdms" id="integrations-verizondigitalmediaservices-vdms"></a>
+#### Verizon Digital Media Services (VDMS)  <a href="#integrations-verizondigitalmediaservices-vdms" id="integrations-verizondigitalmediaservices-vdms"></a>
 
 Verizon Digital Media Services is a Content Delivery Platform for accelerating media and other content delivery.
