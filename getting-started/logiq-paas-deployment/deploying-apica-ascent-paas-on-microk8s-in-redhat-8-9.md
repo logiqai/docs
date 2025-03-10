@@ -338,6 +338,116 @@ microk8s helm3 install apica-ascent -n apica-ascent --set global.persistence.sto
 
 If you see a large wall of text listing configuration values, the installation was successful - Ascent PaaS is now installed in your MicroK8s environment!
 
+**Spin up an internal S3 bucket using minio** - If you are not using S3 cloud related variables in the values.yaml file and want to create an internal S3 bucket, then create a s3-batch.yaml file and execute the below batch job to spin S3 bucket using minio:
+
+Create s3-batch.yaml file and insert the below contents:
+
+apiVersion: batch/v1
+
+kind: Job
+
+metadata:
+
+&#x20; name: s3-gateway-make-bucket-job
+
+&#x20; namespace: apica-ascent
+
+&#x20; labels:
+
+&#x20;   app: s3gateway-make-bucket-job
+
+&#x20;   chart: s3gateway-5.0.20
+
+&#x20;   release: apica-ascent
+
+&#x20;   heritage: Helm
+
+&#x20; annotations:
+
+&#x20;   "helm.sh/hook": post-install
+
+&#x20;   "helm.sh/hook-weight": "1"
+
+&#x20;   "helm.sh/hook-delete-policy": hook-succeeded,before-hook-creation
+
+spec:
+
+&#x20; template:
+
+&#x20;   metadata:
+
+&#x20;     labels:
+
+&#x20;       app: s3gateway-job
+
+&#x20;       release: apica-ascent
+
+&#x20;   spec:
+
+&#x20;     restartPolicy: OnFailure
+
+&#x20;
+
+&#x20;     volumes:
+
+&#x20;       \- name: minio-configuration
+
+&#x20;         projected:
+
+&#x20;           sources:
+
+&#x20;           \- configMap:
+
+&#x20;               name: s3-gateway
+
+&#x20;           \- secret:
+
+&#x20;               name: s3-gateway
+
+&#x20;     serviceAccountName: "s3-gateway"
+
+&#x20;     containers:
+
+&#x20;     \- name: minio-mc
+
+&#x20;       image: "minio/mc:RELEASE.2020-03-14T01-23-37Z"
+
+&#x20;       imagePullPolicy: IfNotPresent
+
+&#x20;       command: \["/bin/sh", "/config/initialize"]
+
+&#x20;       env:
+
+&#x20;         \- name: MINIO\_ENDPOINT
+
+&#x20;           value: s3-gateway
+
+&#x20;         \- name: MINIO\_PORT
+
+&#x20;           value: "9000"
+
+&#x20;       volumeMounts:
+
+&#x20;         \- name: minio-configuration
+
+&#x20;           mountPath: /config
+
+&#x20;       resources:
+
+&#x20;         {}
+
+&#x20;
+
+Apply the batch job:
+
+kubectl apply -f s3-batch.yaml
+
+Delete the Thanos pods (apica-ascent-thanos-compactor-XXXXXX and apica-ascent-thanos-storegateway-0) so it can created again after applying the s3-batch.yaml
+
+kubectl delete pod apica-ascent-thanos-storegateway-0 apica-ascent-thanos-compactor-XXXXXX -n apica-ascent
+
+&#x20;
+
 ### Accessing Apica Ascent PaaS
 
 Now that Apica Ascent PaaS is installed on your MicroK8s cluster, you can visit the Apica Ascent PaaS UI by either accessing the MetalLB endpoint we defined in the pre-install steps (if you installed/configured MetalLB), or by accessing the public IP address of the instance over HTTP(S) (if you aren't utilizing MetalLB).
