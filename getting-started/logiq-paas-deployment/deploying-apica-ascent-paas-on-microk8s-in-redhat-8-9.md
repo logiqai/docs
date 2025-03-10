@@ -60,8 +60,27 @@ The first step in this deployment is to install MicroK8s on your machine. The fo
     </code></pre>
 2.  Install `core` using Snap by running the following command.
 
-    ```
+    ```bash
     sudo snap install core
+
+    In case the core installation gives timeouts or throws any error because
+    snapd socket couldn't activate, then try the following commands to install
+    core successfully:
+
+    sudo dnf install -y epel-release
+    sudo dnf update -y
+    sudo dnf install -y snapd
+    systemctl status snapd.socket
+    sudo systemctl disable --now snapd.socket
+    sudo systemctl restart snapd
+    sudo ln -s /var/lib/snapd/snap /snap
+    sudo snap install core
+    sudo firewall-cmd --add-service=https --permanent
+    sudo firewall-cmd --reload
+    sudo snap refresh core
+    yum repolist
+    sudo snap install core
+
     ```
 3.  Install MicroK8s using Snap by running the following command.
 
@@ -247,7 +266,39 @@ scp -i /path/to/private_key.pem /path/to/local/file username@remote_host:/path/t
 ```
 {% endcode %}
 
-Make sure you have the necessary permissions to copy a file to the specified folder on the Linux machine.
+Make sure you have the necessary permissions to copy a file to the specified folder on the Linux machine. If you are not providing the cloud S3 details and want to spin a S3 bucket internally within the VM then comment out below lines in the values.yaml file:
+
+&#x20; accessKey: \<TODO: your-s3-access-key-id>
+
+&#x20; secretKey: \<TODO: your-s3-secret-access-key-id>
+
+&#x20;
+
+&#x20; cloudProvider: aws
+
+&#x20;
+
+&#x20;   s3\_url: "https://s3.\<TODO: aws-bucket-region>.amazonaws.com"
+
+&#x20;   s3\_access: \<TODO: your-s3-access-key-id>
+
+&#x20;   s3\_secret: \<TODO: your-s3-secret-access-key-id>
+
+&#x20;   s3\_bucket: \<TODO: bucket-name>
+
+&#x20;   s3\_region: \<TODO: bucket-region>
+
+&#x20;   AWS\_ACCESS\_KEY\_ID: \<TODO: your-aws-access-key-id>
+
+&#x20;   AWS\_SECRET\_ACCESS\_KEY: \<TODO: your-aws-secret-access-key-id>
+
+&#x20;
+
+And then change s3gateway to 'true':&#x20;
+
+&#x20;   s3gateway: true
+
+
 
 > Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://raw.githubusercontent.com/ApicaSystem/ApicaHub/refs/heads/master/integrations/microk8s/values.yaml) instead. run the following command.
 >
