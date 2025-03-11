@@ -1,4 +1,4 @@
-# Deployment Model
+# Ascent Deployment Model
 
 ## Ascent AI & LLM Observability Deployment Model
 
