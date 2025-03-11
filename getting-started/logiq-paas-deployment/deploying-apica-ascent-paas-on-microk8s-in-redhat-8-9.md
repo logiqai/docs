@@ -268,41 +268,30 @@ scp -i /path/to/private_key.pem /path/to/local/file username@remote_host:/path/t
 
 Make sure you have the necessary permissions to copy a file to the specified folder on the Linux machine. If you are not providing the cloud S3 details and want to spin a S3 bucket internally within the VM then comment out below lines in the values.yaml file:
 
-&#x20; accessKey: \<TODO: your-s3-access-key-id>
+```bash
+accessKey: <TODO: your-s3-access-key-id>
+secretKey: <TODO: your-s3-secret-access-key-id>
 
-&#x20; secretKey: \<TODO: your-s3-secret-access-key-id>
+cloudProvider: aws
 
-&#x20;
+s3_url: "https://s3.<TODO: aws-bucket-region>.amazonaws.com"
+s3_access: <TODO: your-s3-access-key-id>
+s3_secret: <TODO: your-s3-secret-access-key-id>
+s3_bucket: <TODO: bucket-name>
+s3_region: <TODO: bucket-region>
+AWS_ACCESS_KEY_ID: <TODO: your-aws-access-key-id>
+AWS_SECRET_ACCESS_KEY: <TODO: your-aws-secret-access-key-id>
+```
 
-&#x20; cloudProvider: aws
+&#x20;And then change s3gateway to 'true':&#x20;
 
-&#x20;
+```bash
+s3gateway: true
+```
 
-&#x20;   s3\_url: "https://s3.\<TODO: aws-bucket-region>.amazonaws.com"
+Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://raw.githubusercontent.com/ApicaSystem/ApicaHub/refs/heads/master/integrations/microk8s/values.yaml) instead. run the following command.
 
-&#x20;   s3\_access: \<TODO: your-s3-access-key-id>
-
-&#x20;   s3\_secret: \<TODO: your-s3-secret-access-key-id>
-
-&#x20;   s3\_bucket: \<TODO: bucket-name>
-
-&#x20;   s3\_region: \<TODO: bucket-region>
-
-&#x20;   AWS\_ACCESS\_KEY\_ID: \<TODO: your-aws-access-key-id>
-
-&#x20;   AWS\_SECRET\_ACCESS\_KEY: \<TODO: your-aws-secret-access-key-id>
-
-&#x20;
-
-And then change s3gateway to 'true':&#x20;
-
-&#x20;   s3gateway: true
-
-
-
-> Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://raw.githubusercontent.com/ApicaSystem/ApicaHub/refs/heads/master/integrations/microk8s/values.yaml) instead. run the following command.
->
-> ```
+> ```bash
 > microk8s enable metallb
 > Enabling MetalLB
 > Enter each IP address range delimited by comma (e.g.  '10.64.140.43-10.64.140.49,192.168.0.105-192.168.0.111'): 192.168.1.27-192.168.1.27
@@ -310,7 +299,7 @@ And then change s3gateway to 'true':&#x20;
 >
 > In the values file, add the below fields global-> environment section with your own values.
 >
-> ```
+> ```bash
 > s3_bucket: <your-s3-bucket>
 > AWS_ACCESS_KEY_ID: <your-aws-access-key-id>
 > AWS_SECRET_ACCESS_KEY: <your-aws-secret-access-key-id>
@@ -318,13 +307,13 @@ And then change s3gateway to 'true':&#x20;
 >
 > In the global -> chart section, change S3gateway to false.
 >
-> ```
+> ```bash
 > s3gateway: false
 > ```
 >
 > In the global -> persistence section, change storageClass as below.
 >
-> ```
+> ```bash
 > storageClass: microk8s-hostpath
 > ```
 
@@ -342,111 +331,67 @@ If you see a large wall of text listing configuration values, the installation w
 
 Create s3-batch.yaml file and insert the below contents:
 
+```bash
 apiVersion: batch/v1
-
 kind: Job
-
 metadata:
-
-&#x20; name: s3-gateway-make-bucket-job
-
-&#x20; namespace: apica-ascent
-
-&#x20; labels:
-
-&#x20;   app: s3gateway-make-bucket-job
-
-&#x20;   chart: s3gateway-5.0.20
-
-&#x20;   release: apica-ascent
-
-&#x20;   heritage: Helm
-
-&#x20; annotations:
-
-&#x20;   "helm.sh/hook": post-install
-
-&#x20;   "helm.sh/hook-weight": "1"
-
-&#x20;   "helm.sh/hook-delete-policy": hook-succeeded,before-hook-creation
-
+  name: s3-gateway-make-bucket-job
+  namespace: apica-ascent
+  labels:
+    app: s3gateway-make-bucket-job
+    chart: s3gateway-5.0.20
+    release: apica-ascent
+    heritage: Helm
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "1"
+    "helm.sh/hook-delete-policy": hook-succeeded,before-hook-creation
 spec:
-
-&#x20; template:
-
-&#x20;   metadata:
-
-&#x20;     labels:
-
-&#x20;       app: s3gateway-job
-
-&#x20;       release: apica-ascent
-
-&#x20;   spec:
-
-&#x20;     restartPolicy: OnFailure
-
-&#x20;
-
-&#x20;     volumes:
-
-&#x20;       \- name: minio-configuration
-
-&#x20;         projected:
-
-&#x20;           sources:
-
-&#x20;           \- configMap:
-
-&#x20;               name: s3-gateway
-
-&#x20;           \- secret:
-
-&#x20;               name: s3-gateway
-
-&#x20;     serviceAccountName: "s3-gateway"
-
-&#x20;     containers:
-
-&#x20;     \- name: minio-mc
-
-&#x20;       image: "minio/mc:RELEASE.2020-03-14T01-23-37Z"
-
-&#x20;       imagePullPolicy: IfNotPresent
-
-&#x20;       command: \["/bin/sh", "/config/initialize"]
-
-&#x20;       env:
-
-&#x20;         \- name: MINIO\_ENDPOINT
-
-&#x20;           value: s3-gateway
-
-&#x20;         \- name: MINIO\_PORT
-
-&#x20;           value: "9000"
-
-&#x20;       volumeMounts:
-
-&#x20;         \- name: minio-configuration
-
-&#x20;           mountPath: /config
-
-&#x20;       resources:
-
-&#x20;         {}
-
-&#x20;
+  template:
+    metadata:
+      labels:
+        app: s3gateway-job
+        release: apica-ascent
+    spec:
+      restartPolicy: OnFailure
+ 
+      volumes:
+        - name: minio-configuration
+          projected:
+            sources:
+            - configMap:
+                name: s3-gateway
+            - secret:
+                name: s3-gateway
+      serviceAccountName: "s3-gateway"
+      containers:
+      - name: minio-mc
+        image: "minio/mc:RELEASE.2020-03-14T01-23-37Z"
+        imagePullPolicy: IfNotPresent
+        command: ["/bin/sh", "/config/initialize"]
+        env:
+          - name: MINIO_ENDPOINT
+            value: s3-gateway
+          - name: MINIO_PORT
+            value: "9000"
+        volumeMounts:
+          - name: minio-configuration
+            mountPath: /config
+        resources:
+          {}
+```
 
 Apply the batch job:
 
+```bash
 kubectl apply -f s3-batch.yaml
+```
 
-Delete the Thanos pods (apica-ascent-thanos-compactor-XXXXXX and apica-ascent-thanos-storegateway-0) so it can created again after applying the s3-batch.yaml
+Delete the Thanos pods (apica-ascent-thanos-compactor-XXXXXX and apica-ascent-thanos-storegateway-0) so it can created again after applying the s3-batch.yaml:
 
+```bash
 kubectl delete pod apica-ascent-thanos-storegateway-0 apica-ascent-thanos-compactor-XXXXXX -n apica-ascent
-
-&#x20;
+```
 
 ### Accessing Apica Ascent PaaS
 
