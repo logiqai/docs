@@ -94,19 +94,19 @@ Today, AI agents have evolved into self-monitoring, self-optimizing, and self-he
 
 Key innovations:
 
-* AI Orchestration Systems – AI agents managed entire workflows across multiple services.
-* Autonomous Model Optimization – AI agents fine-tuned their own weights based on performance metrics and real-world feedback.
-* Fully Decentralized AI Architectures – Organizations deployed edge AI agents that operated independently from cloud-based LLMs.
+* AI Orchestration Systems – AI agents manage entire workflows across multiple services.
+* Autonomous Model Optimization – AI agents fine-tune their own weights based on performance metrics and real-world feedback.
+* Fully Decentralized AI Architectures – Organizations deploy edge AI agents that operated independently from cloud-based LLMs.
 
-As AI agents became more autonomous, they also introduced greater complexity in monitoring and governance, requiring real-time observability solutions to ensure ethical and transparent decision-making.
+As AI agents have become more autonomous, they also introduce greater complexity in monitoring and governance, requiring real-time observability solutions to ensure ethical and transparent decision-making.
 
 ### 1.3 Key Trends and Predictions Beyond 2025
 
-Beyond 2025, AI agents are expected to evolve into highly adaptive systems that function in dynamic, multi-agent environments. Some expected advancements include:
+Beyond 2025, AI agents are expected to evolve into highly adaptive systems functioning in dynamic, multi-agent environments. Some expected advancements include:
 
 * Autonomous AI Agents in High-Stakes Domains – AI will assist in medical diagnostics, legal decision-making, and cybersecurity threat analysis.
 * Self-Improving AI Systems – AI models will dynamically optimize their parameters without retraining from scratch.
 * Human-AI Hybrid Teams – AI agents will collaborate with experts, offering real-time recommendations while allowing human oversight over critical decisions.
 * Federated AI and Privacy-Preserving Models – AI will operate on-device, minimizing data transmission and reducing cloud dependency.
 
-As AI agents continue to operate with greater independence, the demand for real-time monitoring, explainability, and risk assessment will significantly increase.
+As AI agents operate more independently, the demand for real-time monitoring, explainability, and risk assessment will significantly increase.
