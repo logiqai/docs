@@ -1,4 +1,4 @@
-# Ascent Deployment Model
+# Ascent AI Agent Monitoring
 
 ## Ascent AI & LLM Observability Deployment Model
 
