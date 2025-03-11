@@ -10,6 +10,8 @@ The guide will enable monitoring, analyzing, and optimizing the performance, cos
 * Security & Compliance – Detecting data leakage, unauthorized access, and enforcing privacy policies.
 * Response Quality – Evaluating model accuracy, bias, hallucinations, and user engagement.
 
+<figure><img src="../../.gitbook/assets/image (3) (5).png" alt=""><figcaption></figcaption></figure>
+
 With AI models becoming core to modern applications, observability ensures reliability, efficiency, and trust in AI-driven decision-making.
 
 ### Key use cases for AI and LLM Observability
