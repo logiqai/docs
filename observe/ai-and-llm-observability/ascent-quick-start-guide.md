@@ -1,4 +1,4 @@
-# Quick Start Guide
+# Ascent Quick Start Guide
 
 ## Ascent Quick Start Guide for AI and LLM Observability
 
@@ -26,7 +26,7 @@ Imports (FastAPI might differ depending on what framework your app is created wi
 ```python
 from opentelemetry.sdk.resources import Resource
 from opentelemetry import trace
-from opentelemetry.instrumentation.fast.api import FastAPIInstrumentor
+from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
 from opentelemetry.instrumentation.asyncio import AsyncioInstrumentor
 from opentelemetry.sdk.trace import TraceProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
