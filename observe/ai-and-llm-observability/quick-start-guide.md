@@ -12,9 +12,8 @@ Here are the main configuration steps required within your application code:
 
 Follow the steps below for either traces or metrics (or both). Also, we provide the links to the OTEL deployment guides if needed.
 
-a.         OTEL tracing setup guide: [https://opentelemetry.io/docs/concepts/signals/traces/](https://opentelemetry.io/docs/concepts/signals/traces/)
-
-b.         OTEL metrics setup guide: [https://opentelemetry.io/docs/specs/otel/metrics/](https://opentelemetry.io/docs/specs/otel/metrics/)
+* OTEL tracing setup guide: [https://opentelemetry.io/docs/concepts/signals/traces/](https://opentelemetry.io/docs/concepts/signals/traces/)
+* OTEL metrics setup guide: [https://opentelemetry.io/docs/specs/otel/metrics/](https://opentelemetry.io/docs/specs/otel/metrics/)
 
 ### **Instrument your Application**
 
@@ -24,7 +23,7 @@ Configure OTEL to send traces and/or metrics into Ascent (depending on how you w
 
 Imports (FastAPI might differ depending on what framework your app is created with):
 
-```bash
+```python
 from opentelemetry.sdk.resources import Resource
 from opentelemetry import trace
 from opentelemetry.instrumentation.fast.api import FastAPIInstrumentor
@@ -36,7 +35,7 @@ from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExport
 
 Tracing configuration:
 
-```bash
+```python
 #tracing configuration
 resource = Resource.create(attributes={"service.name": "llm-app-service"})
 
@@ -49,7 +48,7 @@ trace.get_tracer_provider().add_span_processor(BatchSpanProcessor(otlp_exporter)
 
 Instrument App (Otel supports more than just FastAPI, simply import correct API in step #1):
 
-```bash
+```python
 # Apply OpenTelemetry instrumentation to FastAPI
 FastAPIIstrumentor.instrument_app(app)
 ```
@@ -68,38 +67,57 @@ To add custom attributes such as prompt tokens to the trace:
 span.set.attribute("prompt.tokens", str(response["usage"].get("prompt_tokens", 0)))
 ```
 
-METRICS code examples:
-
-
+#### METRICS code examples:
 
 Imports:
 
-
+```python
+from opentelemetry.sdk.resources import Resource
+from opentelemetry.exporter.otlp.proto.grpc.metric_exporter import OTLPMetricExporter
+from opentelemetry.sdk.metrics import MeterProvider
+from opentelemetry.sdk.metrics.export import ConsoleMetricExporter, PeriodicExportingMetricReader
+from opentelemetry.sdk.metrics import Counter
+from opentelemetry.sdk.metrics.view import View
+from opentelemetry import metrics
+```
 
 Metric Configuration:
 
+```python
+##metrics
+otlp_metric_exporter = OTLPMetricExporter(endpoint="http://0.0.0.0:4317", insecure=True)
+metric_reader = PeriodicExportingMetricReader(otlp_metric_exporter)
+provider = MeterProvider(metri_readers=[metric_reader])
 
+metrics.set_meter_provider(provider)
+meter = metrics.get_meter("llama.metrics")
+```
 
-Creating a metric:\
+Creating a metric:
 
+```python
+prompt_tokens_counter = meter.create_counter("llm.prompt.tokens")
+```
 
+Assigning the metric a value:
 
-
-Assigning the metric a value:\
-
-
-
+```python
+prompt_tokens_counter.add(response["usage"].get("prompt_tokens", 0),{"model_name": str(response.get("model"))})
+```
 
 In this example we are grabbing prompt\_tokens from the LLM response and assigning it to the “prompt\_tokens\_counter” metric. We also added some metadata to the metric by adding “model\_name”.
 
+#### **Collect and store data**
 
+Data is stored in Ascent Lake
 
-**3.         Collect and store data:** Data is stored in Ascent Lake
+#### **Visualize data**
 
-**4.         Visualize data:** View individual traces and metrics within Ascent Explore. Use data explorer to visualize data – creating a widget for each desired “metric” to visualize within a dashboard – follow dashboard configuration steps:
+View individual traces and metrics within Ascent Explore. Use data explorer to visualize data – creating a widget for each desired “metric” to visualize within a dashboard – follow dashboard configuration steps:
 
-a.         Metric data – follow the data explorer for metrics
+1. Metric data – follow the data explorer for metrics
+2. Trace data – use log2metric to visualize traces
 
-b.         Trace data – use log2metric to visualize traces
+#### **Alerting**
 
-**5.         Alerting:** Configure alerts as required within Ascent.
+Configure alerts as required within Ascent.
