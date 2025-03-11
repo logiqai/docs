@@ -21,7 +21,7 @@ Core Characteristics of AI Agents:
 
 1. Autonomy – AI agents operate without continuous human intervention, making decisions independently based on pre-programmed logic, learned behavior, or probabilistic models.
 2. Perception – AI agents receive input from their environment, which can be in the form of text (LLMs), images (computer vision), audio (speech recognition), or sensor data (IoT applications).
-3. Decision-Making – Agents process input data and determine the best course of action based on predefined rules, AI models, or optimization algorithms.
+3. Decision-Making – Agents process input data and determine the best action based on predefined rules, AI models, or optimization algorithms.
 4. Action Execution – AI agents can interact with external systems, modify data, trigger workflows, or generate human-like responses in natural language.
 5. Learning & Adaptation – Some AI agents improve over time through feedback loops, reinforcement learning, or fine-tuning of machine learning models.
 
@@ -35,7 +35,7 @@ This section provides an overview of key developments from 2022 to 2025, highlig
 
 #### Introduction: Rapid Advancements in AI Agents
 
-AI agent development has been shaped by three major factors:
+Three major factors have shaped AI agent development:
 
 1. Scaling of Large Language Models (LLMs) – Increased parameter sizes and training efficiency enabled more powerful AI capabilities.
 2. Advancements in Multi-Agent Collaboration – AI systems began operating in distributed, cooperative networks to solve complex problems.
@@ -51,7 +51,7 @@ Key developments:
 
 * LLMs as AI Agents – Chatbots like ChatGPT and Bard became widely used for customer support, content generation, and programming assistance.
 * Prompt Engineering Techniques – Developers began fine-tuning AI outputs by crafting effective prompts.
-* Autonomous AI Workflows (AutoGPT, BabyAGI) – Early experiments in chaining AI models together for goal-oriented, self-improving agents.
+* Autonomous AI Workflows (AutoGPT, BabyAGI) – Early experiments in chaining AI models for goal-oriented, self-improving agents.
 
 Despite these advancements, AI agents in 2022 remained largely reactive, requiring explicit user input and manual intervention for complex decision-making.
 
@@ -66,15 +66,15 @@ Notable improvements:
 * Tool-Use Capabilities – AI agents learned to call external APIs, retrieve real-time data, and execute commands autonomously.
 * Multi-Agent Frameworks – Systems like LangChain and AutoGPT+ enabled AI agents to collaborate in complex decision-making workflows.
 
-AI agents became more goal-oriented but still required active monitoring to prevent errors, hallucinations, and security vulnerabilities.
+AI agents became more goal-oriented but require active monitoring to prevent errors, hallucinations, and security vulnerabilities.
 
 #### 2024: Specialization and Enterprise Adoption of AI Agents
 
-By 2024, AI agents had moved from general-purpose assistants to domain-specific AI solutions tailored for industries like finance, healthcare, cybersecurity, and legal services. This transition was driven by the need for:
+By 2024, AI agents had moved from general-purpose assistants to domain-specific AI solutions tailored to finance, healthcare, cybersecurity, and legal services. The following drove this need for transition:
 
 * Higher accuracy and reliability – General LLMs struggled with industry-specific terminology and compliance requirements.
-* Data privacy and security – Organizations required on-premise AI deployments and encrypted AI communication channels.
-* AI governance frameworks – Regulatory agencies began enforcing stricter monitoring requirements for AI-driven decision-making.
+* Data privacy and security – Organizations required on-premises AI deployments and encrypted AI communication channels.
+* AI governance frameworks – Regulatory agencies enforced stricter monitoring requirements for AI-driven decision-making.
 
 Key trends:
 
@@ -86,11 +86,11 @@ AI agents had now reached production-level reliability, requiring robust observa
 
 #### 2025: AI Agents as Adaptive, Self-Improving Systems
 
-By 2025, AI agents evolved into self-monitoring, self-optimizing, and self-healing systems capable of real-time adaptation to changing environments. These advancements allowed AI agents to:
+Today, AI agents have evolved into self-monitoring, self-optimizing, and self-healing systems capable of real-time adaptation to changing environments. These advancements allowed AI agents to:
 
-* Identify and correct errors autonomously – AI models adjusted their responses based on live feedback loops.
+* Identify and correct errors autonomously – AI models adjust their responses based on live feedback loops.
 * Operate in multi-modal environments – AI agents processed and reasoned across text, images, video, and structured data.
-* Collaborate with human experts – AI-human hybrid teams emerged, where AI agents assisted in decision-making rather than replacing human oversight.
+* Collaborate with human experts – AI agents assist in decision-making rather than replacing human oversight for AI-human hybrid teams.
 
 Key innovations:
 
