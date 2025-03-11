@@ -311,7 +311,7 @@
   * [Role-Based Access Control (RBAC)](log-management/role-based-access-control.md)
   * [Configuring RBAC](log-management/configuring-rbac.md)
 * [AI and LLM Observability](observe/ai-and-llm-observability/README.md)
-  * [AI Agent Deployment Strategies](observe/ai-and-llm-observability/ai-agent-deployment-strategies.md)
+  * [AI Agent Deployment](observe/ai-and-llm-observability/ai-agent-deployment.md)
   * [Ascent Deployment Model](observe/ai-and-llm-observability/ascent-deployment-model.md)
   * [Quick Start Guide](observe/ai-and-llm-observability/quick-start-guide.md)
 * [Synthetic Check Monitoring](observe/check-management/README.md)
