@@ -170,6 +170,7 @@
 ## Dashboards
 
 * [Dashboards & Visualizations](dashboards/overview.md)
+* [Dashboards & Visualizations - staging](dashboards/dashboards-and-visualizations-staging.md)
 * [Create Your First Dashboard](dashboards/create-your-first-dashboard.md)
 * [Build an auto-refreshing Dashboard](dashboards/building-auto-refreshing-dashboard.md)
 * [Adding widgets to the Dashboard](dashboards/adding-widgets-to-the-dashboard.md)
