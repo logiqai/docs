@@ -6,13 +6,13 @@ Observability isn’t just about collecting logs, metrics, and traces—it’s a
 
 Apica’s Ascent Platform, built on Kubernetes, solves these challenges by providing infinite scalability, AI-driven optimization, and seamless multi-cloud support. With a unified data store, OpenTelemetry-native architecture, and intelligent workload management, Apica delivers unparalleled observability performance while reducing operational complexity and costs.
 
-[**More on Ascent Kubernetes Integration**](../integrations/list-of-integrations/kubernetes.md)
+[**More on Ascent Kubernetes Integration**](../../integrations/list-of-integrations/kubernetes.md)
 
 ### InstaStore™: Kubernetes-Powered Unified Telemetry Data Lake
 
 One of the biggest challenges in observability is data storage and retention. Traditional monitoring solutions rely on tiered storage models, leading to high costs, data fragmentation, and slow query times.
 
-[**More information on Lake and InstaStore**](../lake/lake-powered-by-instastore-tm.md)
+[**More information on Lake and InstaStore**](../../lake/lake-powered-by-instastore-tm.md)
 
 Apica’s InstaStore™ data lake, built on Kubernetes, eliminates these limitations by providing:
 
@@ -40,7 +40,7 @@ Apica’s Telemetry Pipeline, built on Kubernetes, solves this by:
 * Optimizing ingestion rates to reduce infrastructure costs and enhance performance.
 * Providing a drag-and-drop interface for managing data pipelines effortlessly.
 
-[**More information on Flow**](../flow/overview.md)
+[**More information on Flow**](../../flow/overview.md)
 
 ### Fleet Management: Automated Deployment & Scaling of Observability Agents
 
@@ -63,4 +63,4 @@ Apica solves these challenges with Fleet Management, an automated system for man
 
 **Result:** Enterprises eliminate manual observability agent management, ensuring consistent, reliable telemetry collection at scale.
 
-[**More information on Fleet**](../fleet-management/overview.md)
+[**More information on Fleet**](../../fleet-management/overview.md)

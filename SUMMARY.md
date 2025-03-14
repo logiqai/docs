@@ -7,11 +7,16 @@
 * [Ascent Overview](product-overview/ascent-overview.md)
 * [Ascent User Interface](product-overview/the-logiq-ui.md)
 
-***
+## TECHNOLOGIES
 
-* [Ascent with Kubernetes](ascent-with-kubernetes/README.md)
-  * [Kubernetes is a Game-Changer](ascent-with-kubernetes/kubernetes-is-a-game-changer.md)
-  * [Ascent: Built on Kubernetes](ascent-with-kubernetes/ascent-built-on-kubernetes.md)
+* [Ascent with Kubernetes](technologies/ascent-with-kubernetes/README.md)
+  * [Kubernetes is a Game-Changer](technologies/ascent-with-kubernetes/kubernetes-is-a-game-changer.md)
+  * [Ascent: Built on Kubernetes](technologies/ascent-with-kubernetes/ascent-built-on-kubernetes.md)
+* [OpenTelemetry Overview](technologies/opentelemetry-overview/README.md)
+  * [Why Implement OpenTelemetry?](technologies/opentelemetry-overview/why-implement-opentelemetry.md)
+  * [Common Use Cases for OpenTelemetry](technologies/opentelemetry-overview/common-use-cases-for-opentelemetry.md)
+  * [How to Get Started with OpenTelemetry](technologies/opentelemetry-overview/how-to-get-started-with-opentelemetry.md)
+  * [Best Practices for OpenTelemetry Implementations](technologies/opentelemetry-overview/best-practices-for-opentelemetry-implementations.md)
 
 ## RELEASE NOTES
 
@@ -60,11 +65,7 @@
   * [RTO Dashboarding](getting-started/boomi-rto-quick-start-guide/rto-dashboarding.md)
   * [Alerting on RTO Metrics](getting-started/boomi-rto-quick-start-guide/alerting-on-rto-metrics.md)
   * [Alerting on RTO Logs](getting-started/boomi-rto-quick-start-guide/alerting-on-rto-logs.md)
-* [OpenTelemetry Overview](getting-started/opentelemetry-overview/README.md)
-  * [Why Implement OpenTelemetry?](getting-started/opentelemetry-overview/why-implement-opentelemetry.md)
-  * [Common Use Cases for OpenTelemetry](getting-started/opentelemetry-overview/common-use-cases-for-opentelemetry.md)
-  * [How to Get Started with OpenTelemetry](getting-started/opentelemetry-overview/how-to-get-started-with-opentelemetry.md)
-  * [Best Practices for OpenTelemetry Implementations](getting-started/opentelemetry-overview/best-practices-for-opentelemetry-implementations.md)
+* [Dashboards & Visualizations](getting-started/overview.md)
 
 ## DATA SOURCES
 
@@ -166,10 +167,6 @@
     * [Audit Vault Logs - AWS](integrations/list-of-integrations/vault/audit-vault-logs-aws.md)
     * [Audit Vault Logs - OCI](integrations/list-of-integrations/vault/audit-vault-logs-oci.md)
     * [Audit Vault Metrics](integrations/list-of-integrations/vault/audit-vault-metrics.md)
-
-## Dashboards
-
-* [Dashboards & Visualizations](dashboards/overview.md)
 
 ## DATA MANAGEMENT
 

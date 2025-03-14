@@ -66,4 +66,6 @@ The **Events** page lists all the important events that have occurred in the Api
 
 The **Create** dropdown menu enables you to create new reports, queries, dashboards, and alerts, as shown in the following image.
 
-A function-specific modal appears based on what you select from this dropdown menu. \\
+<figure><img src="../.gitbook/assets/image (325).png" alt=""><figcaption></figcaption></figure>
+
+A function-specific modal appears based on what you select from this dropdown menu.
