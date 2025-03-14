@@ -12,11 +12,11 @@
 * [Ascent with Kubernetes](technologies/ascent-with-kubernetes/README.md)
   * [Kubernetes is a Game-Changer](technologies/ascent-with-kubernetes/kubernetes-is-a-game-changer.md)
   * [Ascent: Built on Kubernetes](technologies/ascent-with-kubernetes/ascent-built-on-kubernetes.md)
-* [OpenTelemetry Overview](technologies/opentelemetry-overview/README.md)
-  * [Why Implement OpenTelemetry?](technologies/opentelemetry-overview/why-implement-opentelemetry.md)
-  * [Common Use Cases for OpenTelemetry](technologies/opentelemetry-overview/common-use-cases-for-opentelemetry.md)
-  * [How to Get Started with OpenTelemetry](technologies/opentelemetry-overview/how-to-get-started-with-opentelemetry.md)
-  * [Best Practices for OpenTelemetry Implementations](technologies/opentelemetry-overview/best-practices-for-opentelemetry-implementations.md)
+* [Ascent with OpenTelemetry](technologies/ascent-with-opentelemetry/README.md)
+  * [Why Implement OpenTelemetry?](technologies/ascent-with-opentelemetry/why-implement-opentelemetry.md)
+  * [Common Use Cases for OpenTelemetry](technologies/ascent-with-opentelemetry/common-use-cases-for-opentelemetry.md)
+  * [How to Get Started with OpenTelemetry](technologies/ascent-with-opentelemetry/how-to-get-started-with-opentelemetry.md)
+  * [Best Practices for OpenTelemetry Implementations](technologies/ascent-with-opentelemetry/best-practices-for-opentelemetry-implementations.md)
 
 ## RELEASE NOTES
 
