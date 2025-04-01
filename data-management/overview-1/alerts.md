@@ -4,7 +4,7 @@ Users can set up alerts on their queries to receive notifications when specific 
 
 <figure><img src="../../.gitbook/assets/image (185).png" alt=""><figcaption><p>Add alert on a widget, set thresholds and more</p></figcaption></figure>
 
-**Steps to Set Up an Alert**
+### **Steps to Set Up an Alert**
 
 1. **Open Alert Modal:**
    * Click on the "More" icon on the widget.
@@ -14,15 +14,11 @@ Users can set up alerts on their queries to receive notifications when specific 
 3. **Create Alert:**
    * Once you have configured the alert, click on the "Create Alert" button to save it.
 
-Viewing Alerts
+### **Viewing Alerts**
 
 Once alerts are created, navigate to the "Alerts" tab to view and manage existing alerts. If the "Alerts" tab is not present, you may need to add a new tab and select "Alerts" as the tab type.
 
 _Note:_ The alerts listed under the "Alerts" tab are specific to the current dashboard you are viewing. This means they are tailored to the metrics and data associated with that particular dashboard.
-
-
-
-
 
 <figure><img src="../../.gitbook/assets/image (255).png" alt=""><figcaption></figcaption></figure>
 
