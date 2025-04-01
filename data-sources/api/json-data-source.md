@@ -38,7 +38,7 @@ The URL parameter is the only required parameter
 * `data` - a dictionary of values to use as the request body
 * `json` - same as `data` except that it’s being converted to JSON
 * `path` - accessing attributes within the response
-  * `field` - rows within selected attribute
+  * `field` - rows of objects within selected attribute
 
 #### Example query:&#x20;
 
