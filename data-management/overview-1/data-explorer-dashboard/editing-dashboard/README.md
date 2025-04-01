@@ -1,6 +1,6 @@
 # Editing Dashboard
 
-Edit Mode Features
+### Edit Mode Features
 
 Edit mode in our dashboard allows users to personalize and enhance their workspace by offering several key functionalities:
 
@@ -12,7 +12,7 @@ Edit mode in our dashboard allows users to personalize and enhance their workspa
 
 These features collectively provide users with the capability to fully configure and customize their dashboards, ensuring that the environment adapts to individual preferences and operational needs.
 
-#### Switching to Edit Mode
+### Switching to Edit Mode
 
 To switch to edit mode, follow these steps:
 
@@ -21,10 +21,3 @@ To switch to edit mode, follow these steps:
 3. Select the "Edit Mode" option to toggle the dashboard into edit mode, enabling the editing features described above.
 
 <figure><img src="../../../../.gitbook/assets/image (256).png" alt=""><figcaption><p>Dashboard Edit mode view</p></figcaption></figure>
-
-#### Customizing Your Dashboard
-
-
-
-
-
