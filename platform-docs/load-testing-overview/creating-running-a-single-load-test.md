@@ -14,7 +14,7 @@ To begin the process of creating a load test, navigate to the “Loadtest > New 
 
 When the “Create New Loadtest” page appears, a list of links will appear on the right side of the page. Click on any of the links to jump to that step in the scenario process.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (3).png" alt="" width="197"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (3) (1).png" alt="" width="197"><figcaption></figcaption></figure></div>
 
 ### Step 1: Select Subscription <a href="#step-1-select-subscription" id="step-1-select-subscription"></a>
 

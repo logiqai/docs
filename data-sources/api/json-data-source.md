@@ -8,17 +8,21 @@ description: >-
 
 ## Create the JSON Data source
 
-The first step is to create the data source and provide `basic auth` credentials. Note that basic auth credentials are optional, and you can provide a bearer token if that is your means of authenticating against the API&#x20;
+1. Navigate to **Integrations** > **Data** **Sources**
+2. Click **New** **Data** **Source**
+3. Select **JSON**
+4. Create the data source
+   1. Enter a name for your data source (required)
+   2. Enter Basic Authentication credentials (optional)
 
-![Creating a JSON data source](../../.gitbook/assets/json-0.png)
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ## Writing queries
 
-In the query editor, select the JSON data source created above and enter the query parameters. The query parameters use the YAML syntax. For E.g.
+1. Navigate to **Queries** and click **New Query**
+2. In the **drop-down** on your left hand side, select your new data source
 
-![](../../.gitbook/assets/json-1.png)
-
-## Providing HTTP Options
+### Providing HTTP Options
 
 The following HTTP options are used for sending a query
 
@@ -33,10 +37,35 @@ The URL parameter is the only required parameter
 * `params` - a dictionary of query string parameters to add to the URL
 * `data` - a dictionary of values to use as the request body
 * `json` - same as `data` except that it’s being converted to JSON
+* `path` - accessing attributes within the response
+  * `field` - rows within selected attribute
+
+#### Example query:&#x20;
+
+```
+url: https://www.googleapis.com/books/v1/volumes?q=isbn:0747532699
+path: items
+fields: ["volumeInfo.authors","volumeInfo.title","volumeInfo.publisher","accessInfo.webReaderLink"]
+```
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+#### Example query including all HTTP options:
+
+```
+url: https://httpbin.org/post
+method: post
+headers: {"User-Agent": "Test", "Accept": "*/*"}
+auth: [username, password]
+params: {?q=myQuery}
+json: {"this": "is", "my": {"json":"body"}}
+path: json
+fields: ["my.json"]
+```
 
 ## Filtering response data: path and fields
 
-The response data can be filtered by specifying the `path` and `fields` parameters. The `path` filter allows accessing attributes within the response, for e.g. if a key `foo` in the response contains rows of objects you want to access, specifying `path` `foo` will convert each of the objects into rows.&#x20;
+The response data can be filtered by specifying the `path` and `fields` parameters. The `path` filter allows accessing attributes within the response, for e.g. if a key `foo` in the response contains rows of objects you want to access, specifying `path` `foo` will convert each of the objects into rows.
 
 In the example below, we are then selecting `fields` _volumeInfo.authors, volumeInfo.title, volumeInfo.publisher and accessInfo.webReaderLink_
 
@@ -48,4 +77,4 @@ fields: ["volumeInfo.authors","volumeInfo.title","volumeInfo.publisher","accessI
 
 The resulting data from the above query is a nicely formatted table that can be searched in Apica Ascent or made available as a widget in a dashboard
 
-![](../../.gitbook/assets/json-2.png)
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
