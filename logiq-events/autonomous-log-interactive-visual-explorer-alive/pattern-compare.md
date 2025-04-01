@@ -1,3 +1,10 @@
+---
+description: >-
+  This section provides an overview of the feature, including its introduction,
+  key functionalities, usage guidelines, and a step-by-step example
+  demonstrating the Alive log comparison process.
+---
+
 # ALIVE Log Compare
 
 ## ALIVE Log Compare Introduction
@@ -6,7 +13,7 @@ Log events are massive and difficult to comprehend due to their machine/human-li
 
 One simple heuristic technique for discerning anomalies is to compare the subject with a known golden sample, which yields outliers. Nevertheless, comparing event logs is not a trivial task. &#x20;
 
-The ALIVE Log Compare utilizes Apica Ascent's log analysis underlying feature pattern-signature and compares log pattern signatures across different time ranges. This feature is powerful and handy for separating needles from haystacks. &#x20;
+The ALIVE Log Compare utilises Apica Ascent's log analysis underlying feature pattern-signature and compares log pattern signatures across different time ranges. This feature is powerful and handy for separating needles from haystacks. &#x20;
 
 Some of the key features
 
@@ -14,37 +21,69 @@ Some of the key features
 * Large working set and capable of looking over a large volume of log events
 * Isolate subtle and apparent differences
 * Tracking log event changes
+* Search for specific keywords in logs
+* Set a threshold to refine search results, allowing you to adjust the strictness of pattern matching based on your requirements.
 
 ### Key Usage Direction
 
-Timestamp Selection: Users initiate the pattern compare feature by selecting specific timestamps of interest within the ALIVE interface.
+Users can begin by selecting a **namespace** and **application**, then loading all available logs. Once logs are fetched, they can navigate to the **"Alive"** tab and define a second **time range** for comparison. Initially, users may choose the same duration but for different time periods to analyze variations.
 
-Compare Log Display: Users can activate the "Compare Log" feature upon selecting timestamps and completing the uploading of all the event logs. This feature visually juxtaposes log patterns from different periods, facilitating quick identification of variations or anomalies.
+After defining the time range, clicking **"Apply"** will load logs for the selected **Time Range B**. Users can then apply filters such as:
 
-### Example Usage Direction
+* **Percentage-Based Comparison** – Compares log counts as a percentage.
+* **Absolute Count Comparison** – Uses raw log counts without percentage adjustments.
+
+A T**hreshold Filter** is available to refine results. If the difference in percentage or absolute count between **Time Range A** and **Time Range B** exceeds the set threshold, it is considered an anomaly, and the corresponding logs will be filtered out. To view all data, users can set the threshold to **0**, effectively disabling anomaly detection.\
+By default threshold is set to **10%**.
+
+The interface consists of three primary sections:
+
+1. **Bar Chart Analysis** – Visual representation of log pattern variations.
+2. **Donut Chart Statistics** – Summaries loaded log counts and difference exceeding the threshold.
+3. **Log Table** – Displays log messages and their respective counts for **Group A** and **Group B**.
+
+<figure><img src="../../.gitbook/assets/image (343).png" alt=""><figcaption><p>Example showing 3 sections.</p></figcaption></figure>
+
+
+
+Additionally, a **Full-Screen Mode** is available for the bar chart, enabling a detailed investigation of log patterns and anomalies.
+
+### Example Usage Steps
 
 #### To compare patterns in the ALIVE tab, follow these steps:
 
-1. Navigate to the ALIVE tab from the Search page.
+1. Select a Namespace and an Application from the list.
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-07-02 00-08-10.png" alt=""><figcaption><p>COMPARE Tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (333).png" alt=""><figcaption><p>Select Namespace and Application</p></figcaption></figure>
 
-2. Select the COMPARE tab from the left side pane. You will see two charts, both of which are set to the global time range by default.
-3. To compare the charts, adjust the time range for chart B using the date-time picker. Select the desired time range to observe and analyze the patterns side by side.
+2. Select timerange and click on Apply.
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-07-02 00-10-11.png" alt=""><figcaption><p>Selecting Timerange for Comparing pattern.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (336).png" alt=""><figcaption><p>Select timerange and click Apply</p></figcaption></figure>
 
-4. Once you select the time range and click on the apply button, it will load and display the pattern. Wait for it to load successfully.
+3. Click **Fetch more logs** to fetch all logs for the selected configuration. you can increase the logs load count.
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-07-02 00-10-22.png" alt=""><figcaption><p>Clicking on the Apply button to update the pattern.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (337).png" alt=""><figcaption><p>Fetch all logs</p></figcaption></figure>
 
-5. After the pattern is loaded, you can compare the pattern.
+4. Move to the Alive tab and select Compare from left pane.
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-07-02 00-16-00.png" alt=""><figcaption><p>Comparing pattern side by side on different timerange.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (338).png" alt=""><figcaption><p>Select Compare from Alive Tab</p></figcaption></figure>
 
-5. Once the pattern is loaded, you can compare the logs corresponding to the selected time range. Navigate to the left side pane and select the LOG COMPARE tab to analyze the logs associated with the generated pattern.
+5. Select a second Time Range (B) for comparison. You can choose a  the same duration in a different time frame and click Apply to load logs for Time Range B.
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2024-07-02 00-17-20.png" alt=""><figcaption><p>Comparing logs side by side.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (339).png" alt=""><figcaption><p>fetching logs for time range B</p></figcaption></figure>
+
+6. Choose between **Percentage** or **Absolute** count comparison and adjust the Threshold Filter.
+
+<figure><img src="../../.gitbook/assets/image (341).png" alt=""><figcaption><p>Selection for absolute, percentage and threshold%</p></figcaption></figure>
+
+7. Now you can analyze the data between the two time ranges to gain deeper insights and identify patterns or anomalies.\
+
+
+<figure><img src="../../.gitbook/assets/image (343).png" alt=""><figcaption><p>Insights for the Comparing two different time range.</p></figcaption></figure>
+
+8. Click the **Full Screen** button to enlarge the **Bar Graph** for clearer analysis.
+
+<figure><img src="../../.gitbook/assets/image (342).png" alt=""><figcaption></figcaption></figure>
 
 ### Key Benefits
 
