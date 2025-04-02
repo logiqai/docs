@@ -15,7 +15,7 @@ description: >-
    1. Enter a name for your data source (required)
    2. Enter Basic Authentication credentials (optional)
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (331).png" alt=""><figcaption></figcaption></figure>
 
 ## Writing queries
 
@@ -48,7 +48,7 @@ path: items
 fields: ["volumeInfo.authors","volumeInfo.title","volumeInfo.publisher","accessInfo.webReaderLink"]
 ```
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (7).png" alt=""><figcaption></figcaption></figure>
 
 #### Example query including all HTTP options:
 
@@ -77,4 +77,4 @@ fields: ["volumeInfo.authors","volumeInfo.title","volumeInfo.publisher","accessI
 
 The resulting data from the above query is a nicely formatted table that can be searched in Apica Ascent or made available as a widget in a dashboard
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (6).png" alt=""><figcaption></figcaption></figure>

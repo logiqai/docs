@@ -14,11 +14,11 @@ Once the destination is configured you simply add it to the alert:
 
 The alerts we provide cover most, if not all of your bases, but if you wanted to configure an alert on another metric or log it's simple enough. Navigate to your RTO dashboard, click the three dots on the widget you'd like to be alerted on:
 
-<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Fill out the fields below with your criteria. \
 \
 **Best Practice:** Apica recommends clicking the "+" so you can set two values: a lower threshold that throws a warning and a higher threshold that throws critical or emergency. This sets your team up for a proactive monitoring approach.\
 
 
-<figure><img src="../../.gitbook/assets/image (11) (1).png" alt="" width="323"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1) (1).png" alt="" width="323"><figcaption></figcaption></figure>

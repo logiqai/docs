@@ -57,7 +57,7 @@ Here are the steps to create tags in the topology
 * All the nodes will be listed with expand/collapse view
 * Expand the node to view all the tags under the node
 
-<figure><img src="../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Click on `add tag` to create tag
 * Provide key and value and press enter

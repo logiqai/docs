@@ -36,10 +36,10 @@ This API deletes an existing workset.  As the workset ID is passed in the URL, y
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Results message for delete workset API</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Results message for delete workset API</p></figcaption></figure>
 
 When viewing the workset listing in TDO, the workset ‘cloned\_workset’ is no longer present.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>TDO workset list showing successful deletion</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>TDO workset list showing successful deletion</p></figcaption></figure>

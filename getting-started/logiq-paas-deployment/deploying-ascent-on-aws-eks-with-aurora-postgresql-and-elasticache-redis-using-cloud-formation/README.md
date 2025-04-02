@@ -85,11 +85,11 @@ The Cloudformation template provisions the following resources:
 * [ ] **Step 4: Review and create**
   *   You can review your configurations, acknowledge the capabilities and click "Submit"
 
-      <figure><img src="../../../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (10) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Deployment might take a while. Please wait until the stack status shows **"CREATE\_COMPLETE"** before proceeding.
 
-<figure><img src="../../../.gitbook/assets/image (11) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 **If the stack for some reason would fail, make sure to check the stack events (select your stack, and click on "Events") to understand the error. In order to fix your error, delete the stack and re-do the above.**

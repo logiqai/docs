@@ -18,7 +18,7 @@ The process of creating and uploading a script within ALT includes the following
 5. Analyze the script results using a feature-rich GUI (**Analyze**)
 6. Run reports and distribute to necessary decision makers (**Report**)
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (4).png" alt=""><figcaption></figcaption></figure>
 
 ## Reasons to Utilize ALT <a href="#reasons-to-utilize-alt" id="reasons-to-utilize-alt"></a>
 
@@ -67,7 +67,7 @@ Apica LoadTest can be used on its own, without ZebraTester scenarios, for many i
 * Manage all your scenarios within the portal for easier project management.
 * Integrate directly with the Apica LoadTest in ZebraTester for easy management of scenarios and results.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (2).png" alt="" width="480"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (2) (1).png" alt="" width="480"><figcaption></figcaption></figure>
 
 ### ZebraTester Use Cases <a href="#zebratester-use-cases" id="zebratester-use-cases"></a>
 
@@ -79,4 +79,4 @@ Apica ZebraTester is an enterprise-grade load and stress-testing product trusted
 
 Apica ZebraTester executes web load tests up to nearly unlimited levels at a depth unparalleled by other testing tools. A powerful GUI allows you to create sophisticated, custom load test scripts easily and intuitively.
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (2).png" alt="" width="563"><figcaption></figcaption></figure>
