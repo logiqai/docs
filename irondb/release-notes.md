@@ -142,4 +142,4 @@
 
 ## Older Releases[​](https://docs.circonus.com/irondb/release-notes#older-releases) <a href="#older-releases" id="older-releases"></a>
 
-For older release notes, see [Archived Release Notes](https://docs.circonus.com/irondb/release-notes-archive).
+For older release notes, see [Archived Release Notes](archived-release-notes.md).

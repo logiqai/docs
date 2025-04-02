@@ -1,6 +1,6 @@
 # Archived Release Notes
 
-For current releases, see [Release Notes](https://docs.circonus.com/irondb/release-notes).
+For current releases, see [Release Notes](release-notes.md).
 
 ### Changes in 0.23.7[​](https://docs.circonus.com/irondb/release-notes-archive#changes-in-0237) <a href="#changes-in-0237" id="changes-in-0237"></a>
 
