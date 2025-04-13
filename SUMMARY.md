@@ -675,6 +675,7 @@
 
 * [E-Mail Configuration](logiq-ui-configuration/email-configuration-setup.md)
 * [Single Sign-On with SAML](logiq-ui-configuration/single-sign-on-configuration.md)
+* [Port Management](logiq-ui-configuration/port-management.md)
 * [Audit Trail](logiq-ui-configuration/audit-trail/README.md)
   * [Events Trail](logiq-ui-configuration/audit-trail/events-trail.md)
   * [Alerts Trail](logiq-ui-configuration/audit-trail/alerts-trail.md)
