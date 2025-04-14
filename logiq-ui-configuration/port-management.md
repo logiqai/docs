@@ -18,26 +18,29 @@ This feature is available in the **Admin Settings** under **Settings → Port Ma
 
 The following ports are supported out of the box with their standard purposes:
 
-| Port  | Description                    |
-| ----- | ------------------------------ |
-| 514   | Syslog                         |
-| 515   | Syslog with TLS                |
-| 2514  | RELP PORT TLS                  |
-| 4317  | OTLP/gRPC                      |
-| 4318  | OTLP/HTTP                      |
-| 7514  | SYSLOG\_DEFAULT\_PORT\_TLS     |
-| 9998  | Internal Ops                   |
-| 9999  | json\_batch and tenant API     |
-| 14250 | Jaeger collector (HTTP)        |
-| 14268 | Jaeger agent (Thrift Protocol) |
-| 16686 | Jaeger UI                      |
-| 20514 | RELP port                      |
-| 24224 | Fluentd forward port           |
-| 24225 | Fluentd TLD                    |
-| 25224 | Logstash                       |
-| 25225 | Logstash TLS                   |
-
 ***
+
+| Port  | Description                    | Protocol | Service        |
+| ----- | ------------------------------ | -------- | -------------- |
+| 514   | Syslog                         | UDP      | logiq-flash    |
+| 515   | Syslog with TLS                | TCP      | logiq-flash    |
+| 2514  | RELP PORT TLS                  | TCP      | logiq-flash    |
+| 4317  | OTLP/gRPC                      | TCP      | logiq-flash    |
+| 4318  | OTLP/HTTP                      | TCP      | logiq-flash    |
+| 7514  | SYSLOG\_DEFAULT\_PORT\_TLS     | TCP      | logiq-flash    |
+| 9998  | Internal Ops                   | TCP      | logiq-flash-ml |
+| 9999  | json\_batch and tenant API     | TCP      | logiq-flash    |
+| 14250 | Jaeger collector (HTTP)        | TCP      | logiq-flash    |
+| 14268 | Jaeger agent (Thrift Protocol) | UDP      | logiq-flash    |
+| 16686 | Jaeger UI                      | TCP      | logiq-flash-ml |
+| 20514 | RELP port                      | TCP      | logiq-flash    |
+| 24224 | Fluentd forward port           | TCP      | logiq-flash    |
+| 24225 | Fluentd TLD                    | TCP      | logiq-flash    |
+| 25224 | Logstash                       | TCP      | logiq-flash    |
+| 25225 | Logstash TLS                   | TCP      | logiq-flash    |
+
+\
+
 
 ### How to Enable a New Port
 
