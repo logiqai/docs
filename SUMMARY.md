@@ -289,7 +289,7 @@
 
 ## LAKE
 
-* [Lake: Powered by Instastore™](lake/lake-powered-by-instastore-tm.md)
+* [Powered by Instastore™](lake/lake-powered-by-instastore-tm.md)
 
 ## FLEET MANAGEMENT
 

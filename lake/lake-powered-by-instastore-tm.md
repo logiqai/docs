@@ -1,10 +1,10 @@
 ---
 description: >-
-  Apica's Flow manages all of its incoming data flows by writing 100% of its
-  data to InstaSore.
+  Apica's manages all of its incoming data flows by writing 100% of its data to
+  InstaSore.
 ---
 
-# Lake: Powered by Instastore™
+# Powered by Instastore™
 
 ## What is Instastore?
 
