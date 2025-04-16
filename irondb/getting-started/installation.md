@@ -8,11 +8,9 @@ description: How to install IRONdb on a system.
 
 IRONdb requires one of the following operating systems:
 
-* RHEL/CentOS 7 (7.4-7.9)
-* Ubuntu 20.04 LTS
 * Ubuntu 22.04 LTS
 
-Additionally, IRONdb requires the [ZFS](http://open-zfs.org/) filesystem. This is available natively on Ubuntu, but for EL7 installs, you will need to obtain ZFS from the [ZFS on Linux](http://zfsonlinux.org/) project. The setup script expects a zpool to exist, but you do not need to create any filesystems or directories ahead of time. Please refer to the appendix [ZFS Setup Guide](zfs-guide.md) for details and examples.
+Additionally, IRONdb requires the [ZFS](http://open-zfs.org/) filesystem. This is available natively on Ubuntu.
 
 Hardware requirements will necessarily vary depending upon system scale and cluster size. An appendix with general guidelines for [calculating cluster size](cluster-sizing.md) is provided. Please contact us with questions regarding system sizing.
 
@@ -73,66 +71,36 @@ System commands must be run as a privileged user, such as `root`, or via `sudo`.
 
 Configure package repositories.
 
-**EL7 Repository**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#el7-repository)
-
-If you wish to validate package signatures, the Apica Packaging key is available from [Keybase](https://keybase.io/circonuspkg).
-
-Create the file `/etc/yum.repos.d/Apica.repo` with the following contents:
-
-```
-[apica]
-name=Apica
-baseurl=https://updates.apica.net/irondb/centos/x86_64/
-enabled = 1
-gpgcheck = 1
-gpgkey = https://keybase.io/apicapkg/pgp_keys.asc?fingerprint=14ff6826503494d85e62d2f22dd15eba6d4fa648
-
-[apica-crash-reporting]
-name=Apica - Crash Reporting
-baseurl=http://updates.apica.net/backtrace/centos/el7/
-enabled = 1
-gpgcheck = 0
-```
-
 **Ubuntu Repository**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#ubuntu-repository)
 
 Install the signing keys:
 
 ```
-sudo curl -s -o /etc/apt/trusted.gpg.d/apica.asc \
-  'https://keybase.io/apicapkg/pgp_keys.asc?fingerprint=14ff6826503494d85e62d2f22dd15eba6d4fa648'
+sudo curl -s -o /etc/apt/trusted.gpg.d/circonus.asc \
+  'https://keybase.io/circonuspkg/pgp_keys.asc?fingerprint=14ff6826503494d85e62d2f22dd15eba6d4fa648'
 
 sudo curl -s -o /etc/apt/trusted.gpg.d/backtrace.asc \
-  https://updates.apica.net/backtrace/ubuntu/backtrace_package_signing.key
+  https://updates.circonus.net/backtrace/ubuntu/backtrace_package_signing.key
 ```
 
-Create the file `/etc/apt/sources.list.d/``apica/list` with the following contents, depending on the version:
-
-for Ubuntu 20.04:
-
-```
-deb https://updates.apica.net/irondb/ubuntu/ focal main
-deb https://updates.apica.net/backtrace/ubuntu/ focal main
-```
+Create the file `/etc/apt/sources.list.d/circonus.list` with the following contents, depending on the version:
 
 for Ubuntu 22.04:
 
 ```
-deb https://updates.apica.net/irondb/ubuntu/ jammy main
-deb https://updates.apica.net/backtrace/ubuntu/ jammy main
+deb https://updates.circonus.net/irondb/ubuntu/ jammy main
+deb https://updates.circonus.net/backtrace/ubuntu/ jammy main
 ```
 
 Finally, run `sudo apt-get update`.
 
 ### Install Package[​](https://docs.circonus.com/irondb/getting-started/manual-installation#install-package) <a href="#install-package" id="install-package"></a>
 
-EL7: `sudo yum install`` ``apica-platform-irondb`
-
 Ubuntu: we have a helper package that works around issues with dependency resolution, since IRONdb is very specific about the versions of dependent Apica packages, and apt-get is unable to cope with them. The helper package must be installed first, i.e., it cannot be installed in the same transaction as the main package.
 
 ```
-sudo apt-get install apica-platform-irondb-apt-policy
-sudo apt-get install apica-platform-irondb
+sudo apt-get install circonus-platform-irondb-apt-policy
+sudo apt-get install circonus-platform-irondb
 ```
 
 ### Setup Process[​](https://docs.circonus.com/irondb/getting-started/manual-installation#setup-process) <a href="#setup-process" id="setup-process"></a>
@@ -165,7 +133,13 @@ Note that OpenTSDB does not support TLS. Even if this option is set to "on", the
 
 **IRONDB\_CRASH\_REPORTING**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#irondb_crash_reporting)
 
-_(optional)_ Controls enablement of automated crash reporting. Default is "on". IRONdb utilizes sophisticated crash tracing technology to help diagnose errors. Enabling crash reporting requires that the system be able to connect out to the Apica reporting endpoint: [https://apica.sp.backtrace.io:6098](https://apica.sp.backtrace.io:6098) . If your site's network policy forbids this type of outbound connectivity, set the value to "off".
+_(optional)_ Controls enablement of automated crash reporting. Default is "on".
+IRONdb utilizes sophisticated crash tracing technology to help diagnose errors.
+Enabling crash reporting requires that the system be able to connect out to the
+Apica reporting endpoint:
+[https://circonus.sp.backtrace.io:6098](https://circonus.sp.backtrace.io:6098) .
+If your site's network policy forbids this type of outbound connectivity, set
+the value to "off".
 
 **IRONDB\_ZPOOL**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#irondb_zpool)
 
@@ -176,7 +150,7 @@ _(optional)_ The name of the zpool that should be used for IRONdb storage. If th
 Run the setup script. All required options must be present, either as environment variables or via command-line arguments. A mix of environment variables and arguments is permitted, but environment variables take precedence over command-line arguments.
 
 ```
-/opt/apica/bin/setup-irondb \
+/opt/circonus/bin/setup-irondb \
     -a <ip_or_hostname> \
     -n <node_uuid> \
     -u <integration_check_uuid>
@@ -194,7 +168,9 @@ Upon successful completion, it will print out specific information about how to 
 
 IRONdb comes with an embedded license that allows all features with a limit of 25K active, unique metric streams. If you wish to obtain a more expansive license, please contact [Apica Sales](mailto:sales@apica.io).
 
-Add the `<license>` stanza from your purchased IRONdb license to the file `/opt/apica/etc/licenses.conf` on your IRONdb instance, within the enclosing `<licenses>` tags. It should look something like this:
+Add the `<license>` stanza from your purchased IRONdb license to the file
+`/opt/circonus/etc/licenses.conf` on your IRONdb instance, within the enclosing
+`<licenses>` tags. It should look something like this:
 
 ```xml
 <licenses>
@@ -210,7 +186,7 @@ If you are running a cluster of IRONdb nodes, the license must be installed on a
 
 Restart the IRONdb service:
 
-* `/bin/systemctl restart apica-irondb`
+* `/bin/systemctl restart circonus-irondb`
 
 For more on licensing see: [Configuration/licenses](configuration.md#licensesconf)
 
@@ -249,7 +225,7 @@ See the [appendix on cluster sizing](cluster-sizing.md) for details.
 
 The topology layout describes the particular nodes that are part of the cluster as well as aspects of operation for the cluster as a whole, such as the number of write copies. The layout file is not read directly by IRONdb, rather it is used to create a canonical topology representation that will be referenced by the IRONdb config.
 
-A helper script exists for creating the topology: `/opt/apica/bin/topo-helper`:
+A helper script exists for creating the topology: `/opt/circonus/bin/topo-helper`:
 
 ```
 Usage: ./topo-helper [-h] -a <start address>|-A <addr_file> -w <write copies> [-i <uuid,uuid,...>|-n <node_count>] [-s]
@@ -268,7 +244,7 @@ This will create a temporary config, which you can edit afterward, if needed, be
 The simplest form is to give a starting IP address, a node count, and a write-copies value. For example, in a cluster of 3 nodes, where we want 2 write copies:
 
 ```
-/opt/apica/bin/topo-helper -a 192.168.1.11 -n 3 -w 2
+/opt/circonus/bin/topo-helper -a 192.168.1.11 -n 3 -w 2
 ```
 
 The resulting temporary config (`/tmp/topology.tmp`) looks like this:
@@ -298,7 +274,7 @@ The helper script auto-generated the node UUIDs. You may edit this file if neede
 You may supply your own UUIDs in a comma-separated list, in which case the node count will be implied by the number of UUIDs:
 
 ```
-/opt/apica/bin/topo-helper -a 192.168.1.11 -w 2 -i <uuid>,<uuid>,<uuid>
+/opt/circonus/bin/topo-helper -a 192.168.1.11 -w 2 -i <uuid>,<uuid>,<uuid>
 ```
 
 If you wish to use DNS names instead of IP addresses, you can provide them in a file, one per line:
@@ -313,12 +289,14 @@ myhost3.example.com
 Then pass the filename to the helper script:
 
 ```
-/opt/apica/bin/topo-helper -A host_list.txt -n 3 -w 2
+/opt/circonus/bin/topo-helper -A host_list.txt -n 3 -w 2
 ```
 
 To configure a sided cluster, use the `-s` option. This will assign alternate nodes to side "a" or "b". If you wish to divide the list differently, you may edit the `/tmp/topology.tmp` file accordingly. If omitted, the cluster will be non-sided, if the node count is less than 10. For clusters of 10 or more nodes, the helper script will default to configuring a sided cluster, because there are significant operational benefits, described below.
 
-When you are satisfied that it looks the way you want, copy `/tmp/topology.tmp` to `/opt/apica/etc/topology` on each node, then proceed to the [Import Topology](installation.md#import-topology) step.
+When you are satisfied that it looks the way you want, copy `/tmp/topology.tmp`
+to `/opt/circonus/etc/topology` on each node, then proceed to the [Import
+Topology](installation.md#import-topology) step.
 
 #### **Sided Clusters**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#sided-clusters)
 
@@ -362,17 +340,17 @@ To configure a sided topology, add the `side` attribute to each `<node>`, with a
 This step calculates a hash of certain attributes of the topology, creating a unique "fingerprint" that identifies this specific topology. It is this hash that IRONdb uses to load the cluster topology at startup. Import the desired topology with the following command:
 
 ```
-/opt/apica/bin/snowthimport \
-  -c /opt/apica/etc/irondb.conf \
-  -f /opt/apica/etc/topology
+/opt/circonus/bin/snowthimport \
+  -c /opt/circonus/etc/irondb.conf \
+  -f /opt/circonus/etc/topology
 ```
 
 If successful, the output of the command is `compiling to <long-hash-string>`.
 
-Next, update `/opt/apica/etc/irondb.conf` and locate the `topology` section, typically near the end of the file. Set the value of the topology's `active` attribute to the hash reported by `snowthimport`. It should look something like this:
+Next, update `/opt/circonus/etc/irondb.conf` and locate the `topology` section, typically near the end of the file. Set the value of the topology's `active` attribute to the hash reported by `snowthimport`. It should look something like this:
 
 ```
-<topology path="/opt/apica/etc/irondb-topo"
+<topology path="/opt/circonus/etc/irondb-topo"
           active="742097e543a5fb8754667a79b9b2dc59e266593974fb2d4288b03e48a4cbcff2"
           next=""
           redo="/irondb/redo/{node}"
@@ -381,7 +359,7 @@ Next, update `/opt/apica/etc/irondb.conf` and locate the `topology` section, typ
 
 Save the file and restart IRONdb:
 
-* (EL7, Ubuntu) `/bin/systemctl restart apica-irondb`
+* `/bin/systemctl restart circonus-irondb`
 
 Repeat the import process on each cluster node.
 
@@ -395,22 +373,15 @@ The node currently being viewed is always listed in blue, with the other nodes l
 
 An installed node may be updated to the latest available version of IRONdb by following these steps:
 
-EL7:
-
-```
-/usr/bin/yum update apica-platform-irondb && \
-/bin/systemctl restart apica-irondb
-```
-
-Ubuntu 20.04:
+Ubuntu:
 
 We have a helper package on Ubuntu that works around issues with dependency resolution, since IRONdb is very specific about the versions of dependent Apica packages, and apt-get is unable to cope with them. The helper package must be upgraded first, i.e., it cannot be upgraded in the same transaction as the main package.
 
 ```
 /usr/bin/apt-get update && \
-/usr/bin/apt-get install apica-platform-irondb-apt-policy && \
-/usr/bin/apt-get install apica-platform-irondb && \
-/bin/systemctl restart apica-irondb
+/usr/bin/apt-get install circonus-platform-irondb-apt-policy && \
+/usr/bin/apt-get install circonus-platform-irondb && \
+/bin/systemctl restart circonus-irondb
 ```
 
 In a cluster of IRONdb nodes, service restarts should be staggered so as not to jeopardize availability of metric data. An interval of 30 seconds between node restarts is considered safe.

@@ -73,7 +73,9 @@ H1 TIMESTAMP UUID NAME HISTOGRAM
 * `TIMESTAMP` : Same as with `M` records above.
 * `UUID` : Same as with `M` records above.
 * `NAME` : Same as with `M` records above.
-* `HISTOGRAM` : A base64-encoded, serialized histogram. See the `hist_serialize()` function in [libcircllhist](https://github.com/circonus-labs/libcircllhist/blob/master/src/circllhist.c), the reference implementation of histograms in Apica.
+* `HISTOGRAM` : A base64-encoded, serialized histogram. See the
+* `hist_serialize()` function in * [libcircllhist](https://github.com/circonus-labs/libcircllhist/blob/master/src/circllhist.c),
+  the reference implementation of histograms in Circonus.
 
 A sample `H1` record:
 
@@ -97,7 +99,10 @@ POST
 
 A FlatBuffer metric payload is submitted as a `MetricList` as specified in the [Reconnoiter FlatBuffer source](https://github.com/circonus-labs/reconnoiter/blob/master/src/flatbuffers/metric_list.fbs).
 
-When submitting FlatBuffer-encoded metrics, a client must set the HTTP header `Content-Type` to `application/x-apica-metric-list-flatbuffer` and set the HTTP header `X-Snowth-Datapoints` to the number of data points within the raw submission.
+When submitting FlatBuffer-encoded metrics, a client must set the HTTP header
+`Content-Type` to `application/x-circonus-metric-list-flatbuffer` and set the
+HTTP header `X-Snowth-Datapoints` to the number of data points within the raw
+submission.
 
 ## Writing Text Data[​](https://docs.circonus.com/irondb/api/data-submission#writing-text-data) <a href="#writing-text-data" id="writing-text-data"></a>
 

@@ -20,8 +20,7 @@ Since IRONdb uses SHA256 hashing to route metrics to IRONdb nodes, it is incompa
 
 IRONdb-relay requires one of the following operating systems:
 
-* RHEL/CentOS 7 (7.4-7.9)
-* Ubuntu 20.04 LTS
+* Ubuntu 22.04 LTS
 
 The following network protocols and ports are utilized. These are defaults and may be changed via configuration files.
 
@@ -35,12 +34,11 @@ You should follow the same system tuning as outline in the [IRONdb installation]
 
 ### Configure Software Sources[​](https://docs.circonus.com/irondb/tools/irondb-relay#configure-software-sources) <a href="#configure-software-sources" id="configure-software-sources"></a>
 
-For EL7 or Ubuntu 20.04, use the same software source as the [IRONdb installation](../getting-started/installation.md#configure-software-sources).
+Use the same software source as the [IRONdb installation](../getting-started/installation.md#configure-software-sources).
 
 ## Install Package[​](https://docs.circonus.com/irondb/tools/irondb-relay#install-package) <a href="#install-package" id="install-package"></a>
 
-* (EL7) `/usr/bin/yum install apica-platform-irondb-relay`
-* (Ubuntu) `/usr/bin/apt-get install apica-platform-irondb-relay`
+* `/usr/bin/apt-get install circonus-platform-irondb-relay`
 
 ## Run Installer[​](https://docs.circonus.com/irondb/tools/irondb-relay#run-installer) <a href="#run-installer" id="run-installer"></a>
 
@@ -60,7 +58,7 @@ Prepare site-specific information for setup. These values may be set via shell e
     _(optional)_ Configures listeners to require TLS where applicable. Default is "off". If set to "on", both the Carbon submission port and the admin UI port will expect TLS connections from clients. An SSL certificate will be required before the service can be started. See [TLS Configuration](../getting-started/configuration.md#tls-configuration) below for details.
 *   **IRONDB\_CRASH\_REPORTING**[**​**](https://docs.circonus.com/irondb/tools/irondb-relay#irondb_crash_reporting)
 
-    _(optional)_ Control enablement of automated crash reporting. Default is "on". IRONdb utilizes sophisticated crash tracing technology to help diagnose errors. Enabling crash reporting requires that the system be able to connect out to the Apica reporting endpoint: [https://apica.sp.backtrace.io:6098](ttps://apica.sp.backtrace.io:6098) . If your site's network policy forbids this type of outbound connectivity, set the value to "off".
+    _(optional)_ Control enablement of automated crash reporting. Default is "on". IRONdb utilizes sophisticated crash tracing technology to help diagnose errors. Enabling crash reporting requires that the system be able to connect out to the Apica reporting endpoint: [https://circonus.sp.backtrace.io:6098](ttps://circonus.sp.backtrace.io:6098) . If your site's network policy forbids this type of outbound connectivity, set the value to "off".
 *   **IRONDB\_RELAY\_DURABLE**[**​**](https://docs.circonus.com/irondb/tools/irondb-relay#irondb_relay_durable)
 
     _(optional)_ Control enablement of durable delivery. Default is "false". If set to "true", will cause IRONdb-relay to use the disk to persist all incoming metrics to the file system before sending them on to IRONdb nodes.
@@ -82,7 +80,7 @@ Example:
   setup-irondb-relay -c foo -u f2eaa1b7-f7e8-41bd-9e8d-e52d43dc88b0 -d -B 10.1.13.1:8112,10.1.13.2:8112 -b on
 ```
 
-If your IRONdb cluster [uses TLS](../getting-started/configuration.md#tls-configuration), then specify the node list as `https://<FQDN>:8443` URLs, and, if necessary, place the CA certificate that corresponds to the cluster's client-facing listener as `/opt/apica/etc/ssl/irondb-ca.crt`. The CA cert is necessary if your certificates are issued by an internal CA, as opposed to a public CA that is trusted by the operating system.
+If your IRONdb cluster [uses TLS](../getting-started/configuration.md#tls-configuration), then specify the node list as `https://<FQDN>:8443` URLs, and, if necessary, place the CA certificate that corresponds to the cluster's client-facing listener as `/opt/circonus/etc/ssl/irondb-ca.crt`. The CA cert is necessary if your certificates are issued by an internal CA, as opposed to a public CA that is trusted by the operating system.
 
 The setup script will configure your IRONdb-relay instance and start the service. See the [Graphite Ingestion](../integrations/graphite.md) section for details.
 
@@ -98,7 +96,7 @@ Default values are those that are present in the default configuration produced 
 
 ### irondb-relay.conf[​](https://docs.circonus.com/irondb/tools/irondb-relay#irondb-relayconf) <a href="#irondb-relayconf" id="irondb-relayconf"></a>
 
-This is the primary configuration file that IRONdb-relay reads at start. It includes additional configuration files which are discussed later. It is located at `/opt/apica/etc/irondb-relay.conf`
+This is the primary configuration file that IRONdb-relay reads at start. It includes additional configuration files which are discussed later. It is located at `/opt/circonus/etc/irondb-relay.conf`
 
 ### irondb-relay[​](https://docs.circonus.com/irondb/tools/irondb-relay#irondb-relay-1) <a href="#irondb-relay-1" id="irondb-relay-1"></a>
 
@@ -121,7 +119,7 @@ Default: `/irondb-relay/logs/irondb-relay.lock`
   <config>
     <concurrency>16</concurrency>
     <default_queue_threads>16</default_queue_threads>
-    <default_ca_chain>/opt/apica/etc/ssl/irondb-ca.crt</default_ca_chain>
+    <default_ca_chain>/opt/circonus/etc/ssl/irondb-ca.crt</default_ca_chain>
   </config>
 </eventer>
 ```
@@ -262,9 +260,9 @@ Each listener below is configured within a `<listener>` node. Additional listene
 ```xml
 <sslconfig>
   <!-- Certificate CN should be the FQDN of the node. -->
-  <certificate_file>/opt/apica/etc/ssl/relay.crt</certificate_file>
-  <key_file>/opt/apica/etc/ssl/relay.key</key_file>
-  <ca_chain>/opt/apica/etc/ssl/relay-ca.crt</ca_chain>
+  <certificate_file>/opt/circonus/etc/ssl/relay.crt</certificate_file>
+  <key_file>/opt/circonus/etc/ssl/relay.key</key_file>
+  <ca_chain>/opt/circonus/etc/ssl/relay-ca.crt</ca_chain>
   <layer_openssl_10>tlsv1.2</layer_openssl_10>
   <layer_openssl_11>tlsv1:all,>=tlsv1.2,cipher_server_preference</layer_openssl_11>
   <ciphers>ECDHE+AES128+AESGCM:ECDHE+AES256+AESGCM:DHE+AES128+AESGCM:DHE+AES256+AESGCM:!DSS</ciphers>
@@ -275,7 +273,7 @@ This section will be present when TLS operation has been activated via the setup
 
 See [libmtev listener configuration](https://circonus-labs.github.io/libmtev/config/listeners.html#sslconfig) for specific details on each option.
 
-Place the following files in the `/opt/apica/etc/ssl` directory:
+Place the following files in the `/opt/circonus/etc/ssl` directory:
 
 * **relay.key** - An RSA private key.
 * **relay.crt** - A certificate issued for this relay's listeners. Its commonName (CN) should be the node's FQDN, or whatever name clients will be using to connect to this node.
@@ -288,7 +286,7 @@ These files must be readable by the unprivileged user that irondb-relay runs as,
 ```xml
 <listener address="*" port="8112" backlog="100" type="http_rest_api" ssl="off">
   <config>
-    <document_root>/opt/apica/share/snowth-web</document_root>
+    <document_root>/opt/circonus/share/snowth-web</document_root>
   </config>
 </listener>
 ```
@@ -444,12 +442,12 @@ An in-memory buffer of this number of bytes will be used to hold new journal wri
 
 Default: 131072 (128 KB)
 
-### apica-watchdog.conf[​](https://docs.circonus.com/irondb/tools/irondb-relay#circonus-watchdogconf) <a href="#circonus-watchdogconf" id="circonus-watchdogconf"></a>
+### circonus-watchdog.conf[​](https://docs.circonus.com/irondb/tools/irondb-relay#circonus-watchdogconf) <a href="#circonus-watchdogconf" id="circonus-watchdogconf"></a>
 
 **watchdog**[**​**](https://docs.circonus.com/irondb/tools/irondb-relay#watchdog)
 
 ```xml
-<watchdog glider="/opt/apica/bin/backwash" tracedir="/opt/apica/traces-relay"/>
+<watchdog glider="/opt/circonus/bin/backwash" tracedir="/opt/circonus/traces-relay"/>
 ```
 
 The watchdog configuration specifies a handler, known as a "glider", that is to be invoked when a child process crashes or hangs. See the [libmtev watchdog documentation](http://circonus-labs.github.io/libmtev/config/watchdog.html).

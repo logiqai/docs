@@ -112,7 +112,7 @@ In this example:
 
 ## Issuing CAQL Queries[​](https://docs.circonus.com/irondb/api/extensions#issuing-caql-queries) <a href="#issuing-caql-queries" id="issuing-caql-queries"></a>
 
-The Apica Analytics Query Language (CAQL) allows the user to issue complex queries against metric data residing in IRONdb. The CAQL Reference provides comprehensive documentation about functionality offered by the language.
+The Circonus Analytics Query Language (CAQL) allows the user to issue complex queries against metric data residing in IRONdb. The CAQL Reference provides comprehensive documentation about functionality offered by the language.
 
 ### Description[​](https://docs.circonus.com/irondb/api/extensions#description-2) <a href="#description-2" id="description-2"></a>
 

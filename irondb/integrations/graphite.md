@@ -210,7 +210,7 @@ This inventory is then used as input on each IRONdb node to populate its local m
 Full usage information may be obtained via:
 
 ```sh
-/opt/apica/bin/whisper_loader -h
+/opt/circonus/bin/whisper_loader -h
 ```
 
 Procedure:
@@ -219,14 +219,14 @@ Procedure:
 2.  Select one IRONdb node on which to run the loader tool in "discovery mode", and run it:
 
     ```sh
-    /opt/apica/bin/whisper_loader -c /opt/apica/etc/irondb.conf \
+    /opt/circonus/bin/whisper_loader -c /opt/circonus/etc/irondb.conf \
         -i /var/tmp/whisper_inventory
     ```
 3. Copy the inventory file to the remaining IRONdb nodes.
 4.  On each IRONdb node, including the one where discovery was done, run the tool in "submit mode", which will read the inventory file and create local metric name index entries:
 
     ```sh
-    /opt/apica/bin/whisper_loader -c /opt/apica/etc/irondb.conf \
+    /opt/circonus/bin/whisper_loader -c /opt/circonus/etc/irondb.conf \
         -i /var/tmp/whisper_inventory -s
     ```
 

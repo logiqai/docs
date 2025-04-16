@@ -4,7 +4,7 @@ Each IRONdb node exposes a wealth of information about its internal operation. T
 
 The types of statistics available are described in the [Internal Stats](operations.md#internals-tab) section of the Operations page.
 
-The JSON endpoint is best for viewing live information, and for long-term trending when IRONdb is part of a full Apica Inside, on-premises deployment. The internal monitor module is best suited to long-term trending in standalone IRONdb deployments. Its metrics may be retrieved using one of the type-specific [data retrieval APIs](../api/data-retrieval.md).
+The JSON endpoint is best for viewing live information. The internal monitor module is best suited to long-term trending in standalone IRONdb deployments. Its metrics may be retrieved using one of the type-specific [data retrieval APIs](../api/data-retrieval.md).
 
 Both methods are described below.
 
@@ -75,7 +75,10 @@ The internal monitor module exports all of the same statistics (both application
 
 Metrics stored by the monitor module are replicated to additional nodes (if any) in the same way as metrics ingested from outside.
 
-The monitor module is not enabled by default. To enable it, add the following configuration to `/opt/apica/etc/irondb-modules-site.conf`, generate a new UUID and use it to replace the null uuid in the example, and then restart the IRONdb service:
+The monitor module is not enabled by default. To enable it, add the following
+configuration to `/opt/circonus/etc/irondb-modules-site.conf`, generate a new
+UUID and use it to replace the null uuid in the example, and then restart the
+IRONdb service:
 
 ```
 <generic image="monitor" name="monitor">
