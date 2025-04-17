@@ -35,12 +35,12 @@ Components are separated by TAB characters. Multiple records may be sent in the 
 *   `UUID` : An identifier of the account and check to which this metric belongs. Despite its name, this identifier must be in the form:
 
     ```
-    TARGET`MODULE`APICA_NAME`lower-cased-uuid
+    TARGET`MODULE`CIRCONUS_NAME`lower-cased-uuid
     ```
 
     * `TARGET` is conventionally the IP address of the check target, but may be any meaningful string identifying the subject of the check.
     * `MODULE` is conventionally the name of the [Reconnoiter check module](https://github.com/circonus-labs/reconnoiter/tree/master/src/modules).
-    * `APICA_NAME` is what determines both the account and check to which this metric belongs. It has the form `c_ACCOUNT-ID_CHECK-BUNDLE-ID::MODULE`. `ACCOUNT-ID` is the most significant, as this is how metric data is partitioned within IRONdb.
+    * `CIRCONUS_NAME` is what determines both the account and check to which this metric belongs. It has the form `c_ACCOUNT-ID_CHECK-BUNDLE-ID::MODULE`. `ACCOUNT-ID` is the most significant, as this is how metric data is partitioned within IRONdb.
     * `lower-cased-uuid` is the check UUID, lower-cased.
 * `NAME` : The [name](../metric-names-and-tags.md) of this metric.
 * `TYPE` : The type of data that the `VALUE` represents:
