@@ -5,7 +5,8 @@ Although numeric shards can be configured with [retention windows](../getting-st
 Compaction is performed by running the `shard_compactor` tool. It has two required arguments:
 
 * `-d <nntbs_dir>` - The path where NNTBS shards are stored. This is typically
-  found under `/irondb/nntbs`. The directory name matches the node's cluster UUID.
+  found under `/irondb/nntbs`, or `/snowth/nntbs` on deployments hosted by
+  Circonus. The directory name matches the node's cluster UUID.
 * `-s <shard>` - The name of a shard to compact. Shards are named for the rollup period and the start and end timestamps that they represent. This option may be specified multiple times to compact more than one shard. Shards will be compacted serially.
 
 Run `/opt/circonus/bin/shard_compactor --help` for full usage information. The tool must be run as the unprivileged user that IRONdb runs as, typically `nobody`.
