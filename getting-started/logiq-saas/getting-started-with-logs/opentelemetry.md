@@ -120,4 +120,4 @@ systemctl restart otelcol-contrib
 
 Assuming everything has been done correctly, your logs will start to appear in Explore > Logs & Insight on your Ascent environment. They will show up based on the namespace and application names that you set in your config.yaml file.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
