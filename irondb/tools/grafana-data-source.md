@@ -14,7 +14,7 @@ This is the plugin for IRONdb 0.17.1 and newer. It is evolving and we continue t
 
 ### From GitHub[​](https://docs.circonus.com/irondb/tools/irondb-grafana#from-github) <a href="#from-github" id="from-github"></a>
 
-1. `git clone https://github.com/apica-labs/apica-irondb-datasource.git` into plugins directory.
+1. `git clone https://github.com/circonus-labs/circonus-irondb-datasource.git` into plugins directory.
 2. Restart Grafana.
 
 ## Configuration[​](https://docs.circonus.com/irondb/tools/irondb-grafana#configuration) <a href="#configuration" id="configuration"></a>
@@ -26,7 +26,8 @@ This is the plugin for IRONdb 0.17.1 and newer. It is evolving and we continue t
 ### URL[​](https://docs.circonus.com/irondb/tools/irondb-grafana#url) <a href="#url" id="url"></a>
 
 * Standalone: If this datasource will access a standalone IRONdb cluster, then this is the URL where IRONdb can be accessed. Example: `http://nodename:8112`, or if [TLS](https://docs.circonus.com/irondb/getting-started/configuration#tls-configuration) is in use, `https://nodename:8443`.
-* Hosted: If this datasource will access data through Apica, then the URL should be set as: `https://api.apica.com`
+* Hosted: If this datasource will access data through Circonus, then the URL
+* should be set as: `https://api.circonus.com`
 
 ## IRONdb Details[​](https://docs.circonus.com/irondb/tools/irondb-grafana#irondb-details) <a href="#irondb-details" id="irondb-details"></a>
 
@@ -39,7 +40,7 @@ This is the plugin for IRONdb 0.17.1 and newer. It is evolving and we continue t
 ### IRONdb Type[​](https://docs.circonus.com/irondb/tools/irondb-grafana#irondb-type) <a href="#irondb-type" id="irondb-type"></a>
 
 * Standalone: An IRONdb cluster accessible directly, requires entry of Account ID.
-* Hosted: An IRONdb instance hosted by Apica, requires entry of API token.
+* Hosted: An IRONdb instance hosted by Circonus, requires entry of API token.
 * Depending on which of the above configurations you've chosen, you will either be presented with Account ID or API Token configuration options detailed below.
 
 ### Account ID[​](https://docs.circonus.com/irondb/tools/irondb-grafana#account-id) <a href="#account-id" id="account-id"></a>
@@ -50,7 +51,7 @@ The Account ID associated with the account to pull metrics from.
 
 The API Token associated with the account to pull metrics from. This can be found on your API Tokens page after logging in at [https://login.circonus.com/](https://login.circonus.com/) in the "Integrations" -> "API Tokens" section.
 
-* Note: Be sure to log into Apica and change the Grafana App State to "allow" if that isn't the default for the provided API Token.
+* Note: Be sure to log into Circonus and change the Grafana App State to "allow" if that isn't the default for the provided API Token.
 
 ## Usage[​](https://docs.circonus.com/irondb/tools/irondb-grafana#usage) <a href="#usage" id="usage"></a>
 
@@ -58,7 +59,7 @@ The API Token associated with the account to pull metrics from. This can be foun
 
 ### Standard Queries[​](https://docs.circonus.com/irondb/tools/irondb-grafana#standard-queries) <a href="#standard-queries" id="standard-queries"></a>
 
-For standard Apica metric queries, use the metric browser to navigate the metric hierarchy of your IRONdb instance or type queries manually using the _Toggle Edit Mode_ menu item to the right. ![](https://raw.githubusercontent.com/circonus-labs/circonus-irondb-datasource/master/img/irondb-graph-metric-browser.png)
+For standard Circonus metric queries, use the metric browser to navigate the metric hierarchy of your IRONdb instance or type queries manually using the _Toggle Edit Mode_ menu item to the right. ![](https://raw.githubusercontent.com/circonus-labs/circonus-irondb-datasource/master/img/irondb-graph-metric-browser.png)
 
 ### CAQL Queries[​](https://docs.circonus.com/irondb/tools/irondb-grafana#caql-queries) <a href="#caql-queries" id="caql-queries"></a>
 

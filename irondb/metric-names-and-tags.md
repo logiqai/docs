@@ -31,7 +31,7 @@ The final example would canonicalize into the previous example since measurement
 
 ### Metric Names[​](https://docs.circonus.com/irondb/metric-names-tags-queries#metric-names) <a href="#metric-names" id="metric-names"></a>
 
-Metric names in Apica may be an string of bytes other than a null character, or the stream-tag or measurement-tags identifiers (`|ST[` or `|MT{`).
+Metric names in Circonus may be an string of bytes other than a null character, or the stream-tag or measurement-tags identifiers (`|ST[` or `|MT{`).
 
 ### Stream Tags[​](https://docs.circonus.com/irondb/metric-names-tags-queries#stream-tags) <a href="#stream-tags" id="stream-tags"></a>
 

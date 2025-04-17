@@ -95,7 +95,7 @@ Each listener below is configured within a `<listener>` node. Additional listene
 ```
 <listener address="*" port="8112" backlog="100" type="http_rest_api" accept_thread="on" fanout="true" ssl="off">
   <config>
-    <document_root>/opt/apica/share/snowth-web</document_root>
+    <document_root>/opt/circonus/share/snowth-web</document_root>
   </config>
 </listener>
 ```
@@ -739,7 +739,7 @@ Default: false
 ### topology[​](https://docs.circonus.com/irondb/getting-started/configuration#topology) <a href="#topology" id="topology"></a>
 
 ```
-<topology path="/opt/apica/etc/irondb-topo"
+<topology path="/opt/circonus/etc/irondb-topo"
           active="(hash value)"
           next=""
           redo="/irondb/redo/{node}"
@@ -829,7 +829,8 @@ Due to certificate verification requirements, two sets of cryptographic keys and
 
 The [installer script](installation.md#setup-process) will automatically configure TLS listeners on a fresh installation when the `-t` option or the `IRONDB_TLS` environment variable is set to `on`.
 
-The following files must be present on each node in order for the service to work properly with TLS. Place them in `/opt/apica/etc/ssl`:
+The following files must be present on each node in order for the service to
+work properly with TLS. Place them in `/opt/circonus/etc/ssl`:
 
 * **cluster.key** - An RSA key for the intra-cluster listener.
 * **cluster.crt** - A certificate issued for the intra-cluster listener. Its commonName (CN) must be the node's UUID.
@@ -852,18 +853,21 @@ The first two items will be done on all IRONdb nodes. The third item will vary d
 
 **Update Topology**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#update-topology)
 
-The active topology for a cluster will be located in the `/opt/apica/etc/irondb-topo` directory, as a file whose name matches the topology hash. This hash is recorded in `/opt/apica/etc/irondb.conf` as the value for the `active` attribute within the `<topology>` stanza, e.g.
+The active topology for a cluster will be located in the
+`/opt/circonus/etc/irondb-topo` directory, as a file whose name matches the
+topology hash. This hash is recorded in `/opt/circonus/etc/irondb.conf` as the
+value for the `active` attribute within the `<topology>` stanza, e.g.
 
 ```
   <!-- Cluster definition -->
-  <topology path="/opt/apica/etc/irondb-topo"
+  <topology path="/opt/circonus/etc/irondb-topo"
             active="98e4683192dca2a2c22b9a87c7eb6acecd09ece89f46ce91fd5eb6ba19de50fb"
             next=""
             redo="/irondb/redo/{node}"
   />
 ```
 
-Edit the `/opt/apica/etc/irondb-topo/<hash>` file and add the `use_tls="true"` attribute to the `nodes` line:
+Edit the `/opt/circonus/etc/irondb-topo/<hash>` file and add the `use_tls="true"` attribute to the `nodes` line:
 
 ```
 -<nodes write_copies="2">
@@ -874,14 +878,14 @@ Distribute the updated file to all nodes in the cluster.
 
 **Update Listeners**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#update-listeners)
 
-In `/opt/apica/etc/irondb.conf`, locate the `<listeners>` stanza. The listeners that will be changing are the ones for port 8112 and, if used, the Graphite listener on port 2003.
+In `/opt/circonus/etc/irondb.conf`, locate the `<listeners>` stanza. The listeners that will be changing are the ones for port 8112 and, if used, the Graphite listener on port 2003.
 
 In a default configuration, the non-TLS listeners look like this:
 
 ```
     <listener address="*" port="8112" backlog="100" type="http_rest_api" accept_thread="on" fanout="true">
       <config>
-        <document_root>/opt/apica/share/snowth-web</document_root>
+        <document_root>/opt/circonus/share/snowth-web</document_root>
       </config>
     </listener>
 
@@ -904,16 +908,16 @@ Replace the above listener configs with this, ensuring that it is within the ope
     <cluster>
       <sslconfig>
         <!-- Certificate CNs MUST match node UUIDs assigned in the current topology. -->
-        <certificate_file>/opt/apica/etc/ssl/cluster.crt</certificate_file>
-        <key_file>/opt/apica/etc/ssl/cluster.key</key_file>
-        <ca_chain>/opt/apica/etc/ssl/cluster-ca.crt</ca_chain>
+        <certificate_file>/opt/circonus/etc/ssl/cluster.crt</certificate_file>
+        <key_file>/opt/circonus/etc/ssl/cluster.key</key_file>
+        <ca_chain>/opt/circonus/etc/ssl/cluster-ca.crt</ca_chain>
         <layer_openssl_10>tlsv1.2</layer_openssl_10>
         <layer_openssl_11>tlsv1:all,>=tlsv1.2,cipher_server_preference</layer_openssl_11>
         <ciphers>ECDHE+AES128+AESGCM:ECDHE+AES256+AESGCM:DHE+AES128+AESGCM:DHE+AES256+AESGCM:!DSS</ciphers>
       </sslconfig>
       <listener address="*" port="8112" backlog="100" type="http_rest_api" accept_thread="on" fanout="true" ssl="on">
         <config>
-          <document_root>/opt/apica/share/snowth-web</document_root>
+          <document_root>/opt/circonus/share/snowth-web</document_root>
         </config>
       </listener>
     </cluster>
@@ -922,9 +926,9 @@ Replace the above listener configs with this, ensuring that it is within the ope
     <clients>
       <sslconfig>
         <!-- Certificate CNs should be the FQDN of the node. -->
-        <certificate_file>/opt/apica/etc/ssl/client.crt</certificate_file>
-        <key_file>/opt/apica/etc/ssl/client.key</key_file>
-        <ca_chain>/opt/apica/etc/ssl/client-ca.crt</ca_chain>
+        <certificate_file>/opt/circonus/etc/ssl/client.crt</certificate_file>
+        <key_file>/opt/circonus/etc/ssl/client.key</key_file>
+        <ca_chain>/opt/circonus/etc/ssl/client-ca.crt</ca_chain>
         <layer_openssl_10>tlsv1.2</layer_openssl_10>
         <layer_openssl_11>tlsv1:all,>=tlsv1.2,cipher_server_preference</layer_openssl_11>
         <ciphers>ECDHE+AES128+AESGCM:ECDHE+AES256+AESGCM:DHE+AES128+AESGCM:DHE+AES256+AESGCM:!DSS</ciphers>
@@ -933,7 +937,7 @@ Replace the above listener configs with this, ensuring that it is within the ope
       <!-- Used for HTTP metric submission, admin UI. -->
       <listener address="*" port="8443" backlog="100" type="http_rest_api" accept_thread="on" fanout="true" ssl="on">
         <config>
-          <document_root>/opt/apica/share/snowth-web</document_root>
+          <document_root>/opt/circonus/share/snowth-web</document_root>
         </config>
       </listener>
 
@@ -955,12 +959,12 @@ Generate and/or obtain the above key and certificate files, ensuring they are pl
 
 ## Included Files[​](https://docs.circonus.com/irondb/getting-started/configuration#included-files) <a href="#included-files" id="included-files"></a>
 
-### apica-watchdog.conf[​](https://docs.circonus.com/irondb/getting-started/configuration#circonus-watchdogconf) <a href="#circonus-watchdogconf" id="circonus-watchdogconf"></a>
+### circonus-watchdog.conf[​](https://docs.circonus.com/irondb/getting-started/configuration#circonus-watchdogconf) <a href="#circonus-watchdogconf" id="circonus-watchdogconf"></a>
 
 **watchdog**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#watchdog)
 
 ```
-<watchdog glider="/opt/apica/bin/backwash" tracedir="/opt/apica/traces"/>
+<watchdog glider="/opt/circonus/bin/backwash" tracedir="/opt/circonus/traces"/>
 ```
 
 The watchdog configuration specifies a handler, known as a "glider", that is to be invoked when a child process crashes or hangs. See the [libmtev watchdog documentation](http://circonus-labs.github.io/libmtev/config/watchdog.html).

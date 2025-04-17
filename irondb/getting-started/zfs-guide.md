@@ -39,10 +39,6 @@ On Linux, ZFS filesystems are mounted at boot by the `zfs-mount` service. They a
 
 ## Obtaining ZFS Packages[​](https://docs.circonus.com/irondb/getting-started/zfs-guide#obtaining-zfs-packages) <a href="#obtaining-zfs-packages" id="obtaining-zfs-packages"></a>
 
-### RHEL and CentOS[​](https://docs.circonus.com/irondb/getting-started/zfs-guide#rhel-and-centos) <a href="#rhel-and-centos" id="rhel-and-centos"></a>
-
-Follow the [RHEL & CentOS](https://github.com/zfsonlinux/zfs/wiki/RHEL-and-CentOS) getting-started guide. The kABI-tracking kmod version is the easiest to manage, as there is nothing to compile, and it is designed to work with the stock EL7 kernels.
-
 ### Ubuntu[​](https://docs.circonus.com/irondb/getting-started/zfs-guide#ubuntu) <a href="#ubuntu" id="ubuntu"></a>
 
 Packages for ZFS are available from the standard Ubuntu repository.
@@ -110,7 +106,7 @@ At this point you may wish to reboot the system to ensure that the pool is prese
 Now that you have created a ZFS pool you may begin the IRONdb [installation](installation.md). If you have multiple pools configured and you want to use a specific pool for IRONdb, you can use the `-z` option to the setup script.
 
 ```
-/opt/apica/bin/setup-irondb (other options) -z data
+/opt/circonus/bin/setup-irondb (other options) -z data
 ```
 
 The setup script takes care of creating the `/irondb` mountpoint and all other necessary filesystems, as well as setting the required properties on those filesystems. No other administrative action at the ZFS level should be required at this point.

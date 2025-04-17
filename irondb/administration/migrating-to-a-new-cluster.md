@@ -23,11 +23,11 @@ On each of the new cluster nodes, after [installing](../getting-started/installa
 rm -f /irondb/logs/snowth.lock
 ```
 
-1. Note the topology hash from the source cluster. This is the value of the `active` attribute in `/opt/apica/etc/topology.conf` on one of the source cluster's nodes. The hash will be referred to below as `<source_cluster_topo_hash>`.
+1. Note the topology hash from the source cluster. This is the value of the `active` attribute in `/opt/circonus/etc/topology.conf` on one of the source cluster's nodes. The hash will be referred to below as `<source_cluster_topo_hash>`.
 2. Run IRONdb in reconstitute mode using the following command:
 
 ```
-/opt/apica/bin/irondb-start -B -E \
+/opt/circonus/bin/irondb-start -B -E \
   -T <source_cluster_topo_hash> \
   -O <source_cluster_node_ip>:<port>
 ```
@@ -43,7 +43,7 @@ http://<node ip address>:<node port>/
 In reconstitute mode, the normal UI is replaced with a special one giving reconstitute status. Note that there may not be messages appearing on the console while this runs. This is normal; do not stop the reconstitute. Current progress will be saved - if the process stops for any reason, everything should pick back up approximately where it was. If the download stops partway for any reason, you may resume it with the following command:
 
 ```
-/opt/apica/bin/irondb-start -B \
+/opt/circonus/bin/irondb-start -B \
   -T <source_cluster_topo_hash> \
   -O <source_cluster_node_ip>:<port>
 ```

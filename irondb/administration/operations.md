@@ -6,19 +6,20 @@ IRONdb is sensitive to CPU and IO limits. If either resource is limited, you may
 
 ## Service Management[​](https://docs.circonus.com/irondb/administration/operations#service-management) <a href="#service-management" id="service-management"></a>
 
-The IRONdb service is called `apica-irondb`.
+The IRONdb service is called `circonus-irondb`.
 
-To view service status: `/bin/systemctl status apica-irondb`
+To view service status: `/bin/systemctl status circonus-irondb`
 
-To start the service: `/bin/systemctl start apica-irondb`
+To start the service: `/bin/systemctl start circonus-irondb`
 
-To stop the service: `/bin/systemctl stop apica-irondb`
+To stop the service: `/bin/systemctl stop circonus-irondb`
 
-To restart the service: `/bin/systemctl restart apica-irondb`
+To restart the service: `/bin/systemctl restart circonus-irondb`
 
-To disable the service from running at system boot: `/bin/systemctl disable apica-irondb`
+To disable the service from running at system boot: `/bin/systemctl disable
+circonus-irondb`
 
-To enable the service to run at system boot: `/bin/systemctl enable apica-irondb`
+To enable the service to run at system boot: `/bin/systemctl enable circonus-irondb`
 
 ## Logs[​](https://docs.circonus.com/irondb/administration/operations#logs) <a href="#logs" id="logs"></a>
 
@@ -28,7 +29,7 @@ Log files are located under `/irondb/logs` and include the following files:
 * errorlog
 * startuplog
 
-The access logs are useful to verify activity going to the server in question. Error logs record, among other things, crashes and other errant behavior, and may contain debugging information important for support personnel. The startup log records various information about database initialization and other data that are typically of interest to developers and operators. Logs are automatically rotated and retained based on configuration attributes in `/opt/apica/etc/irondb.conf`.
+The access logs are useful to verify activity going to the server in question. Error logs record, among other things, crashes and other errant behavior, and may contain debugging information important for support personnel. The startup log records various information about database initialization and other data that are typically of interest to developers and operators. Logs are automatically rotated and retained based on configuration attributes in `/opt/circonus/etc/irondb.conf`.
 
 If the child process becomes unstable, verify that the host is not starved for resources (CPU, IO, memory). Hardware disk errors can also impact IRONdb's performance. Install the `smartmontools` package and run `/usr/sbin/smartctl -a /dev/sdX`, looking for errors and/or reallocated-sector counts.
 
@@ -38,27 +39,16 @@ Application crashes are, by default, automatically reported to Apica, using [Bac
 
 If you have disabled crash reporting in your environment, you can still enable traditional core dumping.
 
-On EL7:
-
-* Add the following to `/opt/apica/etc/irondb-node-config`: `ulimit -c unlimited`
-* Restart the `apica-irondb` service
-* Set the kernel core pattern to place core dumps in a suitable location. See the core(5) man page for details. This location must be writable by the user that IRONdb runs as (`nobody`).
-* Allow setuid dumps: `sysctl -w fs.suid_dumpable=1`
-
-When a process crashes, a core dump will be created in `/irondb/appcrash` with the filename `core.<executable-name>.<pid>`, and the event will be recorded in the system log.
-
-(TODO: Ubuntu)
-
 ## Debugging Mode[​](https://docs.circonus.com/irondb/administration/operations#debugging-mode) <a href="#debugging-mode" id="debugging-mode"></a>
 
 If instability continues, you may run IRONdb as a single process in the foreground, with additional debugging enabled.
 
-First, ensure the service is disabled: `/usr/bin/systemctl stop apica-irondb`
+First, ensure the service is disabled: `/usr/bin/systemctl stop circonus-irondb`
 
 Then, run the following as root:
 
 ```
-/opt/apica/bin/irondb-start -D -d
+/opt/circonus/bin/irondb-start -D -d
 ```
 
 Running IRONdb in the foreground with debugging should make the error apparent, and Apica Support can help diagnose your problem. Core dumps are also useful in these situations (see above).

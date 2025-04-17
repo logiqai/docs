@@ -13,7 +13,8 @@ $ git clone http://github.com/circonus-labs/graphite-irondb
 $ cd graphite-irondb
 ```
 
-(With no options provided, the install will look for a [`flatcc`](https://github.com/dvidelabs/flatcc) library in `/opt/apica`)
+(With no options provided, the install will look for a
+[`flatcc`](https://github.com/dvidelabs/flatcc) library in `/opt/circonus`)
 
 Then, to install using [`flatcc`](https://github.com/dvidelabs/flatcc) library for FlatBuffers:
 
@@ -44,10 +45,9 @@ In your graphite's `local_settings.py`:
         'http://<irondb-host>:<port>/graphite/<account>/<optional_query_prefix>',
     )
 
-    # Optional.  You need APICA_TOKEN if you are using this with the
-    # Apica Saas or Inside products.  See below.
-    # If you are not using Apica SaaS or Inside you can omit this setting
-    APICA_TOKEN = '0005cc1f-5b27-4b60-937b-7c73a25dfef7'
+    # Optional.  You need CIRCONUS_TOKEN if you are using this with Circonus SaaS.
+    # If you are not using Circonus SaaS you can omit this setting
+    CIRCONUS_TOKEN = '0005cc1f-5b27-4b60-937b-7c73a25dfef7'
 
     IRONDB_BATCH_SIZE = 250
     IRONDB_USE_DATABASE_ROLLUPS = True
@@ -76,12 +76,18 @@ IRONDB_URLS = (
 
 NOTE: the `IRONDB_URLS` is a python list and therefore must end with a trailing comma on the last entry.
 
-If you are pointing graphite at a Apica SaaS account, set the token to a valid Apica Auth Token and set the URL to the public API URL (`https://api.apica.com/irondb/graphite`). Your tokens can be managed under your account at `https://login.apica.com/user/tokens`. Note that the storage finder will not work if the application 'graphite' is not approved. If you find it not working, visit your tokens page and refresh to find the graphite application and manually approve it.
+If you are pointing graphite at a Circonus SaaS account, set the token to a
+valid Circonus Auth Token and set the URL to the public API URL
+(`https://api.circonus.com/irondb/graphite`). Your tokens can be managed under
+your account at `https://login.circonus.com/user/tokens`. Note that the storage
+finder will not work if the application 'graphite' is not approved. If you find
+it not working, visit your tokens page and refresh to find the graphite
+application and manually approve it.
 
 ```python
-Apica_TOKEN = '<your-token-uuid>'
+CIRCONUS_TOKEN = '<your-token-uuid>'
 IRONDB_URLS = (
-    'https://api.apica.com/irondb/graphite',
+    'https://api.circonus.com/irondb/graphite',
 )
 ```
 
@@ -107,7 +113,7 @@ IRONDB_URLS = (
 
 * **0.0.1** (2016-11-10): initial version.
 * **0.0.2** (2017-05-25): fix queries where there is no data for one or more of the requested time series
-* **0.0.3** (2017-06-27): Add `APICA_TOKEN` support and `IRONDB_USE_DATABASE_ROLLUPS`
+* **0.0.3** (2017-06-27): Add `CIRCONUS_TOKEN` support and `IRONDB_USE_DATABASE_ROLLUPS`
 * **0.0.4** (2017-06-28): Pass more info back to IRONdb on fetches so the database doesn't have to re-lookup metric ownership among the nodes
 * **0.0.5** (2017-09-01): Retry requests to IRONdb against different nodes if we encounter connection issues or timeouts on requests
 * **0.0.6** (2017-09-11): Pass a timeout to IRONdb on all fetch operations. This requires IRONdb >= 0.9.8

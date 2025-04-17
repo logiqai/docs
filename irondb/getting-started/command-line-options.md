@@ -10,7 +10,7 @@ Reference to available options and arguments.
 * [Behavioral Options](command-line-options.md#behavioral-options)
 * [Reconstitute Options](command-line-options.md#reconstitute-options)
 
-To obtain the most current usage summary: `/opt/apica/sbin/snowthd -h`
+To obtain the most current usage summary: `/opt/circonus/sbin/snowthd -h`
 
 ## Synopsis[​](https://docs.circonus.com/irondb/getting-started/command-line-options#synopsis) <a href="#synopsis" id="synopsis"></a>
 
@@ -37,7 +37,7 @@ standalone maintenance flags for use with -i
 
 optional behavior flags:
         -c <file>               load config from <file> (full path)
-                                        default: /opt/apica/etc/snowth.conf
+                                        default: /opt/circonus/etc/snowth.conf
         -d                      debugging
         -D                      foreground operations (don't daemonize)
         -u <user>               run as <user>
@@ -124,7 +124,7 @@ These determine optional behavior, and are not required.
 
 * `-c <file>`
 
-Load configuration from `<file>`. Must be a full path. If not specified, the default path is `/opt/apica/etc/snowth.conf`.
+Load configuration from `<file>`. Must be a full path. If not specified, the default path is `/opt/circonus/etc/snowth.conf`.
 
 * `-d`
 

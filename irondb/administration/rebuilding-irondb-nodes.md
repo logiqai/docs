@@ -14,7 +14,6 @@ As this can be a long-running procedure, a terminal multiplexer such as `tmux` o
 
 1. Log into the IRONdb node you wish to reconstitute as `root` or a privileged user. Make sure the IRONdb package is [up to date](../getting-started/installation.md#updating).
    * **Note:** If the entire old node was replaced (e.g., due to a hardware failure), or the ZFS pool has been recreated (due to hardware failure or administrative action), then you should repeat [initial installation](../getting-started/installation.md#installation-steps) and then [disable the service](operations.md#service-management). The installer will not interfere with an existing `irondb.conf` file but will ensure that all necessary ZFS datasets and node-id subdirectories have been created.
-   * **Note:** If reconstituting within the full, on-premise, Apica Inside product, package updating has been handled automatically by the installer. No manual package installation is required. Please refer to the Apica Inside Operations Manual for details on how this process differs for Apica Inside.
 2. Make note of this node's topology UUID, found in the [imported topology](../getting-started/installation.md#import-topology). You may need to reference this configuration on another node if the node to be reconstituted is a fresh install. The node UUID will be referred to below as `<node_id>`.
 3. If the IRONdb service is running, [stop it](operations.md#service-management).
 4.  Make sure there is no lock file located at `/irondb/logs/snowth.lock`. If there is, remove it with the following command:
@@ -85,7 +84,7 @@ As this can be a long-running procedure, a terminal multiplexer such as `tmux` o
 6.  Run IRONdb in reconstitute mode using the following command:
 
     ```
-    /opt/apica/bin/irondb-start -B
+    /opt/circonus/bin/irondb-start -B
     ```
 7.  Wait until the reconstitute operation has fetched 100% of its data from cluster peers. You can access the current percentage done as an auto-refreshing UI via:
 
@@ -106,7 +105,7 @@ As this can be a long-running procedure, a terminal multiplexer such as `tmux` o
     Current progress will be saved - if the process stops for any reason, everything should resume approximately where it was. A reconstitute may be resumed with the same command:
 
     ```
-    /opt/apica/bin/irondb-start -B
+    /opt/circonus/bin/irondb-start -B
     ```
 
     Once the reconstituting node has retrieved all of its data, you will see the following on the console:
