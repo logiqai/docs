@@ -11,7 +11,7 @@ This guide assumes a server with the following storage configuration:
 * One or more OS drives with ext4 on LVM, md, etc., depending on installer choices and/or operator preference.
 * 12 data drives attached via a SAS or SATA HBA (non-RAID) that will be used exclusively for ZFS.
 
-## ZFS Terminology[​](https://docs.circonus.com/irondb/getting-started/zfs-guide#zfs-terminology) <a href="#zfs-terminology" id="zfs-terminology"></a>
+## ZFS Terminology
 
 If you are new to ZFS, there are some basic concepts that you should become familiar with to best utilize your server hardware with ZFS.
 
@@ -21,13 +21,13 @@ References:
 * [ZFS on Linux RHEL setup](https://github.com/zfsonlinux/zfs/wiki/RHEL-and-CentOS)
 * [ZFS: The Last Word in Filesystems](https://wiki.chipp.ch/twiki/pub/CmsTier3/NFSServerZFSBackupANDdCache/zfs_last_presentation.pdf) Old but still largely relevant presentation introducing ZFS, from Sun Microsystems
 
-### Pools[​](https://docs.circonus.com/irondb/getting-started/zfs-guide#pools) <a href="#pools" id="pools"></a>
+### Pools
 
 Pools are the basis of ZFS storage. They are constructed out of "virtual devices" (vdevs), which can be individual disks or groupings of disks that provide some form of redundancy for writes to the group.
 
 Review the `zpool` man page for details.
 
-### Datasets[​](https://docs.circonus.com/irondb/getting-started/zfs-guide#datasets) <a href="#datasets" id="datasets"></a>
+### Datasets
 
 Datasets are logical groupings of objects within a pool. They are accessed in one of two ways: as a POSIX-compliant filesystem, or as a block device. In this guide we will only be dealing with the filesystem type.
 
@@ -37,9 +37,9 @@ Filesystem datasets are mounted in the standard UNIX hierarchy just as tradition
 
 On Linux, ZFS filesystems are mounted at boot by the `zfs-mount` service. They are not kept in the traditional `/etc/fstab` file.
 
-## Obtaining ZFS Packages[​](https://docs.circonus.com/irondb/getting-started/zfs-guide#obtaining-zfs-packages) <a href="#obtaining-zfs-packages" id="obtaining-zfs-packages"></a>
+## Obtaining ZFS Packages
 
-### Ubuntu[​](https://docs.circonus.com/irondb/getting-started/zfs-guide#ubuntu) <a href="#ubuntu" id="ubuntu"></a>
+### Ubuntu
 
 Packages for ZFS are available from the standard Ubuntu repository.
 
@@ -47,7 +47,7 @@ Packages for ZFS are available from the standard Ubuntu repository.
 apt-get install zfs
 ```
 
-## Creating a ZFS Pool[​](https://docs.circonus.com/irondb/getting-started/zfs-guide#creating-a-zfs-pool) <a href="#creating-a-zfs-pool" id="creating-a-zfs-pool"></a>
+## Creating a ZFS Pool
 
 IRONdb setup expects a zpool to exist, but will take care of creating all necessary filesystems and directories.
 
@@ -99,7 +99,7 @@ errors: No known data errors
 
 At this point you may wish to reboot the system to ensure that the pool is present at startup.
 
-## Proceed to IRONdb Setup[​](https://docs.circonus.com/irondb/getting-started/zfs-guide#proceed-to-irondb-setup) <a href="#proceed-to-irondb-setup" id="proceed-to-irondb-setup"></a>
+## Proceed to IRONdb Setup
 
 > This step is only required if using the standalone IRONdb product. If you are referring to this appendix as an on-premise Apica Inside user, there is no further manual setup required at this point. All IRONdb setup from this point is handled by the Apica Inside installer.
 

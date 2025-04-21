@@ -1,6 +1,6 @@
 # Metric Names and Tags
 
-## Canonical Metric Names[​](https://docs.circonus.com/irondb/metric-names-tags-queries#canonical-metric-names) <a href="#canonical-metric-names" id="canonical-metric-names"></a>
+## Canonical Metric Names
 
 Canonical Metric Names in IRONdb are the combination of a [metric name](metric-names-and-tags.md#metric-names) and [tags](metric-names-and-tags.md#tags). For a general overview, canonical metric names would follow the following BNF description:
 
@@ -29,19 +29,19 @@ Examples:
 
 The final example would canonicalize into the previous example since measurement-tags are not currently stored.
 
-### Metric Names[​](https://docs.circonus.com/irondb/metric-names-tags-queries#metric-names) <a href="#metric-names" id="metric-names"></a>
+### Metric Names
 
 Metric names in Circonus may be an string of bytes other than a null character, or the stream-tag or measurement-tags identifiers (`|ST[` or `|MT{`).
 
-### Stream Tags[​](https://docs.circonus.com/irondb/metric-names-tags-queries#stream-tags) <a href="#stream-tags" id="stream-tags"></a>
+### Stream Tags
 
 Stream tags, as part of the metric name, are considered part of the unique identifier for the metric stream.
 
-### Measurement Tags[​](https://docs.circonus.com/irondb/metric-names-tags-queries#measurement-tags) <a href="#measurement-tags" id="measurement-tags"></a>
+### Measurement Tags
 
 While part of the specification, Measurement Tags are experimental and should not be used at this time. They are not part of the unique identifier of a metric stream.
 
-## Tags[​](https://docs.circonus.com/irondb/metric-names-tags-queries#tags) <a href="#tags" id="tags"></a>
+## Tags
 
 Tags in IRONdb are represented as `category:value pairs` that are separated by the colon (`:`) character.
 
@@ -67,7 +67,7 @@ quux|ST[region:us-east-1,app:myapp]
 
 Tags (including category, colon, and value) are limited to 256 characters for each tag-pair. Tag-pairs exceeding that length will be truncated.
 
-### Base64 Encoding[​](https://docs.circonus.com/irondb/metric-names-tags-queries#base64-encoding) <a href="#base64-encoding" id="base64-encoding"></a>
+### Base64 Encoding
 
 Tags that contain characters outside of the acceptable set can be ingested, or searched for, by base64 encoding. To store a metric like:
 
@@ -84,7 +84,7 @@ and(b"fihjYXRlZ29yeSk=":b"PHZhbHVlPg==")
 
 It is always safe to encode _all_ incoming tags in this way, the server will decide if the name is safely representable without encoding and store the metric name decoded if it can.
 
-### Quoting[​](https://docs.circonus.com/irondb/metric-names-tags-queries#quoting) <a href="#quoting" id="quoting"></a>
+### Quoting
 
 For searching, but not ingestion, tags that contain characters outside of the acceptable set can also be quoted with double-quotes. Double-quoted strings accept all printable ASCII characters other than `"` and `\`, which must be escaped as `\"` and `\\`, respectively.
 
@@ -102,11 +102,11 @@ and("~(category)":"<value>")
 
 > See [Searching Tags](metric-names-and-tags.md#tag-queries)
 
-## Tag Queries[​](https://docs.circonus.com/irondb/metric-names-tags-queries#tag-queries) <a href="#tag-queries" id="tag-queries"></a>
+## Tag Queries
 
 Tag queries can be used to find or perform deletion of metrics using a boolean tag search.
 
-### Query Syntax[​](https://docs.circonus.com/irondb/metric-names-tags-queries#query-syntax) <a href="#query-syntax" id="query-syntax"></a>
+### Query Syntax
 
 A query follows this eBNF syntax:
 
@@ -202,7 +202,7 @@ Note that the asterisk (`*`) for glob syntax is supported and stays a glob even 
 
 If using regular expression patterns, the `/ /` should not be encoded. The regex pattern however, may be base64 encoded if it uses a character that otherwise will violate parse rules. To perform a regex match in this form would look like `b/KGZvb3xiYXIp/`.
 
-### Query Examples[​](https://docs.circonus.com/irondb/metric-names-tags-queries#query-examples) <a href="#query-examples" id="query-examples"></a>
+### Query Examples
 
 You have ingested the following metrics:
 
@@ -231,7 +231,7 @@ or:
 
 `or(and(region:us-east-2,app:,myapp),and(region:us-west-2,app:yourapp))`
 
-### `match impl` Search Options[​](https://docs.circonus.com/irondb/metric-names-tags-queries#match-impl-search-options) <a href="#match-impl-search-options" id="match-impl-search-options"></a>
+### `match impl` Search Options
 
 While primarily used for the `__name` tag, there are other options that can be invoked for specific search types on tag categories or values. These are known as "match impl" and have four options and can be activated with an optional `[<type>]` invocation at the beginning of the value.
 

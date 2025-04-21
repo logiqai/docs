@@ -2,7 +2,7 @@
 
 IRONdb has native endpoints for accepting OpenTSDB-style data.
 
-## Ingestion Format[​](https://docs.circonus.com/irondb/integrations/opentsdb#ingestion-format) <a href="#ingestion-format" id="ingestion-format"></a>
+## Ingestion Format
 
 There are 2 methods for ingesting OpenTSDB data into IRONdb:
 
@@ -72,7 +72,7 @@ For data safety reasons, we recommend that you use the RESTful POST interface to
 
 The HTTP interface, on the other hand, will provide feedback about whether data was safely ingested and will not respond until data has actually been written by the underlying database.
 
-## Namespacing[​](https://docs.circonus.com/irondb/integrations/opentsdb#namespacing) <a href="#namespacing" id="namespacing"></a>
+## Namespacing
 
 Both of the interfaces require you to namespace your OpenTSDB data. This lets you associate a UUID/Name and numeric identifier with the incoming metrics. This is useful, for example, if you want to use a single IRONdb installation to service multiple different internal groups in your organization but keep metrics hidden across the various groups.
 
@@ -84,11 +84,11 @@ When we store these metric names inside IRONdb, we prefix them with our standard
 
 Adding these additional fields allow us to disambiguate metric names from potential duplicate names collected from other sources.
 
-## Optional Configuration[​](https://docs.circonus.com/irondb/integrations/opentsdb#optional-configuration) <a href="#optional-configuration" id="optional-configuration"></a>
+## Optional Configuration
 
 OpenTSDB ingestion will, by default, accept timestamps up to 1 year in the past. This value may be changed through [configuration](../getting-started/configuration.md#opentsdb-config).
 
-## Writing OpenTSDB Data with HTTP[​](https://docs.circonus.com/irondb/integrations/opentsdb#writing-opentsdb-data-with-http) <a href="#writing-opentsdb-data-with-http" id="writing-opentsdb-data-with-http"></a>
+## Writing OpenTSDB Data with HTTP
 
 OpenTSDB data is sent by POSTing a JSON object or an array of JSON objects using the format described above to the OpenTSDB ingestion endpoint:
 
@@ -104,7 +104,7 @@ This will place all metrics under account\_id `1` with that UUID and call them `
 
 This will place all metrics under account\_id `1` with that UUID and call them `prod`.
 
-## Writing OpenTSDB Data with Network Listener[​](https://docs.circonus.com/irondb/integrations/opentsdb#writing-opentsdb-data-with-network-listener) <a href="#writing-opentsdb-data-with-network-listener" id="writing-opentsdb-data-with-network-listener"></a>
+## Writing OpenTSDB Data with Network Listener
 
 The network listener requires that we associate an account\_id, uuid, and name with a network port. This is added to the [IRONdb configuration file](../getting-started/configuration.md) during initial installation, for the default OpenTSDB text protocol port (4242). Additional stanzas may be added, associating different IDs with different ports to segregate incoming traffic.
 

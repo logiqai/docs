@@ -12,7 +12,7 @@ Reference to available options and arguments.
 
 To obtain the most current usage summary: `/opt/circonus/sbin/snowthd -h`
 
-## Synopsis[​](https://docs.circonus.com/irondb/getting-started/command-line-options#synopsis) <a href="#synopsis" id="synopsis"></a>
+## Synopsis
 
 ```
 process control flags:
@@ -62,13 +62,13 @@ this usage message:
         -h                      usage
 ```
 
-## Process Control Options[​](https://docs.circonus.com/irondb/getting-started/command-line-options#process-control-options) <a href="#process-control-options" id="process-control-options"></a>
+## Process Control Options
 
 * `-k <start|stop|status>`
 
 `status` will exit `0` if the process is running, non-zero otherwise.
 
-## Operating Mode Options[​](https://docs.circonus.com/irondb/getting-started/command-line-options#operating-mode-options) <a href="#operating-mode-options" id="operating-mode-options"></a>
+## Operating Mode Options
 
 These options are mutually exclusive of one another. One or the other is required.
 
@@ -80,7 +80,7 @@ Identify this node with `<uuid>`. This is the normal mode of operation.
 
 Boot the node in ephemeral mode. Ephemeral nodes are read-only participants in the cluster. They do not appear in the cluster topology, and do not accept incoming metrics, but may be used to read metric data from other nodes and perform intensive computation that would add unreasonable load to the main nodes.
 
-## Loader Options[​](https://docs.circonus.com/irondb/getting-started/command-line-options#loader-options) <a href="#loader-options" id="loader-options"></a>
+## Loader Options
 
 These options imply foreground operation and perform a specific task, then exit. They are only valid in identified mode (`-i`).
 
@@ -94,7 +94,7 @@ Merge histogram reconstitution files. **DEPRECATED**
 
 The above 2 options were used in a previous version of the reconstitute process and are no longer strictly required. They may be removed in a future version.
 
-## Maintenance Options[​](https://docs.circonus.com/irondb/getting-started/command-line-options#maintenance-options) <a href="#maintenance-options" id="maintenance-options"></a>
+## Maintenance Options
 
 These options imply foreground operation and perform a specific task, then exit. They are only valid in identified mode (`-i`).
 
@@ -118,7 +118,7 @@ Repair a histogram rollup. The value is one of the existing histogram rollup per
 
 Journal-drain mode. Does not start a network listener, so this node will appear "down" to its peers, but will send any pending journal data to them. This is useful if you are planning to retire and replace a cluster node, and want to ensure that it has sent all outgoing journal data without accepting any new input.
 
-## Behavioral Options[​](https://docs.circonus.com/irondb/getting-started/command-line-options#behavioral-options) <a href="#behavioral-options" id="behavioral-options"></a>
+## Behavioral Options
 
 These determine optional behavior, and are not required.
 
@@ -156,7 +156,7 @@ Enable `<logname>`, even if it is disabled in the configuration file. The specif
 
 Disable `<logname>`, even if it is enabled in the configuration file. The specified log stream must exist.
 
-## Reconstitute Options[​](https://docs.circonus.com/irondb/getting-started/command-line-options#reconstitute-options) <a href="#reconstitute-options" id="reconstitute-options"></a>
+## Reconstitute Options
 
 These operations are used when [rebuilding a node](../administration/rebuilding-irondb-nodes.md).
 

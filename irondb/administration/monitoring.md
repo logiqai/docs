@@ -8,7 +8,7 @@ The JSON endpoint is best for viewing live information. The internal monitor mod
 
 Both methods are described below.
 
-## JSON[​](https://docs.circonus.com/irondb/administration/monitoring#json) <a href="#json" id="json"></a>
+## JSON
 
 JSON-formatted metrics are available from two REST endpoints, each having two format options:
 
@@ -23,7 +23,7 @@ The format options are discussed below.
 
 > Changing an existing check against the default format to tagged format, or vice versa, will result in different metric names, even though the data represented is the same.
 
-### JSON Default Format[​](https://docs.circonus.com/irondb/administration/monitoring#json-default-format) <a href="#json-default-format" id="json-default-format"></a>
+### JSON Default Format
 
 The default format for metric names is hierarchical. The broadest category of statistics is the top level, descending to more specific sub-categories, and finally listing individual metrics.
 
@@ -50,7 +50,7 @@ db`raw`put`latency
 
 There are no tags in the default format.
 
-### JSON Tagged Format[​](https://docs.circonus.com/irondb/administration/monitoring#json-tagged-format) <a href="#json-tagged-format" id="json-tagged-format"></a>
+### JSON Tagged Format
 
 **The tag format is still in development. Names of metrics and tags may change without warning.**
 
@@ -67,7 +67,7 @@ If provided the query string `format=tagged`, both endpoints will produce metric
 
 which results in a metric named `latency` with tags indicating the database type (raw) and the type of operation (put) that are encoded in the metric name in the default format. There are additional tags for the node's UUID and a "units" tag indicating what the metric's value represents. In this case it is seconds.
 
-## Monitor Module[​](https://docs.circonus.com/irondb/administration/monitoring#monitor-module) <a href="#monitor-module" id="monitor-module"></a>
+## Monitor Module
 
 **This module is still in development. Names of metrics and tags may change without warning.**
 
@@ -101,7 +101,7 @@ Available configuration parameters:
 
 The check UUID is an identifier for grouping the internal metrics together. It is recommended that you choose a UUID that is different from any associated with Graphite, Prometheus, or OpenTSDB listener configurations. This will ensure that the internal metrics are not mixed in with your external time series data. Likewise, `account_id` may be used as another level of segregation, or you may choose to leave the metrics in the same account ID as your other metrics.
 
-### Viewing Monitor Metrics[​](https://docs.circonus.com/irondb/administration/monitoring#viewing-monitor-metrics) <a href="#viewing-monitor-metrics" id="viewing-monitor-metrics"></a>
+### Viewing Monitor Metrics
 
 To get a list of metrics recorded by the module, perform a [tag query](../metric-names-and-tags.md#tag-queries) using the synthetic `__check_uuid` tag:
 

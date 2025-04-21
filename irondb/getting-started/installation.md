@@ -4,7 +4,7 @@ description: How to install IRONdb on a system.
 
 # Installation
 
-## System Requirements[​](https://docs.circonus.com/irondb/getting-started/manual-installation#system-requirements) <a href="#system-requirements" id="system-requirements"></a>
+## System Requirements
 
 IRONdb requires one of the following operating systems:
 
@@ -29,7 +29,7 @@ The following network protocols and ports are utilized. These are defaults and m
 * 8443/tcp (admin UI, HTTP REST API when TLS configuration is used)
 * 32322/tcp (admin console, localhost only)
 
-### System Tuning[​](https://docs.circonus.com/irondb/getting-started/manual-installation#system-tuning) <a href="#system-tuning" id="system-tuning"></a>
+### System Tuning
 
 IRONdb is expected to perform well on a standard installation of supported platforms, but to ensure optimal performance, there are a few tuning changes that should be made. This is especially important if you plan to push your IRONdb systems to the limit of your hardware.
 
@@ -61,13 +61,13 @@ Note: the sysfs mount directory is automatically prepended to the attribute name
 
 For RHEL/CentOS, there is not a simple method to ensure THP is off. You can add the above echo commands to `/etc/rc.local`, or you can create your own systemd service to do it, or you can create a custom [tuned](http://servicesblog.redhat.com/2012/04/16/tuning-your-system-with-tuned/) profile containing a `[vm]` section that sets `transparent_hugepages=never`.
 
-## Installation Steps[​](https://docs.circonus.com/irondb/getting-started/manual-installation#installation-steps) <a href="#installation-steps" id="installation-steps"></a>
+## Installation Steps
 
 Follow these steps to get IRONdb installed on your system.
 
 System commands must be run as a privileged user, such as `root`, or via `sudo`.
 
-### Configure Software Sources[​](https://docs.circonus.com/irondb/getting-started/manual-installation#configure-software-sources) <a href="#configure-software-sources" id="configure-software-sources"></a>
+### Configure Software Sources
 
 Configure package repositories.
 
@@ -94,7 +94,7 @@ deb https://updates.circonus.net/backtrace/ubuntu/ jammy main
 
 Finally, run `sudo apt-get update`.
 
-### Install Package[​](https://docs.circonus.com/irondb/getting-started/manual-installation#install-package) <a href="#install-package" id="install-package"></a>
+### Install Package
 
 Ubuntu: we have a helper package that works around issues with dependency resolution, since IRONdb is very specific about the versions of dependent Apica packages, and apt-get is unable to cope with them. The helper package must be installed first, i.e., it cannot be installed in the same transaction as the main package.
 
@@ -103,7 +103,7 @@ sudo apt-get install circonus-platform-irondb-apt-policy
 sudo apt-get install circonus-platform-irondb
 ```
 
-### Setup Process[​](https://docs.circonus.com/irondb/getting-started/manual-installation#setup-process) <a href="#setup-process" id="setup-process"></a>
+### Setup Process
 
 Prepare site-specific information for setup. These values may be set via shell environment variables, or as arguments to the setup script. The environment variables are listed below.
 
@@ -162,7 +162,7 @@ The setup script will configure your IRONdb instance and start the service. If y
 
 Upon successful completion, it will print out specific information about how to submit Graphite, OpenTSDB, and Prometheus metrics. See the [Integrations](../integrations/) section for details.
 
-### Add License[​](https://docs.circonus.com/irondb/getting-started/manual-installation#add-license) <a href="#add-license" id="add-license"></a>
+### Add License
 
 (Optional)
 
@@ -190,7 +190,7 @@ Restart the IRONdb service:
 
 For more on licensing see: [Configuration/licenses](configuration.md#licensesconf)
 
-## Cluster Configuration[​](https://docs.circonus.com/irondb/getting-started/manual-installation#cluster-configuration) <a href="#cluster-configuration" id="cluster-configuration"></a>
+## Cluster Configuration
 
 Additional configuration is required for clusters of more than one IRONdb node. The **topology** of a cluster describes the addresses and UUIDs of the participating nodes, as well as the desired number of write copies for stored data. Ownership of metric streams (deciding which node that stream's data should be written to) is determined by the topology.
 
@@ -198,7 +198,7 @@ Additional configuration is required for clusters of more than one IRONdb node. 
 
 **Note for existing clusters:** adding one or more nodes to an existing cluster requires a special "rebalance" operation to shift stored metric data to different nodes, as determined by a new topology. See [Resizing Clusters](../administration/resizing-clusters.md) for details.
 
-### Determine Cluster Parameters[​](https://docs.circonus.com/irondb/getting-started/manual-installation#determine-cluster-parameters) <a href="#determine-cluster-parameters" id="determine-cluster-parameters"></a>
+### Determine Cluster Parameters
 
 The number and size of nodes you need is determined by several factors:
 
@@ -211,7 +211,7 @@ The number of write copies determines the number of nodes that can be unavailabl
 
 See the [appendix on cluster sizing](cluster-sizing.md) for details.
 
-### Topology Requirements[​](https://docs.circonus.com/irondb/getting-started/manual-installation#topology-requirements) <a href="#topology-requirements" id="topology-requirements"></a>
+### Topology Requirements
 
 **There are a few important considerations for IRONdb cluster topologies:**
 
@@ -221,7 +221,7 @@ See the [appendix on cluster sizing](cluster-sizing.md) for details.
 * The node address may be changed at any time without affecting the topology hash, but care should be taken not to change the ordering of any node stanzas.
 * If a node fails, its replacement should keep the same UUID, but it can have a different IP address or hostname.
 
-### Create Topology Layout[​](https://docs.circonus.com/irondb/getting-started/manual-installation#create-topology-layout) <a href="#create-topology-layout" id="create-topology-layout"></a>
+### Create Topology Layout
 
 The topology layout describes the particular nodes that are part of the cluster as well as aspects of operation for the cluster as a whole, such as the number of write copies. The layout file is not read directly by IRONdb, rather it is used to create a canonical topology representation that will be referenced by the IRONdb config.
 
@@ -335,7 +335,7 @@ To configure a sided topology, add the `side` attribute to each `<node>`, with a
 </nodes>
 ```
 
-### Import Topology[​](https://docs.circonus.com/irondb/getting-started/manual-installation#import-topology) <a href="#import-topology" id="import-topology"></a>
+### Import Topology
 
 This step calculates a hash of certain attributes of the topology, creating a unique "fingerprint" that identifies this specific topology. It is this hash that IRONdb uses to load the cluster topology at startup. Import the desired topology with the following command:
 
@@ -363,13 +363,13 @@ Save the file and restart IRONdb:
 
 Repeat the import process on each cluster node.
 
-### Verify Cluster Communication[​](https://docs.circonus.com/irondb/getting-started/manual-installation#verify-cluster-communication) <a href="#verify-cluster-communication" id="verify-cluster-communication"></a>
+### Verify Cluster Communication
 
 Once all nodes have the cluster topology imported and have been restarted, verify that the nodes are communicating with one another by viewing the Replication Latency tab of the [IRONdb Operations Dashboard](../administration/operations.md#operations-dashboard) on any node. You should see all of the cluster nodes listed by their IP address and port, and there should be a latency meter for each of the other cluster peers listed within each node's box.
 
 The node currently being viewed is always listed in blue, with the other nodes listed in either green, yellow, or red, depending on when the current node last received a gossip message from that node. If a node is listed in black, then no gossip message has been received from that node since the current node started. Ensure that the nodes can communicate with each other via port 8112 over both TCP and UDP. See the [Replication Latency tab](../administration/operations.md#replication-latency-tab) documentation for details on the information visible in this tab.
 
-## Updating[​](https://docs.circonus.com/irondb/getting-started/manual-installation#updating) <a href="#updating" id="updating"></a>
+## Updating
 
 An installed node may be updated to the latest available version of IRONdb by following these steps:
 

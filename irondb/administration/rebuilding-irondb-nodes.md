@@ -2,7 +2,7 @@
 
 If an IRONdb node or its data is damaged or lost, its data may be rebuilt from replicas elsewhere in the cluster. This process is known as "reconstituting" a node.
 
-## Prerequisites[​](https://docs.circonus.com/irondb/administration/rebuilding-nodes#prerequisites) <a href="#prerequisites" id="prerequisites"></a>
+## Prerequisites
 
 Reconstitution requires that at least one replica of every metric stream stored on the reconstituting node be available. A reconstitute operation cannot complete if more than `W-1` nodes are unavailable, including the node being reconstituted (`W` is the number of `write_copies` configured for the current topology.)
 
@@ -10,7 +10,7 @@ For example, given a cluster of 10 nodes (`N=10`) with 3 write copies (`W=3`), a
 
 As this can be a long-running procedure, a terminal multiplexer such as `tmux` or `screen` is recommended to avoid interruption.
 
-## Reconstitute Procedure[​](https://docs.circonus.com/irondb/administration/rebuilding-nodes#reconstitute-procedure) <a href="#reconstitute-procedure" id="reconstitute-procedure"></a>
+## Reconstitute Procedure
 
 1. Log into the IRONdb node you wish to reconstitute as `root` or a privileged user. Make sure the IRONdb package is [up to date](../getting-started/installation.md#updating).
    * **Note:** If the entire old node was replaced (e.g., due to a hardware failure), or the ZFS pool has been recreated (due to hardware failure or administrative action), then you should repeat [initial installation](../getting-started/installation.md#installation-steps) and then [disable the service](operations.md#service-management). The installer will not interfere with an existing `irondb.conf` file but will ensure that all necessary ZFS datasets and node-id subdirectories have been created.

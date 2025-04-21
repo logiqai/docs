@@ -4,7 +4,7 @@ In contrast to [rebuilding individual nodes](rebuilding-irondb-nodes.md) or [res
 
 As with individual node reconstitution, this is a "pull"-type operation, where the new cluster's nodes pull the necessary metric data from the source cluster. The following procedure will be run on each of the new cluster's nodes. Multiple new-cluster nodes can reconstitute simultaneously if the source cluster has sufficient read capacity, but exercise care, since every reconstituting node will read from every source cluster node.
 
-## Prerequisites[​](https://docs.circonus.com/irondb/administration/migrating-clusters#prerequisites) <a href="#prerequisites" id="prerequisites"></a>
+## Prerequisites
 
 Reconstitution requires that at least one replica of every metric stream stored on the existing cluster be available. A reconstitute operation cannot complete if more than `W-1` nodes of the existing cluster are unavailable (`W` is the number of `write_copies` configured for the existing cluster's topology.)
 
@@ -12,7 +12,7 @@ For example, given a cluster of 10 nodes (`N=10`) with 3 write copies (`W=3`), a
 
 As this can be a long-running procedure, a terminal multiplexer such as `tmux` or `screen` is recommended to avoid interruption.
 
-## Procedure[​](https://docs.circonus.com/irondb/administration/migrating-clusters#procedure) <a href="#procedure" id="procedure"></a>
+## Procedure
 
 On each of the new cluster nodes, after [installing](../getting-started/installation.md) and [configuring the new topology](../getting-started/installation.md#cluster-configuration), perform the following steps to reconstitute each of the new nodes from the source cluster.
 

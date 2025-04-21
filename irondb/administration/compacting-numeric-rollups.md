@@ -13,13 +13,13 @@ Run `/opt/circonus/bin/shard_compactor --help` for full usage information. The t
 
 This is an online operation (the IRONdb service must be running). Each shard will be put into an "offline" mode while it is being compacted. Requests for data within the shard will be redirected to other cluster nodes during the operation.
 
-## Caveats[​](https://docs.circonus.com/irondb/administration/compacting-numeric-rollups#caveats) <a href="#caveats" id="caveats"></a>
+## Caveats
 
 * Compaction should only be performed on shards that are no longer getting new data. In other words, shards that are older than the raw database's `min_delete_age` plus `delete_after_quiescent_age`.
 * A surrogate ID map is only valid for the host from which it was obtained, and should _never_ be used for compacting shards on a different host.
 * Care should be taken to avoid compacting the same shard at the same time on multiple cluster nodes. Doing so may jeopardize the availability of metric data if too many of one shard are offline at once. Since compaction is a background maintenance task, it is preferable to run it on one node at a time.
 
-## Example[​](https://docs.circonus.com/irondb/administration/compacting-numeric-rollups#example) <a href="#example" id="example"></a>
+## Example
 
 Given an IRONdb node whose cluster ID is `84d2979a-f233-47d3-9a15-d4f8885c9b7c`:
 

@@ -4,7 +4,7 @@ By default, IRONdb listens externally on TCP ports 2003 and 4242, TCP and UDP po
 
 IRONdb is sensitive to CPU and IO limits. If either resource is limited, you may see a process being killed off when it does not heartbeat on time. These are known as "watchdog" events.
 
-## Service Management[​](https://docs.circonus.com/irondb/administration/operations#service-management) <a href="#service-management" id="service-management"></a>
+## Service Management
 
 The IRONdb service is called `circonus-irondb`.
 
@@ -21,7 +21,7 @@ circonus-irondb`
 
 To enable the service to run at system boot: `/bin/systemctl enable circonus-irondb`
 
-## Logs[​](https://docs.circonus.com/irondb/administration/operations#logs) <a href="#logs" id="logs"></a>
+## Logs
 
 Log files are located under `/irondb/logs` and include the following files:
 
@@ -33,13 +33,13 @@ The access logs are useful to verify activity going to the server in question. E
 
 If the child process becomes unstable, verify that the host is not starved for resources (CPU, IO, memory). Hardware disk errors can also impact IRONdb's performance. Install the `smartmontools` package and run `/usr/sbin/smartctl -a /dev/sdX`, looking for errors and/or reallocated-sector counts.
 
-## Crash Handling[​](https://docs.circonus.com/irondb/administration/operations#crash-handling) <a href="#crash-handling" id="crash-handling"></a>
+## Crash Handling
 
 Application crashes are, by default, automatically reported to Apica, using [Backtrace.io](https://backtrace.io/) technology. When the crash occurs, a tracer program quickly gathers a wealth of detailed information about the crashed process and sends a report to Apica, in lieu of obtaining a full core dump.
 
 If you have disabled crash reporting in your environment, you can still enable traditional core dumping.
 
-## Debugging Mode[​](https://docs.circonus.com/irondb/administration/operations#debugging-mode) <a href="#debugging-mode" id="debugging-mode"></a>
+## Debugging Mode
 
 If instability continues, you may run IRONdb as a single process in the foreground, with additional debugging enabled.
 
@@ -53,29 +53,29 @@ Then, run the following as root:
 
 Running IRONdb in the foreground with debugging should make the error apparent, and Apica Support can help diagnose your problem. Core dumps are also useful in these situations (see above).
 
-## Replication[​](https://docs.circonus.com/irondb/administration/operations#replication) <a href="#replication" id="replication"></a>
+## Replication
 
 In a multi-node cluster, IRONdb nodes communicate with one another using port 8112. Metric data are replicated over TCP, while intra-cluster state (a.k.a. [gossip](../api/state-and-topology.md)) is exchanged over UDP. The replication factor is determine by the number of [write copies](../getting-started/installation.md) defined in the cluster's toplogy. When a node receives a new metric data point, it calculates which nodes should "own" this particular stream, and, if necessary, writes out the data to a local, per-node journal. This journal is then read behind and replayed to the destination node.
 
 When a remote node is unavailable, its corresponding journal on the remaining active nodes continues to collect new metric data that is being ingested by the cluster. When that node comes back online, its peers begin feeding it their backlog of journal data, in addition to any new ingestion which is coming directly to the returned node.
 
-## Proxying[​](https://docs.circonus.com/irondb/administration/operations#proxying) <a href="#proxying" id="proxying"></a>
+## Proxying
 
 Clients requesting metric data from IRONdb need not know the specific location of a particular stream's data in order to fetch it. Instead, they may request it from any node, and if the data are not present on that node, the request is transparently proxied to a node that does have the data. Because nodes can fail and need to catch up with their peers, proxying favors remote nodes that are the most up to date. This is determined from the gossip data, which includes a latency metric, indicating the most recent replication message that this node has seen from each of its peers. The node performing the proxying decides which of the other nodes that own the given metric has the most recent data.
 
 If gossip state is unavailable, such as due to a network partition, the node handling the request may return less recent data, if it proxies to a node that happens to be behind, or none at all, if the requested data is not available locally and all other owning nodes are unavailable.
 
-## Operations Dashboard[​](https://docs.circonus.com/irondb/administration/operations#operations-dashboard) <a href="#operations-dashboard" id="operations-dashboard"></a>
+## Operations Dashboard
 
 IRONdb comes with a built-in operational dashboard accessible via port 8112 in your browser, e.g., http://irondb-host:8112. This interface provides real-time information about the IRONdb cluster. There are a number of tabs in the UI, which display different aspects about the node's current status.
 
-### Overview Tab[​](https://docs.circonus.com/irondb/administration/operations#overview-tab) <a href="#overview-tab" id="overview-tab"></a>
+### Overview Tab
 
 The "Overview" tab displays a number of tiles representing the current ingestion throughput, available rollup dimensions, license information, and storage statistics.
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-**Ingestion**[**​**](https://docs.circonus.com/irondb/administration/operations#ingestion)
+#### Ingestion
 
 Read (Get) and Write (Put) throughput, per second.
 
@@ -84,28 +84,28 @@ Read (Get) and Write (Put) throughput, per second.
 
 Therefore, a write operation that PUTs data for 10 different streams in a single operation counts as 1 Batch and 10 Tuples.
 
-**License Info**[**​**](https://docs.circonus.com/irondb/administration/operations#license-info)
+#### License Info
 
 Displays details of the node's [license](../getting-started/configuration.md#licensesconf).
 
-**Numeric Rollups**[**​**](https://docs.circonus.com/irondb/administration/operations#numeric-rollups)
+#### Numeric Rollups
 
 Displays throughput for both reads and writes per second for numeric rollup data.
 
 * "Cache Size" is the number of open file handles for numeric rollup data. A given stream's data may be stored in multiple files, one for each configured rollup period in which that stream's data has been recorded.
 * "Rollups" is the list of available rollup periods.
 
-**Histogram Rollups**[**​**](https://docs.circonus.com/irondb/administration/operations#histogram-rollups)
+#### Histogram Rollups
 
 Displays throughput for both reads and writes per second for histogram rollup data.
 
 * "Rollups" is the list of available rollup periods.
 
-**Text Changesets**[**​**](https://docs.circonus.com/irondb/administration/operations#text-changesets)
+#### Text Changesets
 
 Displays throughput for both reads and writes per second for text data.
 
-**Storage**[**​**](https://docs.circonus.com/irondb/administration/operations#storage)
+#### Storage
 
 Disk space used and performance data per data type and rollup dimension.
 
@@ -125,7 +125,7 @@ Hovering over an individual latency bar will display three lines at the top righ
 
 The Used, Total, and Compress Ratio figures represent how much disk space is occupied by each data type or rollup, the total filesystem space available on the node, and the ratio of the original size to the compressed size stored on disk. The compression ratio is determined from the underlying ZFS filesystem.
 
-### Replication Latency Tab[​](https://docs.circonus.com/irondb/administration/operations#replication-latency-tab) <a href="#replication-latency-tab" id="replication-latency-tab"></a>
+### Replication Latency Tab
 
 Two types of latency are displayed here: "replication latency" and "gossip age". Replication latency is the difference between the current time on each node and the timestamp of the most recently received metric in the [journal data](operations.md#replication) from a remote node. Replication status information is exchanged between nodes using "gossip" messages, and the difference between the current time and the timestamp of the last gossip message received is the "gossip age". Gossip messages contain all replication state for a given node relative to all other nodes, so the state of the entire cluster can be seen from any node's UI.
 
@@ -141,7 +141,7 @@ Packet loss is another possible cause of replication latency. If a remote node's
 
 If the current node has never received a gossip message from a remote node since starting, that node will be displayed with a black bar, and the latency values will be reported as "unknown". This indicates that the remote node is either down or there is a network problem preventing communication with that node. Check that port 8112/udp is permitted between all cluster nodes.
 
-**Display Colors**[**​**](https://docs.circonus.com/irondb/administration/operations#display-colors)
+#### Display Colors
 
 Both gossip age and replication latency are also indicated using color.
 
@@ -168,7 +168,7 @@ Replication latency indicators for individual remote nodes are colored as follow
 * Yellow for more than 30 seconds but less than 270 seconds (4.5 minutes) behind
 * Red for more than 270 seconds (4.5 minutes) behind
 
-### Topology Tab[​](https://docs.circonus.com/irondb/administration/operations#topology-tab) <a href="#topology-tab" id="topology-tab"></a>
+### Topology Tab
 
 Displays the layout of the topology ring, and the percentage of the key space for which each node is primarily responsible (coverage.) The ideal distribution is `1/N`, but since the system uses consistent hashing to map metric names to nodes, the layout will be slightly imperfect.
 
@@ -178,19 +178,19 @@ An individual stream may be located by entering its UUID and Metric Name in the 
 
 <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-### Extensions Tab[​](https://docs.circonus.com/irondb/administration/operations#extensions-tab) <a href="#extensions-tab" id="extensions-tab"></a>
+### Extensions Tab
 
 Displays a list of the loaded Lua extensions that provide many of the features of IRONdb.
 
-### Internals Tab[​](https://docs.circonus.com/irondb/administration/operations#internals-tab) <a href="#internals-tab" id="internals-tab"></a>
+### Internals Tab
 
 Shows internal application information, which is useful for troubleshooting performance problems. This information is divided into panels by the type of information contained within. These panels are described below.
 
-**Logs**[**​**](https://docs.circonus.com/irondb/administration/operations#logs-1)
+#### Logs
 
 The Logs panel of the Internals tab shows recent entries from the [errorlog](../getting-started/configuration.md#logs). When the Internals tab is first displayed, the Logs panel is expanded by default.
 
-**Job Queues**[**​**](https://docs.circonus.com/irondb/administration/operations#job-queues)
+#### Job Queues
 
 The Job Queues panel lists libmtev [eventer job queues](https://circonus-labs.github.io/libmtev/development/eventer.html#asynchronous-events) (aka "jobqs"), which are groups of one or more threads dedicated to a particular task, such as writing to the database, or performing data replication. These tasks may potentially block for "long" periods of time and so must be handled asynchronously to avoid stalling the application's event loop.
 
@@ -216,7 +216,7 @@ Each row in the panel represents a job queue, with the following columns:
   * The average time that jobs spent running in the queue, in milliseconds, since the last refresh (5 seconds).
   * The instantaneous count of jobs currently running in the queue.
 
-**Sockets**[**​**](https://docs.circonus.com/irondb/administration/operations#sockets)
+#### Sockets
 
 The Sockets panel displays information on active sockets. These include both internal file descriptors for the [libmtev eventer system](https://circonus-labs.github.io/libmtev/development/eventer.html), as well as network connections for REST API listeners and clients.
 
@@ -234,7 +234,7 @@ Network sockets:
 
 <figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
-**Timers**[**​**](https://docs.circonus.com/irondb/administration/operations#timers)
+#### Timers
 
 The Timers panel displays information on [timed events](https://circonus-labs.github.io/libmtev/development/eventer.html#timed-events). IRONdb does not make extensive use of timed events so this panel is often empty.
 
@@ -243,7 +243,7 @@ Each row in the panel lists a timed event, with the following columns:
 * Callback: the libmtev function that will be called when the appointed time arrives.
 * When: the time that the callback should fire.
 
-**Stats**[**​**](https://docs.circonus.com/irondb/administration/operations#stats)
+#### Stats
 
 The Stats panel displays all statistics application statistics that have been registered into the system. These are collected and maintained by the [libcircmetrics](https://github.com/circonus-labs/libcircmetrics) library. Statistics accumulate over the lifetime of the process, and are reset when the process restarts.
 
