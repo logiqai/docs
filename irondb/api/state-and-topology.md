@@ -1,12 +1,12 @@
 # State and Topology
 
-## Getting Node State[​](https://docs.circonus.com/irondb/api/state-and-topology#getting-node-state) <a href="#getting-node-state" id="getting-node-state"></a>
+## Getting Node State
 
 This API call is for viewing the system state of the current node.
 
 Data will be returned as a JSON document. The fields in this document are described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description) <a href="#description" id="description"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri)
 
@@ -317,13 +317,13 @@ curl http://127.0.0.1:8112/state
 }
 ```
 
-## Retrieving Gossip JSON Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-gossip-json-data) <a href="#retrieving-gossip-json-data" id="retrieving-gossip-json-data"></a>
+## Retrieving Gossip JSON Data
 
 This API call retrieves gossip information from a IRONdb node. Gossip data is information on how the nodes are communicating with each other and if any nodes are behind other nodes with regards to data replication.
 
 Data will be returned as an array of JSON objects. The format of these objects is described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-1) <a href="#description-1" id="description-1"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-1)
 
@@ -349,7 +349,7 @@ none
   * `<uuid>` : The UUID of the node to which the current node is being compared.
   * `<latency_seconds>` : The number of seconds that the current node is behind the specified node.
 
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-1) <a href="#examples-1" id="examples-1"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/gossip/json
@@ -414,13 +414,13 @@ curl http://127.0.0.1:8112/gossip/json
 ]
 ```
 
-## Retrieving Gossip XML Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-gossip-xml-data) <a href="#retrieving-gossip-xml-data" id="retrieving-gossip-xml-data"></a>
+## Retrieving Gossip XML Data
 
 This API call retrieves gossip information from a Snowth node. Gossip data is information on how the nodes are communicating with each other and if any nodes are behind other nodes with regards to data replication.
 
 Data will be returned an XML object. The format of this object is described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-2) <a href="#description-2" id="description-2"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-2)
 
@@ -447,7 +447,7 @@ GET
           * `id` : The UUID of the node to which the current node is being compared.
           * `diff` : The number of seconds that the current node is behind the specified node.
 
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-2) <a href="#examples-2" id="examples-2"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/gossip/xml
@@ -508,11 +508,11 @@ curl http://127.0.0.1:8112/gossip/xml
 </nodes>       
 ```
 
-## Loading a New Topology[​](https://docs.circonus.com/irondb/api/state-and-topology#loading-a-new-topology) <a href="#loading-a-new-topology" id="loading-a-new-topology"></a>
+## Loading a New Topology
 
 This API call will load a new topology onto an IRONdb node. It will not activate the topology; it will simply store and load it.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-3) <a href="#description-3" id="description-3"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-3)
 
@@ -539,7 +539,7 @@ POST
       * `apiport` : The port on which the API is listening for the node.
       * `weight` : A value representing the relative preference weight of this node for metric ownership, compared to its peers.
 
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-3) <a href="#examples-3" id="examples-3"></a>
+### Examples
 
 The following example uses a file, `data.xml`, containing the XML document below and posts it to an IRONdb node.
 
@@ -581,7 +581,7 @@ In this example:
 </nodes>
 ```
 
-## Activating A New Topology[​](https://docs.circonus.com/irondb/api/state-and-topology#activating-a-new-topology) <a href="#activating-a-new-topology" id="activating-a-new-topology"></a>
+## Activating A New Topology
 
 Switches a node to a new topology.
 
@@ -589,7 +589,7 @@ Switches a node to a new topology.
 >
 > THIS IS A DANGEROUS CALL. DO NOT USE IT UNLESS YOU ARE SURE YOU KNOW WHAT YOU ARE DOING.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-4) <a href="#description-4" id="description-4"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-4)
 
@@ -603,7 +603,7 @@ GET
 
 * `hash` : The hash of the new topology after the transition.
 
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-4) <a href="#examples-4" id="examples-4"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/activate/0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
@@ -614,13 +614,13 @@ In this example:
 * `activate` : This is the command to activate a new topology.
 * `0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef` : The new topology's hash
 
-## Retrieving Topology JSON Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-topology-json-data) <a href="#retrieving-topology-json-data" id="retrieving-topology-json-data"></a>
+## Retrieving Topology JSON Data
 
 This API call retrieves data for a given topology in JSON format.
 
 Data will be returned as an array of JSON objects. The format of these objects is described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-5) <a href="#description-5" id="description-5"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-5)
 
@@ -643,7 +643,7 @@ GET
 * `weight` : A value representing how heavily the data to be stored on this node is weighted.
 * `n` : The number of nodes on this ring on which data is stored.
 
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-5) <a href="#examples-5" id="examples-5"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/topology/json/0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
@@ -694,13 +694,13 @@ In this example:
 ]
 ```
 
-## Retrieving Topology XML Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-topology-xml-data) <a href="#retrieving-topology-xml-data" id="retrieving-topology-xml-data"></a>
+## Retrieving Topology XML Data
 
 This API call retrieves data for a given topology in XML format.
 
 Data will be returned as an XML document. The format of this document is described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-6) <a href="#description-6" id="description-6"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-6)
 
@@ -727,7 +727,7 @@ GET
     * `apiport` : The port on which the API is listening for the node.
     * `weight` : A value representing how heavily the data to be stored on this node is weighted.
 
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-6) <a href="#examples-6" id="examples-6"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/topology/xml/0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
@@ -766,13 +766,13 @@ In this example:
 </nodes>
 ```
 
-## Retrieving Toporing JSON Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-toporing-json-data) <a href="#retrieving-toporing-json-data" id="retrieving-toporing-json-data"></a>
+## Retrieving Toporing JSON Data
 
 This API call retrieves topology ring data for a given topology in JSON format.
 
 Data will be returned as an array of JSON objects. The format of these objects is given below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-7) <a href="#description-7" id="description-7"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-7)
 
@@ -792,7 +792,7 @@ GET
 * `idx` : The index of an entry in the toporing. This is a number between 1 and n, where "n" is the weight of the node.
 * `location` : The given location of the node.
 
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-7) <a href="#examples-7" id="examples-7"></a>
+### Examples
 
 This example retrieves a simplified topology for a 3-node cluster, assuming a weight of 3.
 
@@ -822,13 +822,13 @@ In this example:
 ]
 ```
 
-## Retrieving Toporing XML Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-toporing-xml-data) <a href="#retrieving-toporing-xml-data" id="retrieving-toporing-xml-data"></a>
+## Retrieving Toporing XML Data
 
 This API call retrieves toporing data for a given topology in XML format.
 
 Data will be returned as a XML object. The format of this object is given below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-8) <a href="#description-8" id="description-8"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-8)
 
@@ -853,7 +853,7 @@ GET
       * `idx` : The index of an entry in the toporing. This is a number between 1 and n, where "n" is the weight of the node.
       * `location` : The given location of the node.
 
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-8) <a href="#examples-8" id="examples-8"></a>
+### Examples
 
 This example retrieves a simplified topology for a 3-node cluster, assuming a weight of 3.
 
@@ -901,13 +901,13 @@ In this example:
 </nodes>
 ```
 
-## Retrieving Data Location in JSON Format[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-data-location-in-json-format) <a href="#retrieving-data-location-in-json-format" id="retrieving-data-location-in-json-format"></a>
+## Retrieving Data Location in JSON Format
 
 This API call retrieves a list of all of the nodes on which a metric resides.
 
 Data will be returned as a JSON object. The format of this object is described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-9) <a href="#description-9" id="description-9"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-9)
 
@@ -933,7 +933,7 @@ GET
   * `weight` : A value representing the relative preference weight of this node for metric ownership, compared to its peers.
   * `n` : The number of nodes in the topology on which data is stored.
 
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-9) <a href="#examples-9" id="examples-9"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/locate/json/6f6bdc73-2352-4bdc-ab0e-72f66d0dee12/example
@@ -972,13 +972,13 @@ In this example:
 }
 ```
 
-## Retrieving Data Location in XML Format[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-data-location-in-xml-format) <a href="#retrieving-data-location-in-xml-format" id="retrieving-data-location-in-xml-format"></a>
+## Retrieving Data Location in XML Format
 
 This API call retrieves a list of all of the nodes on which a metric resides.
 
 Data will be returned as an XML document. The format of this document is described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-10) <a href="#description-10" id="description-10"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-10)
 
@@ -1006,7 +1006,7 @@ GET
     * `apiport` : The port on which the API is listening for the node.
     * `weight` : A value representing the relative preference weight of this node for metric ownership, compared to its peers.
 
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-10) <a href="#examples-10" id="examples-10"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/locate/xml/6f6bdc73-2352-4bdc-ab0e-72f66d0dee12/example

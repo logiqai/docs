@@ -1,12 +1,12 @@
 # Data Submission
 
-## Writing Raw Data[​](https://docs.circonus.com/irondb/api/data-submission#writing-raw-data) <a href="#writing-raw-data" id="writing-raw-data"></a>
+## Writing Raw Data
 
 In contrast to the other submission APIs ([numeric](data-submission.md#writing-numeric-data), [text](data-submission.md#writing-text-data), [histogram](data-submission.md#writing-histogram-data)), which accept specifically-typed data, the raw API accepts direct input of measurement data at arbitrary frequencies. It stores every measurement as it was received, for a configurable amount of time, before aging it out to a rollup format.
 
 Metric records are in one of several formats, and are accepted as either tab-separated values or as FlatBuffer messages.
 
-### Metric Record Formats[​](https://docs.circonus.com/irondb/api/data-submission#metric-record-formats) <a href="#metric-record-formats" id="metric-record-formats"></a>
+### Metric Record Formats
 
 Raw metric records may be submitted in one of several formats, depending on the type of metric data contained within.
 
@@ -104,13 +104,13 @@ When submitting FlatBuffer-encoded metrics, a client must set the HTTP header
 HTTP header `X-Snowth-Datapoints` to the number of data points within the raw
 submission.
 
-## Writing Text Data[​](https://docs.circonus.com/irondb/api/data-submission#writing-text-data) <a href="#writing-text-data" id="writing-text-data"></a>
+## Writing Text Data
 
 _This is legacy endpoint. It is recommended to use the_ [_Raw Data_](data-submission.md#writing-raw-data) _submission endpoint to submit text data._
 
 This API call is for writing text data into the IRONdb cluster. It sends a JSON object containing the data to be added to the cluster.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-submission#description) <a href="#description" id="description"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-submission#uri)
 
@@ -127,7 +127,7 @@ PUT | POST
 * `offset` : The timestamp, represented in time since the epoch, for which data added.
 * `value` : The text string to add to the IRONdb cluster.
 
-### Examples[​](https://docs.circonus.com/irondb/api/data-submission#examples) <a href="#examples" id="examples"></a>
+### Examples
 
 The following example uses a file, data.json, containing the JSON object below and posts it to an IRONdb node.
 
@@ -158,13 +158,13 @@ The JSON object below will add data to the IRONdb cluster for two text metrics, 
 ]
 ```
 
-## Writing Histogram Data[​](https://docs.circonus.com/irondb/api/data-submission#writing-histogram-data) <a href="#writing-histogram-data" id="writing-histogram-data"></a>
+## Writing Histogram Data
 
 _This is legacy endpoint. It is recommended to use the_ [_Raw Data_](data-submission.md#writing-raw-data) _submission endpoint to submit histogram data._
 
 This API call is for writing histogram data into the IRONdb cluster. The data will be sent as a JSON object containing the data to be added to the cluster.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-submission#description-1) <a href="#description-1" id="description-1"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-submission#uri-1)
 
@@ -182,7 +182,7 @@ PUT | POST
 * `period` : The period for which to add the histogram data. Typically, this will be the smallest histogram period configured on the IRONdb cluster.
 * `histogram` : A base64-encoded compressed representation of the histogram data for this time period.
 
-### Examples[​](https://docs.circonus.com/irondb/api/data-submission#examples-1) <a href="#examples-1" id="examples-1"></a>
+### Examples
 
 The following example uses a file, `data.json`, containing the JSON object below and posts it to an IRONdb node.
 
@@ -215,7 +215,7 @@ The example JSON object below will add data to the IRONdb cluster for two histog
 ]
 ```
 
-## Writing Numeric Data[​](https://docs.circonus.com/irondb/api/data-submission#writing-numeric-data) <a href="#writing-numeric-data" id="writing-numeric-data"></a>
+## Writing Numeric Data
 
 _This is legacy endpoint. It is recommended to use the_ [_Raw Data_](data-submission.md#writing-raw-data) _submission endpoint to submit numeric data._
 
@@ -223,7 +223,7 @@ This API call is for writing NNT (numeric) data into the IRONdb cluster. It will
 
 Data should be added for the smallest rollup that exists on the IRONdb node. For example, if the smallest rollup on the cluster is 300 seconds (five minutes), five minute data should be added.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-submission#description-2) <a href="#description-2" id="description-2"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-submission#uri-2)
 
@@ -247,7 +247,7 @@ PUT | POST
 * `counter_stddev` : The standard deviation of the counter value for the metric over the specified time period.
 * `parts` : An optional array that contains the raw values that were used to calculate the values used above. The data is in the form of a tuple: the period (in seconds) that makes up the partial data, and an array of JSON objects that contains all of the fields above, except for "offset", "metric", and "id". The period value should be the values that are used to make up the smallest rollup. For example, if the smallest rollup is 300 seconds (five minutes) and that data was formed using 60 second (one minute) data, the "parts" data should have a period of 60, followed by five JSON objects describing the data at each interval.
 
-### Examples[​](https://docs.circonus.com/irondb/api/data-submission#examples-2) <a href="#examples-2" id="examples-2"></a>
+### Examples
 
 The following example uses a file, data.json, containing the JSON object below and posts it to an IRONdb node.
 

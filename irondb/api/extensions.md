@@ -1,12 +1,12 @@
 # Extensions
 
-## Getting the List of Lua Extensions[​](https://docs.circonus.com/irondb/api/extensions#getting-the-list-of-lua-extensions) <a href="#getting-the-list-of-lua-extensions" id="getting-the-list-of-lua-extensions"></a>
+## Getting the List of Lua Extensions
 
 This API call returns a list of all currently available Lua extensions on the node.
 
 Data will be returned as a JSON object. The fields in this document are described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/extensions#description) <a href="#description" id="description"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/extensions#uri)
 
@@ -29,7 +29,7 @@ none
       * `type` : The type of the parameter.
   * `description` : A text description of the Lua extension.
 
-### Examples[​](https://docs.circonus.com/irondb/api/extensions#examples) <a href="#examples" id="examples"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/extension/lua
@@ -68,13 +68,13 @@ curl http://127.0.0.1:8112/extension/lua
 }
 ```
 
-## Executing a Lua Extension[​](https://docs.circonus.com/irondb/api/extensions#executing-a-lua-extension) <a href="#executing-a-lua-extension" id="executing-a-lua-extension"></a>
+## Executing a Lua Extension
 
 This API call will execute a loaded Lua extension and return the results.
 
 Refer to Getting The List of Lua Extensions for instructions on finding the list of available extensions.
 
-### Description[​](https://docs.circonus.com/irondb/api/extensions#description-1) <a href="#description-1" id="description-1"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/extensions#uri-1)
 
@@ -92,7 +92,7 @@ GET
 
 The output will vary based on the Lua extension called.
 
-### Examples[​](https://docs.circonus.com/irondb/api/extensions#examples-1) <a href="#examples-1" id="examples-1"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/extension/lua/example_extension
@@ -110,11 +110,11 @@ In this example:
 {"got_result":"true"}
 ```
 
-## Issuing CAQL Queries[​](https://docs.circonus.com/irondb/api/extensions#issuing-caql-queries) <a href="#issuing-caql-queries" id="issuing-caql-queries"></a>
+## Issuing CAQL Queries
 
 The Circonus Analytics Query Language (CAQL) allows the user to issue complex queries against metric data residing in IRONdb. The CAQL Reference provides comprehensive documentation about functionality offered by the language.
 
-### Description[​](https://docs.circonus.com/irondb/api/extensions#description-2) <a href="#description-2" id="description-2"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/extensions#uri-2)
 
@@ -136,7 +136,7 @@ The following parameters are supported:
 * `period` : The period, in seconds, for which to get data rollups.
 * `_timeout` : Specify a timeout for CAQL processing in seconds. Optional. Default = 4.5.
 
-### nExamples[​](https://docs.circonus.com/irondb/api/extensions#examples-2) <a href="#examples-2" id="examples-2"></a>
+### nExamples
 
 ```sh
 echo '{

@@ -1,10 +1,10 @@
 # Rebalance
 
-## Activating a New Topology Rebalance[​](https://docs.circonus.com/irondb/api/rebalance#activating-a-new-topology-rebalance) <a href="#activating-a-new-topology-rebalance" id="activating-a-new-topology-rebalance"></a>
+## Activating a New Topology Rebalance
 
 This API call is for rebalancing to a new topology.
 
-### Description[​](https://docs.circonus.com/irondb/api/rebalance#description) <a href="#description" id="description"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/rebalance#uri)
 
@@ -18,7 +18,7 @@ POST
 
 * `hash` : The hash of the new topology after the rebalance.
 
-### Examples[​](https://docs.circonus.com/irondb/api/rebalance#examples) <a href="#examples" id="examples"></a>
+### Examples
 
 ```sh
 curl -X POST \
@@ -30,13 +30,13 @@ In this example:
 * `activate` : This is the command to activate a new topology rebalance.
 * `0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef` : This is the hash for the transition.
 
-## Getting Topology Rebalance State[​](https://docs.circonus.com/irondb/api/rebalance#getting-topology-rebalance-state) <a href="#getting-topology-rebalance-state" id="getting-topology-rebalance-state"></a>
+## Getting Topology Rebalance State
 
 This API call is for viewing the current topology rebalance state.
 
 Data will be returned as a JSON document. The fields in this document are described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/rebalance#description-1) <a href="#description-1" id="description-1"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/rebalance#uri-1)
 
@@ -61,7 +61,7 @@ GET
 
 During a rebalance operation, each node will proceed through the above states in order, returning to `TOPO_REBALANCE_IDLE` when finished. The topology that was listed as "next" is now "current", and "next" is now "-", meaning no next topology.
 
-### Examples[​](https://docs.circonus.com/irondb/api/rebalance#examples-1) <a href="#examples-1" id="examples-1"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/rebalance/state
@@ -77,11 +77,11 @@ curl http://127.0.0.1:8112/rebalance/state
 }
 ```
 
-## Abort the Current in Progress Topology Rebalance[​](https://docs.circonus.com/irondb/api/rebalance#abort-the-current-in-progress-topology-rebalance) <a href="#abort-the-current-in-progress-topology-rebalance" id="abort-the-current-in-progress-topology-rebalance"></a>
+## Abort the Current in Progress Topology Rebalance
 
 This API call is for aborting the current rebalancing to a new topology.
 
-### 4Description[​](https://docs.circonus.com/irondb/api/rebalance#description-2) <a href="#description-2" id="description-2"></a>
+### 4Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/rebalance#uri-2)
 
@@ -95,7 +95,7 @@ POST
 
 * `hash` : The hash of the new topology after the rebalance.
 
-### Examples[​](https://docs.circonus.com/irondb/api/rebalance#examples-2) <a href="#examples-2" id="examples-2"></a>
+### Examples
 
 ```sh
 curl -X POST \

@@ -1,6 +1,6 @@
 # Data Deletion
 
-## Deleting Raw Data for a Metric or a Set of Metrics[​](https://docs.circonus.com/irondb/api/data-deletion#deleting-raw-data-for-a-metric-or-a-set-of-metrics) <a href="#deleting-raw-data-for-a-metric-or-a-set-of-metrics" id="deleting-raw-data-for-a-metric-or-a-set-of-metrics"></a>
+## Deleting Raw Data for a Metric or a Set of Metrics
 
 This API call is for deleting raw data from an IRONdb node for a specific metric or for a set of metrics (when wildcards or a tag query are specified). It will remove raw data which has not been rolled up from the beginning of time up until the end time provided by the user for that metric(s).
 
@@ -12,7 +12,7 @@ When used with wildcards or a tag query, this call always returns a JSON object 
 
 Deletion is currently only supported on a single node per API call. To delete data from the entire cluster, issue the same API call to each node.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-deletion#description) <a href="#description" id="description"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-deletion#uri)
 
@@ -50,7 +50,7 @@ Used only with wildcards or tag query:
   * `integer` A positive integer specifying the number of matching results to delete. If the header is unset, or set to -1 or "none", the service will not limit the result set.
 * `x-snowth-confirm-delete: <0 or 1>` (optional, must be present and set to 1 to actually confirm and process the deletion)
 
-### Single Metric Example[​](https://docs.circonus.com/irondb/api/data-deletion#single-metric-example) <a href="#single-metric-example" id="single-metric-example"></a>
+### Single Metric Example
 
 ```
 curl -X DELETE \
@@ -71,7 +71,7 @@ In this example:
 []
 ```
 
-### Wildcard Metric Example[​](https://docs.circonus.com/irondb/api/data-deletion#wildcard-metric-example) <a href="#wildcard-metric-example" id="wildcard-metric-example"></a>
+### Wildcard Metric Example
 
 ```
 curl -X DELETE \
@@ -99,7 +99,7 @@ In this example:
 ]
 ```
 
-## Deleting Text Data for a Metric or a Set of Metrics[​](https://docs.circonus.com/irondb/api/data-deletion#deleting-text-data-for-a-metric-or-a-set-of-metrics) <a href="#deleting-text-data-for-a-metric-or-a-set-of-metrics" id="deleting-text-data-for-a-metric-or-a-set-of-metrics"></a>
+## Deleting Text Data for a Metric or a Set of Metrics
 
 This API call is for deleting text data from the IRONdb cluster for a specific metric or for a set of metrics (when wildcards or a tag query are specified). It will remove text data from the beginning of time up until the end time provided by the user for that metric(s).
 
@@ -111,7 +111,7 @@ When used with wildcards or a tag query, this call always returns a JSON object 
 
 Deletion of a single metric can optionally be journaled and replicated to all nodes using the `X-Snowth-Full-Delete` setting given for the headers below. However, wildcard or tag query deletion is currently only supported on a single node per API call. To use wildcards or a tag query to remove data across the cluster, issue the same API call to each node.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-deletion#description-1) <a href="#description-1" id="description-1"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-deletion#uri-1)
 
@@ -154,7 +154,7 @@ Used only without wildcards or tag query:
 * `x-snowth-full-delete: <value>` (optional)
   * `value` Determines whether the delete operation is local to the receiving node (0) or journaled to all other nodes as well (1). The default, if not specified, is 0 (local-only delete). This setting means perform the delete across all nodes, and is not to be confused with the [full delete API](data-deletion.md).
 
-### Single Metric Example[​](https://docs.circonus.com/irondb/api/data-deletion#single-metric-example-1) <a href="#single-metric-example-1" id="single-metric-example-1"></a>
+### Single Metric Example
 
 ```
 curl -X DELETE \
@@ -175,7 +175,7 @@ In this example:
 []
 ```
 
-### Wildcard Metric Example[​](https://docs.circonus.com/irondb/api/data-deletion#wildcard-metric-example-1) <a href="#wildcard-metric-example-1" id="wildcard-metric-example-1"></a>
+### Wildcard Metric Example
 
 ```
 curl -X DELETE \
@@ -203,7 +203,7 @@ In this example:
 ]
 ```
 
-## Deleting Text Data for a Check[​](https://docs.circonus.com/irondb/api/data-deletion#deleting-text-data-for-a-check) <a href="#deleting-text-data-for-a-check" id="deleting-text-data-for-a-check"></a>
+## Deleting Text Data for a Check
 
 This API call is for deleting text data from the IRONdb cluster for an entire check. It will remove data from the beginning of time up until the time provided by the user for every text metric that is part of the given check UUID.
 
@@ -213,7 +213,7 @@ This call always returns a JSON object which describes the matching metrics and 
 
 Deletion is currently only supported on a single node per API call. To delete data from the entire cluster, issue the same API call to each node.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-deletion#description-2) <a href="#description-2" id="description-2"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-deletion#uri-2)
 
@@ -235,7 +235,7 @@ DELETE
   * `account_id` The account to be searched using the wildcard pattern
 * `x-snowth-confirm-delete: <0 or 1>` (optional, must be present and set to 1 to actually confirm and process the deletion)
 
-### Examples[​](https://docs.circonus.com/irondb/api/data-deletion#examples) <a href="#examples" id="examples"></a>
+### Examples
 
 ```
 curl -X DELETE \
@@ -260,7 +260,7 @@ In this example:
 ]
 ```
 
-## Deleting Histogram Data for a Metric or a Set of Metrics[​](https://docs.circonus.com/irondb/api/data-deletion#deleting-histogram-data-for-a-metric-or-a-set-of-metrics) <a href="#deleting-histogram-data-for-a-metric-or-a-set-of-metrics" id="deleting-histogram-data-for-a-metric-or-a-set-of-metrics"></a>
+## Deleting Histogram Data for a Metric or a Set of Metrics
 
 This API call is for deleting histogram rollup data from an IRONdb node for a specific metric or for a set of metrics (when wildcards or a tag query are specified). It will remove histogram data from the beginning of time up until the end time provided by the user for that metric(s).
 
@@ -274,7 +274,7 @@ When used with wildcards or a tag query, this call always returns a JSON object 
 
 Deletion of a single metric can optionally be journaled and replicated to all nodes using the `X-Snowth-Full-Delete` setting given for the headers below. However, wildcard or tag query deletion is currently only supported on a single node per API call. To use wildcards or a tag query to remove data across the cluster, issue the same API call to each node.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-deletion#description-3) <a href="#description-3" id="description-3"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-deletion#uri-3)
 
@@ -319,7 +319,7 @@ Used only without wildcards or tag query:
 * `x-snowth-full-delete: <value>` (optional)
   * `value` Determines whether the delete operation is local to the receiving node (0) or journaled to all other nodes as well (1). The default, if not specified, is 0 (local-only delete). This setting means perform the delete across all nodes, and is not to be confused with the [full delete API](data-deletion.md).
 
-### Single Metric Example[​](https://docs.circonus.com/irondb/api/data-deletion#single-metric-example-2) <a href="#single-metric-example-2" id="single-metric-example-2"></a>
+### Single Metric Example
 
 ```
 curl -X DELETE \
@@ -340,7 +340,7 @@ In this example:
 []
 ```
 
-### Wildcard Metric Example[​](https://docs.circonus.com/irondb/api/data-deletion#wildcard-metric-example-2) <a href="#wildcard-metric-example-2" id="wildcard-metric-example-2"></a>
+### Wildcard Metric Example
 
 ```
 curl -X DELETE \
@@ -368,7 +368,7 @@ In this example:
 ]
 ```
 
-## Deleting Histogram Data for a Check[​](https://docs.circonus.com/irondb/api/data-deletion#deleting-histogram-data-for-a-check) <a href="#deleting-histogram-data-for-a-check" id="deleting-histogram-data-for-a-check"></a>
+## Deleting Histogram Data for a Check
 
 This API call is for deleting histogram rollup data from the IRONdb cluster for an entire check. It will remove histogram data from the beginning of time up until the time provided by the user for every histogram metric that is part of the given check UUID.
 
@@ -380,7 +380,7 @@ This call always returns a JSON object which describes the matching metrics and 
 
 Deletion is currently only supported on a single node per API call. To delete data from the entire cluster, issue the same API call to each node.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-deletion#description-4) <a href="#description-4" id="description-4"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-deletion#uri-4)
 
@@ -404,7 +404,7 @@ DELETE
   * `rollups` The rollups that should be included in the deletion operation, separated by commas
 * `x-snowth-confirm-delete: <0 or 1>` (optional, must be present and set to 1 to actually confirm and process the deletion)
 
-### Examples[​](https://docs.circonus.com/irondb/api/data-deletion#examples-1) <a href="#examples-1" id="examples-1"></a>
+### Examples
 
 ```
 curl -X DELETE \
@@ -429,7 +429,7 @@ In this example:
 ]
 ```
 
-## Deleting All Data for a Metric or a Set of Metrics[​](https://docs.circonus.com/irondb/api/data-deletion#deleting-all-data-for-a-metric-or-a-set-of-metrics) <a href="#deleting-all-data-for-a-metric-or-a-set-of-metrics" id="deleting-all-data-for-a-metric-or-a-set-of-metrics"></a>
+## Deleting All Data for a Metric or a Set of Metrics
 
 This API call is for deleting all of the data from an IRONdb node for a specific metric or for a set of metrics (when a tag query is specified). It will remove data for the matching metric(s) throughout all timestamps and all rollups that have been provided by the user, no matter what the data type. In addition, it will remove all record of the metric name(s) with their tags and metadata. This call is intended for removing misnamed/experimental metrics or old metrics which are obsolete and can be safely removed.
 
@@ -441,7 +441,7 @@ When used with wildcards or a tag query, this call always returns a JSON object 
 
 Deletion is currently only supported on a single node per API call. To delete data from the entire cluster, issue the same API call to each node.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-deletion#description-5) <a href="#description-5" id="description-5"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-deletion#uri-5)
 
@@ -471,7 +471,7 @@ Used with all deletes:
   * `integer` A positive integer specifying the number of matching results to delete. If the header is unset, the default of 100,000 will be used.
 * `x-snowth-confirm-delete: <0 or 1>` (optional, must be present and set to 1 to actually confirm and process the deletion)
 
-### Single Metric Example[​](https://docs.circonus.com/irondb/api/data-deletion#single-metric-example-3) <a href="#single-metric-example-3" id="single-metric-example-3"></a>
+### Single Metric Example
 
 ```
 curl -X DELETE \
@@ -493,7 +493,7 @@ In this example:
 { "status": "succeeded" }
 ```
 
-### Query Example[​](https://docs.circonus.com/irondb/api/data-deletion#query-example) <a href="#query-example" id="query-example"></a>
+### Query Example
 
 ```
 curl -X DELETE \
@@ -521,7 +521,7 @@ In this example:
 ]
 ```
 
-## Wildcard, Tag Query and Check Delete Result Statuses[​](https://docs.circonus.com/irondb/api/data-deletion#wildcard-tag-query-and-check-delete-result-statuses) <a href="#wildcard-tag-query-and-check-delete-result-statuses" id="wildcard-tag-query-and-check-delete-result-statuses"></a>
+## Wildcard, Tag Query and Check Delete Result Statuses
 
 When doing a delete which could affect multiple metrics, the returned JSON response will indicate the final status for each metric which matched the request. A list of these statuses and a description is given below. Note that, in many cases, the "payload' field will contain further details.
 

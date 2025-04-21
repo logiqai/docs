@@ -1,10 +1,10 @@
 # Data Retrieval
 
-## Searching Tag Data[​](https://docs.circonus.com/irondb/api/data-retrieval#searching-tag-data) <a href="#searching-tag-data" id="searching-tag-data"></a>
+## Searching Tag Data
 
 Find metrics using boolean tag search. Output is a JSON array of objects.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-retrieval#description) <a href="#description" id="description"></a>
+### Description
 
 **URIs**[**​**](https://docs.circonus.com/irondb/api/data-retrieval#uris)
 
@@ -32,7 +32,7 @@ GET
 * `count_only` : (optional, default 0) Only return the total count, not individual metrics. Will also return an "estimate" boolean. This will be true if a node is down making a true count impossible.
 * 'X-Snowth-Verify-Owner\` : (optional, normally default false, during a cluster rebalance default true) This HTTP Header can be set to "true" on a request forcing validation of a node's locality of data. This extra validation step is expensive and should not be used typically outside of debugging.
 
-### Output[​](https://docs.circonus.com/irondb/api/data-retrieval#output) <a href="#output" id="output"></a>
+### Output
 
 **`/find/174/tags?query=and(__name:foo)`**[**​**](https://docs.circonus.com/irondb/api/data-retrieval#find174tagsqueryand__namefoo)
 
@@ -87,11 +87,11 @@ Return the values of the incoming query.
 ]
 ```
 
-## Retrieving and Transforming Data[​](https://docs.circonus.com/irondb/api/data-retrieval#retrieving-and-transforming-data) <a href="#retrieving-and-transforming-data" id="retrieving-and-transforming-data"></a>
+## Retrieving and Transforming Data
 
 The /fetch API provides fast, one-request access to common complex data extraction requirements. It allows for fetch submissions in both FlatBuffers and JSON formats, and returns DF4 output format available in both FlatBuffers and JSON encoding.
 
-### Description of API[​](https://docs.circonus.com/irondb/api/data-retrieval#description-of-api) <a href="#description-of-api" id="description-of-api"></a>
+### Description of API
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-retrieval#uri)
 
@@ -233,19 +233,19 @@ A reduce definition form:
 
     Allowable `mech` values are `mean` (default), `max`, or `quantile`. The `quantile` `mech` value requires a `mech_param` in the range \[0,1]. All measurements in the input stream are accumulated and a mean or quantile is calculated. This calculated value is used as a rank for the stream and the K largest ranks are selected and passed to the output set.
 
-## Retrieving Graphite Data[​](https://docs.circonus.com/irondb/api/data-retrieval#retrieving-graphite-data) <a href="#retrieving-graphite-data" id="retrieving-graphite-data"></a>
+## Retrieving Graphite Data
 
 Fetches Graphite-style data. This is similar to the [rollup](data-retrieval.md) endpoint but the data returned is always **average** data and this endpoint will scale the `rollup_span` to match the time range of data requested.
 
 See [graphite rendering](../integrations/graphite.md#get).
 
-## Retrieving Raw Data[​](https://docs.circonus.com/irondb/api/data-retrieval#retrieving-raw-data) <a href="#retrieving-raw-data" id="retrieving-raw-data"></a>
+## Retrieving Raw Data
 
 _This is legacy endpoint. It is recommended to use the_ [_Fetch_](data-retrieval.md) _endpoint for all data reads._
 
 Fetches raw (full resolution) numeric data from the [raw database](../getting-started/configuration.md#raw_database). Data is returned as an array of tuples of `[timestamp in milliseconds, value]`
 
-### Description[​](https://docs.circonus.com/irondb/api/data-retrieval#description-1) <a href="#description-1" id="description-1"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-retrieval#uri-1)
 
@@ -268,7 +268,7 @@ The format is `<seconds since epoch>.<milliseconds>`. In terms of printf, it is 
 
 For example, 12345.6 does **not** mean 12345 seconds and 600 milliseconds; it is an illegal format. The `<milliseconds>` portion of the timestamp must always be 3 digits to represent values from 000 to 999.
 
-### Examples[​](https://docs.circonus.com/irondb/api/data-retrieval#examples) <a href="#examples" id="examples"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/raw/fc85e0ab-f568-45e6-86ee-d7443be8277d/online?start_ts=1529509020.000&end_ts=1529509200.000
@@ -290,7 +290,7 @@ In this example:
 
 Note that the returned timestamps are **milliseconds** since unix epoch and represent the timestamp on each incoming data row.
 
-## Retrieving Rollup Data[​](https://docs.circonus.com/irondb/api/data-retrieval#retrieving-rollup-data) <a href="#retrieving-rollup-data" id="retrieving-rollup-data"></a>
+## Retrieving Rollup Data
 
 _This is legacy endpoint. It is recommended to use the_ [_Fetch_](data-retrieval.md) _endpoint for all data reads._
 
@@ -298,7 +298,7 @@ This API call is for retrieving numeric data from the IRONdb cluster with fine g
 
 Data will be returned in an array of tuples. Each tuple will contain a timestamp and the value that was requested. If "all" data is requested, the value returned is a hash with the name of each value and the value itself.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-retrieval#description-2) <a href="#description-2" id="description-2"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-retrieval#uri-2)
 
@@ -345,7 +345,7 @@ The format is `<seconds since epoch>.<milliseconds>`. In terms of printf, it is 
 
 For example, 12345.6 does **not** mean 12345 seconds and 600 milliseconds; it is an illegal format. The `<milliseconds>` portion of the timestamp must always be 3 digits to represent values from 000 to 999.
 
-### Examples[​](https://docs.circonus.com/irondb/api/data-retrieval#examples-1) <a href="#examples-1" id="examples-1"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/rollup/fc85e0ab-f568-45e6-86ee-d7443be8277d/online?start_ts=1529509020.000&end_ts=1529509200.000&rollup_span=60000ms&type=all&get_engine=recalc
@@ -419,7 +419,7 @@ In this example:
 
 Timestamps in the returned data will take on the `<seconds>.<milliseconds>` format if the rollup span requires that resolution.
 
-## Retrieving Text Data[​](https://docs.circonus.com/irondb/api/data-retrieval#retrieving-text-data) <a href="#retrieving-text-data" id="retrieving-text-data"></a>
+## Retrieving Text Data
 
 _This is legacy endpoint. It is recommended to use the_ [_Fetch_](data-retrieval.md) _endpoint for all data reads._
 
@@ -427,7 +427,7 @@ This API call is for retrieving text data from the Snowth cluster. It will retur
 
 Data will be returned in an array of tuples. Each tuple will contain a timestamp that indicates when the text value was received (given in milliseconds since the epoch), as well as the text value itself. The database contains all text samples submitted, but the stream is returned, by default, as a front-edge-triggered list. In otherwords, if the same value is submitted multiple times sequentially, the result set fetched will have only the first occurrence or the "front-edge" of the signal.
 
-### Description[​](https://docs.circonus.com/irondb/api/data-retrieval#description-3) <a href="#description-3" id="description-3"></a>
+### Description
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-retrieval#uri-3)
 
@@ -449,7 +449,7 @@ GET
 * `get_specific_range=<true|false>` will ensure all timestamps are within the start/end boundary and return every sample (not compressing duplicates to their starting edge. The default is `false`.
 * `lead=<true|false>` will include the point before `start` if there is no point exactly at `start` and such a point exists. The default is `true`.
 
-### Examples[​](https://docs.circonus.com/irondb/api/data-retrieval#examples-2) <a href="#examples-2" id="examples-2"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/read/1380000000/1380000600/6f6bdc73-2352-4bdc-ab0e-72f66d0dee12/text_example
@@ -469,7 +469,7 @@ In this example:
 [[1380000000555,"test_value"],[1380000300123,"test_value_2"]]
 ```
 
-## Retrieving Histogram Data[​](https://docs.circonus.com/irondb/api/data-retrieval#retrieving-histogram-data) <a href="#retrieving-histogram-data" id="retrieving-histogram-data"></a>
+## Retrieving Histogram Data
 
 _This is legacy endpoint. It is recommended to use the_ [_Fetch_](data-retrieval.md) _endpoint for all data reads._
 
@@ -477,7 +477,7 @@ This API call is for retrieving histogram data from the IRONdb cluster. It will 
 
 Data will be returned in an array of arrays. Each sub-array will contain three elements: a timestamp, the period requested, and a JSON object representing the number of times that different values appeared in that time period.
 
-### Description of Arrays[​](https://docs.circonus.com/irondb/api/data-retrieval#description-of-arrays) <a href="#description-of-arrays" id="description-of-arrays"></a>
+### Description of Arrays
 
 **URI**[**​**](https://docs.circonus.com/irondb/api/data-retrieval#uri-4)
 
@@ -495,7 +495,7 @@ GET
 * `uuid` : The UUID of the check to which the metric belongs.
 * `metric` : The name of the metric for which to pull data.
 
-### Examples[​](https://docs.circonus.com/irondb/api/data-retrieval#examples-3) <a href="#examples-3" id="examples-3"></a>
+### Examples
 
 ```sh
 curl http://127.0.0.1:8112/histogram/1380000000/1380000600/300/6f6bdc73-2352-4bdc-ab0e-72f66d0dee12/hist_example
