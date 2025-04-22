@@ -1,6 +1,6 @@
 # Release Notes
 
-## Changes in 1.4.0[​](https://docs.circonus.com/irondb/release-notes#changes-in-140) <a href="#changes-in-140" id="changes-in-140"></a>
+## Changes in 1.4.0
 
 2024-11-05
 
@@ -27,7 +27,7 @@
 * The `/merge/nntbs` endpoint will no longer crash on detecting corrupt shards; it will offline the shards and return errors.
 * Various small fixes to reduce memory consumption, improve performance, and prevent possible crashes or memory corruption.
 
-## Changes in 1.3.0[​](https://docs.circonus.com/irondb/release-notes#changes-in-130) <a href="#changes-in-130" id="changes-in-130"></a>
+## Changes in 1.3.0
 
 2024-07-17
 
@@ -37,7 +37,7 @@
 * Add new API endpoint, `/full/canonical/<check uuid>/<canonical metric name>` that will allow deleting an exact metric from the system without using tag search.
 * Add ability to skip data after a given time when using the `copy` sieve in `snowth_lmdb_tool`.
 
-## Changes in 1.2.1[​](https://docs.circonus.com/irondb/release-notes#changes-in-121) <a href="#changes-in-121" id="changes-in-121"></a>
+## Changes in 1.2.1
 
 2024-06-04
 
@@ -53,7 +53,7 @@
 * Fix NNTBS rollup fetch bug where we could return no value when there was valid data to return.
 * Fix bug where histogram rollup shards were sometimes not being deleted even though they were past the retention window.
 
-## Changes in 1.2.0[​](https://docs.circonus.com/irondb/release-notes#changes-in-120) <a href="#changes-in-120" id="changes-in-120"></a>
+## Changes in 1.2.0
 
 2024-03-27
 
@@ -70,7 +70,7 @@
 * Fix issue where jlog journal data could get corrupted.
 * [libmtev 2.7.1](https://github.com/circonus-labs/libmtev/blob/master/ChangeLog.md#271)
 
-## Changes in 1.1.0[​](https://docs.circonus.com/irondb/release-notes#changes-in-110) <a href="#changes-in-110" id="changes-in-110"></a>
+## Changes in 1.1.0
 
 2024-01-02
 
@@ -101,7 +101,7 @@
 * Added the ability to repair a local database by reconstituting a single metric stream.
 * Fix bug where `/fetch` would not proxy if the data for a time period was all in the raw database, but the relevant raw shards were offline.
 
-## Changes in 1.0.1[​](https://docs.circonus.com/irondb/release-notes#changes-in-101) <a href="#changes-in-101" id="changes-in-101"></a>
+## Changes in 1.0.1
 
 2023-09-06
 
@@ -116,7 +116,7 @@
 * Upgrade RocksDB from version 6.20.3 to version 7.9.2.
 * [libmtev 2.5.3](https://github.com/circonus-labs/libmtev/blob/master/ChangeLog.md#253)
 
-## Changes in 1.0.0[​](https://docs.circonus.com/irondb/release-notes#changes-in-100) <a href="#changes-in-100" id="changes-in-100"></a>
+## Changes in 1.0.0
 
 2023-07-28
 
@@ -140,6 +140,6 @@
 * Add back-pressure to raw puts, allows the database to shed load by returning HTTP 503.
 * [libmtev 2.5.2](https://github.com/circonus-labs/libmtev/blob/master/ChangeLog.md#252)
 
-## Older Releases[​](https://docs.circonus.com/irondb/release-notes#older-releases) <a href="#older-releases" id="older-releases"></a>
+## Older Releases
 
 For older release notes, see [Archived Release Notes](archived-release-notes.md).

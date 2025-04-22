@@ -14,7 +14,7 @@ A helper tool exists to simplify the procedure, and its use is illustrated below
 
 The helper tool utilizes the IRONdb [REST API](../api/) which, by default, listens on TCP port 8112. See the [Rebalancing APIs reference](../api/api-specs.md) for details. The helper tool is not necessary in order to perform a resize; the same operation may be performed using the APIs directly.
 
-## Caveats[​](https://docs.circonus.com/irondb/administration/resizing-clusters#caveats) <a href="#caveats" id="caveats"></a>
+## Caveats
 
 Rebalance cannot be used to transform a cluster with no sides into a sided cluster, or vice versa. Such a change requires [migrating to a new cluster](migrating-to-a-new-cluster.md).
 
@@ -32,7 +32,7 @@ This will make the overall operation take longer to complete, but should avoid o
 
 This value will only take effect at the start of a rebalance operation, and will be ignored if changed while a rebalance is ongoing. To abandon a rebalance operation, see the last item of either [Adding Nodes](resizing-clusters.md#adding-nodes) or [Removing Nodes](resizing-clusters.md#removing-nodes) below.
 
-## Adding Nodes[​](https://docs.circonus.com/irondb/administration/resizing-clusters#adding-nodes) <a href="#adding-nodes" id="adding-nodes"></a>
+## Adding Nodes
 
 An existing IRONdb cluster has two nodes with write factor of 2. A new node is prepared by running the [installation](../getting-started/installation.md) which creates a standalone node with its own topology. We want to combine these three nodes together to create a three-node cluster, maintaining 2 write copies.
 
@@ -56,7 +56,7 @@ We will use the cluster resizing tool, `/opt/circonus/bin/resize_cluster`. Run t
 
     on every node, including on any new nodes that were added. Then start the service again.
 
-## Removing Nodes[​](https://docs.circonus.com/irondb/administration/resizing-clusters#removing-nodes) <a href="#removing-nodes" id="removing-nodes"></a>
+## Removing Nodes
 
 Shrinking a cluster is basically the same as adding, above:
 

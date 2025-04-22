@@ -12,11 +12,11 @@ Default values are those that are present in the default configuration produced 
 
 Time periods are specified as second-resolution [libmtev time durations](https://circonus-labs.github.io/libmtev/config/time_durations.html).
 
-## irondb.conf[​](https://docs.circonus.com/irondb/getting-started/configuration#irondbconf) <a href="#irondbconf" id="irondbconf"></a>
+## irondb.conf
 
 This is the primary configuration file that IRONdb reads at start. It includes additional configuration files which are discussed later.
 
-### snowth[​](https://docs.circonus.com/irondb/getting-started/configuration#snowth) <a href="#snowth" id="snowth"></a>
+### snowth
 
 ```
 <snowth lockfile="/irondb/logs/snowth.lock" text_size_limit="512">
@@ -38,7 +38,7 @@ Default: 512
 
 > Text-type metrics are supported in IRONdb but Graphite currently has no way to render these when using a Storage Finder plugin.
 
-### cache[​](https://docs.circonus.com/irondb/getting-started/configuration#cache) <a href="#cache" id="cache"></a>
+### cache
 
 ```
 <cache cpubuckets="128" size="0"/>
@@ -52,7 +52,7 @@ The cache is divided up into the specified number of "buckets" to facilitate con
 
 Default: 128
 
-### logs[​](https://docs.circonus.com/irondb/getting-started/configuration#logs) <a href="#logs" id="logs"></a>
+### logs
 
 Libmtev logging configuration. See the [libmtev logging documentation](http://circonus-labs.github.io/libmtev/config/logging.html).
 
@@ -84,7 +84,7 @@ The threshold for what is considered "old" is controlled by `metric_age_threshol
 <old_data_logging metric_age_threshold="7d"/>
 ```
 
-### listeners[​](https://docs.circonus.com/irondb/getting-started/configuration#listeners) <a href="#listeners" id="listeners"></a>
+### listeners
 
 Libmtev network listener configuration. See the [libmtev listener documentation](http://circonus-labs.github.io/libmtev/config/listeners.html).
 
@@ -225,7 +225,7 @@ The CLI listener uses the built-in libmtev type "mtev\_console" to allow access 
 
 Default: mtev\_console
 
-### pools[​](https://docs.circonus.com/irondb/getting-started/configuration#pools) <a href="#pools" id="pools"></a>
+### pools
 
 > NOTE: As of version 0.20.0, resource configuration from this stanza is deprecated. Fresh installations will no longer contain this stanza.
 >
@@ -323,7 +323,7 @@ The number of threads used for actually fetching Graphite metrics, including tho
 
 Default: 10
 
-### REST Configuration[​](https://docs.circonus.com/irondb/getting-started/configuration#rest-configuration) <a href="#rest-configuration" id="rest-configuration"></a>
+### REST Configuration
 
 This is the node under which REST API configuration items are organized.
 
@@ -348,7 +348,7 @@ This is the node used to configure `DELETE` endpoint behavior.
 
 `max_advisory_limit="<val>"` attribute is used to configure how many deletes may be attempted by this operation where `<val>` may not be exceeded via `X-Snowth-Advisory-Limit`. Currently, this only affects the `/full/tags` endpoint.
 
-### raw\_database[​](https://docs.circonus.com/irondb/getting-started/configuration#raw_database) <a href="#raw_database" id="raw_database"></a>
+### raw\_database
 
 ```
 <raw_database location="/irondb/raw_db/{node}"
@@ -477,7 +477,7 @@ Default: `and(__rollup:false)`
 
 > Introduced in IRONdb version 0.19.2
 
-### nntbs[​](https://docs.circonus.com/irondb/getting-started/configuration#nntbs) <a href="#nntbs" id="nntbs"></a>
+### nntbs
 
 ```
 <nntbs path="/irondb/nntbs/{node}">
@@ -500,7 +500,7 @@ The `retention` setting for each shard determines how long to keep this data on 
 
 Whatever settings are chosen here cannot be changed after the database starts writing data into NNTBS (except for `retention`). If you change your mind about sizing you will have to wipe and reconstitute each node in order to apply new settings.
 
-### histogram\_ingest[​](https://docs.circonus.com/irondb/getting-started/configuration#histogram_ingest) <a href="#histogram_ingest" id="histogram_ingest"></a>
+### histogram\_ingest
 
 ```
 <histogram_ingest location="/irondb/hist_ingest/{node}"
@@ -549,7 +549,7 @@ Allow the submission of metrics timestamped up to this amount of time in the fut
 
 Default: 1 week
 
-### histogram[​](https://docs.circonus.com/irondb/getting-started/configuration#histogram) <a href="#histogram" id="histogram"></a>
+### histogram
 
 ```
 <histogram location="/irondb/hist_rollup/{node}">
@@ -585,7 +585,7 @@ When a rollup timeshard is completely past the `retention` limit based on the cu
 
 > Introduced in IRONdb version 0.23.7
 
-### surrogate\_database[​](https://docs.circonus.com/irondb/getting-started/configuration#surrogate_database) <a href="#surrogate_database" id="surrogate_database"></a>
+### surrogate\_database
 
 **IMPORTANT NOTE: Any node running 0.23.7 or earlier MUST do a surrogate3 migration PRIOR to upgrading to 1.0.0. This is due to removal of support for the previous surrogate database format. See the "db\_type" section below for details.**
 
@@ -621,7 +621,7 @@ This value can be from 0s (ignore any future timestamps) to 4h (maximum).
 
 Default: 4h
 
-### metric\_name\_database[​](https://docs.circonus.com/irondb/getting-started/configuration#metric_name_database) <a href="#metric_name_database" id="metric_name_database"></a>
+### metric\_name\_database
 
 This database stanza controls where IRONdb keeps certain aspects of its indexes.
 
@@ -671,7 +671,7 @@ Enables saving of invalid jlog messages found when attempting to replay the `jlo
 
 Default: "false"
 
-### journal[​](https://docs.circonus.com/irondb/getting-started/configuration#journal) <a href="#journal" id="journal"></a>
+### journal
 
 ```
 <journal concurrency="4"
@@ -736,7 +736,7 @@ Note that this will spawn one extra thread per journal (there is one journal for
 
 Default: false
 
-### topology[​](https://docs.circonus.com/irondb/getting-started/configuration#topology) <a href="#topology" id="topology"></a>
+### topology
 
 ```
 <topology path="/opt/circonus/etc/irondb-topo"
@@ -750,11 +750,11 @@ The topology node instructs IRONdb where to find its current cluster configurati
 
 No manual configuration of these settings is necessary.
 
-## Module Config[​](https://docs.circonus.com/irondb/getting-started/configuration#module-config) <a href="#module-config" id="module-config"></a>
+## Module Config
 
 The [integration modules](../integrations/) that provide support for ingesting Graphite and/or OpenTSDB data have optional configuration, described below. These settings are placed in the main `irondb.conf` file, as children of the `<snowth>` node (i.e., peers of `<logs>`, `<topology>`, etc.) If omitted, the defaults shown below will be used.
 
-### Graphite Config[​](https://docs.circonus.com/irondb/getting-started/configuration#graphite-config) <a href="#graphite-config" id="graphite-config"></a>
+### Graphite Config
 
 ```
 <graphite min_rollup_span_ms="60000" max_ingest_age="365d">
@@ -806,7 +806,7 @@ The `account_id` attribute is required, and [namespaces](../integrations/graphit
 
 The `end_epoch_time` is optional and represents the last timestamp for which there is whisper data. The timestamp is provided as an epoch timestamp, in seconds. If a fetch has a start time after the provided time, the node will not look in the whisper file in order to be more efficient. If this field is not provided, the whisper files will be checked regardless of the start time of the fetch.
 
-### OpenTSDB Config[​](https://docs.circonus.com/irondb/getting-started/configuration#opentsdb-config) <a href="#opentsdb-config" id="opentsdb-config"></a>
+### OpenTSDB Config
 
 ```
 <opentsdb max_ingest_age="365d"/>
@@ -818,7 +818,7 @@ The maximum offset into the past from "now" that will be accepted. Value may be 
 
 Default: 1 year
 
-## TLS Configuration[​](https://docs.circonus.com/irondb/getting-started/configuration#tls-configuration) <a href="#tls-configuration" id="tls-configuration"></a>
+## TLS Configuration
 
 As of version 1.1.0, IRONdb supports TLS for both client and intra-cluster communications. **This is currently an alpha feature, for testing only.**
 
@@ -839,7 +839,7 @@ work properly with TLS. Place them in `/opt/circonus/etc/ssl`:
 * **client.crt** - A certificate issued for the external client listener. Its commonName (CN) should match the hostname used to connect to the node, typically its FQDN.
 * **client-ca.crt** - The Certificate Authority's public certificate, sometimes referred to as an intermediate or chain cert, that issued `client.crt`.
 
-### Converting To TLS[​](https://docs.circonus.com/irondb/getting-started/configuration#converting-to-tls) <a href="#converting-to-tls" id="converting-to-tls"></a>
+### Converting To TLS
 
 To update an existing cluster to use TLS, several things need to change.
 
@@ -957,9 +957,9 @@ Replace the above listener configs with this, ensuring that it is within the ope
 
 Generate and/or obtain the above key and certificate files, ensuring they are placed in the correct location as set in the listener `sslconfig` configuration.
 
-## Included Files[​](https://docs.circonus.com/irondb/getting-started/configuration#included-files) <a href="#included-files" id="included-files"></a>
+## Included Files
 
-### circonus-watchdog.conf[​](https://docs.circonus.com/irondb/getting-started/configuration#circonus-watchdogconf) <a href="#circonus-watchdogconf" id="circonus-watchdogconf"></a>
+### circonus-watchdog.conf
 
 **watchdog**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#watchdog)
 
@@ -971,7 +971,7 @@ The watchdog configuration specifies a handler, known as a "glider", that is to 
 
 If [crash handling](../administration/operations.md#crash-handling) is turned on, the `glider` is what invokes the tracing, producing one or more files in the `tracedir`. Otherwise, it just reports the error and exits.
 
-### irondb-eventer.conf[​](https://docs.circonus.com/irondb/getting-started/configuration#irondb-eventerconf) <a href="#irondb-eventerconf" id="irondb-eventerconf"></a>
+### irondb-eventer.conf
 
 The eventer configuration contains [libmtev eventer configuration](https://circonus-labs.github.io/libmtev/config/eventer.html).
 
@@ -1009,31 +1009,31 @@ Place a line in the site configuration file with one or more different values, p
 
 The above would increase the desired concurrency from 4 to 8, keeping the minimum of 1 and maximum of 24.
 
-### irondb-eventer-site.conf[​](https://docs.circonus.com/irondb/getting-started/configuration#irondb-eventer-siteconf) <a href="#irondb-eventer-siteconf" id="irondb-eventer-siteconf"></a>
+### irondb-eventer-site.conf
 
 See the comment at the top of the file for how to override eventer settings. This file is included from `irondb-eventer.conf`.
 
 This file's contents will be preserved across package updates.
 
-### irondb-modules.conf[​](https://docs.circonus.com/irondb/getting-started/configuration#irondb-modulesconf) <a href="#irondb-modulesconf" id="irondb-modulesconf"></a>
+### irondb-modules.conf
 
 Contains options for vendor-supplied [libmtev dynamically-loadable modules](https://circonus-labs.github.io/libmtev/config/modules.html).
 
 Settings in this file should not be changed.
 
-### irondb-modules-site.conf[​](https://docs.circonus.com/irondb/getting-started/configuration#irondb-modules-siteconf) <a href="#irondb-modules-siteconf" id="irondb-modules-siteconf"></a>
+### irondb-modules-site.conf
 
 See the comment at the top of the file for how to configure optional modules. This file is included from `irondb-modules.conf`.
 
 This file's contents will be preserved across package updates.
 
-### irondb-extensions-site.conf[​](https://docs.circonus.com/irondb/getting-started/configuration#irondb-extensions-siteconf) <a href="#irondb-extensions-siteconf" id="irondb-extensions-siteconf"></a>
+### irondb-extensions-site.conf
 
 See the comment at the top of the file for how to add or override extension configuration. This file is included from `irondb-modules.conf`.
 
 This file's contents will be preserved across package updates.
 
-### licenses.conf[​](https://docs.circonus.com/irondb/getting-started/configuration#licensesconf) <a href="#licensesconf" id="licensesconf"></a>
+### licenses.conf
 
 This file holds any and all licenses that apply to this IRONdb node. Refer to the [installation steps](installation.md#add-license) for details on obtaining and installing licenses.
 

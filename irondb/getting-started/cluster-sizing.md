@@ -2,7 +2,7 @@
 
 This is intended as a general guide to determining how many nodes and how much storage space per node you require for your workload. Please [contact Apica](mailto:support@apica.io) if you have questions arising from your specific needs.
 
-## Key Terminology[​](https://docs.circonus.com/irondb/getting-started/cluster-sizing#key-terminology) <a href="#key-terminology" id="key-terminology"></a>
+## Key Terminology
 
 * `T` is the number of unique metric streams.
 * `N` is the number of nodes participating in the cluster.
@@ -13,7 +13,7 @@ The value of `W` determines the number of nodes that can be unavailable before m
 
 Metric streams are distributed approximately evenly across the nodes in the cluster. In other words, each node is responsible for storing approximately `(T*W)/N` metric streams. For example, a cluster of 4 nodes with 100K streams and `W=2` would store about 50K streams per node.
 
-## Rules of Thumb[​](https://docs.circonus.com/irondb/getting-started/cluster-sizing#rules-of-thumb) <a href="#rules-of-thumb" id="rules-of-thumb"></a>
+## Rules of Thumb
 
 * Nodes should be operated at no more than 70% capacity.
 * Favor ZFS striped mirrors over other pool layouts. This provides the highest performance in IOPS.
@@ -22,7 +22,7 @@ Metric streams are distributed approximately evenly across the nodes in the clus
 * `W` should be >= 3 when `N` >= 6
 * `W` should be >= 4 when `N` >= 100
 
-## Storage Space[​](https://docs.circonus.com/irondb/getting-started/cluster-sizing#storage-space) <a href="#storage-space" id="storage-space"></a>
+## Storage Space
 
 The system stores three types of data: text, numeric (statistical aggregates), and histograms. Additionally there are two tiers of data storage: near-term and long-term. Near-term storage is called the [raw database](configuration.md#raw_database) and stores at full resolution (however frequently measurements were collected.) Long-term resolution is determined by the [rollup configuration](configuration.md#cache).
 
@@ -40,7 +40,7 @@ The following modeling is based on an observed distribution of all data types, i
 
 All sizing above represents uncompressed data.
 
-### Sizing Example[​](https://docs.circonus.com/irondb/getting-started/cluster-sizing#sizing-example) <a href="#sizing-example" id="sizing-example"></a>
+### Sizing Example
 
 Suppose we want to store 100,000 metric streams at 1-minute resolution for 5 years. We'd like to build a 4-node cluster with a `W` value of 2.
 
@@ -62,7 +62,7 @@ T * 483,840 (bytes/4 weeks raw/stream) / (1024^3) = 45 GiB
 2417 GiB * 2 = 4834 GiB of raw attached storage in ZFS mirrors per node
 ```
 
-## Hardware Choices[​](https://docs.circonus.com/irondb/getting-started/cluster-sizing#hardware-choices) <a href="#hardware-choices" id="hardware-choices"></a>
+## Hardware Choices
 
 Apica recommends server-class hardware for all production deployments. This includes, but is not limited to, features like ECC memory and hot-swappable hard drives.
 
@@ -73,7 +73,7 @@ In addition to the overall storage space requirements above, consideration must 
 
 ZFS's [ARC](http://open-zfs.org/wiki/Performance_tuning#Adaptive_Replacement_Cache) helps by absorbing some portion of the read load, so the more RAM available to the system, the better.
 
-### Hardware Profiles[​](https://docs.circonus.com/irondb/getting-started/cluster-sizing#hardware-profiles) <a href="#hardware-profiles" id="hardware-profiles"></a>
+### Hardware Profiles
 
 The following are sample profiles to guide you in selecting the right combination of hardware and cluster topology for your needs.
 

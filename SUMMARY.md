@@ -655,7 +655,6 @@
     * [Data Deletion](irondb/api/data-deletion.md)
     * [Data Retrieval](irondb/api/data-retrieval.md)
     * [Data Submission](irondb/api/data-submission.md)
-    * [Extensions](irondb/api/extensions.md)
     * [Rebalance](irondb/api/rebalance.md)
     * [State and Topology](irondb/api/state-and-topology.md)
   * [Integrations](irondb/integrations/README.md)

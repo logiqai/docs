@@ -1,71 +1,58 @@
 # State and Topology
 
-## Getting Node State[​](https://docs.circonus.com/irondb/api/state-and-topology#getting-node-state) <a href="#getting-node-state" id="getting-node-state"></a>
+API description: See "Internal Observability" in the [Administration API](https://apidocs.apica.io/irondb/admin/index.html)
+
+## Getting Node State
 
 This API call is for viewing the system state of the current node.
 
 Data will be returned as a JSON document. The fields in this document are described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description) <a href="#description" id="description"></a>
-
-**URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri)
-
-`/state`
-
-**Method**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#method)
-
-GET
-
-**Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#output)
+### State Output
 
 * `identity` : The UUID that identifies this node.
 * `current` : The current topology in which this node resides.
-* `next` : The next topology for this node.
+* `next` : The next topology for this node. A value of "-" indicates there is no next topology.
 * `base_rollup` : The smallest period that is used for rolling up numeric data.
 * `rollups` : An array containing a list of all data periods stored on this node.
-* `nnt` : A container with information about NNT (Numeric) data storage.
-  * `rollups` : An array containing a list of all NNT (numeric) data periods stored on this node.
+* `nntbs` : An object with information about numeric data storage.
+  * `rollups` : An array containing a list of all numeric data rollup periods stored on this node.
   * `rollup_<period>` : Data for each configured rollup. There will be one of these entries per rollup period.
     * `fs` : Information about file system storage for this rollup.
       * `id` : The ID for this file system.
-      * `totalMB` : Megabytes of data used for this file system.
-      * `freeMB` : Megabytes of data available for this file system.
-    * `put.calls` : The number of put calls for this numeric period.
-    * `put.elapsed_us` : The number of microseconds spent putting data for this numeric period.
-    * `get.calls` : The number of get calls for this numeric period.
-    * `get.proxy_calls` : The number of proxy get calls for this numeric period.
-    * `get.count` : The number of metrics retrieved for this numeric period.
-    * `get.elapsed_us` : The number of microseconds spent getting data for this numeric period.
-    * `extend.calls` : The number of extend calls for this numeric period. (The number of times the system needed to extend an NNT storage file from the beginning.)
-  * `aggregate` : Aggregated data from all NNT (numeric) calls. Fields are the same as for each individual rollup.
-* `nnt_cache_size` : The current size of the NNT file handle cache. When IRONdb opens an NNT file for reading or writing, it will maintain an open file descriptor for it and store it in an LRU cache.
-* `text` : A container with information about text data storage.
+      * `totalMb` : Megabytes of data used for this file system.
+      * `freeMb` : Megabytes of data available for this file system.
+  * `aggregate` : Call counts for all NNTBS data.
+    * `get.calls` : The number of GET calls (reads)
+    * `put.calls` : The number of PUT calls (writes)
+* `text` : An object with information about text data storage.
   * `fs` : Information about file system storage for text data.
     * `id` : The ID for this file system.
-    * `totalMB` : Megabytes of data used for this file system.
-    * `freeMB` : Megabytes of data available for this file system.
-  * `get` : A container with information about text get calls.
-    * `proxy_calls` : The number of text get proxy calls.
-    * `err` : The number of text get errors.
-    * `calls` : The number of text get calls.
-    * `tuples` : The number of text get tuples.
+    * `totalMb` : Megabytes of data used for this file system.
+    * `freeMb` : Megabytes of data available for this file system.
+  * `get` : An object with information about text GET calls.
+    * `proxy_calls` : The number of text GET proxy calls.
+    * `err` : The number of text GET errors.
+    * `calls` : The number of text GET calls.
+    * `tuples` : The number of text GET tuples.
     * `elapsed_us` : The number of microseconds spent getting text data.
-  * `put` : A container with information about text put calls.
-    * `err` : The number of text put errors.
-    * `calls` : The number of text put calls.
-    * `tuples` : The number of text put tuples.
+  * `put` : An object with information about text PUT calls.
+    * `err` : The number of text PUT errors.
+    * `calls` : The number of text PUT calls.
+    * `tuples` : The number of text PUT tuples.
     * `elapsed_us` : The number of microseconds spent putting text data.
-* `histogram` : A container with information about histogram data storage.
+* `histogram` : An object with information about histogram data storage.
+  * `latest_rollup_timestamp` : A Unix epoch timestamp, with milliseconds, representing the most recent point within raw histogram data that has been rolled up.
   * `rollups` : An array containing a list of all histogram data periods stored on this node.
   * `rollup_<period>` : This describes data for each particular rollup. There will be one of these entries per rollup period.
     * `fs` : Information about file system storage for this rollup.
       * `id` : The ID for this file system.
       * `totalMB` : Megabytes of data used for this file system.
       * `freeMB` : Megabytes of data available for this file system.
-    * `put.calls` : The number of put calls for this histogram period.
+    * `put.calls` : The number of PUT calls for this histogram period.
     * `put.elapsed_us` : The number of microseconds spent putting data for this histogram period.
-    * `get.calls` : The number of get calls for this histogram period.
-    * `get.proxy_calls` : The number of proxy get calls for this histogram period.
+    * `get.calls` : The number of GET calls for this histogram period.
+    * `get.proxy_calls` : The number of proxy GET calls for this histogram period.
     * `get.count` : The number of metrics retrieved for this histogram period.
     * `get.elapsed_us` : The number of microseconds spent getting data for this histogram period.
   * `aggregate` : The aggregated data from all histogram calls. The fields displayed are the same as those listed for each individual rollup.
@@ -85,352 +72,51 @@ GET
 * `rusage.nivcsw` : Resource Usage: Involuntary context switches
 * `max_peer_lag` : The maximum amount, in seconds, by which the data on this node is behind any of the other IRONdb nodes.
 * `avg_peer_lag` : The average amount, in seconds, by which the data on this node is behind any of the other IRONdb nodes.
-* `features` : The features that are enabled on this node.
+* `indexes` : An object with information about search indexes.
+  * `jlog_replay_errors` : The number of errors encountered while replaying outstanding index mutations from an on-disk queue.
+* `features` : The licensed features that are enabled on this node.
+  * `tags:check` : Appears if check-level tags are enabled on this node.
   * `text:store` : Appears if text data storage is enabled on this node.
   * `histogram:store` : Appears if histogram data storage is enabled on this node.
-  * `nnt:second_order` : Appears if second order derivatives for numeric data is enabled on this node.
   * `histogram:dynamic_rollups` : Appears if dynamic histogram rollups are enabled on this node.
   * `nnt:store` : Appears if numeric data storage is enabled on this node.
+  * `nnt:second_order` : Appears if second order derivatives for numeric data is enabled on this node.
   * `features` : Appears if feature flagging is enabled on this node.
 * `version` : The version of the IRONdb software running on this node.
 * `application` : The name of this application.
 
-```sh
-curl http://127.0.0.1:8112/state
-```
-
-**Example 1 Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#example-1-output)
-
-```json
-{
-  "identity": "5b5ea6c5-bd98-4293-91ee-ecbdf9bfb0cc",
-  "current": "0123456789012345678901234567890123456789012345678901234567890abcd",
-  "next": "-",
-  "base_rollup": 300,
-  "rollups": [
-    300,
-    1800,
-    10800,
-    86400
-  ],
-  "nnt": {
-    "rollups": [
-      300,
-      1800,
-      10800,
-      86400
-    ],
-    "rollup_300": {
-      "fs": {
-        "id": 12345678,
-        "totalMb": 198981.20459,
-        "availMb": 182572.629395
-      },
-      "put.calls": 0,
-      "put.elapsed_us": 0,
-      "get.calls": 0,
-      "get.proxy_calls": 0,
-      "get.count": 0,
-      "get.elapsed_us": 0,
-      "extend.calls": 0
-    },
-    "rollup_1800": {
-      "fs": {
-        "id": 12345678,
-        "totalMb": 198981.20459,
-        "availMb": 182572.629395
-      },
-      "put.calls": 0,
-      "put.elapsed_us": 0,
-      "get.calls": 252,
-      "get.proxy_calls": 0,
-      "get.count": 88140,
-      "get.elapsed_us": 8342,
-      "extend.calls": 0
-    },
-    "rollup_10800": {
-      "fs": {
-        "id": 12345678,
-        "totalMb": 198981.20459,
-        "availMb": 182572.629395
-      },
-      "put.calls": 0,
-      "put.elapsed_us": 0,
-      "get.calls": 0,
-      "get.proxy_calls": 0,
-      "get.count": 0,
-      "get.elapsed_us": 0,
-      "extend.calls": 0
-    },
-    "rollup_86400": {
-      "fs": {
-        "id": 12345678,
-        "totalMb": 198981.20459,
-        "availMb": 182572.629395
-      },
-      "put.calls": 0,
-      "put.elapsed_us": 0,
-      "get.calls": 0,
-      "get.proxy_calls": 0,
-      "get.count": 0,
-      "get.elapsed_us": 0,
-      "extend.calls": 0
-    },
-    "aggregate": {
-      "put.calls": 0,
-      "put.elapsed_us": 0,
-      "get.calls": 255,
-      "get.proxy_calls": 0,
-      "get.count": 118653,
-      "get.elapsed_us": 8829,
-      "extend.calls": 0
-    }
-  },
-  "nnt_cache_size": 76,
-  "text": {
-    "fs": {
-      "id": 12345678,
-      "totalMb": 182607.098633,
-      "availMb": 182572.629395
-    },
-    "get": {
-      "proxy_calls": 0,
-      "err": 0,
-      "calls": 9,
-      "tuples": 9,
-      "elapsed_us": 45997
-    },
-    "put": {
-      "err": 0,
-      "calls": 0,
-      "tuples": 0,
-      "elapsed_us": 0
-    }
-  },
-  "histogram": {
-    "rollups": [
-      60,
-      300,
-      1800,
-      10800,
-      86400
-    ],
-    "rollup_60": {
-      "fs": {
-        "id": 12345678,
-        "totalMb": 186335.980957,
-        "availMb": 182572.629395
-      },
-      "put.calls": 0,
-      "put.elapsed_us": 0,
-      "get.proxy_calls": 0,
-      "get.calls": 0,
-      "get.count": 0,
-      "get.elapsed_us": 0
-    },
-    "rollup_300": {
-      "fs": {
-        "id": 12345678,
-        "totalMb": 186335.980957,
-        "availMb": 182572.629395
-      },
-      "put.calls": 0,
-      "put.elapsed_us": 0,
-      "get.proxy_calls": 0,
-      "get.calls": 0,
-      "get.count": 0,
-      "get.elapsed_us": 0
-    },
-    "rollup_1800": {
-      "fs": {
-        "id": 12345678,
-        "totalMb": 186335.980957,
-        "availMb": 182572.629395
-      },
-      "put.calls": 0,
-      "put.elapsed_us": 0,
-      "get.proxy_calls": 0,
-      "get.calls": 29,
-      "get.count": 8787,
-      "get.elapsed_us": 173635
-    },
-    "rollup_10800": {
-      "fs": {
-        "id": 12345678,
-        "totalMb": 186335.980957,
-        "availMb": 182572.629395
-      },
-      "put.calls": 0,
-      "put.elapsed_us": 0,
-      "get.proxy_calls": 0,
-      "get.calls": 1,
-      "get.count": 1,
-      "get.elapsed_us": 13427
-    },
-    "rollup_86400": {
-      "fs": {
-        "id": 12345678,
-        "totalMb": 186335.980957,
-        "availMb": 182572.629395
-      },
-      "put.calls": 0,
-      "put.elapsed_us": 0,
-      "get.proxy_calls": 0,
-      "get.calls": 0,
-      "get.count": 0,
-      "get.elapsed_us": 0
-    },
-    "aggregate": {
-      "put.calls": 0,
-      "put.elapsed_us": 0,
-      "get.proxy_calls": 0,
-      "get.calls": 30,
-      "get.count": 8788,
-      "get.elapsed_us": 187062
-    }
-  },
-  "rusage.utime": 9.716393,
-  "rusage.stime": 6.044374,
-  "rusage.maxrss": 0,
-  "rusage.idrss": 0,
-  "rusage.minflt": 0,
-  "rusage.majflt": 0,
-  "rusage.nswap": 0,
-  "rusage.inblock": 0,
-  "rusage.oublock": 0,
-  "rusage.msgsnd": 23754,
-  "rusage.msgrcv": 22521,
-  "rusage.nsignals": 0,
-  "rusage.nvcsw": 330493,
-  "rusage.nivcsw": 2614,
-  "max_peer_lag": 0,
-  "features": {
-    "text:store": "1",
-    "histogram:store": "1",
-    "nnt:second_order": "1",
-    "histogram:dynamic_rollups": "1",
-    "nnt:store": "1",
-    "features": "1"
-  },
-  "version": "v307e4ccc03e73edee27f86da8d4faecd3220a93c/e63e3b5158b8508cef6a932df33279be43d1362c",
-  "application": "snowth"
-}
-```
-
-## Retrieving Gossip JSON Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-gossip-json-data) <a href="#retrieving-gossip-json-data" id="retrieving-gossip-json-data"></a>
+## Retrieving Gossip JSON Data
 
 This API call retrieves gossip information from a IRONdb node. Gossip data is information on how the nodes are communicating with each other and if any nodes are behind other nodes with regards to data replication.
 
 Data will be returned as an array of JSON objects. The format of these objects is described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-1) <a href="#description-1" id="description-1"></a>
+API description: See "Internal Observability" in the [Administration API](https://apidocs.apica.io/irondb/admin/index.html)
 
-**URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-1)
+### Gossip JSON Output
 
-`/gossip/json`
-
-**Method**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#method-1)
-
-GET
-
-**Inputs**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#inputs)
-
-none
-
-**Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#output-1)
+Each object in the array has the following form:
 
 * `id` : The UUID of the node whose gossip information follows.
 * `gossip_time` : The last time, in seconds, that this node received a gossip message.
 * `gossip_age` : The difference, in seconds, between the last time this node received a gossip message and the current time.
 * `topo_current` : The topology that is currently in use.
-* `topo_next` : The "next" topology to use.
-* `topo_state` : The state of the current topology.
-* `latency` : A JSON object that contains information on how far this node is lagging behind the other nodes. The entries will include the following:
+* `topo_next` : The "next" topology to use. A value of "-" indicates there is no next topology.
+* `topo_state` : The state of the current topology. This will indicate the current rebalance state, or `n/a` if no rebalance is in progress.
+* `latency` : An object that contains information on how far this node is lagging behind the other nodes. The entries will include the following:
   * `<uuid>` : The UUID of the node to which the current node is being compared.
   * `<latency_seconds>` : The number of seconds that the current node is behind the specified node.
 
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-1) <a href="#examples-1" id="examples-1"></a>
 
-```sh
-curl http://127.0.0.1:8112/gossip/json
-```
-
-**Example 1 Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#example-1-output-1)
-
-```json
-[
-  {
-    "id":"1f846f26-0cfd-4df5-b4f1-e0930604e577",
-    "gossip_time":"1409082055.744880",
-    "gossip_age":"0.000000",
-    "topo_current":"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
-    "topo_next":"-",
-    "topo_state":"n/a",
-    "latency": {
-      "765ac4cc-1929-4642-9ef1-d194d08f9538":"0",
-      "8c2fc7b8-c569-402d-a393-db433fb267aa":"0",
-      "07fa2237-5744-4c28-a622-a99cfc1ac87e":"0"
-    }
-  },
-  {
-    "id":"765ac4cc-1929-4642-9ef1-d194d08f9538",
-    "gossip_time":"1409082055.744880",
-    "gossip_age":"0.000000",
-    "topo_current":"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
-    "topo_next":"-",
-    "topo_state":"n/a",
-    "latency": {
-      "1f846f26-0cfd-4df5-b4f1-e0930604e577":"0",
-      "8c2fc7b8-c569-402d-a393-db433fb267aa":"0",
-      "07fa2237-5744-4c28-a622-a99cfc1ac87e":"0"
-     }
-  },
-  {
-    "id":"8c2fc7b8-c569-402d-a393-db433fb267aa",
-    "gossip_time":"1409082055.744880",
-    "gossip_age":"0.000000",
-    "topo_current":"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
-    "topo_next":"-",
-    "topo_state":"n/a",
-    "latency": {
-      "765ac4cc-1929-4642-9ef1-d194d08f9538":"0",
-      "1f846f26-0cfd-4df5-b4f1-e0930604e577":"0",
-      "07fa2237-5744-4c28-a622-a99cfc1ac87e":"0"
-     }
-  },
-  {
-    "id":"07fa2237-5744-4c28-a622-a99cfc1ac87e",
-    "gossip_time":"1409082055.744880",
-    "gossip_age":"0.000000",
-    "topo_current":"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
-    "topo_next":"-",
-    "topo_state":"n/a",
-    "latency": {
-      "765ac4cc-1929-4642-9ef1-d194d08f9538":"0",
-      "8c2fc7b8-c569-402d-a393-db433fb267aa":"0",
-      "1f846f26-0cfd-4df5-b4f1-e0930604e577":"0"
-     }
-  }
-]
-```
-
-## Retrieving Gossip XML Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-gossip-xml-data) <a href="#retrieving-gossip-xml-data" id="retrieving-gossip-xml-data"></a>
+## Retrieving Gossip XML Data
 
 This API call retrieves gossip information from a Snowth node. Gossip data is information on how the nodes are communicating with each other and if any nodes are behind other nodes with regards to data replication.
 
 Data will be returned an XML object. The format of this object is described below.
 
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-2) <a href="#description-2" id="description-2"></a>
+API description: See "Internal Observability" in the [Administration API](https://apidocs.apica.io/irondb/admin/index.html)
 
-**URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-2)
-
-`/gossip/xml`
-
-**Method**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#method-2)
-
-GET
-
-**Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#output-2)
+### Gossip XML Output
 
 * `<nodes>` : The top-level element for the topology.
   * `<node>` : The container for all the information for a single node in the cluster. There will x of these elements, where "x" is the number of nodes in the cluster.
@@ -446,592 +132,3 @@ GET
         * Attributes:
           * `id` : The UUID of the node to which the current node is being compared.
           * `diff` : The number of seconds that the current node is behind the specified node.
-
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-2) <a href="#examples-2" id="examples-2"></a>
-
-```sh
-curl http://127.0.0.1:8112/gossip/xml
-```
-
-**Example 1 Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#example-1-output-2)
-
-```xml
-<nodes>
-  <node id="1f846f26-0cfd-4df5-b4f1-e0930604e577"
-        gossip_time="1409082055.744880"
-        gossip_age="0.000000"
-        topo_current="0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-        topo_next="-"
-        topo_state="unknown">
-    <latency>
-      <node id="765ac4cc-1929-4642-9ef1-d194d08f9538" diff="0"/>
-      <node id="8c2fc7b8-c569-402d-a393-db433fb267aa" diff="0"/>
-      <node id="07fa2237-5744-4c28-a622-a99cfc1ac87e" diff="0"/>
-    </latency>
-  </node>
-  <node id="765ac4cc-1929-4642-9ef1-d194d08f9538"
-        gossip_time="1409082055.744880" 
-        gossip_age="0.000000" 
-        topo_current="0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef" 
-        topo_next="-" 
-        topo_state="unknown">
-    <latency>
-      <node id="1f846f26-0cfd-4df5-b4f1-e0930604e577" diff="0"/>
-      <node id="8c2fc7b8-c569-402d-a393-db433fb267aa" diff="0"/>
-      <node id="07fa2237-5744-4c28-a622-a99cfc1ac87e" diff="0"/>
-    </latency>
-  </node>
-  <node id="8c2fc7b8-c569-402d-a393-db433fb267aa"
-        gossip_time="1409082055.744880"
-        gossip_age="0.000000"
-        topo_current="0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-        topo_next="-"
-        topo_state="unknown">
-    <latency>
-      <node id="765ac4cc-1929-4642-9ef1-d194d08f9538" diff="0"/>
-      <node id="1f846f26-0cfd-4df5-b4f1-e0930604e577" diff="0"/>
-      <node id="07fa2237-5744-4c28-a622-a99cfc1ac87e" diff="0"/>
-    </latency>
-  </node>
-  <node id="07fa2237-5744-4c28-a622-a99cfc1ac87e"
-        gossip_time="1409082055.744880"
-        gossip_age="0.000000"
-        topo_current="0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-        topo_next="-"
-        topo_state="unknown">
-    <latency>
-      <node id="765ac4cc-1929-4642-9ef1-d194d08f9538" diff="0"/>
-      <node id="8c2fc7b8-c569-402d-a393-db433fb267aa" diff="0"/>
-      <node id="1f846f26-0cfd-4df5-b4f1-e0930604e577" diff="0"/>
-    </latency>
-  </node>
-</nodes>       
-```
-
-## Loading a New Topology[​](https://docs.circonus.com/irondb/api/state-and-topology#loading-a-new-topology) <a href="#loading-a-new-topology" id="loading-a-new-topology"></a>
-
-This API call will load a new topology onto an IRONdb node. It will not activate the topology; it will simply store and load it.
-
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-3) <a href="#description-3" id="description-3"></a>
-
-**URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-3)
-
-`/topology/<hash>`
-
-**Method**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#method-3)
-
-POST
-
-**Inputs**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#inputs-1)
-
-* `hash` : The hash for the new topology to load.
-
-**XML Format**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#xml-format)
-
-* `<nodes>` : Top-Level element for the topology.
-  * Attributes:
-    * `n`: The number of nodes on which the data will be stored.
-  * `<node>` : The container for all the information on a single node in the cluster. There will be up to x of these, where "x" is the number of nodes in the cluster.
-    * Attributes:
-      * `id` : The UUID of the node.
-      * `address` : The IP Address of the node.
-      * `port` : The port on which the node is listening.
-      * `apiport` : The port on which the API is listening for the node.
-      * `weight` : A value representing the relative preference weight of this node for metric ownership, compared to its peers.
-
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-3) <a href="#examples-3" id="examples-3"></a>
-
-The following example uses a file, `data.xml`, containing the XML document below and posts it to an IRONdb node.
-
-```sh
-curl -X POST \
-     -d @data.xml \
-     http://127.0.0.1:8112/topology/0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
-```
-
-In this example:
-
-* `topology` : The command to handle topology data.
-* `0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef` : This is the topology hash
-
-`data.xml` contents:
-
-```xml
-<nodes n="2">
-  <node id="1f846f26-0cfd-4df5-b4f1-e0930604e577"
-        address="10.8.20.1"
-        port="8112"
-        apiport="8112"
-        weight="32"/>
-  <node id="765ac4cc-1929-4642-9ef1-d194d08f9538"
-        address="10.8.20.2"
-        port="8112"
-        apiport="8112"
-        weight="32"/>
-  <node id="8c2fc7b8-c569-402d-a393-db433fb267aa"
-        address="10.8.20.3"
-        port="8112"
-        apiport="8112"
-        weight="32"/>
-  <node id="07fa2237-5744-4c28-a622-a99cfc1ac87e"
-        address="10.8.20.4"
-        port="8112"
-        apiport="8112"
-        weight="32"/>
-</nodes>
-```
-
-## Activating A New Topology[​](https://docs.circonus.com/irondb/api/state-and-topology#activating-a-new-topology) <a href="#activating-a-new-topology" id="activating-a-new-topology"></a>
-
-Switches a node to a new topology.
-
-> **Caution**
->
-> THIS IS A DANGEROUS CALL. DO NOT USE IT UNLESS YOU ARE SURE YOU KNOW WHAT YOU ARE DOING.
-
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-4) <a href="#description-4" id="description-4"></a>
-
-**URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-4)
-
-`/activate/<hash>`
-
-**Method**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#method-4)
-
-GET
-
-**Inputs**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#inputs-2)
-
-* `hash` : The hash of the new topology after the transition.
-
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-4) <a href="#examples-4" id="examples-4"></a>
-
-```sh
-curl http://127.0.0.1:8112/activate/0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
-```
-
-In this example:
-
-* `activate` : This is the command to activate a new topology.
-* `0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef` : The new topology's hash
-
-## Retrieving Topology JSON Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-topology-json-data) <a href="#retrieving-topology-json-data" id="retrieving-topology-json-data"></a>
-
-This API call retrieves data for a given topology in JSON format.
-
-Data will be returned as an array of JSON objects. The format of these objects is described below.
-
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-5) <a href="#description-5" id="description-5"></a>
-
-**URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-5)
-
-`/topology/json/<hash>`
-
-**Method**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#method-5)
-
-GET
-
-**Inputs**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#inputs-3)
-
-* `hash` : The hash of the topology for which to retrieve information.
-
-**Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#output-3)
-
-* `id` : The UUID of the node.
-* `address` : The IP Address of the node.
-* `port` : The port on which the node is listening.
-* `apiport` : The port on which the API is listening for the node.
-* `weight` : A value representing how heavily the data to be stored on this node is weighted.
-* `n` : The number of nodes on this ring on which data is stored.
-
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-5) <a href="#examples-5" id="examples-5"></a>
-
-```sh
-curl http://127.0.0.1:8112/topology/json/0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
-```
-
-In this example:
-
-* `read` : This is the command to read topology data from the server.
-* `json` : This is the command to read data in JSON format.
-* `0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef` : This is the Topology Hash.
-
-**Example 1 Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#example-1-output-3)
-
-```json
-[
-  {
-    "id": "1f846f26-0cfd-4df5-b4f1-e0930604e577",
-    "address": "10.8.20.1",
-    "port": 8112,
-    "apiport": 8112,
-    "weight": 32,
-    "n": 2
-  },
-  {
-    "id": "765ac4cc-1929-4642-9ef1-d194d08f9538",
-    "address": "10.8.20.2",
-    "port": 8112,
-    "apiport": 8112,
-    "weight": 32,
-    "n": 2
-  },
-  {
-    "id": "8c2fc7b8-c569-402d-a393-db433fb267aa",
-    "address": "10.8.20.3",
-    "port": 8112,
-    "apiport": 8112,
-    "weight": 32,
-    "n": 2
-  },
-  {
-    "id": "07fa2237-5744-4c28-a622-a99cfc1ac87e",
-    "address": "10.8.20.4",
-    "port": 8112,
-    "apiport": 8112,
-    "weight": 32,
-    "n": 2
-  }
-]
-```
-
-## Retrieving Topology XML Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-topology-xml-data) <a href="#retrieving-topology-xml-data" id="retrieving-topology-xml-data"></a>
-
-This API call retrieves data for a given topology in XML format.
-
-Data will be returned as an XML document. The format of this document is described below.
-
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-6) <a href="#description-6" id="description-6"></a>
-
-**URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-6)
-
-`/topology/xml/<hash>`
-
-**Method**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#method-6)
-
-GET
-
-**Inputs**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#inputs-4)
-
-* `hash` : The hash of the topology for which to retrieve information.
-
-**Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#output-4)
-
-* `<nodes>` : The Top-Level element for the topology.
-  * Attributes:
-    * `n` : The number of nodes on which the data will be stored.
-* `<node>` : The container for all the information on a single node in the cluster. There will be up to x of these, where "x" is the number of nodes in the cluster.
-  * Attributes:
-    * `id` : The UUID of the node.
-    * `address` : The IP Address of the node.
-    * `port` : The port on which the node is listening.
-    * `apiport` : The port on which the API is listening for the node.
-    * `weight` : A value representing how heavily the data to be stored on this node is weighted.
-
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-6) <a href="#examples-6" id="examples-6"></a>
-
-```sh
-curl http://127.0.0.1:8112/topology/xml/0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
-```
-
-In this example:
-
-* `topology` : This is the command to read topology data from the server.
-* `xml` : This is the command to read data in XML format.
-* `0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef` : This is the Topology Hash.
-
-**Example 1 Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#example-1-output-4)
-
-```xml
-<nodes n="2">
-  <node id="1f846f26-0cfd-4df5-b4f1-e0930604e577"
-        address="10.8.20.1"
-        port="8112"
-        apiport="8112"
-        weight="32"/>
-  <node id="765ac4cc-1929-4642-9ef1-d194d08f9538"
-        address="10.8.20.2"
-        port="8112"
-        apiport="8112"
-        weight="32"/>
-  <node id="8c2fc7b8-c569-402d-a393-db433fb267aa"
-        address="10.8.20.3"
-        port="8112"
-        apiport="8112"
-        weight="32"/>
-  <node id="07fa2237-5744-4c28-a622-a99cfc1ac87e"
-        address="10.8.20.4"
-        port="8112"
-        apiport="8112"
-        weight="32"/>
-</nodes>
-```
-
-## Retrieving Toporing JSON Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-toporing-json-data) <a href="#retrieving-toporing-json-data" id="retrieving-toporing-json-data"></a>
-
-This API call retrieves topology ring data for a given topology in JSON format.
-
-Data will be returned as an array of JSON objects. The format of these objects is given below.
-
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-7) <a href="#description-7" id="description-7"></a>
-
-**URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-7)
-
-`/toporing/json/<hash>`
-
-**Method**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#method-7)
-
-GET
-
-**Inputs**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#inputs-5)
-
-* `hash` : The hash of the topology to retrieve information for.
-
-**Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#output-5)
-
-* `id` : The UUID of the node.
-* `idx` : The index of an entry in the toporing. This is a number between 1 and n, where "n" is the weight of the node.
-* `location` : The given location of the node.
-
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-7) <a href="#examples-7" id="examples-7"></a>
-
-This example retrieves a simplified topology for a 3-node cluster, assuming a weight of 3.
-
-```sh
-curl http://127.0.0.1:8112/toporing/json/0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
-```
-
-In this example:
-
-* `toporing` : This is the command to read toporing data from the server.
-* `json` : This is the command to read data in JSON format.
-* `0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef` : This is the Topology Hash.
-
-**Example 1 Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#example-1-output-5)
-
-```json
-[
-   {"id":"1f846f26-0cfd-4df5-b4f1-e0930604e577","idx":1,"location":11.000000},
-   {"id":"1f846f26-0cfd-4df5-b4f1-e0930604e577","idx":2,"location":22.000000},
-   {"id":"1f846f26-0cfd-4df5-b4f1-e0930604e577","idx":3,"location":33.000000},
-   {"id":"765ac4cc-1929-4642-9ef1-d194d08f9538","idx":1,"location":44.000000},
-   {"id":"765ac4cc-1929-4642-9ef1-d194d08f9538","idx":2,"location":55.000000},
-   {"id":"765ac4cc-1929-4642-9ef1-d194d08f9538","idx":3,"location":66.000000},
-   {"id":"8c2fc7b8-c569-402d-a393-db433fb267aa","idx":1,"location":77.000000},
-   {"id":"8c2fc7b8-c569-402d-a393-db433fb267aa","idx":2,"location":88.000000},
-   {"id":"8c2fc7b8-c569-402d-a393-db433fb267aa","idx":3,"location":99.000000}
-]
-```
-
-## Retrieving Toporing XML Data[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-toporing-xml-data) <a href="#retrieving-toporing-xml-data" id="retrieving-toporing-xml-data"></a>
-
-This API call retrieves toporing data for a given topology in XML format.
-
-Data will be returned as a XML object. The format of this object is given below.
-
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-8) <a href="#description-8" id="description-8"></a>
-
-**URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-8)
-
-`/toporing/xml/<hash>`
-
-**Method**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#method-8)
-
-GET
-
-**Inputs**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#inputs-6)
-
-* `hash` : The hash of the topology for which to retrieve information.
-
-**Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#output-6)
-
-* `<vnodes>` : The Top-Level element for the topology.
-  * Attributes:
-    * `n` : The number of nodes on which the data will be stored.
-  * `<vnode>` : The container for all the information for a single virtual node in the cluster.
-    * Attributes:
-      * `id` : The UUID of the node.
-      * `idx` : The index of an entry in the toporing. This is a number between 1 and n, where "n" is the weight of the node.
-      * `location` : The given location of the node.
-
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-8) <a href="#examples-8" id="examples-8"></a>
-
-This example retrieves a simplified topology for a 3-node cluster, assuming a weight of 3.
-
-```sh
-curl http://127.0.0.1:8112/toporing/xml/0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
-```
-
-In this example:
-
-* `toporing` : This is the command to read toporing data from the server.
-* `xml` : This is the command to read data in XML format.
-* `0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef` : This is the Topology Hash.
-
-**Example 1 Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#example-1-output-6)
-
-```xml
-<vnodes n="2">
-  <vnode id="1f846f26-0cfd-4df5-b4f1-e0930604e577"
-         idx="1"
-         location="11.000000"/>
-  <vnode id="1f846f26-0cfd-4df5-b4f1-e0930604e577"
-         idx="2"
-         location="22.000000"/>
-  <vnode id="1f846f26-0cfd-4df5-b4f1-e0930604e577"
-         idx="3"
-         location="33.000000"/>
-  <vnode id="765ac4cc-1929-4642-9ef1-d194d08f9538"
-         idx="1"
-         location="44.000000"/>
-  <vnode id="765ac4cc-1929-4642-9ef1-d194d08f9538"
-         idx="2"
-         location="55.000000"/>
-  <vnode id="765ac4cc-1929-4642-9ef1-d194d08f9538"
-         idx="3"
-         location="66.000000"/>
-  <vnode id="8c2fc7b8-c569-402d-a393-db433fb267aa"
-         idx="1"
-         location="77.000000"/>
-  <vnode id="8c2fc7b8-c569-402d-a393-db433fb267aa"
-         idx="2"
-         location="88.000000"/>
-  <vnode id="8c2fc7b8-c569-402d-a393-db433fb267aa"
-         idx="3"
-         location="99.000000"/>
-</nodes>
-```
-
-## Retrieving Data Location in JSON Format[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-data-location-in-json-format) <a href="#retrieving-data-location-in-json-format" id="retrieving-data-location-in-json-format"></a>
-
-This API call retrieves a list of all of the nodes on which a metric resides.
-
-Data will be returned as a JSON object. The format of this object is described below.
-
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-9) <a href="#description-9" id="description-9"></a>
-
-**URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-9)
-
-`/locate/json/<uuid>/<metric>`
-
-**Method**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#method-9)
-
-GET
-
-**Inputs**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#inputs-7)
-
-* `uuid` : The UUID of the check to which the metric belongs.
-* `metric` : The name of the metric to locate.
-
-**Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#output-7)
-
-* `key` : The key used to locate the metric. It is in the form `<UUID>-<metric>`.
-* `location` : An array of JSON objects representing the nodes on which the data resides. The format of each object in the array is as follows:
-  * `id` : The UUID of the node.
-  * `address` : The IP Address of the node.
-  * `port` : The port on which the node is listening.
-  * `apiport` : The port on which the API is listening for the node.
-  * `weight` : A value representing the relative preference weight of this node for metric ownership, compared to its peers.
-  * `n` : The number of nodes in the topology on which data is stored.
-
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-9) <a href="#examples-9" id="examples-9"></a>
-
-```sh
-curl http://127.0.0.1:8112/locate/json/6f6bdc73-2352-4bdc-ab0e-72f66d0dee12/example
-```
-
-In this example:
-
-* `locate` : This is the command to locate a check/metric.
-* `json` : This is the command to read data in JSON format.
-* `6f6bdc73-2352-4bdc-ab0e-72f66d0dee12` : This is the Check UUID.
-* `example` : This is the Metric.
-
-**Example 1 Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#example-1-output-7)
-
-```json
-{
-  "key": "6f6bdc73-2352-4bdc-ab0e-72f66d0dee12-example",
-  "location": [
-    {
-      "id": "1f846f26-0cfd-4df5-b4f1-e0930604e577",
-      "address": "10.8.20.1",
-      "port": 8112,
-      "apiport": 8112,
-      "weight": 32,
-      "n": 2
-    },
-    {
-      "id": "07fa2237-5744-4c28-a622-a99cfc1ac87e",
-      "address": "10.8.20.4",
-      "port": 8112,
-      "apiport": 8112,
-      "weight": 32,
-      "n": 2
-    }
-  ]
-}
-```
-
-## Retrieving Data Location in XML Format[​](https://docs.circonus.com/irondb/api/state-and-topology#retrieving-data-location-in-xml-format) <a href="#retrieving-data-location-in-xml-format" id="retrieving-data-location-in-xml-format"></a>
-
-This API call retrieves a list of all of the nodes on which a metric resides.
-
-Data will be returned as an XML document. The format of this document is described below.
-
-### Description[​](https://docs.circonus.com/irondb/api/state-and-topology#description-10) <a href="#description-10" id="description-10"></a>
-
-**URI**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#uri-10)
-
-`/locate/xml/<uuid>/<metric>`
-
-**Method**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#method-10)
-
-GET
-
-**Inputs**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#inputs-8)
-
-* `uuid` : The UUID of the check to which the metric belongs.
-* `metric` : The name of the metric to locate.
-
-**Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#output-8)
-
-* `<nodes>` : The Top-Level XML for the topology.
-* Attributes:
-  * `n` : The number of nodes on which the data will be stored.
-* `<node>` : The container for all the information on a single node in the cluster. There will be up to x of these, where "x" is the number of nodes in the cluster.
-  * Attributes:
-    * `id` : The UUID of the node.
-    * `address` : The IP Address of the node.
-    * `port` : The port on which the node is listening.
-    * `apiport` : The port on which the API is listening for the node.
-    * `weight` : A value representing the relative preference weight of this node for metric ownership, compared to its peers.
-
-### Examples[​](https://docs.circonus.com/irondb/api/state-and-topology#examples-10) <a href="#examples-10" id="examples-10"></a>
-
-```sh
-curl http://127.0.0.1:8112/locate/xml/6f6bdc73-2352-4bdc-ab0e-72f66d0dee12/example
-```
-
-In this example:
-
-* `locate` : This is the command to locate a check/metric.
-* `xml` : This is the command to read data in XML format.
-* `6f6bdc73-2352-4bdc-ab0e-72f66d0dee12` : This is the Check UUID.
-* `example` : This is the Metric.
-
-**Example 1 Output**[**​**](https://docs.circonus.com/irondb/api/state-and-topology#example-1-output-8)
-
-```xml
-<nodes n="2">
-  <node id="1f846f26-0cfd-4df5-b4f1-e0930604e577"
-           address="10.8.20.1"
-           port="8112"
-           apiport="8112"
-           weight="32"/>
-  <node id="07fa2237-5744-4c28-a622-a99cfc1ac87e"
-           address="10.8.20.4"
-           port="8112"
-           apiport="8112"
-           weight="32"/>
-</nodes>
-```

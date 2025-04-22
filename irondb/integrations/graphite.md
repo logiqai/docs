@@ -6,7 +6,7 @@ It supports ingestion from Carbon sources like carbon-relay and carbon-c-relay. 
 
 The [IRONdb Relay](../tools/irondb-relay.md) is a scalable, drop-in replacement for carbon-relay or carbon-c-relay.
 
-## Graphite Ingestion[​](https://docs.circonus.com/irondb/integrations/graphite#graphite-ingestion) <a href="#graphite-ingestion" id="graphite-ingestion"></a>
+## Graphite Ingestion
 
 The format for ingestion is the typical Carbon plaintext format:
 
@@ -28,17 +28,17 @@ Where tags are appended to the normal name and are separated by semicolons (`;`)
 
 For more info on the graphite tag format see: [Graphite Tag Support](http://graphite.readthedocs.io/en/latest/tags.html).
 
-## Namespacing[​](https://docs.circonus.com/irondb/integrations/graphite#namespacing) <a href="#namespacing" id="namespacing"></a>
+## Namespacing
 
 Graphite ingestion into IRONdb requires namespacing your graphite data. This lets you associate a UUID/Name and numeric identifier with the incoming metrics. This is useful, for example, if you want to use a single IRONdb installation to service multiple different internal groups in your organization but keep metrics hidden across the various groups.
 
 All metrics live under a numeric identifier (you can think of this like an account\_id). Metric names can only be associated with an "account\_id". This allows you have separate graphite-web or Grafana instances that segregate queries for metric names, or combine them all together under a single "account\_id", or even separate your internal groups but recombine them under graphite-web/Grafana for visualization purposes. It's really up to you.
 
-## Optional Configuration[​](https://docs.circonus.com/irondb/integrations/graphite#optional-configuration) <a href="#optional-configuration" id="optional-configuration"></a>
+## Optional Configuration
 
 Graphite ingestion will, by default, accept timestamps up to 1 year in the past. When retrieving Graphite data, a floor of 1-minute resolution is used, to prevent gaps if the requested period is shorter. These values may be changed through [configuration](../getting-started/configuration.md#graphite-config).
 
-## Writing Graphite Data with Network Listener[​](https://docs.circonus.com/irondb/integrations/graphite#writing-graphite-data-with-network-listener) <a href="#writing-graphite-data-with-network-listener" id="writing-graphite-data-with-network-listener"></a>
+## Writing Graphite Data with Network Listener
 
 The network listener requires that we associate an account\_id, uuid, and name with a network port. This is added to the [IRONdb configuration file](../getting-started/configuration.md#listeners) during initial installation, for the default Graphite text protocol port (2003). Additional stanzas may be added, associating different IDs with different ports to segregate incoming traffic.
 
@@ -61,7 +61,7 @@ to send metrics to IRONdb.
 
 See also the [IRONDB-relay](../tools/irondb-relay.md)
 
-## Graphite Rendering[​](https://docs.circonus.com/irondb/integrations/graphite#graphite-rendering) <a href="#graphite-rendering" id="graphite-rendering"></a>
+## Graphite Rendering
 
 IRONdb has a graphite-web Storage Backend which makes the following Graphite Rendering seamless with an existing graphite-web installation. The Storage Backend requires graphite 0.10 or newer and can be obtained [here](../tools/graphite-plugin.md):
 
@@ -69,7 +69,7 @@ Follow the instructions in the README in that repo to install and utilize the IR
 
 That Storage Backend plugin simply utilizes the endpoints described below.
 
-## Query Result Limits[​](https://docs.circonus.com/irondb/integrations/graphite#query-result-limits) <a href="#query-result-limits" id="query-result-limits"></a>
+## Query Result Limits
 
 All query results are subject to limits to control the number of results returned. If not otherwise specified, queries will be limited to the first 10,000 results returned.
 
@@ -80,7 +80,7 @@ This limit may be changed by setting a request header, `x-snowth-advisory-limit`
 
 If the header contains any other value or is not present, the default of 10,000 will be used.
 
-## Searching for Metric Names[​](https://docs.circonus.com/irondb/integrations/graphite#searching-for-metric-names) <a href="#searching-for-metric-names" id="searching-for-metric-names"></a>
+## Searching for Metric Names
 
 Graphite metrics can be fetched (rendered) from IRONdb using the following endpoints. Glob style wildcards are supported.
 
@@ -123,7 +123,7 @@ If you do not want to utilize the `optional_query_prefix` you can leave it off t
 ]
 ```
 
-## Searching for Tags[​](https://docs.circonus.com/irondb/integrations/graphite#searching-for-tags) <a href="#searching-for-tags" id="searching-for-tags"></a>
+## Searching for Tags
 
 Graphite metrics can be fetched (rendered) from IRONdb using multi-dimensional tag queries.
 
@@ -149,11 +149,11 @@ tag!=~spec  tag value does not match the regular expression spec
 ]
 ```
 
-## Retrieving Datapoints[​](https://docs.circonus.com/irondb/integrations/graphite#retrieving-datapoints) <a href="#retrieving-datapoints" id="retrieving-datapoints"></a>
+## Retrieving Datapoints
 
 There are 2 methods for retrieving datapoints from IRONdb. A GET and a POST.
 
-### GET[​](https://docs.circonus.com/irondb/integrations/graphite#get) <a href="#get" id="get"></a>
+### GET
 
 For retrieving an individual metric name, use:
 
@@ -161,7 +161,7 @@ For retrieving an individual metric name, use:
 
 where `<start_timestamp>` and `<end_timestamp>` are expressed in unix epoch seconds, and `<metric_name>` is the originally ingested leaf node returned from the `/metrics/find` query above. `optional_query_prefix` follows the same rules as described in the prior section.
 
-### POST[​](https://docs.circonus.com/irondb/integrations/graphite#post) <a href="#post" id="post"></a>
+### POST
 
 For fetching batches of time series data all at once, IRONdb provide a POST interface to send multiple names at the same time. To use this, POST a json document of `Content-type: application/json` to the following url:
 
@@ -191,7 +191,7 @@ The document format:
 }
 ```
 
-## Native Whisper Read Support[​](https://docs.circonus.com/irondb/integrations/graphite#native-whisper-read-support) <a href="#native-whisper-read-support" id="native-whisper-read-support"></a>
+## Native Whisper Read Support
 
 IRONdb has the capability of reading Whisper database files directly, making historical Graphite data available to be queried. Writing new data to Whisper format is not supported.
 

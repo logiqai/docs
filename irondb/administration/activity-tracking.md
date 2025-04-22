@@ -8,19 +8,19 @@ See [Searching Tags](../metric-names-and-tags.md#tag-queries) on how to query ac
 
 This activity tracking only applies to data ingested after the upgrade to `0.12` or later. Any data ingested prior to installation of `0.12` will be invisible to the activity tracking code. However, IRONdb also ships with an API to rebuild activity tracking data by reading the actual datapoints for a metric to determine its activity ranges. Since this is an expensive operation it has to be triggered for a list of metrics by an operator.
 
-## Rebuilding Activity Data[​](https://docs.circonus.com/irondb/administration/activity-tracking#rebuilding-activity-data) <a href="#rebuilding-activity-data" id="rebuilding-activity-data"></a>
+## Rebuilding Activity Data
 
 > Do not trigger this API until you have upgraded all IRONdb nodes to `0.12` or later.
 
-### URI[​](https://docs.circonus.com/irondb/administration/activity-tracking#uri) <a href="#uri" id="uri"></a>
+### URI
 
 * `/surrogate/activity_rebuild`
 
-### Method[​](https://docs.circonus.com/irondb/administration/activity-tracking#method) <a href="#method" id="method"></a>
+### Method
 
 POST
 
-### Inputs[​](https://docs.circonus.com/irondb/administration/activity-tracking#inputs) <a href="#inputs" id="inputs"></a>
+### Inputs
 
 A JSON document which lists the set of metrics to rebuild activity data for, with the syntax:
 

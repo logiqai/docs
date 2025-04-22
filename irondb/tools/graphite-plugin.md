@@ -4,7 +4,7 @@ A plugin for using graphite with the IRONdb from Apica.
 
 Requires Graphite-web 1.1.X.
 
-## Installation[​](https://docs.circonus.com/irondb/tools/irondb-graphite#installation) <a href="#installation" id="installation"></a>
+## Installation
 
 First, checkout the code:
 
@@ -30,7 +30,7 @@ $ sudo python setup.py install --pure-python
 
 The use of `--pure-python` is provided for convenience; However, the native C module is recommended for best performance.
 
-## Using with graphite-web[​](https://docs.circonus.com/irondb/tools/irondb-graphite#using-with-graphite-web) <a href="#using-with-graphite-web" id="using-with-graphite-web"></a>
+## Using with graphite-web
 
 In your graphite's `local_settings.py`:
 
@@ -109,7 +109,7 @@ IRONDB_URLS = (
 
 `IRONDB_ZIPKIN_EVENT_TRACE_LEVEL` is optional and will default to 0. If `IRONDB_ZIPKIN_ENABLED` is set to False, this flag will do nothing. If it is set to True, this will send headers to the IRONdb nodes that will enable additional event tracing. Right now, the only acceptable values are `0` (off), `1` (basic tracing), and `2` (detailed tracing). `2` can potentially cause performance issues - use this level sparingly. Only recommended for when trying to debug something specific.
 
-## Changelog[​](https://docs.circonus.com/irondb/tools/irondb-graphite#changelog) <a href="#changelog" id="changelog"></a>
+## Changelog
 
 * **0.0.1** (2016-11-10): initial version.
 * **0.0.2** (2017-05-25): fix queries where there is no data for one or more of the requested time series
