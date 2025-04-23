@@ -76,7 +76,10 @@ At this point, ODI will create the necessary tables in the same database schema 
 ## Groovy Script Automation for data ingestion from Oracle DB to Apica Ascent
 
 1. Navigate to Tools -> Groovy -> New Script
-2. A sample script is attached that:
+
+{% file src="../../.gitbook/assets/ODI_Groovy_Automation_ApicaAscent.txt" %}
+
+2. A sample script is attached (above) that:
 
 * Connects to an Oracle database
 * Retrieves data from the EMPLOYEES table one row at a time
