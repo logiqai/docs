@@ -147,6 +147,7 @@
   * [OpenTelemetry](integrations/list-of-integrations/opentelemetry.md)
   * [Object store (S3 Compatible)](integrations/list-of-integrations/object-store-s3-compatible.md)
   * [Oracle OCI Infrastructure Audit/Logs](integrations/list-of-integrations/oracle-oci-infrastructure-audit-logs.md)
+  * [Oracle Data Integrator (ODI)](integrations/list-of-integrations/oracle-data-integrator-odi.md)
   * [OSSEC Variants (OSSEC/WAZUH/ATOMIC)](integrations/list-of-integrations/ossec-variants-ossec-wazuh-atomic/README.md)
     * [Apica Ascent-OSSEC Agent for Windows](integrations/list-of-integrations/ossec-variants-ossec-wazuh-atomic/logiq-ossec-agent-for-windows.md)
   * [Palo Alto Firewall](integrations/list-of-integrations/palo-alto-firewall.md)
