@@ -167,6 +167,7 @@
     * [Audit Vault Logs - AWS](integrations/list-of-integrations/vault/audit-vault-logs-aws.md)
     * [Audit Vault Logs - OCI](integrations/list-of-integrations/vault/audit-vault-logs-oci.md)
     * [Audit Vault Metrics](integrations/list-of-integrations/vault/audit-vault-metrics.md)
+* [Apica API DOCS](https://apidocs.apica.io/)
 
 ## DATA MANAGEMENT
 
@@ -180,8 +181,8 @@
     * [Visualization](data-management/overview-1/creating-json-schema/visualization/README.md)
       * [Line chart](data-management/overview-1/creating-json-schema/visualization/line-chart.md)
       * [Bar chart](data-management/overview-1/creating-json-schema/visualization/bar-chart.md)
-      * [Area chart ](data-management/overview-1/creating-json-schema/visualization/area-chart.md)
-      * [Scatter chart ](data-management/overview-1/creating-json-schema/visualization/scatter-chart.md)
+      * [Area chart](data-management/overview-1/creating-json-schema/visualization/area-chart.md)
+      * [Scatter chart](data-management/overview-1/creating-json-schema/visualization/scatter-chart.md)
       * [Status chart](data-management/overview-1/creating-json-schema/visualization/status-chart.md)
       * [Counter chart](data-management/overview-1/creating-json-schema/visualization/counter-chart.md)
       * [Stat chart](data-management/overview-1/creating-json-schema/visualization/stat-chart.md)
