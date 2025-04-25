@@ -233,7 +233,7 @@ To provision an IP address, do the following:
     ```sh
      microk8s enable metallb
      Enabling MetalLB
-     Enter each IP address range delimited by comma (e.g.     '10.64.140.43-10.64.140.49,192.168.0.105-192.168.0.111'): 192.168.1.27-192.168.1.27
+     Enter each IP address range delimited by comma (e.g.'192.168.0.105-192.168.0.111'): <host-ip>-<host-ip>
     ```
 
 {% hint style="info" %}
@@ -429,6 +429,20 @@ You can log into Apica Ascent PaaS using the following default credentials.
 {% hint style="info" %}
 **Note:** You can change the default login credentials after you've logged into the UI.
 {% endhint %}
+
+{% include "../../.gitbook/includes/once-the-setup-is-ready-dis....md" %}
+
+
+
+**MicroK8s Networking Note:**\
+Services default to host IP using `NodePort`/`ClusterIP`; MetalLB is enabled for explicit `LoadBalancer` use only. Automatic MetalLB IP assignment is disabled.\
+
+
+4\. Deactivates MetalLB, enabling services of type `LoadBalancer` to utilize the host's IP, thereby designating the host as the load
+
+```
+microk8s kubectl disable metallb
+```
 
 #### Troubleshooting
 
