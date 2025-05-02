@@ -10,11 +10,11 @@ A test script accesses the Load Test target and performs a number of actions tha
 
 To begin the process of creating a load test, navigate to the “Loadtest > New Test” page from the top menu bar within the ALT portal:
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="206"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (4) (1) (2).png" alt="" width="206"><figcaption></figcaption></figure></div>
 
 When the “Create New Loadtest” page appears, a list of links will appear on the right side of the page. Click on any of the links to jump to that step in the scenario process.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (3) (1) (2).png" alt="" width="197"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (3) (1) (2) (1).png" alt="" width="197"><figcaption></figcaption></figure></div>
 
 ### Step 1: Select Subscription <a href="#step-1-select-subscription" id="step-1-select-subscription"></a>
 
@@ -28,7 +28,7 @@ The specific terms of a subscription are determined when the customer contract i
 
 When a subscription has been selected, select a script from which to build the Load Test:
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (5) (1).png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (5) (1) (2).png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 #### Use Existing Loadtest Script <a href="#use-existing-loadtest-script" id="use-existing-loadtest-script"></a>
 
@@ -46,7 +46,7 @@ After that script is generated, it will appear as an existing .class file.
 
 **Create a New Loadtest Selenium Script**
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (6) (1) (2).png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 It is possible to utilize an HTML-formatted Selenium IDE recorded session as the Load Test script. In the below screenshot, the file has already been uploaded and the user must click the Actions icon and wait until that HTML file has been run.
 

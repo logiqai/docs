@@ -249,8 +249,9 @@
 ## Flow
 
 * [Overview](flow/overview.md)
-* [Data Flow Pipelines (New)](flow/data-flow-pipelines-new.md)
 * [Data Flow Pipelines](flow/data-flow-pipelines.md)
+* [Data Flow Visualize Pipelines](flow/data-flow-pipelines-1.md)
+* [Data Flow Pipeline Dashboard](flow/data-flow-pipeline-dashboard.md)
 * [Rules](flow/rules/README.md)
   * [FILTER](flow/rules/filter.md)
   * [EXTRACT](flow/rules/extract.md)
