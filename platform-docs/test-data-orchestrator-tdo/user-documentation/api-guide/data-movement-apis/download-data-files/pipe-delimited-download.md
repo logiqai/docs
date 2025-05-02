@@ -8,4 +8,4 @@ This format is used with some automation programs, including Cucumber.  Change t
 
 &#x20;
 
-<figure><img src="../../../../../../.gitbook/assets/image (22) (1).png" alt=""><figcaption><p>Pipe delimited text file</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (22).png" alt=""><figcaption><p>Pipe delimited text file</p></figcaption></figure>

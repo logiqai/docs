@@ -50,4 +50,4 @@ When run, the response shows the details of the cloned workset.
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>New workset details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>New workset details</p></figcaption></figure>

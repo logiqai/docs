@@ -24,7 +24,7 @@ Before you dive in, here are a few key terms:
 
 $ODI\_HOME/odi/studio/odi.sh
 
-<figure><img src="../../.gitbook/assets/image (344) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (344).png" alt=""><figcaption></figcaption></figure>
 
 The initial configuration it to create a Master Repository (stores global settings) and Optional Work Repository (stores project-level data like mappings and interfaces):
 

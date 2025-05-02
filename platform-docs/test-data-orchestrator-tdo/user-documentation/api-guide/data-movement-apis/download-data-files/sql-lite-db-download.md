@@ -8,4 +8,4 @@ The API format for SQL Lite database output is the same as the other standard fo
 
 &#x20;
 
-<figure><img src="../../../../../../.gitbook/assets/image (26) (1).png" alt=""><figcaption><p>SQL Lite output viewed in database manager</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (26).png" alt=""><figcaption><p>SQL Lite output viewed in database manager</p></figcaption></figure>

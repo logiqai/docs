@@ -37,7 +37,7 @@ C[lick **“Create”** to save your Alert Destination](#user-content-fn-1)[^1].
    4. **Alert Severity** - Severity of the alert
    5.  **Alert Destinations** - The recipient(s) of the alert, as configured earlier. Multiple selections are possible.
 
-       <figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+       <figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 <mark style="color:purple;">**NOTE: Based on your Refresh Interval, whenever this check reports as Critical, an Email will be sent to your Alert Destination.**</mark>
 

@@ -10,4 +10,4 @@ The request is in the format  [http://99.99.99.99:8080/core/1.0/API/project/mug\
 
 &#x20;
 
-<figure><img src="../../../../../../.gitbook/assets/image (18) (1).png" alt=""><figcaption><p>HTML download shown in browser tab</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (18).png" alt=""><figcaption><p>HTML download shown in browser tab</p></figcaption></figure>

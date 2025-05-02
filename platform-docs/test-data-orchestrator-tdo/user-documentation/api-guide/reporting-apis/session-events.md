@@ -6,13 +6,13 @@ This API can be filtered on a start date and/or an end date and on a specific us
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (28) (1).png" alt=""><figcaption><p>Session Events API in a browser tab</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (28).png" alt=""><figcaption><p>Session Events API in a browser tab</p></figcaption></figure>
 
 &#x20; If run from Postman or a similar program, it is sent as a GET call.  There is no body, only the URL is needed to run this.  The date returns in the results section.
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (29) (1).png" alt=""><figcaption><p>Session Events results in an automation tool</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (29).png" alt=""><figcaption><p>Session Events results in an automation tool</p></figcaption></figure>
 
 &#x20; With either option, this shows the TDO ID for the session, the user name, the IP address that was used for access, the date/time for login and logout, whether the session is still active (‘true’) or not (‘false’), and the duration the session was/is active for.
 

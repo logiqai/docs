@@ -18,9 +18,9 @@ Clicking on the ASM image to the left of the Overview menu item will always brin
 
 ### Overview
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (1) (1) (1) (2) (1) (1) (1) (1).png" alt="" width="144"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (1) (1) (1) (2) (1) (1) (1).png" alt="" width="144"><figcaption></figcaption></figure></div>
 
 ### Dashboard
 
@@ -30,7 +30,7 @@ See [Dashboards](../explore-the-platform/dashboards.md) for more information.
 
 The “Apica Panels” menu item allows users to view their configured Apica Panels instances. Apica Panels is a feature which allows users to integrate Apica data into Grafana dashboards for easier viewing. The “Apica Panels” menu item contains two sub-items: “Panels” and “About”.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (2) (1) (1) (2) (1).png" alt="" width="287"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (2) (1) (1) (2).png" alt="" width="287"><figcaption></figcaption></figure></div>
 
 #### Panels
 

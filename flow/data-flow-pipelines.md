@@ -1,111 +1,88 @@
 ---
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
+description: >-
+  The pipeline is a series of processes or stages through which data flow
+  systematically and efficiently. It helps to visualize the flow between nodes,
+  rules, and filters applied for the data flow.
 ---
 
-# Data Flow Pipelines
+# Data Flow Visualize Pipelines
 
-The pipeline is a series of processes or stages through which data flow systematically and efficiently. It helps to visualize the flow between nodes, rules, and filters applied for the data flow.
-
-
-
-## Creating a Pipeline
+Creating a Pipeline
 
 Click on the `Explore` Option from the top menu and click on `Pipelines`
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Navigating to Pipeline Page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (375).png" alt=""><figcaption><p>Navigating to Pipeline Page</p></figcaption></figure>
 
-Hover on the `Actions` and click on `Create Pipeline`
+Hover on the `Actions` and click on `Visualize Pipeline`
 
-<figure><img src="../.gitbook/assets/image (356).png" alt=""><figcaption><p>Actions button to create Pipeline</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-02 220846.png" alt=""><figcaption><p>Hover over the Actions button on the top-right</p></figcaption></figure>
 
-Enter the `Pipeline name` to create your pipeline.
+On click of the Visualize Pipeline button, a new dialog opens, select the desired date-time range, select the desired namespace along with the linked applications, and click Create to create a new pipeline view.
 
-<figure><img src="../.gitbook/assets/image (357).png" alt=""><figcaption><p>Creating a Pipeline</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-02 221156.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-05-02 215739.png" alt=""><figcaption><p>Created pipeline displayed in the pipeline list</p></figcaption></figure>
+On click of the Visualize Pipeline button a new pipeline tab will get added with the pipeline view as shown below
 
-## Configuring Pipeline
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-02 221316.png" alt=""><figcaption></figcaption></figure>
 
-Once the Pipeline is created we will configure the pipeline with Rules based on which the events in Data flow will be determined.
+**Pipeline View**: The pipeline view shows the data flow between the nodes. each node is connected with the edges to show the data flow between the nodes. The node will have the following details.
 
-<figure><img src="../.gitbook/assets/image (359).png" alt=""><figcaption><p>Configure Pipeline</p></figcaption></figure>
+\
+1\. Name of the node\
+2\. Total number of Events\
+3\. Total volume size of the events\
+4\. Total savings for application and target node\
+**Minimap**: Minimap is a tool for quick preview and exploration of large graphs.\
+**Time Range Slider**: Helps to select the time range between the selected date and time\
+**Zoom In/Out:** Tool to zoom in and zoom out the graph\
+**Side Bar**: Helps to make the following changes\
+1\. Change the theme\
+2\. Change the default title of the pipeline tab\
+3\. Select a different date time range\
+4\. Select a different namespace, can do multi-select\
+5\. Shows the overall EPS and Valume savings.
 
-Hover on Add Rule and select the Rule you want to set (CODE, EXTRACT, FILTER, REWRITE, SIEM, STREAM, TAG) and once done clicking on `Save` button will save the configuration.
+### Add/Choose the existing Pipeline for Dataflow.
 
-<figure><img src="../.gitbook/assets/image (360).png" alt=""><figcaption><p>Pipeline Configuration View</p></figcaption></figure>
+Click the + icon to create or choose the existing Pipeline
 
-You can also preview how the pipeline will be executed using the Preview option.&#x20;
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-02 221425.png" alt=""><figcaption><p>Add/Choose existing Pipeline</p></figcaption></figure>
 
-There are three ways to preview:
+On click of + icon, Configure Pipeline dialog will show, with the options\
+1\. Choose Existing Pipeline\
+2\. Create New Pipeline
 
-#### Use Sample Logs:
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-02 221703.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (361).png" alt=""><figcaption><p>Sample Logs, Dropdown helps select the sample logs</p></figcaption></figure>
+Select the Choose Existing Pipeline to choose an existing Pipeline for the Dataflow
 
-<figure><img src="../.gitbook/assets/image (363).png" alt=""><figcaption><p>Preview based on the Rules set</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-02 221844.png" alt=""><figcaption><p>Choose Existing Pipeline</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Dropped Alerts highlighted and displayed as Dropped</p></figcaption></figure>
+Select the Pipelines that will be applied to the Dataflow and click on the Blue arrow button to add them to dataflow
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>On clicking on the logs the expected changes are displayed</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (382).png" alt=""><figcaption></figcaption></figure>
 
-#### Use Data Flows:
+Click on the Delete Icon on the right side will disassociate it from the Dataflow. Once done click on the Close button on the dialog to apply the changes.
 
+Select Create New Pipeline button to create new Pipeline for the namespace and application
 
+Enter the Pipeline name and click on Next Button
 
-<figure><img src="../.gitbook/assets/image (365).png" alt=""><figcaption><p>After selecting the Time Range, Namespace and Application Preview can be seen on clicking the Preview</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-02 222507.png" alt=""><figcaption><p>Create New Pipeline</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Dropped Alerts highlighted and displayed as Dropped</p></figcaption></figure>
+Rules sections the user will be able to configure the Rules and click on the Save button
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>On clicking on the logs the expected changes are displayed</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (383).png" alt=""><figcaption></figcaption></figure>
 
-#### Use GenAI:
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-02 223521.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (366).png" alt=""><figcaption><p>Click on Generate Logs </p></figcaption></figure>
+### Add Rule(Forwarder)
 
-<figure><img src="../.gitbook/assets/image (367).png" alt=""><figcaption><p>Enter the prompt and click on the Arrow, Sample log will be generated</p></figcaption></figure>
+Before adding the forwarder rule, create a forwarder and map the forwarder in the data flow tab.
 
-<figure><img src="../.gitbook/assets/image (368).png" alt=""><figcaption><p>Click on the Use Logs to use the same logs</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-02 223407.png" alt=""><figcaption><p>Map a forwarder</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (369).png" alt=""><figcaption><p>Sample logs are added and preview can be seen on clicking Preview Button</p></figcaption></figure>
+After adding the forwarder the new node will be added as below
 
-<figure><img src="../.gitbook/assets/image (370).png" alt=""><figcaption><p>Preview based on the rules configured is displayed</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-02 224136.png" alt=""><figcaption><p>Pipeline with the forwarder</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>On clicking on the logs the expected changes are displayed</p></figcaption></figure>
-
-### Apply Pipeline
-
-Using the `Apply Pipeline` option we will be able to apply the pipeline to multiple `Dataflow`.
-
-<figure><img src="../.gitbook/assets/image (371).png" alt=""><figcaption><p>Apply Pipeline to associate the Namespace and Application to it</p></figcaption></figure>
-
-Select the time range and then select Namespace and Application (Dataflow) to which you want to apply the pipeline. When a namespace and application have other Pipelines linked to it they will be displayed as well, the new one we are trying to associate will be displayed at the bottom and outlined by Green. User will be able to reorder by dragging.
-
-<figure><img src="../.gitbook/assets/image (372).png" alt=""><figcaption><p>New pipeline added outlined by green</p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image (373).png" alt=""><figcaption><p>Oder can be set by dragging the pipelines.</p></figcaption></figure>
-
-Once desired order has been set Click on `Apply` to apply it to the Dataflow. Post this the execution will be in the order of the Pipeline set.
-
-### Pipeline View:
-
-All the Dataflows linked are displayed under the Pipeline and can be accessed using the Arrow icon.
-
-<figure><img src="../.gitbook/assets/image (374).png" alt=""><figcaption><p>All the linked Dataflow are displayed under the Pipeline. Along with the stats.</p></figcaption></figure>
-
-The Stats displays the Events Ingested, Events Processed and Saved Bytes:
-
-* Green Indicates the total `Events Ingested`.
-* Orange Indicates the `Events Processed`.
-* Red Indicates the `Saved Bytes`.
-
-Pipelines stats is the total amount of Events and Saved Bytes and the data for each of the associated Dataflow is displayed against the individual Dataflows.
