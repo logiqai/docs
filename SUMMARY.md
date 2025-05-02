@@ -135,6 +135,7 @@
   * [GCP PubSub](integrations/list-of-integrations/gcp-pubsub.md)
   * [GCP Cloud Logging](integrations/list-of-integrations/gcp-cloud-logging.md)
   * [IBM QRadar](integrations/list-of-integrations/ibm-qradar.md)
+  * [ilert](integrations/list-of-integrations/ilert.md)
   * [Incident Management](integrations/list-of-integrations/alert-destinations/README.md)
     * [Webhooks](integrations/list-of-integrations/alert-destinations/webhooks.md)
   * [Jaeger](integrations/list-of-integrations/jaeger.md)
