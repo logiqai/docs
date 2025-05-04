@@ -4,10 +4,6 @@
 
 Within this Vault system, the items managed under 'Certificates' currently function as stored symmetric keys used **solely for the purpose of encrypting and decrypting data directly**. They provide the specific key material needed to protect data payloads and later unprotect them.
 
-_(Note: According to your input, these are currently implemented using **AES symmetric keys**)_.
-
-Unlike standard X.509 certificates used for authentication or TLS/HTTPS, these "Certificates" in Vault are focused purely on symmetric data protection operations.
-
 
 
 ### When to Use Certificates?
