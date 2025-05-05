@@ -4,18 +4,14 @@
 
 ## Prerequisites
 
-* Ubuntu OS x64 - 22.04 LTS or RedHat Enterprise Linux 8/9
+* Ubuntu OS x64 - 20.04.6 LTS
 * 32 vCPU
 * 64GB RAM
 * 500GB disk space on the root partition
 
 ## Installing MicroK8s
 
-The first step in this deployment is to install MicroK8s on your machine.
-
-### Installing MicroK8s on Ubuntu
-
-The following instructions pertain to Debian-based Linux systems.
+The first step in this deployment is to install MicroK8s on your machine. The following instructions pertain to Debian-based Linux systems. To install MicroK8s on such systems, do the following.
 
 1.  Update package lists by running the following command.
 
@@ -59,105 +55,6 @@ The following instructions pertain to Debian-based Linux systems.
 
 MicroK8s is now installed on your machine.
 
-### Installing MicroK8s on RedHat
-
-The following instructions pertain to RHEL-based Linux systems.
-
-1.  Update package lists by running the following command.
-
-    we need to use following commands to install microk8s on Red Hat
-
-    ```bash
-    sudo yum -y update
-    ```
-
-    ```bash
-    #follow the article for installation of [microk8s] (https://snapcraft.io/install/microk8s/rhel)
-    #The EPEL repository can be added to RHEL 9 with the following command:
-
-    sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
-    sudo dnf upgrade
-
-    #The EPEL repository can be added to RHEL 8 with the following command:
-
-    sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-    sudo dnf upgrade
-    ```
-
-    Once you added these repl repos to server we need to run the below commands - Note: If you are running RHEL On-Premises with Red Hat CDN (Connected Environment) where subscription management is handled automatically:
-
-    <pre class="language-bash"><code class="lang-bash">sudo subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
-    sudo yum -y update
-
-    <strong>If you are using RHEL in Disconnected or Air-Gapped Environments
-    </strong>like cloud environments AWS, Azure, and Google Cloud then you need to
-    run below commands in order to pull RHEL updates via RHUI:
-
-    sudo yum-config-manager --enable codeready-builder-for-rhel-8-rhui-rpms
-    sudo yum-config-manager --enable rhel-8-supplementary-rhui-rpms
-
-    #enable snapd for installation
-    sudo yum install snapd
-
-    sudo systemctl enable --now snapd.socket
-    sudo ln -s /var/lib/snapd/snap /snap
-    </code></pre>
-2.  Install `core` using Snap by running the following command.
-
-    ```bash
-    sudo snap install core
-
-    In case the core installation gives timeouts or throws any error because
-    snapd socket couldn't activate, then try the following commands to install
-    core successfully:
-
-    sudo dnf install -y epel-release
-    sudo dnf update -y
-    sudo dnf install -y snapd
-    systemctl status snapd.socket
-    sudo systemctl disable --now snapd.socket
-    sudo systemctl restart snapd
-    sudo ln -s /var/lib/snapd/snap /snap
-    sudo snap install core
-    sudo firewall-cmd --add-service=https --permanent
-    sudo firewall-cmd --reload
-    sudo snap refresh core
-    yum repolist
-    sudo snap install core
-
-    ```
-3.  Install MicroK8s using Snap by running the following command.
-
-    ```bash
-    sudo snap install microk8s --classic --channel=1.21/stable
-    ```
-4.  Join the group created by MicroK8s that enables uninterrupted usage of commands that require admin access by running the following command.
-
-    <pre class="language-bash"><code class="lang-bash"><strong>sudo usermod -a -G microk8s $USER
-    </strong></code></pre>
-5.  Create the .kube directory.
-
-    ```bash
-    mkdir ~/.kube
-    ```
-6.  Add your current user to the group to gain access to the `.kube` caching directory by running the following command.
-
-    ```bash
-    sudo chown -f -R $USER ~/.kube
-    ```
-7.  Generate your MicroK8s configuration and merge it with your Kubernetes configuration by running the following command.
-
-    ```bash
-    microk8s config > ~/.kube/config
-    ```
-8.  Check whether MicroK8s is up and running with the following command.
-
-    ```bash
-    microk8s status
-    ```
-
-MicroK8s is now installed on your machine.
-
 ## Enabling add-ons
 
 Now that we have MicroK8s up and running, let’s set up your cluster and enable the add-ons necessary such as Helm, CoreDNS, ingress, storage, and private registry. MicroK8s readily provides these addons and can be enabled and disabled at any time. Most of these add-ons are pre-configured to work without any additional setup.
@@ -173,8 +70,8 @@ microk8s enable helm3
 If you get a message telling you have insufficient permissions, a few of the commands above which tried to interpolate your current user into the command with the $USER variable did not work. You can easily fix it by adding your user to the microk8s group by specifying the name of the user explicitly:
 
 ```bash
-sudo usermod -a -G microk8s $USER
-sudo chown -R $USER ~/.kube
+sudo usermod -a -G microk8s ubuntu
+sudo chown -R ubuntu ~/.kube
 ```
 
 2. Enable a default storage class that allocates storage from a host directory.
@@ -265,11 +162,10 @@ In this step, we'll provision an endpoint or an IP address where we access Apica
 
 To provision an IP address, do the following:
 
-1.  Check your local machine's IP address by running the `ip addr` command, as shown below.
+1.  Check your local machine's IP address by running the `ifconfig` command, as shown below.
 
     ```sh
-     $ ip addr
-     ...
+     ifconfig:
      wlp60s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
      inet 192.168.1.27 netmask 255.255.255.0 broadcast 192.168.1.255
     ```
@@ -292,7 +188,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
 1.  Add the Apica Ascent PaaS Helm chart to your Helm repository by running the following command.
 
     ```
-    microk8s helm3 repo add apica-repo  https://apicasystem.github.io/apica-ascent-helm
+    microk8s helm3 repo add apica-repo https://logiqai.github.io/helm-charts
     ```
 2.  Update your Helm repository by running the following command.
 
@@ -303,7 +199,7 @@ Now that your MicroK8s environment is configured and ready, we can proceed with 
 
     <pre data-full-width="true"><code><strong>microk8s kubectl create namespace apica-ascent
     </strong></code></pre>
-4. Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://raw.githubusercontent.com/ApicaSystem/ApicaHub/refs/heads/master/integrations/microk8s/values.yaml) file we've created to configure your Apica Ascent PaaS deployment. If you need to download the file to your own machine, edit, and then transfer to a remote linux server, use this command:
+4. Prepare your values.microk8s.yaml file. You can use the [**starter `values.microk8s.yaml`**](https://github.com/logiqai/logiq-installation/blob/main/values/values.microk8s.yaml) file we've created to configure your Apica Ascent PaaS deployment. If you need to download the file to your own machine, edit, and then transfer to a remote linux server, use this command:
 
 {% code overflow="wrap" fullWidth="false" %}
 ```sh
@@ -318,7 +214,7 @@ scp -i /path/to/private_key.pem /path/to/local/file username@remote_host:/path/t
 
 Make sure you have the necessary permissions to copy a file to the specified folder on the Linux machine.
 
-> Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://raw.githubusercontent.com/logiqai/logiq-installation/refs/heads/main/values/values.yaml) instead. run the following command.
+> Optionally, if you are provisioning public IP using Metallb, use the [values.yaml](https://github.com/logiqai/logiq-installation/blob/main/values/values.yaml) instead. run the following command.
 >
 > ```
 > microk8s enable metallb
@@ -356,72 +252,6 @@ microk8s helm3 install apica-ascent -n apica-ascent --set global.persistence.sto
 
 If you see a large wall of text listing configuration values, the installation was successful - Ascent PaaS is now installed in your MicroK8s environment!
 
-**Spin up an internal S3 bucket using minio** - If you are not using S3 cloud related variables in the values.yaml file and want to create an internal S3 bucket, then create a s3-batch.yaml file and execute the below batch job to spin S3 bucket using minio:
-
-Create s3-batch.yaml file and insert the below contents:
-
-```bash
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: s3-gateway-make-bucket-job
-  namespace: apica-ascent
-  labels:
-    app: s3gateway-make-bucket-job
-    chart: s3gateway-5.0.20
-    release: apica-ascent
-    heritage: Helm
-  annotations:
-    "helm.sh/hook": post-install
-    "helm.sh/hook-weight": "1"
-    "helm.sh/hook-delete-policy": hook-succeeded,before-hook-creation
-spec:
-  template:
-    metadata:
-      labels:
-        app: s3gateway-job
-        release: apica-ascent
-    spec:
-      restartPolicy: OnFailure
-
-      volumes:
-        - name: minio-configuration
-          projected:
-            sources:
-            - configMap:
-                name: s3-gateway
-            - secret:
-                name: s3-gateway
-      serviceAccountName: "s3-gateway"
-      containers:
-      - name: minio-mc
-        image: "minio/mc:RELEASE.2020-03-14T01-23-37Z"
-        imagePullPolicy: IfNotPresent
-        command: ["/bin/sh", "/config/initialize"]
-        env:
-          - name: MINIO_ENDPOINT
-            value: s3-gateway
-          - name: MINIO_PORT
-            value: "9000"
-        volumeMounts:
-          - name: minio-configuration
-            mountPath: /config
-        resources:
-          {}
-```
-
-Apply the batch job:
-
-```bash
-kubectl apply -f s3-batch.yaml
-```
-
-Delete the Thanos pods (apica-ascent-thanos-compactor-XXXXXX and apica-ascent-thanos-storegateway-0) so it can created again after applying the s3-batch.yaml:
-
-```bash
-kubectl delete pod apica-ascent-thanos-storegateway-0 apica-ascent-thanos-compactor-XXXXXX -n apica-ascent
-```
-
 ## Accessing Apica Ascent PaaS
 
 Now that Apica Ascent PaaS is installed on your MicroK8s cluster, you can visit the Apica Ascent PaaS UI by either accessing the MetalLB endpoint we defined in the pre-install steps (if you installed/configured MetalLB), or by accessing the public IP address of the instance over HTTP(S) (if you aren't utilizing MetalLB).
@@ -442,7 +272,7 @@ If you are load balancing the hosting across multiple IPs using MetalLB, do the 
     The above command should give you an output similar to the following.
 
     ```
-    apica-ascent-kubernetes-ingress  LoadBalancer   10.152.183.45  192.168.1.27
+    logiq-kubernetes-ingress  LoadBalancer   10.152.183.45  192.168.1.27
 
     80:30537/TCP,20514:30222/TCP,24224:30909/TCP,24225:31991/TCP,2514:30800/TCP,3000:32680/TCP,514:32450/    TCP,7514:30267/TCP,8081:30984/TCP,9998:31425/TCP     18m
     ```
@@ -459,143 +289,11 @@ You can log into Apica Ascent PaaS using the following default credentials.
 **Note:** You can change the default login credentials after you've logged into the UI.
 {% endhint %}
 
-{% include "../../.gitbook/includes/once-the-setup-is-ready-dis....md" %}
-
-
-
-**MicroK8s Networking Note:**\
-Services default to host IP using `NodePort`/`ClusterIP`; MetalLB is enabled for explicit `LoadBalancer` use only. Automatic MetalLB IP assignment is disabled.\
-
-
-4\. Deactivates MetalLB, enabling services of type `LoadBalancer` to utilize the host's IP, thereby designating the host as the load
-
-```
-microk8s kubectl disable metallb
-```
-
 ### Troubleshooting
-
-If we have any issues on injecting the logs are something then we have to add new paths that we need to add as part of upgrade of the image, from cli edit the ingress.
-
-```
-microk8s kubectl get ingress -n<namespace>
-microk8s kubectl edit ingress -n<namespace>
-```
-
-Copy the below paths and paste them and save.
-
-```yaml
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: coffee
-                port:
-                  number: 80
-          - backend:
-              service:
-                name: logiq-flash
-                port:
-                  number: 8080
-            path: /live
-            pathType: Prefix
-          - path: /live
-            pathType: Prefix
-            backend:
-              service:
-                name: logiq-flash
-                port:
-                  number: 8080
-          - backend:
-              service:
-                name: logiq-flash
-                port:
-                  number: 8080
-            path: /ready
-            pathType: Prefix
-          - backend:
-              service:
-                name: logiq-flash
-                port:
-                  number: 9999
-            path: /v1/logs
-            pathType: Prefix
-          - backend:
-              service:
-                name: logiq-flash
-                port:
-                  number: 9999
-            path: /v1/traces
-            pathType: Prefix
-          - backend:
-              service:
-                name: logiq-flash
-                port:
-                  number: 9999
-            path: /v1/metrics
-            pathType: Prefix
-
-          - path: /v1/json_batch
-            pathType: Prefix
-            backend:
-              service:
-                name: logiq-flash
-                port:
-                  number: 9999
-          - path: /v1/json
-            pathType: Prefix
-            backend:
-              service:
-                name: logiq-flash
-                port:
-                  number: 9999
-          - path: /v1/tenant
-            pathType: Prefix
-            backend:
-              service:
-                name: logiq-flash
-                port:
-                  number: 9999
-          - path: /api/traces
-            pathType: Prefix
-            backend:
-              service:
-                name: logiq-flash
-                port:
-                  number: 14268
-          - path: /v1
-            pathType: Prefix
-            backend:
-              service:
-                name: logiq-flash-ml
-                port:
-                  number: 9999
-          - path: /v2
-            pathType: Prefix
-            backend:
-              service:
-                name: logiq-flash-ml
-                port:
-                  number: 9999
-          - path: /dtracing
-            pathType: Prefix
-            backend:
-              service:
-                name: logiq-flash-ml
-                port:
-                  number: 16686
-          - path: /api/v1/receive
-            pathType: Prefix
-            backend:
-              service:
-                name: apica-ascent-thanos-receive
-                port:
-                  number: 19291
-```
 
 #### Kubernetes cluster is unreachable
 
-If you see an error message indicating the Kubernetes cluster is unreachable, the Microk8s service has stopped - simply restart it. Error text:
+If you see an error message indicating the Kubernetes cluser is unreachable, the Microk8s service has stopped - simply restart it. Error text:
 
 ```
 Error: INSTALLATION FAILED: Kubernetes cluster unreachable: Get "https://127.0.0.1:16443/version": dial tcp 127.0.0.1:16443: connect: connection refused
@@ -606,10 +304,9 @@ helm.go:84: [debug] Get "https://127.0.0.1:16443/version": dial tcp 127.0.0.1:16
 Solution:
 
 ```
-$ microk8s status
+ubuntu@ip-172-31-31-72:~$ microk8s status
 microk8s is not running. Use microk8s inspect for a deeper inspection.
-
-$ microk8s start
+ubuntu@ip-172-31-31-72:~$ microk8s start
 ```
 
 #### Restarting the Ascent installation after a failed installation
@@ -626,8 +323,7 @@ helm.sh/helm/v3/pkg/action.(*Install).availableName
 Solution:
 
 ```
-$ microk8s helm3 uninstall apica-ascent -n apica-ascent
+ubuntu@ip-172-31-31-72:~$ microk8s helm3 uninstall apica-ascent -n apica-ascent
 release "apica-asent" uninstalled
-
-$ microk8s helm3 install apica-ascent -n apica-ascent --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f values.microk8s.yaml --debug --timeout 10m
+ubuntu@ip-172-31-31-72:~$ microk8s helm3 install apica-ascent -n apica-ascent --set global.persistence.storageClass=microk8s-hostpath apica-repo/apica-ascent -f values.microk8s.yaml --debug --timeout 10m
 ```
