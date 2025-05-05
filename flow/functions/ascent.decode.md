@@ -1,4 +1,8 @@
-# Ascent.decode
+---
+description: Decoding methods for data in Ascent
+---
+
+# ascent.decode
 
 ### Ascent.decode - Data Decoding Methods
 
@@ -6,7 +10,7 @@
 
 decodes a string in Base64 format.
 
-```
+```typescript
 ascent.decode.b64(input:string):string;
 ```
 

@@ -1,22 +1,22 @@
-# Ascent.persist
+# ascent.persist
 
 #### Ascent.persist.set
 
 Stores a value persistently
 
-```
-Ascent.persist.set(key: string, value: any, expiry?: number): any;
+```typescript
+ascent.persist.set(key: string, value: any, expiry?: number): any;
 ```
 
 | Parameter | Type   | Description                           |
 | --------- | ------ | ------------------------------------- |
 | Key       | String | Identifier that will map to the value |
 | Value     | Any    | Value to persist                      |
-| expiry    | Number |                                       |
+| expiry    | Number | \<optional>                           |
 
 Example
 
-```
+```typescript
 ascent.persist.set("Customer Id","Last Name",15)
 ```
 

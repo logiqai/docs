@@ -20,6 +20,8 @@ ascent.crypto.aes(cipher: string):
 
 Returns an instance of the AES Cipher
 
+\---&#x20;
+
 
 
 ## ascent.crypto.aes().encrypt()

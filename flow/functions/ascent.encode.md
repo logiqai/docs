@@ -1,29 +1,39 @@
-# Ascent.encode
+---
+description: Encoding methods for data in Ascent
+---
 
-### Ascent.encode - Data Encoding Methods
+# ascent.encode
 
-#### Apica.encode.base64
 
-Encodes a string in Base64 format.
+
+### ascent.encode.base64()
+
+Encodes a string in base64 format.
 
 <pre class="language-go"><code class="lang-go"><strong>ascent.encode.b64(input:string) : string;
 </strong></code></pre>
 
-| Parameter | Type   | Description    |
-| --------- | ------ | -------------- |
-| srting    | string | Value to enode |
+| Parameter | Type   | Description     |
+| --------- | ------ | --------------- |
+| string    | string | Value to encode |
 
-Examples
+
+
+#### Examples
 
 To base64-encode the username
 
-```
-ascent.encode.b64("Username")
+```typescript
+let encoded = ascent.encode.b64("Username");
+
+console.log(encoded) // VXNlcm5hbWU=
 ```
 
-#### Ascent.encode.gzip
+***
 
-Compress a string using Gzip. Output a base64 encode string
+### ascent.encode.gzip()
+
+Compress a string using Gzip. Output a base64 encoded string
 
 ```
 ascent.encode.gzip(input: string): string;
@@ -37,15 +47,17 @@ Examples
 
 To encode the username
 
-```
-Event.encode = ascent.encode.b64("Username");
+```typescript
+let gzip = ascent.encode.gzip("Username");
 ```
 
-#### Ascent.encode.uri
+
+
+### ascent.encode.uri()
 
 Encodes a string using URI encoding
 
-```
+```typescript
 ascent.encode.uri(input: string): string;
 ```
 
@@ -57,8 +69,10 @@ Examples
 
 To encode the username
 
-```
-Event.encode = ascent.encode.uri("Username");
+```typescript
+let encoded = ascent.encode.uri("Username:A");
+
+console.log(encoded);
 ```
 
 #### Ascent.encode.hex
