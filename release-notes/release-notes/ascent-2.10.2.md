@@ -1,7 +1,5 @@
 # Ascent 2.10.2
 
-## **Ascent 2.10.2**
-
 ### ASM 13.34.0
 
 **Browser Behavior Improvements**:
