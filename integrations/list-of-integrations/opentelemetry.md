@@ -26,6 +26,10 @@ otlphttp:
 Encoding type must be JSON for logs and traces. We currently only support protobuf encoding for metrics. When using metrics\_endpoint with proto encoding, remove the compression setting.
 {% endhint %}
 
+{% hint style="warning" %}
+Apica telemetry pipeline only supports data for metrics in OTLP format. Sending data to the prometheus remote write endpoint will not allow manipulation of metrics via the telemetry pipeline
+{% endhint %}
+
 ### Prometheus remote write exporter
 
 Prometheus Remote Write Exporter can be used to send OpenTelemetry metrics to Prometheus [remote write compatible backends](https://prometheus.io/docs/operating/integrations/)
