@@ -288,6 +288,7 @@
 * [OpenTelemetry Forwarding](flow/opentelemetry-forwarding/README.md)
   * [Metrics](flow/opentelemetry-forwarding/metrics.md)
   * [Traces](flow/opentelemetry-forwarding/traces.md)
+  * [Logs](flow/opentelemetry-forwarding/logs.md)
 * [Splunk Forwarding](flow/splunk-forwarding/README.md)
   * [Apica UF Proxy App Extension](flow/splunk-forwarding/apica-uf-proxy-app-extension/README.md)
     * [Standalone Instance](flow/splunk-forwarding/apica-uf-proxy-app-extension/standalone-instance.md)
