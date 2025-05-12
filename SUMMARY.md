@@ -21,6 +21,7 @@
 ## RELEASE NOTES
 
 * [Release Notes](release-notes/release-notes/README.md)
+  * [Ascent 2.10.3](release-notes/release-notes/ascent-2.10.3.md)
   * [Ascent 2.10.2](release-notes/release-notes/ascent-2.10.2.md)
   * [Ascent 2.9.0](release-notes/release-notes/ascent-2.9.0.md)
   * [Ascent 2.8.1](release-notes/release-notes/ascent-2.8.1.md)
