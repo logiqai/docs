@@ -75,7 +75,7 @@ let encoded = ascent.encode.uri("Username:A");
 console.log(encoded);
 ```
 
-#### Ascent.encode.hex
+### ascent.encode.hex
 
 Encodes a string in Hexadecimal format.
 
@@ -93,4 +93,42 @@ To encode the username
 
 ```
 Event.encode =  ascent.encode.hex("Username");
+```
+
+### ascent.encode.flatten()
+
+Flattens a nested object into a single-level key-value mapping using dot `.` and bracket `[]` notation.
+
+```
+ascent.encode.flatten(input: object): Record<string, any>;
+```
+
+| Function                  | Description                                                           |
+| ------------------------- | --------------------------------------------------------------------- |
+| `ascent.encode.flatten()` | Takes a nested JSON object and flattens it into a flat key-value map. |
+
+#### Examples
+
+To flatten a nested resource object:
+
+```javascript
+let nested = {
+  resource: [
+    {
+      name: "Kevin",
+      value: "Test"
+    }
+  ]
+};
+
+let flattened = ascent.encode.flatten(nested);
+
+console.log(flattened);
+/*
+{
+  "resource[0].name": "Kevin",
+  "resource[0].value": "Test"
+}
+*/
+
 ```

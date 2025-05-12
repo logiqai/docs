@@ -6,7 +6,7 @@ description: Decoding methods for data in Ascent
 
 ### Ascent.decode - Data Decoding Methods
 
-#### Apica.decode.base64
+### Apica.decode.base64
 
 decodes a string in Base64 format.
 
@@ -26,7 +26,7 @@ To base64-encode the username
 Event.decode = Ascent.decode.b64("Username")
 ```
 
-#### Ascent.decode.gzip
+### Ascent.decode.gzip
 
 Compress a string using Gzip. Output a base64 encode string
 
@@ -46,7 +46,7 @@ To encode the username
 Event.decode =  Ascent.decode.b64("Username");
 ```
 
-#### Ascent.decode.uri
+### Ascent.decode.uri
 
 Encodes a string using URI encoding
 
@@ -66,8 +66,6 @@ To decode the username
 Event.decode =  Ascent.decode.uri("Username");
 ```
 
-#### Ascent.decode.hex
-
 decodes a string in Hexadecimal format.
 
 ```
@@ -84,4 +82,40 @@ To decode the username
 
 ```
 Event.decode =  Ascent.decode.hex("Username");
+```
+
+### Ascent.decode.unflatten
+
+Transforms a flattened object into a nested JSON structure.\
+Useful for reconstructing nested data models from flat key-value mappings.
+
+```
+ascent.decode.unflatten(input: Record<string, any>): object;
+```
+
+| Parameter | Type             | Description                |
+| --------- | ---------------- | -------------------------- |
+| input     | {}\<string, any> | Flattened key-value object |
+
+**Examples**\
+Unflatten a flattened object:
+
+```javascript
+let flattened = {
+  "resource[0].name": "Kevin",
+  "resource[0].value": "Test"
+};
+let unflattened = ascent.decode.unflatten(flattened);
+/*
+Result:
+{
+  "resource": [
+    {
+      "name": "Kevin",
+      "value": "Test"
+    }
+  ]
+}
+*/
+
 ```
