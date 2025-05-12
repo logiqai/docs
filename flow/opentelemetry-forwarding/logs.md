@@ -6,6 +6,8 @@ The OTLP Logs Forwarder lets you send logs in OTLP (OpenTelemetry Protocol) form
 
 You can configure and manage the OTLP Logs Forwarder via the **Forwarders** section of the Ascent UI.
 
+<figure><img src="../../.gitbook/assets/image (418).png" alt=""><figcaption></figcaption></figure>
+
 ***
 
 ### Configuration
