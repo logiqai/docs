@@ -10,7 +10,7 @@ We are excited to introduce the **v2.10.3** release of Flow, focused on expandin
 
 ### Flow
 
-#### OpenTelemetry Metrics Support in Apica Telemetry Pipeline is GA.
+#### OpenTelemetry Metrics Support in Apica Telemetry Pipeline is now GA.
 
 * **OpenTelemetry Metrics in Telemetry Pipelines**:\
   Apica Flow now fully supports **receiving and forwarding OpenTelemetry (OTLP)-compatible metrics** within Apica telemetry pipelines.
@@ -18,6 +18,7 @@ We are excited to introduce the **v2.10.3** release of Flow, focused on expandin
   You can now ingest metrics through the `/v1/metrics` OTLP-compatible endpoint.
 * **Flexible Storage Options**:\
   Configure whether metrics are sent to internal Ascent Prometheus storage or forwarded externally to another OTLP compatible metric storage OR archive to an external object store.
+* **OTLP Metrics and Logs Forwarders** to compatible external systems.
 
 ***
 
