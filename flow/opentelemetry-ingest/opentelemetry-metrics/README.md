@@ -22,3 +22,46 @@ Navigate to **Settings -> Admin Settings -> Ingest Configuration** and enable th
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2025-05-12 at 2.45.06 PM.png" alt=""><figcaption><p>OpenTelemetry Metrics settings for telemetry pipeline</p></figcaption></figure>
 
+
+
+***
+
+## OpenTelemetry to Ascent Ingest Configuration
+
+Below are examples of how to configure processors for OTLP forwarders in Ascent. These help ensure that events are correctly tagged with the desired `namespace` and `app_name` attributes.\
+\
+This ensures that you're metrics land up in your own respective `namespace` and `app_name`.
+
+### Example: Inserting Namespace and App Name
+
+```
+processors:
+  resource/info:
+    attributes:
+      - key: namespace
+        value: mymetrics
+        action: insert
+      - key: app_name
+        value: myapp
+        action: insert
+```
+
+This processor configuration ensures that:
+
+* If `namespace` and `app_name` attributes are not present in incoming events, they will be inserted with values `mymetrics` and `myapp`, respectively.
+* If the attributes are already present, they will remain unchanged.
+* If no such processor is configured, the metrics/logs/traces will fall back to `default_namespace` and `default_app` in Ascent.
+
+***
+
+### When to Use
+
+Use this pattern when you want to ensure your forwarded OTLP data is always tagged correctly with the appropriate metadata, even if the source does not provide it explicitly.
+
+This is especially useful for:
+
+* Testing environments
+* Ingesting raw OTLP data from third-party agents
+* Normalizing inputs before routing
+
+Make sure this processor is configured upstream (e.g., in OpenTelemetry Collector) or directly within the transformation pipeline if supported.
