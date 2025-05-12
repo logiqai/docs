@@ -310,7 +310,6 @@
   * [Elasticsearch Forwarding](flow/forwarding-to-monitoring-tools/elasticsearch-forwarding.md)
   * [Coralogix Forwarding](flow/forwarding-to-monitoring-tools/coralogix-forwarding.md)
   * [Azure Log Analytics Forwarding](flow/forwarding-to-monitoring-tools/azure-log-analytics-forwarding.md)
-  * [JS Code Forwarding](flow/forwarding-to-monitoring-tools/js-code-forwarding.md)
 * [Object Store Forwarding](flow/object-store-forwarding/README.md)
   * [S3 Compatible](flow/object-store-forwarding/s3-compatible.md)
   * [Azure Blob Storage](flow/object-store-forwarding/azure-blob-storage.md)
@@ -319,7 +318,8 @@
 
 ***
 
-* [Customized Forwarders](customized-forwarders.md)
+* [Customized Forwarders](customized-forwarders/README.md)
+  * [JS Code Forwarding](customized-forwarders/js-code-forwarding.md)
 
 ## LAKE
 
