@@ -5,7 +5,7 @@
 OpenTelemetry is a collection of tools, APIs, and SDKs. Use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) to help analyze software’s performance and behavior.
 
 {% hint style="danger" %}
-We recommend using the OpenTelemetry HTTP exporter to send logs, metrics and traces to Apica Ascent. We also support Prometheus exporter.
+We recommend using the OpenTelemetry HTTP exporter to send logs, metrics and traces to Apica Ascent.
 {% endhint %}
 
 ### OTLP Http exporter
