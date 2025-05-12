@@ -28,9 +28,9 @@ Navigate to **Settings -> Admin Settings -> Ingest Configuration** and enable th
 
 ## OpenTelemetry to Ascent Ingest Configuration
 
-Below are examples of how to configure processors for OTLP forwarders in Ascent. These help ensure that events are correctly tagged with the desired `namespace` and `app_name` attributes.\
+Below are examples of how to configure processors for OTLP exporters while exporting to Ascent. These help ensure that events are correctly tagged with the desired `namespace` and `app_name` attributes.\
 \
-This ensures that you're metrics land up in your own respective `namespace` and `app_name`.
+This ensures that your metrics land up in your own respective `namespace` and `app_name`.
 
 ### Example: Inserting Namespace and App Name
 
