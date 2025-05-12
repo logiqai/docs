@@ -149,7 +149,7 @@ Event = ascent.encode.flatten(u);
 
 ***
 
-#### 💡 Tips
+#### Tips
 
 * Always wrap transformations in a try/catch if you're unsure about event structure.
 * You can modify `resource.attributes`, `scope.name`, or any part of the OTLP model.

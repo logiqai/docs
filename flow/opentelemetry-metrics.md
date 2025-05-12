@@ -18,7 +18,7 @@ Navigate to **Settings -> Admin Settings -> Ingest Configuration** and enable th
 * Enable the **`METRICS_TO_PIPELINE_EVENTS`** toggle to activate metrics flow in the telemetry pipeline. This feature is initially turned off
 * `METRICS_STORE_DISABLE` - Enable this option to skip storing metrics in InstaStore. By default, it is off. Activate this when the telemetry pipeline forwards metrics to an external forwarder
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-05-12 at 2.45.19 PM.png" alt=""><figcaption><p>Apica Ascent Settings page for Ingest configuration</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-12 at 2.45.19 PM.png" alt=""><figcaption><p>Apica Ascent Settings page for Ingest configuration</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-05-12 at 2.45.06 PM.png" alt=""><figcaption><p>OpenTelemetry Metrics settings for telemetry pipeline</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-05-12 at 2.45.06 PM.png" alt=""><figcaption><p>OpenTelemetry Metrics settings for telemetry pipeline</p></figcaption></figure>
 

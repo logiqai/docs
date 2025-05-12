@@ -258,7 +258,7 @@
 * [Data Flow Pipelines](flow/data-flow-pipelines-new.md)
 * [Data Flow Visualize Pipelines](flow/data-flow-pipelines.md)
 * [Data Flow Pipeline Dashboard](flow/data-flow-pipeline-dashboard.md)
-* [OpenTelemetry Metrics](flow/opentelemetry-metrics/README.md)
+* [OpenTelemetry Metrics](flow/opentelemetry-metrics.md)
   * [Transforming Metrics through Code Rules](flow/opentelemetry-metrics/transforming-metrics-through-code-rules.md)
 * [Rules](flow/rules/README.md)
   * [FILTER](flow/rules/filter.md)
