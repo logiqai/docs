@@ -255,11 +255,13 @@
 ## Flow
 
 * [Overview](flow/overview.md)
-* [Data Flow Pipelines](flow/data-flow-pipelines-new.md)
-* [Data Flow Visualize Pipelines](flow/data-flow-pipelines.md)
-* [Data Flow Pipeline Dashboard](flow/data-flow-pipeline-dashboard.md)
-* [OpenTelemetry Metrics](flow/opentelemetry-metrics.md)
-  * [Transforming Metrics through Code Rules](flow/opentelemetry-metrics/transforming-metrics-through-code-rules.md)
+* [Pipeline Management](flow/pipeline-management/README.md)
+  * [Configuring Pipelines](flow/pipeline-management/data-flow-pipelines-new.md)
+  * [Visualize Pipelines](flow/pipeline-management/data-flow-pipelines.md)
+  * [Pipeline Overview Dashboard](flow/pipeline-management/data-flow-pipeline-dashboard.md)
+* [OpenTelemetry Ingest](flow/opentelemetry-ingest/README.md)
+  * [OpenTelemetry Metrics](flow/opentelemetry-ingest/opentelemetry-metrics/README.md)
+    * [Transforming Metrics through Code Rules](flow/opentelemetry-ingest/opentelemetry-metrics/transforming-metrics-through-code-rules.md)
 * [Rules](flow/rules/README.md)
   * [FILTER](flow/rules/filter.md)
   * [EXTRACT](flow/rules/extract.md)
@@ -271,6 +273,9 @@
   * [STREAM](flow/rules/stream.md)
 * [List of Forwarders](flow/list-of-forwarders/README.md)
   * [Mapping Applications](flow/list-of-forwarders/mapping-applications.md)
+* [OpenTelemetry Forwarding](flow/opentelemetry-forwarding/README.md)
+  * [Metrics](flow/opentelemetry-forwarding/metrics.md)
+  * [Traces](flow/opentelemetry-forwarding/traces.md)
 * [Splunk Forwarding](flow/splunk-forwarding/README.md)
   * [Apica UF Proxy App Extension](flow/splunk-forwarding/apica-uf-proxy-app-extension/README.md)
     * [Standalone Instance](flow/splunk-forwarding/apica-uf-proxy-app-extension/standalone-instance.md)
@@ -310,9 +315,6 @@
   * [Ascent.text](flow/functions/ascent.text.md)
   * [Ascent.time](flow/functions/ascent.time.md)
   * [Ascent.lookups](flow/functions/ascent.lookups.md)
-* [OpenTelemetry Forwarding](flow/opentelemetry-forwarding/README.md)
-  * [Metrics](flow/opentelemetry-forwarding/metrics.md)
-  * [Traces](flow/opentelemetry-forwarding/traces.md)
 
 ## LAKE
 
