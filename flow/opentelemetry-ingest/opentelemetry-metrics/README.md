@@ -64,4 +64,4 @@ This is especially useful for:
 * Ingesting raw OTLP data from third-party agents
 * Normalizing inputs before routing
 
-Make sure this processor is configured upstream (e.g., in OpenTelemetry Collector) or directly within the transformation pipeline if supported.
+Make sure this processor is configured upstream (e.g., in OpenTelemetry Collector).
