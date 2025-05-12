@@ -261,6 +261,7 @@
   * [Pipeline Overview Dashboard](flow/pipeline-management/data-flow-pipeline-dashboard.md)
   * [Forwarding Data](flow/list-of-forwarders/mapping-applications.md)
 * [OpenTelemetry Ingest](flow/opentelemetry-ingest/README.md)
+  * [OpenTelemetry Logs / Traces](flow/opentelemetry-ingest/opentelemetry-logs-traces.md)
   * [OpenTelemetry Metrics](flow/opentelemetry-ingest/opentelemetry-metrics/README.md)
     * [Transforming Metrics through Code Rules](flow/opentelemetry-ingest/opentelemetry-metrics/transforming-metrics-through-code-rules.md)
 * [Rules](flow/rules/README.md)
