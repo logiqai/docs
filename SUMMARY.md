@@ -319,7 +319,7 @@
 ***
 
 * [Customized Forwarders](customized-forwarders/README.md)
-  * [JS Code Forwarding](customized-forwarders/js-code-forwarding.md)
+  * [JS Code Forwarding](flow/forwarding-to-monitoring-tools/js-code-forwarding.md)
 
 ## LAKE
 
