@@ -260,10 +260,10 @@
   * [OpenTelemetry Logs / Traces](flow/opentelemetry-ingest/opentelemetry-logs-traces.md)
   * [OpenTelemetry Metrics](flow/opentelemetry-ingest/opentelemetry-metrics/README.md)
     * [Transforming Metrics through Code Rules](flow/opentelemetry-ingest/opentelemetry-metrics/transforming-metrics-through-code-rules.md)
-* [Vault](flow/vault/README.md)
-  * [Certificates](flow/vault/certificates.md)
-  * [Variables](flow/vault/variables.md)
-  * [Lookups](flow/vault/lookups.md)
+* [Vault](data-management/vault/README.md)
+  * [Certificates](data-management/vault/certificates.md)
+  * [Variables](data-management/vault/variables.md)
+  * [Lookups](data-management/vault/lookups.md)
 * [Rules](flow/rules/README.md)
   * [FILTER](flow/rules/filter.md)
   * [EXTRACT](flow/rules/extract.md)
@@ -316,6 +316,10 @@
   * [Azure Blob Storage](flow/object-store-forwarding/azure-blob-storage.md)
 * [Forwarding to Data Warehouse](flow/forwarding-to-data-warehouse/README.md)
   * [GCP Bigquery](flow/forwarding-to-data-warehouse/gcp-bigquery.md)
+
+***
+
+* [Customized Forwarders](customized-forwarders.md)
 
 ## LAKE
 
