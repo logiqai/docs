@@ -206,3 +206,19 @@
 #### Enhancements
 
 * **Prometheus Support**: IronDB now fully supports Prometheus data through our noit metric director. We've added the ability to decode Prometheus protobuf data and ingest it directly into the system, expanding your metrics collection options.
+
+
+
+| **Category**                   | **Component**         | **v2.10.2 Version** |
+| ------------------------------ | --------------------- | ------------------- |
+| **Ascent**                     | Coffee                | brew.v3.16.4        |
+|                                | Flash                 | v3.15.2             |
+|                                | ASM UI/API            | 13.34.0             |
+|                                | NG Private Agent      | \[No Change]        |
+|                                | Bnet (Chrome Version) | \[No Change]        |
+|                                | Zebratester           | \[No Change]        |
+|                                | ALT UI                | \[No Change]        |
+| **Check Execution Containers** | Browser               | \[No Change]        |
+|                                | Zebratester           | \[No Change]        |
+|                                | Runbin                | \[No Change]        |
+|                                | Postman               | \[No Change]        |
