@@ -207,18 +207,19 @@
 
 * **Prometheus Support**: IronDB now fully supports Prometheus data through our noit metric director. We've added the ability to decode Prometheus protobuf data and ingest it directly into the system, expanding your metrics collection options.
 
+### **Component Versions - Ascent v2.10.2**
 
-
-| **Category**                   | **Component**         | **v2.10.2 Version** |
-| ------------------------------ | --------------------- | ------------------- |
-| **Ascent**                     | Coffee                | brew.v3.16.4        |
-|                                | Flash                 | v3.15.2             |
-|                                | ASM UI/API            | 13.34.0             |
-|                                | NG Private Agent      | \[No Change]        |
-|                                | Bnet (Chrome Version) | \[No Change]        |
-|                                | Zebratester           | \[No Change]        |
-|                                | ALT UI                | \[No Change]        |
-| **Check Execution Containers** | Browser               | \[No Change]        |
-|                                | Zebratester           | \[No Change]        |
-|                                | Runbin                | \[No Change]        |
-|                                | Postman               | \[No Change]        |
+| **Component**                          | **Versions**                                    |
+| -------------------------------------- | ----------------------------------------------- |
+| Coffee                                 | v3.16.4                                         |
+| Flash                                  | v3.15.2                                         |
+| ASM                                    | 13.34.0                                         |
+| NG Private Agent                       | 1.0.8                                           |
+| Check Execution Container: Browser     | fpr-c-130n-10.2.1-716-r-2025.04.02-0-base-2.0.0 |
+| Check Execution Container: Zebratester | zt-7.5a-p0-r-2025.04.02-0-base-1.2.0            |
+| Check Execution Container: Runbin      | runbin-2025.04.17-0-base-2.2.1                  |
+| Check Execution Container: Postman     | postman-2025.04.17-0-base-1.4.0                 |
+| Bnet (Chrome Version)                  | 10.2.1 (Chrome 130)                             |
+| Zebratester                            | 7.0B                                            |
+| ALT                                    | -                                               |
+| IronDB                                 | -                                               |
