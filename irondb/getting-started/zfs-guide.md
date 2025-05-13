@@ -18,7 +18,6 @@ If you are new to ZFS, there are some basic concepts that you should become fami
 References:
 
 * [OpenZFS Administration](http://open-zfs.org/wiki/System_Administration)
-* [ZFS on Linux RHEL setup](https://github.com/zfsonlinux/zfs/wiki/RHEL-and-CentOS)
 * [ZFS: The Last Word in Filesystems](https://wiki.chipp.ch/twiki/pub/CmsTier3/NFSServerZFSBackupANDdCache/zfs_last_presentation.pdf) Old but still largely relevant presentation introducing ZFS, from Sun Microsystems
 
 ### Pools
@@ -44,7 +43,8 @@ On Linux, ZFS filesystems are mounted at boot by the `zfs-mount` service. They a
 Packages for ZFS are available from the standard Ubuntu repository.
 
 ```
-apt-get install zfs
+sudo apt-get update
+sudo apt-get install zfsutils-linux
 ```
 
 ## Creating a ZFS Pool
@@ -53,7 +53,14 @@ IRONdb setup expects a zpool to exist, but will take care of creating all necess
 
 For best performance with IRONdb, consider using mirror groups. These provide the highest number of write IOPS, but at a cost of 50% of available raw storage. Balancing the capacity of individual nodes with the number of nodes in your IRONdb cluster is something that Apica Support can help you with.
 
-In our example system we have 12 drives available for our IRONdb pool. We will configure six 2-way mirror groups, across which writes will be striped. This is similar to a RAID-10 setup. We will call our pool "data". To simplify the example command we are using the traditional `sdX` names, but it's recommended that you use [different identifiers](https://github.com/zfsonlinux/zfs/wiki/FAQ#selecting-dev-names-when-creating-a-pool) for your devices that are less susceptible to change and make it easier to maintain.
+In our example system we have 12 drives available for our IRONdb pool. We will
+configure six 2-way mirror groups, across which writes will be striped. This is
+similar to a RAID-10 setup. We will call our pool "data". To simplify the
+example command we are using the traditional `sdX` names, but it's recommended
+that you use 
+[different identifiers](https://openzfs.github.io/openzfs-docs/Project%20and%20Community/FAQ.html#selecting-dev-names-when-creating-a-pool-linux)
+for your devices that are less susceptible to change and make it easier to
+maintain.
 
 ```
 zpool create data \

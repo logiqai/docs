@@ -33,11 +33,11 @@ The following network protocols and ports are utilized. These are defaults and m
 
 IRONdb is expected to perform well on a standard installation of supported platforms, but to ensure optimal performance, there are a few tuning changes that should be made. This is especially important if you plan to push your IRONdb systems to the limit of your hardware.
 
-**Linux: Disable Swap**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#linux-disable-swap)
+**Disable Swap**
 
 With systems dedicated solely to IRONdb, there is no need for swap space. Configuring no swap space during installation is ideal, but you can also `swapoff -a` and comment out any swap lines from `/etc/fstab`.
 
-**Linux: Disable Transparent Hugepages**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#linux-disable-transparent-hugepages)
+**Disable Transparent Hugepages**
 
 [THP](https://www.kernel.org/doc/Documentation/vm/transhuge.txt) can interact poorly with the ZFS ARC, causing reduced performance for IRONdb.
 
@@ -59,8 +59,6 @@ kernel/mm/transparent_hugepage/defrag = never
 
 Note: the sysfs mount directory is automatically prepended to the attribute name.
 
-For RHEL/CentOS, there is not a simple method to ensure THP is off. You can add the above echo commands to `/etc/rc.local`, or you can create your own systemd service to do it, or you can create a custom [tuned](http://servicesblog.redhat.com/2012/04/16/tuning-your-system-with-tuned/) profile containing a `[vm]` section that sets `transparent_hugepages=never`.
-
 ## Installation Steps
 
 Follow these steps to get IRONdb installed on your system.
@@ -68,10 +66,6 @@ Follow these steps to get IRONdb installed on your system.
 System commands must be run as a privileged user, such as `root`, or via `sudo`.
 
 ### Configure Software Sources
-
-Configure package repositories.
-
-**Ubuntu Repository**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#ubuntu-repository)
 
 Install the signing keys:
 
@@ -85,18 +79,27 @@ sudo curl -s -o /etc/apt/trusted.gpg.d/backtrace.asc \
 
 Create the file `/etc/apt/sources.list.d/circonus.list` with the following contents, depending on the version:
 
-for Ubuntu 22.04:
-
+For Ubuntu 22.04:
 ```
 deb https://updates.circonus.net/irondb/ubuntu/ jammy main
 deb https://updates.circonus.net/backtrace/ubuntu/ jammy main
+```
+
+For Ubuntu 24.04:
+```
+deb https://updates.circonus.net/irondb/ubuntu/ noble main
+deb https://updates.circonus.net/backtrace/ubuntu/ noble main
 ```
 
 Finally, run `sudo apt-get update`.
 
 ### Install Package
 
-Ubuntu: we have a helper package that works around issues with dependency resolution, since IRONdb is very specific about the versions of dependent Apica packages, and apt-get is unable to cope with them. The helper package must be installed first, i.e., it cannot be installed in the same transaction as the main package.
+There is a helper package that works around issues with dependency resolution,
+since IRONdb is very specific about the versions of dependent Apica packages,
+and `apt-get` is unable to cope with them. The helper package must be installed
+first, i.e., it cannot be installed in the same transaction as the main
+package.
 
 ```
 sudo apt-get install circonus-platform-irondb-apt-policy
@@ -109,19 +112,19 @@ Prepare site-specific information for setup. These values may be set via shell e
 
 **NOTE:** if you wish to use environment variables, you will need to run the install from a root shell, as sudo will clear the environment when it runs.
 
-**IRONDB\_NODE\_UUID**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#irondb_node_uuid)
+**IRONDB_NODE_UUID**
 
 _(required)_ The ID of the current node, which must be unique within a given cluster. You may use the `uuidgen` command that comes with your OS, or generate a [well-formed, non-nil](https://en.wikipedia.org/wiki/Universally_unique_identifier) UUID with an external tool or website. Note that this must be a _lowercase_ UUID. The `uuidgen` tool on some systems, notably MacOS, produces uppercase. Setup will warn and convert the UUID to lowercase.
 
-**IRONDB\_NODE\_ADDR**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#irondb_node_addr)
+**IRONDB_NODE_ADDR**
 
 _(required)_ The IPv4 address or hostname of the current node, e.g., "192.168.1.100" or "host1.domain.com". Hostnames will be resolved to IP addresses once at service start. Failures in DNS resolution may cause service outages.
 
-**IRONDB\_CHECK\_UUID**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#irondb_check_uuid)
+**IRONDB_CHECK_UUID**
 
 _(required)_ Check ID for Graphite, OpenTSDB, and Prometheus metric ingestion, which must be the same on all cluster nodes. You may use the `uuidgen` command that comes with your OS, or generate a [well-formed, non-nil](https://en.wikipedia.org/wiki/Universally_unique_identifier) UUID with an external tool or website. Note that this must be a _lowercase_ UUID. The `uuidgen` tool on some systems, notably MacOS, produces uppercase. Setup will warn and convert the UUID to lowercase.
 
-**IRONDB\_TLS**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#irondb_tls)
+**IRONDB_TLS**
 
 _(optional)_ Configures listeners to require TLS where applicable. Default is "off". If set to "on", a second HTTPS listener will be created on port 8443, for external clients to use for metric submission and querying. Two SSL certificates will be required, utilizing different CNs. See [TLS Configuration](configuration.md#tls-configuration) for details.
 
@@ -131,7 +134,7 @@ Note that OpenTSDB does not support TLS. Even if this option is set to "on", the
 
 **Because of the certificate requirement, the service will not automatically start post-setup.**
 
-**IRONDB\_CRASH\_REPORTING**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#irondb_crash_reporting)
+**IRONDB_CRASH_REPORTING**
 
 _(optional)_ Controls enablement of automated crash reporting. Default is "on".
 IRONdb utilizes sophisticated crash tracing technology to help diagnose errors.
@@ -141,11 +144,11 @@ Apica reporting endpoint:
 If your site's network policy forbids this type of outbound connectivity, set
 the value to "off".
 
-**IRONDB\_ZPOOL**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#irondb_zpool)
+**IRONDB_ZPOOL**
 
 _(optional)_ The name of the zpool that should be used for IRONdb storage. If this is not specified and there are multiple zpools in the system, setup chooses the pool with the most available space.
 
-**Run Installer**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#run-installer)
+**Run Installer**
 
 Run the setup script. All required options must be present, either as environment variables or via command-line arguments. A mix of environment variables and arguments is permitted, but environment variables take precedence over command-line arguments.
 
@@ -298,7 +301,7 @@ When you are satisfied that it looks the way you want, copy `/tmp/topology.tmp`
 to `/opt/circonus/etc/topology` on each node, then proceed to the [Import
 Topology](installation.md#import-topology) step.
 
-#### **Sided Clusters**[**​**](https://docs.circonus.com/irondb/getting-started/manual-installation#sided-clusters)
+#### Sided Clusters
 
 One additional configuration dimension is possible for IRONdb clusters. A cluster may be divided into two "sides", with the guarantee that at least one copy of each stored metric exists on each side of the cluster. For `W` values greater than 2, write copies will be assigned to sides as evenly as possible. Values divisible by 2 will have the same number of copies on each side, while odd-numbered `W` values will place the additional copy on the same side as the primary node for each metric. This allows for clusters deployed across typical failure domains such as network switches, rack cabinets or physical locations.
 
