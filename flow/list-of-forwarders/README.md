@@ -45,7 +45,7 @@ Below, an example of configuring a Splunk HTTP Event Collector is shown
    * Click on Forwarders
    * Click on the Splunk HTTP Event Collector
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Create an Splunk Forwarder</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (344).png" alt=""><figcaption><p>Create an Splunk Forwarder</p></figcaption></figure>
 
 * Fill out all the below fields and click Create
   * **buffer\_size**: The Buffer size for logs
