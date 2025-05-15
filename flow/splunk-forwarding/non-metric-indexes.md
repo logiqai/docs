@@ -1,13 +1,14 @@
 # Non Metric Indexes
 
-Apica supports forwarding to non-metrics indexes. Creating a splunk forwarder is straight forward and uses the _"\_json"_ type when creating the forwarder
+Apica supports forwarding to splunk log indexes. Creating a splunk hec forwarder for logs is straight forward and uses the _"\_json"_ type when creating the forwarder
 
-The following formation is obtained from the Apica UF Proxy App extension for the forwarder
+The following formation is required for the forwarder
 
-1. The **"Host"** key is set to the Apica UF Proxy App extension that was created and should not use the Splunk host name.
-2. The **"Password"** is set to the hec\_token from the Apica UF Proxy App extension
-3. The **"Port"** is set to 8088
-4. The **"User"** is set to **"admin"**
+1. The **"Host"** key is set to the Splunk host name.
+2. The **"Password"** is set to the **`hec_token`** from Splunk
+3. The **"port"** is set to splunk HEC port, default is `8088`
+4. The **"user"** is set to "admin" or the user for which you are providing the HEC token
+5. Select the type field and set it to `_json`
 
 {% hint style="info" %}
 The **Host**, **Password**, **Port**, **User** can also be set to use an external Splunk HEC endpoint directly
