@@ -289,6 +289,7 @@
   * [Traces](flow/opentelemetry-forwarding/traces.md)
   * [Logs](flow/opentelemetry-forwarding/logs.md)
 * [Splunk Forwarding](flow/splunk-forwarding/README.md)
+  * [Splunk HTTP Events Collector (HEC)](flow/splunk-forwarding/splunk-http-events-collector-hec.md)
   * [Apica UF Proxy App Extension](flow/splunk-forwarding/apica-uf-proxy-app-extension/README.md)
     * [Standalone Instance](flow/splunk-forwarding/apica-uf-proxy-app-extension/standalone-instance.md)
     * [List of Indexer Instances](flow/splunk-forwarding/apica-uf-proxy-app-extension/list-of-indexer-instances.md)
