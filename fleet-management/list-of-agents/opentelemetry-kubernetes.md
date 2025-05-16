@@ -6,6 +6,12 @@ description: >-
 
 # OpenTelemetry Kubernetes
 
+The following are the requirements to install Fleet OpenTelementry collectors on a Kubernetes cluster:
+
+1. Cert Manager should be installed.
+2. Make sure the Kubernetes version supports `autoscaling/v2` .&#x20;
+3. [OpenTelemetry Operator](https://github.com/open-telemetry/opentelemetry-operator) should be installed.&#x20;
+
 When OpenTelemetry support on a Kubernetes cluster has been made available, by installing the OpenTelemetry Operator, Fleet can be used to manage individual collectors in the cluster by using an OpenTelemetry OpAMP Bridge. The OpAMP Bridge functions as the connection to Fleet and as the agent within Fleet. There is no need to install any proprietary Fleet components in the Kubernetes cluster, only open-source components from OpenTelemetry.
 
 * Click on the Install Agent Manager Button
