@@ -4,7 +4,7 @@
 
 This table will provide a brief overview of using Apica Synthetic Monitoring in the portal.
 
-<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 What you see above is the home dashboard of ASM.
 

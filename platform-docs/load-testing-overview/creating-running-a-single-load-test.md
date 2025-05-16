@@ -10,11 +10,11 @@ A test script accesses the Load Test target and performs a number of actions tha
 
 To begin the process of creating a load test, navigate to the “Loadtest > New Test” page from the top menu bar within the ALT portal:
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="206"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (4) (1) (2).png" alt="" width="206"><figcaption></figcaption></figure></div>
 
 When the “Create New Loadtest” page appears, a list of links will appear on the right side of the page. Click on any of the links to jump to that step in the scenario process.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (3) (1) (2).png" alt="" width="197"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (3) (1) (2) (1).png" alt="" width="197"><figcaption></figcaption></figure></div>
 
 ### Step 1: Select Subscription <a href="#step-1-select-subscription" id="step-1-select-subscription"></a>
 
