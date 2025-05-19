@@ -71,7 +71,7 @@ We are pleased to announce the release of **Ascent v2.10.4**, which brings impor
 
 ***
 
-### **Component Versions - Ascent v2.10.3**
+### **Component Versions - Ascent v2.10.4**
 
 | **Component**                          | **Versions**                                    |
 | -------------------------------------- | ----------------------------------------------- |
