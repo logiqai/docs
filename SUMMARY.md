@@ -297,7 +297,7 @@
   * [Splunk HTTP Event Collector (HEC) Forwarder](flow/splunk-forwarding/splunk-http-event-collector-hec-forwarder/README.md)
     * [Metric Indexes](flow/splunk-forwarding/splunk-http-event-collector-hec-forwarder/metric-indexes.md)
     * [Non Metric Indexes](flow/splunk-forwarding/splunk-http-event-collector-hec-forwarder/non-metric-indexes.md)
-  * [Syslog Forwarding](flow/splunk-forwarding/syslog-forwarding.md)
+  * [Splunk Syslog Forwarding](flow/splunk-forwarding/syslog-forwarding.md)
 * [Real-Time Stream Forwarding](flow/real-time-stream-forwarding/README.md)
   * [AWS Kinesis](flow/real-time-stream-forwarding/aws-kinesis.md)
   * [Azure Eventhub](flow/real-time-stream-forwarding/azure-eventhub.md)

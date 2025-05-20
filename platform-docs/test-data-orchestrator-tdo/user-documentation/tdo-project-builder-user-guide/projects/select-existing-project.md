@@ -2,7 +2,7 @@
 
 To work with projects, log into TDO with your provided credentials. Click the three bars in the upper left hand corner to open the menu.
 
-<figure><img src="../../../../../.gitbook/assets/image.png" alt=""><figcaption><p>TDO main projects page</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>TDO main projects page</p></figcaption></figure>
 
 {% hint style="info" %}
 You can click on the blue pin icon in the top portion of the menu to ‘pin’ the menu to the left-hand side of your window.
@@ -12,4 +12,4 @@ In the ‘Project’ section, click on the first item, ‘Projects’ to open th
 
 To use an existing project, hover your mouse to the right of an existing project and click on the blue check box to select it. Once selected, the project name will populate in the context box in the upper right-hand corner.
 
-<figure><img src="../../../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Existing project selected</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (8).png" alt=""><figcaption><p>Existing project selected</p></figcaption></figure>
