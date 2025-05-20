@@ -204,10 +204,14 @@ To enable the Ingress controller in MicroK8s, run the following command:
 microk8s enable ingress
 ```
 
-5. Enable HTTPS (optional)
+5. Enable HTTPS (strongly recommended for all production setups)
 
 {% hint style="info" %}
-This step is optional; you can still access the site using HTTP if you don't install an SSL certificate on the host.
+If HTTPS is not configured, the platform can still be accessed over HTTP without installing an SSL certificate on the host.
+
+To enable HTTP access, add the following environment variable to the `coffee-server` service:
+
+`CASDOOR_SECURE_COOKIE=false`
 {% endhint %}
 
 How to Create a Self-Signed Certificate using OpenSSL:
