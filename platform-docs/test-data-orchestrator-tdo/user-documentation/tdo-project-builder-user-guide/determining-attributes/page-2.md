@@ -6,4 +6,4 @@ Priorities are set by the builder and should be based on input from testers or S
 
 You can set the priority when creating a manual attribute or can set it by editing any attribute.  Click on the pencil to the right of the determining attribute on the main page to open the ‘Edit Determining Attribute’ page.  Scroll down to the list of values, and click the pencil to the right of each value (one at a time).  The value will populate in the center pane, but will be greyed out.  Type the associated priority on the ‘priority’ line, and click the 'Apply' button to set it.  (Here we are applying a priority of 3 to the SGD value.) Once all desired priorities are applied, click ‘Save’ to save the priorities.
 
-<figure><img src="../../../../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Creating priorities in the Edit Determining Attributes window</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (39).png" alt=""><figcaption><p>Creating priorities in the Edit Determining Attributes window</p></figcaption></figure>

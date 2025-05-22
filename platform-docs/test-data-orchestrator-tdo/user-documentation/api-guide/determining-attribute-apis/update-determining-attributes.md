@@ -18,7 +18,7 @@ The API call is the same protocol://server:port as above, but it is defined as â
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (43).png" alt=""><figcaption><p>Update Determnining Attribute URL</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (43) (1).png" alt=""><figcaption><p>Update Determnining Attribute URL</p></figcaption></figure>
 
 &#x20;
 
@@ -72,7 +72,7 @@ Here is the Postman screen after the API has been run showing that the prioritie
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (44).png" alt=""><figcaption><p>Return message showing priorities are set</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (44) (1).png" alt=""><figcaption><p>Return message showing priorities are set</p></figcaption></figure>
 
 &#x20;
 
@@ -82,7 +82,7 @@ And here is the edit determining attributes screen from the TDO UI, showing the 
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (45).png" alt=""><figcaption><p>Determining attribute with priorities</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (45) (1).png" alt=""><figcaption><p>Determining attribute with priorities</p></figcaption></figure>
 
 #### &#x20;
 
@@ -152,7 +152,7 @@ When run, Postman shows the results as below.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Return message with updates applied</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (46) (1).png" alt=""><figcaption><p>Return message with updates applied</p></figcaption></figure>
 
 &#x20;
 
@@ -162,4 +162,4 @@ In TDO, you can now see the group by results.  The column on the right in the bo
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Determining attribute with group-by values set</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (47) (1).png" alt=""><figcaption><p>Determining attribute with group-by values set</p></figcaption></figure>

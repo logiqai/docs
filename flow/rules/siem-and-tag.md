@@ -36,4 +36,4 @@ Example:
 
 
 
-![A sample Log2Metrics dashboard that tracks Security Incidents and status codes](<../../.gitbook/assets/image (39) (1).png>)
+![A sample Log2Metrics dashboard that tracks Security Incidents and status codes](<../../.gitbook/assets/image (39) (1) (1).png>)

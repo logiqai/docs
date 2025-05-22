@@ -8,7 +8,7 @@ On clicking the <img src="../.gitbook/assets/Screen Shot 2020-08-11 at 5.34.40 P
 
 ### Creating an alertable event
 
-![](<../.gitbook/assets/image (48) (1).png>)
+![](<../.gitbook/assets/image (48) (1) (1).png>)
 
 #### Fields
 
@@ -33,7 +33,7 @@ All the configured alerts are viewable when navigating to the alerts tab. An Ind
 
 Clicking on the configured alert will open up the respective alert page where it can be modified further for e.g. change the alert rearm duration, add additional alert destinations etc.
 
-![](<../.gitbook/assets/image (36) (1).png>)
+![](<../.gitbook/assets/image (36) (1) (1).png>)
 
 {% hint style="warning" %}
 Apica Ascent includes alerts from its Prometheus alert manager instance that is included with the Apica Ascent install. NOTE that the editing of the Prometheus alert rules cannot be done via the UI and must use alert manager CRD's to change those alert rules.

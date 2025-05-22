@@ -14,7 +14,7 @@ The API is still defined the same way as for a range-based determining attribute
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (38).png" alt=""><figcaption><p>Determining attribute API</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (38) (1).png" alt=""><figcaption><p>Determining attribute API</p></figcaption></figure>
 
 &#x20;
 
@@ -64,7 +64,7 @@ The results screen from Postman shows the API was created.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (39).png" alt=""><figcaption><p>Return message with details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (39) (1).png" alt=""><figcaption><p>Return message with details</p></figcaption></figure>
 
 &#x20;
 
@@ -72,7 +72,7 @@ An ID for the determining attribute is provided in the results section.  If you 
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (40).png" alt=""><figcaption><p>New determining atttribute, no data block source</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (40) (1).png" alt=""><figcaption><p>New determining atttribute, no data block source</p></figcaption></figure>
 
 **Data Block Used as Source**
 
@@ -136,7 +136,7 @@ When this API is run, the results screen in Postman shows the following.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (41).png" alt=""><figcaption><p>Return message with details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (41) (1).png" alt=""><figcaption><p>Return message with details</p></figcaption></figure>
 
 &#x20;
 
@@ -148,4 +148,4 @@ In the TDO UI, the new determining attribute displays the linked data block and 
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (42).png" alt=""><figcaption><p>Determining attribute with data block source</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (42) (1).png" alt=""><figcaption><p>Determining attribute with data block source</p></figcaption></figure>

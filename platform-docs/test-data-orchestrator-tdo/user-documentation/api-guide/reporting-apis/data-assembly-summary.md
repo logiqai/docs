@@ -10,12 +10,12 @@ This call is run as a GET.  It uses the same three parameters as the other repor
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (33).png" alt=""><figcaption><p>Data Assembly Summary with no errors in automation tool</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (33) (1).png" alt=""><figcaption><p>Data Assembly Summary with no errors in automation tool</p></figcaption></figure>
 
 &#x20;For a data assembly that included errors, the partial return information is shown below.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (34).png" alt=""><figcaption><p>Data Assembly Summary with errors shown in automation tool</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (34) (1).png" alt=""><figcaption><p>Data Assembly Summary with errors shown in automation tool</p></figcaption></figure>
 
 &#x20;This assembly contained 12 rows with errors.  The error message and resulting data for the first row are also shown (the full error report for this assembly contains the error message for each row in similar detail).

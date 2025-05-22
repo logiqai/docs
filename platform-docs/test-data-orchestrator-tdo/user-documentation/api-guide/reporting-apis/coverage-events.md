@@ -6,4 +6,4 @@ This API returns information on when a coverage matrix was run to calculate cove
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Coverage Events API and results in an automation tool</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (31) (1).png" alt=""><figcaption><p>Coverage Events API and results in an automation tool</p></figcaption></figure>

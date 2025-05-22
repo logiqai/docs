@@ -38,7 +38,7 @@ management.endpoints.web.exposure.include=health,info,prometheus
 
 Restart the server and navigate to `http://localhost:<port>/actuator/` to verify if the Actuator endpoints are enabled.
 
-![Actuator Endpoints](<../../../.gitbook/assets/image (37) (1).png>)
+![Actuator Endpoints](<../../../.gitbook/assets/image (37) (1) (1).png>)
 
 Navigate to `http://localhost:<port>/actuator/prometheus` and verify if your Prometheus metrics are being displayed.
 

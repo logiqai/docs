@@ -10,4 +10,4 @@ This format is most often used with automation programs.  To call this format, c
 
 &#x20;
 
-<figure><img src="../../../../../../.gitbook/assets/image (23).png" alt=""><figcaption><p>Tab delimited file output</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (23) (1).png" alt=""><figcaption><p>Tab delimited file output</p></figcaption></figure>

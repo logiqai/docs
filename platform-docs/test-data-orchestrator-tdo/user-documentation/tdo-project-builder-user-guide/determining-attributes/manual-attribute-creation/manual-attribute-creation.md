@@ -10,4 +10,4 @@ Since we are creating a ‘Value’ type attribute, there is only one field to c
 
 As with range creation, once the attribute values are populated, click on the ‘Save’ button to save the attribute to your list of determining attributes.
 
-<figure><img src="../../../../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Create Determining Attribute window - create a new attribute</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (32).png" alt=""><figcaption><p>Create Determining Attribute window - create a new attribute</p></figcaption></figure>

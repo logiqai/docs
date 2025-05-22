@@ -8,6 +8,6 @@ In the ‘Type’ section of the upper pane, select ‘Range’.  Since this is 
 
 In the center pane, there are fields for ‘min value’ and ‘max value’.  Enter the values for the first range and click the plus (+) sign to the right to add that to the values list.  In the example below, the first set of values has been added and the second set is entered and ready to add.
 
-<figure><img src="../../../../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Create Determining Attribure window - adding a numeric range attribute</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (31).png" alt=""><figcaption><p>Create Determining Attribure window - adding a numeric range attribute</p></figcaption></figure>
 
 After adding all of your value ranges, click the ‘Save’ button in the top pane to save the determining attribute.

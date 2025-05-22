@@ -6,7 +6,7 @@ In the example shown below, we are creating a determining attribute called ‘am
 
 The API is defined as
 
-<figure><img src="../../../../../.gitbook/assets/image (35).png" alt=""><figcaption><p>URL format</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (35) (1).png" alt=""><figcaption><p>URL format</p></figcaption></figure>
 
 &#x20;
 
@@ -82,7 +82,7 @@ This screen print shows the results code in Postman.  You will also note that th
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (36).png" alt=""><figcaption><p>Results message with determining attribute details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (36) (1).png" alt=""><figcaption><p>Results message with determining attribute details</p></figcaption></figure>
 
 &#x20;
 
@@ -90,4 +90,4 @@ This screen print shows the results code in Postman.  You will also note that th
 
 Here is how the determining attribute looks in TDO.
 
-<figure><img src="../../../../../.gitbook/assets/image (37).png" alt=""><figcaption><p>Determining attribute in TDO after creation</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (37) (1).png" alt=""><figcaption><p>Determining attribute in TDO after creation</p></figcaption></figure>

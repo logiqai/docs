@@ -6,7 +6,7 @@ Filtering helps to prevent invalid data combinations from being selected by end 
 
 To create a filter, click on the pencil by the determining attribute name to open the ‘Edit Determining Attribute’ window.  (We are editing the ‘currency’ determining attribute.) Scroll down to the ‘Criteria’ section of the window (below the values section).  A list of all of the fields available for filtering will be shown.  We want to filter by  ‘account\_type’ so go to that line, and then select  ‘account\_type’ from the drop-down list on the right.&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Setting a Determining Attribute filter</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (40).png" alt=""><figcaption><p>Setting a Determining Attribute filter</p></figcaption></figure>
 
 Scroll up and click the ‘Save’ button to save the filter criteria. (In this use case, some account types are only offered in USD, but others are offered in all supported currencies.)
 
