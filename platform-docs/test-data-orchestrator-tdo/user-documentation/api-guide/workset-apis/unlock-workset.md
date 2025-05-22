@@ -10,7 +10,7 @@ This API is sent as a PATCH call.  The call includes the instruction â€˜unlockâ€
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Unlock workset API call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Unlock workset API call</p></figcaption></figure>
 
 &#x20;The body is the same as the body for the Get Details API.
 

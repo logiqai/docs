@@ -4,12 +4,12 @@
 
 1.  Navigate to **Integrations** > **Alert** **Destinations** and click on **“New Alert Destination”**
 
-    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
     &#x20;
 2.  Select your type of Alert Destination (This example will use an email recipient)
 
-    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
     &#x20;
 3. Enter a name and email address for the recipient. Subject Template can be customized as required. Currently, alert\_name and state are the supported placeholders.

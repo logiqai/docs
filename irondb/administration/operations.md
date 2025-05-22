@@ -72,7 +72,7 @@ IRONdb comes with a built-in operational dashboard accessible via port 8112 in y
 
 The "Overview" tab displays a number of tiles representing the current ingestion throughput, available rollup dimensions, license information, and storage statistics.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Ingestion
 
@@ -110,7 +110,7 @@ Disk space used and performance data per data type and rollup dimension.
 
 Each icon under "Performance" displays a histogram of the associated operation (Get/Put/Proxy) latency since the server last started. "Get" operations are reads, "Put" are writes, and "Proxy" are operations that require fetching data from a different node than the one which received the request.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Latencies are plotted on the x-axis as seconds, with suffixes "m" for milliseconds, "μ" for microseconds, and "n" for nanoseconds. Counts of operations in each latency bucket are on the y-axis. The mean latency for the set is displayed as a vertical green line.
 
