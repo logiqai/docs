@@ -21,7 +21,7 @@ Follow the below steps to create an S2S forwarder to an splunk indexer:
 
 The Splunk plugin for output configurations can be launched from the `Source Extensions` section under `Integrations`.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Selecting the `Forwarding Proxy` source extension gives you the configured proxies as well as the ability to create a new one.\
 

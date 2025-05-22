@@ -79,4 +79,4 @@ Apica ZebraTester is an enterprise-grade load and stress-testing product trusted
 
 Apica ZebraTester executes web load tests up to nearly unlimited levels at a depth unparalleled by other testing tools. A powerful GUI allows you to create sophisticated, custom load test scripts easily and intuitively.
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (2).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (2) (1).png" alt="" width="563"><figcaption></figcaption></figure>

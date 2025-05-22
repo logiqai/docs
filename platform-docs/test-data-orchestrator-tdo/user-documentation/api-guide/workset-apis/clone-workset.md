@@ -12,7 +12,7 @@ When creating this url, remember to use a new name ending in '\_workset'.
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>workset list showing workset to be cloned</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption><p>workset list showing workset to be cloned</p></figcaption></figure>
 
 &#x20;The body of this call is still the very simple body (user ID, password, and project).
 
@@ -50,4 +50,4 @@ When run, the response shows the details of the cloned workset.
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>New workset details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>New workset details</p></figcaption></figure>

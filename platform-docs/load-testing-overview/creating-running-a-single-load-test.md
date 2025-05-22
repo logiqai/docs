@@ -28,7 +28,7 @@ The specific terms of a subscription are determined when the customer contract i
 
 When a subscription has been selected, select a script from which to build the Load Test:
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (5) (1).png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (5) (1) (2).png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 #### Use Existing Loadtest Script <a href="#use-existing-loadtest-script" id="use-existing-loadtest-script"></a>
 
@@ -46,7 +46,7 @@ After that script is generated, it will appear as an existing .class file.
 
 **Create a New Loadtest Selenium Script**
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (6) (1) (2).png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 It is possible to utilize an HTML-formatted Selenium IDE recorded session as the Load Test script. In the below screenshot, the file has already been uploaded and the user must click the Actions icon and wait until that HTML file has been run.
 
