@@ -8,7 +8,7 @@ description: Creating and using EXTRACT Rules in Apica Ascent
 
 To configure field extraction from log messages, follow the steps below to create an **EXTRACT** rule within a pipeline.
 
-EXTRACT rule can help you convert unstructured logs into structured logs by using re2 syntax.
+EXTRACT rule can help you convert unstructured logs into structured logs by using regex with re2 syntax.
 
 #### 1. Navigate to the Configure Pipeline
 
