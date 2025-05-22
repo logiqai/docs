@@ -195,5 +195,5 @@ scrape_configs:
 
 For any container to be scraped, add Dockerlabels below on  ECS task with the metrics path and endpoint.
 
-![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (18) (1) (1) (1) (1) (1).png>)
 

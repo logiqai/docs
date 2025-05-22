@@ -4,7 +4,7 @@ All data is brought into TDO as ‘String’ data type.  You have the option to 
 
 You can set a data type without applying a field format, and you can apply a field format without setting a data type.  For more details on formats supported in TDO, you should reference the ‘Format Functions Guide’ section of the online manuals or the help menu in TDO.
 
-<figure><img src="../../../../../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Structure Manager with a data type and format mask applied</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (16) (1).png" alt=""><figcaption><p>Structure Manager with a data type and format mask applied</p></figcaption></figure>
 
 {% hint style="danger" %}
 Please note that you are working with .csv files.  You should never set a number field with a mask that contains commas, as those are interpreted as field delimiters.
@@ -14,7 +14,7 @@ Once you have completed editing the file (ie, setting determining attributes and
 
 In the data block list, the data block will now show ‘true’ under the ‘Validated’ column, along with the user ID who performed the validation and the date it was completed.
 
-<figure><img src="../../../../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>File validation completed</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (17) (1).png" alt=""><figcaption><p>File validation completed</p></figcaption></figure>
 
 Before moving onto the next step, complete the validation process for all ingested data blocks.  Note that, even if you are not making any changes to the file, you need to open the file and save it to validate that file.  In this case, you are confirming that all fields in the file are strings, there are no determining attributes sourced from that file, and no special formats are needed.
 

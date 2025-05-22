@@ -10,10 +10,10 @@ When run in a browser tab, the browser download manager will show when the file 
 
 &#x20;
 
-<figure><img src="../../../../../../.gitbook/assets/image (19) (1).png" alt=""><figcaption><p>Download manager shows file is available</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (19) (1) (1).png" alt=""><figcaption><p>Download manager shows file is available</p></figcaption></figure>
 
 &#x20;The file can be accessed and opened via the download manager.&#x20;
 
 &#x20;
 
-<figure><img src="../../../../../../.gitbook/assets/image (20) (1).png" alt=""><figcaption><p>Downloaded file viewed in Excel</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (20) (1) (1).png" alt=""><figcaption><p>Downloaded file viewed in Excel</p></figcaption></figure>

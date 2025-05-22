@@ -73,7 +73,7 @@ This CloudFormation stack creates a Lambda function and its necessary permission
 
 Once the CloudFormation stack is created, navigate to the AWS Lambda function (`logiq-cloudwatch-exporter`) and add a trigger.
 
-![](<../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1).png>)
 
 On the **Add trigger** page, select **CloudWatch**, and then select a CloudWatch Logs **Log Group**.
 

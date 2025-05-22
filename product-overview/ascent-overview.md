@@ -30,6 +30,6 @@ Apica Ascent employs a unified view of your enterprise, utilizing a full-stack a
 
 Apica Ascent takes pride in its commitment to security and compliance. The platform adheres to SOC 2 Type II Compliance standards and is an esteemed member of the Cloud Native Computing Foundation (CNCF).
 
-|                                  |                                           |                                                                                   |
-| -------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------- |
-| ![](../.gitbook/assets/SOC2.png) | ![](../.gitbook/assets/cncf-featured.png) | <img src="../.gitbook/assets/image (18) (1) (1).png" alt="" data-size="original"> |
+|                                  |                                           |                                                                                       |
+| -------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------- |
+| ![](../.gitbook/assets/SOC2.png) | ![](../.gitbook/assets/cncf-featured.png) | <img src="../.gitbook/assets/image (18) (1) (1) (1).png" alt="" data-size="original"> |
