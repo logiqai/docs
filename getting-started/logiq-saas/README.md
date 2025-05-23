@@ -20,7 +20,7 @@ For all users that want to get started with Ascent should follow these five (5) 
 
 In this guide, we cover the key goals and related activities of each step to ensure a quick and easy setup of Ascent.
 
-### Step 1 - Collect Data from Input Sources
+### Step 1 - Start Ingesting Data
 
 The goal is to ingest telemetry data (logs, metrics, traces) from relevant systems.
 
@@ -30,6 +30,93 @@ The goal is to ingest telemetry data (logs, metrics, traces) from relevant syste
 * Choose agents appropriate for each data type
 * Configure data collection frequency and granularity
 * Ensure data normalization
+
+**Detailed steps to start ingesting data:**
+
+### Log into Ascent
+
+<figure><img src="../../.gitbook/assets/image (458).png" alt=""><figcaption></figcaption></figure>
+
+From the menu bar, go to: Explore -> Fleet:
+
+With Fleet you can automate your data ingestion configuration:
+
+<figure><img src="../../.gitbook/assets/image (461).png" alt=""><figcaption></figcaption></figure>
+
+You'll be directed to the Fleet landing page:
+
+<figure><img src="../../.gitbook/assets/image (462).png" alt=""><figcaption></figcaption></figure>
+
+From here, you'll click "Install Agent Manager."\
+\- The Agent Manager will allow you to control and configure the OpenTelemetry Collector.
+
+<figure><img src="../../.gitbook/assets/image (463).png" alt=""><figcaption></figcaption></figure>
+
+Inside the "Install Agent Manager" pop-up screen, select:
+
+* Platform: Linux
+* Agent Type: OpenTelemetry Collector
+
+Then, click 'Proceed'.
+
+<figure><img src="../../.gitbook/assets/image (464).png" alt=""><figcaption></figcaption></figure>
+
+You'll be redirected to the 'Fleet README' pop-up page:
+
+* You'll download and configure this configuration file to start ingesting data.
+
+<figure><img src="../../.gitbook/assets/image (465).png" alt=""><figcaption></figcaption></figure>
+
+You'll download 2 files:
+
+* The README.txt contains instructions for how to install the Agent Manager and OpenTelemetry Collector.
+* The fleet-install.sh is a preconfigured script that you'll run on your Linux host to start ingesting data into Ascent automatically:
+
+<div align="left"><figure><img src="../../.gitbook/assets/image (466).png" alt=""><figcaption></figcaption></figure></div>
+
+On your Linux host, start by creating a file by running this command:
+
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot 2025-05-23 at 11.08.17 AM.png" alt=""><figcaption></figcaption></figure></div>
+
+Paste the contents of 'fleet-install.sh' into nano editor:
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-05-23 at 11.08.39 AM.png" alt=""><figcaption></figcaption></figure>
+
+Run the Fleet-install.sh with the command below:
+
+* sudo ./fleet-install.sh
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-05-23 at 11.10.54 AM.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-05-23 at 11.12.30 AM.png" alt=""><figcaption></figcaption></figure>
+
+Once the script completes, you'll see the agent in the Fleet screen as 'Active':
+
+<figure><img src="../../.gitbook/assets/image (467).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Links to related docs include:**
 
