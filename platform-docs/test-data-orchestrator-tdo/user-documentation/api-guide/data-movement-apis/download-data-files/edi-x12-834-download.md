@@ -38,10 +38,10 @@ o  n = output row n-1&#x20;
 
 &#x20;&#x20;
 
-<figure><img src="../../../../../../.gitbook/assets/image (24) (1).png" alt=""><figcaption><p>834 format output with browser download manager message</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (24) (1) (1).png" alt=""><figcaption><p>834 format output with browser download manager message</p></figcaption></figure>
 
 &#x20;This is a sample of the file output by TDO:
 
 &#x20;
 
-<figure><img src="../../../../../../.gitbook/assets/image (25) (1).png" alt=""><figcaption><p>Sample EDI X12 834 output</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (25) (1) (1).png" alt=""><figcaption><p>Sample EDI X12 834 output</p></figcaption></figure>

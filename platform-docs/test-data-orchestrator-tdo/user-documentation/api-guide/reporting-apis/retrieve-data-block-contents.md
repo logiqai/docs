@@ -4,4 +4,4 @@ This API is also a GET call.  It will return the same user and IP address inform
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (32) (1).png" alt=""><figcaption><p>Retrieve Data Block API and results in an automation tool</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (32) (1) (1).png" alt=""><figcaption><p>Retrieve Data Block API and results in an automation tool</p></figcaption></figure>
