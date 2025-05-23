@@ -1,2 +1,0 @@
-# Format Function Guide
-

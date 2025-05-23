@@ -724,7 +724,10 @@
         * [Retrieve Data Block Contents](platform-docs/test-data-orchestrator-tdo/user-documentation/api-guide/reporting-apis/retrieve-data-block-contents.md)
         * [Data Assembly Summary](platform-docs/test-data-orchestrator-tdo/user-documentation/api-guide/reporting-apis/data-assembly-summary.md)
     * [Workflow Guide](platform-docs/test-data-orchestrator-tdo/user-documentation/workflow-guide.md)
-    * [Format Function Guide](platform-docs/test-data-orchestrator-tdo/user-documentation/format-function-guide.md)
+    * [Format Function Guide](platform-docs/test-data-orchestrator-tdo/user-documentation/format-function-guide/README.md)
+      * [String Formats](platform-docs/test-data-orchestrator-tdo/user-documentation/format-function-guide/string-formats.md)
+      * [Boolean Formats](platform-docs/test-data-orchestrator-tdo/user-documentation/format-function-guide/boolean-formats.md)
+      * [Hexadecimal Formats](platform-docs/test-data-orchestrator-tdo/user-documentation/format-function-guide/hexadecimal-formats.md)
   * [Release Notes](platform-docs/test-data-orchestrator-tdo/release-notes.md)
     * [Build 1.0.2.0-20250213-1458](platform-docs/test-data-orchestrator-tdo/release-notes/build-1.0.2.0-20250213-1458.md)
 

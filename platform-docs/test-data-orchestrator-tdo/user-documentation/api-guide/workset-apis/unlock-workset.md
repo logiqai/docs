@@ -10,7 +10,7 @@ This API is sent as a PATCH call.  The call includes the instruction ‘unlock�
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Unlock workset API call</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Unlock workset API call</p></figcaption></figure>
 
 &#x20;The body is the same as the body for the Get Details API.
 
@@ -38,10 +38,10 @@ This API is sent as a PATCH call.  The call includes the instruction ‘unlock�
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Unlock workset return message</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Unlock workset return message</p></figcaption></figure>
 
 Viewing the workset screen in TDO after this API has been run, you can see that there is no longer a lock present on this workset (no value in the ‘locked by’ column).
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Lock removed in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Lock removed in TDO</p></figcaption></figure>
