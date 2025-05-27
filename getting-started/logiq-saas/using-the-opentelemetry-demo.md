@@ -1,10 +1,14 @@
 # Using the OpenTelemetry Demo
 
-The Ascent platform enables you to converge all of your IT data from disparate sources, manage your telemetry data, and monitor and troubleshoot your operational data in real-time. The following guide assumes that you have signed up for Apica Ascent in the cloud. **If you are not yet a registered user, please** [**follow this link and the defined steps**](https://app.gitbook.com/o/-LmzGjHypGkPBzYc0fF0/s/-LmzGprckLqwd5v6bs6m/~/changes/1553/getting-started/logiq-saas/register-and-gain-access). Once registered, use this guide to get started.
+## What is the OpenTelemetry (OTel) Demo?
+
+The OTel Demo is a microservices-based application created by OpenTelemetry's community to demonstrate its capabilities in a realistic, distributed system environment. This demo application, known as the OpenTelemetry Astronomy Shop, simulates an e-commerce website composed of over 10 interconnected microservices (written in multiple languages), and communicates via HTTP and gRPC. Each service is fully instrumented with OTel, generating comprehensive traces, metrics, and logs.&#x20;
+
+The demo serves as an invaluable resource for understanding how to implement and use OpenTelemetry in real-world applications. Using the Ascent platform with the OTel Demo enables you to converge all of the IT data, manage the telemetry data, and monitor and troubleshoot the operational data in real-time. The following steps guide you through the process of using the OTel Demo application with Ascent.
 
 <figure><img src="../../.gitbook/assets/image (20) (1) (1).png" alt=""><figcaption><p>Ascent Quick Start Process</p></figcaption></figure>
 
-## Quick Start Process for Using Ascent
+## Quick Start Process for Using the OTel Demo with Ascent
 
 For all users that want to get started with Ascent should follow these five (5) simple steps:
 
