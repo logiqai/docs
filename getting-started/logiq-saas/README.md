@@ -92,33 +92,15 @@ Run the Fleet-install.sh with the command below:
 
 Once the script completes, you'll see the agent in the Fleet screen as 'Active':
 
-<figure><img src="../../.gitbook/assets/image (467).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (467).png" alt=""><figcaption><p>Confirmation of Active Fleet Agent</p></figcaption></figure>
+
+You can then confirm that data is flowing into the system:
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-05-23 at 4.49.42 PM.png" alt=""><figcaption><p>Log Data Flow</p></figcaption></figure>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Links to related docs include:**
+**Additional Links to helpful docs include:**
 
 * [Data sources overview](https://docs.apica.io/data-sources/overview)
 * [Integrations overview](https://docs.apica.io/integrations/overview)
