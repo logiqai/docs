@@ -1,4 +1,4 @@
-# Using the OTEL Demo App
+# Using the OpenTelemetry Demo
 
 The Ascent platform enables you to converge all of your IT data from disparate sources, manage your telemetry data, and monitor and troubleshoot your operational data in real-time. The following guide assumes that you have signed up for Apica Ascent in the cloud. **If you are not yet a registered user, please** [**follow this link and the defined steps**](https://app.gitbook.com/o/-LmzGjHypGkPBzYc0fF0/s/-LmzGprckLqwd5v6bs6m/~/changes/1553/getting-started/logiq-saas/register-and-gain-access). Once registered, use this guide to get started.
 
@@ -8,11 +8,11 @@ The Ascent platform enables you to converge all of your IT data from disparate s
 
 For all users that want to get started with Ascent should follow these five (5) simple steps:
 
-1. [Deploy OTEL Demo App](using-the-otel-demo-app.md#step-1-deploy-otel-demo-ap)
-2. [Setup and Configure Pipeline](using-the-otel-demo-app.md#step-2-setup-and-configure-pipeline)
-3. [Design Queries](using-the-otel-demo-app.md#step-3-design-queries)
-4. [Create Dashboards](using-the-otel-demo-app.md#step-4-create-dashboards)
-5. [Setup Alerts and Workflow](using-the-otel-demo-app.md#step-5-setup-alerts-and-workflow)
+1. [Deploy the OTEL Demo App](using-the-opentelemetry-demo.md#step-1-deploy-otel-demo-ap)
+2. [Setup and Configure Pipeline](using-the-opentelemetry-demo.md#step-2-setup-and-configure-pipeline)
+3. [Design Queries](using-the-opentelemetry-demo.md#step-3-design-queries)
+4. [Create Dashboards](using-the-opentelemetry-demo.md#step-4-create-dashboards)
+5. [Setup Alerts and Workflow](using-the-opentelemetry-demo.md#step-5-setup-alerts-and-workflow)
 
 In this guide, we cover the key goals and related activities of each step to ensure a quick and easy setup of Ascent.
 

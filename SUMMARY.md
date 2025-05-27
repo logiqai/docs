@@ -45,7 +45,7 @@
 
 * [Getting Started with Ascent](getting-started/logiq-saas/README.md)
   * [Register and Gain Access](getting-started/logiq-saas/register-and-gain-access.md)
-  * [Using the OTEL Demo App](getting-started/logiq-saas/using-the-otel-demo-app.md)
+  * [Using the OpenTelemetry Demo](getting-started/logiq-saas/using-the-opentelemetry-demo.md)
   * [Getting Started with Metrics](getting-started/logiq-saas/getting-started-with-metrics.md)
   * [Getting Started with Logs](getting-started/logiq-saas/getting-started-with-logs/README.md)
     * [OpenTelemetry](getting-started/logiq-saas/getting-started-with-logs/opentelemetry.md)
