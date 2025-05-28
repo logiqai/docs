@@ -84,43 +84,32 @@ Paste the following into the config file, overwriting it completely:
 1.  Copy
 
     ```
-    receivers:
-      hostmetrics:
-        collection_interval: 10s
-        scrapers:
-          cpu:
-            metrics:
-              system.cpu.utilization:
-                enabled: true
-          load:
-          memory:
-          filesystem:
-          network:
-          disk:
-          paging:
-          processes:
-
-    processors:
-      batch:
-        timeout: 5s
-
     exporters:
-      debug:
-        verbosity: detailed
-      prometheusremotewrite:
-        endpoint: https://<YOUR-ASCENT-ENV>/api/v1/receive
+      otlphttp/apicametrics:
+        compression: gzip
+        disable_keep_alives: true
+        encoding: proto
+        metrics_endpoint: "https://<YOUR-ASCENT-ENV>/v1/metrics"
         headers:
-          Authorization: Bearer <YOUR-INGEST-TOKEN>
+          Authorization: "Bearer <YOUR-INGEST-TOKEN>"
         tls:
           insecure: false
           insecure_skip_verify: true
-
+      otlphttp/logs:
+        logs_endpoint:  https://<YOUR-ASCENT-ENV>/v1/json_batch/otlplogs?namespace=OtelDemo&application=DemoLogs
+        encoding: json
+        compression: gzip
+        headers:
+          Authorization: "Bearer <YOUR-INGEST-TOKEN>"
+        tls:
+          insecure: false
+          insecure_skip_verify: true
     service:
       pipelines:
         metrics:
-          receivers: [hostmetrics]
-          processors: [batch]
-          exporters: [prometheusremotewrite, debug]
+          exporters: [otlphttp/apicametrics]
+        logs:
+          exporters: [otlphttp/logs]
     ```
 2. Replace \<YOUR-ASCENT-ENV>with your Ascent domain, e.g. company.apica.io
 3. Replace \<YOUR-INGEST-TOKEN>with your Ascent Ingest Token, e.g. eyXXXXXXXXXXX...
@@ -129,9 +118,12 @@ Paste the following into the config file, overwriting it completely:
 ### Step 7: Get Your Ingest Token from Ascent:
 
 * [https://docs.apica.io/integrations/overview/generating-a-secure-ingest-token](https://docs.apica.io/integrations/overview/generating-a-secure-ingest-token)
-* Restart OpenTelemetry collector:
 
+### Step 8: Get Data Flowing into Ascent Platform:
 
+Restart the OpenTelemetry collector by running the following command:
+
+`$ docker compose restart`
 
 ## Verify Data Ingestion in Ascent:
 
