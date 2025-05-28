@@ -133,7 +133,7 @@ Paste the following into the config file, overwriting it completely:
 
 
 
-\==========
+## Verify Data Ingestion in Ascent:
 
 **Detailed steps to start ingesting data:**
 
