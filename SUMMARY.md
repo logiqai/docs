@@ -472,6 +472,7 @@
       * [How to Mask Sensitive Information Within an ASM Scenario](platform-docs/synthetic-monitoring-overview/how-to-articles/asm-scenarios-how-to/how-to-mask-sensitive-information-within-an-asm-scenario.md)
       * [Handling Elements Which Do Not Appear Consistently](platform-docs/synthetic-monitoring-overview/how-to-articles/asm-scenarios-how-to/handling-elements-which-do-not-appear-consistently.md)
       * [How to Handle HTML Windows in ASM Scenarios](platform-docs/synthetic-monitoring-overview/how-to-articles/asm-scenarios-how-to/how-to-handle-html-windows-in-asm-scenarios.md)
+    * [Installing CES Private Agent (Docker)](platform-docs/synthetic-monitoring-overview/how-to-articles/installing-ces-private-agent-docker.md)
 * [ZebraTester Scripting](platform-docs/zebratester-scripting/README.md)
   * [ZebraTester Overview](platform-docs/zebratester-scripting/zebratester-overview.md)
   * [Install ZebraTester](platform-docs/zebratester-scripting/install-zebratester/README.md)
