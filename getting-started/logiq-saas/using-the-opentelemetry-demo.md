@@ -20,7 +20,7 @@ For all users that want to get started with Ascent should follow these five (5) 
 
 In this guide, we cover the key goals and related activities of each step to ensure a quick and easy setup of Ascent.
 
-### Step 1 - Deploy OTEL Demo App
+### How to Deploy the OTEL Demo App
 
 The goal is to ingest telemetry data (logs, metrics, traces) from relevant systems.
 
@@ -29,6 +29,61 @@ The goal is to ingest telemetry data (logs, metrics, traces) from relevant syste
 * Accessing and deploying the public OpenTelemetry (OTEL) Demo App
 * Configure data collection setup, frequency and granularity
 * Ensure data normalization
+
+This guide aims to walk you through the steps required to deploy the OpenTelemetry Demo app and begin sending data to Ascent.
+
+**NOTE**: We will deploy the OTEL demo app using Docker for this guide.
+
+## Prerequisites:
+
+Docker
+
+[Docker Compose v2.0.0+](https://docs.docker.com/compose/install/)
+
+6 GB of RAM for the application
+
+### Step 1: Get and Clone the OTEL demo app repository:
+
+`$ git clone https://github.com/open-telemetry/opentelemetry-demo.git`
+
+### Step 2: Go to the demo folder:
+
+`$ cd opentelemetry-demo/`
+
+### Step 3: Start the demo app in Docker:
+
+`$ docker compose up --force-recreate --remove-orphans --detach`
+
+### Step 4: (Optional) Enable API obseravability-driven testing:
+
+`$ docker compose up --force-recreate --remove-orphans --detach`
+
+### Step 5: Accessing the demo application:
+
+Once the images are built and containers are started you can now access the following Opentelemetry components on the demo app web store:
+
+* Web store: [http://localhost:8080/](http://localhost:8080/)
+* Grafana: [http://localhost:8080/grafana/](http://localhost:8080/grafana/)
+* Load Generator UI: [http://localhost:8080/loadgen/](http://localhost:8080/loadgen/)
+* Jaeger UI: [http://localhost:8080/jaeger/ui/](http://localhost:8080/jaeger/ui/)
+* Tracetest UI: [http://localhost:11633/](http://localhost:11633/), only when using `make run-tracetesting`
+* Flagd configurator UI: [http://localhost:8080/feature](http://localhost:8080/feature)
+
+### Optional: Changing the demo’s primary port number <a href="#changing-the-demos-primary-port-number" id="changing-the-demos-primary-port-number"></a>
+
+By default, the demo application will start a proxy for all browser traffic bound to port 8080. To change the port number, set the `ENVOY_PORT` environment variable before starting the demo.
+
+* For example to use port 8081:
+
+`$ ENVOY_PORT=8081 docker compose up --force-recreate --remove-orphans --detach`
+
+
+
+
+
+
+
+\==========
 
 **Detailed steps to start ingesting data:**
 
