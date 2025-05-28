@@ -8,7 +8,7 @@ The demo serves as an invaluable resource for understanding how to implement and
 
 <figure><img src="../../.gitbook/assets/image (20) (1) (1).png" alt=""><figcaption><p>Ascent Quick Start Process</p></figcaption></figure>
 
-## Quick Start Process for Using the OTel Demo with Ascent
+## Quick Start Process for Using the OTel Demo app with Ascent
 
 For all users that want to get started with Ascent should follow these five (5) simple steps:
 
@@ -36,11 +36,9 @@ This guide aims to walk you through the steps required to deploy the OpenTelemet
 
 ## Prerequisites:
 
-Docker
-
-[Docker Compose v2.0.0+](https://docs.docker.com/compose/install/)
-
-6 GB of RAM for the application
+* Docker
+* [Docker Compose v2.0.0+](https://docs.docker.com/compose/install/)
+* 6 GB of RAM for the application
 
 ### Step 1: Get and Clone the OTEL demo app repository:
 
@@ -54,13 +52,13 @@ Docker
 
 `$ docker compose up --force-recreate --remove-orphans --detach`
 
-### Step 4: (Optional) Enable API obseravability-driven testing:
+### Step 4: (Optional) Enable API observability-driven testing:
 
 `$ docker compose up --force-recreate --remove-orphans --detach`
 
-### Step 5: Accessing the demo application:
+### Step 5: Test and access the OTEL demo application:
 
-Once the images are built and containers are started you can now access the following Opentelemetry components on the demo app web store:
+Once the images are built and containers are started, you can now access the following Opentelemetry components on the demo app web store:
 
 * Web store: [http://localhost:8080/](http://localhost:8080/)
 * Grafana: [http://localhost:8080/grafana/](http://localhost:8080/grafana/)
@@ -77,9 +75,61 @@ By default, the demo application will start a proxy for all browser traffic boun
 
 `$ ENVOY_PORT=8081 docker compose up --force-recreate --remove-orphans --detach`
 
+### Step 6: Update the OTEL config file:
 
+* /src/otel-collector/otelcol-config-extras.yml
 
+Paste the following into the config file, overwriting it completely:
 
+1.  Copy
+
+    ```
+    receivers:
+      hostmetrics:
+        collection_interval: 10s
+        scrapers:
+          cpu:
+            metrics:
+              system.cpu.utilization:
+                enabled: true
+          load:
+          memory:
+          filesystem:
+          network:
+          disk:
+          paging:
+          processes:
+
+    processors:
+      batch:
+        timeout: 5s
+
+    exporters:
+      debug:
+        verbosity: detailed
+      prometheusremotewrite:
+        endpoint: https://<YOUR-ASCENT-ENV>/api/v1/receive
+        headers:
+          Authorization: Bearer <YOUR-INGEST-TOKEN>
+        tls:
+          insecure: false
+          insecure_skip_verify: true
+
+    service:
+      pipelines:
+        metrics:
+          receivers: [hostmetrics]
+          processors: [batch]
+          exporters: [prometheusremotewrite, debug]
+    ```
+2. Replace \<YOUR-ASCENT-ENV>with your Ascent domain, e.g. company.apica.io
+3. Replace \<YOUR-INGEST-TOKEN>with your Ascent Ingest Token, e.g. eyXXXXXXXXXXX...
+   1. See 'Step 7' to get your 'ingest-token'
+
+### Step 7: Get Your Ingest Token from Ascent:
+
+* [https://docs.apica.io/integrations/overview/generating-a-secure-ingest-token](https://docs.apica.io/integrations/overview/generating-a-secure-ingest-token)
+* Restart OpenTelemetry collector:
 
 
 
