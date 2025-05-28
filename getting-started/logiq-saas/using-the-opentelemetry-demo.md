@@ -125,24 +125,26 @@ Restart the OpenTelemetry collector by running the following command:
 
 `$ docker compose restart`
 
-## Verify Data Ingestion in Ascent:
+### Step 9: Verify data flow in Ascent:
 
-Follow the below-detailed steps to start ingesting data:
+1. Log into Ascent
+2. Navigate to Explore -> Logs & Insights:
 
-### Log into Ascent:
+<figure><img src="../../.gitbook/assets/image (468).png" alt=""><figcaption><p>Logs &#x26; Insights</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (458).png" alt=""><figcaption></figcaption></figure>
-
-
-
+3.  You should see namespace "OtelDemo" and Application "DemoLogs":\
 
 
-**Additional Links to helpful docs include:**
+    <figure><img src="../../.gitbook/assets/image (469).png" alt=""><figcaption></figcaption></figure>
 
-* [Data sources overview](https://docs.apica.io/data-sources/overview)
-* [Integrations overview](https://docs.apica.io/integrations/overview)
 
-### Step 2 - Setup and Configure Pipeline
+4. This confirms that data is flowing from the Opentelemetry Demo Application. Feel free to click into application "DemoLogs" to view all the logs that are being sent from the Demo App.&#x20;
+
+
+
+**Now that data is flowing, please follow the steps below to learn how to interact, enhance, and visualize this data in Ascent.**
+
+### Step 10 - Setup and Configure Pipeline
 
 The goal is to transport and process the collected data.
 
@@ -158,7 +160,7 @@ The goal is to transport and process the collected data.
 * [Visualize pipelines](https://docs.apica.io/flow/pipeline-management/data-flow-pipelines)
 * [Forwarding data](https://docs.apica.io/flow/pipeline-management/mapping-applications)
 
-### Step 3 - Design Queries
+### Step 11 - Design Queries
 
 The goal is to enable insights by querying telemetry data.
 
@@ -175,7 +177,7 @@ The goal is to enable insights by querying telemetry data.
 * [Query builder](https://docs.apica.io/data-management/overview-1/query-builder)
 * [Widget](https://docs.apica.io/data-management/overview-1/widget)
 
-### Step 4 - Create Dashboards
+### Step 12 - Create Dashboards
 
 The goal is to visualize system performance and behavior in real time.
 
@@ -190,7 +192,7 @@ The goal is to visualize system performance and behavior in real time.
 
 * [Dashboards overview](https://docs.apica.io/getting-started/overview)
 
-### Step 5 - Setup Alerts and Workflow
+### Step 13 - Setup Alerts and Workflow
 
 The goal is to detect anomalies and automate response actions.
 
