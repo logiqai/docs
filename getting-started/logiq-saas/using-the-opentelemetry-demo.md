@@ -127,9 +127,9 @@ Restart the OpenTelemetry collector by running the following command:
 
 ## Verify Data Ingestion in Ascent:
 
-**Detailed steps to start ingesting data:**
+Follow the below-detailed steps to start ingesting data:
 
-### Log into Ascent
+### Log into Ascent:
 
 <figure><img src="../../.gitbook/assets/image (458).png" alt=""><figcaption></figcaption></figure>
 
