@@ -4,7 +4,7 @@
 
 We're excited to share the latest improvements in version 2.10.5. This release focuses on making your monitoring and observability experience smoother with bug fixes, enhanced integrations, and better user interface improvements.
 
-### Flow (Data Pipeline Management)
+### Flow
 
 **New Features**
 
@@ -18,7 +18,7 @@ We're excited to share the latest improvements in version 2.10.5. This release f
 * Resolved an issue with the Unflatten function in Pipeline Code blocks
 * Fixed namespace settings in Kubernetes agent configurations
 
-### Observe (Monitoring & Analytics)
+### Observe
 
 **Improvements**
 
@@ -37,7 +37,7 @@ We're excited to share the latest improvements in version 2.10.5. This release f
 * Resolved installation issues with OpenTelemetry Collector agents on Windows systems
 * Fixed Kubernetes agent namespace configuration problems
 
-### Ascent Synthetics (Website & API Monitoring)
+### Ascent Synthetics&#x20;
 
 **New Integrations**
 
@@ -51,7 +51,7 @@ We're excited to share the latest improvements in version 2.10.5. This release f
 * Corrected multiple API endpoint issues that were returning error codes
 * Improved error handling and filtering in check result endpoints
 
-### ASM Legacy (Application Service Monitoring)
+### ASM Legacy&#x20;
 
 **Fixes**
 
