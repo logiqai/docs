@@ -14,95 +14,53 @@ Also, to perform the update, you need to be making a change.  Here, we have chan
 
 &#x20;
 
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       }
-
-&#x20;   },
-
-&#x20;   "entity": {
-
-&#x20;      "id": "6761ae6d98cd8a04d7f4e959",
-
-&#x20;       "dataViews": \[
-
-&#x20;           {
-
-&#x20;             "view": {
-
-&#x20;               "name": "cust\_data\_view",
-
-&#x20;               "version": "1.0"
-
-&#x20;           },
-
-&#x20;           "dataSet": {
-
-&#x20;               "name": "customers",
-
-&#x20;               "version": "1.0.0"
-
-&#x20;           }
-
-&#x20;           },
-
-&#x20;           {
-
-&#x20;             "view": {
-
-&#x20;               "name": "acts\_view",
-
-&#x20;               "version": "1.0"
-
-&#x20;           },
-
-&#x20;           "dataSet": {
-
-&#x20;               "name": "imp\_accounts",
-
-&#x20;               "version": "1.0.0"
-
-&#x20;           }           &#x20;
-
-&#x20;           },
-
-&#x20;           {
-
-&#x20;             "view": {
-
-&#x20;               "name": "clh\_view",
-
-&#x20;               "version": "1.0"
-
-&#x20;           },
-
-&#x20;           "dataSet": {
-
-&#x20;               "name": "clh\_view",
-
-&#x20;               "version": "1.0.0"
-
-&#x20;           }           &#x20;
-
-&#x20;           }                     &#x20;
-
-&#x20;       ]
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        }
+    },
+    "entity": {
+       "id": "6761ae6d98cd8a04d7f4e959",
+        "dataViews": [
+            {
+              "view": {
+                "name": "cust_data_view",
+                "version": "1.0"
+            },
+            "dataSet": {
+                "name": "customers",
+                "version": "1.0.0"
+            }
+            },
+            {
+              "view": {
+                "name": "acts_view",
+                "version": "1.0"
+            },
+            "dataSet": {
+                "name": "imp_accounts",
+                "version": "1.0.0"
+            }            
+            },
+            {
+              "view": {
+                "name": "clh_view",
+                "version": "1.0"
+            },
+            "dataSet": {
+                "name": "clh_view",
+                "version": "1.0.0"
+            }            
+            }                      
+        ]
+    }
 }
+```
 
 &#x20;
 

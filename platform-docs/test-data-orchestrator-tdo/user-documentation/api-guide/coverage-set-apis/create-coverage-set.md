@@ -12,43 +12,27 @@ The body of the call contains the project name and version and credentials in th
 
 &#x20;
 
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       }
-
-&#x20;   },
-
-&#x20;   "entity": {
-
-&#x20;       "name": "api\_demo\_coverage",
-
-&#x20;       "determiningAttributes": \[
-
-&#x20;           {"name": "acct\_type", "version": "1.0"},
-
-&#x20;           {"name": "has\_app", "version": "1.0"},
-
-&#x20;           {"name": "has\_online", "version": "1.0"},
-
-&#x20;           {"name": "balance", "version": "1.0"}
-
-&#x20;       ]
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        }
+    },
+    "entity": {
+        "name": "api_demo_coverage",
+        "determiningAttributes": [
+            {"name": "acct_type", "version": "1.0"},
+            {"name": "has_app", "version": "1.0"},
+            {"name": "has_online", "version": "1.0"},
+            {"name": "balance", "version": "1.0"}
+        ]
+    }
 }
+```
 
 &#x20;
 

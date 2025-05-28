@@ -10,25 +10,18 @@ This call returns a list of all of the worksets in any given project.  It is POS
 
 &#x20;
 
+```
 {
-
-&#x20;         "context": {
-
-&#x20;                   "user": "mbj\_test",
-
-&#x20;                   "password": "xxxx",
-
-&#x20;                   "project": {
-
-&#x20;                             "name": "mug\_test\_project",
-
-&#x20;                             "version": "1.0"
-
-&#x20;                   }
-
-&#x20;         }
-
+          "context": {
+                    "user": "mbj_test",
+                    "password": "xxxx",
+                    "project": {
+                              "name": "mug_test_project",
+                              "version": "1.0"
+                    }
+          }
 }
+```
 
 &#x20;
 

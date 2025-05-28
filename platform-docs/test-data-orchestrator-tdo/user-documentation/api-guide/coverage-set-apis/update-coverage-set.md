@@ -20,47 +20,29 @@ In the body of the call, you need to include the ID of the coverage set (instead
 
 &#x20;
 
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       }
-
-&#x20;   },
-
-&#x20;   "entity": {
-
-&#x20;       "id": "6744c4ee59c7b96171b5a827",
-
-&#x20;       "determiningAttributes": \[
-
-&#x20;           {"name": "acct\_type", "version": "1.0"},
-
-&#x20;           {"name": "has\_app", "version": "1.0"},
-
-&#x20;           {"name": "has\_online", "version": "1.0"},
-
-&#x20;           {"name": "balance", "version": "1.0"},
-
-&#x20;           {"name": "currency\_a", "version": "1.0"},
-
-&#x20;           {"name": "customer\_type", "version": "1.0"}
-
-&#x20;       ]
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        }
+    },
+    "entity": {
+        "id": "6744c4ee59c7b96171b5a827",
+        "determiningAttributes": [
+            {"name": "acct_type", "version": "1.0"},
+            {"name": "has_app", "version": "1.0"},
+            {"name": "has_online", "version": "1.0"},
+            {"name": "balance", "version": "1.0"},
+            {"name": "currency_a", "version": "1.0"},
+            {"name": "customer_type", "version": "1.0"}
+        ]
+    }
 }
+```
 
 &#x20;
 

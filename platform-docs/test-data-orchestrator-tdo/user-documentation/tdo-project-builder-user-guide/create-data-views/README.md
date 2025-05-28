@@ -5,7 +5,7 @@ Data Views are how TDO ‘joins’ the different data blocks containing data to 
 To begin, you will need to create a Data View using your Coverage Set/Coverage Matrix.  This is the main data view, as it links to the business rules directly. &#x20;
 
 {% hint style="info" %}
-Every Work Set must have a Data View linked to the coverage set.
+Every Work Set must have a Data View linked to the coverage set.  You will probably have at least one more data view in the work set linked to an ingested data block.
 {% endhint %}
 
 It is important that your data views are created in the right sequence - i.e., the file that is serving as the reference/lookup file must have it's view created first.  So the Coverage Set data view is always the first data view created.

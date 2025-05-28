@@ -8,59 +8,38 @@ This is a PATCH call as opposed to a POST call.
 
 &#x20;&#x20;
 
-In the body of the message, the ‘entity.ID’ is now a required field.  We will update the complex rule created above.  The ‘has\_online’ determining attribute is being updated to include both ‘true’ and ‘false’ and the ‘currency\_a’ attribute is being updated to include both USD and GBP currencies.
+In the body of the message, the ‘entity.ID’ is now a required field.  We will update the complex rule created above.  The ‘has\_online’ determining attribute is being updated to include both ‘true’ and ‘false’ and the ‘currency\_a’ attribute is being updated to include both USD and GBP currencies.  Note that you must include all values that were set in the original rule that you want to keep in the modified rule.  If you do not include a value that was set in the original rule it will be deleted.
 
 &#x20;
 
 &#x20;
 
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       },
-
-&#x20;       "coverage" : {
-
-&#x20;           "name": "api\_demo\_coverage",
-
-&#x20;         "version": "1.2"
-
-&#x20;       }
-
-&#x20;   },
-
-&#x20;   "entity": {
-
-&#x20;       "id": "674dd0fb59c7b96171b5a8fa",
-
-&#x20;       "conditions": {
-
-&#x20;         "has\_app": {"values": \["0"]},
-
-&#x20;         "acct\_type": {"values": \["Checking","Savings"]},
-
-&#x20;         "has\_online": {"values": \["1","0"]},
-
-&#x20;         "currency\_a": {"values": \["USD","GBP"]},
-
-&#x20;         "customer\_type": {"values": \["Retail"]}
-
-&#x20;   }
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        },
+        "coverage" : {
+            "name": "api_demo_coverage",
+          "version": "1.2"
+        }
+    },
+    "entity": {
+        "id": "674dd0fb59c7b96171b5a8fa",
+        "conditions": {
+          "has_app": {"values": ["0"]},
+          "acct_type": {"values": ["Checking","Savings"]},
+          "has_online": {"values": ["1","0"]},
+          "currency_a": {"values": ["USD","GBP"]},
+          "customer_type": {"values": ["Retail"]}
+    }
+    }
 }
+```
 
 &#x20;
 

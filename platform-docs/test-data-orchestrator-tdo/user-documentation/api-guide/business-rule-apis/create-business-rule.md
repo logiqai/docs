@@ -28,47 +28,29 @@ In the ‘entity’ section, you include both the determining attribute name and
 
 &#x20;
 
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       },
-
-&#x20;       "coverage" : {
-
-&#x20;           "name": "api\_testing\_coverage",
-
-&#x20;         "version": "1.1"
-
-&#x20;       }
-
-&#x20;   },
-
-&#x20;   "entity": {
-
-&#x20;       "conditions": {
-
-&#x20;         "account": {
-
-&#x20;               "values": \["Current"]
-
-&#x20;           }
-
-&#x20;   }
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        },
+        "coverage" : {
+            "name": "api_testing_coverage",
+          "version": "1.1"
+        }
+    },
+    "entity": {
+        "conditions": {
+          "account": {
+                "values": ["Current"]
+            }
+    }
+    }
 }
+```
 
 &#x20;
 
@@ -102,53 +84,31 @@ The body of the call for multiple determining attributes is set up as an array i
 
 &#x20;
 
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       },
-
-&#x20;       "coverage" : {
-
-&#x20;           "name": "api\_demo\_coverage",
-
-&#x20;         "version": "1.2"
-
-&#x20;       }
-
-&#x20;   },
-
-&#x20;   "entity": {
-
-&#x20;       "conditions": {
-
-&#x20;         "has\_app": {"values": \["0"]},
-
-&#x20;         "acct\_type": {"values": \["Checking","Savings"]},
-
-&#x20;         "has\_online": {"values": \["1"]},
-
-&#x20;         "currency\_a": {"values": \["USD"]},
-
-&#x20;         "customer\_type": {"values": \["Retail"]}     &#x20;
-
-&#x20;       }
-
-&#x20;   &#x20;
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        },
+        "coverage" : {
+            "name": "api_demo_coverage",
+          "version": "1.2"
+        }
+    },
+    "entity": {
+        "conditions": {
+          "has_app": {"values": ["0"]},
+          "acct_type": {"values": ["Checking","Savings"]},
+          "has_online": {"values": ["1"]},
+          "currency_a": {"values": ["USD"]},
+          "customer_type": {"values": ["Retail"]}      
+        }   
+    }
 }
+```
 
 &#x20;
 

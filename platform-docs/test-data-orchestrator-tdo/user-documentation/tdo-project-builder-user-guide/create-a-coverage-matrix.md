@@ -2,7 +2,7 @@
 
 A Coverage Matrix is the generated output of your Business Rules. Each row in the Coverage Matrix is a unique set of values as defined in your Business Rules. The Coverage Matrix is what drives your tests and your test data selection criteria.
 
-Once your business rules are created, you can generate your business rules.  In the upper right corner of the business rules page there is a small blue box with a white grid in it.  Click on this box to generate the Coverage Matrix.
+Once your business rules are created, you can generate your Coverage Matrix.  In the upper right corner of the business rules page there is a small blue box with a white grid in it.  Click on this box to generate the Coverage Matrix.
 
 <figure><img src="../../../../.gitbook/assets/image (32).png" alt=""><figcaption><p>Business rules page with Coverage Matrix button</p></figcaption></figure>
 

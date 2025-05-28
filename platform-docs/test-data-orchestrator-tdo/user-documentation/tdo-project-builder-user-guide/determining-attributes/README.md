@@ -2,7 +2,7 @@
 
 A Determining Attribute is a key field that is used as part of a coverage set to build Business Rules: for example, Region, Gender, Payment Amount, or Account Type. Determining Attributes are selected on the basis that variation of the values for these attributes impacts either source data selection criteria or meaningfully impacts the outcome of tests.
 
-{% include "https://app.gitbook.com/s/vu0ZexrMB2Aau7bhSXs2/~/reusable/DBDF3i43PAegphhFTDuk/" %}
+Determining attributes can be created in three ways: when validting a file, by manually inputting the data, or by importing values from a field in an already ingested file \[data block].
 
 Determining attributes can have priorities assigned to them, and they can be filtered to only allow valid data combinations to be presented during business rule creation.
 

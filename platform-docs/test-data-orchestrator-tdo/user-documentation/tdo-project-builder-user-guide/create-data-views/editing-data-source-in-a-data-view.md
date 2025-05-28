@@ -1,10 +1,10 @@
-# Editing Data Source in a Data Block
+# Editing Data Source in a Data View
 
 One of the reasons for creating Data Views to hold the join criteria is to make the process of replacing the source data block simple. &#x20;
 
 In the example below, we have imported a new version of the 'accounts' file.  TDO has version controlled this during the Ingest Files process and it is listed as 'accounts 1.1' in the data blocks screen.
 
-To change the data block source in your data view, open the 'Edit Data Block' window by clicking the blue pencil icon to the right of the data view name. &#x20;
+To change the data block source in your data view, open the 'Edit Data View' window by clicking the blue pencil icon to the right of the data view name. &#x20;
 
 Click on the blue pencil to the right of the 'source' field where the data block name 'accounts 1.0' is shown.  This will pop up a list of data blocks.  I've used the filter option to only show the data blocks starting with the letters 'acco'.
 

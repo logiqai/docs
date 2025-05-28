@@ -655,7 +655,7 @@
         * [Creating a Data View Joined to the Coverage Set View](platform-docs/test-data-orchestrator-tdo/user-documentation/tdo-project-builder-user-guide/create-data-views/creating-a-data-view-joined-to-the-coverage-set-view.md)
         * [Creating a Data View Linked to a Multiple Data Views](platform-docs/test-data-orchestrator-tdo/user-documentation/tdo-project-builder-user-guide/create-data-views/creating-a-data-view-linked-to-a-multiple-data-views.md)
         * [Locking Records in a Data View](platform-docs/test-data-orchestrator-tdo/user-documentation/tdo-project-builder-user-guide/create-data-views/locking-records-in-a-data-view.md)
-        * [Editing Data Source in a Data Block](platform-docs/test-data-orchestrator-tdo/user-documentation/tdo-project-builder-user-guide/create-data-views/editing-data-source-in-a-data-block.md)
+        * [Editing Data Source in a Data View](platform-docs/test-data-orchestrator-tdo/user-documentation/tdo-project-builder-user-guide/create-data-views/editing-data-source-in-a-data-view.md)
         * [Other Edits in the Data View](platform-docs/test-data-orchestrator-tdo/user-documentation/tdo-project-builder-user-guide/create-data-views/other-edits-in-the-data-view.md)
       * [Work Sets](platform-docs/test-data-orchestrator-tdo/user-documentation/tdo-project-builder-user-guide/work-sets/README.md)
         * [Creating a Work Set](platform-docs/test-data-orchestrator-tdo/user-documentation/tdo-project-builder-user-guide/work-sets/creating-a-work-set.md)

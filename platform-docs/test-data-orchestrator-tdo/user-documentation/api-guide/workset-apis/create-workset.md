@@ -10,103 +10,57 @@ This is sent as a POST call.
 
 &#x20;
 
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       }
-
-&#x20;   },
-
-&#x20;   "entity": {
-
-&#x20;       "name": "api\_workset",
-
-&#x20;       "scenario": {
-
-&#x20;           "name": "imp\_make\_payment",
-
-&#x20;           "version": "1.0"
-
-&#x20;       },
-
-&#x20;       "primary": {
-
-&#x20;           "view": {
-
-&#x20;               "name": "format\_cov\_view",
-
-&#x20;               "version": "1.0"
-
-&#x20;           },
-
-&#x20;           "dataSet": {
-
-&#x20;               "name": "api\_demo\_coverage",
-
-&#x20;               "version": "1.0.0"
-
-&#x20;           }
-
-&#x20;       },
-
-&#x20;       "dataViews": \[
-
-&#x20;           {
-
-&#x20;             "view": {
-
-&#x20;               "name": "cust\_data\_view",
-
-&#x20;               "version": "1.0"
-
-&#x20;           },
-
-&#x20;           "dataSet": {
-
-&#x20;               "name": "imp\_customers",
-
-&#x20;               "version": "1.0.0"
-
-&#x20;           }
-
-&#x20;           },
-
-&#x20;           {
-
-&#x20;             "view": {
-
-&#x20;               "name": "acts\_view",
-
-&#x20;               "version": "1.0"
-
-&#x20;           },
-
-&#x20;           "dataSet": {
-
-&#x20;               "name": "imp\_accounts",
-
-&#x20;               "version": "1.0.0"
-
-&#x20;           }           &#x20;
-
-&#x20;           }           &#x20;
-
-&#x20;       ]
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        }
+    },
+    "entity": {
+        "name": "api_workset",
+        "scenario": {
+            "name": "imp_make_payment",
+            "version": "1.0"
+        },
+        "primary": {
+            "view": {
+                "name": "format_cov_view",
+                "version": "1.0"
+            },
+            "dataSet": {
+                "name": "api_demo_coverage",
+                "version": "1.0.0"
+            }
+        },
+        "dataViews": [
+            {
+              "view": {
+                "name": "cust_data_view",
+                "version": "1.0"
+            },
+            "dataSet": {
+                "name": "imp_customers",
+                "version": "1.0.0"
+            }
+            },
+            {
+              "view": {
+                "name": "acts_view",
+                "version": "1.0"
+            },
+            "dataSet": {
+                "name": "imp_accounts",
+                "version": "1.0.0"
+            }            
+            }            
+        ]
+    }
 }
+```
 
 &#x20;
 

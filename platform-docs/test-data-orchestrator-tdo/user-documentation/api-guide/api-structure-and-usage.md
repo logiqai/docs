@@ -32,33 +32,22 @@ Example:
 
 &#x20;
 
+```
 {
-
-&#x20; "context": {
-
-&#x20;   "user": "tdo\_api\_user",
-
-&#x20;   "password": "welcome",
-
-&#x20;   "project": {
-
-&#x20;     "name": "api\_testing",
-
-&#x20;     "version": "1.0"
-
-&#x20;   },
-
-&#x20;   "coverage": {
-
-&#x20;     "name": "api\_testing\_coverage",
-
-&#x20;     "version": "1.0"
-
-&#x20;   }
-
-&#x20; }
-
+  "context": {
+    "user": "tdo_api_user",
+    "password": "welcome",
+    "project": {
+      "name": "api_testing",
+      "version": "1.0"
+    },
+    "coverage": {
+      "name": "api_testing_coverage",
+      "version": "1.0"
+    }
+  }
 }
+```
 
 &#x20;
 
@@ -92,21 +81,17 @@ Entity Object defines the entity the API will process. Entity must contain one o
 
 &#x20;
 
+```
+  "entity": {
+        "name": "acct_type",
+        "dataType": "STRING",
+        "type": "VALUE",
+        "values": [
+            "Checking", "Savings", "Current"
+  }
+```
+
 &#x20;
-
-&#x20; "entity": {
-
-&#x20;       "name": "acct\_type",
-
-&#x20;       "dataType": "STRING",
-
-&#x20;       "type": "VALUE",
-
-&#x20;       "values": \[
-
-&#x20;           "Checking", "Savings", "Current"
-
-&#x20; }
 
 &#x20;
 

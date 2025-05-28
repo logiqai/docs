@@ -1,6 +1,6 @@
 # Editing a Work Set
 
-Once a work set has been created, it can be edited if necessary.  Generally, you will only edit it to update source data blocks or add a new data view.
+Once a work set has been created, it can be edited if necessary.  Generally, you will only edit it to update source data block versions or add a new data view.
 
 Click the blue pencil to the right of the work set name to open the 'Edit Work Set' window.  From here, you can change the scenario, primary data view, or associated data block in the top pane by clicking on the blue pencil icon associated with that item and selecting a new item from the pop up list.
 

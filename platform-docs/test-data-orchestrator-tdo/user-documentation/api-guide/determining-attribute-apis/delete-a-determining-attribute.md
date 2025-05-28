@@ -22,27 +22,18 @@ Prior to deletion, you can see the determining attribute in TDO.
 
 The body of the message is the same as for ‘get details’ API’s.
 
-&#x20;
-
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       }
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        }
+    }
 }
+```
 
 &#x20;
 

@@ -14,25 +14,20 @@ This API is sent as a PATCH call.  The call includes the instruction ‘unlock�
 
 &#x20;The body is the same as the body for the Get Details API.
 
-&#x20;{
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       }
-
-&#x20;   }
-
+```
+ {
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        }
+    }
 }
+```
+
+
 
 &#x20;The return message shows that the lock has been removed (last fields) where the ‘lockedBy’ and ‘lockDateTime’ fields are blank/null and the ‘lockTimeout’ is ‘-1.
 

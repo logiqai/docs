@@ -24,47 +24,29 @@ The API call is the same protocol://server:port as above, but it is defined as â
 
 &#x20;
 
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       }
-
-&#x20;   },
-
-&#x20;   "entity": {
-
-&#x20;       "id": "645e0000390613152b16ecbb",
-
-&#x20;       "values": \[
-
-&#x20;           "0",
-
-&#x20;           "1"
-
-&#x20;       ],
-
-&#x20;       "valuesPriority": {
-
-&#x20;           "0": "1",
-
-&#x20;           "1": "2",
-
-&#x20;       }
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        }
+    },
+    "entity": {
+        "id": "645e0000390613152b16ecbb",
+        "values": [
+            "0",
+            "1"
+        ],
+        "valuesPriority": {
+            "0": "1",
+            "1": "2",
+        }
+    }
 }
+```
 
 &#x20;
 

@@ -18,45 +18,26 @@ The API is still defined the same way as for a range-based determining attribute
 
 &#x20;
 
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       }
-
-&#x20;   },
-
-&#x20;   "entity": {
-
-&#x20;       "name": "currency\_a",
-
-&#x20;       "dataType": "STRING",
-
-&#x20;       "type": "VALUE",
-
-&#x20;       "values": \[
-
-&#x20;           "USD", "GBP", "EUR"
-
-&#x20;       ]
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        }
+    },
+    "entity": {
+        "name": "currency_a",
+        "dataType": "STRING",
+        "type": "VALUE",
+        "values": [
+            "USD", "GBP", "EUR"
+        ]
+    }
 }
-
-&#x20;
-
-&#x20;
+```
 
 &#x20;
 

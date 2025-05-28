@@ -10,25 +10,18 @@ This call will delete the coverage set from the project.  The header is the same
 
 &#x20;
 
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "1234",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       }
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "1234",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        }
+    }
 }
+```
 
 &#x20;
 

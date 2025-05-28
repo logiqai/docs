@@ -8,33 +8,22 @@ The body of this call is the same as the details calls, only containing the cont
 
 &#x20;
 
+```
 {
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       },
-
-&#x20;       "coverage" : {
-
-&#x20;           "name": "api\_demo\_coverage",
-
-&#x20;         "version": "1.2"
-
-&#x20;       }
-
-&#x20;   }
-
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        },
+        "coverage" : {
+            "name": "api_demo_coverage",
+          "version": "1.2"
+        }
+    }
 }
+```
 
 &#x20;
 

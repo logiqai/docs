@@ -4,7 +4,9 @@ This API will create a copy of the workset with the new name specified in the AP
 
 The API looks like the example below.
 
-https://\<server>:\<port>/core/API/workSet/clone/\<workset\_id>?name=\<new\_name>
+https://\<server>:\<port>/core/API/workSet/clone/\<workset\_id>?name=\<new\_name>.
+
+For example, it would be:  https://localhost:8080/core/API/workSet/clone/6761ae6d98cd8a04d7f4e959?api\_clone\_workset.
 
 When creating this url, remember to use a new name ending in '\_workset'.
 
@@ -16,25 +18,18 @@ When creating this url, remember to use a new name ending in '\_workset'.
 
 &#x20;The body of this call is still the very simple body (user ID, password, and project).
 
-&#x20;{
-
-&#x20;   "context": {
-
-&#x20;       "user": "mbj\_test",
-
-&#x20;       "password": "xxxx",
-
-&#x20;       "project": {
-
-&#x20;           "name": "imp\_payments\_demo",
-
-&#x20;           "version": "1.0"
-
-&#x20;       }
-
-&#x20;   }
-
+```
+ {
+    "context": {
+        "user": "mbj_test",
+        "password": "xxxx",
+        "project": {
+            "name": "imp_payments_demo",
+            "version": "1.0"
+        }
+    }
 }
+```
 
 When run, the response shows the details of the cloned workset.
 

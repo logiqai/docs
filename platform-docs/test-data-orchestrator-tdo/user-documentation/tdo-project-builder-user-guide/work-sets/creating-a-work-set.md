@@ -19,7 +19,7 @@ Below that, click the blue pencil to the right of the 'Scenario' label.  This wi
 Next, below the scenario field, click the blue pencil to the right of the 'Primary' label.  This is where you define which Data View is the primary data view for your workset.  A list of all available data views in your project will open; select the desired view by clicking the check box to the left of the name and then the 'Save' button at the bottom of the pop-up window.
 
 {% hint style="warning" %}
-Your primary data view must be the coverage set data view.
+Your primary data view will almost always be the coverage set data view. You may come across exceptions as your use of TDO matures, but this is a good default assumption.
 {% endhint %}
 
 <figure><img src="../../../../../.gitbook/assets/image (441).png" alt=""><figcaption><p>Select primary data view window</p></figcaption></figure>

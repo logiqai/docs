@@ -10,7 +10,7 @@ In the window, provide a name for the data view.  Click the blue pencil below th
 
 <figure><img src="../../../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption><p>Select files list with filter line </p></figcaption></figure>
 
-Since this is the coverage set view, we will not add any criteria to this data view.  Click the 'Save' button to save the data view.
+Since this is the coverage set view, we will not add any criteria to this data view since the coverage set data view acts as the pivot table for the remaining data views.  Click the 'Save' button to save the data view. &#x20;
 
 <figure><img src="../../../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption><p>Creating a new data view</p></figcaption></figure>
 
