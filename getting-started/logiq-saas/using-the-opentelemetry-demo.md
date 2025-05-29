@@ -257,6 +257,12 @@ FLOW allows you to filter unecessary data out of your logs before hitting the da
 
 <figure><img src="../../.gitbook/assets/image (483).png" alt=""><figcaption><p>Select Label</p></figcaption></figure>
 
+12. Click "Save" in the bottom right:
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+
+
 12. Go back to the log view to verify the filter rule has been applied. Refresh the page and make sure it is a new log that you're verifying:
 
 <figure><img src="../../.gitbook/assets/image (488).png" alt=""><figcaption><p>Logs &#x26; Insights</p></figcaption></figure>

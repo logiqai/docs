@@ -6,7 +6,7 @@ In the assignment rules process in TDO, you can use format functions to create d
 
 &#x20;When using these functions, you must select ‘Compose Function’ from the drop-down menu in the ‘Operands’ section of the 'Compose Operands' window (accessed during the 'assignment rules' process).
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption><p>Compose Operands window</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Compose Operands window</p></figcaption></figure>
 
 If you fail to select ‘Compose Function’ the output generated will be the format function string and not an assigned value.
 
@@ -20,4 +20,4 @@ The format function contains a marker, a format, and \[optional] the data to be 
 
 The table below shows the supported format types and the marker(s) associated with those format types.
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Supported formats</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Supported formats</p></figcaption></figure>

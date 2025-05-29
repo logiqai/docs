@@ -6,7 +6,7 @@ To begin the assignment process, select 'Assignment Rules' from the 'Data Assemb
 
 In the left pane the steps from the scenario are listed.  Click on the first step and the list of fields from the output format linked in the action will populate in the center pane. Click on the first field to create a rule for that field.&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>List of output fields in the selected step</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>List of output fields in the selected step</p></figcaption></figure>
 
 In the right pane, under the label 'Rules', there is a plus (+) sign and a trash can.  The plus sign will create a new rule, and the trash can will delete a highlighted rule.  Click the plus sign to create a new rule and the rule name (field\_rule\_mongoID) will populate in the 'Rules' box.
 
