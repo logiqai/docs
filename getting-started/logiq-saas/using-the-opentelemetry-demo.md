@@ -273,6 +273,19 @@ FLOW allows you to filter unecessary data out of your logs before hitting the da
 
 Dropping a few labels might not seem like a big deal at first, but if you exrapolate that over 10,000 or 100,000's logs, the cost savings start to add up QUICK.
 
+\
+14\. To view savings and your configured pipelines navigate to "Pipelines":
+
+<figure><img src="../../.gitbook/assets/image (497).png" alt=""><figcaption><p>Pipelines</p></figcaption></figure>
+
+15. View all your pipeline data along with savings:\
+
+
+    <figure><img src="../../.gitbook/assets/image (498).png" alt=""><figcaption><p>Pipeline Dashboard</p></figcaption></figure>
+
+
+16. For more information on pipelines please see [setup and configure pipelines](using-the-opentelemetry-demo.md#step-10-setup-and-configure-pipeline)
+
 
 
 **Links to related docs include:**
