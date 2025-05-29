@@ -144,6 +144,10 @@ Restart the OpenTelemetry collector by running the following command:
 
 **Now that data is flowing, please follow the steps below to learn how to interact, enhance, and visualize this data in Ascent.**
 
+### Step 9 - FLOW (Cost Savings Use Case)
+
+[FLOW Guide Here](using-the-opentelemetry-demo.md#flow-cost-savings-use-case)
+
 ### Step 10 - Setup and Configure Pipeline
 
 The goal is to transport and process the collected data.
@@ -202,6 +206,68 @@ The goal is to detect anomalies and automate response actions.
 * Set up alert destinations
 * Establish escalation policies and on-call schedules
 * Integrate with incident management workflows and postmortem tools
+
+### FLOW - Cost Savings Use Case
+
+FLOW allows you to filter unecessary data out of your logs before hitting the data lake which leads to significant cost savings. This guide will walk you through how to drop labels from our Otel Demo App logs. You can apply the same functionality to any other data source.&#x20;
+
+
+
+1. Navigate to the Logs & Insights page:
+
+<figure><img src="../../.gitbook/assets/image (490).png" alt=""><figcaption><p>Logs &#x26; Insights</p></figcaption></figure>
+
+2. This view lists all of the datasources pushing data to Ascent. To access the logs, click into "DemoLogs".
+
+<figure><img src="../../.gitbook/assets/image (489).png" alt=""><figcaption></figcaption></figure>
+
+3. To view one of the logs simply click one of them.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (491).png" alt=""><figcaption></figcaption></figure>
+
+4. We have one of our otel logs here. In this example, we will be dropping "destination.address" and "event.name" from the logs.
+
+<figure><img src="../../.gitbook/assets/image (486).png" alt=""><figcaption><p>Otel Demo App Logs</p></figcaption></figure>
+
+5. To drop these fields, navigate to the Pipeline tab and then click the + button shown below:
+
+<figure><img src="../../.gitbook/assets/image (496).png" alt=""><figcaption><p>Pipeline View</p></figcaption></figure>
+
+5. Create a new Pipeline:
+
+<figure><img src="../../.gitbook/assets/image (493).png" alt="" width="563"><figcaption><p>New Pipeline</p></figcaption></figure>
+
+7. Add a new Filter Rule. If you're interested in the other rules please use this documentation: [https://docs.apica.io/flow/rules](https://docs.apica.io/flow/rules) for a detailed guide.
+
+<figure><img src="../../.gitbook/assets/image (479).png" alt="" width="563"><figcaption><p>Filter Rule </p></figcaption></figure>
+
+8. Enable Drop Labels by click the slider:
+
+<figure><img src="../../.gitbook/assets/image (480).png" alt="" width="563"><figcaption><p>Drop Labels</p></figcaption></figure>
+
+9. On the right of the screen you'll want to preview the logs to know what labels to drop. Select the following and then hit Preview in the top right:
+
+<figure><img src="../../.gitbook/assets/image (481).png" alt=""><figcaption><p>Preview Logs</p></figcaption></figure>
+
+10. Here are the two labels we want to drop:
+
+<figure><img src="../../.gitbook/assets/image (495).png" alt=""><figcaption><p>Labels</p></figcaption></figure>
+
+11. Select the key in the dropdown by typing them out or clicking.
+
+<figure><img src="../../.gitbook/assets/image (483).png" alt=""><figcaption><p>Select Label</p></figcaption></figure>
+
+12. Go back to the log view to verify the filter rule has been applied. Refresh the page and make sure it is a new log that you're verifying:
+
+<figure><img src="../../.gitbook/assets/image (488).png" alt=""><figcaption><p>Logs &#x26; Insights</p></figcaption></figure>
+
+13. As you can see, destination.address and event.name are no longer being ingested:
+
+<figure><img src="../../.gitbook/assets/image (484).png" alt=""><figcaption><p>Otel Log</p></figcaption></figure>
+
+Dropping a few labels might not seem like a big deal at first, but if you exrapolate that over 10,000 or 100,000's logs, the cost savings start to add up QUICK.
+
+
 
 **Links to related docs include:**
 
