@@ -8,31 +8,32 @@ The demo serves as an invaluable resource for understanding how to implement and
 
 <figure><img src="../../.gitbook/assets/image (20) (1) (1).png" alt=""><figcaption><p>Ascent Quick Start Process</p></figcaption></figure>
 
-## Quick Start Process for Using the OTel Demo app with Ascent
+## Quick Start Process for Using the OTel Demo with Ascent
 
-For all users that want to get started using the OTel Demo with Ascent should follow these key steps:
+All users getting started with using the OTel Demo with Ascent should follow these simple steps:
 
-1. [Deploy the OTEL Demo App](using-the-opentelemetry-demo.md#step-1-deploy-otel-demo-ap)
-2. [Setup and Configure Pipeline](using-the-opentelemetry-demo.md#step-2-setup-and-configure-pipeline)
-3. [Design Queries](using-the-opentelemetry-demo.md#step-3-design-queries)
-4. [Create Dashboards](using-the-opentelemetry-demo.md#step-4-create-dashboards)
-5. [Setup Alerts and Workflow](using-the-opentelemetry-demo.md#step-5-setup-alerts-and-workflow)
+1. [Setup and Deploy the OTel Demo App (steps 1-9)](using-the-opentelemetry-demo.md#setting-up-the-otel-demo)
+2. [Setup and Configure Pipeline](using-the-opentelemetry-demo.md#step-10-setup-and-configure-pipeline)
+3. [Design Queries](using-the-opentelemetry-demo.md#step-11-design-queries)
+4. [Create Dashboards](using-the-opentelemetry-demo.md#step-12-create-dashboards)
+5. [Setup Alerts and Workflow](using-the-opentelemetry-demo.md#step-13-setup-alerts-and-workflow)
+6. [Review Ongoing Data & Cost Savings](using-the-opentelemetry-demo.md#flow-cost-savings-use-case)
 
-In this guide, we cover the key goals and related activities of each step to ensure a quick and easy setup of Ascent.
+In these steps, we cover the key goals and related activities to ensure a quick and easy setup of OTel Demo with Ascent along with the full pipeline deployment process.
 
-### How to Deploy the OTEL Demo App
+### How to Deploy the OTel Demo Application
 
 The goal is to ingest telemetry data (logs, metrics, traces) from relevant systems.
 
 **Key actions include:**&#x20;
 
-* Accessing and deploying the public OpenTelemetry (OTEL) Demo App
+* Accessing and deploying the public OpenTelemetry (OTel) Demo App
 * Configure data collection setup, frequency and granularity
 * Ensure data normalization
 
 This guide aims to walk you through the steps required to deploy the OpenTelemetry Demo app and begin sending data to Ascent.
 
-**NOTE**: We will deploy the OTEL demo app using Docker for this guide.
+**NOTE**: We will deploy the OTel demo app using Docker for this guide.
 
 ## Prerequisites:
 
@@ -40,7 +41,9 @@ This guide aims to walk you through the steps required to deploy the OpenTelemet
 * [Docker Compose v2.0.0+](https://docs.docker.com/compose/install/)
 * 6 GB of RAM for the application
 
-### Step 1: Get and Clone the OTEL demo app repository:
+## Setting Up the OTel Demo
+
+### Step 1: Get and Clone the OTel demo app repository:
 
 `$ git clone https://github.com/open-telemetry/opentelemetry-demo.git`
 
@@ -56,9 +59,9 @@ This guide aims to walk you through the steps required to deploy the OpenTelemet
 
 `$ docker compose up --force-recreate --remove-orphans --detach`
 
-### Step 5: Test and access the OTEL demo application:
+### Step 5: Test and access the OTel demo application:
 
-Once the images are built and containers are started, you can now access the following Opentelemetry components on the demo app web store:
+Once the images are built and containers are started, you can now access the following OpenTelemetry components on the demo app web store:
 
 * Web store: [http://localhost:8080/](http://localhost:8080/)
 * Grafana: [http://localhost:8080/grafana/](http://localhost:8080/grafana/)
@@ -75,7 +78,7 @@ By default, the demo application will start a proxy for all browser traffic boun
 
 `$ ENVOY_PORT=8081 docker compose up --force-recreate --remove-orphans --detach`
 
-### Step 6: Update the OTEL config file:
+### Step 6: Update the OTel config file:
 
 * /src/otel-collector/otelcol-config-extras.yml
 
