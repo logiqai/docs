@@ -50,6 +50,7 @@
   * [Getting Started with Metrics](getting-started/logiq-saas/getting-started-with-metrics.md)
   * [Getting Started with Logs](getting-started/logiq-saas/getting-started-with-logs/README.md)
     * [OpenTelemetry](getting-started/logiq-saas/getting-started-with-logs/opentelemetry.md)
+  * [Using Fleet for Data Ingestion](getting-started/logiq-saas/using-fleet-for-data-ingestion.md)
 * [Ascent Deployment Overview](getting-started/ascent-deployment-overview.md)
 * [Quickstart with Docker-Compose](getting-started/quickstart-with-docker-compose.md)
 * [On-Premise PaaS deployment](getting-started/logiq-paas-deployment/README.md)
