@@ -10,7 +10,7 @@ The demo serves as an invaluable resource for understanding how to implement and
 
 ## Quick Start Process for Using the OTel Demo app with Ascent
 
-For all users that want to get started with Ascent should follow these five (5) simple steps:
+For all users that want to get started using the OTel Demo with Ascent should follow these key steps:
 
 1. [Deploy the OTEL Demo App](using-the-opentelemetry-demo.md#step-1-deploy-otel-demo-ap)
 2. [Setup and Configure Pipeline](using-the-opentelemetry-demo.md#step-2-setup-and-configure-pipeline)
