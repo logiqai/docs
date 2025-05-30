@@ -746,7 +746,7 @@
       * [Boolean Formats](platform-docs/test-data-orchestrator-tdo/user-documentation/format-function-guide/boolean-formats.md)
       * [Hexadecimal Formats](platform-docs/test-data-orchestrator-tdo/user-documentation/format-function-guide/hexadecimal-formats.md)
   * [Release Notes](platform-docs/test-data-orchestrator-tdo/release-notes.md)
-    * [Build 1.0.2.0 - 20250408 -0906](platform-docs/test-data-orchestrator-tdo/release-notes/build-1.0.2.0-20250408-0906.md)
+    * [Build 1.0.2.0-20250408-0906](platform-docs/test-data-orchestrator-tdo/release-notes/build-1.0.2.0-20250408-0906.md)
     * [Build 1.0.2.0-20250213-1458](platform-docs/test-data-orchestrator-tdo/release-notes/build-1.0.2.0-20250213-1458.md)
 
 ***
