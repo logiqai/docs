@@ -4,7 +4,7 @@ Data assembly can be started from two locations. &#x20;
 
 On the 'Assignment Rules' page, there is a grid in the lower right corner.  Click on that grid, and the time out window will appear.  The time out value is the length of time that the work set will be locked (unavailable to other users).  This window defaults to 15 minutes but it can be changed to any value desired.  Click the 'Assemble' button to kick off the data assembly process.
 
-<figure><img src="../../../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Starting data assembly from Assignment Rules page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (26) (1).png" alt=""><figcaption><p>Starting data assembly from Assignment Rules page</p></figcaption></figure>
 
 Once you start data assembly, the progress bar will appear and will show the progress of your assembly job.  When data assembly completes, the progress bar will disappear.
 

@@ -8,8 +8,8 @@ The export process will open a new tab in Chrome.  Once the download is complete
 
 Depending on your network's security settings, you may need to click 'Keep' to complete the download process.  If you do not choose 'Keep' your download will be deleted.
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Download security message</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Download security message</p></figcaption></figure>
 
 Once the download is complete, you will find the project listed in your local 'Downloads' folder on your computer.
 
-<figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Exported project available </p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Exported project available </p></figcaption></figure>

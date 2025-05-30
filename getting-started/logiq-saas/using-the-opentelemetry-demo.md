@@ -6,7 +6,7 @@ The OTel Demo is a microservices-based application created by OpenTelemetry's co
 
 The demo serves as an invaluable resource for understanding how to implement and use OpenTelemetry in real-world applications. Using the Ascent platform with the OTel Demo enables you to converge all of the IT data, manage the telemetry data, and monitor and troubleshoot the operational data in real-time. The following steps guide you through the process of using the OTel Demo application with Ascent.
 
-<figure><img src="../../.gitbook/assets/image (20) (1) (1).png" alt=""><figcaption><p>Ascent Quick Start Process</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20) (1) (1) (1).png" alt=""><figcaption><p>Ascent Quick Start Process</p></figcaption></figure>
 
 ## Quick Start Process for Using the OTel Demo with Ascent
 
@@ -262,7 +262,7 @@ FLOW allows you to filter unecessary data out of your logs before hitting the da
 
 12. Click "Save" in the bottom right:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 
 

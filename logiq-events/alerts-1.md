@@ -23,7 +23,7 @@ On clicking the <img src="../.gitbook/assets/Screen Shot 2020-08-11 at 5.34.40 P
 
 All the alert rules created can be accessed on the Active Rules page.
 
-![](<../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1) (1).png>)
 
 ### Viewing Alerts
 

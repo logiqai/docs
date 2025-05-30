@@ -12,4 +12,4 @@ Shown below is the call to assemble data for the project mug\_test\_project 1.0 
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption><p>Data assembly API call and results</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (12) (1) (1) (1) (1).png" alt=""><figcaption><p>Data assembly API call and results</p></figcaption></figure>

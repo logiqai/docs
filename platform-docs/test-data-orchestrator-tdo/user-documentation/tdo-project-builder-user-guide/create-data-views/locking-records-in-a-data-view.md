@@ -12,4 +12,4 @@ If you are in the build phase, it is recommended that you do not set the Lock un
 
 To edit the data view, hover to the right of the data view name and click on the blue pencil icon.  The 'Edit Data View' window will open.  Below the 'Criteria' section is a list of the fields in the source data block.  To the right of the field names is a column with the header 'Locked'.  To lock this file by account number, we have checked the 'Locked' box next to the 'account\_num' field.  This will ensure that each account number is used only once.  Click the 'Save' button to save the lock on the data view.
 
-<figure><img src="../../../../../.gitbook/assets/image (24) (1).png" alt=""><figcaption><p>Data view with data lock set</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (24) (1) (1).png" alt=""><figcaption><p>Data view with data lock set</p></figcaption></figure>
