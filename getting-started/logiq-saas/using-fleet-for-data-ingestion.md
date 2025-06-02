@@ -12,7 +12,7 @@ Step 4: Verify Metrics/Logs are being Ingested
 
 
 
-## Step 1: From Fleet, Install Agent Manager:
+## Step 1: Install Agent Manager:
 
 Go to -> Explore -> Fleet
 
@@ -47,6 +47,8 @@ NOTE: Transfer 'Fleet Installation File' to the Linux host that you will collect
 Verify that the hostname is in the Fleet "Agents" UI tab:&#x20;
 
 <figure><img src="../../.gitbook/assets/image (504).png" alt=""><figcaption></figcaption></figure>
+
+## Step 2: Update Your Configuration File:
 
 Go to "Configurations" tab and search for:
 
@@ -171,6 +173,8 @@ NOTE: Currently, this configuration file is set up to collect syslogs. If you wo
       - /var/log/auth.log
 ```
 
+## Step 3: Apply the Changes Made to the Configuration File:
+
 Copy the below code block into the "Update Configuration" section in the UI:
 
 <figure><img src="../../.gitbook/assets/image (509).png" alt=""><figcaption></figcaption></figure>
@@ -180,6 +184,8 @@ Click "Update".
 Then, go back to the "Agent" tab and click into the Linux hostname (where you'll be ingesting data from):
 
 <figure><img src="../../.gitbook/assets/image (510).png" alt=""><figcaption></figcaption></figure>
+
+## Step 4: Verify Metrics/Logs Are Being Ingested into Ascent:
 
 Verify that logs are coming in and that it shows as "active":
 
