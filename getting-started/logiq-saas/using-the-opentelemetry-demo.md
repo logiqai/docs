@@ -117,6 +117,9 @@ Paste the following into the config file, overwriting it completely:
 2. Replace \<YOUR-ASCENT-ENV>with your Ascent domain, e.g. company.apica.io
 3. Replace \<YOUR-INGEST-TOKEN>with your Ascent Ingest Token, e.g. eyXXXXXXXXXXX...
    1. See 'Step 7' to get your 'ingest-token'
+4. Optional if you want to change the namespace and or application (to help ID your data in Ascent):\
+   `logs_endpoint:  https://<YOUR-ASCENT-ENV>/v1/json_batch/otlplogs?namespace=<NAMESPACE_HERE>&application=<APPLICATION_NAME_HERE>`
+   1. Update \<NAMESPACE\_HERE> and \<APPLICATION\_NAME\_HERE> for a custom namespace and application in Ascent.
 
 ### Step 7: Get Your Ingest Token from Ascent:
 
