@@ -8,7 +8,7 @@ Once your business rules are created, you can generate your Coverage Matrix.  In
 
 When you click on this button, you will get a message telling you what TDO is about to create.  Here, TDO is letting you know that you have 8 determining attributes in your rules, and you will create 16 unique tests in your coverage matrix.  Click 'OK' to create the coverage matrix.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Coverage Matrix cofirmation message</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Coverage Matrix cofirmation message</p></figcaption></figure>
 
 Once you click OK, the coverage matrix will be created.  On the menu, select 'Coverage Matrix' from the 'Coverage Engine' section of the menu to view your coverage matrix.
 

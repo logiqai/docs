@@ -2,7 +2,7 @@
 
 In Postman, the API looks like this:
 
-<figure><img src="../../../../../../.gitbook/assets/image.png" alt=""><figcaption><p>API call for assignment rule creation</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>API call for assignment rule creation</p></figcaption></figure>
 
 The body of the file for this call will look like this:
 
@@ -46,7 +46,7 @@ In the entity section, you will need to provide the step name and version (versi
 
 The attribute name is the name from the list in the TDO data assignment page.  In this case, we are working on the third attribute in the list:
 
-<figure><img src="../../../../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Assignment rules page in TDO</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Assignment rules page in TDO</p></figcaption></figure>
 
 In the final section of the body, we are specifying the method being used (‘ASSIGN’) and the value to be assigned (‘125’).  Since we have not specified a format type, this will be assigned using the default value of STRING.
 

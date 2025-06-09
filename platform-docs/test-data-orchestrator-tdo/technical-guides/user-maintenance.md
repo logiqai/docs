@@ -14,15 +14,12 @@ To perform user maintenance, you will need to log in with an ID that has ‘admi
 
 ### User security levels
 
-TDO has two user levels and one permissions control:
+TDO has two user levels and twp permissions controls:
 
-·       Admin – has rights to perform all user maintenance actions on all users.  Can create new users and delete existing users.  Admin users also have delete permission for all functions in the application amd can remove all locks (coverage set, workset, etc.)
-
-·       User – only has rights to reset their own password.  Cannot create or delete.  Users do not have delete permission for project objects and can only remove locks that are assigned to their user ID.
-
-·       Read-only – a permission control on people with User level rights; they can view all screens in TDO for any project that is assigned to them, but they cannot make any changes.  This level is generally used for new users who have not yet completed training to prevent unauthorized actions on existing projects.
-
-
+* Admin - has rights to perform all user maintenance actions on all users.  Can create new users and delete existing users.  Admin users also have delete permission for all functions in the application and can remove all locks (coverage set, work set, etc.)
+* User - only has rights to reset their own password.  Cannot create or delete other users.  Users do not have delete permission for project objects and can only remove locks that are assigned to their user ID.
+* Read-only - a permission control on people with User level rights; they can view all screens in TDO for any project that is assigned to them, but they cannot make any changes.  This level is generally used for new users who have not yet completed training to prevent unauthorized actions on existing projects.
+* Work Flow Acccess - when this permission is granted, users (including admins) are able to access the Workflow module in the TDO menu.  If this is not enabled, the user will not see the Workflow module in their menu.
 
 ### &#x20;Creating new users
 
@@ -36,11 +33,9 @@ To navigate to the User Maintenance screen, on the menu navigate down to the ‘
 
 To create a new user, click the “+” sign in the bottom right corner of the screen.  The new user enrolment window will open:
 
-&#x20;
+&#x20;&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (4) (3).png" alt=""><figcaption><p>Create User Screen</p></figcaption></figure>
-
-&#x20;
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>User Maintenance Screen</p></figcaption></figure>
 
 Fill in the fields as follows:
 
@@ -54,17 +49,20 @@ Fill in the fields as follows:
 
 o   You may want to use a random password generator to create a strong initial password.
 
-o   We recommend that passwords only be sent to the user (no .cc or .bcc on the note) and that they be sent in a separate email.
+o   We recommend that passwords only be sent to the user (no .cc or .bcc on the note) and that they be sent in a separate email from the one that contains their User ID.
 
 o   Include a reminder to the user that they should change their password after their initial sign in.
 
-·       Click the ‘Read Only’ box only if you want to create a ‘read only’ user; otherwise leave blank.
-
-·       On the ‘Role’ line, USER is the default value.  Only grant ADMIN rights to those individuals who need to perform administrative duties (grant/remove access, authorize project access, perform LDAP setup, etc.).  You can change the role by clicking the arrow to the right to open the drop down menu.
-
-&#x20;
+* Click the 'Read Only' box only if you want to create a 'read only' user; otherwise leave blank.
+* Click the 'Work Flow Access' box only if the user will be using the Work Flow module, otherwise leave blank.
+* On the 'Role' line, USER is the default value.
+* On the 'Role' line, USER is the default value.  Only grant ADMIN rights to those individuals who need to perform administrative duties (grant/remove access, authorize project access, perform LDAP setup, etc.).  You can change the role by clicking the arrow to the right to open the drop down list.
 
 Once the user setup is complete, click ‘SAVE’ to save the new enrolment.
+
+{% hint style="info" %}
+If LDAP enrollment is enabled for your organization, manual enrollment is not necessary for users who have 'USER' permission and are not read only or work flow access.  Once they are enrolled in the appropriate AD group(s), when they log into TDO for the first time, TDO will create their enrollment as part of the initial verification.  Additional maintenance is only required if they are read only, work flow access, or admin.
+{% endhint %}
 
 &#x20;
 
@@ -91,6 +89,10 @@ Click on the trash can icon to delete the user you have selected.  A warning box
 &#x20;
 
 Click ‘OK’ to delete the user and ‘Cancel’ to keep the user.
+
+{% hint style="warning" %}
+If LDAP is enabled, you should not delete the user from TDO until they have been removed from the appropriate AD group(s).  Removing them from TDO before AD enrollment changes have been process may result in their ID being recreated (see hint under creating new users).
+{% endhint %}
 
 &#x20;
 
