@@ -63,7 +63,7 @@ We're excited to share the latest improvements and bug fixes in Ascent 2.10.6. T
   * Fixed tech preview text display
 * **Repository Updates**: Updated fleet-management-defaults to match fleet-tests
 
-## Observe
+### Observe
 
 #### What's Fixed
 
