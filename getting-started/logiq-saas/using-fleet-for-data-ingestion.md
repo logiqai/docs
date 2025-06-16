@@ -123,8 +123,9 @@ processors:
         value: "{{$ .Agent.host_name }}"
         action: upsert
   batch:
+    send_batch_size: 1000
     timeout: 5s
-    send_batch_size: 2048
+    
 exporters:
   debug:
     verbosity: detailed
@@ -140,11 +141,11 @@ exporters:
     tls:
       insecure: false
       insecure_skip_verify: true
-  otlphttp:
+  otlphttp/logs:
     compression: gzip
     disable_keep_alives: true
     encoding: json
-    logs_endpoint: "https://<ENV_URL_HERE>/v1/json_batch/otlplogs?namespace=Linux&application=otellogs"
+    logs_endpoint: "https://[ENV_URL_HERE]/v1/json_batch/otlplogs?namespace=Linux&application=otellogs"
     headers:
       Authorization: "Bearer {{$ .Agent.secret.otellogs.token }}"
     tls:
@@ -152,7 +153,9 @@ exporters:
       insecure_skip_verify: true
     sending_queue:
       queue_size: 10000
+extensions:
 service:
+  extensions:
   pipelines:
     metrics/out:
       receivers: [hostmetrics]
@@ -160,8 +163,8 @@ service:
       exporters: [otlphttp/apicametrics]
     logs/out:
       receivers: [filelog]
-      processors: [attributes/host, attributes/os, batch]
-      exporters: [otlphttp]
+      processors: [attributes/host, batch]
+      exporters: [otlphttp/logs]
 ```
 
 NOTE: Currently, this configuration file is set up to collect syslogs. If you would like to collect different types of logs adjust the path to the logs you want to ingest:
