@@ -1,5 +1,26 @@
 # Release Notes
 
+## Changes in 1.5.1
+
+2025-06-17
+
+ * Add `message` field to `/find/tags` estimates for enhanced clarity.
+ * Improve reconstitute performance.
+ * Fix a bug where the first data point for an NNTBS metric for a rollup could
+   be written with the wrong timestamp during a reconstitute.
+ * Add new iterate style, `seek`, for sending data during reconstitute. This
+   mode seeks to specific metrics rather than iterating the whole shard during
+   the sending phase. This can be set via the
+   `reconstitute/nntbs@iterate_surrogates_for_send_style` field - `iterate` is
+   the old style and `seek` is the new style. The default value is `iterate`.
+ * Remove the `jindexer` subscriber when the `use_indexer` field is disabled
+   for journals, which will prevent unnecessary journal data retention.
+ * Improve handling when mmap operations fail loading surrogate database or
+   indexing files.
+ * On delete responses, the `X-Snowth-Incomplete-Results` header is now always
+   returned, and set to `false` when results are complete.
+ * Remove unneeded checks for flatbuffer availability in journaling.
+
 ## Changes in 1.5.0
 
 2025-05-08
