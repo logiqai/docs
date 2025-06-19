@@ -163,7 +163,7 @@ The goal is to visualize system performance and behavior in real time.
 
 ### Step 5 - Create Alerts and Endpoints
 
-For a quick video on step five, click here: [Step 5 - Create Alerts and Endpoints](https://app.gitbook.com/s/DSdBl3CO9PVIOSrEgu3C/)
+For a quick video on step five, click here: [Step 5 - Create Alerts and Endpoints](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/ETtNWHDcxsdOuB1ZPM53WE8Bk858L4pmO0UpopF5thCrxw?e=fwcYe8)
 
 The goal is to detect anomalies and automate response actions.
 
