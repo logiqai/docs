@@ -146,6 +146,8 @@ The goal is to enable insights by querying telemetry data.
 
 ### Step 4 - Create Dashboards
 
+For a quick video on step four, click here: [Step 4 - Create Dashboards](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/EXDbT3GbnSNDkMNb0alGtWkB2b4_uWbo9IvI_Hv1batx0g?e=egIxH7)
+
 The goal is to visualize system performance and behavior in real time.
 
 **Key actions include:**
