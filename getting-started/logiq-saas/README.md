@@ -22,6 +22,8 @@ In this guide, we cover the key goals and related activities of each step to ens
 
 ### Step 1 - Start Ingesting Data
 
+For a quick video on step one, click here: [Step 1 - Start Ingesting Data](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/ET5AT3ZMf9NAshVwpdaPq0cBqLRO6_qZVpshZx0qwdcREA?e=0Raie2)
+
 The goal is to ingest telemetry data (logs, metrics, traces) from relevant systems.
 
 **Key actions include:**&#x20;
@@ -107,6 +109,8 @@ You can then confirm that data is flowing into the system (Go to 'Explore -> Log
 
 ### Step 2 - Setup and Configure Pipeline
 
+For a quick video on step two, click here: [Step 2 - Setup and Configure Pipeline](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/EeYwOND5iatLjFfUCE0KQeMB8T_PPhOhqQChJZC8zohKSw?e=e50lwY)
+
 The goal is to transport and process the collected data.
 
 **Key actions include:**
@@ -122,6 +126,8 @@ The goal is to transport and process the collected data.
 * [Forwarding data](https://docs.apica.io/flow/pipeline-management/mapping-applications)
 
 ### Step 3 - Design Queries
+
+For a quick video on step three, click here: [Step 3 - Design Queries](https://apicasystem.sharepoint.com/:v:/r/sites/ProfessionalServices/Shared%20Documents/Quick%20Start%20Guide%20Videos/step%203%20-%20Creating%20Queries.mp4?csf=1\&web=1\&e=ptXNOU)
 
 The goal is to enable insights by querying telemetry data.
 
@@ -153,7 +159,9 @@ The goal is to visualize system performance and behavior in real time.
 
 * [Dashboards overview](https://docs.apica.io/getting-started/overview)
 
-### Step 5 - Setup Alerts and Workflow
+### Step 5 - Create Alerts and Endpoints
+
+For a quick video on step five, click here: [Step 5 - Create Alerts and Endpoints](https://app.gitbook.com/s/DSdBl3CO9PVIOSrEgu3C/)
 
 The goal is to detect anomalies and automate response actions.
 
