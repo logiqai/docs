@@ -14,11 +14,11 @@ Apica Ascent uses three metadata fields to **organize, route, and partition** in
 
 ### **Why These Fields Matter**
 
-| Field                      | Description                                                                                  | Required | Default Value       |
-| -------------------------- | -------------------------------------------------------------------------------------------- | -------- | ------------------- |
-| `cluster_id`               | Optional grouping, useful to separate environments like `dev`, `qa`, `prod`, or K8s clusters | No       | None                |
-| `namespace`                | Top-level grouping for all telemetry (e.g., a team, service, VM, or k8s namespace)           | Yes      | `default_namespace` |
-| `app_name` / `application` | Mid-level grouping for a specific service or app component                                   | Yes      | `default_app`       |
+| Field                                          | Description                                                                                  | Required | Default Value       |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------- | -------- | ------------------- |
+| `cluster_id / CLUSTER_ID / ascent.cluster_id`  | Optional grouping, useful to separate environments like `dev`, `qa`, `prod`, or K8s clusters | No       | None                |
+| `namespace` / `Namespace`                      | Top-level grouping for all telemetry (e.g., a team, service, VM, or k8s namespace)           | Yes      | `default_namespace` |
+| `app_name` / `AppName` / `appName` / `appname` | Mid-level grouping for a specific service or app component                                   | Yes      | `default_app`       |
 
 Internally, the **final namespace column** in logs is built as:
 
@@ -146,3 +146,30 @@ Below is a snapshot of the **Table View**, where each flow corresponds to a uniq
 * You can **filter**, **search**, and **inspect** event statistics per flow here.
 
 > Use this view to validate if your telemetry is landing in the expected flows.
+
+### **Supported Field Aliases**
+
+| **Standard Field**          | **Recognized Aliases**                                                                                                               |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `severity_string` / `level` | `severity`, `severe`, `severitystring`, `level`, `lvl`, `@severity`, `@level`, `otel.status_code`                                    |
+| `timestamp`                 | `timestamp`, `time`, `@timestamp`                                                                                                    |
+| `facility_string`           | `facility`, `@facility`                                                                                                              |
+| `message`                   | `message`, `@message`, `log`, `@log`                                                                                                 |
+| `cluster_id`                | `cluster_id`, `CLUSTER_ID`, `ascent.cluster_id`                                                                                      |
+| `namespace`                 | `namespace`, `ascent.namespace`, `kubernetes.namespace_name`, `k8s.namespace.name`, `k8s.namespace`, `k8s.namespace_name`, `_source` |
+| `application` / `app_name`  | `application`, `app_name`, `appname`, `application_name`, `ascent.application`                                                       |
+| `hostname`                  | `hostname`, `host`, `@hostname`                                                                                                      |
+| `proc_id`                   | `proc_id`, `@proc_id`, `kubernetes.pod_name`, `k8s.pod.name`, `k8s.pod`, `k8s.pod_name`                                              |
+| `priority`                  | `priority`, `@priority`                                                                                                              |
+
+***
+
+### Kubernetes-Specific Aliases (Auto-mapped)
+
+| **Target Field** | **K8s Field Aliases**                                                                                           |
+| ---------------- | --------------------------------------------------------------------------------------------------------------- |
+| `namespace`      | `kubernetes.namespace_name`, `k8s.namespace.name`, `k8s.namespace`, `k8s.namespace_name`                        |
+| `application`    | `kubernetes.container_name`, `k8s.container.name`, `k8s.container`, `k8s.container_name`, `k8s.deployment.name` |
+| `proc_id`        | `kubernetes.pod_name`, `k8s.pod.name`, `k8s.pod`, `k8s.pod_name`                                                |
+| `hostname`       | `kubernetes.host`, `k8s.host.name`, `k8s.host`, `k8s.host_name`, `k8s.node.name`, `k8s.node`, `k8s.node_name`   |
+| `sender` (IP)    | `kubernetes.pod_id`, `k8s.pod.ip`, `k8s.pod_ip`, `kubernetes.annotations.cni.projectcalico.org/podip`           |
