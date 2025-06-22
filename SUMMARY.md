@@ -233,6 +233,7 @@
   * [Linux+Java Application Tracing](observe/overview/linux+java-application-tracing.md)
 * [Log Management](log-management/log-management-overview.md)
   * [Terminology](log-management/logs-terminology.md)
+  * [Concepts](observe/log-management-overview/concepts.md)
   * [Explore Logs](log-management/explore-logs.md)
   * [Topology](log-management/topology.md)
   * [Apica Ascent Search Cheat Sheet](log-management/search-cheat-sheet.md)
