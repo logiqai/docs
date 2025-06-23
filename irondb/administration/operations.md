@@ -72,7 +72,7 @@ IRONdb comes with a built-in operational dashboard accessible via port 8112 in y
 
 The "Overview" tab displays a number of tiles representing the current ingestion throughput, available rollup dimensions, license information, and storage statistics.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Ingestion
 
@@ -110,11 +110,11 @@ Disk space used and performance data per data type and rollup dimension.
 
 Each icon under "Performance" displays a histogram of the associated operation (Get/Put/Proxy) latency since the server last started. "Get" operations are reads, "Put" are writes, and "Proxy" are operations that require fetching data from a different node than the one which received the request.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Latencies are plotted on the x-axis as seconds, with suffixes "m" for milliseconds, "μ" for microseconds, and "n" for nanoseconds. Counts of operations in each latency bucket are on the y-axis. The mean latency for the set is displayed as a vertical green line.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Hovering over the x-axis will display a shaded region representing quantile bands and the latency values that fall within them. The quantiles are divided into four bands: p(0)-p(25), p(25)-p(50), p(50)-p(75), and p(75)-p(100). To avoid losing detail, the maximum x-axis values are not displayed, but the highest latency value may be seen by hovering over the p(75)-p(100) quantile band.
 

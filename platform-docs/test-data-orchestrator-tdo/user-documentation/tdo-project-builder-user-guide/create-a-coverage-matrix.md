@@ -8,11 +8,11 @@ Once your business rules are created, you can generate your Coverage Matrix.  In
 
 When you click on this button, you will get a message telling you what TDO is about to create.  Here, TDO is letting you know that you have 8 determining attributes in your rules, and you will create 16 unique tests in your coverage matrix.  Click 'OK' to create the coverage matrix.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Coverage Matrix cofirmation message</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Coverage Matrix cofirmation message</p></figcaption></figure>
 
 Once you click OK, the coverage matrix will be created.  On the menu, select 'Coverage Matrix' from the 'Coverage Engine' section of the menu to view your coverage matrix.
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Coverage Matrix</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Coverage Matrix</p></figcaption></figure>
 
 Each row is identified by the rule that it was generated to match.  Note that TDO has created one row for each unique combination of data.  The first rule (Corporate accounts) has two account currencies, two payment currencies, and two payment amounts - this has created 8 unique rows.  Each row represents both a unique test case as well as a unique test data requirement.
 

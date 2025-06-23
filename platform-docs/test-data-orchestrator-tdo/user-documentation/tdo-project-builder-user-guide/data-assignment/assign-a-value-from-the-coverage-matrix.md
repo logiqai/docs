@@ -6,7 +6,7 @@ To begin the assignment process, select 'Assignment Rules' from the 'Data Assemb
 
 In the left pane the steps from the scenario are listed.  Click on the first step and the list of fields from the output format linked in the action will populate in the center pane. Click on the first field to create a rule for that field.&#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>List of output fields in the selected step</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>List of output fields in the selected step</p></figcaption></figure>
 
 In the right pane, under the label 'Rules', there is a plus (+) sign and a trash can.  The plus sign will create a new rule, and the trash can will delete a highlighted rule.  Click the plus sign to create a new rule and the rule name (field\_rule\_mongoID) will populate in the 'Rules' box.
 
@@ -14,7 +14,7 @@ In the right pane, under the label 'Rules', there is a plus (+) sign and a trash
 The rule container shown below is reserved in the database, but will not be saved until you create a rule for that container.  If you leave this page or click a different field name before creating a rule, this container will be lost and will need to be recreated.
 {% endhint %}
 
-<figure><img src="../../../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Rule name container created</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Rule name container created</p></figcaption></figure>
 
 Click on the rule name in the 'Rules' pane and two new panes will open in the lower half of the window.  The left pane ('Conditions') will be covered in the 'Assigning a Value using Conditions' section later.  For now we will focus on the right hand section, 'Operands'.  This pane shows all rules  assigned to the selected rule container. To create a new rule, click on the 'Compose' button at the bottom of the Operands window.
 

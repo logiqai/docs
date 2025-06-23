@@ -47,7 +47,7 @@ The Cloudformation template provisions the following resources:
     <figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 *   [ ] On your top right, click **"Create Stack"** and select **"With new resources (standard)"**
 
-    <figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 * [ ] **Step 1: Create stack**
   *   On the following page (step 1 of Stack creation) select **"Template is ready"** and **"Amazon S3 URL"**. In the **"Amazon S3 URL"** textfield, enter [https://logiq-scripts.s3.ap-south-1.amazonaws.com/apicamultiset.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/apicamultiset.yaml)
 

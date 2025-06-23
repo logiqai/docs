@@ -12,7 +12,7 @@ You can use logical conditions to set these formats. To use values from the cove
 
 &#x20;Using conditional rules (logic) to set Boolean values is the most common way of using this formatting function, as it sets the value based on a prior condition.
 
-<figure><img src="../../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Example 1: using logic to set Boolean values</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Example 1: using logic to set Boolean values</p></figcaption></figure>
 
 <figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Example 2: using logic to set Boolean values</p></figcaption></figure>
 
