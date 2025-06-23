@@ -47,16 +47,16 @@ The Cloudformation template provisions the following resources:
     <figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 *   [ ] On your top right, click **"Create Stack"** and select **"With new resources (standard)"**
 
-    <figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 * [ ] **Step 1: Create stack**
   *   On the following page (step 1 of Stack creation) select **"Template is ready"** and **"Amazon S3 URL"**. In the **"Amazon S3 URL"** textfield, enter [https://logiq-scripts.s3.ap-south-1.amazonaws.com/apicamultiset.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/apicamultiset.yaml)
 
-      <figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
   * Click **"Next"**
 * [ ] **Step 2: Specify stack details**
   *   [ ] Enter a stack name
 
-      <figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Stack name can include letters (A–Z and a–z), numbers (0–9) and dashes (-).</p></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Stack name can include letters (A–Z and a–z), numbers (0–9) and dashes (-).</p></figcaption></figure>
   * [ ] Enter an IAM role name for Logiq-EKS **(Save this value for later)**
     * _This will create the IAM role_
   * [ ] Enter an S3 bucket name **(Save this value for later)**
@@ -68,11 +68,11 @@ The Cloudformation template provisions the following resources:
   * [ ] Enter a database name for the Postgresql database
     *   _Start with small letter_
 
-        <figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
   * [ ] Provide a **Virtual Private Cloud (VPC) ID**
     *   You can find this by searching for **"VPC"** on the top left search bar, select the **VPC** service, click the **VPCs** resource and select your **region**. Locate your **VPC** and copy the **VPC ID**.
 
-        <figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
   * [ ] Enter two (2) **Private** **Subnets**.
     *   From where you left of extracting your **VPC ID**, on the left hand side menu, select **Private Subnets** and copy the two **Subnet ID**s you intend you use
 
