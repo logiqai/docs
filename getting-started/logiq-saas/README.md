@@ -35,7 +35,7 @@ The goal is to ingest telemetry data (logs, metrics, traces) from relevant syste
 
 **Detailed steps to start ingesting data:**
 
-### Log into Ascent
+**LOG INTO ASCENT**
 
 <figure><img src="../../.gitbook/assets/image (458).png" alt=""><figcaption></figcaption></figure>
 
