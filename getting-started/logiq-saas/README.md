@@ -26,8 +26,6 @@ In this guide, we cover the key goals and related activities of each step to ens
 
 For a quick video on step one, click here: [Step 1 - Start Ingesting Data](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/ET5AT3ZMf9NAshVwpdaPq0cBqLRO6_qZVpshZx0qwdcREA?e=0Raie2)
 
-{% embed url="https://apicasystem.sharepoint.com/:f:/r/sites/ProfessionalServices/Shared%20Documents/Quick%20Start%20Guide%20Videos?csf=1&e=KyLGgN&web=1" %}
-
 The goal is to ingest telemetry data (logs, metrics, traces) from relevant systems.
 
 **Key actions include:**&#x20;
