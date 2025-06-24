@@ -1,85 +1,74 @@
-# Ascent 2.10.6
+# Ascent 2.10.7
 
-We're excited to share the latest improvements and bug fixes in Ascent 2.10.6. This release focuses on enhancing stability and user experience across all our products.
-
-### &#x20;Ascent Synthetics
-
-#### What's Fixed
-
-* **Screenshot Issues Resolved**: Screenshots now work properly for browser checks and ASM integration
-* **Check Management Improvements**:
-  * Fixed issues with uploading ZebraTester scripts in Scenario Management
-  * Resolved problems creating compound checks
-  * Fixed check runs graph and table views showing empty data
-* **Private Location Support**: Private locations are now working correctly again
-* **User Interface Enhancements**:
-  * Check deletion now properly closes tabs
-  * Fixed cloning issues where check details showed incorrect values
-  * Removed unwanted scroll bars in Screenshots & Filmstrips section
-  * Improved SSL check type image display
-* **Group Management**:
-  * Fixed loading issues when monitor groups contain more than 10 checks
-  * Renamed "Check Group" and "Monitor Group" to simply "Group" for consistency
-* **Data Display**: Resolved issue where no data was showing for enabled and running checks
-
-### Flow
-
-#### New Features
-
-* **Pipeline Management**: Enhanced pipeline creation and management experience
-* **Rule Configuration**: Improved rule creation with better help text and field validation
-* **SIEM Integration**: Added Alert and Dashboard tabs for SIEM rules
-
-#### What's Fixed
-
-* **Pipeline Operations**:
-  * Fixed metric flow stopping when more than 2 machines send data
-  * Resolved pipeline filter functionality
-  * Fixed issue where deleted pipelines still appeared
-  * Corrected Active Pipelines counter when filtering
-* **Data Processing**:
-  * Fixed CSV file upload errors in Lookups
-  * Resolved namespace and application availability issues
-  * Fixed facet fields display after selecting dataflow options
-* **Rule Management**:
-  * Fixed TAG rule creation issues with metrics, dashboards, and alerts
-  * Resolved field name display problems with dots in the name
-  * Fixed pipeline preview to use raw logs correctly
-* **User Interface**:
-  * Improved layout and color schemes for pipelines
-  * Fixed dropdown bugs in pipeline configuration
-  * Better handling of pipeline rules display
-
-### Fleet Management
-
-#### What's Fixed
-
-* **Agent Management**:
-  * Stopped fleet agents from restarting repeatedly with new configurations
-  * Fixed syncing issues between repository and fleet-control
-* **Configuration**:
-  * Improved Datadog agent field handling
-  * Added platform-based filtering for agent types
-  * Fixed tech preview text display
-* **Repository Updates**: Updated fleet-management-defaults to match fleet-tests
-
-### Observe
-
-#### What's Fixed
-
-* **Check Analytics**: Improved performance and reliability of check analytics pages.
-* **Data Visualization**: Fixed pipeline table data and hover issues.
-* **Integration**: Better integration with Ascent Synthetics features.
-
-### General Improvements
-
-* **User Management**: Fixed internal server error when disabling pending users.
-* **Documentation**: Enhanced Swagger documentation for Flash Bundles API.
-* **Performance**: Various backend optimizations for better system stability.
+This release includes a number of fixes and improvements across the platform. Here's a breakdown of what’s been addressed, organized by product area.
 
 ***
 
-### Component Versions - Ascent v2.10.6
+### **Ascent Synthetics**
 
-<table><thead><tr><th>Components</th><th width="410">Version</th></tr></thead><tbody><tr><td>Flash</td><td>v3.15.9</td></tr><tr><td>Coffee</td><td>v3.16.12</td></tr><tr><td>ASM</td><td>13.35.1</td></tr><tr><td>NG Private Agent</td><td>1.0.9</td></tr><tr><td>Check Execution Container: Browser</td><td>fpr-c-130n-10.2.1-716-r-2025.04.02-0-base-2.0.0</td></tr><tr><td>Check Execution Container: Zebratester</td><td>zt-7.5b-p1-r-2025.04.02-0-base-1.2.0</td></tr><tr><td>Check Execution Container: Runbin</td><td>runbin-2025.04.17-0-base-2.2.1</td></tr><tr><td>Check Execution Container: Postman</td><td>postman-2025.04.17-0-base-1.4.1</td></tr><tr><td>Bnet (Chrome Version)</td><td>10.2.1 (Chrome 130)</td></tr><tr><td>Zebratester</td><td>7.0B</td></tr><tr><td>ALT</td><td>6.13.3.240</td></tr><tr><td>IronDB</td><td>1.5.0</td></tr></tbody></table>
+* **Improved Check Cloning**\
+  Cloned checks now behave more predictably:
+  * The aggregator view no longer shows the original check name.
+  * Manual run messages are now accurate.
+  * Deleting cloned checks works as expected.
+  * Checks created via Postman no longer fail silently.
+* **Private Location Fixes**
+  * The correct private location name now displays.
+  * Access group information is now visible in the Private Locations settings.
+* **Download Issues Resolved**
+  * Downloaded browser scenarios now retain their original names and extensions.
+
+***
+
+### **Observe**
+
+* **Dashboard and Data Explorer Stability**
+  * Dashboards created from logs or alerts now load properly.
+  * Tabs and widgets in Data Explorer no longer disappear after dashboard creation.
+* **UI Improvements**
+  * A warning popup now appears when enabling tech preview features.
+  * The Tag Management list no longer hides pagination controls.
+  * The Pending Users detail page now loads correctly.
+* **System Status**
+  * Clicking on outdated queries no longer breaks the page.
+
+***
+
+### **Flow**
+
+* **Pipeline Usability**
+  * You can now rearrange pipeline sequences and see the updated order.
+  * Creating pipelines with duplicate names is now blocked.
+  * Pipeline preview works consistently on every click.
+  * Most dashboard widgets now show data as expected.
+  * Sorting in the Rules section now works.
+* **Rule Execution and Filtering**
+  * Rule execution in the pipeline engine has been fixed.
+  * Filtered names in the Topological View no longer overflow their containers.
+* **Documentation Updates**
+  * Added guidance on setting `namespace` and `app_name` in dataflows.
+  * Documentation on replay feature is now available.
+* **Other Fixes**
+  * The “Download Complete Report” button in Report page now works.
+
+***
+
+### **Fleet**
+
+* **Agent and Configuration Management**
+  * Sorting by name in Fleet configurations now works across all pages.
+  * You can now delete configuration files reliably.
+  * The agent list filter dropdown updates dynamically based on selections.
+  * The agents list now uses the backend API for filtering, improving performance.
+* **Package Management**
+  * The package assignment table now shows historical data.
+  * The install script now detects the Linux flavor (Rocky Linux) and uses the correct package manager.
+* **Documentation Enhancements**
+  * Added instructions for updating the Fleet GitHub repository, including agent types, configurations, and packages.
+
+***
+
+### Component Versions - Ascent v2.10.7
+
+<table><thead><tr><th>Components</th><th width="410">Version</th></tr></thead><tbody><tr><td>Flash</td><td>v3.15.10</td></tr><tr><td>Coffee</td><td>v3.16.13</td></tr><tr><td>ASM</td><td>13.36.0</td></tr><tr><td>NG Private Agent</td><td>1.0.9</td></tr><tr><td>Check Execution Container: Browser</td><td>fpr-c-130n-10.2.1-716-r-2025.04.02-0-base-2.0.0</td></tr><tr><td>Check Execution Container: Zebratester</td><td>zt-7.5b-p1-r-2025.04.02-0-base-1.2.0</td></tr><tr><td>Check Execution Container: Runbin</td><td>runbin-2025.04.17-0-base-2.2.1</td></tr><tr><td>Check Execution Container: Postman</td><td>postman-2025.04.17-0-base-1.4.1</td></tr><tr><td>Bnet (Chrome Version)</td><td>10.2.1 (Chrome 130)</td></tr><tr><td>Zebratester</td><td>7.0B</td></tr><tr><td>ALT</td><td>6.13.3.240</td></tr><tr><td>IronDB</td><td>1.5.0</td></tr></tbody></table>
 
