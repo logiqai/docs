@@ -53,13 +53,12 @@ IRONdb setup expects a zpool to exist, but will take care of creating all necess
 
 For best performance with IRONdb, consider using mirror groups. These provide the highest number of write IOPS, but at a cost of 50% of available raw storage. Balancing the capacity of individual nodes with the number of nodes in your IRONdb cluster is something that Apica Support can help you with.
 
-In our example system we have 12 drives available for our IRONdb pool. We will
-configure six 2-way mirror groups, across which writes will be striped. This is
-similar to a RAID-10 setup. We will call our pool "data". To simplify the
-example command we are using the traditional `sdX` names, but it's recommended
-that you use 
-[different identifiers](https://openzfs.github.io/openzfs-docs/Project%20and%20Community/FAQ.html#selecting-dev-names-when-creating-a-pool-linux)
-for your devices that are less susceptible to change and make it easier to
+In our example system we have 12 drives available for our IRONdb pool. We will\
+configure six 2-way mirror groups, across which writes will be striped. This is\
+similar to a RAID-10 setup. We will call our pool "data". To simplify the\
+example command we are using the traditional `sdX` names, but it's recommended\
+that you use[different identifiers](https://openzfs.github.io/openzfs-docs/Project%20and%20Community/FAQ.html#selecting-dev-names-when-creating-a-pool-linux)\
+for your devices that are less susceptible to change and make it easier to\
 maintain.
 
 ```

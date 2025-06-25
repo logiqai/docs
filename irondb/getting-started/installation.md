@@ -80,12 +80,14 @@ sudo curl -s -o /etc/apt/trusted.gpg.d/backtrace.asc \
 Create the file `/etc/apt/sources.list.d/circonus.list` with the following contents, depending on the version:
 
 For Ubuntu 22.04:
+
 ```
 deb https://updates.circonus.net/irondb/ubuntu/ jammy main
 deb https://updates.circonus.net/backtrace/ubuntu/ jammy main
 ```
 
 For Ubuntu 24.04:
+
 ```
 deb https://updates.circonus.net/irondb/ubuntu/ noble main
 deb https://updates.circonus.net/backtrace/ubuntu/ noble main
@@ -95,10 +97,10 @@ Finally, run `sudo apt-get update`.
 
 ### Install Package
 
-There is a helper package that works around issues with dependency resolution,
-since IRONdb is very specific about the versions of dependent Apica packages,
-and `apt-get` is unable to cope with them. The helper package must be installed
-first, i.e., it cannot be installed in the same transaction as the main
+There is a helper package that works around issues with dependency resolution,\
+since IRONdb is very specific about the versions of dependent Apica packages,\
+and `apt-get` is unable to cope with them. The helper package must be installed\
+first, i.e., it cannot be installed in the same transaction as the main\
 package.
 
 ```
@@ -112,19 +114,19 @@ Prepare site-specific information for setup. These values may be set via shell e
 
 **NOTE:** if you wish to use environment variables, you will need to run the install from a root shell, as sudo will clear the environment when it runs.
 
-**IRONDB_NODE_UUID**
+**IRONDB\_NODE\_UUID**
 
 _(required)_ The ID of the current node, which must be unique within a given cluster. You may use the `uuidgen` command that comes with your OS, or generate a [well-formed, non-nil](https://en.wikipedia.org/wiki/Universally_unique_identifier) UUID with an external tool or website. Note that this must be a _lowercase_ UUID. The `uuidgen` tool on some systems, notably MacOS, produces uppercase. Setup will warn and convert the UUID to lowercase.
 
-**IRONDB_NODE_ADDR**
+**IRONDB\_NODE\_ADDR**
 
 _(required)_ The IPv4 address or hostname of the current node, e.g., "192.168.1.100" or "host1.domain.com". Hostnames will be resolved to IP addresses once at service start. Failures in DNS resolution may cause service outages.
 
-**IRONDB_CHECK_UUID**
+**IRONDB\_CHECK\_UUID**
 
 _(required)_ Check ID for Graphite, OpenTSDB, and Prometheus metric ingestion, which must be the same on all cluster nodes. You may use the `uuidgen` command that comes with your OS, or generate a [well-formed, non-nil](https://en.wikipedia.org/wiki/Universally_unique_identifier) UUID with an external tool or website. Note that this must be a _lowercase_ UUID. The `uuidgen` tool on some systems, notably MacOS, produces uppercase. Setup will warn and convert the UUID to lowercase.
 
-**IRONDB_TLS**
+**IRONDB\_TLS**
 
 _(optional)_ Configures listeners to require TLS where applicable. Default is "off". If set to "on", a second HTTPS listener will be created on port 8443, for external clients to use for metric submission and querying. Two SSL certificates will be required, utilizing different CNs. See [TLS Configuration](configuration.md#tls-configuration) for details.
 
@@ -134,17 +136,16 @@ Note that OpenTSDB does not support TLS. Even if this option is set to "on", the
 
 **Because of the certificate requirement, the service will not automatically start post-setup.**
 
-**IRONDB_CRASH_REPORTING**
+**IRONDB\_CRASH\_REPORTING**
 
-_(optional)_ Controls enablement of automated crash reporting. Default is "on".
-IRONdb utilizes sophisticated crash tracing technology to help diagnose errors.
-Enabling crash reporting requires that the system be able to connect out to the
-Apica reporting endpoint:
-[https://circonus.sp.backtrace.io:6098](https://circonus.sp.backtrace.io:6098) .
-If your site's network policy forbids this type of outbound connectivity, set
+_(optional)_ Controls enablement of automated crash reporting. Default is "on".\
+IRONdb utilizes sophisticated crash tracing technology to help diagnose errors.\
+Enabling crash reporting requires that the system be able to connect out to the\
+Apica reporting endpoint:[https://circonus.sp.backtrace.io:6098](https://circonus.sp.backtrace.io:6098) .\
+If your site's network policy forbids this type of outbound connectivity, set\
 the value to "off".
 
-**IRONDB_ZPOOL**
+**IRONDB\_ZPOOL**
 
 _(optional)_ The name of the zpool that should be used for IRONdb storage. If this is not specified and there are multiple zpools in the system, setup chooses the pool with the most available space.
 
@@ -171,9 +172,7 @@ Upon successful completion, it will print out specific information about how to 
 
 IRONdb comes with an embedded license that allows all features with a limit of 25K active, unique metric streams. If you wish to obtain a more expansive license, please contact [Apica Sales](mailto:sales@apica.io).
 
-Add the `<license>` stanza from your purchased IRONdb license to the file
-`/opt/circonus/etc/licenses.conf` on your IRONdb instance, within the enclosing
-`<licenses>` tags. It should look something like this:
+Add the `<license>` stanza from your purchased IRONdb license to the file`/opt/circonus/etc/licenses.conf` on your IRONdb instance, within the enclosing`<licenses>` tags. It should look something like this:
 
 ```xml
 <licenses>
@@ -297,8 +296,8 @@ Then pass the filename to the helper script:
 
 To configure a sided cluster, use the `-s` option. This will assign alternate nodes to side "a" or "b". If you wish to divide the list differently, you may edit the `/tmp/topology.tmp` file accordingly. If omitted, the cluster will be non-sided, if the node count is less than 10. For clusters of 10 or more nodes, the helper script will default to configuring a sided cluster, because there are significant operational benefits, described below.
 
-When you are satisfied that it looks the way you want, copy `/tmp/topology.tmp`
-to `/opt/circonus/etc/topology` on each node, then proceed to the [Import
+When you are satisfied that it looks the way you want, copy `/tmp/topology.tmp`\
+to `/opt/circonus/etc/topology` on each node, then proceed to the [Import\
 Topology](installation.md#import-topology) step.
 
 #### Sided Clusters

@@ -829,7 +829,7 @@ Due to certificate verification requirements, two sets of cryptographic keys and
 
 The [installer script](installation.md#setup-process) will automatically configure TLS listeners on a fresh installation when the `-t` option or the `IRONDB_TLS` environment variable is set to `on`.
 
-The following files must be present on each node in order for the service to
+The following files must be present on each node in order for the service to\
 work properly with TLS. Place them in `/opt/circonus/etc/ssl`:
 
 * **cluster.key** - An RSA key for the intra-cluster listener.
@@ -853,9 +853,8 @@ The first two items will be done on all IRONdb nodes. The third item will vary d
 
 **Update Topology**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#update-topology)
 
-The active topology for a cluster will be located in the
-`/opt/circonus/etc/irondb-topo` directory, as a file whose name matches the
-topology hash. This hash is recorded in `/opt/circonus/etc/irondb.conf` as the
+The active topology for a cluster will be located in the`/opt/circonus/etc/irondb-topo` directory, as a file whose name matches the\
+topology hash. This hash is recorded in `/opt/circonus/etc/irondb.conf` as the\
 value for the `active` attribute within the `<topology>` stanza, e.g.
 
 ```

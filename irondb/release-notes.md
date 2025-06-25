@@ -4,67 +4,65 @@
 
 2025-06-17
 
- * Add `message` field to `/find/tags` estimates for enhanced clarity.
- * Improve reconstitute performance.
- * Fix a bug where the first data point for an NNTBS metric for a rollup could
-   be written with the wrong timestamp during a reconstitute.
- * Add new iterate style, `seek`, for sending data during reconstitute. This
-   mode seeks to specific metrics rather than iterating the whole shard during
-   the sending phase. This can be set via the
-   `reconstitute/nntbs@iterate_surrogates_for_send_style` field - `iterate` is
-   the old style and `seek` is the new style. The default value is `iterate`.
- * Remove the `jindexer` subscriber when the `use_indexer` field is disabled
-   for journals, which will prevent unnecessary journal data retention.
- * Improve handling when mmap operations fail loading surrogate database or
-   indexing files.
- * On delete responses, the `X-Snowth-Incomplete-Results` header is now always
-   returned, and set to `false` when results are complete.
- * Remove unneeded checks for flatbuffer availability in journaling.
+* Add `message` field to `/find/tags` estimates for enhanced clarity.
+* Improve reconstitute performance.
+* Fix a bug where the first data point for an NNTBS metric for a rollup could\
+  be written with the wrong timestamp during a reconstitute.
+* Add new iterate style, `seek`, for sending data during reconstitute. This\
+  mode seeks to specific metrics rather than iterating the whole shard during\
+  the sending phase. This can be set via the`reconstitute/nntbs@iterate_surrogates_for_send_style` field - `iterate` is\
+  the old style and `seek` is the new style. The default value is `iterate`.
+* Remove the `jindexer` subscriber when the `use_indexer` field is disabled\
+  for journals, which will prevent unnecessary journal data retention.
+* Improve handling when mmap operations fail loading surrogate database or\
+  indexing files.
+* On delete responses, the `X-Snowth-Incomplete-Results` header is now always\
+  returned, and set to `false` when results are complete.
+* Remove unneeded checks for flatbuffer availability in journaling.
 
 ## Changes in 1.5.0
 
 2025-05-08
 
-* Avoid excess CPU usage during replication when a node is in journal-only
+* Avoid excess CPU usage during replication when a node is in journal-only\
   mode.
 * Fix issue with stalling in journal-only mode due to check tag replication.
-* Remove unneeded checks for flatbuffer availability in journaling.
+* Remove unneeded checks for flatbuffer availability in journaling.\
   Non-flatbuffer journals were removed long ago.
-* Fix journal-only mode so that it exits when the replication journals are
+* Fix journal-only mode so that it exits when the replication journals are\
   fully drained.
-* Disable the graphite, prometheus, opentsdb, check tag replication, and
+* Disable the graphite, prometheus, opentsdb, check tag replication, and\
   monitor modules when running in reconstitute or journal-only modes.
 * Remove Pickle support from Graphite module.
 * Reduce error log volume on text reconstitute errors.
-* Fix issue where the opentsdb and prometheus modules were incorrectly
-  reporting that the toplogy was wrong when attempting to load data onto a node
-  that is reconstituting. Nodes will now report that the service is
+* Fix issue where the opentsdb and prometheus modules were incorrectly\
+  reporting that the toplogy was wrong when attempting to load data onto a node\
+  that is reconstituting. Nodes will now report that the service is\
   unavailable.
-* Improve libsnowth listener error to include the IP address of the remote side
+* Improve libsnowth listener error to include the IP address of the remote side\
   of the socket.
 * Accelerate NNTBS reconstitute by avoiding memory copies.
 * Reduce unnecessary NNTBS data copies during reconstitute to improve speed.
 * Write NNTBS data out in parallel during reconstitute to improve speed.
-* Add parameter to text reconstitute data fetching to allow excluding data
+* Add parameter to text reconstitute data fetching to allow excluding data\
   older than the provided time.
 * Improve text reconstitute performance by doing fewer surrogate id lookups.
-* Deprecate configuration parameters `reconstitute/nntbs@batchsize` and
-  `reconstitute/nnt@batchsize`. Use `reconstitute/nntbs@lmdb_commit_batch_size`
+* Deprecate configuration parameters `reconstitute/nntbs@batchsize` and`reconstitute/nnt@batchsize`. Use `reconstitute/nntbs@lmdb_commit_batch_size`\
   instead.
-* Add new flag, `reject_data_older_than`, to the `<text>` config stanza that
-  will disallow text data older than the provided time from being ingested,
+* Add new flag, `reject_data_older_than`, to the `<text>` config stanza that\
+  will disallow text data older than the provided time from being ingested,\
   whether by standard ingestion or reconstitute.
-* Improve NNTBS and histogram rollup reconstitute performance by no longer
+* Improve NNTBS and histogram rollup reconstitute performance by no longer\
   fetching shards that fall outside of any configured retention window.
-* Inhibit retention-related deletion of NNTBS and histogram rollup shards while
+* Inhibit retention-related deletion of NNTBS and histogram rollup shards while\
   a reconstitute is in progress.
-* Add error handling of invalid flatbuffer records found while replaying metric
-  index journals. Optionally these invalid records can be saved to files. The
+* Add error handling of invalid flatbuffer records found while replaying metric\
+  index journals. Optionally these invalid records can be saved to files. The\
   number of replay errors is now tracked in the `/state` API.
-* Treat `MDB_NOTFOUND` errors returned from LMDB transaction puts as
+* Treat `MDB_NOTFOUND` errors returned from LMDB transaction puts as\
   corruption.
-* Only flush column families in the raw database that finish rolling up.
-  Previously all column families were flushed unconditionally, including those
+* Only flush column families in the raw database that finish rolling up.\
+  Previously all column families were flushed unconditionally, including those\
   that had not finished rolling up or had long since finished.
 * Fix `snowthsurrogatecontrol` use-after-free error.
 

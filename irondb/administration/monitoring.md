@@ -75,9 +75,9 @@ The internal monitor module exports all of the same statistics (both application
 
 Metrics stored by the monitor module are replicated to additional nodes (if any) in the same way as metrics ingested from outside.
 
-The monitor module is not enabled by default. To enable it, add the following
-configuration to `/opt/circonus/etc/irondb-modules-site.conf`, generate a new
-UUID and use it to replace the null uuid in the example, and then restart the
+The monitor module is not enabled by default. To enable it, add the following\
+configuration to `/opt/circonus/etc/irondb-modules-site.conf`, generate a new\
+UUID and use it to replace the null uuid in the example, and then restart the\
 IRONdb service:
 
 ```

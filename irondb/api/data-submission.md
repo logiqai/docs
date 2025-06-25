@@ -2,8 +2,8 @@
 
 ## Writing Raw Data
 
-The raw API accepts direct input of measurement data at arbitrary frequencies.
-It stores every measurement as it was received, for a configurable amount of
+The raw API accepts direct input of measurement data at arbitrary frequencies.\
+It stores every measurement as it was received, for a configurable amount of\
 time, before aging it out to a rollup format.
 
 Metric records are in one of several formats, and are accepted as either tab-separated values or as FlatBuffer messages.
@@ -46,9 +46,9 @@ Components are separated by TAB characters. Multiple records may be sent in the 
   * `s`: string
 * `VALUE` : The value observed. `VALUE` is always a string or `[[null]]` (never encoded/packed).
 
-> Numeric measurements which collide on TIMESTAMP/UUID/NAME will store the
-> largest absolute value for that time period, by default. This behavior is
-> configurable via the `conflict_resolver` setting for the [raw
+> Numeric measurements which collide on TIMESTAMP/UUID/NAME will store the\
+> largest absolute value for that time period, by default. This behavior is\
+> configurable via the `conflict_resolver` setting for the [raw\
 > database](../getting-started/configuration.md#raw_database).
 
 A sample `M` record:
@@ -71,7 +71,7 @@ H1 TIMESTAMP UUID NAME HISTOGRAM
 * `UUID` : Same as with `M` records above.
 * `NAME` : Same as with `M` records above.
 * `HISTOGRAM` : A base64-encoded, serialized histogram. See the
-* `hist_serialize()` function in * [libcircllhist](https://github.com/circonus-labs/libcircllhist/blob/master/src/circllhist.c),
+* `hist_serialize()` function in \* [libcircllhist](https://github.com/circonus-labs/libcircllhist/blob/master/src/circllhist.c),\
   the reference implementation of histograms in Circonus.
 
 A sample `H1` record:
@@ -86,7 +86,6 @@ This is a histogram of values for the metric `maximum`, on an ICMP check for acc
 
 A FlatBuffer metric payload is submitted as a `MetricList` as specified in the [Reconnoiter FlatBuffer source](https://github.com/circonus-labs/reconnoiter/blob/master/src/flatbuffers/metric_list.fbs).
 
-When submitting FlatBuffer-encoded metrics, a client must set the HTTP header
-`Content-Type` to `application/x-circonus-metric-list-flatbuffer` and set the
-HTTP header `X-Snowth-Datapoints` to the number of data points within the raw
+When submitting FlatBuffer-encoded metrics, a client must set the HTTP header`Content-Type` to `application/x-circonus-metric-list-flatbuffer` and set the\
+HTTP header `X-Snowth-Datapoints` to the number of data points within the raw\
 submission.
