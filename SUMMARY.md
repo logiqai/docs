@@ -53,7 +53,7 @@
   * [Getting Started with Logs](getting-started/logiq-saas/getting-started-with-logs/README.md)
     * [Collect Logs with Python](getting-started/logiq-saas/getting-started-with-logs/collect-logs-with-python.md)
     * [Collect Logs with OpenTelemetry](getting-started/logiq-saas/getting-started-with-logs/opentelemetry.md)
-    * [Collect Logs with rsyslog](getting-started/logiq-saas/getting-started-with-logs/collect-logs-with-rsyslog.md)
+    * [Collect Logs with Rsyslog](getting-started/logiq-saas/getting-started-with-logs/collect-logs-with-rsyslog.md)
   * [Using Fleet for Data Ingestion](getting-started/logiq-saas/using-fleet-for-data-ingestion.md)
 * [Ascent Deployment Overview](getting-started/ascent-deployment-overview.md)
 * [Quickstart with Docker-Compose](getting-started/quickstart-with-docker-compose.md)
