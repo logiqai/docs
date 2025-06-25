@@ -22,11 +22,9 @@ In this guide, we cover the key goals and related activities of each step to ens
 
 ### Step 1 - Start Ingesting Data
 
-
+{% embed url="https://www.youtube.com/embed/0bKKm44n58U?si=VfWUpr3Ji2iMYE6F" %}
 
 For a quick video on step one, click here: [Step 1 - Start Ingesting Data](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/ET5AT3ZMf9NAshVwpdaPq0cBqLRO6_qZVpshZx0qwdcREA?e=0Raie2)
-
-{% embed url="https://apicasystem.sharepoint.com/sites/ProfessionalServices/_layouts/15/embed.aspx?UniqueId=764f403e-7f4c-40d3-b215-70a5d68fab47&embed={%22ust%22:true,%22hv%22:%22CopyEmbedCode%22}&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" %}
 
 The goal is to ingest telemetry data (logs, metrics, traces) from relevant systems.
 
@@ -115,8 +113,6 @@ You can then confirm that data is flowing into the system (Go to 'Explore -> Log
 
 For a quick video on step two, click here: [Step 2 - Setup and Configure Pipeline](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/EeYwOND5iatLjFfUCE0KQeMB8T_PPhOhqQChJZC8zohKSw?e=e50lwY)
 
-{% embed url="https://apicasystem.sharepoint.com/sites/ProfessionalServices/_layouts/15/embed.aspx?UniqueId=d03830e6-89f9-4bab-8c57-d4084d0a41e3&embed={%22ust%22:true,%22hv%22:%22CopyEmbedCode%22}&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" %}
-
 The goal is to transport and process the collected data.
 
 **Key actions include:**
@@ -135,7 +131,7 @@ The goal is to transport and process the collected data.
 
 For a quick video on step three, click here: [Step 3 - Design Queries](https://apicasystem.sharepoint.com/:v:/r/sites/ProfessionalServices/Shared%20Documents/Quick%20Start%20Guide%20Videos/step%203%20-%20Creating%20Queries.mp4?csf=1\&web=1\&e=ptXNOU)
 
-{% embed url="https://apicasystem.sharepoint.com/sites/ProfessionalServices/_layouts/15/embed.aspx?UniqueId=a6be27f7-e998-48c2-b2c7-b0b1e4ab58fa&embed={%22ust%22:true,%22hv%22:%22CopyEmbedCode%22}&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" %}
+{% embed url="https://www.youtube.com/embed/_V8zupniOBA?si=dEtzv7gJyjBMfGnT" %}
 
 The goal is to enable insights by querying telemetry data.
 
@@ -156,7 +152,7 @@ The goal is to enable insights by querying telemetry data.
 
 For a quick video on step four, click here: [Step 4 - Create Dashboards](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/EXDbT3GbnSNDkMNb0alGtWkB2b4_uWbo9IvI_Hv1batx0g?e=egIxH7)
 
-{% embed url="https://apicasystem.sharepoint.com/sites/ProfessionalServices/_layouts/15/embed.aspx?UniqueId=714fdb70-9d9b-4323-90c3-5bd1a946b569&embed={%22ust%22:true,%22hv%22:%22CopyEmbedCode%22}&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" %}
+{% embed url="https://www.youtube.com/embed/yGzpLaMKLQg?si=_MlP_PZS_ECCExyu" %}
 
 The goal is to visualize system performance and behavior in real time.
 
@@ -175,7 +171,7 @@ The goal is to visualize system performance and behavior in real time.
 
 For a quick video on step five, click here: [Step 5 - Create Alerts and Endpoints](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/ETtNWHDcxsdOuB1ZPM53WE8Bk858L4pmO0UpopF5thCrxw?e=fwcYe8)
 
-{% embed url="https://apicasystem.sharepoint.com/sites/ProfessionalServices/_layouts/15/embed.aspx?UniqueId=70584d3b-c6dc-4ec7-b81d-593cce77584f&embed={%22ust%22:true,%22hv%22:%22CopyEmbedCode%22}&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" %}
+{% embed url="https://www.youtube.com/embed/iS9bElHtYb4?si=vigh0S7-OacJoclj" %}
 
 The goal is to detect anomalies and automate response actions.
 
