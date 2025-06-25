@@ -113,7 +113,7 @@ You can then confirm that data is flowing into the system (Go to 'Explore -> Log
 
 For a quick video on step two, click here: [Step 2 - Setup and Configure Pipeline](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/EeYwOND5iatLjFfUCE0KQeMB8T_PPhOhqQChJZC8zohKSw?e=e50lwY)
 
-{% embed url="https://www.youtube.com/watch?v=cmYECKTPzOs" %}
+{% embed url="https://www.youtube.com/embed/ZgL3wV9yb9k?si=fL0uxMA-NZ3YpL__" %}
 
 The goal is to transport and process the collected data.
 
