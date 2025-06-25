@@ -22,9 +22,9 @@ In this guide, we cover the key goals and related activities of each step to ens
 
 ### Step 1 - Start Ingesting Data
 
-{% embed url="https://www.youtube.com/embed/0bKKm44n58U?si=VfWUpr3Ji2iMYE6F" %}
-
 For a quick video on step one, click here: [Step 1 - Start Ingesting Data](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/ET5AT3ZMf9NAshVwpdaPq0cBqLRO6_qZVpshZx0qwdcREA?e=0Raie2)
+
+{% embed url="https://www.youtube.com/embed/0bKKm44n58U?si=8f2EbhqHKBljAkgu" %}
 
 The goal is to ingest telemetry data (logs, metrics, traces) from relevant systems.
 
@@ -112,6 +112,8 @@ You can then confirm that data is flowing into the system (Go to 'Explore -> Log
 ### Step 2 - Setup and Configure Pipeline
 
 For a quick video on step two, click here: [Step 2 - Setup and Configure Pipeline](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/EeYwOND5iatLjFfUCE0KQeMB8T_PPhOhqQChJZC8zohKSw?e=e50lwY)
+
+{% embed url="https://www.youtube.com/watch?v=cmYECKTPzOs" %}
 
 The goal is to transport and process the collected data.
 
