@@ -4,15 +4,15 @@ description: >-
   into Apica Ascent
 ---
 
-# Object store (S3 Compatible)
+# Object Store (S3 Compatible)
 
-Apica Ascent can ingest data directly from any S3-compatible object storage. Head over to the App extensions to create an object importer app extension.
+Apica Ascent can ingest data directly from any S3-compatible object storage. Head over to the Source Extensions to create an object importer app extension.
 
-You can find App extensions under the Explore menu
+You can find **Source Extensions** under the Integrations menu.
 
-Once inside the App extension menu, select AWS S3/Compatible Object store
+Once inside the Source Extension menu, select **New Source Extension** and then **AWS S3/Compatible Object store**:
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-02 at 1.58.18 PM.png" alt=""><figcaption><p>AWS S3/Compatible object store</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (536).png" alt=""><figcaption></figcaption></figure>
 
 Create the extension and provide the settings for accessing your object store bucket. The settings menu provides options that allow customization that is specific to vendor object store implementations.
 

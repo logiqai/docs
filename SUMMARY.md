@@ -156,7 +156,7 @@
   * [MQTT](integrations/list-of-integrations/mqtt.md)
   * [Network Packets](integrations/list-of-integrations/network-packets.md)
   * [OpenTelemetry](integrations/list-of-integrations/opentelemetry.md)
-  * [Object store (S3 Compatible)](integrations/list-of-integrations/object-store-s3-compatible.md)
+  * [Object Store (S3 Compatible)](integrations/list-of-integrations/object-store-s3-compatible.md)
   * [Oracle OCI Infrastructure Audit/Logs](integrations/list-of-integrations/oracle-oci-infrastructure-audit-logs.md)
   * [Oracle Data Integrator (ODI)](integrations/list-of-integrations/oracle-data-integrator-odi.md)
   * [OSSEC Variants (OSSEC/WAZUH/ATOMIC)](integrations/list-of-integrations/ossec-variants-ossec-wazuh-atomic/README.md)
