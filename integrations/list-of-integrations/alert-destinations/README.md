@@ -18,6 +18,7 @@ When an alert triggers, Apica Ascent Insights sends alert details to its designa
 * **PagerDuty**
 * **ServiceNow**
 * **Slack**
+* **Zendesk**
 * **Zenduty**
 
 ## Configuring Destinations
