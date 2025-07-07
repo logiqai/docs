@@ -102,4 +102,4 @@ Here, we are setting the condition that if the ‘currency\_a’ field is equal 
 
 The return messages are the same as for the other assignment rule calls.  In TDO, after running both of these calls, the assignment rules page now reflects this.  Each rule is shown individually on the page and sets the value per the rule only if the condition is equal to what was stated.
 
-<figure><img src="../../../../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Assignment Rules with Conditions</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>Assignment Rules with Conditions</p></figcaption></figure>

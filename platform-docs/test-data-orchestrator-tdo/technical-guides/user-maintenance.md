@@ -35,7 +35,7 @@ To create a new user, click the “+” sign in the bottom right corner of the s
 
 &#x20;&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>User Maintenance Screen</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>User Maintenance Screen</p></figcaption></figure>
 
 Fill in the fields as follows:
 

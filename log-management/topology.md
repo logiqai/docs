@@ -26,7 +26,7 @@ In the above screenshot, we have errors in the alerts namespace. To find the err
 
 To run a search query for the errors, click on errors under the node with errors.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
@@ -40,7 +40,7 @@ Here are the steps to create a virtual node,
 * Under the virtual groups tab, click on add virtual group at the footer
 * Enter the virtual group name and press enter
 
-<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * To add namespaces under your group, expand the groups in which you want to add namespaces and all other namespaces which are not grouped will be under the namespaces group
 * Drag the namespace to the respective group and click update

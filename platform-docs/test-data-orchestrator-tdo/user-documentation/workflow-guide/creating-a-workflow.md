@@ -12,7 +12,7 @@ In the fourth pane, you can create individual activities in your workflow.  You 
 
 To add an activity, type a name for your activity in the 'Activity Name' space and then select the type of call (REST API Call or Shell Script).  Click the plus sign to the right to add it to the Activities section at the bottom of the page.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Work Flow with defined activities</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (3).png" alt=""><figcaption><p>Work Flow with defined activities</p></figcaption></figure>
 
 Once the activities are added, save the workflow by clicking the 'Save' button in the top pane.
 

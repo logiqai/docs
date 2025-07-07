@@ -2,7 +2,7 @@
 
 Out of the box, we provide 15 pre-configured alerts:
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 You are off and running once an alert destination is set up and attached to the alert. We integrate with most ITSM providers and have custom webhooks for the ones we don't. To configure an alert destination, navigate to **Integrations -> Alert Destinations -> New Alert Destination (Top Right) -> and fill the appropriate fields out:**
 

@@ -39,7 +39,7 @@ Pre-built customizable dashboards to visualize critical performance metrics, hel
 
 Monitor critical Boomi metrics such as CPU utilization, process failures, and JVM health, notifying engineers of potential issues in real time. These alerts help ensure quick issue resolution, minimize downtime, and maintain optimal performance across Boomi environments.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Out of the box alerts on metrics AND Logs (Multiple Head Nodes, Container Version Mismatch, etc)</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Out of the box alerts on metrics AND Logs (Multiple Head Nodes, Container Version Mismatch, etc)</p></figcaption></figure>
 
 **Additional RTO content links:**
 

@@ -12,4 +12,4 @@ Depending on your network's security settings, you may need to click 'Keep' to c
 
 Once the download is complete, you will find the project listed in your local 'Downloads' folder on your computer.
 
-<figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Exported project available </p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Exported project available </p></figcaption></figure>

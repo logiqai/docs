@@ -6,7 +6,7 @@ description: Ingest, Store, Data Transformation and Connect data on-demand
 
 [FLOW Documentation](https://logflow-docs.logiq.ai/)
 
-<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Regulating data flows is very similar to regulating water flows!</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Regulating data flows is very similar to regulating water flows!</p></figcaption></figure>
 
 ## <mark style="color:red;">Data loss</mark> in data pipelines
 
@@ -46,13 +46,13 @@ An elastic design is needed to ensure that data sources sending more data can be
 
 Build your data pipelines from day 0 with infinite storage that can act as an endless store for throughput mismatches on either the source or the target. Any data in the InstaStore can be instantly replayed to a target on demand. <mark style="color:green;">**Never block or never drop data with InstaStore**</mark>**.**
 
-<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Elastic architecture with Kubernetes
 
 Apica's LogFlow is built on Kubernetes and works with Cluster Autoscaling and Horizontal Pod Autoscaling providing instant throughput on-demand in high volume data environments.
 
-<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Native Kubernetes design makes platform elastically scale on-demand</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Native Kubernetes design makes platform elastically scale on-demand</p></figcaption></figure>
 
 ## Deployment
 
@@ -62,4 +62,4 @@ Apica's LogFlow is built on Kubernetes and works with Cluster Autoscaling and Ho
 
 LogFlow can be deployed and optimized for your enterprise and allows flexible deployment models
 
-<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Flexible deployment options</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Flexible deployment options</p></figcaption></figure>
