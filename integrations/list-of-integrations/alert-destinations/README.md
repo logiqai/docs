@@ -12,6 +12,7 @@ When an alert triggers, Apica Ascent Insights sends alert details to its designa
 * **ChatWork**
 * **Generic Webhook (see** [**Webhooks**](./#slack) **page)**
 * **HipChat**
+* [**ilert**](../ilert.md)
 * **Mattermost**
 * **OpsGenie**
 * **PagerDuty**
