@@ -175,7 +175,7 @@ Displays the layout of the topology ring, and the percentage of the key space fo
 
 An individual stream may be located by entering its UUID and Metric Name in the Locate Metrics tile, and then clicking the Locate button. Numbers indicating the primary and secondary owners of the metric (or more if more write copies are configured) will appear next to the corresponding node.
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Extensions Tab
 
@@ -199,7 +199,7 @@ At the top right of the Joq Queues panel is a toggle that controls whether to di
 
 > The toggle first appeared in version 0.15.1
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Each row in the panel represents a job queue, with the following columns:
 
@@ -219,7 +219,7 @@ Each row in the panel represents a job queue, with the following columns:
 
 The Sockets panel displays information on active sockets. These include both internal file descriptors for the [libmtev eventer system](https://circonus-labs.github.io/libmtev/development/eventer.html), as well as network connections for REST API listeners and clients.
 
-<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Each row in the panel corresponds to one socket, with the following columns:
 
@@ -231,7 +231,7 @@ Each row in the panel corresponds to one socket, with the following columns:
 
 Network sockets:
 
-<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Timers
 
@@ -250,7 +250,7 @@ At the top of the panel is a Filter field where you can enter a substring or reg
 
 > The filter field first appeared in version 0.15.4.
 
-<figure><img src="../../.gitbook/assets/image (11) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Stats are namespaced to indicate what they represent:
 

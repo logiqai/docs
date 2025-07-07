@@ -76,20 +76,20 @@ The Cloudformation template provisions the following resources:
   * [ ] Enter two (2) **Private** **Subnets**.
     *   From where you left of extracting your **VPC ID**, on the left hand side menu, select **Private Subnets** and copy the two **Subnet ID**s you intend you use
 
-        <figure><img src="../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (7) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-        <figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
   * [ ] Click "Next"
 * [ ] **Step 3: Configure stack options**
   * Nothing required here, navigate to the bottom of the page and click "Next"
 * [ ] **Step 4: Review and create**
   *   You can review your configurations, acknowledge the capabilities and click "Submit"
 
-      <figure><img src="../../../.gitbook/assets/image (10) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (10) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Deployment might take a while. Please wait until the stack status shows **"CREATE\_COMPLETE"** before proceeding.
 
-<figure><img src="../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="danger" %}
 **If the stack for some reason would fail, make sure to check the stack events (select your stack, and click on "Events") to understand the error. In order to fix your error, delete the stack and re-do the above.**
@@ -108,20 +108,20 @@ After successfully deploying the initial CloudFormation stack, follow these step
 * [ ] From the previous steps, you can click on "Stacks" or with the search bar on your top left, search for **"CloudFormation"** and select the **CloudFormation** Service
 *   [ ] On your top right, click **"Create Stack"** and select **"With new resources (standard)"**
 
-    <figure><img src="../../../.gitbook/assets/image (12) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (12) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 * [ ] **Step 1: Create stack**
   *   [ ] On the following page (step 1 of Stack creation) select **"Template is ready"** and **"Amazon S3 URL"**. In the **"Amazon S3 URL"** textfield, enter [https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster-multiset.yaml](https://logiq-scripts.s3.ap-south-1.amazonaws.com/EKSCluster-multiset.yaml)
 
-      <figure><img src="../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
   * [ ] Click "Next"
 * [ ] **Step 2: Specify stack details**
   *   [ ] Enter a stack name (Whatever you want to call the cluster)
 
-      <figure><img src="../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
   * [ ] Enter a name for the EKS cluster (Save this value)
   *   [ ] Enter the ARN value of the IAM role you created in the previous CloudFormation deployment (Navigate to the previous stack and check outputs tab to find the value for the key LogiqEKSClusterRole)
 
-      <figure><img src="../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+      <figure><img src="../../../.gitbook/assets/image (15) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
       <figure><img src="../../../.gitbook/assets/image (136).png" alt=""><figcaption></figcaption></figure>
   * [ ] Select a VPC id in the dropdown (This guide assumes you’ve created these previously)

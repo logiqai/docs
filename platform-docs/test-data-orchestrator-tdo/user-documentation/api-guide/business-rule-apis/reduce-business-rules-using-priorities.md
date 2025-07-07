@@ -8,7 +8,7 @@ The call is sent as a PATCH call.  The ID of the rule you will be reducing is in
 This call only impacts a single rule.  If your coverage set has multiple rules, and you want to reduce them all, you will need to call this API for each rule individually.
 {% endhint %}
 
-<figure><img src="../../../../../.gitbook/assets/image (23).png" alt=""><figcaption><p>API call for reduce business rules</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (23) (1).png" alt=""><figcaption><p>API call for reduce business rules</p></figcaption></figure>
 
 The body of the call contains the context information, as well as the coverage set and the priorities you want to retain.  These priorities will be applied to all determining attributes that have priorities set.
 
@@ -32,8 +32,8 @@ The body of the call contains the context information, as well as the coverage s
 
 The return message contains information on the rule, and all of the attribute values that have been retained after applying the priorities.
 
-<figure><img src="../../../../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Set priorities return message</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (24) (1).png" alt=""><figcaption><p>Set priorities return message</p></figcaption></figure>
 
 In TDO, the revised rule (rule 1) can be seen with only the priority 1 and 2 values in the currency fields.
 
-<figure><img src="../../../../../.gitbook/assets/image (25).png" alt=""><figcaption><p>Rule with reduction via priorities</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (25) (1).png" alt=""><figcaption><p>Rule with reduction via priorities</p></figcaption></figure>

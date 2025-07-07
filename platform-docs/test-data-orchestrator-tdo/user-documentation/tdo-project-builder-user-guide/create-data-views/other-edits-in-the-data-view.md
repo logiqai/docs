@@ -4,7 +4,7 @@ Data views can also be edited to change the join criteria, to add or remove crit
 
 To edit the criteria in the data view, click the blue pencil icon to open the 'Edit Data View' window.  Navigate down to the criteria you want to change and click on the blue pencil to the right of the criteria.
 
-<figure><img src="../../../../../.gitbook/assets/image (27) (1).png" alt=""><figcaption><p>Edit icon for data view criteria</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (27) (1) (1).png" alt=""><figcaption><p>Edit icon for data view criteria</p></figcaption></figure>
 
 This will open the criteria window.&#x20;
 
@@ -22,7 +22,7 @@ To perform the delete operations shown below, you must have Admin user rights. l
 
 To delete criteria, mark the check box to the left of the criteria you want to delete. On the right, click on the trash can icon to delete it.  A confirmation message will pop up; click 'OK' to delete the criteria.
 
-<figure><img src="../../../../../.gitbook/assets/image (28) (1).png" alt=""><figcaption><p>Deleting a data view criteria</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (28) (1) (1).png" alt=""><figcaption><p>Deleting a data view criteria</p></figcaption></figure>
 
 Once the desired changes are made, click the 'Save' button to save the changes to your data view.
 

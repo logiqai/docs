@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Configuring Pipelines
 
 The pipeline is a series of processes or stages through which data flow systematically and efficiently. It helps to visualize the flow between nodes, rules, and filters applied for the data flow.

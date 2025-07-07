@@ -10,7 +10,7 @@ Format indicators are very specific for these functions. Prior to using format f
 
 To create the rule, begin as with the other instructions above by selecting the field, creating the rule container, and clicking 'Compose' in the Operands section to open the Rules window.  Since we are using the Format Functions, we can ignore the 'Sources' and 'Attributes' panes.  This is still 'Assign - Apply' so the first line in the 'Operators' section can be left alone.  On the second line, 'Functions', click the down arrow and select Compose Function.  This tells TDO that the value on the third line is a function and a mask for the formatted output.
 
-<figure><img src="../../../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>Assignment rule with Format Function applied</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption><p>Assignment rule with Format Function applied</p></figcaption></figure>
 
 Functions consist of a function call (%DR in this case) and then the data mask (MM-dd-yyyy) and then the mathematical operator (-3).  Each portion of the function is separated by a pipe (|) delimiter.  So our function of %DR|MM-dd-yyyy|-3 translates to 'create a date in this format that is three days less than today'. &#x20;
 
@@ -24,7 +24,7 @@ Once the function is defined, click the plus sign to move it to the 'Operands' s
 
 After the data is assembled (see 'Data Assembly' section) you can view the data assigned to each row in the coverage matrix.  In the example below, you can see the date has been set to '05-01-2025' based on this format function.
 
-<figure><img src="../../../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>Data assigned to coverage matrix</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption><p>Data assigned to coverage matrix</p></figcaption></figure>
 
 {% hint style="info" %}
 If you edit an assignment rule with a format function applied, TDO will default to 'No Function' on the function line and you will have to re-select 'Compose Function' before editing the function.
@@ -34,7 +34,7 @@ Format functions can be used alone or with other format functions.  In the examp
 
 In this case, the format functions are separated by pipe delimiters.
 
-<figure><img src="../../../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption><p>Using multiple format functions in a single rule</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption><p>Using multiple format functions in a single rule</p></figcaption></figure>
 
 The three components of this rule are:
 
@@ -44,4 +44,4 @@ The three components of this rule are:
 
 When assembled, the output for this field looks like this.
 
-<figure><img src="../../../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption><p>Output for multiple formats in a single rule</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption><p>Output for multiple formats in a single rule</p></figcaption></figure>

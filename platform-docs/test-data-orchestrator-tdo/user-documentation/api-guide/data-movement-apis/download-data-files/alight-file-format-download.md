@@ -18,4 +18,4 @@ TDO assigns the file name based on the employer name and processing date.  The o
 
 &#x20;
 
-<figure><img src="../../../../../../.gitbook/assets/image (27) (1) (1).png" alt=""><figcaption><p>Sample of Alight 2500 byte file output</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (27) (1) (1) (1).png" alt=""><figcaption><p>Sample of Alight 2500 byte file output</p></figcaption></figure>

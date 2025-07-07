@@ -8,8 +8,8 @@ To create an action, you must first have your data block for the output format u
 
 On the second line, click the blue pencil and select the data block that contains your desired format from the list of available data blocks.  Click 'Save' at the bottom of the window to add the data block to the action.  Only one data block can be added to an action.
 
-<figure><img src="../../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>Data block selection list</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>Data block selection list</p></figcaption></figure>
 
 The next step is to click the 'Save' button in the 'Create Action' window to save your action.  In the screen print below, we have created two actions - one for the request message in the API under test, and one for validating the API response.
 
-<figure><img src="../../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption><p>Actions window with list</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption><p>Actions window with list</p></figcaption></figure>

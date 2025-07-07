@@ -4,7 +4,7 @@ This call is used to remove a lock placed on a workset.  In TDO, you can see tha
 
 &#x20;NOTE:  there is no API call to place a lock on a workset; this lock is placed when you run the data assembly process (either via the UI or API).
 
-<figure><img src="../../../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Locked workset in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Locked workset in TDO</p></figcaption></figure>
 
 This API is sent as a PATCH call.  The call includes the instruction ‘unlock’ and the id of the workset to have the lock removed.
 

@@ -12,4 +12,4 @@ Once the download is complete, use download manager to view the output in a text
 
 &#x20;
 
-<figure><img src="../../../../../../.gitbook/assets/image (21) (1) (1) (1).png" alt=""><figcaption><p>Comma delimited with sequence numbers text file</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (21) (1) (1) (1) (1).png" alt=""><figcaption><p>Comma delimited with sequence numbers text file</p></figcaption></figure>

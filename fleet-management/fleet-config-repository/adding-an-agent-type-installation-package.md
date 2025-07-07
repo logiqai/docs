@@ -2,7 +2,7 @@
 
 ## Structure of the Package Directories:
 
-<figure><img src="../../.gitbook/assets/image (518).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (518) (1).png" alt=""><figcaption></figcaption></figure>
 
 The _packages_ directory contains a list of agent\_type package directories. There are 2 directories for each agent type. One starting with a .(dot/period) and the other without it.  The directory starting without the dot contains a zip file of the contents of the `<agent-type>_<package-version>` directory that is placed within the directory beginning with a .(period/dot).&#x20;
 

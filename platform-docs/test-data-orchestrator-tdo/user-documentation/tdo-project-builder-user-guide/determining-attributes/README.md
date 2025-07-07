@@ -16,6 +16,6 @@ How to create a determining attribute during the file validation process is expl
 
 From the menu, select ‘Determining Attributes’ from the ‘Coverage Engine’ section of the menu.  You will see all of the determining attributes that you created during the file validation process.
 
-<figure><img src="../../../../../.gitbook/assets/image (29) (1).png" alt=""><figcaption><p>List of determining attributes created during file validation process</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (29) (1) (1).png" alt=""><figcaption><p>List of determining attributes created during file validation process</p></figcaption></figure>
 
 Any determining attributes not created during the validation process will need to be manually created.

@@ -10,8 +10,8 @@ Assign - Apply will always be used for the first field.  Add, when working with 
 
 In the example below, we are building a field that contains multiple codes in a specific format for a file coming in from an external web site.  The field standard is ':RET:9999-9^:RET:9999-9.  In this case, the numeric codes are coming from a look up table, and the remainder is a fixed value.  So the rule is set up to concatenate these values in the format 'string+field+string+field'.
 
-<figure><img src="../../../../../.gitbook/assets/image (18) (1).png" alt=""><figcaption><p>Concatenating multiple fields and values using the 'ADD' operand</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (18) (1) (1).png" alt=""><figcaption><p>Concatenating multiple fields and values using the 'ADD' operand</p></figcaption></figure>
 
 When assembled, the output of this field is shown below.
 
-<figure><img src="../../../../../.gitbook/assets/image (19) (1).png" alt=""><figcaption><p>Assembled data from a concatenation rule</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (19) (1) (1).png" alt=""><figcaption><p>Assembled data from a concatenation rule</p></figcaption></figure>

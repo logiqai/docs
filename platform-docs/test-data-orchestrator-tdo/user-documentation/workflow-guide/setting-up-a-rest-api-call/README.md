@@ -2,15 +2,15 @@
 
 To begin setting up the steps of your workflow, click the blue pencil icon to the right of the workflow name to edit the workflow you have created.
 
-<figure><img src="../../../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Editing a workflow</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (2) (8).png" alt=""><figcaption><p>Editing a workflow</p></figcaption></figure>
 
 After opening the workflow, hover over the item you want to edit and click the blue pencil icon to the right of the activity name to edit that activity.
 
-<figure><img src="../../../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Selecting activity to edit</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (3) (8).png" alt=""><figcaption><p>Selecting activity to edit</p></figcaption></figure>
 
 When you create an activity as a REST API call, the window will ask for the URL and the  method, and have text boxes for the body of the call and the headers (if needed).  The body and header boxes can be expanded by pulling down on the lower right-hand corner of the box.  (Body box is shown expanded in the screen print below.)
 
-<figure><img src="../../../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Edit call window</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (4) (4).png" alt=""><figcaption><p>Edit call window</p></figcaption></figure>
 
 For this call, the URL is added, the method (POST) selected using the drop down arrow to the right of that line, and the body of the call pasted into the 'Body' section in JSON format.  The TDO API calls do not require headers, so these are left blank.  If your API call requires headers, they should be entered in the 'Header' section at the bottom of the window.
 
@@ -22,7 +22,7 @@ Once the call information is entered, click 'Save' to save the details. &#x20;
 
 If your API does not require any body text, the setup window will only contain the URL.
 
-<figure><img src="../../../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>API window with no body text</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (5) (3).png" alt=""><figcaption><p>API window with no body text</p></figcaption></figure>
 
 {% hint style="info" %}
 In the following sections, the use of User Guided Parameters, JSON Path, and XML Path for passing parameters will be covered.  Remember that these methods are not exclusive, and can be combined in a single call depending on what you are executing, the response message, and desired end result of your workflow.

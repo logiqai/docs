@@ -12,4 +12,4 @@ This will open the clone window. Because you are creating a copy on the same ser
 
 TDO will display a moving circle icon while the clone is in process.  Once the clone is completed, the new project is visible in your projects list.
 
-<figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>Cloned project shown in projects window</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption><p>Cloned project shown in projects window</p></figcaption></figure>
