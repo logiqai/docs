@@ -6,8 +6,8 @@ In the example below, we are assigning the external account number for the payme
 
 In the left pane ('Sources') click on the view that the data is store in ('external\_view').  In the center pane, click on the field 'account\_number', and the click the blue plus sign in the right pane to apply this rule. &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>Assigning a value from a data view</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption><p>Assigning a value from a data view</p></figcaption></figure>
 
 Click on the 'Save' button in the bottom right of this window to save the rule.
 
-<figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption><p>Completed rule</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption><p>Completed rule</p></figcaption></figure>

@@ -50,8 +50,8 @@ To perform these operations, you send the multiple operators in a single ‘oper
 
 When run in TDO, the response message for a successful call will look very similar to other rules assignment messages.  Both of the operators and their values will be reflected in the return message.
 
-<figure><img src="../../../../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>Return Message using multiple operators</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption><p>Return Message using multiple operators</p></figcaption></figure>
 
 In TDO, after this call runs, you will see the rule assigned to the field.
 
-<figure><img src="../../../../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Assignment Rule with multiple operators</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption><p>Assignment Rule with multiple operators</p></figcaption></figure>

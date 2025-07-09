@@ -2,7 +2,7 @@
 
 This call returns the details on a specific rule. The URL includes the object ID for the rule being called and again is sent as a POST call.
 
-<figure><img src="../../../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption><p>Get details call including object ID</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption><p>Get details call including object ID</p></figcaption></figure>
 
 The body of the message contains the project name and workset name that the specific rule is in.
 
@@ -29,4 +29,4 @@ The body of the message contains the project name and workset name that the spec
 
 The results message will include the rule details.
 
-<figure><img src="../../../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption><p>Return message with rule details</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption><p>Return message with rule details</p></figcaption></figure>

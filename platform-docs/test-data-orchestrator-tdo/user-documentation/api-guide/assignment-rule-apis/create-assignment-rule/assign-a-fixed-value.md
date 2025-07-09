@@ -2,7 +2,7 @@
 
 In Postman, the API looks like this:
 
-<figure><img src="../../../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>API call for assignment rule creation</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>API call for assignment rule creation</p></figcaption></figure>
 
 The body of the file for this call will look like this:
 
@@ -46,7 +46,7 @@ In the entity section, you will need to provide the step name and version (versi
 
 The attribute name is the name from the list in the TDO data assignment page.  In this case, we are working on the third attribute in the list:
 
-<figure><img src="../../../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Assignment rules page in TDO</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Assignment rules page in TDO</p></figcaption></figure>
 
 In the final section of the body, we are specifying the method being used (‘ASSIGN’) and the value to be assigned (‘125’).  Since we have not specified a format type, this will be assigned using the default value of STRING.
 
@@ -54,7 +54,7 @@ In the final section of the body, we are specifying the method being used (‘AS
 
 When the API is successfully run, you will receive the following return message:
 
-<figure><img src="../../../../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>Return message for successful execution</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>Return message for successful execution</p></figcaption></figure>
 
 Note that the return message starts with the Mongo object ID, provides the rule name and properties.&#x20;
 
@@ -62,6 +62,6 @@ Note that the return message starts with the Mongo object ID, provides the rule 
 
 Here is that rule in TDO after the API is run.
 
-<figure><img src="../../../../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>New rule created in TDO</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>New rule created in TDO</p></figcaption></figure>
 
 You can see that the rule name on the TDO screen is the same as the rule name returned to Postman after the API was run and the value assigned is the value sent in the API.

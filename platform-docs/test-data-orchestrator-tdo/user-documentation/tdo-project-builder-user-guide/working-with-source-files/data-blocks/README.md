@@ -6,7 +6,7 @@ The next step is to verify the file data, update any field formats as needed, an
 
 To do this, select ‘Data Blocks’ from the Data Management section of the menu.  This will present a list of all data blocks, using the data block name you assigned the file during the upload process.
 
-<figure><img src="../../../../../../.gitbook/assets/image (14) (1) (1) (1) (1).png" alt=""><figcaption><p>List of available data blocks</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (14) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>List of available data blocks</p></figcaption></figure>
 
 Hover to the right of the file name (‘test\_file’) and click on the pencil to edit the file. Common edits during the validation stage are changing field data types, adding a format mask, and creating determining attributes and will be covered in the following pages.
 

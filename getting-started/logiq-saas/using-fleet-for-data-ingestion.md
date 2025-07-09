@@ -1,18 +1,25 @@
-# Using Fleet for Data Ingestion
+---
+description: >-
+  This guide provides a walkthrough of setting up two different types of
+  monitoring agents (OTEL / Fluent bit) on a server using the Apica Fleet
+  management tool.
+---
+
+# Getting Started with Fleet
 
 ## Quick Start Guide for Using Ascent's Fleet Management to Get Up and Running with Ingesting Metrics and Logs into Ascent.
 
-Step 1: Install Agent Manager
+This guide provides step-by-step instructions for deploying monitoring agents using Apica Fleet. By completing this tutorial, you will be able to automatically collect and forward critical server metrics and application logs directly into the Ascent platform for complete visibility.
 
-Step 2: Update Configuration File
+For the purposes of this guide, we will install and deploy both an OTEL and Fluent Bit collector agent.&#x20;
 
-Step 3: Apply Configuration File
+For a full video walkthrough, please refer to our video guide:
 
-Step 4: Verify Metrics/Logs are being Ingested
+Let's begin:
 
+## Part 1: Installing and Deploying an OpenTelemetry Collector Agent.
 
-
-## Step 1: Install Agent Manager:
+### Step 1: Install Agent Manager:
 
 Go to -> Explore -> Fleet
 
@@ -22,7 +29,7 @@ Click -> Install Manager
 
 Select Platform: Linux
 
-Select  Agent Type: OpenTelemettry Collector
+Select  Agent Type: OpenTelemetry Collector
 
 Click 'Proceed'
 
@@ -48,7 +55,7 @@ Verify that the hostname is in the Fleet "Agents" UI tab:&#x20;
 
 <figure><img src="../../.gitbook/assets/image (504).png" alt=""><figcaption></figcaption></figure>
 
-## Step 2: Update Your Configuration File:
+### Step 2: Update Your Configuration File:
 
 Go to "Configurations" tab and search for:
 
@@ -176,7 +183,7 @@ NOTE: Currently, this configuration file is set up to collect syslogs. If you wo
       - /var/log/auth.log
 ```
 
-## Step 3: Apply the Changes Made to the Configuration File:
+### Step 3: Apply the Changes Made to the Configuration File:
 
 Copy the below code block into the "Update Configuration" section in the UI:
 
@@ -186,21 +193,91 @@ Click "Update".
 
 Then, go back to the "Agent" tab and click into the Linux hostname (where you'll be ingesting data from):
 
-<figure><img src="../../.gitbook/assets/image (510).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-## Step 4: Verify Metrics/Logs Are Being Ingested into Ascent:
+### Step 4: Verify Metrics/Logs Are Being Ingested into Ascent:
 
-Verify that logs are coming in and that it shows as "active":
+Verify that logs/metrics are coming in and that it shows as "active":
 
-<figure><img src="../../.gitbook/assets/image (511).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-Finally, go to Explore -> 'Logs & Insights' to verify datasource is there:
+To verify Metrics are being ingested, go to Queries -> New Query and search for the host to verify data is there:
 
-<figure><img src="../../.gitbook/assets/image (512).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-Optional\* click on "Source Application" where you'll be able to see your logs:
+## Part 2: Installing and Deploying a  Fluent Bit Agent.
 
-<figure><img src="../../.gitbook/assets/image (513).png" alt=""><figcaption></figcaption></figure>
+Similar to Part 1 (installing/deploying OTEL Agent), we will now install a Fluent Bit agent to collect logs.
 
-<figure><img src="../../.gitbook/assets/image (514).png" alt=""><figcaption></figcaption></figure>
+### Step 1: Install Agent Manager:
 
+Go to -> Explore -> Fleet
+
+Click -> Install Manager
+
+<figure><img src="../../.gitbook/assets/image (499).png" alt=""><figcaption></figcaption></figure>
+
+Select Platform: Linux
+
+Select  Agent Type: Fluent-bit
+
+Click 'Proceed'
+
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+
+Click on "Download All"
+
+* Open 'README' file for detailed instructions.
+
+<figure><img src="../../.gitbook/assets/image (501).png" alt=""><figcaption></figcaption></figure>
+
+### Go to Your Linux Terminal:
+
+NOTE: Transfer 'Fleet Installation File' to the Linux host that you will collect data from.
+
+* make sure file has permissions to allow to 'execute'
+* Execute the following command to install the Agent Manager:
+* `$ sudo ./fleet-install.sh`
+
+<figure><img src="../../.gitbook/assets/image (502).png" alt=""><figcaption></figcaption></figure>
+
+Verify that the hostname is in the Fleet "Agents" UI tab:
+
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+
+### Step 2: Update Your Configuration File:
+
+1. In the configuration, specify the following:
+   * The file path to your application logs.
+   * The hostname attribute.
+   * Your ingest token.
+
+
+
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+
+From the Fleet UI, select the Fluent Bit agent and apply this new configuration.
+
+You can verify that the token and hostname have been applied correctly within the agent's detail view.
+
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+
+### Step 4: Verify Logs Are Being Ingested into Ascent:
+
+Verify that logs/metrics are coming in and that it shows as "active":
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+Finally, go to Explore -> 'Logs & Insights' to verify the datasource is there:
+
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+
+Click into the "Source Application" and you can then drill down into a log entry:
+
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+
+### Conclusion:
+
+You have now completed the setup for both metrics and log collection using Apica Fleet. With your agents actively reporting, you can fully leverage the Ascent platform to analyze performance, troubleshoot issues, and gain deeper insights into your system. To expand your coverage, simply repeat these steps for other hosts and applications in your infrastructure.

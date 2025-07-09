@@ -39,8 +39,8 @@ When you want to assign a value using the FORMAT function (e.g., assign the curr
 
 The return message will include the information on the rule that you created.
 
-<figure><img src="../../../../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p>Return message using FORMAT function</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption><p>Return message using FORMAT function</p></figcaption></figure>
 
 In TDO, you can now see the rule that you created.
 
-<figure><img src="../../../../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption><p>Assignment Rule using FORMAT function</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption><p>Assignment Rule using FORMAT function</p></figcaption></figure>

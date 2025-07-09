@@ -14,4 +14,4 @@ http://\<server>:\<port>/core/1.0/API/dataAssemblyProgress/\<worksetID>
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Data assembly API call and results</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (13) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Data assembly API call and results</p></figcaption></figure>
