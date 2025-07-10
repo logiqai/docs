@@ -78,7 +78,7 @@ We're excited to share the latest improvements in version 2.10.5. This release f
 | ASM                                    | 13.35.0                                         |
 | NG Private Agent                       | 1.0.9                                           |
 | Check Execution Container: Browser     | fpr-c-130n-10.2.1-716-r-2025.04.02-0-base-2.0.0 |
-| Check Execution Container: Zebratester | zt-7.5b-p1-r-2025.04.02-0-base-1.2.0            |
+| Check Execution Container: Zebratester | zt-7.5a-p0-r-2025.04.02-0-base-1.2.0            |
 | Check Execution Container: Runbin      | runbin-2025.04.17-0-base-2.2.1                  |
 | Check Execution Container: Postman     | postman-2025.04.17-0-base-1.4.1                 |
 | Bnet (Chrome Version)                  | 10.2.1 (Chrome 130)                             |
