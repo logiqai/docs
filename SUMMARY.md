@@ -244,7 +244,7 @@
   * [Severity Metrics](log-management/severity-metrics.md)
   * [Log2Metrics](log-management/metrics-and-custom-indices.md)
   * [Native support for OTEL Logs](observe/log-management-overview/native-support-for-otel-logs.md)
-  * [Reports](log-management/reports/README.md)
+  * [Reports and Queries](log-management/reports/README.md)
     * [Accessing Reports results via API](log-management/reports/accessing-api-results-via-api.md)
   * [Role-Based Access Control (RBAC)](log-management/role-based-access-control.md)
   * [Configuring RBAC](log-management/configuring-rbac.md)
