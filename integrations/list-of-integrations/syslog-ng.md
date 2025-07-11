@@ -177,26 +177,12 @@ The scope for value-pairs also needs to contain rfc5424 so we can pull out all t
 
 The python destination provides some useful options as described below
 
-| Name          | Values                                                                          | Default                                                | Notes                                                                                                       |
-| ------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| batch-timeout | e.g. 500 (milliseconds)                                                         | NA                                                     | Refer to syslog-ng documentation. This allows for batching logs                                             |
-| batch-lines   | e.g. 400                                                                        | NA                                                     | Refer to syslog-ng documentation. This limits the max batch size allowed before python plugin calls a flush |
-| class         | <pre data-overflow="wrap"><code>logiqaidstsyslogng.LogDestination
-</code></pre> |                                                        |                                                                                                             |
-|               | NA                                                                              | Specifies the Apica Ascent python driver class to load |                                                                                                             |
+<table data-full-width="true"><thead><tr><th>Name</th><th>Values</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>batch-timeout</td><td>e.g. 500 (milliseconds)</td><td>NA</td><td>Refer to syslog-ng documentation. This allows for batching logs</td></tr><tr><td>batch-lines</td><td>e.g. 400</td><td>NA</td><td>Refer to syslog-ng documentation. This limits the max batch size allowed before python plugin calls a flush</td></tr><tr><td>class</td><td><pre data-overflow="wrap"><code>logiqaidstsyslogng.LogDestination
+</code></pre></td><td></td><td></td></tr><tr><td></td><td>NA</td><td>Specifies the Apica Ascent python driver class to load</td><td></td></tr></tbody></table>
 
 The Apica Ascent driver provides various options as described below
 
-| Option Name        | Values                         | Default | Notes                                                                                                   |
-| ------------------ | ------------------------------ | ------- | ------------------------------------------------------------------------------------------------------- |
-| config             | e.g. /etc/syslog-ng/logiq.conf | None    | Location of logiq.conf file                                                                             |
-| workers-batch      | e.g. 8/16                      | 1       | Number of workers, more workers allow more parallelism when pushing to a loadbalanced LOGIQ.AI endpoint |
-| worker-batch-lines | e.g. 25                        | 25      | How many maximum log events are batched per worker                                                      |
-| loglevel           | e.g. INFO/WARN/ERROR/DEBUG     | INFO    | Debug level. Logs are sent to /var/log/logiqaidstsyslogns                                               |
-| debug              | true/false                     | false   | Prints additional debug including log event to the log file                                             |
-| namespace-key      | e.g. HOST                      | Not set | Which key from log event maps to namespace                                                              |
-| application-key    | e.g. PROGRAM                   | Not set | Which key from log event maps to application                                                            |
-| cluster-key        | e.g. HOST                      | Not set | Which key from log event maps to cluster/group identifier                                               |
+<table data-full-width="true"><thead><tr><th>Option Name</th><th>Values</th><th>Default</th><th>Notes</th></tr></thead><tbody><tr><td>config</td><td>e.g. /etc/syslog-ng/logiq.conf</td><td>None</td><td>Location of logiq.conf file</td></tr><tr><td>workers-batch</td><td>e.g. 8/16</td><td>1</td><td>Number of workers, more workers allow more parallelism when pushing to a loadbalanced LOGIQ.AI endpoint</td></tr><tr><td>worker-batch-lines</td><td>e.g. 25</td><td>25</td><td>How many maximum log events are batched per worker</td></tr><tr><td>loglevel</td><td>e.g. INFO/WARN/ERROR/DEBUG</td><td>INFO</td><td>Debug level. Logs are sent to /var/log/logiqaidstsyslogns</td></tr><tr><td>debug</td><td>true/false</td><td>false</td><td>Prints additional debug including log event to the log file</td></tr><tr><td>namespace-key</td><td>e.g. HOST</td><td>Not set</td><td>Which key from log event maps to namespace</td></tr><tr><td>application-key</td><td>e.g. PROGRAM</td><td>Not set</td><td>Which key from log event maps to application</td></tr><tr><td>cluster-key</td><td>e.g. HOST</td><td>Not set</td><td>Which key from log event maps to cluster/group identifier</td></tr></tbody></table>
 
 ### Organizing data in Apica Ascent
 
