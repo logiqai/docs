@@ -7,7 +7,7 @@ description: >-
 
 # Getting Started with Fleet
 
-## Quick Start Guide Steps
+## Quick Start Guide
 
 This Quick Start Guide for Fleet Management enables a user to quickly enable ingesting metrics and logs into Ascent, and provides step-by-step instructions for deploying monitoring agents using Apica Fleet. By completing this tutorial, you will be able to automatically collect and forward critical server metrics and application logs directly into the Ascent platform for complete visibility.
 
