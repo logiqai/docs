@@ -10,7 +10,7 @@ Reporting features in Ascent support numerous visualization requirements when re
 
 ### Designing Queries
 
-For a quick video on the approach for designing queries and reports, click here: [Quick Start - Creating Queries](https://apicasystem.sharepoint.com/:v:/r/sites/ProfessionalServices/Shared%20Documents/Quick%20Start%20Guide%20Videos/step%203%20-%20Creating%20Queries.mp4?csf=1\&web=1\&e=ptXNOU)
+For a quick video on the approach for designing queries and reports, click on the video below:
 
 {% embed url="https://www.youtube.com/embed/_V8zupniOBA?si=dEtzv7gJyjBMfGnT" %}
 
