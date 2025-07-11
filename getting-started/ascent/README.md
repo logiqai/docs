@@ -12,11 +12,11 @@ The Ascent platform enables you to converge all of your IT data from disparate s
 
 For all users that want to get started with Ascent should follow these five (5) simple steps:
 
-1. [Collect Data from Input Sources](./#step-1-collect-data-from-input-sources)
+1. [Collect Data from Input Sources](./#step-1-start-ingesting-data)
 2. [Setup and Configure Pipeline](./#step-2-setup-and-configure-pipeline)
 3. [Design Queries](./#step-3-design-queries)
 4. [Create Dashboards](./#step-4-create-dashboards)
-5. [Setup Alerts and Workflow](./#step-5-setup-alerts-and-workflow)
+5. [Setup Alerts and Workflow](./#step-5-create-alerts-and-endpoints)
 
 In this guide, we cover the key goals and related activities of each step to ensure a quick and easy setup of Ascent.
 
