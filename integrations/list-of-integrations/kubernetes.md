@@ -46,7 +46,7 @@ $ kubectl create -f fluent-bit-role-binding.yaml
 $ kubectl create -f fluent-bit-role.yaml
 ```
 
-#### Fluent Bit to LOGIQ
+#### Fluent Bit to Ascent
 
 The next step is to create a ConfigMap that will be used by the Fluent Bit DaemonSet:
 
