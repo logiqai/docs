@@ -1,12 +1,12 @@
 ---
 description: >-
-  This section provides information about creating reports in the Logiq
+  This section provides information about creating reports in the Ascent
   Observability Platform.
 ---
 
 # Reports
 
-Reporting feature comes in handy when required to periodically search and aggregate what is happening in a particular log set. You can create reports in multiple ways:
+Reporting features in Ascent support numerous visualization requirements when required to periodically search and aggregate what is happening in a particular log set. You can create reports in multiple ways:
 
 ### Creating a Report
 
@@ -14,7 +14,7 @@ Reporting feature comes in handy when required to periodically search and aggreg
 
 ![](<../../.gitbook/assets/image (55) (1).png>)
 
-* From the favourite searches
+* From the "Favorites" searches:
 
 ![](../../.gitbook/assets/report.png)
 
@@ -28,7 +28,7 @@ Onclick of any of the above options opens the. "Create Reports" modal.
 
 ### Group By
 
-Reporting feature lets you group the results by any fields available in the structured data or use any arbitrary regex named capture groups. To use fields from structured data, select the "Group Type" as "**Field**" To use regex named capture groups, select "**Pattern**". Logiq uses regular expression syntax accepted by RE2. Please refer to the [RE2 wiki](https://github.com/google/re2/wiki/Syntax) for detailed syntax. Select "**Match**" to download all the matched results.&#x20;
+Reporting feature lets you group the results by any fields available in the structured data or use any arbitrary regex named capture groups. To use fields from structured data, select the "Group Type" as "**Field**" To use regex named capture groups, select "**Pattern**". Ascent uses regular expression syntax accepted by RE2. Please refer to the [RE2 wiki](https://github.com/google/re2/wiki/Syntax) for detailed syntax. Select "**Match**" to download all the matched results.&#x20;
 
 {% tabs %}
 {% tab title="Example 1" %}
