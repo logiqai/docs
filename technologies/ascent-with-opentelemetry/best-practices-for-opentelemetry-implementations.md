@@ -10,7 +10,7 @@
 
 Links for using OpenTelemetry with Apica Ascent:
 
-* [Getting Started with OpenTelemetry](../../getting-started/logiq-saas/getting-started-with-metrics.md)
+* [Getting Started with OpenTelemetry](../../getting-started/ascent/getting-started-with-metrics.md)
 * [OpenTelemetry Integration for Ascent](../../integrations/list-of-integrations/opentelemetry.md)
 
 ### Creating an Internal Instrumentation Policy <a href="#toc189582884" id="toc189582884"></a>

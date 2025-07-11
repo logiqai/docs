@@ -12,7 +12,7 @@ description: SETTING UP THE OPENTELEMETRY COLLECTOR
 
 Links for using OpenTelemetry with Apica Ascent:
 
-* [Getting Started with OpenTelemetry](../../getting-started/logiq-saas/getting-started-with-metrics.md)
+* [Getting Started with OpenTelemetry](../../getting-started/ascent/getting-started-with-metrics.md)
 * [OpenTelemetry Integration for Ascent](../../integrations/list-of-integrations/opentelemetry.md)
 
 ## OTEL SDKs: SPRING BOOT OPENTELEMETRY AND MORE
