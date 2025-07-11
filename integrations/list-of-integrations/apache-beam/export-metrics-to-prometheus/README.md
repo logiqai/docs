@@ -1,10 +1,10 @@
 # Export Metrics to Prometheus
 
-By utilizing the LOGIQ IO Connector, we can directly send the Apache Beam metrics created , to Prometheus as Metrics.
+By utilizing the Ascent I/O Connector, we can directly send the Apache Beam metrics created , to Prometheus as Metrics.
 
 
 
-There are two mechanisms to achieve this, namely :-
+There are two mechanisms to achieve this, namely :
 
 ### Push Mechanism done via remote-write method
 
@@ -26,7 +26,7 @@ This approach can be useful when collecting metrics from systems that are not al
 
 Overall, the Push-Gateway method can be a powerful tool in enabling a pull mechanism for collecting metrics in a distributed system via Prometheus.
 
-LOGIO-IO Connector currently accepts pushing metrics to Prometheus by this method. For more info, refer to this post.
+The "LOGIO-IO" Connector currently accepts pushing metrics to Prometheus by this method. For more info, refer to this post.
 
 [pull-mechanism-via-push-gateway.md](pull-mechanism-via-push-gateway.md "mention")
 

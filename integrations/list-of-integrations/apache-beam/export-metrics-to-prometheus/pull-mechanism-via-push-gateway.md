@@ -1,6 +1,6 @@
 # Pull Mechanism via Push-Gateway
 
-You can use the[LOGIQ-IO Connector](https://github.com/logiqai/logiq-io) provided by Apica Ascent via GitHub to push Apache Beam metrics to Push-Gateway.
+You can use the [LOGIQ-IO Connector](https://github.com/logiqai/logiq-io) provided by Apica Ascent via GitHub to push Apache Beam metrics to Push-Gateway.
 
 ## Setting up Push-Gateway via Docker (recommended)
 
@@ -17,7 +17,7 @@ You'll now have an instance of push-gateway running on your machine, you can ver
 docker ps
 ```
 
-Once the instance is up and running, we can then specify it in our prometheus.yaml config file.&#x20;
+Once the instance is up and running, we can then specify it in our prometheus.yaml config file.
 
 View the sample prometheus.yaml file below.
 
@@ -30,10 +30,6 @@ scrape_configs:
 ```
 
 Great, now you will have Prometheus scraping the metrics from the given PushGateway endpoint.
-
-
-
-
 
 ## Setting up Apache Beam to export the Metrics to Push-Gateway
 
@@ -81,15 +77,12 @@ class LibraryTest {
 
 ```
 
-&#x20;The `metrics()` method is responsible for sending the metrics to the given push-gateway endpoint.  Once the pipeline has been modeled, we are good to view the result.  we should be able to access the metrics of the PipelineResult at `PipelineResult.metrics`, now just pass this to the Push-Gateway class with the correct endpoint and call the `write()` method with the metrics.
+The `metrics()` method is responsible for sending the metrics to the given push-gateway endpoint. Once the pipeline has been modeled, we are good to view the result. we should be able to access the metrics of the PipelineResult at `PipelineResult.metrics`, now just pass this to the Push-Gateway class with the correct endpoint and call the `write()` method with the metrics.
 
-Hooray, you have successfully pushed your Apache Beam Metrics to Push-Gateway. These metrics will  shortly be scraped by Prometheus and you would be able to access them.
+Hooray, you have successfully pushed your Apache Beam Metrics to Push-Gateway. These metrics will shortly be scraped by Prometheus and you would be able to access them.
 
 You can check your results on Push-gateway Instance and Prometheus Instance.
 
 ### Advanced
 
 If you want to apply any transformations other than the default transformers, you can specify the functions with `withCounterTransformer, withDistributionTransformer, withGaugeTransformer` provided by the PushGateway class. This allows you to perform complex operations and achieve granularity within your metrics.
-
-
-
