@@ -22,7 +22,7 @@ In this guide, we cover the key goals and related activities of each step to ens
 
 ### Step 1 - Start Ingesting Data
 
-For a quick video on step one, click here: [Step 1 - Start Ingesting Data](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/ET5AT3ZMf9NAshVwpdaPq0cBqLRO6_qZVpshZx0qwdcREA?e=0Raie2)
+For a quick video on step 1 for data ingestion, click on the link below:
 
 {% embed url="https://www.youtube.com/embed/0bKKm44n58U?si=8f2EbhqHKBljAkgu" %}
 
@@ -111,7 +111,7 @@ You can then confirm that data is flowing into the system (Go to 'Explore -> Log
 
 ### Step 2 - Setup and Configure Pipeline
 
-For a quick video on step two, click here: [Step 2 - Setup and Configure Pipeline](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/EeYwOND5iatLjFfUCE0KQeMB8T_PPhOhqQChJZC8zohKSw?e=e50lwY)
+For a quick video on setup and configuration of a pipeline, click on the link below:
 
 {% embed url="https://www.youtube.com/embed/ZgL3wV9yb9k?si=fL0uxMA-NZ3YpL__" %}
 
@@ -131,7 +131,7 @@ The goal is to transport and process the collected data.
 
 ### Step 3 - Design Queries
 
-For a quick video on step three, click here: [Step 3 - Design Queries](https://apicasystem.sharepoint.com/:v:/r/sites/ProfessionalServices/Shared%20Documents/Quick%20Start%20Guide%20Videos/step%203%20-%20Creating%20Queries.mp4?csf=1\&web=1\&e=ptXNOU)
+For a quick video on designing queries and reports, click on the link below:
 
 {% embed url="https://www.youtube.com/embed/_V8zupniOBA?si=dEtzv7gJyjBMfGnT" %}
 
@@ -152,7 +152,7 @@ The goal is to enable insights by querying telemetry data.
 
 ### Step 4 - Create Dashboards
 
-For a quick video on step four, click here: [Step 4 - Create Dashboards](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/EXDbT3GbnSNDkMNb0alGtWkB2b4_uWbo9IvI_Hv1batx0g?e=egIxH7)
+For a quick video on creating dashboards, click on the link below:
 
 {% embed url="https://www.youtube.com/embed/yGzpLaMKLQg?si=_MlP_PZS_ECCExyu" %}
 
@@ -171,7 +171,7 @@ The goal is to visualize system performance and behavior in real time.
 
 ### Step 5 - Create Alerts and Endpoints
 
-For a quick video on step five, click here: [Step 5 - Create Alerts and Endpoints](https://apicasystem.sharepoint.com/:v:/s/ProfessionalServices/ETtNWHDcxsdOuB1ZPM53WE8Bk858L4pmO0UpopF5thCrxw?e=fwcYe8)
+For a quick video on creating alerts and endpoints, click on the link below:
 
 {% embed url="https://www.youtube.com/embed/iS9bElHtYb4?si=vigh0S7-OacJoclj" %}
 
