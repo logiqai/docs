@@ -89,7 +89,7 @@ helm install apica-ascent --namespace apica-ascent \
 --set global.persistence.storageClass=<storage class name> apica-repo/apica-ascent -f values.small.yaml
 ```
 
-Please refer to [Section 3.10 ](k8s-quickstart-guide.md#3-10-sizing-your-apica-ascent-cluster)for sizing your Apica Ascent cluster as specified in these YAML file Latest image tags.
+Please refer to [Section 3.10 ](k8s-quickstart.md#3-10-sizing-your-apica-ascent-cluster)for sizing your Apica Ascent cluster as specified in these YAML file Latest image tags.
 
 ## 2. Install Apica Ascent
 
@@ -98,10 +98,10 @@ helm install apica-ascent --namespace apica-ascent \
 --set global.persistence.storageClass=<storage class name> apica-repo/apica-ascent
 ```
 
-This will install Apica Ascent and expose the Apica Ascent services and UI on the ingress IP. If you plan to use an AWS S3 bucket, please refer to section [3.2](k8s-quickstart-guide.md#3-2-using-an-aws-s3-bucket) before running this step. Please refer to [Section 3.4 ](k8s-quickstart-guide.md#3-4-changing-the-storage-class)for details about storage class. Service ports are described in the [Port details section](https://docs.logiq.ai/logiq-server/quickstart-guide#ports). You should now be able to go to `http://ingress-ip/`
+This will install Apica Ascent and expose the Apica Ascent services and UI on the ingress IP. If you plan to use an AWS S3 bucket, please refer to section [3.2](k8s-quickstart.md#3-2-using-an-aws-s3-bucket) before running this step. Please refer to [Section 3.4 ](k8s-quickstart.md#3-4-changing-the-storage-class)for details about storage class. Service ports are described in the [Port details section](https://docs.logiq.ai/logiq-server/quickstart-guide#ports). You should now be able to go to `http://ingress-ip/`
 
 {% hint style="info" %}
-The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. HELM chart can override the default admin settings as well. See section[ 3.7](k8s-quickstart-guide.md#3-7-customize-admin-account) on customizing the admin settings
+The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. HELM chart can override the default admin settings as well. See section[ 3.7](k8s-quickstart.md#3-7-customize-admin-account) on customizing the admin settings
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2024-01-21 at 5.03.07 AM.png" alt=""><figcaption></figcaption></figure>
@@ -358,7 +358,7 @@ helm install apica-ascent --namespace apica-ascent \
 
 ### 3.10 Sizing your Apica Ascent cluster
 
-When deploying Apica Ascent, size your infrastructure to provide appropriate VCPU and memory requirements. We recommend the following minimum size for small. medium and large cluster specification from [Section 1.3 ](k8s-quickstart-guide.md#1-3-prepare-your-values-YAML-file)values yaml files.
+When deploying Apica Ascent, size your infrastructure to provide appropriate VCPU and memory requirements. We recommend the following minimum size for small. medium and large cluster specification from [Section 1.3 ](k8s-quickstart.md#1-3-prepare-your-values-YAML-file)values yaml files.
 
 | Apica Ascent Cluster | vCPU | Memory | NodeCount |
 | -------------------- | ---- | ------ | --------- |
