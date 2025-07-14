@@ -4,7 +4,7 @@ description: >-
   managing Ascent in OpenSh
 ---
 
-# OpenShift
+# Deploying Apica Ascent with OpenShift
 
 ## Creating a Red Hat OpenShift Cluster on AWS with ROSA
 

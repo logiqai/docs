@@ -63,7 +63,7 @@ Before you begin, ensure you have the following prerequisites.
 * Under **Prerequisite - Prepare template**, select **Template is ready**.
 * Under **Specify template** > **Template source**, select **Amazon S3 URL -** Here you will specify the template URL from Step 1 above.
 
-[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/0)](../../../../.gitbook/assets/0)
+[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/0)](../../../.gitbook/assets/0/)
 
 **Step 4**: To deploy the EKS cluster, we need to enter the **ARN** of the **IAM Role for EKS** that was created in **section 3.1.** We need a VPC with 2 Private subnets. Select them from the Network Configuration and Subnet configuration dropdown lists and they were created by the previous cloudformation template.
 
@@ -71,7 +71,7 @@ Before you begin, ensure you have the following prerequisites.
 **Important:** You **MUST** choose 2 different Private subnets from the same VPC.
 {% endhint %}
 
-[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(1\)%20\(2\).png)](../../../../.gitbook/assets/image%20\(1\)%20\(2\).png)
+[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(1\)%20\(2\).png)](../../../.gitbook/assets/image%20\(1\)%20\(2\).png)
 
 The EKS cluster will need the following node groups. Ensure that you select the node groups as specified in the following table.
 
@@ -80,11 +80,11 @@ The EKS cluster will need the following node groups. Ensure that you select the 
 | **ingest** | c5.xlarge (4 Core 8 GB RAM)     | 2          |
 | **common** | c5.2xlarge (8 Core 32 GB RAM)   | 2          |
 
-[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(3\).png)](../../../../.gitbook/assets/image%20\(3\).png)
+[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(3\).png)](../../../.gitbook/assets/image%20\(3\).png)
 
 **Step 5:** Provide the **S3 bucket name** from **section 3,** the Cloudformation will create the S3 bucket, S3 bucket name needs to be globally unique.
 
-[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(73\).png)](../../../../.gitbook/assets/image%20\(73\).png)
+[![](https://github.com/logiqai/docs/raw/master/.gitbook/assets/image%20\(73\).png)](../../../.gitbook/assets/image%20\(73\).png)
 
 **Step 6**: Click **Next**, and follow the instructions on the screen to create the stack.
 
@@ -111,7 +111,7 @@ kube-system Active 4h57m
 
 **Step 1**: Download this yaml file and run the commands mentioned below:
 
-{% file src="../../../../.gitbook/assets/gp3-sc.yaml" %}
+{% file src="../../../.gitbook/assets/gp3-sc.yaml" %}
 
 ```
 kubectl apply -f <path_for_gp3-sc.yaml>
@@ -141,7 +141,7 @@ kubectl create namespace apica-ascent
 
 **Step 2**: Download the values file below and customise it per the instructions below.
 
-{% file src="../../../../.gitbook/assets/values.yaml" %}
+{% file src="../../../.gitbook/assets/values.yaml" %}
 
 **Step 2**: Replace the following variables in the **values.yaml** and proceed to install the Apica Ascent stack on your EKS cluster.
 
@@ -154,8 +154,6 @@ kubectl create namespace apica-ascent
 7. postgres\_password: <>
 8. alert: "PrometheusDown"\
    expr: absent(up{prometheus="\<namespace>/\<namespace>prometheus-prometheus"})
-
-
 
 **Step 4:** Deploy Apica Ascent stack using helm and updated values file, see below for additional options to customise the deployment for enabling https
 
@@ -170,7 +168,7 @@ helm upgrade --install apica-ascent -n apica-ascent -f values.yaml apica-repo/ap
 **Step 5 (Optional):** To enable https using self-signed certificates, please add additional options to helm and provide the domain name for the ingress controller. In the example below, replace **"ascent.my-domain.com"** with the https domain where this cluster will be available.
 
 {% hint style="info" %}
-**NOTE:** Your DNS will need to be programmed separately to map the domain to the service endpoint for Apica Ascent. Please see Step 7 below on how to obtain the service endpoint.&#x20;
+**NOTE:** Your DNS will need to be programmed separately to map the domain to the service endpoint for Apica Ascent. Please see Step 7 below on how to obtain the service endpoint.
 {% endhint %}
 
 ```

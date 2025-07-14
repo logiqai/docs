@@ -13,7 +13,7 @@ description: >-
 * Dynamic PV provisioner support in the underlying infrastructure
 * ReadWriteMany volumes for deployment scaling
 
-Apica Ascent K8S components are made available as helm charts. 
+Apica Ascent K8S components are made available as helm charts.
 
 ### 1.1 Add Apica Ascent helm repository
 
@@ -70,15 +70,15 @@ Sample YAML files for small, medium, large cluster configurations can be downloa
 
 {% tabs %}
 {% tab title="values.small.yaml" %}
-{% file src="../../../.gitbook/assets/values.small (1).yaml" %}
+{% file src="../../.gitbook/assets/values.small (1).yaml" %}
 {% endtab %}
 
 {% tab title="values.medium.yaml" %}
-{% file src="../../../.gitbook/assets/values.medium (2).yaml" %}
+{% file src="../../.gitbook/assets/values.medium (2).yaml" %}
 {% endtab %}
 
 {% tab title="values.large.yaml" %}
-{% file src="../../../.gitbook/assets/values.large (3).yaml" %}
+{% file src="../../.gitbook/assets/values.large (3).yaml" %}
 {% endtab %}
 {% endtabs %}
 
@@ -104,7 +104,7 @@ This will install Apica Ascent and expose the Apica Ascent services and UI on th
 The default login and password to use is `flash-admin@foo.com` and `flash-password`. You can change these in the UI once logged in. HELM chart can override the default admin settings as well. See section[ 3.7](k8s-quickstart-guide.md#3-7-customize-admin-account) on customizing the admin settings
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Screen Shot 2024-01-21 at 5.03.07 AM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screen Shot 2024-01-21 at 5.03.07 AM.png" alt=""><figcaption></figcaption></figure>
 
 Apica Ascent server provides Ingest, log tailing, data indexing, query, and search capabilities.\
 Besides the web-based UI, Apica Ascent also offers [apicactl, Apica CLI](https://github.com/ApicaSystem/apicactl) for accessing the above features.
@@ -128,7 +128,7 @@ The default login and password to use is `flash-admin@foo.com` and `flash-passwo
 {% endhint %}
 
 {% hint style="info" %}
-The `ascent.my-domain.com` also fronts all the Apica Ascent service ports as described in the [port details section](../../../deploying-logiq/logiq-paas-deployment/broken-reference/).
+The `ascent.my-domain.com` also fronts all the Apica Ascent service ports as described in the [port details section](../../deploying-logiq/logiq-paas-deployment/broken-reference/).
 {% endhint %}
 
 | HELM Option                                              | Description                                                                                                                                                                                                  | Defaults   |
@@ -289,7 +289,7 @@ Auto vacuum automates the execution of `VACUUM` and `ANALYZE` (to gather statist
 
 The deployment described above offers 30 days trial license. Send an e-mail to `support@apica.io` to obtain a professional license. After obtaining the license, use the apicactl tool to apply the license to the deployment. Please refer to `apicactl` details at [https://github.com/ApicaSystem/apicactl](https://github.com/ApicaSystem/apicactl). You will need API-token from Apica Ascent UI as shown below
 
-![Apica Ascent Insights Login Api-token](../../../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
+![Apica Ascent Insights Login Api-token](../../.gitbook/assets/Screen-Shot-2020-08-09-ALERT.png)
 
 ```bash
 Setup your Apica Ascent Cluster endpoint
@@ -344,7 +344,7 @@ helm install apica-ascent --namespace apica-ascent \
 
 ### 3.9 Configuring cluster id
 
-When deploying Apica Ascent, configure the cluster id to monitor your own Apica Ascent deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](../../../deploying-logiq/logiq-paas-deployment/broken-reference/)
+When deploying Apica Ascent, configure the cluster id to monitor your own Apica Ascent deployment. For details about the `cluster_id` refer to section [Managing multiple K8S clusters](../../deploying-logiq/logiq-paas-deployment/broken-reference/)
 
 ```bash
 helm install apica-ascent --namespace apica-ascent \
@@ -352,9 +352,9 @@ helm install apica-ascent --namespace apica-ascent \
 --set global.persistence.storageClass=<storage class name> apica-repo/apica-ascent
 ```
 
-| HELM Option                    | Description                                                                                                                                                                                         | Default |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| global.environment.cluster\_id | Cluster Id being used for the K8S cluster running Apica Ascent. See Section on [Managing multiple K8S](../../../deploying-logiq/logiq-paas-deployment/broken-reference/) clusters for more details. | Apica AscentQ   |
+| HELM Option                    | Description                                                                                                                                                                                      | Default       |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| global.environment.cluster\_id | Cluster Id being used for the K8S cluster running Apica Ascent. See Section on [Managing multiple K8S](../../deploying-logiq/logiq-paas-deployment/broken-reference/) clusters for more details. | Apica AscentQ |
 
 ### 3.10 Sizing your Apica Ascent cluster
 
