@@ -633,6 +633,115 @@ When looking up surrogates, readers will store the results in both a id-to-metri
 
 Default: 96,000,000 divided by the number of threads specified in **runtime\_concurrency**.
 
+**surrogate\_database compaction**
+
+**compaction** is a sub-field of **surrogate\_database**. Within it, you can define compaction **levels**. There are two levels that can be configured: **metadata** (for basic metric information and mapping) and **activity** (for collection activity data). Each of these may only be defined once, and any other **type** value is invalid. A sample configuration might look like this:
+
+```
+<surrogate_database location="/irondb/surrogate_db/{node}">
+  <compaction>
+    <levels type="metadata">
+      <level
+        level_name="level1"
+        min_file_size="1B"
+        max_file_size="512MiB"
+        min_number_file_budget="2"
+        max_number_file_budget="8"
+        selection_phase_scan_budget="200000"
+        compaction_phase_scan_budget="100000"
+        selection_phase_scan_skip="50"
+      />
+      <level
+        level_name="level2"
+        min_file_size="10B"
+        max_file_size="5120MiB"
+        min_number_file_budget="2"
+        max_number_file_budget="8"
+        selection_phase_scan_budget="200000"
+        compaction_phase_scan_budget="100000"
+        selection_phase_scan_skip="100"
+      />
+    </levels>
+    <levels type="activity">
+      <level
+        level_name="oil_micro"
+        min_file_size="1B"
+        max_file_size="32MiB"
+        min_number_file_budget="2"
+        max_number_file_budget="64"
+        selection_phase_scan_budget="1000"
+        compaction_phase_scan_budget="10000"
+        selection_phase_scan_skip="0"/>
+      <level
+        level_name="oil_micro_l2"
+        min_file_size="1B"
+        max_file_size="64MiB"
+        min_number_file_budget="2"
+        max_number_file_budget="64"
+        selection_phase_scan_budget="10000"
+        compaction_phase_scan_budget="10000"
+        selection_phase_scan_skip="64"/>
+      <level
+        level_name="oil_mini"
+        min_file_size="64MiB"
+        max_file_size="512MiB"
+        min_number_file_budget="2"
+        max_number_file_budget="8"
+        selection_phase_scan_budget="1000"
+        compaction_phase_scan_budget="100"
+        selection_phase_scan_skip="128"/>
+      <level
+        level_name="oil_regular"
+        min_file_size="512MiB"
+        max_file_size="2GiB"
+        min_number_file_budget="2"
+        max_number_file_budget="4"
+        selection_phase_scan_budget="1000"
+        compaction_phase_scan_budget="100"
+        selection_phase_scan_skip="128"/>
+    </levels>
+  </compaction>
+</surrogate_database>
+```
+
+Each level for a type consists of a set of restrictions that determine when the individual files that make up the surrogate database are compacted; this allows, for example, small files to always compact with other small files, large files to only compact with large files, and so on. This reduces the strain on the system that could be caused by doing too frequent compactions or compacting files that do not need to be compacted.
+
+If a **level** is defined, all fields within it are required. An arbitrary number of **level** elements can be defined under **levels**. IRONdb has a sane set of default configurations that are used if no level data is provided; generally speaking, it is not recommended to define or adjust these fields unless you know exactly what you're doing and know why you're adjusting them.
+
+The fields within each level are as follows:
+
+**level level\_name**&#x20;
+
+The name of the level. This is used internally for debug logging.
+
+**level min\_file\_size**&#x20;
+
+The minimum size of a single file to consider for compaction. Files smaller than this will not be considered for compaction at this level.
+
+**level max\_file\_size**&#x20;
+
+The maximum size of a single file to consider for compaction. Files larger than this will not be considered for compaction at this level.
+
+**level min\_number\_file\_budget**&#x20;
+
+The minimum number of files to compact at a time for the level. If there are fewer files than this that match the criteria, a compaction will not run at this level.
+
+**level max\_number\_file\_budget**&#x20;
+
+The maximum number of files to compact at a time. If there are more files than this, then multiple compactions will run.
+
+**level selection\_phase\_scan\_budget**&#x20;
+
+The maximum number of files to scan in a single pass through the database.
+
+**level compaction\_phase\_scan\_budget**&#x20;
+
+The maximum number of surrogates to scan in a single pass through the database.
+
+**level selection\_phase\_scan\_skip**&#x20;
+
+The number of files to skip before starting the selection phase.
+
 ### metric\_name\_database
 
 This database stanza controls where IRONdb keeps certain aspects of its indexes.
