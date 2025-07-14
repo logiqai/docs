@@ -587,25 +587,13 @@ When a rollup timeshard is completely past the `retention` limit based on the cu
 
 ### surrogate\_database
 
-**IMPORTANT NOTE: Any node running 0.23.7 or earlier MUST do a surrogate3 migration PRIOR to upgrading to 1.0.0. This is due to removal of support for the previous surrogate database format. See the "db\_type" section below for details.**
-
 The surrogate database contains bidirectional mappings between full metric names (including tags) and integer-based keys which are used internally to refer to metrics. It also records [collection activity periods](../administration/activity-tracking.md) on each metric.
 
 Data files are stored on disk and memory-mapped on demand when metrics are referenced by queries (read) or ingestion (write).
 
 ```
-<surrogate_database location="/irondb/surrogate_db/{node}" db_type="s3"/>
+<surrogate_database location="/irondb/surrogate_db/{node}"/>
 ```
-
-**surrogate\_database db\_type**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#surrogate_database-db_type)
-
-Historically, the surrogate database was implemented as RocksDB, and loaded into RAM on startup. This is referred to as "surrogate2". Support for surrogate2 was removed in version 1.0.0.
-
-To migrate a node to surrogate3, remove any surrogate2-specific attributes, if used, from the `<surrogate_database>` config (`cache_init_size`, `load_concurrency`, `activity_tracking`, `asynch_update_journal_path`) and change `db_type` to `s3`. When the node boots, the database will be migrated into on-disk files that no longer require keeping all entries in RAM. This migration is one-way and must be performed on versions 0.23.5-0.23.7 _before_ upgrading to 1.0.0. The node will not be available for new ingestion during the migration, and the time required will be proportional to the number of unique metrics stored in the surrogate database.
-
-`flat_buffers` is a legacy value that also indicates surrogate3, but is discouraged in favor of `s3`.
-
-Default: `s3`
 
 **surrogate\_database implicit\_latest**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#surrogate_database-implicit_latest)
 
