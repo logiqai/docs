@@ -595,6 +595,12 @@ Data files are stored on disk and memory-mapped on demand when metrics are refer
 <surrogate_database location="/irondb/surrogate_db/{node}"/>
 ```
 
+**surrogate\_database location**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#surrogate_database-latest_future_bound)
+
+This is the location of the surrogate database on disk.
+
+This field is required; there is no default location if left unspecified.
+
 **surrogate\_database implicit\_latest**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#surrogate_database-implicit_latest)
 
 Toggle for maintaining an in-memory copy of the latest values for all newly seen metrics values during ingestion. If set to false, it will only maintain latest values for metrics that have been specifically "asked for" via a [tag search](../metric-names-and-tags.md#tag-queries).
@@ -608,6 +614,24 @@ This is the upper bound on whether a metric will be considered as a "latest valu
 This value can be from 0s (ignore any future timestamps) to 4h (maximum).
 
 Default: 4h
+
+**surrogate\_database runtime\_concurrency**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#surrogate_database-latest_future_bound)
+
+This value allows users to set the number of concurrent surrogate database reader threads available.
+
+Default: IRONdb will retrieve a hint about the number of available hardware threads and use this value.
+
+**surrogate\_database max\_page\_size**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#surrogate_database-latest_future_bound)
+
+When performing surrogate lookups in batches, IRONdb uses individual "pages" of results to prevent the system from getting overloaded. This setting specifies the maximum number of results that can be returned in a single page.
+
+Default: 50,000
+
+**surrogate\_database capacity\_per\_reader\_shard**[**​**](https://docs.circonus.com/irondb/getting-started/configuration#surrogate_database-latest_future_bound)
+
+When looking up surrogates, readers will store the results in both a id-to-metric-name and a metric-name-to-id lookup tables on each lookup thread so that future lookups will be much faster. These tables will pre-allocate space for these so that new space does not need to be allocated on the fly when new entries are added, improving lookup time. This field sets what the amount of space to pre-allocate in a reader is. Once this limit has been reached, future results will be allocated manually and may require internal rehashes, slowing the system down.
+
+Default: 96,000,000 divided by the number of threads specified in **runtime\_concurrency**.
 
 ### metric\_name\_database
 
