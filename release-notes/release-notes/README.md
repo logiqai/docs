@@ -2,6 +2,7 @@
 
 Release Notes for recent software and platform updates across all products:
 
+* Ascent 2.11.0
 * [Ascent 2.10.8](ascent-2.10.8.md)
 * [Ascent 2.10.7](ascent-2.10.6.md)
 * [Ascent 2.10.6](ascent-2.10.6-1.md)
