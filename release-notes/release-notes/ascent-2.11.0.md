@@ -13,7 +13,7 @@ This release introduces full integration with **Casdoor**, our new authenticatio
   * Configurable idle timeouts (default 20 mins)
   * Rate-limiting and account lockout after failed logins
   * Restriction on concurrent sessions
-* **Future-Ready**: Lays the groundwork for SSO, impersonation workflows, and compliance-aligned access control.
+* **Future-Ready**: Lays the groundwork for modern authentication methods including OAuth and biometric logins like Face ID and for advanced features such as user impersonation and compliance-driven access control.
 
 ***
 
