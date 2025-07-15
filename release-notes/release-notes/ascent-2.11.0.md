@@ -21,7 +21,13 @@ This release introduces full integration with **Casdoor**, our new authenticatio
 
 #### New Features
 
-* Added in-built YAML-based creation for alerts, queries, and data sources.
+* Casdoor Authorization Integration.
+* YAML-based support added for creating:&#x20;
+  * Alerts
+  * Queries
+  * Data sources
+  * Dashboards (via DataExplorer)
+* Oracle DB is now supported as a data source.
 
 **Policy Management**
 
@@ -72,7 +78,6 @@ This release introduces full integration with **Casdoor**, our new authenticatio
 
 * Tag and resource syncing refactored for data integrity.
 * Migration scripts now clean up deprecated dashboards and migrate datasource groups to policies.
-* Oracle DB is now supported as a data source.
 
 **UI and Visualization**
 
@@ -119,15 +124,9 @@ This release introduces full integration with **Casdoor**, our new authenticatio
 **Configuration and Packages**
 
 * Deployed agents auto-refresh every 30 seconds for real-time status.
-* YAML-based support added for defining:
-  * Alerts
-  * Queries
-  * Data sources
-  * Dashboards (via DataExplorer)
 
 **Security and Access**
 
-* Concurrent logins now blocked via Casdoor.
 * **Casbin now supports multiple roles per user**, enabling more flexible access models.
 * Vault and certificate access now uses IDs instead of names.
 
