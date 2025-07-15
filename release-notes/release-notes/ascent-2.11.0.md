@@ -54,7 +54,7 @@ This release introduces full integration with **Casdoor**, our new authenticatio
 
 **User Experience**
 
-* The Coffee UI now handles session expiration and logout scenarios gracefully.
+* The UI now handles session expiration and logout scenarios gracefully.
 * The app can now follow your system’s dark/light mode automatically.
 
 ***
