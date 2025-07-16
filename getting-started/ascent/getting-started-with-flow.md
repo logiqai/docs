@@ -12,7 +12,7 @@ This guide will teach you how to use the Flow solution to optimize your data pip
 
 For a full video walkthrough, please refer to our video guide:
 
-\*\*EMBED VIDEO LINK HERE\*\*
+{% embed url="https://www.youtube.com/watch?v=An4RCgvGcko" %}
 
 Let's begin.
 

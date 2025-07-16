@@ -15,6 +15,8 @@ For the purposes of this guide, we will install and deploy both an OTEL and Flue
 
 For a full video walkthrough, please refer to our video guide:
 
+{% embed url="https://www.youtube.com/watch?v=cNCRO2l6jOk" %}
+
 Let's begin:
 
 ## Part 1: Installing and Deploying an OpenTelemetry Collector Agent.
