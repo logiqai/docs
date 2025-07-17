@@ -8,7 +8,7 @@ To Generate an API Key from Dynatrace, please follow the instructions in this [l
 
 NOTE: Make sure to add the "logs.ingest" scope during token creation.
 
-### Steps to Create New Relic Forwarding <a href="#steps-to-create-new-relic-forwarding" id="steps-to-create-new-relic-forwarding"></a>
+### Steps to Create Dynatrace Forwarding <a href="#steps-to-create-new-relic-forwarding" id="steps-to-create-new-relic-forwarding"></a>
 
 To forward your logs to Dynatrace, begin by logging into Apica's website.
 
@@ -35,7 +35,7 @@ Name:          Dynatrace
 
 > To help make the steps easier to understand, below are the screenshots illustrating each of the instructions given above.
 
-<figure><img src="../../.gitbook/assets/image (562).png" alt=""><figcaption><p>Select Forwarder</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (569).png" alt=""><figcaption><p>Add Forwarder</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (563).png" alt=""><figcaption><p>Configure Forwarder</p></figcaption></figure>
 
