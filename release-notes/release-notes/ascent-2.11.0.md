@@ -14,6 +14,8 @@ This release introduces full integration with **Casdoor**, our new authenticatio
   * Rate-limiting and account lockout after failed logins
   * Restriction on concurrent sessions
 * **Future-Ready**: Lays the groundwork for modern authentication methods including OAuth and biometric logins like Face ID and for advanced features such as user impersonation and compliance-driven access control.
+* **Role and Policy Sync with Casdoor**\
+  When you delete a role in Ascent, all related user-role and policy mappings are now also removed from Casdoor, keeping your identity platform and Ascent in sync.
 
 ***
 
@@ -35,6 +37,7 @@ This release introduces full integration with **Casdoor**, our new authenticatio
 * Admins can create, assign, and manage policies directly from the UI.
 * Resources such as users, dashboards, alerts, data sources, and plugins can now be managed via policies.
 * A new **resource table** with search and a **Select All** option improves policy creation workflows.
+* The modal for selecting resources within policy management has been improved. It now includes a search bar, a better-organized list, multi-select, a preview option, and clear action buttons, making large resource lists much more manageable.
 
 **Security Enhancements**
 
@@ -73,6 +76,8 @@ This release introduces full integration with **Casdoor**, our new authenticatio
 * UI animations optimized for faster load times.
 * Font download size reduced by 40%.
 * Minor improvements to batch enforcement logic on the user list page.
+* The batch enforcement function for Ascent resources now includes working pagination and user feedback, including loading indicators for longer operations.
+* When typing in the dashboard search bar before dashboard data loads, search text will be preserved and the search will still run when the data is ready.
 
 **API and Backend**
 
@@ -86,6 +91,7 @@ This release introduces full integration with **Casdoor**, our new authenticatio
   * Full-screen mode
   * Exponential value formatting
 * Visual fixes for cancel buttons, logo alignment in shared dashboards, and widget resizing.
+* It’s now possible to see whether dashboards and queries are published or not. This visibility was missing in previous versions.
 
 ***
 
@@ -103,6 +109,7 @@ This release introduces full integration with **Casdoor**, our new authenticatio
 * Email formatting fixed in “Generate Password” emails.
 * Reduced redundant calls to `/api/alerts`.
 * Corrected role-to-group linkage.
+* Search fields in Queries now handle special characters like `%` correctly, so all queries return as expected when you use symbols.
 
 ***
 
@@ -147,6 +154,8 @@ This release introduces full integration with **Casdoor**, our new authenticatio
 * Fixed CPU spikes when agents are stopped.
 * Fixed Kubernetes agent package import failures.
 * GUI now properly supports creating configs for Kubernetes.
+* Searching on the Fleet Agents page now waits until you finish typing (not on every keystroke), which means faster searches and less load on the server.
+* When a new config file is assigned to an agent, its deployment state is updated correctly and won’t remain stuck as “new.”
 
 ***
 
@@ -197,6 +206,7 @@ This release introduces full integration with **Casdoor**, our new authenticatio
 * Addressed check runner bugs with self-signed certs and resource URL normalization.
 * Zebratester checks now render all expected steps.
 * Various fixes for compound checks, location rendering, and UI spacing.
+* Sorting scenarios by name now works as intended in the Scenario Management area.
 
 ***
 
@@ -222,6 +232,9 @@ This release introduces full integration with **Casdoor**, our new authenticatio
 
 * Fixed graph rendering issues in pipeline metrics.
 * Resolved certificate creation and encrypted secret issues in Vault.
+* The group dropdown selector in the Rules tab for Pipelines rules now appears correctly.
+* You can now search for alerts by name or keyword in the Alerts section of the Pipelines dashboard, and the results will update immediately.
+* The action buttons under Pipelines now include explanatory tooltips. Hovering over an icon will show what it does.
 
 ***
 

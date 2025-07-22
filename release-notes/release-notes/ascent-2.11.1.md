@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Ascent 2.11.1
 
 ### Observe <a href="#observe" id="observe"></a>
@@ -9,13 +13,13 @@
 * **Published Status in Dashboards and Queries**\
   It’s now possible to see whether dashboards and queries are published or not. This visibility was missing in previous versions.
 * **Special Character Searches in Queries**\
-  Search fields in Queries now handle special characters like `%` correctly, so all queries return as expected when you use symbols.
+
 * **Batch Enforcement with Proper Pagination**\
-  The batch enforcement function for Ascent resources now includes working pagination and user feedback, including loading indicators for longer operations.
+
 * **Policy Save Error Feedback**\
   If saving a policy fails, you’ll receive a clear message explaining what action is needed to complete the process.
 * **Resource Selection Modal Redesign**\
-  The modal for selecting resources within policy management has been improved. It now includes a search bar, a better-organized list, multi-select, a preview option, and clear action buttons, making large resource lists much more manageable.
+
 * **Attribute Fetching for Static Assets**\
   The application will no longer show an error when trying to find certain static asset attributes, thanks to a fix in how those paths are handled.
 * **Fetching Tags with Cookies**\
@@ -53,13 +57,11 @@
 
 **Fixes and Improvements:**
 
-* **Scenario Management Sorting**\
-  Sorting scenarios by name now works as intended in the Scenario Management area.
+*
 
 ### General Platform/Ascent <a href="#general-platformascent" id="general-platformascent"></a>
 
-* **Role and Policy Sync with Casdoor**\
-  When you delete a role in Ascent, all related user-role and policy mappings are now also removed from Casdoor, keeping your identity platform and Ascent in sync.
+*
 
 ### Known Issues <a href="#known-issues" id="known-issues"></a>
 
