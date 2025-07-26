@@ -195,13 +195,13 @@ Click "Update".
 
 Then, go back to the "Agent" tab and click into the Linux hostname (where you'll be ingesting data from):
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 4: Verify Metrics/Logs Are Being Ingested into Ascent:
 
 Verify that logs/metrics are coming in and that it shows as "active":
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (9).png" alt=""><figcaption></figcaption></figure>
 
 To verify Metrics are being ingested, go to Queries -> New Query and search for the host to verify data is there:
 

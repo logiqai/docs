@@ -4,20 +4,19 @@ icon: browsers
 
 # Ascent User Interface
 
-The Apica Ascent UI is your window to your IT data, logs, and metrics - ingested from all of your data sources and converged onto a single layer. The Apica Ascent UI enables you to perform a wide range of operations – from simple uptime monitoring and error troubleshooting to capacity planning, real-time forensics, performance studies, and many more.
+The Apica Ascent UI is your window to your IT data, logs, metrics, events and traces - ingested from all of your data sources and converged onto a single layer. The Apica Ascent UI enables you to perform a wide range of operations - from simple uptime monitoring and error troubleshooting to capacity planning, real-time forensics, performance studies, and many more.
 
 You can access the Apica Ascent UI by logging into your Apica Ascent instance URL using your account credentials.
 
-![](../.gitbook/assets/windows-monitoring.png)
+<figure><img src="../.gitbook/assets/screencapture-datafabric-demo-apica-io-onboarding-2025-07-26-12_58_08 (1).png" alt=""><figcaption><p>Onboarding page</p></figcaption></figure>
 
 The navigation bar at the right side of the UI allows you to access your:
 
 * Dashboards
 * Queries
 * Alerts
-* Explore
-* Events
-* Rules
+* Explore - Logs, Topology, etc.&#x20;
+* Integrations - Forwarders, Source Extensions, Alert Destinations, Pre-created dashboards,&#x20;
 * Settings
 
 The following sections in this article describe the various elements of the Apica Ascent UI and their purposes.
@@ -28,9 +27,9 @@ A dashboard is a collection of visualizations and queries that you've created ag
 
 The **Dashboards** page on the Apica Ascent UI lists all the dashboards you've created within Apica Ascent. Dashboards that you've favorited are marked with a yellow star icon and are also listed under the **Dashboards** dropdown menu for quick access in the navigation bar. The following images depict dashboards that you can create using Apica Ascent.
 
-![Dashboards Page shows list of dashboards.](../.gitbook/assets/dashboard-list.png)
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Dashboards list page shows all the dashboards. Create new dashboards or Import pre created dashboards. </p></figcaption></figure>
 
-![A typical monitoring dashboard on Apica Ascent](../.gitbook/assets/security-monitoring.png)
+<figure><img src="../.gitbook/assets/screencapture-datafabric-demo-apica-io-dashboard-ascent-monitoring-2025-07-26-12_02_24.png" alt=""><figcaption><p>A typical monitoring dashboard on Apica Ascent</p></figcaption></figure>
 
 ![Another example of a Apica Ascent dashboard](../.gitbook/assets/aws-cloudtrail.png)
 
@@ -38,7 +37,7 @@ The **Dashboards** page on the Apica Ascent UI lists all the dashboards you've c
 
 Apica Ascent enables you to write custom queries to analyze log data, display metrics and events, view and customize events and alerts, and create custom dashboards. The **Queries** page lists all of the queries you've created on Apica Ascent. You can mark some of them as favorites or archive the ones, not in use. Your favorite queries also appear in the drop-down menu of the **Queries** tab for quick access.
 
-![](../.gitbook/assets/queries-list.png)
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ## **Alerts**
 
@@ -56,16 +55,16 @@ You can also click into a specific application or ProcID to view logs in more de
 
 The following image depicts a typical Explore page on the Apica Ascent UI.
 
-![The Explore Page](../.gitbook/assets/explore-list.png)
+<figure><img src="../.gitbook/assets/screencapture-datafabric-demo-apica-io-explore-2025-07-26-12_46_13 (3).png" alt=""><figcaption><p>Explore page of Apica Ascent</p></figcaption></figure>
 
-## Events
+## Journals
 
-The **Events** page lists all the important events that have occurred in the Apica Ascent Platform. Events are listed by their Name, Message, and the time they were created. The Event page tracks important service notifications like service restarts, license expiry, etc...
+The **Journals** page lists all the important events that have occurred in the Apica Ascent Platform. Audit Trail are listed by their Name, Message, and the time they were created. The Journals page tracks important service notifications like service restarts, license expiry, etc...
 
 ## Create
 
-The **Create** dropdown menu enables you to create new reports, queries, dashboards, and alerts, as shown in the following image.
+The **Create** dropdown menu enables you to create new alerts, dashboards, queries, reports, and checks as shown in the following image.
 
-<figure><img src="../.gitbook/assets/image (325).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (325).png" alt=""><figcaption><p>Create menu</p></figcaption></figure>
 
 A function-specific modal appears based on what you select from this dropdown menu.
