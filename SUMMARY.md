@@ -25,12 +25,11 @@
   * [Ascent 2.4.0](product-overview/release-notes/ascent-2.4.0.md)
   * [Ascent 2.3.0](product-overview/release-notes/ascent-2.3.0.md)
   * [Ascent 2.2.0](product-overview/release-notes/load-test.md)
-  * [Ascent 2.1.0](product-overview/release-notes/ascent-2.1.0/README.md)
-    * [Data Fabric](product-overview/release-notes/ascent-2.1.0/release-notes.md)
-    * [Synthetic Monitoring](product-overview/release-notes/ascent-2.1.0/synthetic-monitoring.md)
-    * [Advanced Scripting Engine](product-overview/release-notes/ascent-2.1.0/advanced-scripting-engine.md)
-    * [IRONdb](product-overview/release-notes/ascent-2.1.0/irondb.md)
-  * [Synthetic Monitoring](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2140241932/Release+Notes)
+  * [Ascent 2.1.0](product-overview/release-notes/ascent-2.1.0.md)
+  * [Data Fabric](product-overview/release-notes/release-notes.md)
+  * [Synthetic Monitoring](product-overview/release-notes/synthetic-monitoring.md)
+  * [Advanced Scripting Engine](product-overview/release-notes/advanced-scripting-engine.md)
+  * [IRONdb](product-overview/release-notes/irondb.md)
 
 ## TECHNOLOGIES
 

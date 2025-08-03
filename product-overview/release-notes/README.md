@@ -23,6 +23,6 @@ Release Notes for recent software and platform updates across all products:
 * [Ascent 2.4.0](ascent-2.4.0.md)
 * [Ascent 2.3.0](ascent-2.3.0.md)
 * [Ascent 2.2.0](load-test.md)
-* [Ascent 2.1.0](ascent-2.1.0/)
-* [Synthetic Monitoring](ascent-2.1.0/synthetic-monitoring.md) (ASM)
+* [Ascent 2.1.0](ascent-2.1.0.md)
+* [Synthetic Monitoring](synthetic-monitoring.md) (ASM)
 * Loadtesting (ALT)
