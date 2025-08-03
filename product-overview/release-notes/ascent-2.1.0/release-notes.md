@@ -1,5 +1,6 @@
 ---
 description: 'Data Fabric Release: v3.7'
+hidden: true
 ---
 
 # Data Fabric
