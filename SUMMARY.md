@@ -54,7 +54,6 @@
     * [Collect Logs with Python](getting-started/ascent/getting-started-with-logs/collect-logs-with-python.md)
     * [Collect Logs with OpenTelemetry](getting-started/ascent/getting-started-with-logs/opentelemetry.md)
     * [Collect Logs with Rsyslog](getting-started/ascent/getting-started-with-logs/collect-logs-with-rsyslog.md)
-* [Ascent Deployment Overview](getting-started/ascent-deployment-overview.md)
 * [Quickstart with Docker-Compose](getting-started/quickstart-with-docker-compose.md)
 * [On-Premise PaaS deployment](getting-started/logiq-paas-deployment/README.md)
   * [On-Premise PaaS Deployment Architecture](getting-started/paas-deployment/paas-architecture.md)
