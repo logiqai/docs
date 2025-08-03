@@ -113,7 +113,7 @@ We're continuously working to enhance your experience with Apica Ascent Developm
 
 * Updated the [Compound Check](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2187264091) type to run on the latest infrastructure
 * Added a new supported Selenium IDE command, [setLocation](https://apica-kb.atlassian.net/wiki/spaces/ASMDOCS/pages/2135393876/Comparing+Selenium+IDE+Scripts+to+ASM+Scenarios#setLocation)
-* Added missing attributes to the response bodies of the [/users](https://api-asm1.apica.io/v3/Help/Route/GET-users) and [/users/{user\_guid}](https://api-asm1.apica.io/v3/Help/Route/GET-users-user\_guid) API GET request endpoints
+* Added missing attributes to the response bodies of the [/users](https://api-asm1.apica.io/v3/Help/Route/GET-users) and [/users/{user\_guid}](https://api-asm1.apica.io/v3/Help/Route/GET-users-user_guid) API GET request endpoints
 * Added several new ASM commands to the ASM Manage Scenarios front end. See
 
 for a complete list of supported Selenium IDE commands. Now, all of the commands listed in that article are available in the ASM Edit/Debug Scenarios page

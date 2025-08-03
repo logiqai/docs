@@ -1,4 +1,4 @@
-# IronDB
+# IRONdb
 
 ## Release Version 1.2.0
 
