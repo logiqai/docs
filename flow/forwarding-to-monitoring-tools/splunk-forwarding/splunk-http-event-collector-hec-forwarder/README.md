@@ -29,7 +29,7 @@ To configure a Splunk HEC Forwarder in Apica:
 
 
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2025-05-15 at 5.50.02 AM.png" alt=""><figcaption><p>Create a Splunk HEC Forwarder</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Screenshot 2025-05-15 at 5.50.02 AM.png" alt=""><figcaption><p>Create a Splunk HEC Forwarder</p></figcaption></figure>
 
 ### 🔐 Creating a Splunk HEC Token in Splunk
 
