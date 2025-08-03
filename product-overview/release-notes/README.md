@@ -1,3 +1,7 @@
+---
+icon: memo-circle-info
+---
+
 # Release Notes
 
 Release Notes for recent software and platform updates across all products:

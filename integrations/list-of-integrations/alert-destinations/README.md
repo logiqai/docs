@@ -30,7 +30,7 @@ To configure alert destinations navigate to **settings** and open the **“Alert
 ### Email <a href="#email" id="email"></a>
 
 {% hint style="info" %}
-It’s required to [configure the e-mail](../../../logiq-ui-configuration/email-configuration-setup.md) server to receive e-mail notifications.
+It’s required to [configure the e-mail](../../../admin/email-configuration-setup.md) server to receive e-mail notifications.
 {% endhint %}
 
 1. Click on + New Alert Destination”, and pick Email.
