@@ -24,4 +24,5 @@ Release Notes for recent software and platform updates across all products:
 * [Ascent 2.3.0](ascent-2.3.0.md)
 * [Ascent 2.2.0](load-test.md)
 * [Ascent 2.1.0](ascent-2.1.0/)
-* [Synthetic Monitoring](https://app.gitbook.com/o/-LmzGjHypGkPBzYc0fF0/s/-LmzGprckLqwd5v6bs6m/~/changes/1687/product-overview/release-notes/synthetic-monitoring)
+* [Synthetic Monitoring](ascent-2.1.0/synthetic-monitoring.md)
+* [IRONdb](ascent-2.1.0/irondb.md)
