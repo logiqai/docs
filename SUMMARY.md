@@ -256,7 +256,7 @@
 
 ## Flow
 
-* [Overview](flow/overview.md)
+* [Flow Overview](flow/overview.md)
 * [Replay](flow/replay.md)
 * [Pipeline Management](flow/pipeline-management/README.md)
   * [Configuring Pipelines](flow/pipeline-management/data-flow-pipelines-new.md)
@@ -329,7 +329,7 @@
 
 ## LAKE
 
-* [Powered by Instastore™](lake/lake-powered-by-instastore-tm.md)
+* [Lake Overview](lake/lake-powered-by-instastore-tm.md)
 
 ## FLEET MANAGEMENT
 

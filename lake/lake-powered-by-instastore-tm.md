@@ -1,10 +1,16 @@
 ---
 description: >-
   Apica's manages all of its incoming data flows by writing 100% of its data to
-  InstaSore.
+  InstaStore.
 ---
 
-# Powered by Instastore™
+# Lake Overview
+
+## Overview
+
+The Apica Lake enterprise data lake solution processes petabytes of data with consistent performance. The solution provides primary object storage with 100% indexing. You are able to choose how and where to store your telemetry data with complete flexibility, and store in our proprietary optimized data lake for highly efficient search capabilities or route to any external lake in indexed or non-indexed formats.
+
+With InstaStore™ technology, you have infinite retention with object storage while maintaining 100% data ownership and open formats, and the solution provides 100% data indexing with real-time search and replay capabilities.
 
 ## What is Instastore?
 
