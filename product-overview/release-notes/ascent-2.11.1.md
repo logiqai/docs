@@ -6,71 +6,55 @@ hidden: true
 
 ### Observe <a href="#observe" id="observe"></a>
 
-**Fixes and Improvements:**
+#### Improvements & General Changes
 
-* **Authentication Settings Saving**\
-  Fixed an issue preventing changes to authentication settings in the Settings > Authentication area. You’ll now be able to save or toggle these configuration options reliably.
-* **Published Status in Dashboards and Queries**\
-  It’s now possible to see whether dashboards and queries are published or not. This visibility was missing in previous versions.
-* **Special Character Searches in Queries**\
+* **Resource Selection Modal Enhancement**: The resource selection modal in the policy management page has been improved. Users now benefit from a clearer layout, added search bar, multi-selection support, resource preview, responsive design, and clearer call-to-action buttons.
+* **Batch Enforcement with Pagination for Ascent Resources**: Pagination has been implemented in batch enforcement for resources, helping users navigate and enforce policies efficiently. User feedback and loading indicators have also been added to enhance the experience.
+* **Banner for Policy Save Errors**: Users now see an appropriate banner with actionable messages when saving a policy fails, guiding them on how to successfully save their changes.
+* **Revert Pagination Fixes**: Pagination-related changes were reverted as tracked in internal change 13119.
 
-* **Batch Enforcement with Proper Pagination**\
+#### Bug Fixes
 
-* **Policy Save Error Feedback**\
-  If saving a policy fails, you’ll receive a clear message explaining what action is needed to complete the process.
-* **Resource Selection Modal Redesign**\
-
-* **Attribute Fetching for Static Assets**\
-  The application will no longer show an error when trying to find certain static asset attributes, thanks to a fix in how those paths are handled.
-* **Fetching Tags with Cookies**\
-  Improved reliability for fetching tags related to resources, by enhancing how authentication cookies are passed in requests.
-* **Metadata Fetch for “Check as Datasource”**\
-  Resolved an issue where changes to authentication broke metadata fetching for checks being used as a datasource.
-* **SQL Errors with NULL Cluster/Tenant**\
-  Addressed a bug that returned errors when the system encountered NULL values for tenant or cluster columns in the resources database. Resources now display even if certain metadata columns are empty.
-* **Report Execution Reliability**\
-  Reports now execute as expected, instead of ending immediately with no results.
-* **Search Resilience While Loading Dashboards**\
-  Now, if you start typing in the dashboard search bar before dashboard data loads, your search text will be preserved and the search will still run when the data is ready.
-
-### Fleet <a href="#fleet" id="fleet"></a>
-
-**Fixes and Improvements:**
-
-* **Deployment Status for Agent Configs**\
-  When you assign a new config file to an agent, its deployment state is updated correctly and won’t remain stuck as “new.”
-* **Agents Page Search Optimization**\
-  Searching on the Fleet Agents page now waits until you finish typing (not on every keystroke), which means faster searches and less load on the server.
-
-### Flow <a href="#flow" id="flow"></a>
-
-**Fixes and Improvements:**
-
-* **Groups Not Populating in Pipeline Rules**\
-  The group dropdown selector in the Rules tab for Pipelines rules now appears correctly.
-* **Alerts Tab - Fixed Search Issue**\
-  You can now search for alerts by name or keyword in the Alerts section of the Pipelines dashboard, and the results will update immediately.
-* **Action Button Tooltips in Pipelines**\
-  The action buttons under Pipelines now include explanatory tooltips. Hovering over an icon will show what it does.
+* **Authentication Settings Save Failure**: Fixed an issue where changes to authentication settings in Apica Ascent could not be saved. Now the settings are reliably updated.
+* **Dashboard/Query Publish Visibility**: Resolved a problem where users could not see if dashboards or queries were published.
+* **Fix for Missing Attribute (STATIC\_ASSETS\_PATH)**: Addressed a bug where the application could not find the required attribute, ensuring smoother operation.
+* **SQL Scan Error for NULL Tenant/Cluster Values**: Fixed issues in the resources table that caused API failures when tenant or cluster values were NULL, ensuring stable resource queries.
+* **Check Analytics Split View Error**: Clicking "Split View" in Check Analytics no longer throws a generic error.
+* **Metadata Fetching for Check as a Datasource**: Ensured metadata fetching works as expected after Casdoor-related changes.
+* **Flawed Sorting in Scenario Management**: Sorting by scenario name now works correctly in Scenario Management.
+* **Cannot Search for % in Queries**: Searching using the "%" character in Queries is now supported.
+* **Dashboard Searchbar Text Removal**: Fixed an issue where typed text in the dashboard search bar was removed while dashboards were loading.
+* **Report Execution Failure**: Users can now successfully execute reports; previously, reports would erroneously finish in 0 seconds.
 
 ### Synthetics <a href="#synthetics" id="synthetics"></a>
 
-**Fixes and Improvements:**
+#### Bug Fixes
 
-*
+* **Groups Not Visible in Check Analytics**: Resolved the issue where monitor groups were not visible in the Groups View or Manage Groups tab under Check Analytics.
 
-### General Platform/Ascent <a href="#general-platformascent" id="general-platformascent"></a>
+### Flow <a href="#flow" id="flow"></a>
 
-*
+#### Bug Fixes
 
-### Known Issues <a href="#known-issues" id="known-issues"></a>
+* **Group Dropdown Empty in Rules**: The group dropdown in the rules tab within Pipelines now displays correctly, allowing selection as expected.
+* **Action Button Suggestions**: Hovering over action buttons in Ascent Pipelines now shows a tooltip suggesting the corresponding action, improving user guidance.
 
-* **Groups Not Visible in Check Analytics “Groups View”**\
-  There’s a current limitation where no groups appear in Check Analytics > Groups View and the Manage Groups tab. This issue has been identified and will be addressed in an upcoming release.
+### Fleet <a href="#fleet" id="fleet"></a>
+
+#### Bug Fixes
+
+* **Config Files Shown as New**: Config files assigned to an agent no longer incorrectly show as "new" after assignment.
+* **Fleet Agents Page Unnecessary API Calls**: Improved the Fleet Agents page to reduce unnecessary API calls on every keystroke and resolved related issues with the filters API.
+
+### Ascent <a href="#ascent" id="ascent"></a>
+
+#### Bug Fixes
+
+* **Role Deletion not Cleaning Up in Casdoor**: Deleting a role in Ascent now also removes associated user-role and policy mappings in Casdoor as expected.
 
 ***
 
 ### Component Versions - Ascent v2.11.1
 
-<table><thead><tr><th>Components</th><th width="410">Version</th></tr></thead><tbody><tr><td>Flash</td><td>v3.16.0</td></tr><tr><td>Coffee</td><td>v3.17.0</td></tr><tr><td>ASM</td><td>13.36.1</td></tr><tr><td>NG Private Agent</td><td>1.0.9</td></tr><tr><td>Check Execution Container: Browser</td><td>fpr-c-130n-10.2.1-716-r-2025.04.02-0-base-2.0.0</td></tr><tr><td>Check Execution Container: Zebratester</td><td>zt-7.5a-p0-r-2025.04.02-0-base-1.2.0</td></tr><tr><td>Check Execution Container: Runbin</td><td>runbin-2025.04.17-0-base-2.2.1</td></tr><tr><td>Check Execution Container: Postman</td><td>postman-2025.04.17-0-base-1.4.1</td></tr><tr><td>Bnet (Chrome Version)</td><td>10.2.1 (Chrome 130)</td></tr><tr><td>Zebratester</td><td>7.0B</td></tr><tr><td>ALT</td><td>6.13.3.240</td></tr><tr><td>IronDB</td><td>1.5.0</td></tr></tbody></table>
+<table><thead><tr><th>Components</th><th width="410">Version</th></tr></thead><tbody><tr><td>Flash</td><td>v3.16.3</td></tr><tr><td>Coffee</td><td>v3.17.7</td></tr><tr><td>ASM</td><td>13.36.3</td></tr><tr><td>NG Private Agent</td><td>1.0.9</td></tr><tr><td>Check Execution Container: Browser</td><td>fpr-c-130n-10.2.1-716-r-2025.04.02-0-base-2.0.0</td></tr><tr><td>Check Execution Container: Zebratester</td><td>zt-7.5a-p0-r-2025.04.02-0-base-1.2.0</td></tr><tr><td>Check Execution Container: Runbin</td><td>runbin-2025.04.17-0-base-2.2.1</td></tr><tr><td>Check Execution Container: Postman</td><td>postman-2025.04.17-0-base-1.4.1</td></tr><tr><td>Bnet (Chrome Version)</td><td>10.2.1 (Chrome 130)</td></tr><tr><td>Zebratester</td><td>7.0B</td></tr><tr><td>ALT</td><td>6.13.3.240</td></tr><tr><td>IronDB</td><td>1.5.0</td></tr></tbody></table>
 
