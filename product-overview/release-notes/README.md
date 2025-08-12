@@ -6,6 +6,7 @@ icon: memo-circle-info
 
 Release Notes for recent software and platform updates across all products:
 
+* [Ascent 2.12.0](ascent-2.12.0.md)
 * [Ascent 2.11.1](ascent-2.11.1.md)
 * [Ascent 2.11.0](ascent-2.11.0.md)
 * [Ascent 2.10.8](ascent-2.10.8.md)
