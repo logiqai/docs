@@ -7,6 +7,7 @@
 * [Ascent Overview](product-overview/ascent-overview.md)
 * [Ascent User Interface](product-overview/the-logiq-ui.md)
 * [Release Notes](product-overview/release-notes/README.md)
+  * [Ascent 2.12.0](product-overview/release-notes/ascent-2.12.0.md)
   * [Ascent 2.11.1](product-overview/release-notes/ascent-2.11.1.md)
   * [Ascent 2.11.0](product-overview/release-notes/ascent-2.11.0.md)
   * [Ascent 2.10.8](product-overview/release-notes/ascent-2.10.8.md)
