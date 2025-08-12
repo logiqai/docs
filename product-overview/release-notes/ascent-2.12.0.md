@@ -19,7 +19,6 @@ We’re excited to announce the release of Apica One Platform 2.12.0, delivering
   * Application session cookies now include ‘SameSite’ attributes for additional browser security.
 * **Notifications & Alerting**
   * Introduced integration with ilert alerting platform.
-  * Introduced SMS notification support via Twilio for flexible alerting options.
 * **UI and Data Explorer**
   * Data Explorer now supports column-based filters for raw data view, improving the metric explorer.
   * Improvements throughout Data Explorer.
