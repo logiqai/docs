@@ -459,6 +459,7 @@
       * [Configuring Apica DNS Check Types](platform-docs/synthetic-monitoring-overview/configurations/configuring-checks/configuring-apica-dns-check-types.md)
       * [Implementing Tags Effectively Within ASM](platform-docs/synthetic-monitoring-overview/configurations/configuring-checks/implementing-tags-effectively-within-asm.md)
       * [Storing and Retrieving Information Using the ASM Dictionary](platform-docs/synthetic-monitoring-overview/configurations/configuring-checks/storing-and-retrieving-information-using-the-asm-dictionary.md)
+      * [Using Shadow DOM feature in Selenium](platform-docs/synthetic-monitoring-overview/configurations/configuring-checks/using-shadow-dom-feature-in-selenium.md)
     * [Configuring Users](platform-docs/synthetic-monitoring-overview/configurations/configuring-users/README.md)
       * [Configuring SSO Within ASM](platform-docs/synthetic-monitoring-overview/configurations/configuring-users/configuring-sso-within-asm.md)
     * [Configuring Alerts](platform-docs/synthetic-monitoring-overview/configurations/configuring-alerts/README.md)
