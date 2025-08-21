@@ -27,7 +27,7 @@ A dashboard is a collection of visualizations and queries that you've created ag
 
 The **Dashboards** page on the Apica Ascent UI lists all the dashboards you've created within Apica Ascent. Dashboards that you've favorited are marked with a yellow star icon and are also listed under the **Dashboards** dropdown menu for quick access in the navigation bar. The following images depict dashboards that you can create using Apica Ascent.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Dashboards list page shows all the dashboards. Create new dashboards or Import pre created dashboards. </p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Dashboards list page shows all the dashboards. Create new dashboards or Import pre created dashboards. </p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/screencapture-datafabric-demo-apica-io-dashboard-ascent-monitoring-2025-07-26-12_02_24.png" alt=""><figcaption><p>A typical monitoring dashboard on Apica Ascent</p></figcaption></figure>
 
