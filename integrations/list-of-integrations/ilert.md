@@ -38,29 +38,37 @@ description: Apica integration with ilert incident management system
 
 <figure><img src="https://docs.ilert.com/~gitbook/image?url=https%3A%2F%2F3394882078-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M76ygPnS4HUcFSX8ulm%252Fuploads%252FI9JrneJ5E1iaDAdYhcrM%252F1.png%3Falt%3Dmedia%26token%3Dc3587315-386c-472b-b869-c3394d093594&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=7ee24e1c&#x26;sv=2" alt=""><figcaption></figcaption></figure>
 
-1. Now type "webhook" into the search field and select **Webhook**.
+2. Now type "ilert" into the search field and select **ilert**.
 
-<figure><img src="https://docs.ilert.com/~gitbook/image?url=https%3A%2F%2F3394882078-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M76ygPnS4HUcFSX8ulm%252Fuploads%252FBTsw8ntWSxcapSU44Dl5%252F2.png%3Falt%3Dmedia%26token%3Db2c7d48f-31b9-415a-aac7-1004eb51ff9c&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=cc300535&#x26;sv=2" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
 
-1. Enter a **Name** and the in ilert previously created alert source url into the **Url** field.
+3. Enter a **Name** and the previously created Apica URL from the ilert alert source into the ilert Webhook **URL** field.
 
-<figure><img src="https://docs.ilert.com/~gitbook/image?url=https%3A%2F%2F3394882078-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M76ygPnS4HUcFSX8ulm%252Fuploads%252F5XB76ZL8GLq1hYZKlcGo%252F3.png%3Falt%3Dmedia%26token%3Df661f399-ba76-4f7e-a520-07a26a023fe2&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=7a773696&#x26;sv=2" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
 
-1. Now on the top menu bar, click on **Alerts**.
+4. Now on the top menu bar, click on **Alerts**.
 
-<figure><img src="https://docs.ilert.com/~gitbook/image?url=https%3A%2F%2F3394882078-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M76ygPnS4HUcFSX8ulm%252Fuploads%252F9EwirgkAi9EpDHpGXIL0%252F4.png%3Falt%3Dmedia%26token%3Ded5770a1-dbef-465a-85dd-ef1816665451&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=d9bfa168&#x26;sv=2" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/7 (1).png" alt=""><figcaption></figcaption></figure>
 
-1. Select any Alert for which you want to receive a notification.
-2. Click on the **'+'** in the Destinations tab.
+5. Select any Alert for which you want to receive a notification.
+6. Click on the **'+'** in the Destinations tab.
 
-<figure><img src="https://docs.ilert.com/~gitbook/image?url=https%3A%2F%2F3394882078-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M76ygPnS4HUcFSX8ulm%252Fuploads%252FkYVygh4Hy5oVHQoR8qq8%252F5.png%3Falt%3Dmedia%26token%3Dc2ce7c85-de07-492f-bda2-b28bf26bd1f0&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=ae15cb5f&#x26;sv=2" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 (1).png" alt=""><figcaption></figcaption></figure>
 
-1. Now select the previously created **Alert Destination** and click on **Save**.
+7. Now select the previously created **Alert Destination** and click on **Save**.
 
-<figure><img src="https://docs.ilert.com/~gitbook/image?url=https%3A%2F%2F3394882078-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-M76ygPnS4HUcFSX8ulm%252Fuploads%252F6UQg8lmumF9N2Ui2wrdK%252F6.png%3Falt%3Dmedia%26token%3D488901bf-feda-44fb-9f30-1708806a7208&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=3e035eeb&#x26;sv=2" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 (1).png" alt=""><figcaption></figcaption></figure>
+
+8. Once the alert is set up, you will see the alert destination in your list.
+
+<figure><img src="../../.gitbook/assets/6 (1).png" alt=""><figcaption></figcaption></figure>
+
+9. Once the **ilert integration** is complete and an **alert is created**, go to **ilert** to verify that the alert is working.
+
+<figure><img src="../../.gitbook/assets/8 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### FAQ <a href="#faq" id="faq"></a>
 
 **Will alerts in ilert be resolved automatically?**
 
-Yes, as soon as the Alert transitions to the status "OK" , corresponding alerts in ilert will be resolved automatically.
+Yes, as soon as the alert transitions to the status "OK" within Ascent, all corresponding alert(s) in **ilert** will be resolved automatically.
