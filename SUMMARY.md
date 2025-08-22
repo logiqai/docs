@@ -386,8 +386,8 @@
 * [Alerts](logiq-events/alerts.md)
 * [Alerts (Simple/Anomaly)](logiq-events/alerts-simple-anomaly.md)
 * [Alerts On Logs](logiq-events/alerts-1.md)
-* [Alert Destnations](logiq-events/alert-destnations/README.md)
-  * [Email](logiq-events/alert-destnations/email.md)
+* [Alert Destinations](logiq-events/alert-destinations/README.md)
+  * [Email](logiq-events/alert-destinations/email.md)
 * [Rule Packs](logiq-events/rule-packs.md)
 * [AI-powered Search](logiq-events/ai-powered-search.md)
 
