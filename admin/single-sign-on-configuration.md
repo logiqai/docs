@@ -17,14 +17,12 @@ From the Settings tab:
 * Enable _"SAML configuration"_ checkbox
 * Add **SAML Metadata URL**, **SAML Entity ID**, and **SAML NameID Format.**
 
-Check below for specific [steps for your Identity provider](single-sign-on-configuration.md#idp-configuration)
-
 If user-groups are configured on the IDP side, create the identical user groups in Apica Ascent. This can be done by clicking on the "_Settings"_ menu, selecting the IAM tab, and going to the Groups menu on the right side. This example shows creating the "NonAdmin" user group.
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-08-27 at 4.05.18 PM.png" alt=""><figcaption></figcaption></figure>
 
 \
-This concludes the Apica Ascent side configuration.
+This concludes the Apica Ascent side configuration. Check below for step 2 - the specific [actions for your Identity Provider (IdP)](single-sign-on-configuration.md#step-2-idp-configuration).
 
 Logout as Apica Ascent admin. On the login screen, the "SAML Login" Button should be available to login with the user's SSO credentials. By clicking the button browser is redirected to the IDP screen where the user can log in using its IDP credentials.
 
