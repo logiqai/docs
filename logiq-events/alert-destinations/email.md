@@ -4,15 +4,14 @@ description: configure email destination
 
 # Email
 
-click on **New Alert Destination > Email** to add new email destination
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (582).png" alt=""><figcaption></figcaption></figure>
+To add a new email destination for alerts, follow these steps:
 
-fill in **Name** of destination and **Email Address** to receive email notifications on that email.
+1. Click on **New Alert Destination > Email**.
+2. Fill in the **Name** of the destination.
+3. Enter the **Email Address** to receive notifications.
+4. Optionally, configure the **Subject Template** for email content. The default is `Alert {alert_name} changed status to {state}`. Use keywords in **{}** to access variables like **alert\_name**, **state**, **severity**, **alert\_url**, and **query\_url**.
+5. After entering the details, click **Create**.
 
-You can also configure **Subject Template** to configure the content of the email. default value: `Alert {alert_name} changed status to {state}`
-
-You can use keywords enclosed in **{}** to access the following variables: **alert\_name, state, severity, alert\_url, query\_url.**
-
-After entering the details, click **Create** to add the destination. This new destination will be available as an optional choice when creating or editing alerts.
-
+The new email destination will now be available as an option when creating or editing alerts.

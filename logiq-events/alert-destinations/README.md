@@ -2,7 +2,7 @@
 description: Configuring destinations for receiving alert notifications
 ---
 
-# Alert Destnations
+# Alert Destinations
 
 Alert destinations are specific locations or platforms where notifications about configured alerts are sent. Users configure alert destinations to ensure they are promptly informed through their preferred communication channels whenever an alert is triggered.\
 Currently supported destinations are:
@@ -21,4 +21,4 @@ Currently supported destinations are:
 
 To add new alert destinations, navigate **Explore > Integrations > Alert Destinations**
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (580).png" alt=""><figcaption></figcaption></figure>
