@@ -17,3 +17,5 @@ To add a new email destination for alerts, follow these steps:
 5. After entering the details, click **Create**.
 
 The new email destination will now be available as an option when creating or editing alerts.
+
+<figure><img src="../../.gitbook/assets/image (594).png" alt=""><figcaption></figcaption></figure>
