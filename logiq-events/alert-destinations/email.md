@@ -1,8 +1,10 @@
 ---
-description: configure email destination
+description: Configure email destination
 ---
 
 # Email
+
+
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
