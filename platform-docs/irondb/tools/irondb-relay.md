@@ -2,7 +2,9 @@
 
 The IRONdb-relay, like the carbon-relay or the carbon-c-relay is a metrics data router that takes carbon TEXT format metrics and routes them to the appropriate IRONdb storage node.
 
-Since IRONdb uses SHA256 hashing to route metrics to IRONdb nodes, it is incompatible with routing options that exist in carbon-c-relay and carbon-relay. In addition, it provides advanced aggregation and filtering functions.
+The IRONdb-relay is also capable of accepting Prometheus Snappy-compressed protocol buffers, decoding them, and routing the data to the appropriate IRONdb-relay storage node. It can accept this data either via a dedicated API endpoint or by pulling data from Kafka using the libmtev Kafka module.
+
+Since IRONdb uses SHA256 hashing to route metrics to IRONdb nodes, it is incompatible with routing options that exist in carbon-c-relay and carbon-relay. In addition, it provides advanced aggregation and filtering functions for Graphite metrics.
 
 [Changelog](irondb-relay-release-notes.md)
 
@@ -11,8 +13,9 @@ Since IRONdb uses SHA256 hashing to route metrics to IRONdb nodes, it is incompa
 *   Ingests TEXT carbon format metrics on a configurable port
 
     `foo.bar.baz 1234.56 1507724786`
+* Ingests Prometheus Snappy-compressed protocol buffers via an API endpoint or via Kafka.
 * Routes to primary owner of the metric name and then subsequent nodes if the primary is down.
-* [Aggregation](irondb-relay.md#modules) of incoming metrics based on regular expressions with support for SUM, AVG, MIN, MAX, p0, p25, p50, p95, p99, p100
+* [Aggregation](irondb-relay.md#modules) of incoming metrics based on regular expressions with support for SUM, AVG, MIN, MAX, p0, p25, p50, p95, p99, p100 for carbon format metrics.
 * [Blacklist and whitelist filtering](irondb-relay.md#modules) of metrics based on regular expressions
 * Durable delivery of metrics using write head logs
 

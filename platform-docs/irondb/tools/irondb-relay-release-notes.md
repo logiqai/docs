@@ -1,5 +1,25 @@
 # IRONdb Relay Release Notes
 
+## 0.1.4
+
+2025-09-02
+
+* Add support for Prometheus data - both an API endpoint and from Kafka using the libmtev Kafka module.
+* Added ability to configure irondb-relay to drain journals on shutdown instead of just exiting. The default is still to just exit.
+
+## 0.1.3
+
+2025-04-01
+
+* Update error logging to be more accurate and provide more detail.
+
+## 0.1.2
+
+2025-03-07
+
+* Update Docker base image to be Ubuntu 22.04.
+* Improve graphite read error messages.
+
 ## 0.1.1
 
 2024-03-27
