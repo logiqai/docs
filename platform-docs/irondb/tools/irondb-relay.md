@@ -2,9 +2,9 @@
 
 The IRONdb-relay, like the carbon-relay or the carbon-c-relay is a metrics data router that takes carbon TEXT format metrics and routes them to the appropriate IRONdb storage node.
 
-The IRONdb-relay is also capable of accepting Prometheus Snappy-compressed protocol buffers, decoding them, and routing the data to the appropriate IRONdb-relay storage node. It can accept this data either via a dedicated API endpoint or by pulling data from Kafka using the libmtev Kafka module.
-
 Since IRONdb uses SHA256 hashing to route metrics to IRONdb nodes, it is incompatible with routing options that exist in carbon-c-relay and carbon-relay. In addition, it provides advanced aggregation and filtering functions for Graphite metrics.
+
+The IRONdb-relay is also capable of accepting Prometheus Snappy-compressed protocol buffers, decoding them, and routing the data to the appropriate IRONdb-relay storage node. It can accept this data either via a dedicated API endpoint or by pulling data from Kafka using the libmtev Kafka module.
 
 [Changelog](irondb-relay-release-notes.md)
 
@@ -17,7 +17,7 @@ Since IRONdb uses SHA256 hashing to route metrics to IRONdb nodes, it is incompa
 * Routes to primary owner of the metric name and then subsequent nodes if the primary is down.
 * [Aggregation](irondb-relay.md#modules) of incoming metrics based on regular expressions with support for SUM, AVG, MIN, MAX, p0, p25, p50, p95, p99, p100 for carbon format metrics.
 * [Blacklist and whitelist filtering](irondb-relay.md#modules) of metrics based on regular expressions
-* Durable delivery of metrics using write head logs
+* Durable delivery of metrics using write ahead logs
 
 ## Installation
 
@@ -252,11 +252,51 @@ There are 2 modules provided with IRONdb-relay:
 
 This config has a single attribute: `durable="true|false"`. If set to "true" it will use the `<journal>` settings below to journal every row destined for IRONdb nodes. If set to "false", it will bypass the journaling and directly send to IRONdb. If set to "false", the relay will do its best to make sure data arrives at one of the IRONdb nodes if the primary doesn't respond or is down but there is no guarantee of delivery.
 
+Prometheus data only supports `durable=true`. If `durable` is set to `false` and any Prometheus data comes in, it will be rejected.
+
 ### listeners
 
 Libmtev network listener configuration. See the [libmtev listener documentation](http://circonus-labs.github.io/libmtev/config/listeners.html).
 
 Each listener below is configured within a `<listener>` node. Additional listeners may be configured if desired, or the specific address and/or port may be modified to suit your environment.
+
+### network
+
+IRONdb-relay supports only one type of network configuration - Kafka. This can be used to read Prometheus data from Kafka to decode and forward to the IRONdb cluster. The configuration is defined in the libmtev Kafka module.
+
+If you are not using Kafka, or if you are exclusively using IRONdb-relay for carbon metrics, then you may ignore this section. Only configure this if you intended to consume Prometheus data via Kafka.
+
+The following is an example of how this would be configured. Note that there are more fields that can be configured than are listed here - the `rdkafka` prefix allows setting configuration values from the `rdkafka` library.
+
+```
+  <network>
+    <in>
+      <mq type="kafka">
+        <host>test-kafka-server.example.com</host>
+        <topic>example_topic</topic>
+        <consumer_group>example_consumer_group</consumer_group>
+        <protocol>prometheus</protocol>
+        <override_account_id>1</override_account_id>
+        <override_check_uuid>0dd84b2f-9dcf-4986-a3b3-a1a094c38288</override_check_uuid>
+        <rdkafka_config_setting_enable.idempotence>true</rdkafka_config_setting_enable.idempotence>
+        <rdkafka_global_config_setting_fetch.error.backoff.ms>500</rdkafka_global_config_setting_fetch.error.backoff.ms>
+        <manual_commit>true</manual_commit>
+      </mq>
+    </in>
+  </network>
+```
+
+The following is a brief explanation of the required fields:
+
+* `host` - The host where Kafka is running. Data will be ingested from here.
+* `topic` - The topic to consume data from.
+* `consumer_group` - The consumer group that this node is a part of. If there are multiple irondb-relay instances running, these should all be configured to be the same thing.
+* `protocol` - This must be set to `prometheus`. Any other value is invalid for irondb-relay.
+* `override_account_id` - The account id that the data will be associated with.
+* `override_check_uuid` - The check uuid that the data will be associated with.
+* `manual_commit` - This determines if rdkafka will automatically commit messages after receipt, or if it should wait for explicit confirmation. For durability, this should always be set to `true`.
+* `rdkafka_config_setting_enable.idempotence` - Enables data idempotence. This should always be set to `true`.
+* `rdkafka_global_config_setting_fetch.error.backoff.ms` - Sets how many milliseconds to wait before attempting to re-pull data from Kafka after failure.
 
 **TLS Configuration**
 
@@ -445,6 +485,32 @@ An in-memory buffer of this number of bytes will be used to hold new journal wri
 
 Default: 131072 (128 KB)
 
+### signal\_handling
+
+```
+<signal_handling>
+  <signal name="SIGINT" action="drain"/>
+</signal_handling>
+```
+
+IRONdb-relay allows configuring certain signals to be handled in different ways. The available signals are:
+
+* SIGINT
+* SIGHUP
+* SIGQUIT
+* SIGABRT
+* SIGTERM
+* SIGUSR1
+* SIGUSR2
+
+There can be configured under the `<signal_handling>` config, each with a distinct action to take upon receipt of that signal. The three available actions are:
+
+* `exit` - The default. If this signal is received, IRONdb-relay will immediately exit.
+* `ignore` - The signal will be ignored and `irondb-relay` will continue to run.
+* `drain` - IRONdb-relay will cut off all incoming data and will run until all of the jlog journals are drained.
+
+If you are expecting to run in an envionement where entire instances of IRONdb-relay will be spun up and thrown away without persistent state, use `drain`. Otherwise, use `exit` to immediately shut down. Omitting this section will set all signals to `exit` by default. Any signals not explicitly enumerated will also default to `exit`.
+
 ### circonus-watchdog.conf
 
 **watchdog**
@@ -456,6 +522,19 @@ Default: 131072 (128 KB)
 The watchdog configuration specifies a handler, known as a "glider", that is to be invoked when a child process crashes or hangs. See the [libmtev watchdog documentation](http://circonus-labs.github.io/libmtev/config/watchdog.html).
 
 If [crash handling](../administration/operations.md#crash-handling) is turned on, the `glider` is what invokes the tracing, producing one or more files in the `tracedir`. Otherwise, it just reports the error and exits.
+
+## REST API
+
+IRONdb-relay has one REST API endpoint:
+
+```
+POST /prometheus/write/<account id>/<check uuid>
+```
+
+Whatever system is being configured to send Prometheus Snappy-compessed protocol buffers (typically, this would be the `remote-write` endpoint) should be configured to send the data to this REST API endpoint. IRONdb-relay will take the data coming in here, decompress/decode it, and forward it to the IRONdb cluster. The two arguments here are:
+
+* `account id` - The account id to associate the data with/
+* `check uuid` - The check uuid to associate the data with.
 
 ## Operations Dashboard
 
