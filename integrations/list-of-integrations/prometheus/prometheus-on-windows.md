@@ -1,6 +1,6 @@
 # Prometheus on Windows
 
-For monitoring Windows with Prometheus, a Windows exporter needs to be installed which is the equivalent of [Node exporter](https://github.com/prometheus/node\_exporter) for Windows. This exporter will start an HTTP endpoint, exposing metrics that will enable Prometheus to scrape them.
+For monitoring Windows with Prometheus, a Windows exporter needs to be installed which is the equivalent of [Node exporter](https://github.com/prometheus/node_exporter) for Windows. This exporter will start an HTTP endpoint, exposing metrics that will enable Prometheus to scrape them.
 
 #### Windows exporter (node) installation:
 
@@ -57,7 +57,7 @@ To enable remote-write on Prometheus, include the remote-write endpoint as shown
 
 ```
 remote_write:
-  - url: https://<Logiq-Endpoint>/api/v1/receive
+  - url: https://<Logiq-Endpoint>/v1/receive/prometheus
     tls_config:
       ca_file: <CA-file>
       cert_file: <cert-file>

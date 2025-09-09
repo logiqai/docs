@@ -1,4 +1,4 @@
-# Getting Started - Metrics
+# Getting Started with Metrics
 
 ### Install OpenTelemetry
 
@@ -42,7 +42,7 @@
         debug:
           verbosity: detailed
         prometheusremotewrite:
-          endpoint: https://<YOUR-ASCENT-ENV>/api/v1/receive
+          endpoint: https://<YOUR-ASCENT-ENV>/v1/receive/prometheus
           headers:
             Authorization: Bearer <YOUR-INGEST-TOKEN>
           tls:

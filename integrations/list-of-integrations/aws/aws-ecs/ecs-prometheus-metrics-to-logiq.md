@@ -185,7 +185,7 @@ global:
   scrape_interval: 30s
   scrape_timeout: 10s
 remote_write:
-  - url: http://<logiq-remote-write-endpoint>:19291/api/v1/receive 
+  - url: http://<logiq-remote-write-endpoint>:19291/v1/receive/prometheus 
 scrape_configs:
   - job_name: ecs
     file_sd_configs:

@@ -593,7 +593,7 @@ Copy the below paths and paste them and save.
                 name: logiq-flash-ml
                 port:
                   number: 16686
-          - path: /api/v1/receive
+          - path: /v1/receive/prometheus
             pathType: Prefix
             backend:
               service:

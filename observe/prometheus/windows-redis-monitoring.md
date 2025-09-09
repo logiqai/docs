@@ -35,11 +35,11 @@ This code block will rename all the outgoing `redis_...` metrics to `cli_redis_.
 
 After adding this script your remote\_write section must look like this.
 
-> NOTE: Please edit the \<LOGIQ\_ENDPOINT> and \<HOSTNAME>.
+> NOTE: Please edit the \<APICA\_ENDPOINT> and \<HOSTNAME>.
 
 ```yaml
 remote_write:
-  - url: https://<LOGIQ_ENDPOINT>/api/v1/receive   # has to be replaced with LOGIQ_ENDPOINT
+  - url: https://<APICA_ENDPOINT>/v1/receive/prometheus   # has to be replaced with APICA_ENDPOINT
     tls_config:
         insecure_skip_verify: true
 

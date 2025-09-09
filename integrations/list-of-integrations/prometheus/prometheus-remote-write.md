@@ -11,7 +11,7 @@ You may also want to add a relabel configuration section to make sure the metric
 {% endhint %}
 
 <pre><code><strong>remote_write:
-</strong>  - url: https://&#x3C;apica-ascent-endpoint>/api/v1/receive
+</strong>  - url: https://&#x3C;apica-ascent-endpoint>/v1/receive/prometheus
     tls_config:
         insecure_skip_verify: true
         # Optional - ca_file: &#x3C;file-name>
@@ -32,7 +32,7 @@ The configuration for remote write in the Helm _**values.yaml**_ file differs sl
 ```
 server:
   remoteWrite:
-  - url: https://<apica-ascent-endpoint>/api/v1/receive
+  - url: https://<apica-ascent-endpoint>/v1/receive/prometheus
     tls_config:
         insecure_skip_verify: true
         # Optional - ca_file: <file-name>
@@ -46,7 +46,7 @@ To ensure that your metrics are easily identifiable, replace _**\<prefix>**_ in 
 
 ```
   remote_write:
-  - url: https://<apica-ascent-endpoint>/api/v1/receive
+  - url: https://<apica-ascent-endpoint>/v1/receive/prometheus
     tls_config:
         insecure_skip_verify: true
 
@@ -65,7 +65,7 @@ The Prometheus Remote Write Exporter can be used to send OpenTelemetry metrics t
 ```
 exporters:
   prometheusremotewrite:
-    endpoint: "https://<apica-ascent-endpoint>/api/v1/receive"
+    endpoint: "https://<apica-ascent-endpoint>/v1/receive/prometheus"
     wal: # Enabling the Write-Ahead-Log for the exporter.
       directory: ./prom_rw # The directory to store the WAL in
       buffer_size: 100 # Optional count of elements to be read from the WAL before truncating; default of 300
@@ -104,11 +104,11 @@ VictoriaMetrics is a fast, cost-effective, and scalable monitoring solution and 
 Run the [<mark style="color:purple;">**vmagent**</mark> ](https://docs.victoriametrics.com/vmagent.html#quick-start)as shown below and pass the below parameters
 
 {% hint style="info" %}
-remoteWrite.tls.url=https://\<apica-ascent-endpoint>/api/v1/receive
+remoteWrite.tls.url=https://\<apica-ascent-endpoint>/v1/receive/prometheus
 
 remoteWrite.tlsInsecureSkipVerify
 {% endhint %}
 
 ```
-./vmagent-prod -promscrape.config=/etc/prometheus/prometheus.yml -remoteWrite.url=https://<apica-ascent-endpoint>/api/v1/receive -remoteWrite.tlsInsecureSkipVerify
+./vmagent-prod -promscrape.config=/etc/prometheus/prometheus.yml -remoteWrite.url=https://<apica-ascent-endpoint>/v1/receive/prometheus -remoteWrite.tlsInsecureSkipVerify
 ```
