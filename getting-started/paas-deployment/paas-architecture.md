@@ -4,32 +4,42 @@ description: >-
   production deployment of Apica Ascent.
 ---
 
-# On-Premise PaaS Deployment Architecture
+# Architecture and Sizing
 
 ## Requirements
 
 A production deployment of  Apica Ascent requires the following key components:
 
-
-
-1. **A Kubernetes cluster** to run the Apica Ascent software components. The Kubernetes cluster should provide&#x20;
-   1. **A persistent storage class** that is used for transient/permanent storage by the software components in the data fabric
-   2. **An optional ingress controller** integrated with the Kubernetes cluster to front the data fabric services. If an ingress controller is unavailable, the services in the data fabric are deployed as NodePorts that must then be programmed in **an optional external ingress provider** e.g. F5 etc.
-2. **An object store** is where the data fabric stores its data at rest. An S3-compatible object store is required. If you are on Azure, you can take advantage of the native integration with the Azure Blob store which is not S3 compatible and needs bolt-on services.&#x20;
+1. **A cloud-based or k0s Kubernetes cluster** to run the Apica Ascent software components.  Apica Ascent OnPrem's non-cloud offering is based on [k0s](https://k0sproject.io/).
+2. **An object store** is where the data fabric stores its data at rest. An S3-compatible object store is required.&#x20;
+   1. Azure installs can take advantage of a native integration with the Azure Blob store.&#x20;
 3. **Access to a container registry** for docker images for the Apica Data Fabric.
-4. **A Postgres database** that stores all of the Apica Data Fabric configurations. If an external Postgres instance is not available, the deployment can be configured to deploy a Postgres instance along with the Apica Data Fabric software components.
-5. **A Redis in-memory cache**. If an external Redis instance is not available, the deployment can be configured to deploy a Redis instance along with the Apica Data Fabric software components.
-6. **Optional deployment of the K8S horizontal pod auto-scalar** to enable auto-scaling of Apica Data Fabric software components. If you do not use K8S HPA, not to worry, using standard scaling using `kubectl scale` is supported as well.
+
+Optional External Items
+
+1. **Postgres -** Ascent's internal Postgres can be replaced with a RDS or other managed offerings.
+2. **Redis -** Ascent's internal Redis server can be replaced with like managed offerings.
+
+## Sizing
+
+Ascent stores most customer data in the object store, which will scale with usage.  In addition, the Kubernetes cluster has the following minimum requirements.
+
+| Service            | vCPUs | RAM   | Disk  |
+| ------------------ | ----- | ----- | ----- |
+| Ingest per GB/hour | 1.25  | 3.5GB | 5GB\* |
+| Core Components    | 10    | 28GB  | 150GB |
+
+&#x20;\* 5GB/ingest pod is the minimum, but 50GB is recommended.
 
 ## Packaging
 
-The deployment of the Apica Data Fabric is driven via a HELM chart.&#x20;
+The deployment of the Apica Data Fabric is driven via a Helm chart.&#x20;
 
 ```
 helm install apica --namespace apica-data-fabric apica-repo/apica 
 ```
 
-The typical method of customizing the deployment is done with a `values.yaml` file as a parameter to the HELM software when installing the Apica Data Fabric HELM Chart.&#x20;
+The typical method of customizing the deployment is done with a `values.yaml` file as a parameter to the Helm software when installing the Apica Data Fabric Helm Chart.&#x20;
 
 ```
 helm install apica --namespace apica-data-fabric apica-repo/apica -f values.yaml

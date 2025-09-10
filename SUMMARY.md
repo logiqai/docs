@@ -58,7 +58,7 @@
     * [Collect Logs with Rsyslog](getting-started/ascent/getting-started-with-logs/collect-logs-with-rsyslog.md)
 * [Quickstart with Docker-Compose](getting-started/quickstart-with-docker-compose.md)
 * [On-Premise PaaS deployment](getting-started/logiq-paas-deployment/README.md)
-  * [On-Premise PaaS Deployment Architecture](getting-started/paas-deployment/paas-architecture.md)
+  * [Architecture and Sizing](getting-started/paas-deployment/paas-architecture.md)
   * [Deploying Apica Ascent PaaS on Kubernetes](getting-started/paas-deployment/k8s-quickstart.md)
   * [Deploying Apica Ascent PaaS on MicroK8s](getting-started/paas-deployment/paas-on-microk8s.md)
   * [Deploying Apica Ascent PaaS on AWS](getting-started/paas-deployment/paas-on-aws.md)
