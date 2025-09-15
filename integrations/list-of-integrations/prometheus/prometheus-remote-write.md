@@ -17,6 +17,9 @@ You may also want to add a relabel configuration section to make sure the metric
         # Optional - ca_file: &#x3C;file-name>
         # Optional - cert_file: &#x3C;file-name>
         # Optional - key_file: &#x3C;file-name>
+    authorization:
+        type: "Bearer"
+        credentials: "&#x3C;Ingest-Token>"
 </code></pre>
 
 #### Prometheus Remote Write in Helm Chart
