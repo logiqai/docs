@@ -42,12 +42,12 @@ The API call remains the same.  The body varies only in the ‘entity’ section
 
 In Postman, the call looks like this:
 
-<figure><img src="../../../../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p>Rule in Postman</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption><p>Rule in Postman</p></figcaption></figure>
 
 The return message (for a successful call) is the same as for the prior call, showing all of the details for the rule created:
 
-<figure><img src="../../../../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption><p>Return message in Postman</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption><p>Return message in Postman</p></figcaption></figure>
 
 In TDO, you can see the new rule.
 
-<figure><img src="../../../../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>New Rule in TDO</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption><p>New Rule in TDO</p></figcaption></figure>

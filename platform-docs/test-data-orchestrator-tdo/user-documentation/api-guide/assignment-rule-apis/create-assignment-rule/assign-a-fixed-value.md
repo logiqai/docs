@@ -62,6 +62,6 @@ Note that the return message starts with the Mongo object ID, provides the rule 
 
 Here is that rule in TDO after the API is run.
 
-<figure><img src="../../../../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption><p>New rule created in TDO</p></figcaption></figure>
+<figure><img src="../../../../../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption><p>New rule created in TDO</p></figcaption></figure>
 
 You can see that the rule name on the TDO screen is the same as the rule name returned to Postman after the API was run and the value assigned is the value sent in the API.

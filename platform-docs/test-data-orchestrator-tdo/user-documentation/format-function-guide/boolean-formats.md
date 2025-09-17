@@ -14,10 +14,10 @@ You can use logical conditions to set these formats. To use values from the cove
 
 <figure><img src="../../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Example 1: using logic to set Boolean values</p></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption><p>Example 2: using logic to set Boolean values</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Example 2: using logic to set Boolean values</p></figcaption></figure>
 
 The value assigned to the field is based on the assigned value in the prior field, from the business  rules.
 
 &#x20;Note that if the field is not defined as a ‘boolean’ format in the output file, this format function will not work.
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption><p>Boolean output for 'direction' field set using Boolean format and logic</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Boolean output for 'direction' field set using Boolean format and logic</p></figcaption></figure>

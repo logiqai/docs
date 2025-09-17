@@ -195,7 +195,7 @@ Click "Update".
 
 Then, go back to the "Agent" tab and click into the Linux hostname (where you'll be ingesting data from):
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 4: Verify Metrics/Logs Are Being Ingested into Ascent:
 
@@ -205,7 +205,7 @@ Verify that logs/metrics are coming in and that it shows as "active":
 
 To verify Metrics are being ingested, go to Queries -> New Query and search for the host to verify data is there:
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Part 2: Installing and Deploying a  Fluent Bit Agent.
 
@@ -225,7 +225,7 @@ Select  Agent Type: Fluent-bit
 
 Click 'Proceed'
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 Click on "Download All"
 

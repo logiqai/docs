@@ -23,7 +23,7 @@ C[lick **“Create”** to save your Alert Destination](#user-content-fn-1)[^1].
 1. Navigate to **Explore** > **Check Analytics** and find your check
 2.  Under the more options (kebab menu) select **New Alert**
 
-    <figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
     &#x20;
 3. Configure the alert

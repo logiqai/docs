@@ -39,4 +39,4 @@ Viewing the workset screen in TDO after this API has been run, you can see that 
 
 &#x20;
 
-<figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Lock removed in TDO</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Lock removed in TDO</p></figcaption></figure>

@@ -15,13 +15,13 @@ To add a Datadog API key or client token:
 3. Enter a name for your key or token.
 4. Click **Create API key** or **Create Client Token**.
 
-For more details on how to generate an API key in DataDog, you can visit this [link](https://docs.datadoghq.com/account\_management/api-app-keys/).
+For more details on how to generate an API key in DataDog, you can visit this [link](https://docs.datadoghq.com/account_management/api-app-keys/).
 
 ### Steps to Create DataDog Forwarding <a href="#steps-to-create-datadog-forwarding" id="steps-to-create-datadog-forwarding"></a>
 
 To forward your logs to DataDog, begin by logging into Apica's website.
 
-* Navigate to the **`Create`** tab and select the option for **`Forwarder`**.
+* Navigate to the **`Integrations`**&#x74;ab, select the option for **`Forwarders`**, and then **`Add Forwarder`**
 * Next, choose **`DataDog(JSON)`** from the available options; this will bring up a new form with fields such as `API Key`, `Buffer Size`, `Host` and `Tags`. Fill out the required data in these fields and click **`Create`**.
 
 Create Forwarder:
@@ -43,12 +43,14 @@ Name:          DataDog Forwarder
 
 > To help make the steps easier to understand, below are the screenshots illustrating each of the instructions given above.
 
-<figure><img src="../../.gitbook/assets/image (224).png" alt=""><figcaption><p>Create -> Forwarder</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Add New Forwarder</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (225).png" alt=""><figcaption><p>Create Forwarder Modal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Configure Forwarder</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (226).png" alt=""><figcaption><p>Explore Page, selected Windows Namespace</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (227).png" alt=""><figcaption><p>Map Forwarder</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (228).png" alt=""><figcaption><p>Selecting the DataDog Forwarder</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Explore Page, Select Your Log Source</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Map Forwarder</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Select Datadog Forwarder</p></figcaption></figure>

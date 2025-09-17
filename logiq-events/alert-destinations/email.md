@@ -6,7 +6,7 @@ description: Configure email destination
 
 
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 To add a new email destination for alerts, follow these steps:
 

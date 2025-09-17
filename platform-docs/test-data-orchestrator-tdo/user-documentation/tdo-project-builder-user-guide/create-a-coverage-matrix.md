@@ -18,12 +18,12 @@ Each row is identified by the rule that it was generated to match.  Note that TD
 
 When you create a coverage matrix, it builds a data block that contains the values shown on the coverage matrix screen.  The data block has the same name as the coverage set, the source is shown as 'Coverage', and the coverage set that was used is shown under the 'Objects' column.
 
-<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Data blocks list showing coverage matrices </p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Data blocks list showing coverage matrices </p></figcaption></figure>
 
 If you set the 'Occurrences' to a value higher than '1', you will see the impact here.  In the screen print below, the first rule has been set to an 'Occurences' value of 5.  In the confirmation message, TDO is showing that 48 rows will be generated (versus 16 in the original rules with no multiple occurrences).
 
-<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Confirmation message with higher volumes</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Confirmation message with higher volumes</p></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Coverage matrix with additional tests added by setting multiple occurrences</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Coverage matrix with additional tests added by setting multiple occurrences</p></figcaption></figure>
 
 A Coverage Matrix must be created before you can build Data Views and Work Sets.
