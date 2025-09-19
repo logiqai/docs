@@ -815,6 +815,7 @@
     * [Customer Managed Policy](admin/access-management/policy-management/customer-managed-policy.md)
     * [Policy](admin/access-management/policy-management/policy.md)
     * [Permissions](admin/access-management/policy-management/permissions.md)
+    * [Apica defined permissions](admin/access-management/policy-management/apica-defined-permissions.md)
   * [Role Management](admin/access-management/role-management/README.md)
     * [Manage Roles](admin/access-management/role-management/manage-roles.md)
     * [In-built Roles](admin/access-management/role-management/in-built-roles.md)
