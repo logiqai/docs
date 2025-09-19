@@ -276,7 +276,7 @@
 * [Rules](flow/rules/README.md)
   * [FILTER](flow/rules/filter.md)
   * [EXTRACT](flow/rules/extract.md)
-  * [SIEM and TAG](flow/rules/siem-and-tag.md)
+  * [SIEM](flow/rules/siem-and-tag.md)
   * [REWRITE](flow/rules/rewrite.md)
   * [CODE](flow/rules/code.md)
   * [FORWARD](flow/rules/forward/README.md)

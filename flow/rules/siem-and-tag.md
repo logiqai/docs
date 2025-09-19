@@ -1,6 +1,6 @@
-# SIEM and TAG
+# SIEM
 
-SIEM and TAG rules are Log2Metric rules that can be used to tag data for any interesting events. Apica Ascent Log2Metrics is a powerful feature that helps you convert your log data into a real-time metric. Using Log2Metrics, you can visualize your log data, plot distributions, create a custom index, and create alerts for events.
+SIEM rule is Log2Metric rule that can be used to tag data for any interesting events. Apica Ascent Log2Metrics is a powerful feature that helps you convert your log data into a real-time metric. Using Log2Metrics, you can visualize your log data, plot distributions, create a custom index, and create alerts for events.
 
 This is useful for identifying the interesting events that may occur in logs in real-time. For example track, user login failures, track load balancer or ingress status codes, etc... See the section about [Log2Metrics](../../log-management/metrics-and-custom-indices.md) for additional information.
 
@@ -8,7 +8,7 @@ Apica Ascent has hundreds of inbuilt SIEM rules which can be accessed on the "Ex
 
 <figure><img src="../../.gitbook/assets/Screenshot from 2025-05-22 13-42-30.png" alt=""><figcaption><p>Rules List</p></figcaption></figure>
 
-### Creating SIEM and TAG Rules
+### Creating an SIEM Rule in Apica Ascent
 
 Follow these steps to create a SIEM or TAG rule in your pipeline:
 
@@ -19,11 +19,13 @@ Follow these steps to create a SIEM or TAG rule in your pipeline:
 
 <figure><img src="../../.gitbook/assets/Screenshot from 2025-05-21 17-48-48.png" alt=""><figcaption><p>Pipelines List</p></figcaption></figure>
 
+#### 2. Add a New SIEM Rule
+
 #### 2. Add a New Rule
 
-* Hover over th&#x65;**+ Add Rule**.
-* From the rule type dropdown, select **SIEM/TAG**.
-* A setup modal will appear with several tabs.
+* Hover over the `+ Add Rule` button.
+* Select `SIEM` from the rule type dropdown.
+* A modal will open with a form organized into tabs.
 
 <figure><img src="../../.gitbook/assets/Screenshot from 2025-06-11 17-59-06 (1).png" alt=""><figcaption><p>Choose Rule</p></figcaption></figure>
 
@@ -53,6 +55,8 @@ Configure the basic rule properties:
 
     Set filters to define what this rule should detect.\
     Example condition: `event_type == login_attempt && status_code == 404`  &#x20;
+
+Sample SIEM rule dashboard
 
 **B. Metric Labels Tab**
 
